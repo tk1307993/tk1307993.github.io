@@ -4,8 +4,53 @@
 
     
   <url>
-    <loc>http://cplusplusdaixie.com/2018/07/12/hello-world/</loc>
-    <lastmod>2018-07-14T05:54:55.997Z</lastmod>
+    <loc>http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html</loc>
+    <lastmod>2018-07-14T12:56:33.036Z</lastmod>
+    <data>
+        <display>
+        <title>Java代写：CSCI3130 Refactoring and Patterns</title>
+        <pubTime>2018-07-14T12:34:49.000Z</pubTime>
+        
+        <tag>Design Pattern</tag>
+         
+        <tag>Refactor Code</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://cplusplusdaixie.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://cplusplusdaixie.com/CS3024-Battleship.html</loc>
+    <lastmod>2018-07-14T12:41:42.824Z</lastmod>
+    <data>
+        <display>
+        <title>Python代写：CS3024 Battleship</title>
+        <pubTime>2018-07-14T12:34:49.000Z</pubTime>
+        
+        <tag>Game</tag>
+         
+        <tag>Artificial Intelligence</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://cplusplusdaixie.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cplusplusdaixie.com/hello-world.html</loc>
+    <lastmod>2018-07-14T12:33:50.399Z</lastmod>
     <data>
         <display>
         <title>留学生Computer Science编程作业代写</title>
@@ -21,7 +66,7 @@
     
     
   <url>
-    <loc>http://cplusplusdaixie.com/2018/07/14/COMP30023-Hashcash-Mining/</loc>
+    <loc>http://cplusplusdaixie.com/COMP30023-Hashcash-Mining.html</loc>
     <lastmod>2018-07-14T04:01:35.658Z</lastmod>
     <data>
         <display>
@@ -45,5 +90,4 @@
     </data>
     </url>
 
-    
 </urlset>

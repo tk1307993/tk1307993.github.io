@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://cplusplusdaixie.com/2018/07/12/hello-world/</loc>
+    <loc>http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html</loc>
     
-    <lastmod>2018-07-14T05:54:55.997Z</lastmod>
+    <lastmod>2018-07-14T12:56:33.036Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cplusplusdaixie.com/about/index.html</loc>
+    
+    <lastmod>2018-07-14T12:43:42.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cplusplusdaixie.com/CS3024-Battleship.html</loc>
+    
+    <lastmod>2018-07-14T12:41:42.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cplusplusdaixie.com/hello-world.html</loc>
+    
+    <lastmod>2018-07-14T12:33:50.399Z</lastmod>
     
   </url>
   
@@ -23,16 +44,9 @@
   </url>
   
   <url>
-    <loc>http://cplusplusdaixie.com/2018/07/14/COMP30023-Hashcash-Mining/</loc>
+    <loc>http://cplusplusdaixie.com/COMP30023-Hashcash-Mining.html</loc>
     
     <lastmod>2018-07-14T04:01:35.658Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cplusplusdaixie.com/about/index.html</loc>
-    
-    <lastmod>2018-07-14T03:21:07.473Z</lastmod>
     
   </url>
   
