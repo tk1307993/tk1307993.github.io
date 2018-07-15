@@ -3,11 +3,71 @@
 
 
     
+  <url>
+    <loc>http://cplusplusdaixie.com/hello-world.html</loc>
+    <lastmod>2018-07-15T11:38:18.361Z</lastmod>
+    <data>
+        <display>
+        <title>留学生Computer Science编程作业代写</title>
+        <pubTime>2018-07-12T13:03:25.285Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
     
     
   <url>
+    <loc>http://cplusplusdaixie.com/CS177-Lab-Summer2018-Prep1.html</loc>
+    <lastmod>2018-07-15T10:52:57.060Z</lastmod>
+    <data>
+        <display>
+        <title>Python代写：CS177 Lab Prep1 Summer2018</title>
+        <pubTime>2018-07-15T10:36:59.000Z</pubTime>
+        
+        <tag>Programming Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://cplusplusdaixie.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cplusplusdaixie.com/COMP30023-Hashcash-Mining.html</loc>
+    <lastmod>2018-07-15T10:51:23.076Z</lastmod>
+    <data>
+        <display>
+        <title>C代写：COMP30023 Hashcash Mining</title>
+        <pubTime>2018-07-13T03:37:55.000Z</pubTime>
+        
+        <tag>Network Programming</tag>
+         
+        <tag>Security</tag>
+         
+        <tag>Linux Network</tag>
+         
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="C" url="http://cplusplusdaixie.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://cplusplusdaixie.com/INF20015-Requirements-Analysis-Modelling.html</loc>
-    <lastmod>2018-07-15T01:19:11.521Z</lastmod>
+    <lastmod>2018-07-15T10:35:48.199Z</lastmod>
     <data>
         <display>
         <title>UML代写：INF20015 Requirements Analysis and Modelling</title>
@@ -24,6 +84,30 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://cplusplusdaixie.com/CS3024-Battleship.html</loc>
+    <lastmod>2018-07-15T10:17:53.233Z</lastmod>
+    <data>
+        <display>
+        <title>Python代写：CS3024 Battleship</title>
+        <pubTime>2018-07-13T12:34:49.000Z</pubTime>
+        
+        <tag>Game</tag>
+         
+        <tag>Artificial Intelligence</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://cplusplusdaixie.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
     
   <url>
     <loc>http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html</loc>
@@ -48,68 +132,4 @@
 
     
     
-  <url>
-    <loc>http://cplusplusdaixie.com/CS3024-Battleship.html</loc>
-    <lastmod>2018-07-14T12:41:42.824Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS3024 Battleship</title>
-        <pubTime>2018-07-14T12:34:49.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://cplusplusdaixie.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://cplusplusdaixie.com/hello-world.html</loc>
-    <lastmod>2018-07-14T12:33:50.399Z</lastmod>
-    <data>
-        <display>
-        <title>留学生Computer Science编程作业代写</title>
-        <pubTime>2018-07-12T13:03:25.285Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://cplusplusdaixie.com/COMP30023-Hashcash-Mining.html</loc>
-    <lastmod>2018-07-14T04:01:35.658Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP30023 Hashcash Mining</title>
-        <pubTime>2018-07-14T03:37:55.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>Security</tag>
-         
-        <tag>Linux Network</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="http://cplusplusdaixie.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>
