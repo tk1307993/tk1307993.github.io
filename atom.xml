@@ -39,30 +39,6 @@
   </entry>
   
   <entry>
-    <title>Python代写：CS3024 Battleship</title>
-    <link href="http://cplusplusdaixie.com/CS3024-Battleship.html"/>
-    <id>http://cplusplusdaixie.com/CS3024-Battleship.html</id>
-    <published>2018-07-14T12:34:49.000Z</published>
-    <updated>2018-07-14T12:41:42.824Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>Create a game of Battleship.</p><p>This should be a game of player vs AI.</p><p>How the game is played:</p><p>Each player has a 10 by 10 board on which to place their pieces.</p><p>There are 5 pieces:<br>Air Craft Carrier - 5 long<br>Battleship- 4 long<br>Cruiser- 3 long<br>Submarine- 3 long<br>Destroyer- 2 long</p><p>These are to be placed on the board vertically or horizontally. They CANNOT go diagonally and CANNOT over lap each other and MUST be inside the 10 by 10 board. Let the player choose where they want to place their pieces following the above rules. Then randomly assign the pieces for the computer.</p><p>Once the board is set it is time to start guessing locations. Don’t let people guess spots off the board. Two boards should be displayed to the screen. One board showing the players ships and where the computer has guessed, another showing the players guesses and whether it was a hit or miss. Label each board so they know which is which. Make sure the boards are easy to read and instructions are given so the player knows how you want them to play the game. Are rows and columns 0-9 or 1-10? Are they entering column then row or row then column?</p><p>If either player hits, print out which ship was hit: Example “Player 1 hit the computers Submarine”. If they hit all parts of the ship let them know it was destroyed. Example: “The computer sunk your Battleship”</p><p>For the computer you should have it randomly guess. If it ends up getting a hit you should save the value of the location of the hit and on the next guess have it pick a random spot on either side of the last hit. The smarter the better.</p><p>Once one player has sunk all of the other players ship the game ends and announces the winner. You should have the option to play again. Once playing is over let the user know how many wins and losses they got.</p><h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><p>Place player ships: 15% (receive at most 7.5% if player does not set them)</p><p>Place computer ships: 15% (receive at most 10% if not random)</p><p>Guess place for ship (not going out of bounds): 10%</p><p>Check properly if that guess hits a ship: 10%</p><p>Print updated board of the players guesses: 10%</p><p>Print updated board of the players ships (indicating if hit or not by computer): 10%</p><p>Check to see if a ship is sunk and print out message: 10%</p><p>Check to see if there is a winner: 10%</p><p>Computer AI for guessing: 10% (will get 5% if just completely random guess)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; </span><br><span class="line">++i;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      给Battleship这款游戏做一个AI。
-    
-    </summary>
-    
-      <category term="Python" scheme="http://cplusplusdaixie.com/categories/Python/"/>
-    
-    
-      <category term="Game" scheme="http://cplusplusdaixie.com/tags/Game/"/>
-    
-      <category term="Artificial Intelligence" scheme="http://cplusplusdaixie.com/tags/Artificial-Intelligence/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java代写：CSCI3130 Refactoring and Patterns</title>
     <link href="http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html"/>
     <id>http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html</id>
@@ -83,6 +59,30 @@
       <category term="Design Pattern" scheme="http://cplusplusdaixie.com/tags/Design-Pattern/"/>
     
       <category term="Refactor Code" scheme="http://cplusplusdaixie.com/tags/Refactor-Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python代写：CS3024 Battleship</title>
+    <link href="http://cplusplusdaixie.com/CS3024-Battleship.html"/>
+    <id>http://cplusplusdaixie.com/CS3024-Battleship.html</id>
+    <published>2018-07-14T12:34:49.000Z</published>
+    <updated>2018-07-14T12:41:42.824Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>Create a game of Battleship.</p><p>This should be a game of player vs AI.</p><p>How the game is played:</p><p>Each player has a 10 by 10 board on which to place their pieces.</p><p>There are 5 pieces:<br>Air Craft Carrier - 5 long<br>Battleship- 4 long<br>Cruiser- 3 long<br>Submarine- 3 long<br>Destroyer- 2 long</p><p>These are to be placed on the board vertically or horizontally. They CANNOT go diagonally and CANNOT over lap each other and MUST be inside the 10 by 10 board. Let the player choose where they want to place their pieces following the above rules. Then randomly assign the pieces for the computer.</p><p>Once the board is set it is time to start guessing locations. Don’t let people guess spots off the board. Two boards should be displayed to the screen. One board showing the players ships and where the computer has guessed, another showing the players guesses and whether it was a hit or miss. Label each board so they know which is which. Make sure the boards are easy to read and instructions are given so the player knows how you want them to play the game. Are rows and columns 0-9 or 1-10? Are they entering column then row or row then column?</p><p>If either player hits, print out which ship was hit: Example “Player 1 hit the computers Submarine”. If they hit all parts of the ship let them know it was destroyed. Example: “The computer sunk your Battleship”</p><p>For the computer you should have it randomly guess. If it ends up getting a hit you should save the value of the location of the hit and on the next guess have it pick a random spot on either side of the last hit. The smarter the better.</p><p>Once one player has sunk all of the other players ship the game ends and announces the winner. You should have the option to play again. Once playing is over let the user know how many wins and losses they got.</p><h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><p>Place player ships: 15% (receive at most 7.5% if player does not set them)</p><p>Place computer ships: 15% (receive at most 10% if not random)</p><p>Guess place for ship (not going out of bounds): 10%</p><p>Check properly if that guess hits a ship: 10%</p><p>Print updated board of the players guesses: 10%</p><p>Print updated board of the players ships (indicating if hit or not by computer): 10%</p><p>Check to see if a ship is sunk and print out message: 10%</p><p>Check to see if there is a winner: 10%</p><p>Computer AI for guessing: 10% (will get 5% if just completely random guess)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; </span><br><span class="line">++i;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      给Battleship这款游戏做一个AI。
+    
+    </summary>
+    
+      <category term="Python" scheme="http://cplusplusdaixie.com/categories/Python/"/>
+    
+    
+      <category term="Game" scheme="http://cplusplusdaixie.com/tags/Game/"/>
+    
+      <category term="Artificial Intelligence" scheme="http://cplusplusdaixie.com/tags/Artificial-Intelligence/"/>
     
   </entry>
   
