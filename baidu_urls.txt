@@ -1,5 +1,5 @@
-http://cplusplusdaixie.com/CS177-Lab-1.html
-http://cplusplusdaixie.com/CS177-Lab-Summer2018-Prep1.html
-http://cplusplusdaixie.com/INF20015-Requirements-Analysis-Modelling.html
-http://cplusplusdaixie.com/CSCI3130-Refactoring-and-Patterns.html
-http://cplusplusdaixie.com/CS3024-Battleship.html
+https://tk1307993.coding.me/CS177-Lab-1.html
+https://tk1307993.coding.me/CS177-Lab-Summer2018-Prep1.html
+https://tk1307993.coding.me/INF20015-Requirements-Analysis-Modelling.html
+https://tk1307993.coding.me/CSCI3130-Refactoring-and-Patterns.html
+https://tk1307993.coding.me/CS3024-Battleship.html
