@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="STL,Data Structure," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C++实现本地和服务器版本号比较">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。">
+<meta name="keywords" content="STL,Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：实现本地和服务器版本号比较">
-<meta property="og:url" content="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+<meta property="og:title" content="C++代写：CSCI104 Stack Implementation">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI104-Stack-Implementation.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C++实现本地和服务器版本号比较">
+<meta property="og:description" content="Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-23T12:36:10.909Z">
+<meta property="og:updated_time" content="2018-07-23T12:39:26.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：实现本地和服务器版本号比较">
-<meta name="twitter:description" content="C++实现本地和服务器版本号比较">
+<meta name="twitter:title" content="C++代写：CSCI104 Stack Implementation">
+<meta name="twitter:description" content="Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/本地和服务器版本号比较.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI104-Stack-Implementation.html"/>
 
 
 
 
 
-  <title>C++代写：实现本地和服务器版本号比较 | 留学生CS编程作业代写</title>
+  <title>C++代写：CSCI104 Stack Implementation | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI104-Stack-Implementation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：实现本地和服务器版本号比较</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：CSCI104 Stack Implementation</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T19:37:50+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T20:35:51+08:00">
+                2018-07-23
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C++实现本地和服务器版本号比较
+                  Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。
               </div>
           
 
@@ -360,8 +360,14 @@
       
 
       
-        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>函数需求，对任意软件的两个版本号进行比较，返回较大的版本号。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></span><br><span class="line"><span class="comment">// 导入string头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 导入std::vector头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">// split_wstring用于分割字符串</span></span><br><span class="line"><span class="comment">// "1.2.3.14" -&gt; "1", "2", "3", "14" </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// wstring是宽char，Unicode编码，一般情况下一个字符占两个字节大小</span></span><br><span class="line"><span class="built_in">vector</span>&lt;wstring&gt; split_wstring(wstring &amp;szInput, wstring &amp;szToken)&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;wstring&gt; result;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> begin = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">// 得到szToken的长度</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> size = szToken.size();</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">		<span class="comment">// 从begin开始，查找下一个szToken的位置</span></span><br><span class="line">		pos = szInput.find(szToken, begin);</span><br><span class="line">		<span class="keyword">if</span> (pos == wstring::npos)&#123;</span><br><span class="line">			<span class="comment">// 如果已经到达szInput的末尾，截取最后一个放入result vector，然后退出while循环</span></span><br><span class="line">			result.push_back(szInput.substr(begin));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 截取从begin开始(pos - begin)个长度的串，放入result vector</span></span><br><span class="line">		result.push_back(szInput.substr(begin, pos - begin));</span><br><span class="line">		<span class="comment">// 更新begin的位置，用于下一次搜索</span></span><br><span class="line">		begin = pos + size;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 版本比较函数 </span></span><br><span class="line"><span class="comment">// 返回：</span></span><br><span class="line"><span class="comment">// val: 0:相等;1:大于服务器版本,-1:小于服务器版本,2:版本字段数不一致</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CompareVersion</span><span class="params">(<span class="built_in">std</span>::wstring wszLoc, <span class="built_in">std</span>::wstring wszSvr)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 分别调用split_wstring获取切分后的vector</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; locVerFields = split_wstring(wszLoc, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; srvVerFields = split_wstring(wszSvr, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> loc_size = locVerFields.size();</span><br><span class="line">	<span class="keyword">int</span> srv_size = srvVerFields.size();</span><br><span class="line">	<span class="comment">// 如果长度不等，则返回版本字段数不一致的标志</span></span><br><span class="line">	<span class="keyword">if</span> (loc_size != srv_size)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> retval = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; locVerFields.size(); i++)&#123;</span><br><span class="line">		<span class="comment">// 按下标依次比较</span></span><br><span class="line">		<span class="keyword">int</span> istrcmp = <span class="number">0</span>;</span><br><span class="line">		istrcmp = locVerFields[i].compare(srvVerFields[i]);</span><br><span class="line">		<span class="keyword">if</span> ( istrcmp == <span class="number">0</span> )&#123;</span><br><span class="line">			<span class="keyword">if</span> (i == locVerFields.size()<span class="number">-1</span>)&#123;</span><br><span class="line">				<span class="comment">// 如果最后一个也相等，则返回相等</span></span><br><span class="line">				retval = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>( istrcmp == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果大于，则wszLoc大于wszSvr（大于服务器版本）</span></span><br><span class="line">			retval = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span> (istrcmp &lt; <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果小于，则wszLoc小于wszSvr（小于服务器版本）</span></span><br><span class="line">			retval = <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> retval;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> _tmain(<span class="keyword">int</span> argc, _TCHAR* argv[])&#123;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszLocal = <span class="string">L"1.2.3.14"</span>;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszServer = <span class="string">L"1.2.3.15"</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 调用比较函数</span></span><br><span class="line">	<span class="keyword">int</span> res = CompareVersion(wszLocal, wszServer);</span><br><span class="line"> </span><br><span class="line">	<span class="comment">// 输出结果</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\r\n"</span>, res);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 暂停，等待输入后退出</span></span><br><span class="line">	system(<span class="string">"pause"</span>); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement a templated Stack class. It must implement the following interface (abstract class), which you should inherit from. In other words, create a file IStack.h which contains this definition, and then your own class (which may be called something like ListStack or ArrayStack or other, depending on how you impement it) should inherit publicly from IStack.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">IStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">/* returns whether the stack contains any elements */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* adds a value to the top of the stack */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">const</span> T&amp; val)</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* deletes the top value from the stack.</span></span><br><span class="line"><span class="comment">     Throws EmptyStackException if stack was empty.</span></span><br><span class="line"><span class="comment">     However, you should avoid having this exception thrown,</span></span><br><span class="line"><span class="comment">     by checking whether the stack is empty before calling it. */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* returns the top value on the stack.</span></span><br><span class="line"><span class="comment">     Throws EmptyStackException if stack was empty.</span></span><br><span class="line"><span class="comment">     However, you should avoid having this exception thrown,</span></span><br><span class="line"><span class="comment">     by checking whether the stack is empty before calling it. */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">const</span> T&amp; <span class="title">top</span><span class="params">()</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Your implementation can reuse some of your earlier linked list code, or you can build it on top of an array (which you dynamically allocate) - your choice. You must ensure that all functions run in time O(1) (amortized time O(1) if you use an array implementation), and should give an explanation with your code for why your code runs in O(1) time. Your solution to this problem absolutely cannot use STL container classes (so no stack or vector or deque or list or such provided by STL).</p>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。我们可以利用linked list，即线性链表来存储数据，这样也能保证functions run in time O(1)，即时间复杂度为1。</p>
+<p>另外一点需要注意的是，本题不能使用STL模板库，因此基本的数据结构都需要我们来实现。</p>
+<h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>下面简单给出ListStack.h文件的示例代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">ListStack</span>:</span> <span class="keyword">public</span> IStack</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  ListStack();</span><br><span class="line">  ListStack(<span class="keyword">int</span> sz = <span class="number">20</span>);</span><br><span class="line">  ListStack(<span class="keyword">const</span> ListStack&lt;T&gt;&amp; ls);</span><br><span class="line">  ~ListStack();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">const</span> T&amp; val)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">const</span> T&amp; <span class="title">top</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T* listStack;</span><br><span class="line">  <span class="keyword">int</span> size;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -378,7 +384,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/STL/" rel="tag"># STL</a>
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -391,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Advanced-Math-Analysis-with-Matlab-Course-Project.html" rel="next" title="Matlab代写：Advanced Math Analysis with Matlab Course Project">
-                <i class="fa fa-chevron-left"></i> Matlab代写：Advanced Math Analysis with Matlab Course Project
+              <a href="/ECE222-Vectors-And-Matrices.html" rel="next" title="C代写：ECE222 Vectors And Matrices">
+                <i class="fa fa-chevron-left"></i> C代写：ECE222 Vectors And Matrices
               </a>
             
           </div>
@@ -400,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS455-RandomWalk.html" rel="prev" title="Java代写：CS455 RandomWalk">
-                Java代写：CS455 RandomWalk <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirements"><span class="nav-number">1.</span> <span class="nav-text">Requirements</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip"><span class="nav-number">3.</span> <span class="nav-text">Tip</span></a></li></ol></div>
             
 
           </div>
