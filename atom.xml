@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-07-25T13:00:14.897Z</updated>
+  <updated>2018-07-26T13:43:20.163Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：ECE222 Directory Listing</title>
+    <link href="https://tk1307993.coding.me/ECE222-Directory-Listing.html"/>
+    <id>https://tk1307993.coding.me/ECE222-Directory-Listing.html</id>
+    <published>2018-07-26T13:41:38.000Z</published>
+    <updated>2018-07-26T13:43:20.163Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, each student is to write a program that provides a file listing for the given directory. The program should list the filename, file size, and time last modified for each file within the directory. The program should provide the user with the option to sort the listing based on filename, on file size, or on time last modified. The program should run once and quit (it does not loop).</p><p>The syntax (usage) for the program should be:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prog_name [<span class="string">directory</span>] [<span class="string">[-s</span>][<span class="symbol">-t</span>]]</span><br></pre></td></tr></table></figure></p><p>where –s indicates sort by file size and –t indicates sort by time last modified. These flags are optional but mutually exclusive. The directory is also optional; if it is omitted than a default directory of “.” (the current directory) should be assumed. Every possible combination of command line arguments, from the above syntax, will be tested.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要实现文件系统中，类似ls命令显示的结果。<br>本题较为简单，如果掌握了基本的Linux函数库用法可以事半功倍。此外需要注意的是命令行参数的处理方法。最后按照测试集显示的格式，做出准确的输出即可。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出命令行参数的解析逻辑<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> arg;</span><br><span class="line">  <span class="keyword">int</span> sort_by_size = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> sort_by_time = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ((arg = getopt(argc, argv, <span class="string">"st"</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">switch</span> (arg) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'s'</span>:</span><br><span class="line">      sort_by_size = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'t'</span>:</span><br><span class="line">      sort_by_time = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"bad argument: %c\n"</span>, arg);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      本题需要实现文件系统中，类似ls命令显示的结果。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="File System" scheme="https://tk1307993.coding.me/tags/File-System/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS335 Space Racing Simulator</title>
