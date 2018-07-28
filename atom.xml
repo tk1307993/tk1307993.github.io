@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-07-27T12:30:38.928Z</updated>
+  <updated>2018-07-28T01:50:43.312Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：CSC411 Digit Classification</title>
+    <link href="https://tk1307993.coding.me/CSC411-DigitClassification.html"/>
+    <id>https://tk1307993.coding.me/CSC411-DigitClassification.html</id>
+    <published>2018-07-28T01:47:59.000Z</published>
+    <updated>2018-07-28T01:50:43.312Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, you will compare the characteristics and performance of different classifiers, namely logistic regression, k-nearest neighbours and naive Bayes. You will experiment with these extensions and extend the provided code. Note that you should understand the code first instead of using it as a black box.</p><p>Python versions of the code have been provided. You are free to work with whichever you wish.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>作为Machine Learning的三大基础算法</p><ol><li>Logistic regression，也就是logistic回归，常用于数据挖掘，疾病自动诊断，经济预测等领域</li><li>K-nearest neighbours，也就是K邻近算法，常用于数据挖掘，以及分类，对未知事物的识别等领域</li><li>Naive Bayes，也就是朴素贝叶斯，常用于分类器，文本分类识别</li></ol><p>本题给出了以上三大算法的基本实现，但是需要根据测试框架的调度逻辑，实现未完成的测试函数。</p><p>本题偏重工程性质，在不断的调试中，会加深对算法的理解。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面是check_grad函数的实现<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_grad</span><span class="params">(func, X, epsilon, *args)</span>:</span></span><br><span class="line">  <span class="keyword">if</span> len(X.shape) != <span class="number">2</span> <span class="keyword">or</span> X.shape[<span class="number">1</span>] != <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">raise</span> ValueError(<span class="string">"X must be a vector"</span>)</span><br><span class="line"></span><br><span class="line">  y, dy, = func(X, *args)[:<span class="number">2</span>]         <span class="comment"># get the partial derivatives dy</span></span><br><span class="line">  dh = np.zeros((len(X), <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> xrange(len(X)):</span><br><span class="line">    dx = np.zeros((len(X), <span class="number">1</span>))</span><br><span class="line">    dx[j] += epsilon</span><br><span class="line">    y2 = func(X+dx, *args)[<span class="number">0</span>]</span><br><span class="line">    dx = -dx</span><br><span class="line">    y1 = func(X+dx, *args)[<span class="number">0</span>]</span><br><span class="line">    dh[j] = (y2 - y1)/(<span class="number">2</span>*epsilon)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">print</span> np.hstack((dy, dh))          <span class="comment"># print the two vectors</span></span><br><span class="line">  d = LA.norm(dh-dy)/LA.norm(dh+dy)  <span class="comment"># return norm of diff divided by norm of sum</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> d</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      本题偏重工程性质，在不断的调试中，会加深对算法的理解。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Machine Learning" scheme="https://tk1307993.coding.me/tags/Machine-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP代写：CS353 Database System</title>
@@ -447,34 +471,6 @@
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
       <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：COMP30023 Hashcash Mining</title>
-    <link href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html"/>
-    <id>https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html</id>
-    <published>2018-07-13T03:37:55.000Z</published>
-    <updated>2018-07-15T10:51:23.076Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The aim of this project is to provide you with experience in writing (a) a program that interacts with other programs over a network (socket programming), and (b) multi-threaded applications. Specifically, you will write a server-based proof-of-work solver for the Hashcash mining algorithm used in Bitcoin.</p><p>This requires you to implement the functions in the Simple Stratum Text Protocol (SSTP), which is used to format messages between clients and your server program. The SSTP is described in Section 3. Background information related to the the Bitcoin mining process is described in Section 2. Detailed requirements and implementation guidelines are listed in Section 4.</p><p>Your program must be written in standard C. Use the POSIX pthread library for multi-threaded tasks. Other dynamic and static libraries are prohibited.</p><p>Your program must run on the School of Engineering Linux server digitalis or digitalis2.</p>]]></content>
-    
-    <summary type="html">
-    
-      实现Bitcoin中的Hashcash Mining算法。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
-      <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
-    
-      <category term="Linux Network" scheme="https://tk1307993.coding.me/tags/Linux-Network/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
