@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-07-30T13:22:22.065Z</updated>
+  <updated>2018-07-31T12:38:34.394Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tk1307993.coding.me/CS413-DataSecurity.html"/>
     <id>https://tk1307993.coding.me/CS413-DataSecurity.html</id>
     <published>2018-07-30T13:18:59.000Z</published>
-    <updated>2018-07-30T13:22:22.065Z</updated>
+    <updated>2018-07-31T12:38:34.394Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>古典密码在密码学中，有着举足轻重的作用。做为Data security领域的基础算法理念，离不开其中的置换和置乱两大算法。</p><p>置换，即保持明文中的字符本身，但对字符的顺序进行重新排列的算法。</p><p>置乱，即将明文中的字符，用其他字符或字符序列进行替换。</p><p>而将经过加密的密文，找到其中的统计规律，并还原出其中的原文，称为密码破解。</p><p>而本次作业就是需要找到统计规律，进行密码破解。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>An encrypted file, cryptfile1.txt, is given. Your task is to decrypt it. </p><p>The file was encrypted using some substitution algorithm. The easiest way to break such encryptions is by an analysis of letter frequency. You can go to the library or the Web and get information on the relative frequency of letters in the English language. A program, LetterCount.java, is also given which would allow you to find this yourself. You would simply have to choose a source text file that is sufficiently long and sufficiently representative of English that the relative frequencies of letters in it is pretty much the same as the relative frequencies given in published sources. The real value of LetterCount.java is that it provides sample code that you code adapt to decryption purposes. </p><p>This encryption is simple enough that in theory you could do it by hand. If you find that your initial attempt by hand is netting nothing, you may want to write a program to help. You should hand in the results of your decryption effort.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解</p><p>下面是一段密文：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pmefp wunhi igsrh lxjsv xlmwg hyhig</span><br><span class="line">rkfmk zsgep gsvhw hbdth <span class="keyword">swxtv </span><span class="keyword">shmkm</span></span><br><span class="line"><span class="keyword">otckt </span>euiig hgnmo ceess theoh snegs</span><br><span class="line">eepws lmrsw mwgep piheg vewlx lexek</span><br><span class="line">mepmr skmkw sjxlm wfvii heziv ekisr</span><br><span class="line">ehcwu xlias hoofo mkveg sette adrla</span><br><span class="line">xlivi lmrom fivxl lsphw ytsjv vphwq</span><br></pre></td></tr></table></figure></p><p>首先自然是发现这段文字中，每个字母出现的频率是不一样的，首先猜测仅进行了置换。</p><p>任意找一个词频表，试着解析。</p><p>果然出现了apple，cable之类的可见词汇。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol><li>根据不同的词频，写程序大胆猜测</li><li>必要时需要进行分词，写程序对不同组合进行尝试</li><li>当发现可见字符时，记录所采用的算法</li><li>猜测密钥</li></ol>]]></content>
     
@@ -31,7 +31,7 @@
     
     </summary>
     
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
       <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
