@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Java语言基础练习题。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="本题需要求解矩阵的最大特征值">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS110 Circle">
-<meta property="og:url" content="https://tk1307993.coding.me/CS110-Circle.html">
+<meta property="og:title" content="C代写：CS140 Matrix-Vector Multiplication">
+<meta property="og:url" content="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Java语言基础练习题。">
+<meta property="og:description" content="本题需要求解矩阵的最大特征值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-25T12:56:54.111Z">
+<meta property="og:updated_time" content="2018-07-31T12:45:08.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS110 Circle">
-<meta name="twitter:description" content="Java语言基础练习题。">
+<meta name="twitter:title" content="C代写：CS140 Matrix-Vector Multiplication">
+<meta name="twitter:description" content="本题需要求解矩阵的最大特征值">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS110-Circle.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html"/>
 
 
 
 
 
-  <title>Java代写：CS110 Circle | 留学生CS编程作业代写</title>
+  <title>C代写：CS140 Matrix-Vector Multiplication | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS110-Circle.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS110 Circle</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CS140 Matrix-Vector Multiplication</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T20:54:13+08:00">
-                2018-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T20:44:24+08:00">
+                2018-07-31
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Java语言基础练习题。
+                  本题需要求解矩阵的最大特征值
               </div>
           
 
@@ -360,14 +360,16 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this Assignment, you should write a class that, given a circle’s radius, has methods that return the circle’s area, diameter, and circumference.</p>
-<p>In case you have forgotten, the equations for a circle’s area, diameter, and circumference is given below.<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">area</span> = πrr</span><br><span class="line"><span class="attr">diameter</span> = <span class="number">2</span>r</span><br><span class="line"><span class="attr">circumference</span> = <span class="number">2</span>πr</span><br></pre></td></tr></table></figure></p>
-<p>Based on Chapter 3, Programming Challenge # 8 Circle class in your textbook. Your output is given below.<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Enter the radius <span class="keyword">of</span> a circle: <span class="number">5.3</span></span><br><span class="line">The circle<span class="symbol">'s</span> area <span class="keyword">is</span>            <span class="number">88.2472631</span></span><br><span class="line">The circle<span class="symbol">'s</span> diameter <span class="keyword">is</span>        <span class="number">10.6</span></span><br><span class="line">The circle<span class="symbol">'s</span> circumference <span class="keyword">is</span>   <span class="number">33.300854</span></span><br></pre></td></tr></table></figure></p>
-<p>Write a separate class called CircleDemo with a main method that asks the user for the circle’s radius, creates a Circle object, and then reports the circle’s area, diameter, and circumference using the circle’s getter methods.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要的数学背景见Pi，需要实现一个Circle类，以及对应的方法，如setRadius()，getRadius()，getArea()，getDiameter()，getCircumference()。</p>
-<p>本题较为简单，注意数据类型，精度以及输入输出格式即可。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面是ClicleDemo类的实现<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CircleDemo</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> radius;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> PI = <span class="number">3.14159</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">CircleDemo</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRadius</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.radius = radius;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getRadius</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.radius;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getArea</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> CircleDemo.PI * <span class="keyword">this</span>.radius * <span class="keyword">this</span>.radius;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDiameter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * <span class="keyword">this</span>.radius;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getCircumference</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * CircleDemo.PI * <span class="keyword">this</span>.radius;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Matrix和Vector是Linear algebra中最基础的概念。而利用计算机求解数学问题，是一种常见的做法。</p>
+<p>将数学公式、定理用计算机编程实现，看起来并不是一件难事，但是对于某些算法，在不考虑时间复杂度的情况下，编写出来的代码运行效率将极其低下。尤其是I/O操作和循环结合的地方，在数据量大的情况下，往往不能快速地得到答案。因此在求解问题的过程中，对于原数学公式、定理的简化与改写，是很有必要的。</p>
+<p>而本次作业需要在给定的时间复杂度条件下，求解一些基本的线性代数的问题。</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment is to write a parallel program to multiply a matrix by a vector, and to use this routine in an implementation of the power method to find the absolute value of the largest eigenvalue of the matrix. You will write separate functions to generate the matrix and to perform the power method, and you will do some timing experiments with the power method routine.</p>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要求解absolute value of the largest eigenvalue of the matrix，也就是矩阵的最大特征值。对于矩阵特征值的理解，请参考如何理解矩阵特征值？</p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>本题需要求解的其中一个矩阵为<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5</span> <span class="number">5</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">6</span> <span class="number">6</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
+<p>通过观察，上面的矩阵是一个上三角矩阵。而三角矩阵的特征值就是对角线上的各个元素。</p>
+<p>因此我们需要编程判断，一个矩阵是否是三角矩阵，如果是，则取其对角线上的元素，作为矩阵的特征值。</p>
+<p>下面给出判断一个矩阵是否是上三角矩阵的代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">is_upper_triangular_matrix</span><span class="params">(<span class="keyword">int</span> **matrix, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j;</span><br><span class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (matrix[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -384,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -397,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS50-C-Programming-Assignment-5.html" rel="next" title="C代写：CS50 C Programming Assignment5">
-                <i class="fa fa-chevron-left"></i> C代写：CS50 C Programming Assignment5
+              <a href="/CS413-DataSecurity.html" rel="next" title="Java代写：CS413 Data Security">
+                <i class="fa fa-chevron-left"></i> Java代写：CS413 Data Security
               </a>
             
           </div>
@@ -406,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS335-SpaceRacingSimulator.html" rel="prev" title="Java代写：CS335 Space Racing Simulator">
-                Java代写：CS335 Space Racing Simulator <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
             
 
           </div>
