@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Algorithm,Data Structure," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题需要求解矩阵的最大特征值">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
+<meta name="keywords" content="Algorithm,Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS140 Matrix-Vector Multiplication">
-<meta property="og:url" content="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html">
+<meta property="og:title" content="C++代写：CS3530 Rat In A Maze Problem">
+<meta property="og:url" content="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题需要求解矩阵的最大特征值">
+<meta property="og:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T12:45:08.529Z">
+<meta property="og:updated_time" content="2018-08-07T12:23:13.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS140 Matrix-Vector Multiplication">
-<meta name="twitter:description" content="本题需要求解矩阵的最大特征值">
+<meta name="twitter:title" content="C++代写：CS3530 Rat In A Maze Problem">
+<meta name="twitter:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html"/>
 
 
 
 
 
-  <title>C代写：CS140 Matrix-Vector Multiplication | 留学生CS编程作业代写</title>
+  <title>C++代写：CS3530 Rat In A Maze Problem | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS140 Matrix-Vector Multiplication</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：CS3530 Rat In A Maze Problem</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T20:44:24+08:00">
-                2018-07-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T20:19:28+08:00">
+                2018-08-07
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Writing/" itemprop="url" rel="index">
+                    <span itemprop="name">Writing</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题需要求解矩阵的最大特征值
+                  Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。
               </div>
           
 
@@ -360,16 +360,28 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Matrix和Vector是Linear algebra中最基础的概念。而利用计算机求解数学问题，是一种常见的做法。</p>
-<p>将数学公式、定理用计算机编程实现，看起来并不是一件难事，但是对于某些算法，在不考虑时间复杂度的情况下，编写出来的代码运行效率将极其低下。尤其是I/O操作和循环结合的地方，在数据量大的情况下，往往不能快速地得到答案。因此在求解问题的过程中，对于原数学公式、定理的简化与改写，是很有必要的。</p>
-<p>而本次作业需要在给定的时间复杂度条件下，求解一些基本的线性代数的问题。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment is to write a parallel program to multiply a matrix by a vector, and to use this routine in an implementation of the power method to find the absolute value of the largest eigenvalue of the matrix. You will write separate functions to generate the matrix and to perform the power method, and you will do some timing experiments with the power method routine.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要求解absolute value of the largest eigenvalue of the matrix，也就是矩阵的最大特征值。对于矩阵特征值的理解，请参考如何理解矩阵特征值？</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>本题需要求解的其中一个矩阵为<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5</span> <span class="number">5</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">6</span> <span class="number">6</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>通过观察，上面的矩阵是一个上三角矩阵。而三角矩阵的特征值就是对角线上的各个元素。</p>
-<p>因此我们需要编程判断，一个矩阵是否是三角矩阵，如果是，则取其对角线上的元素，作为矩阵的特征值。</p>
-<p>下面给出判断一个矩阵是否是上三角矩阵的代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">is_upper_triangular_matrix</span><span class="params">(<span class="keyword">int</span> **matrix, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j;</span><br><span class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (matrix[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。当向前搜索到某一步，根据目标函数得到的结果不是最优时，进行回溯，重新选择探索方向。由此得到最优解。<br>回溯法解决问题的基本步骤一般为：</p>
+<ol>
+<li>根据给定问题，定义目标函数，并保证该问题至少有一个解</li>
+<li>确定搜索的空间结构，确保回溯法可以遍历整个解空间</li>
+<li>通过深度优先算法的形式，搜素整个解空间，并通过适当剪纸来减少冗余的搜索</li>
+</ol>
+<p>回溯法的一个应用场景便是解决迷宫问题。</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this problem you will solve the “Rat in a maze problem”, using Stacks and Queues (Lectures 12-14).<br>The main points we shall be covering are:</p>
+<p>Using Stacks and Queues in an application</p>
+<ol>
+<li>Re-enforcement of the usage and advantages of makefiles / make utility in UNIX/Linux</li>
+<li>Use of abstract data types in C++, and separate compilation</li>
+<li>Use of header files and libraries for Stacks and Queues</li>
+</ol>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要采用Stack和Queue来解决迷宫问题。</p>
+<p>栈用于存放回溯算法中的搜索路径，由于栈的后进先出特性，可以很容易的实现回溯。</p>
+<p>队列用于存放已经搜索过的最优路径，由于队列的先进先出特性，可以很容易的进行目标函数的计算。</p>
+<p>目标函数：从(0, 0)走到(N, N)的Taxicab geometry，也就是曼哈顿距离。</p>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>题目搜给的迷宫为<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">011101000100000</span></span><br><span class="line"><span class="number">010001100111100</span></span><br><span class="line"><span class="number">011001000000000</span></span><br><span class="line"><span class="number">001000010111111</span></span><br><span class="line"><span class="number">001011000010000</span></span><br><span class="line"><span class="number">001000101010100</span></span><br><span class="line"><span class="number">000010010000100</span></span><br></pre></td></tr></table></figure></p>
+<p>我们需要利用回溯法，从左上角走到右下角</p>
+<p>下面给出程序的回溯搜索算法部分的代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">bool</span> SearchEngine::DoMove(<span class="keyword">int</span> movePosition) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">switch</span> (movePosition) &#123;</span><br><span class="line">    <span class="keyword">case</span> MOVE_LEFT:  </span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;      </span><br><span class="line">      SearchEngine::DoMove(MOVE_RIGHT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_UP:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_DOWN);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_RIGHT:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_LEFT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_DOWN:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_UP);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -388,6 +400,8 @@
           
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
         </div>
       
 
@@ -399,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS413-DataSecurity.html" rel="next" title="Java代写：CS413 Data Security">
-                <i class="fa fa-chevron-left"></i> Java代写：CS413 Data Security
+              <a href="/COMP435-Multimedia-Technologies-TME5.html" rel="next" title="Written代写：COMP435 Multimedia Technologies TME5">
+                <i class="fa fa-chevron-left"></i> Written代写：COMP435 Multimedia Technologies TME5
               </a>
             
           </div>
@@ -408,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP435-Multimedia-Technologies-TME1.html" rel="prev" title="Java代写：COMP435 Multimedia Technologies TME1">
-                Java代写：COMP435 Multimedia Technologies TME1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number"></span> <span class="nav-text">Tips</span></a></div>
             
 
           </div>
