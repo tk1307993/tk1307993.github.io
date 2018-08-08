@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-08-07T12:23:13.292Z</updated>
+  <updated>2018-08-08T15:35:51.914Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：COMP1001-MoreTextProcessing</title>
+    <link href="https://tk1307993.coding.me/COMP1001-MoreTextProcessing.html"/>
+    <id>https://tk1307993.coding.me/COMP1001-MoreTextProcessing.html</id>
+    <published>2018-08-08T15:33:20.000Z</published>
+    <updated>2018-08-08T15:35:51.914Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>用Python的一个优势便是十分适合Text processing，由于Python内建了许多函数，对于文字、字符的处理十分便捷，如字符串连接、字符串截取、字符串查找、字符串替换、字符串比较、字符串分割、字符串翻转、字符串编码等，都有对应的函数进行处理。相比C语言，节省了很多开发工作量。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This question prints the leaves of a symmetric tree. A user will be prompted for a symbol and a positive position for the tip of the leaves. Starting from the tip, the tree will fan out on both sides symmetrically until left side of the leaves reaches the left edge, assuming that the right edge has no limit. For example</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Please enter a symbol: *</span><br><span class="line">Please enter a positive position</span><br><span class="line">of the symbol on the first line: 10</span><br><span class="line"><span class="code">         *</span></span><br><span class="line"><span class="code">        ***</span></span><br><span class="line"><span class="code">       *****</span></span><br><span class="line"><span class="code">      *******</span></span><br><span class="line"><span class="code">     *********</span></span><br><span class="line"><span class="code">    ***********</span></span><br><span class="line">   <span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span></span><br><span class="line">  <span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></span><br><span class="line"> <span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span>**</span><br><span class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br></pre></td></tr></table></figure><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题就是一个简单的字符串处理，注意逻辑处理就好，难度不大，直接上代码。</p><p>不过越是容易的题目，越不容易写出精简的代码，本题打印最简单的方法可由一行代码实现。</p><h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="comment"># user input</span></span><br><span class="line">  symbol = input(<span class="string">"Please enter a symbol: "</span>)</span><br><span class="line">  pos = eval(input(<span class="string">"Please enter a positive position \nof the symbol on the first line: "</span>))</span><br><span class="line"></span><br><span class="line">  <span class="comment"># print the leaves</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(pos):</span><br><span class="line">      print((pos - <span class="number">1</span> - i) * <span class="string">" "</span> + (<span class="number">2</span> * i + <span class="number">1</span>) * symbol)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      本题就是一个简单的字符串处理，注意逻辑处理就好，难度不大，直接上代码。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS3530 Rat In A Maze Problem</title>
@@ -445,28 +467,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS455 RandomWalk</title>
-    <link href="https://tk1307993.coding.me/CS455-RandomWalk.html"/>
-    <id>https://tk1307993.coding.me/CS455-RandomWalk.html</id>
-    <published>2018-07-21T04:07:22.000Z</published>
-    <updated>2018-07-21T04:11:55.902Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment you will write a graphics-based program to do a random walk, sometimes also known as a drunkard’s walk. </p><p>This random walk simulates the wandering of an intoxicated person on a square street grid. </p><p>The drunkard will start out in the middle of the grid and will randomly pick one of the four compass directions, and take a step in that direction, then another step from that new location in a random direction, etc.</p><p>This assignment will give you practice with creating classes, using loops, using the java library for random number generation, doing console-based IO, and drawing to a graphics window. Also you’ll get practice in general program development.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Randow Walk，即随机游走问题，类似布朗运动，物体在下一刻走动的方向完全是随机的。</p><p>本题利用随机数生成器来模拟下一刻的方位。框架使用java的awt包实现了UI部分，我们只需要将随机算法加入到提供的框架中。</p><p>解题的关键是了解随机数生成器的用法，根据提供的框架，找到对应函数入口，根据给定的测试集进行调试即可。</p><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>从测试函数入口入手</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">testTranslate</span><span class="params">(Impoint loc, <span class="keyword">int</span> deltaX, <span class="keyword">int</span> deltaY)</span> </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  ImPoint p2 = loc.translate(deltaX, deltaY);</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>因此我们需要实现ImPoint类，以及translate方法，核心代码如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImPoint</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> x;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> y;</span><br><span class="line">  ...</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Impoint <span class="title">translate</span><span class="params">(<span class="keyword">int</span> deltaX, <span class="keyword">int</span> deltaY)</span> </span>&#123;</span><br><span class="line">    Random r = <span class="keyword">new</span> Random();</span><br><span class="line">    <span class="keyword">int</span> x = deltaX + nextInt(<span class="number">2</span>) - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> y = deltaY + nextInt(<span class="number">2</span>) - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Impoint(x, y);</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      Randow Walk，即随机游走问题，类似布朗运动。解题的关键是了解随机数生成器的用法，根据提供的框架，找到对应函数入口，根据给定的测试集进行调试即可。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
