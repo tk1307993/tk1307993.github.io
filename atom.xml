@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-08-08T15:35:51.914Z</updated>
+  <updated>2018-08-11T02:31:40.006Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS251 AVLTree</title>
+    <link href="https://tk1307993.coding.me/CS251-AVLTree.html"/>
+    <id>https://tk1307993.coding.me/CS251-AVLTree.html</id>
+    <published>2018-08-11T02:29:31.000Z</published>
+    <updated>2018-08-11T02:31:40.006Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AVL Tree也就是AVL树，是早的自平衡二叉查找树。其任意节点的两颗子树最大高度差仅为1，因此也被称为高度平衡树。</p><p>相对红黑树，AVL树目前的应用场景已经非常下了，大部分还是用于学习和研究。</p><p>AVL树最大的特点是，树的查找、插入和删除在平均和最坏情况下都是O(log n)，但增加和删除节点可能需要旋转这颗树，使其重新平衡。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement a C++ AVL Tree class AVLTree in files AVLTree.h and AVLTree.cpp</p><ol><li>The constructor AVLTree () builds the AVLTree.</li><li>The destructor ~AVLTree() deallocates all dynamically allocated memory.</li><li>The void insert(int k) method inserts the key k into the AVLTree, and does not do anything if the key is already stored.</li><li>The void remove(int k) method removes key k from the AVLTree and does not do anything if AVLTree does not contain key k.</li><li>The items stored are positive integers which serve both as keys and as elements.</li><li>The void printInorder() method prints the tree to the standard output using an inorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li><li>The void printPostorder() method prints the tree to the standard output using postorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要用实现一个AVL树。AVL树本身代码不复杂，但是需要考虑到接口兼容STL库，这才是本题最大的难点。</p><p>STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。</p><p>我的建议是可以参考一些简易的STL实现，有简入难，一步一步学习。</p>]]></content>
+    
+    <summary type="html">
+    
+      STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="STL" scheme="https://tk1307993.coding.me/tags/STL/"/>
+    
+  </entry>
   
   <entry>
     <title>Python代写：COMP1001-MoreTextProcessing</title>
@@ -440,31 +462,7 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="STL" scheme="https://tk1307993.coding.me/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：ECE222 Vectors And Matrices</title>
-    <link href="https://tk1307993.coding.me/ECE222-Vectors-And-Matrices.html"/>
-    <id>https://tk1307993.coding.me/ECE222-Vectors-And-Matrices.html</id>
-    <published>2018-07-22T04:20:56.000Z</published>
-    <updated>2018-07-22T04:26:00.932Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this lab, each student is to write a program that allows the user to manipulate the entries in vector, or in a matrix. The program should keep track of one vector of variable length, and one matrix of exactly 4x4 size. The program should enter a loop, displaying a set of options (given below). Once the user selects an option, the program should display the vector (or matrix, as appropriate) before and after the operation chosen by the user. For example, if the user selects “reverse vector” and the current vector is [-3 0 2 5] then the program should display:</p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">input</span><br><span class="line"><span class="number">-3</span> <span class="number">0</span> <span class="number">2</span> <span class="number">5</span></span><br><span class="line">reversed</span><br><span class="line"><span class="number">5</span> <span class="number">2</span> <span class="number">0</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure><p>The program should run until the user selects an option to quit.</p><p>The program must use the following structure definitions.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">vector</span> &#123;</span></span><br><span class="line">  <span class="keyword">float</span> *data;</span><br><span class="line">  <span class="keyword">int</span>    size;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">matrix</span> &#123;</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">vector</span> <span class="title">rows</span>[4];</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Vectors和Matrices，矢量和矩阵，也称一维和二维数组。</p><p>属于C语言很常见的数据结构。本题要实现的是矢量的反转，以及矩阵的转置。</p><p>反转和转置需要用到排序算法，这里我们采用Quicksort，也就是快速排序。</p><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>矢量反转所用的快速排序算法如下</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">parition</span><span class="params">(struct <span class="built_in">vector</span> *vec, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">float</span> piovt, temp;</span><br><span class="line">  <span class="keyword">int</span> i, j;</span><br><span class="line">  piovt = *(vec[left]);</span><br><span class="line">  i = left;</span><br><span class="line">  j = right + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">      ++i;</span><br><span class="line">    &#125; <span class="keyword">while</span> (*(vec[i]) &lt;= piovt &amp;&amp; i &lt;= right);</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">      --j;</span><br><span class="line">    &#125; <span class="keyword">while</span> (*(vec[j]) &gt; piovt);</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= j) &#123;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    temp = *(vec[i]);</span><br><span class="line">    *(vec[i]) = *(vec[j]);</span><br><span class="line">    *(vec[j]) = temp;</span><br><span class="line">  &#125;</span><br><span class="line">  temp = *(vec[left]);</span><br><span class="line">  *(vec[left]) = *(vec[right]);</span><br><span class="line">  *(vec[right]) = temp;</span><br><span class="line">  <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(struct <span class="built_in">vector</span> *vec, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">    i = partition(vec, left, right);</span><br><span class="line">    quick_sort(vec, left, right - <span class="number">1</span>);</span><br><span class="line">    quick_sort(vec, i + <span class="number">1</span>, right);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      Vectors和Matrices，矢量和矩阵，也称一维和二维数组。属于C语言很常见的数据结构。本题要实现的是矢量的反转，以及矩阵的转置。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
