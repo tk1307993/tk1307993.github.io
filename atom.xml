@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-08-11T02:31:40.006Z</updated>
+  <updated>2018-08-12T03:23:52.687Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CS251 Sorting</title>
+    <link href="https://tk1307993.coding.me/CS251-Sorting.html"/>
+    <id>https://tk1307993.coding.me/CS251-Sorting.html</id>
+    <published>2018-08-12T03:22:06.000Z</published>
+    <updated>2018-08-12T03:23:52.687Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement void quicksort(unsigned int *a, int n) as a “C” style function in the file quicksort.cc</p><ol><li>The pivot should always be chosen as the first element of the array.</li><li>See the given quicksort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li><li>The main function in quicksort.cc reads from the file “quicksortinput” the n integers and writes the n integers to the file “quicksortoutput” in ascending sorted order. See “quicksortsampleinput” and “quicksortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li><li>The function sorts the array a of n positive integers with the quick sort algorithm.</li></ol><p>Implement void radixsort(unsigned int *a, int n) as a “C” style function in the file radixsort.cc</p><ol><li>The elements of the array are positive and are represented with 32 bits.</li><li>See the given radixsort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li><li>The main function in radixsort.cc reads from the file “radixsortinput” the n integers and writes the n integers to the file “radixsortoutput” in ascending sorted order. See “radixsortsampleinput” and “radixsortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li><li>The function sorts the array a of n positive integers using the radix sort algorithm.</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>需要实现Quicksort算法以及Radix sort算法。</p><p>本题难度不大，但需要理解和掌握这两种算法的原理和特点。</p><p>此外需要注意的是，测试集并非是结构化的数据，需要对测试集中字符进行分割，同时处理空行的问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      工程编程中，Sorting通常都是出现在三方库中直接调用。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS251 AVLTree</title>
@@ -441,30 +463,6 @@
     
     
       <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CSCI104 Stack Implementation</title>
-    <link href="https://tk1307993.coding.me/CSCI104-Stack-Implementation.html"/>
-    <id>https://tk1307993.coding.me/CSCI104-Stack-Implementation.html</id>
-    <published>2018-07-23T12:35:51.000Z</published>
-    <updated>2018-07-24T13:33:49.838Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement a templated Stack class. It must implement the following interface (abstract class), which you should inherit from. In other words, create a file IStack.h which contains this definition, and then your own class (which may be called something like ListStack or ArrayStack or other, depending on how you impement it) should inherit publicly from IStack.</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">IStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">/* returns whether the stack contains any elements */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* adds a value to the top of the stack */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">const</span> T&amp; val)</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* deletes the top value from the stack.</span></span><br><span class="line"><span class="comment">     Throws EmptyStackException if stack was empty.</span></span><br><span class="line"><span class="comment">     However, you should avoid having this exception thrown,</span></span><br><span class="line"><span class="comment">     by checking whether the stack is empty before calling it. */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* returns the top value on the stack.</span></span><br><span class="line"><span class="comment">     Throws EmptyStackException if stack was empty.</span></span><br><span class="line"><span class="comment">     However, you should avoid having this exception thrown,</span></span><br><span class="line"><span class="comment">     by checking whether the stack is empty before calling it. */</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">const</span> T&amp; <span class="title">top</span><span class="params">()</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>Your implementation can reuse some of your earlier linked list code, or you can build it on top of an array (which you dynamically allocate) - your choice. You must ensure that all functions run in time O(1) (amortized time O(1) if you use an array implementation), and should give an explanation with your code for why your code runs in O(1) time. Your solution to this problem absolutely cannot use STL container classes (so no stack or vector or deque or list or such provided by STL).</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。我们可以利用linked list，即线性链表来存储数据，这样也能保证functions run in time O(1)，即时间复杂度为1。</p><p>另外一点需要注意的是，本题不能使用STL模板库，因此基本的数据结构都需要我们来实现。</p><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>下面简单给出ListStack.h文件的示例代码</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">ListStack</span>:</span> <span class="keyword">public</span> IStack</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  ListStack();</span><br><span class="line">  ListStack(<span class="keyword">int</span> sz = <span class="number">20</span>);</span><br><span class="line">  ListStack(<span class="keyword">const</span> ListStack&lt;T&gt;&amp; ls);</span><br><span class="line">  ~ListStack();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">const</span> T&amp; val)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">const</span> T&amp; <span class="title">top</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T* listStack;</span><br><span class="line">  <span class="keyword">int</span> size;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      Stack，也就是数据结构中的栈。本题定义了栈的模板和接口，我们只需要实现isEmpty()，push()，pop()，top()这四个函数，以及类的构造函数和析构函数即可。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="STL" scheme="https://tk1307993.coding.me/tags/STL/"/>
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
