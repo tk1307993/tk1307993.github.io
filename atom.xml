@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-08-12T03:23:52.687Z</updated>
+  <updated>2018-08-14T13:34:08.031Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS635-DigitalImageProcessing</title>
+    <link href="https://tk1307993.coding.me/CS635-DigitalImageProcessing.html"/>
+    <id>https://tk1307993.coding.me/CS635-DigitalImageProcessing.html</id>
+    <published>2018-08-14T13:29:17.000Z</published>
+    <updated>2018-08-14T13:34:08.031Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>市场上有一些成熟软件可以做Digital image process，如Matlab和R。这两款软件提供了丰富的图像处理函数，以及优秀的交互，和简易的调试功能，因此受到图像处理工程师的青睐。</p><p>C++虽然也可以使用二维数组的存储方法来存储图像，并实现等同于Matlab和R的算法。但是编程的复杂性远远大于前者。</p><p>虽然说，用C/C++编出的图像处理软件性能会超过Matlab和R，但是这种差异需要大规模的图像才会体现出来。而目前业内对于大规模的图像处理，往往会采用云计算分布式的做法，而不是单纯的使用一台计算机进行运算。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, you are required to build a simple software framework for digital image processing.<br>Your program should be able to read and write PPM / PGM image files (either binary or ASCII), and perform color or geometric transformation.</p><p>The programming language is C/C++. The preferred programming environment is Visual C++ (VC) 2012. If you choose to use a different platform, your submitted source code should be compatible with a Visual C++ .Net compiler, i.e., one can build a working executable for Windows from your source code.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题的复杂的地方在于PPM / PGM图像格式的解码以及存储。<br>PPM格式由两部分组成：</p><ol><li>图像的存储格式以及图像的特征（包括魔数、图像大小）</li><li>图像的数据部分（从左到右、从上往下）</li></ol><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出PPM文件的读取函数<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> image&lt;rgb&gt; *PPM::loadPPM(<span class="keyword">const</span> <span class="keyword">char</span> *name) &#123;</span><br><span class="line">  <span class="keyword">char</span> buf[<span class="number">2048</span>];</span><br><span class="line">  <span class="comment">/* read header */</span></span><br><span class="line">  <span class="built_in">std</span>::<span class="function">ifstream <span class="title">file</span><span class="params">(name, <span class="built_in">std</span>::ios::binary | <span class="built_in">std</span>::ios::in)</span></span>;</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">strncmp</span>(buf, <span class="string">"P5"</span>, <span class="number">2</span>)) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Version not support."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">int</span> width = atoi(buf);</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">int</span> height = atoi(buf);</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="comment">/* read data */</span></span><br><span class="line">  image&lt;rgb&gt; *im = <span class="keyword">new</span> image&lt;rgb&gt;(width, height);</span><br><span class="line">  file.read((<span class="keyword">char</span>*)imPtr(im, <span class="number">0</span>, <span class="number">0</span>), width * height * <span class="keyword">sizeof</span>(rgb));</span><br><span class="line">  <span class="keyword">return</span> im;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      本题在于PPM格式处理
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Image Processing" scheme="https://tk1307993.coding.me/tags/Image-Processing/"/>
+    
+  </entry>
   
   <entry>
     <title>C代写：CS251 Sorting</title>
@@ -434,28 +456,6 @@
     <summary type="html">
     
       C语言基础练习题。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CS101 Binary Arithmetic</title>
-    <link href="https://tk1307993.coding.me/CS101-BinaryArithmetic.html"/>
-    <id>https://tk1307993.coding.me/CS101-BinaryArithmetic.html</id>
-    <published>2018-07-24T13:33:04.000Z</published>
-    <updated>2018-07-24T13:39:02.481Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this Assignment, you should write a program that allows the user to perform simple arithmetic in binary. Upon starting, the program should tell the user that it is a binary math program, along with brief instructions on how to use the program.</p><p>The program should then enter a loop, where it gives a prompt, such as “input&gt;”. Upon receiving input from the user, the program should process it, report the output result (or error), and loop back to the prompt. This should continue until the user gives the keyphrase to exit the program (keyphrase is your choice, good choices are “quit”, “end”, “exit”, etc.). </p><p>For example:</p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input&gt; <span class="number">101</span>+<span class="number">1100</span></span><br><span class="line"><span class="number">10001</span></span><br><span class="line">Input&gt; <span class="number">111001</span><span class="number">-1010</span></span><br><span class="line"><span class="number">101111</span></span><br></pre></td></tr></table></figure><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Binary arithmetic， 也就是二进制算法，是程序设计的基础。本题需要实现一个可交互的程序，根据用户输入，实现二进制算法，如二进制加法、二进制减法等。<br>本题难度不大，注意输入的数据类型是char，需要拆分后转换为int，以及keyphrase关键响应符号的处理逻辑即可。</p><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>下面是处理用户交互部分的实现</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">  <span class="keyword">char</span> input[<span class="number">100</span>];</span><br><span class="line">  <span class="keyword">char</span> *keyphrase = <span class="string">"quit"</span>;</span><br><span class="line">  <span class="keyword">char</span> *add = <span class="string">"+"</span>;</span><br><span class="line">  <span class="keyword">char</span> *sub = <span class="string">"-"</span>;</span><br><span class="line">  <span class="keyword">char</span> *mul = <span class="string">"*"</span>;</span><br><span class="line">  <span class="keyword">char</span> *div = <span class="string">"/"</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"input&gt; "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, input);</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strncmp</span>(input, keyphrase, <span class="built_in">strlen</span>(keyphrase)) == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strstr</span>(input, add) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      binary_add(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strstr</span>(input, sub) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      binary_sub(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strstr</span>(input, mul) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      binary_mul(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strstr</span>(input, div) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      binary_div(input);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      Binary arithmetic， 也就是二进制算法，是程序设计的基础。本题需要实现一个可交互的程序，根据用户输入，实现二进制算法，如二进制加法、二进制减法等。
     
     </summary>
     
