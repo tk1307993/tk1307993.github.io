@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-08-15T12:19:47.466Z</updated>
+  <updated>2018-08-20T12:58:23.102Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：CSC120H Simulating Canadian Elections</title>
+    <link href="https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html"/>
+    <id>https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html</id>
+    <published>2018-08-20T12:53:30.000Z</published>
+    <updated>2018-08-20T12:58:23.102Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。</p><p>相比纸质选票，电子计票有着快速计票、实时计票、节省人工成本、计票可回收利用等优点。尤其是差额票，对于候选人较多的情况，电子计票的优势就更大了。</p><p>电子计票系统中，最重要的部件就是识别有效选票、鉴别无效选票、统计选票，对识别器质量已经算法有较高的要求。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>There are so many different kinds of voting systems, especial electronic voting system in the world. In this assignment you will be comparing four of them: Approval Voting; Plurality, also known as First Past the Post; Copeland’s Method and the Borda Count. You will be simulating Canadian elections, where voters are choosing between the four major federal parties (New Democratic Party, Green Party, Liberal Party, Conservative Party).</p><ol><li>Approval Voting: everyone can vote many options</li><li>Plurality: everyone can vote only one candidate</li><li>Copeland’s Method: everyone can rank the candidates</li><li>The Borda Count: everyone can rank the candidates</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><h4 id="计票过程"><a href="#计票过程" class="headerlink" title="计票过程"></a>计票过程</h4><p>对于Approval Voting计票法，每人可投多个候选人，因此不需要考虑无效选票，检票时，当发现其中候选人之一出现选票时，记录下来<br>对于Plurality计票法，每人仅可投一位候选人，因此当出现多位时，该选票记为废票。有效票则记录在候选人票数中<br>对于Copeland’s Method计票法，每人给出排名，如果允许重复排名则不会出现无效选票，反之则需要剔除无效选票。根据选票中的票值排序，按照权值加到候选人票数，并记录下来<br>对于The Borda Count计票法，类似Copeland’s Method</p><h4 id="验票过程"><a href="#验票过程" class="headerlink" title="验票过程"></a>验票过程</h4><p>对于Approval Voting计票法，验票则是将候选人的票数从高到低排序<br>对于Plurality计票法，同Approval Voting，将候选人的票数从高到低排序<br>对于Copeland’s Method计票法，将候选人的加权和从高到低排序<br>对于The Borda Count计票法，类似Copeland’s Method，将候选人的加权和从高到低排序</p>]]></content>
+    
+    <summary type="html">
+    
+      高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS4410 GamesTechnologyAssignment</title>
@@ -438,28 +460,6 @@
     </summary>
     
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CS50 C Programming Assignment5</title>
-    <link href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-5.html"/>
-    <id>https://tk1307993.coding.me/CS50-C-Programming-Assignment-5.html</id>
-    <published>2018-07-24T14:33:29.000Z</published>
-    <updated>2018-07-24T14:48:11.653Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul><li>Work on an assignment by yourself without sharing the answer to a classmate. (It is great that students study together but an assignment is an individual task. It is not a group project.)</li><li>Start to do an assignment early and ask the teacher if you have a question.</li><li>Add a comment with your name at the top of your source code</li><li>Put all your files that you want to submit into one zip file</li></ul><h6 id="Please-save-the-program-with-the-name-‘cards-c’"><a href="#Please-save-the-program-with-the-name-‘cards-c’" class="headerlink" title="Please save the program with the name ‘cards.c’"></a>Please save the program with the name ‘cards.c’</h6><ol><li><p>Write a structure (struct card) that will represent a card in a standard deck of playing cards. You will need to represent both the suit (clubs, diamonds, hearts or spades) as well as the rank ( A, K, Q, J, 10, 9, 8, 7, 6, 5, 6, 7, 2) of each card. Note that a deck of playing cards can be represented as an array declared as</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">card</span> <span class="title">deck</span>[52];</span></span><br></pre></td></tr></table></figure></li><li><p>Write a function that will perform a perfect shuffle on a deck of cards represented using the data structures from part a. In a perfect shuffle, the deck is broken exactly in half and rearranged so that the first card is followed by the 27th card, followed by the second card, followed by the 28th card, and so on.</p></li><li><p>Write a program that tests how many perfect shuffles are necessary to return the deck to its original configuration.</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      C语言基础练习题。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
       <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
