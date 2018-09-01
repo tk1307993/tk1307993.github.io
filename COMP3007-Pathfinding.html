@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="STL," />
+  <meta name="keywords" content="Algorithm,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
-<meta name="keywords" content="STL">
+<meta name="description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS251 AVLTree">
-<meta property="og:url" content="https://tk1307993.coding.me/CS251-AVLTree.html">
+<meta property="og:title" content="Java代写：COMP3007 Pathfinding">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3007-Pathfinding.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
+<meta property="og:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-11T02:31:40.006Z">
+<meta property="og:updated_time" content="2018-09-01T02:57:44.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS251 AVLTree">
-<meta name="twitter:description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
+<meta name="twitter:title" content="Java代写：COMP3007 Pathfinding">
+<meta name="twitter:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS251-AVLTree.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3007-Pathfinding.html"/>
 
 
 
 
 
-  <title>C++代写：CS251 AVLTree | 留学生CS编程作业代写</title>
+  <title>Java代写：COMP3007 Pathfinding | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS251-AVLTree.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3007-Pathfinding.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS251 AVLTree</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：COMP3007 Pathfinding</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T10:29:31+08:00">
-                2018-08-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-01T10:53:10+08:00">
+                2018-09-01
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。
+                  Pathfinding是在平面上两点之间找出路径的问题。
               </div>
           
 
@@ -360,22 +360,36 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AVL Tree也就是AVL树，是早的自平衡二叉查找树。其任意节点的两颗子树最大高度差仅为1，因此也被称为高度平衡树。</p>
-<p>相对红黑树，AVL树目前的应用场景已经非常下了，大部分还是用于学习和研究。</p>
-<p>AVL树最大的特点是，树的查找、插入和删除在平均和最坏情况下都是O(log n)，但增加和删除节点可能需要旋转这颗树，使其重新平衡。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement a C++ AVL Tree class AVLTree in files AVLTree.h and AVLTree.cpp</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Pathfinding is the problem of finding a path between two points on a plane. It is a fundamental task in robotics and AI. Perhaps the most obvious usage of pathfnding is in computer games, when an object is instructed to move from its current position to a goal position, while avoiding obstacles (e.g., walls, enemy fire) along the way.</p>
+<p>Pathfinding in commercial games is frequently accomplished using search algorithms. We consider a simplified version in this assignment. The following shows a 2D map drawn using ASCII characters:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">7</span> <span class="number">8</span> X</span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">8</span> <span class="number">8</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">6</span> <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">6</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">7</span> <span class="number">7</span> <span class="number">1</span> X X X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">8</span> <span class="number">8</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line">X <span class="number">8</span> <span class="number">7</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>Given a start position and an end position on the map, our aim is to find a path from the start position to the end position. The character “X” denotes an obstacle that cannot be traversed by a path, while the digits represent the elevation at the respective positions.</p>
+<p>Any position is indicated by the coordinates (i, j), where i is the row number (ordered top to bottom) and j is the column number (ordered left to right). For example, the top left position is (1, 1), the bottom right is (10, 10), while the position with elevation “3” is (4, 9). Given start position (1, 1) and end position (10, 10), a possible path is</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">* * * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">7</span> <span class="number">8</span> X</span><br><span class="line"><span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">8</span> <span class="number">8</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> * * * * * * * <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> * <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> * * <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">6</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> * * *</span><br><span class="line"><span class="number">7</span> <span class="number">7</span> <span class="number">1</span> X X X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br><span class="line"><span class="number">8</span> <span class="number">8</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br><span class="line">X <span class="number">8</span> <span class="number">7</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br></pre></td></tr></table></figure>
+<p>Note that we use 4-connectedness for paths, which means any two points on the path are only connected if they are vertically or horizontally (but not diagonally!) adjacent.</p>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Following the lecture notes, we formulate the problem as follows:</p>
 <ol>
-<li>The constructor AVLTree () builds the AVLTree.</li>
-<li>The destructor ~AVLTree() deallocates all dynamically allocated memory.</li>
-<li>The void insert(int k) method inserts the key k into the AVLTree, and does not do anything if the key is already stored.</li>
-<li>The void remove(int k) method removes key k from the AVLTree and does not do anything if AVLTree does not contain key k.</li>
-<li>The items stored are positive integers which serve both as keys and as elements.</li>
-<li>The void printInorder() method prints the tree to the standard output using an inorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li>
-<li>The void printPostorder() method prints the tree to the standard output using postorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li>
+<li>States: Any obstacle-free position (i; j) on the map.</li>
+<li>Initial state: A position (i0, j0) given by the user.</li>
+<li>Actions: Since we consider 4-connectedness, only four actions are available: Up, down, left and right (your program must expand each node in this order). Available actions for positions adjacent to the map boundary or obstacles are reduced accordingly.</li>
+<li>Transition model: Moving left moves the current position to the left, etc.</li>
+<li>Goal test: Check if the current state is the end position (i, j) given by the user.</li>
+<li>Path cost: Given a map M and a path P = {(i0, j0), (i1, j1), … ,(iN, jN)}, the cost of the path is calculated. In words, the cost of a path is the sum of the costs between two adjacent points of the path, and the cost between adjacent points is 1 plus the difference between the elevation of the two points if we climb “uphill”, or simply 1 if we stay “level” or slide “downhill”.</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要用实现一个AVL树。AVL树本身代码不复杂，但是需要考虑到接口兼容STL库，这才是本题最大的难点。</p>
-<p>STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。</p>
-<p>我的建议是可以参考一些简易的STL实现，有简入难，一步一步学习。</p>
+<p>This means shorter paths which avoid climbing cost less. As an example, the cost in the path in the previous page is 25. What is the optimal (cheapest) path?</p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>Solve pathfinding using Breadth-First Search (BFS), Uniform-Cost Search (UCS) and ASearch. You should base your program on the pseudocode GRAPH-SEARCH in the lecture slides, and carefully think about the appropriate data structures to use. For A Search, you must implement two heuristics:</p>
+<ol>
+<li>Euclidean distance between current position and end position.</li>
+<li>Manhattan distance between current position and end position.</li>
+</ol>
+<p>For the map in Page 1 with start position (1, 1) and end position (10, 10), your program should help you answer these questions:</p>
+<ol>
+<li>Are the paths returned by the three methods different?</li>
+<li>What about the optimality of the returned paths?</li>
+<li>Which method is the most computationally and memory efficient?</li>
+<li>Do the two heuristics for A* Search provide different solutions?</li>
+<li>Does checking for repeated states matter in this problem?</li>
+</ol>
 
       
     </div>
@@ -393,7 +407,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -406,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP1001-MoreTextProcessing.html" rel="next" title="Python代写：COMP1001-MoreTextProcessing">
-                <i class="fa fa-chevron-left"></i> Python代写：COMP1001-MoreTextProcessing
+              <a href="/CS207-HotelBookingApplication.html" rel="next" title="Java代写：CS207 Hotel Booking Application">
+                <i class="fa fa-chevron-left"></i> Java代写：CS207 Hotel Booking Application
               </a>
             
           </div>
@@ -415,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS251-Sorting.html" rel="prev" title="C代写：CS251 Sorting">
-                C代写：CS251 Sorting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.</span> <span class="nav-text">Tips</span></a></li></ol></div>
             
 
           </div>
