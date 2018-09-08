@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Security," />
+  <meta name="keywords" content="Database," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
-<meta name="keywords" content="Algorithm,Security">
+<meta name="description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta name="keywords" content="Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS413 Data Security">
-<meta property="og:url" content="https://tk1307993.coding.me/CS413-DataSecurity.html">
+<meta property="og:title" content="Database代写：ECS165A-NormalForm">
+<meta property="og:url" content="https://tk1307993.coding.me/ECS165A-NormalForm.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
+<meta property="og:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T12:38:34.394Z">
+<meta property="og:updated_time" content="2018-09-08T03:54:20.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS413 Data Security">
-<meta name="twitter:description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
+<meta name="twitter:title" content="Database代写：ECS165A-NormalForm">
+<meta name="twitter:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS413-DataSecurity.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/ECS165A-NormalForm.html"/>
 
 
 
 
 
-  <title>Java代写：CS413 Data Security | 留学生CS编程作业代写</title>
+  <title>Database代写：ECS165A-NormalForm | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS413-DataSecurity.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECS165A-NormalForm.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS413 Data Security</h2>
+          <h2 class="post-title" itemprop="name headline">Database代写：ECS165A-NormalForm</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T21:18:59+08:00">
-                2018-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T11:51:48+08:00">
+                2018-09-08
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Other/" itemprop="url" rel="index">
+                    <span itemprop="name">Other</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。
+                  Pathfinding是在平面上两点之间找出路径的问题。
               </div>
           
 
@@ -360,25 +360,25 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>古典密码在密码学中，有着举足轻重的作用。做为Data security领域的基础算法理念，离不开其中的置换和置乱两大算法。</p>
-<p>置换，即保持明文中的字符本身，但对字符的顺序进行重新排列的算法。</p>
-<p>置乱，即将明文中的字符，用其他字符或字符序列进行替换。</p>
-<p>而将经过加密的密文，找到其中的统计规律，并还原出其中的原文，称为密码破解。</p>
-<p>而本次作业就是需要找到统计规律，进行密码破解。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>An encrypted file, cryptfile1.txt, is given. Your task is to decrypt it. </p>
-<p>The file was encrypted using some substitution algorithm. The easiest way to break such encryptions is by an analysis of letter frequency. You can go to the library or the Web and get information on the relative frequency of letters in the English language. A program, LetterCount.java, is also given which would allow you to find this yourself. You would simply have to choose a source text file that is sufficiently long and sufficiently representative of English that the relative frequencies of letters in it is pretty much the same as the relative frequencies given in published sources. The real value of LetterCount.java is that it provides sample code that you code adapt to decryption purposes. </p>
-<p>This encryption is simple enough that in theory you could do it by hand. If you find that your initial attempt by hand is netting nothing, you may want to write a program to help. You should hand in the results of your decryption effort.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解</p>
-<p>下面是一段密文：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pmefp wunhi igsrh lxjsv xlmwg hyhig</span><br><span class="line">rkfmk zsgep gsvhw hbdth <span class="keyword">swxtv </span><span class="keyword">shmkm</span></span><br><span class="line"><span class="keyword">otckt </span>euiig hgnmo ceess theoh snegs</span><br><span class="line">eepws lmrsw mwgep piheg vewlx lexek</span><br><span class="line">mepmr skmkw sjxlm wfvii heziv ekisr</span><br><span class="line">ehcwu xlias hoofo mkveg sette adrla</span><br><span class="line">xlivi lmrom fivxl lsphw ytsjv vphwq</span><br></pre></td></tr></table></figure></p>
-<p>首先自然是发现这段文字中，每个字母出现的频率是不一样的，首先猜测仅进行了置换。</p>
-<p>任意找一个词频表，试着解析。</p>
-<p>果然出现了apple，cable之类的可见词汇。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
-<li>根据不同的词频，写程序大胆猜测</li>
-<li>必要时需要进行分词，写程序对不同组合进行尝试</li>
-<li>当发现可见字符时，记录所采用的算法</li>
-<li>猜测密钥</li>
-</ol>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Normal From是数据库理论里面最恶心的问题，从1NF到6NF，加上BCNF，DKNF以及UF。不像编程作业，有运行结果作参考，做这种理论题简直是受罪，每一题都得反复推理。</p>
+<p>像下面给出的这个作业，除了题量大以外，每个问题都是多解问题，拿满分几乎是不可能的事情。</p>
+<p>1) For this problem you will consider following relation and set of FDs:<br>R(A,B,C,D,E)</p>
+<p>AB → E</p>
+<p>B → C</p>
+<p>CE → A</p>
+<p>AE → D</p>
+<p>a) What are the keys of R?</p>
+<p>b) Show that the set of FDs is a minimal basis; if it is not a minimal basis, find a minimal basis for the FDs.</p>
+<p>c) What are all of the BCNF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
+<p>d) Decompose R into BCNF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
+<p>e) What are all of the 3NF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
+<p>f) Decompose R into 3NF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
+<p>g) What are all of the 4NF MVD violations that follow from the FDs?</p>
+<p>h) Decompose R into 4NF. For each relation, list the keys, FDs and MVD.</p>
+<p>i) If you project the relation R onto S(A,B,C) what nontrivial FDs and MVDs hold in S?</p>
+<p>2) For this problem you will consider the following relations and FDs:<br>Courses(C,T,H,R,S,G)<br>C → T<br>HR → C<br>HT → R<br>HS → R<br>CS → G<br>Where C, T, H, R, S, and G are the course, teacher, hour, room, student, and grade respectively. With a proposed decomposition of:<br>R1(C, T, H)<br>R2(C, H, R, G)<br>R3(C, R, S)<br>a) Use the chase test to prove/disprove that holds HS → G in Courses.<br>b) Use the chase test to prove/disprove that holds THR → S in Courses.<br>c) Use the chase test to prove/disprove the proposed decomposition has a lossless join.<br>d) Decompose Courses into 3NF.<br>e) Which of your relations in 3NF are not in BCNF?<br>f) Which of your relations in 3NF are not in 4NF?</p>
+<p>3) Design an academic genealogy database with one entity set: Academics.<br>Consider academics with doctoral degrees only. The information to record about academics includes their name, discipline, year of graduation, institution, dissertation title, dissertation chair, dissertation committee members (assume two others distinct from chair), and academic progeny.</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>最后还是想说一下，这样的多个解的作业真的相当恶心，做的时候需要反复推导，查阅各种资料来证明，而且第二个问的chase test完全就是slides里面的方法，学习理解也花了不少时间。</p>
 
       
     </div>
@@ -396,9 +396,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Security/" rel="tag"># Security</a>
+            <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
       
@@ -411,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS50-C-Programming-Assignment-6.html" rel="next" title="C代写：CS50 C Programming Assignment6">
-                <i class="fa fa-chevron-left"></i> C代写：CS50 C Programming Assignment6
+              <a href="/COMP3007-Pathfinding.html" rel="next" title="Java代写：COMP3007 Pathfinding">
+                <i class="fa fa-chevron-left"></i> Java代写：COMP3007 Pathfinding
               </a>
             
           </div>
@@ -420,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS140-Matrix-VectorMultiplication.html" rel="prev" title="C代写：CS140 Matrix-Vector Multiplication">
-                C代写：CS140 Matrix-Vector Multiplication <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">2.</span> <span class="nav-text">Summary</span></a></li></ol></div>
             
 
           </div>
