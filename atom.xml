@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>C代写：CS308-Pipes</title>
+    <link href="https://tk1307993.coding.me/CS308-Pipes.html"/>
+    <id>https://tk1307993.coding.me/CS308-Pipes.html</id>
+    <published>2018-09-08T03:51:48.000Z</published>
+    <updated>2018-09-09T06:48:02.783Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>结合Unix的系统工具，甚至可以将输入输出流通过fd传给子进程。下面的作业便是通过nameless pipes将数据传递给Unix的sort和grep工具。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This problem will require you to write two different, but similar, programs that each spawn a child, let the child process load itself with a Linux/UNIX type command (the grep and sort commands will be used in this assignment), and then send data to and retrieve data from the child process. Each of your programs will need to:<br>Create 2 nameless pipes</p><ol><li>Create a child process</li><li>The parent will be responsible for managing any data files that the child command will need sent via the pipe</li><li>The parent will collect all output from the child command sent through the pipe, process it as required and write required results to the standard output</li><li>The parent will terminate with success when the pipe being read from the child command shows EOF<br>Perform the appropriate channel management with the processes’ standard IO channels and the pipe channels to create a circular connection through the UNIX command</li><li>standard input to the command child will be sent as output from the parent</li></ol><h3 id="For-the-sort-command"><a href="#For-the-sort-command" class="headerlink" title="For the sort command"></a>For the sort command</h3><p>from your parent process, open the file for reading</p><ol><li>Read each line of the file and write it into (the parent’s) OUT pipe to the child process that has exec’d sort</li><li>Read the file back from the child running sort from the (parent’s) IN pipe, and write the required results to stdout (or a file if you choose)</li><li>sort must sort the data sent by the parent first by phone number area code and then by last name within each area code</li><li>Your equired output will be a summary of the sorted results returned by the child running sort that consists of a listing of each unique area code and the number of people found in the data sent to sort for that code</li></ol><h3 id="For-the-grep-command"><a href="#For-the-grep-command" class="headerlink" title="For the grep command"></a>For the grep command</h3><p>from your parent process, open the file for reading<br>Read each line of the file and write it into (the parent’s) OUT pipe to a child process that exec’d grep</p><ol><li>The child process running grep must filter its incoming lines, looking for any line that has the string “123” in it</li><li>The child process running grep must write back each matching line to the parent process by writing it into the (parent’s) IN pipe</li><li>You (the parent) must read back grep’s output from your IN pipe and print out a single number indicating how many lines had the matching string as your report. You must count the lines returned by grep in your parent process (do not have grep count the lines)</li><li>You must now repeat this grep exercise using the file</li></ol><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>熟悉父子进程和nameless pipe的话，这个作业难度并不高。不过需要注意的是，对EOF的处理，稍有不慎，程序将卡死在sort和grep中，无法退出。</p>]]></content>
+    
+    <summary type="html">
+    
+      Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java代写：COMP3007 Pathfinding</title>
     <link href="https://tk1307993.coding.me/COMP3007-Pathfinding.html"/>
     <id>https://tk1307993.coding.me/COMP3007-Pathfinding.html</id>
@@ -390,9 +412,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -439,30 +461,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Machine Learning" scheme="https://tk1307993.coding.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP代写：CS353 Database System</title>
-    <link href="https://tk1307993.coding.me/CS353-DatabaseSystem.html"/>
-    <id>https://tk1307993.coding.me/CS353-DatabaseSystem.html</id>
-    <published>2018-07-27T13:41:38.000Z</published>
-    <updated>2018-07-27T12:30:38.928Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Prior to beginning tis assignment, please download the studentsdb.sql, studentdb.pdf and the Index.php file from the course web site.<br>In this assignment, you are to complete the php script, Index.php, which will use the values input by the user. This script contains one push botton and one textbox in order to perform the interaction.<br>The web page should provide the following functions:</p><ol><li>Connect to the database</li><li>Check if the database connection is successful</li><li>Validation on user typing</li><li>Search and display the query result of each student</li><li>Error message if no student found</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要实现一个简易的基于网页的查询功能，包括连接数据库、数据库查询、处理用户输入、异常处理。用户的交互部分已经由Index.php提供，我们需要做的是完善它的逻辑。<br>本题难点在于调试部分，建议一边实现一边调试，并在关键地方打印变量值来进行调试。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出数据库连接部分代码，默认数据库为本地mysql，用户名为root，密码为123456<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">...</span><br><span class="line">$conn = mysql_connect(<span class="string">"localhost"</span>, <span class="string">"root"</span>, <span class="string">"123456"</span>);</span><br><span class="line"><span class="keyword">if</span> (!$conn) &#123;</span><br><span class="line">  <span class="comment">// connection failed</span></span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"Could not connect to database: "</span> . mysql_error();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// connection successful</span></span><br><span class="line">...</span><br><span class="line">mysql_close($conn)</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      本题需要实现一个简易的基于网页的查询功能，包括连接数据库、数据库查询、处理用户输入、异常处理。
-    
-    </summary>
-    
-      <category term="PHP" scheme="https://tk1307993.coding.me/categories/PHP/"/>
-    
-    
-      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
-    
-      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
     
   </entry>
   
