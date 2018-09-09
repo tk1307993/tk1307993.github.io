@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-09-08T03:54:20.974Z</updated>
+  <updated>2018-09-09T07:20:29.715Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CS308-Pipes</title>
+    <link href="https://tk1307993.coding.me/CS308-Pipes.html"/>
+    <id>https://tk1307993.coding.me/CS308-Pipes.html</id>
+    <published>2018-09-09T03:51:48.000Z</published>
+    <updated>2018-09-09T07:20:29.715Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>结合Unix的系统工具，甚至可以将输入输出流通过fd传给子进程。下面的作业便是通过nameless pipes将数据传递给Unix的sort和grep工具。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This problem will require you to write two different, but similar, programs that each spawn a child, let the child process load itself with a Linux/UNIX type command (the grep and sort commands will be used in this assignment), and then send data to and retrieve data from the child process. Each of your programs will need to:<br>Create 2 nameless pipes</p><ol><li>Create a child process</li><li>The parent will be responsible for managing any data files that the child command will need sent via the pipe</li><li>The parent will collect all output from the child command sent through the pipe, process it as required and write required results to the standard output</li><li>The parent will terminate with success when the pipe being read from the child command shows EOF<br>Perform the appropriate channel management with the processes’ standard IO channels and the pipe channels to create a circular connection through the UNIX command</li><li>standard input to the command child will be sent as output from the parent</li></ol><h3 id="For-the-sort-command"><a href="#For-the-sort-command" class="headerlink" title="For the sort command"></a>For the sort command</h3><p>from your parent process, open the file for reading</p><ol><li>Read each line of the file and write it into (the parent’s) OUT pipe to the child process that has exec’d sort</li><li>Read the file back from the child running sort from the (parent’s) IN pipe, and write the required results to stdout (or a file if you choose)</li><li>sort must sort the data sent by the parent first by phone number area code and then by last name within each area code</li><li>Your equired output will be a summary of the sorted results returned by the child running sort that consists of a listing of each unique area code and the number of people found in the data sent to sort for that code</li></ol><h3 id="For-the-grep-command"><a href="#For-the-grep-command" class="headerlink" title="For the grep command"></a>For the grep command</h3><p>from your parent process, open the file for reading<br>Read each line of the file and write it into (the parent’s) OUT pipe to a child process that exec’d grep</p><ol><li>The child process running grep must filter its incoming lines, looking for any line that has the string “123” in it</li><li>The child process running grep must write back each matching line to the parent process by writing it into the (parent’s) IN pipe</li><li>You (the parent) must read back grep’s output from your IN pipe and print out a single number indicating how many lines had the matching string as your report. You must count the lines returned by grep in your parent process (do not have grep count the lines)</li><li>You must now repeat this grep exercise using the file</li></ol><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>熟悉父子进程和nameless pipe的话，这个作业难度并不高。不过需要注意的是，对EOF的处理，稍有不慎，程序将卡死在sort和grep中，无法退出。</p>]]></content>
+    
+    <summary type="html">
+    
+      Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>Database代写：ECS165A-NormalForm</title>
@@ -35,28 +57,6 @@
     
     
       <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CS308-Pipes</title>
-    <link href="https://tk1307993.coding.me/CS308-Pipes.html"/>
-    <id>https://tk1307993.coding.me/CS308-Pipes.html</id>
-    <published>2018-09-08T03:51:48.000Z</published>
-    <updated>2018-09-09T06:48:02.783Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>结合Unix的系统工具，甚至可以将输入输出流通过fd传给子进程。下面的作业便是通过nameless pipes将数据传递给Unix的sort和grep工具。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This problem will require you to write two different, but similar, programs that each spawn a child, let the child process load itself with a Linux/UNIX type command (the grep and sort commands will be used in this assignment), and then send data to and retrieve data from the child process. Each of your programs will need to:<br>Create 2 nameless pipes</p><ol><li>Create a child process</li><li>The parent will be responsible for managing any data files that the child command will need sent via the pipe</li><li>The parent will collect all output from the child command sent through the pipe, process it as required and write required results to the standard output</li><li>The parent will terminate with success when the pipe being read from the child command shows EOF<br>Perform the appropriate channel management with the processes’ standard IO channels and the pipe channels to create a circular connection through the UNIX command</li><li>standard input to the command child will be sent as output from the parent</li></ol><h3 id="For-the-sort-command"><a href="#For-the-sort-command" class="headerlink" title="For the sort command"></a>For the sort command</h3><p>from your parent process, open the file for reading</p><ol><li>Read each line of the file and write it into (the parent’s) OUT pipe to the child process that has exec’d sort</li><li>Read the file back from the child running sort from the (parent’s) IN pipe, and write the required results to stdout (or a file if you choose)</li><li>sort must sort the data sent by the parent first by phone number area code and then by last name within each area code</li><li>Your equired output will be a summary of the sorted results returned by the child running sort that consists of a listing of each unique area code and the number of people found in the data sent to sort for that code</li></ol><h3 id="For-the-grep-command"><a href="#For-the-grep-command" class="headerlink" title="For the grep command"></a>For the grep command</h3><p>from your parent process, open the file for reading<br>Read each line of the file and write it into (the parent’s) OUT pipe to a child process that exec’d grep</p><ol><li>The child process running grep must filter its incoming lines, looking for any line that has the string “123” in it</li><li>The child process running grep must write back each matching line to the parent process by writing it into the (parent’s) IN pipe</li><li>You (the parent) must read back grep’s output from your IN pipe and print out a single number indicating how many lines had the matching string as your report. You must count the lines returned by grep in your parent process (do not have grep count the lines)</li><li>You must now repeat this grep exercise using the file</li></ol><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>熟悉父子进程和nameless pipe的话，这个作业难度并不高。不过需要注意的是，对EOF的处理，稍有不慎，程序将卡死在sort和grep中，无法退出。</p>]]></content>
-    
-    <summary type="html">
-    
-      Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
     
   </entry>
   
@@ -412,9 +412,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
     
   </entry>
   
