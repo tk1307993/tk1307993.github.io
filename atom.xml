@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-09-16T07:46:41.532Z</updated>
+  <updated>2018-09-19T13:27:53.122Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS代写：CSE6242-D3GraphsAndVisualization</title>
+    <link href="https://tk1307993.coding.me/CSE6242-D3GraphsAndVisualization.html"/>
+    <id>https://tk1307993.coding.me/CSE6242-D3GraphsAndVisualization.html</id>
+    <published>2018-09-19T13:25:34.000Z</published>
+    <updated>2018-09-19T13:27:53.122Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Part-1-Visualizing-Data-using-D3"><a href="#Part-1-Visualizing-Data-using-D3" class="headerlink" title="Part 1: Visualizing Data using D3"></a>Part 1: Visualizing Data using D3</h3><p>Q1</p><p>Create a scatter plot visualization with the provided data in the file Data.csv. According to the examples for scatter plot.<br>Attributes / features of the data:</p><p>Speed of wind in km/h.<br>Month of the year.<br>The forest burnt area.<br>Any appropriate range for scale is allowed, and any appropriate size for squares is allowed. Submit Q1.pdf with a screenshot of this page.</p><p>Q2</p><p>According to data provided in the file Q2.csv, a bar chart visualization should be drawn. Your task requires to visualize the number of students in Q2.csv.<br>Transfer the data in Q2.csv to Q2_transfer.csv, you can use a Python script or Java program to archive this goal.</p><p>Q3</p><p>Now you knows a lot of features in D3 for graph visualization. This time you need to use D3 to draw a graph.</p><ol><li>Using labels for each node.</li><li>All nodes can be pinned.</li><li>Draw links with different color.</li><li>Use tooltips when mouse over.</li></ol><h3 id="Part-2-Visualizing-Statistics-of-Refugees-in-Europe"><a href="#Part-2-Visualizing-Statistics-of-Refugees-in-Europe" class="headerlink" title="Part 2: Visualizing Statistics of Refugees in Europe"></a>Part 2: Visualizing Statistics of Refugees in Europe</h3><p>Q4</p><p>After Part1, this time you need to work on real data, and try to find out the appropriate data visualization technology.</p><ol><li>Your should transfer Q4.csv to Q4_transfer.csv, you can use a Python script or Java program to do this job.</li><li>Use a table to show the relationship inside this dataset, you can draw any graph you like.</li><li>Use D3 to visualize your data, you should use d3.slider library.</li></ol><h3 id="Part-3-Visualizing-College-Scorecard-data"><a href="#Part-3-Visualizing-College-Scorecard-data" class="headerlink" title="Part 3: Visualizing College Scorecard data"></a>Part 3: Visualizing College Scorecard data</h3><p>Q5</p><p>After Part2, this time you should find a real dataset, and use your data visualization technology to show it, good luck!</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>非常花时间的一次作业，csv数据集非常恶心，从一开始的给定数据，到复杂数据，最后自己找数据，整整花了两天吧。得分点很多，也很细，不过万幸的是Bonus很简单。</p>]]></content>
+    
+    <summary type="html">
+    
+      D3.js是Javascript中的一个利用Html5的SVG的图形库，主要用于数据可视化
+    
+    </summary>
+    
+      <category term="JS" scheme="https://tk1307993.coding.me/categories/JS/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>R代写：CSC120-EuclideanMinimumWeightMatching</title>
@@ -433,30 +455,6 @@
     
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS413 Data Security</title>
-    <link href="https://tk1307993.coding.me/CS413-DataSecurity.html"/>
-    <id>https://tk1307993.coding.me/CS413-DataSecurity.html</id>
-    <published>2018-07-30T13:18:59.000Z</published>
-    <updated>2018-07-31T12:38:34.394Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>古典密码在密码学中，有着举足轻重的作用。做为Data security领域的基础算法理念，离不开其中的置换和置乱两大算法。</p><p>置换，即保持明文中的字符本身，但对字符的顺序进行重新排列的算法。</p><p>置乱，即将明文中的字符，用其他字符或字符序列进行替换。</p><p>而将经过加密的密文，找到其中的统计规律，并还原出其中的原文，称为密码破解。</p><p>而本次作业就是需要找到统计规律，进行密码破解。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>An encrypted file, cryptfile1.txt, is given. Your task is to decrypt it. </p><p>The file was encrypted using some substitution algorithm. The easiest way to break such encryptions is by an analysis of letter frequency. You can go to the library or the Web and get information on the relative frequency of letters in the English language. A program, LetterCount.java, is also given which would allow you to find this yourself. You would simply have to choose a source text file that is sufficiently long and sufficiently representative of English that the relative frequencies of letters in it is pretty much the same as the relative frequencies given in published sources. The real value of LetterCount.java is that it provides sample code that you code adapt to decryption purposes. </p><p>This encryption is simple enough that in theory you could do it by hand. If you find that your initial attempt by hand is netting nothing, you may want to write a program to help. You should hand in the results of your decryption effort.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解</p><p>下面是一段密文：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pmefp wunhi igsrh lxjsv xlmwg hyhig</span><br><span class="line">rkfmk zsgep gsvhw hbdth <span class="keyword">swxtv </span><span class="keyword">shmkm</span></span><br><span class="line"><span class="keyword">otckt </span>euiig hgnmo ceess theoh snegs</span><br><span class="line">eepws lmrsw mwgep piheg vewlx lexek</span><br><span class="line">mepmr skmkw sjxlm wfvii heziv ekisr</span><br><span class="line">ehcwu xlias hoofo mkveg sette adrla</span><br><span class="line">xlivi lmrom fivxl lsphw ytsjv vphwq</span><br></pre></td></tr></table></figure></p><p>首先自然是发现这段文字中，每个字母出现的频率是不一样的，首先猜测仅进行了置换。</p><p>任意找一个词频表，试着解析。</p><p>果然出现了apple，cable之类的可见词汇。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol><li>根据不同的词频，写程序大胆猜测</li><li>必要时需要进行分词，写程序对不同组合进行尝试</li><li>当发现可见字符时，记录所采用的算法</li><li>猜测密钥</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Security" scheme="https://tk1307993.coding.me/tags/Security/"/>
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
