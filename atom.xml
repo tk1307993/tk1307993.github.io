@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-09-24T02:44:55.815Z</updated>
+  <updated>2018-09-25T12:37:31.239Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hadoop代写：CA675-TF-IDF</title>
+    <link href="https://tk1307993.coding.me/CA675-TF-IDF.html"/>
+    <id>https://tk1307993.coding.me/CA675-TF-IDF.html</id>
+    <published>2018-09-25T02:41:52.000Z</published>
+    <updated>2018-09-25T12:37:31.239Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Tasks:</p><ol><li>Using MapReduce, carry out the following tasks:</li><li>Acquire the top 250,000 posts by viewcount (see notes)</li><li>Using pig or mapreduce, extract, transform and load the data as applicable</li><li>Using mapreduce calculate the per-user TF-IDF (just submit the top 10 terms for each user)</li><li>Bonus use elastic mapreduce to execute one or more of these tasks (if so, provide logs / screenshots)</li><li><p>Using hive and/or mapreduce, get:</p><ol><li>The top 10 posts by score</li><li>The top 10 users by post score</li><li>The number of distinct users, who used the word ‘java’ in one of their posts</li></ol></li></ol><h3 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h3><p>The TF-IDF algorithm is used to calculate the relative frequency of a word in a document, as compared to the overall frequency of that word in a collection of documents. This allows you to discover the distinctive words for a particular user or document.</p><p>The formula is:</p><p>TF(t) = Number of times t appears in the document / Number of words in the document</p><p>IDF(t) = log_e(Total number of documents / Number of Documents containing t)</p><p>The TFIDF(t) score of the term t is the multiple of those two.</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>用Hadoop去计算TF-IDF的时间复杂度还是挺高的，毕竟有很多临时数据要落地，而且Hadoop程序也不是一个就能解决问题的，如果换成Spark的话，应该会高效很多。</p>]]></content>
+    
+    <summary type="html">
+    
+      大数据作业，利用Hadoop去跑数据集，先是几个基本的MapReduce简单问题，当然也可以用Hive，然后是去计算TF-IDF，当然，数据集得自己下，Hadoop平台也得自己去搭。
+    
+    </summary>
+    
+      <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
+    
+    
+      <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
+    
+      <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS415-Blackjack</title>
@@ -431,32 +457,6 @@
       <category term="BMP" scheme="https://tk1307993.coding.me/tags/BMP/"/>
     
       <category term="JPEG" scheme="https://tk1307993.coding.me/tags/JPEG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：COMP435 Multimedia Technologies TME1</title>
-    <link href="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html"/>
-    <id>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html</id>
-    <published>2018-08-02T13:53:29.000Z</published>
-    <updated>2018-08-02T13:58:42.890Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Using Java Advanced Images (JAI) and Java Multimedia Framework (JMF) as examples, this exercise will familiarize students with API packages. Before you start working on this assignment you should read Unit 1 of the course to get an idea of the two packages, their pros and cons, current issues, and other alternatives.</p><p>This assignment is a programming exercise aimed at developing a simple image viewer and a media player. If you have a working knowledge of Java, the coding should be fairly simple. Do not overdo the exercise. It is not the purpose of the exercise to develop killer multimedia applications. It is hoped that you will enjoy this exercise.</p><p>The assignment assumes a certain programming expertise using Java Swing. If you are not comfortable, Sun has a great tutorial on Swing:<br><a href="http://docs.oracle.com/javase/tutorial/uiswing/" target="_blank" rel="noopener">http://docs.oracle.com/javase/tutorial/uiswing/</a></p><p>This assignment is divided into two parts, and you must deliver two programs:</p><h4 id="Part-1-Write-an-image-viewer-using-JAI"><a href="#Part-1-Write-an-image-viewer-using-JAI" class="headerlink" title="Part 1: Write an image viewer using JAI"></a>Part 1: Write an image viewer using JAI</h4><p>Your JAI image viewer must have the following components and functionalities:</p><ol><li>A menu bar with a File option that opens a file from a file dialog, and an Exit option to quit the application.</li><li>Zoom-in, Zoom-out and Normal buttons. You should enable and disable the buttons whenever appropriate.</li><li>A scrollable pane to view the image.</li><li>The viewer must support JPEG and BMP. You may add other file formats if you wish.</li></ol><h4 id="Part-2-Write-a-media-player-using-JMF"><a href="#Part-2-Write-a-media-player-using-JMF" class="headerlink" title="Part 2: Write a media player using JMF."></a>Part 2: Write a media player using JMF.</h4><p>Your MMF media player should have the following components and functionalities:</p><ol><li>It should play video files in MPEG, AVI and MOV formats, and audio files in MIDI format. Feel free to add other supported formats.</li><li>A menu bar with an Open option to open a media file, a Close option to close the currently opened file, and an Exit option to quit the application.</li><li>A control that consists of the following buttons:<ol><li>Playbutton – plays the current video or audio file.</li><li>Stopbutton – stops the current video or audio file.</li><li>Pausebutton – stop playing the current video or audio file. When the play button is pressed, it continues to play the file from the paused position.</li></ol></li><li>Position bar – display the current position of the media file.</li></ol><h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>You are required to submit the following:</p><ol><li>All source codes.</li><li>A setup guide to allow your tutor to set up the necessary environment to run both programs.<br>All files must be zipped into one single file using Winzip. Keep a clean directory structure so that Part 1 and Part 2 are unzipped into separate directories.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      本题使用Java JAI和JMF库分别实现一个ImageViewer和MediaPlayer
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="JAI" scheme="https://tk1307993.coding.me/tags/JAI/"/>
-    
-      <category term="JMF" scheme="https://tk1307993.coding.me/tags/JMF/"/>
-    
-      <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
     
   </entry>
   
