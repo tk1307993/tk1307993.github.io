@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-09-25T12:37:31.239Z</updated>
+  <updated>2018-09-28T12:32:41.529Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python代写：Greedy Alrithm</title>
+    <link href="https://tk1307993.coding.me/CS406-GreedyAlgorithm.html"/>
+    <id>https://tk1307993.coding.me/CS406-GreedyAlgorithm.html</id>
+    <published>2018-09-28T12:27:49.000Z</published>
+    <updated>2018-09-28T12:32:41.529Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Consider the following solitaire game: you are given a list of moves, x1, x2…xm, and their costs, y1, y2…ym. Moves and their costs both take the form of positive integers. Such a list of moves and their costs is called an instance of the game. To play the game, you start with a positive integer n. On each turn of the game you have two choices: subtract 1 from n incurring a cost of 1 or pick some move xi such that n is divisible by xi and divide n by xi incurring a cost of yi. The goal is to get to 0 while incurring the minimum possible cost.</p><ol><li>Divide 20 by 4 to get 5, incurring a cost of 1</li><li>Subtract 1 from 5 to get 4 incurring a cost of 1</li><li>Divide 4 by 4 to get 1, incurring a cost of 1</li><li>Subtract 1 from 1 to get 0, incurring a cost of 1</li></ol><p>So the final cost is 4. One suboptimal strategy for this game is as follows:</p><ol><li>Divide 20 by 5 to get 4, incurring a cost of 3</li><li>Divide 4 by 4 to get 1, incurring a cost of 1</li><li>Subtract 1 from 1 to get 0, incurring a cost of 1</li></ol><p>which gives us a total cost of 5.<br>One possible greedy algorithm for this game is as follows: On each turn, simply divide the current number by the legal move x of cost y which maximizes x / y - the ratio of move to cost (and subtract 1 from the current number if it is not divisible by any move). If two legal moves have the same ratio of move to cost then the greedy algorithm will take the larger move. Unfortunately, this greedy algorithm does not always give the optimal strategy. In this problem you will find counterexamples that show the greedy algorithm is not optimal in different instances of this game.</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul><li><p>To find instances where the greedy algorithm fails, you will probably need to be able to find the optimal strategy in all instances. What kind of algorithm can you use to do this?</p></li><li><p>Most of the difficulty of this assignment is in coming up with the right approach. The code you write does not need to be especially long or complex to solve the problem.</p></li><li><p>It may take some time for your code to find a counterexample, particularly for the last couple instances. But if it takes more than a couple of minutes, you probably need to rethink your approach.</p></li><li><p>When searching for instances of where the greedy algorithm fails, it is useful to avoid redoing work.</p></li><li><p>For reference, the optimal cost for the instance (3, 1), (2, 1) when n is 321 is 10, and the greedy algorithm gives 11. The smallest value of n for which the greedy algorithm fails on the instance (211, 2), (210, 1) is 4740960.</p></li><li><p>Start early. You have two weeks to do this problem, so you shouldn’t try to do it all in the last day.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      Greedy Algorithm，也就是贪心算法，局部最优化的算法，虽然可以快速得到解，但是这个解往往不会是全局最优解。不过这个算法的思想倒是挺有趣的。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hadoop代写：CA675-TF-IDF</title>
     <link href="https://tk1307993.coding.me/CA675-TF-IDF.html"/>
     <id>https://tk1307993.coding.me/CA675-TF-IDF.html</id>
     <published>2018-09-25T02:41:52.000Z</published>
-    <updated>2018-09-25T12:37:31.239Z</updated>
+    <updated>2018-09-28T12:32:39.969Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Tasks:</p><ol><li>Using MapReduce, carry out the following tasks:</li><li>Acquire the top 250,000 posts by viewcount (see notes)</li><li>Using pig or mapreduce, extract, transform and load the data as applicable</li><li>Using mapreduce calculate the per-user TF-IDF (just submit the top 10 terms for each user)</li><li>Bonus use elastic mapreduce to execute one or more of these tasks (if so, provide logs / screenshots)</li><li><p>Using hive and/or mapreduce, get:</p><ol><li>The top 10 posts by score</li><li>The top 10 users by post score</li><li>The number of distinct users, who used the word ‘java’ in one of their posts</li></ol></li></ol><h3 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h3><p>The TF-IDF algorithm is used to calculate the relative frequency of a word in a document, as compared to the overall frequency of that word in a collection of documents. This allows you to discover the distinctive words for a particular user or document.</p><p>The formula is:</p><p>TF(t) = Number of times t appears in the document / Number of words in the document</p><p>IDF(t) = log_e(Total number of documents / Number of Documents containing t)</p><p>The TFIDF(t) score of the term t is the multiple of those two.</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>用Hadoop去计算TF-IDF的时间复杂度还是挺高的，毕竟有很多临时数据要落地，而且Hadoop程序也不是一个就能解决问题的，如果换成Spark的话，应该会高效很多。</p>]]></content>
     
@@ -34,11 +56,11 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
     
     
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
       <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
     
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -433,30 +455,6 @@
     
       <category term="Writing" scheme="https://tk1307993.coding.me/categories/Writing/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：COMP435 Multimedia Technologies TME2</title>
-    <link href="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME2.html"/>
-    <id>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME2.html</id>
-    <published>2018-08-03T13:06:55.000Z</published>
-    <updated>2018-08-03T13:10:20.190Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The purpose of this exercise is to help you understand the various parameters that affect the quality of a compressed image. Using JPEG as an example, you are required to write a program to control the quantization matrices used for compression. A brief discussion of the impact is included as part of the assignment.</p><h3 id="Follow-these-steps"><a href="#Follow-these-steps" class="headerlink" title="Follow these steps:"></a>Follow these steps:</h3><ol><li><p>Download this image. Note that the image is in bitmap format and is quite large. If you are running on unstable Internet service and have a problem downloading the file, please contact your tutor for assistance. <strong>flower.bmp</strong></p></li><li><p>Write a Java class that converts the bitmap image to JPEG format.</p></li><li>Add a second viewable pane on your image viewer in TME 1. The original pane should display the original bitmap image, and the second pane should display the converted JPEG image. <strong>TME2_Sample_Screen.JPG</strong></li><li>Add a mechanism to input the quantization matrix. It should have three options: <ol><li>default JPEG matrix - the numbers can be found on Table 9.1 and Table 9.2 of the textbook; </li><li>a constant number;</li><li>DC component only (i.e. set all other numbers to zero).</li></ol></li><li>Add an option to the File menu to output the compressed JPEG image to the hard disk.</li></ol><h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><ol><li>All source codes.</li><li>A setup guide to allow your tutor to set up the necessary environment and run the programs.</li><li>Four compressed output files: <ol><li>with default quantization matrix; </li><li>A low constant number (e.g. 1); </li><li>A absurdly high number (e.g. 200); </li><li>DC component only.</li></ol></li><li>A discussion document – discuss the various effects of the output file. Why are they like that? Will JPEG 2000 improve the quality?</li><li>All files must be zipped into one single file using Winzip. Do not include the original image.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      本题使用Java将BMP图片转换成JPEG格式
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="BMP" scheme="https://tk1307993.coding.me/tags/BMP/"/>
-    
-      <category term="JPEG" scheme="https://tk1307993.coding.me/tags/JPEG/"/>
     
   </entry>
   
