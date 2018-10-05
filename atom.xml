@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-09-30T10:33:47.406Z</updated>
+  <updated>2018-10-05T10:20:43.894Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Database代写：CSC370-Database</title>
+    <link href="https://tk1307993.coding.me/CSC370-Database.html"/>
+    <id>https://tk1307993.coding.me/CSC370-Database.html</id>
+    <published>2018-10-05T10:18:14.000Z</published>
+    <updated>2018-10-05T10:20:43.894Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Ex-1"><a href="#Ex-1" class="headerlink" title="Ex.1"></a>Ex.1</h3><p>Consider a disk with average seek time of 10 ms, average rotational latency of 5 ms, and a transfer time of 1 ms for a 4KB block. The cost of reading/writing a block is the sum of these values (i.e. 16 ms). We are asked to sort a large relation consisting of 10,000,000 blocks of 4KB each. For this, we use a computer on which the main memory available for buffering is 320 blocks (somewhat small memory). We begin as usual by creating sorted runs of 320 blocks each in phase 1. Then, we do 319-way merges. Determine the number of phases needed, and evaluate the cost of the Multi Phase Multiway Merge Sort.</p><h3 id="Ex-2"><a href="#Ex-2" class="headerlink" title="Ex.2"></a>Ex.2</h3><p>Build a B+ tree index with n=3 using the following sequence of keys:<br>2, 15, 31, 32, 6, 18, 19, 20, 3, 4, 5, 40, 41, 42</p><p>Redraw the tree each time an insertion is done.</p><h3 id="Ex-3"><a href="#Ex-3" class="headerlink" title="Ex.3"></a>Ex.3</h3><p>Consider the following query plan.</p><p>What is the cost in terms of number of I/Os for this plan?</p><p>Notes. The result of the left selection, being small, is kept in main memory, where it is sorted. The result of the right selection is pipelined to the join operator, i.e. the generation of the sorted sublists for the first phase of sort is done on the fly.<br>Do not count the I/Os for writing the final results (after projection).</p><p>Consult queryeval.pdf for the table statistics.</p><h3 id="Ex-4"><a href="#Ex-4" class="headerlink" title="Ex.4"></a>Ex.4</h3><p>For each of the schedules of transactions T1, T2, and T3 below:</p><ol><li>r1(A); r2(B); r3(C); r1(B); r2(C); r3(D); w1(A); w2(B); w3(C);</li><li>r1(A); r2(B); r3(C); r1(B); r2(C); r3(A); w1(A); w2(B); w3(C);</li></ol><p>do each of the following:</p><ul><li>Insert shared and exclusive locks, and insert unlock actions. Place a shared lock immediately in front of each read action that is not followed by a write action of the same element by the same transaction. Place an exclusive lock in front of every other read or write action. Place the necessary unlocks at the end of every transaction.<br>Tell what happens when each schedule is run by a scheduler that supports shared and exclusive locks.</li><li>Insert shared and exclusive locks in a way that allows upgrading. Place a shared lock in front of every read, an exclusive lock in front of every write, and place the necessary unlocks at the ends of the transactions.<br>Tell what happens when each schedule is run by a scheduler that supports shared locks, exclusive locks, and upgrading.</li><li>Insert shared, exclusive, and update locks, along with unlock actions. Place a shared lock in front of every read action that is not going to be upgraded, place an update lock in front of every read action that will be upgraded, and place an exclusive lock in front of every write action. Place unlocks at the ends of transactions, as usual.</li><li>Tell what happens when each schedule is run by a scheduler that supports shared, exclusive, and update locks.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      这个作业是个大杂烩，sort，B+ tree，query，transactions，log，BCNF，总之什么都要涉及一点。
+    
+    </summary>
+    
+      <category term="Database" scheme="https://tk1307993.coding.me/categories/Database/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS2401 STLContainer</title>
@@ -432,26 +456,6 @@
     <summary type="html">
     
       本题使用英文写作，总结多媒体技术
-    
-    </summary>
-    
-      <category term="Writing" scheme="https://tk1307993.coding.me/categories/Writing/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Written代写：COMP435 Multimedia Technologies TME4</title>
-    <link href="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME4.html"/>
-    <id>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME4.html</id>
-    <published>2018-08-05T02:15:49.000Z</published>
-    <updated>2018-08-05T02:18:46.883Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>TME 4 is a written assignment. The purpose of this assignment is to help you understand the architecture of a media server and how it can be used in one of the multimedia applications. </p><p>The report should have two parts.</p><h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>In this part you will evaluate one open source media server you may find. In case you are not sure, you may try VideoLan (<a href="http://www.videolan.org/" target="_blank" rel="noopener">http://www.videolan.org/</a>) or Icecast (<a href="http://www.icecast.org/)" target="_blank" rel="noopener">http://www.icecast.org/)</a>. </p><p>VideoLan is recommended, as the documentation is more readily available. However, you might want to choose Icecast if you are planning to write on Internet Radio (see part 2). All other open source projects are acceptable.<br>In the report you should have the following:</p><ol><li>A one- to two-page summary of a brief history of the server.</li><li>A three- to five-page summary of the functionalities of the media server. At a minimum you should describe all technical details including the streaming protocols used or available, the clients supported, the formats supported, support of multicast, any compliance issues, and platforms supported.</li><li>An installation and a system management example.</li><li>A list of references.</li><li>Total length of part 1 should be about 6 pages.</li></ol><h3 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h3><p>In this part you will develop a strategy to implement one of the following applications using the media server you chose in Part 1:</p><ol><li>Video serving</li><li>Internet radio station</li><li>Videoconferencing</li><li>Live broadcasting</li></ol><p>In your report you should include:</p><ol><li>A graphic design of your application</li><li>Assumptions of your client machines (desktop or laptop computers, mobile devices).</li><li>Logging of user feedback.</li><li>A list of references.<br>Total length of part 2 should be about 6 pages. If you have a lot of graphs or pictures, you may extend the number of pages.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      本题使用英文写作，理解多媒体播放器的架构和应用
     
     </summary>
     
