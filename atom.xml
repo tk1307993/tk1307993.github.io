@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-10-14T10:29:23.889Z</updated>
+  <updated>2018-10-19T13:06:52.192Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS214-SinglyLinkedList</title>
+    <link href="https://tk1307993.coding.me/CS214-SinglyLinkedList.html"/>
+    <id>https://tk1307993.coding.me/CS214-SinglyLinkedList.html</id>
+    <published>2018-10-19T13:04:54.000Z</published>
+    <updated>2018-10-19T13:06:52.192Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This practical will once again test your knowledge on linked list, with an emphasize on computational complexity.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Create a singly linked list for storing positive integers. Each node will store one integer.</p><p>For example, 12-&gt;3-&gt;5-&gt;777-&gt;111 is such a list. There are hive nodes in this list. 12 is the head node and 111 is the tail node. (111 points to NULL.)</p><p>Your linked list starts empty. It should support the following three operations:</p><ul><li>Add x to tail: Create a new node whose data field contains x. Append this node at the end of the list.<br>For example, for the list 12-&gt;3-&gt;5-&gt;777-&gt;111, if we add 2 to the tail, then the list becomes 12-&gt;3-&gt;5-&gt;777-&gt;111-&gt;2.</li><li>Remove from head: If the list is empty, then do nothing. Otherwise, remove the head node from the list.<br>For example, for the list 12-&gt;3-&gt;5-&gt;777-&gt;111, if we remove a node from its head, then it becomes 3-&gt;5-&gt;777-&gt;111.</li><li>Find middle node: Find the middle node(s) from the list and returns the corresponding data field(s).<br>If the number of nodes is odd, then the middle node is just the one in the middle of the list. For the list 12-&gt;3-&gt;5-&gt;777-&gt;111, there are ve nodes, the middle node’s data field contains 5.<br>If the number of nodes is even, then the middle nodes are the two nodes in the middle of the list. For the list 12-&gt;3-&gt;5-&gt;777-&gt;111-&gt;2, there are six nodes, the middle nodes’ data fields contain 5 and 777.<br>If the number of nodes is zero, then return 0.</li></ul><p>Your implementation should satisfy that all the above three operations take O(1) (constant) time.</p><p>Create a main function that takes in one line. The line contains a list of operations. An operation is either of the form “Aint” (e.g., A123, A23, A111) or of the form “R”. A123 means add 123 to the tail. R means remove a node from head. Your output should be the status of the list after all the operations (use the form int1-&gt;int2-&gt;int3 if there are multiple nodes in the list; use the form int1 if there is only one node in the list; output “empty” if the list is empty). Your output should be followed by the middle value(s).</p><p>Please separate your results by space.</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A888 A111 R A777 A5 A3</span><br><span class="line"><span class="keyword">Sample</span> output: 111-&gt;777-&gt;5-&gt;3 777 5</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A888 A111 R A777 A5 A3 <span class="built_in">R</span></span><br><span class="line"><span class="keyword">Sample</span> output: 777-&gt;5-&gt;3 5</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: R A777</span><br><span class="line"><span class="keyword">Sample</span> output: 777 777</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A777 <span class="built_in">R</span></span><br><span class="line"><span class="keyword">Sample</span> output: empty 0</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      实现一个单链表，也就是Singly Linked List，算是基础的数据结构了。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="MangoDB" scheme="https://tk1307993.coding.me/tags/MangoDB/"/>
+    
+      <category term="NodeJS" scheme="https://tk1307993.coding.me/tags/NodeJS/"/>
+    
+  </entry>
   
   <entry>
     <title>NodeJS代写：CSC309-SharingEconomy</title>
@@ -441,28 +465,6 @@
     
     
       <category term="STL" scheme="https://tk1307993.coding.me/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python代写：COMP1001-MoreTextProcessing</title>
-    <link href="https://tk1307993.coding.me/COMP1001-MoreTextProcessing.html"/>
-    <id>https://tk1307993.coding.me/COMP1001-MoreTextProcessing.html</id>
-    <published>2018-08-08T15:33:20.000Z</published>
-    <updated>2018-08-08T15:35:51.914Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>用Python的一个优势便是十分适合Text processing，由于Python内建了许多函数，对于文字、字符的处理十分便捷，如字符串连接、字符串截取、字符串查找、字符串替换、字符串比较、字符串分割、字符串翻转、字符串编码等，都有对应的函数进行处理。相比C语言，节省了很多开发工作量。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This question prints the leaves of a symmetric tree. A user will be prompted for a symbol and a positive position for the tip of the leaves. Starting from the tip, the tree will fan out on both sides symmetrically until left side of the leaves reaches the left edge, assuming that the right edge has no limit. For example</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Please enter a symbol: *</span><br><span class="line">Please enter a positive position</span><br><span class="line">of the symbol on the first line: 10</span><br><span class="line"><span class="code">         *</span></span><br><span class="line"><span class="code">        ***</span></span><br><span class="line"><span class="code">       *****</span></span><br><span class="line"><span class="code">      *******</span></span><br><span class="line"><span class="code">     *********</span></span><br><span class="line"><span class="code">    ***********</span></span><br><span class="line">   <span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span></span><br><span class="line">  <span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></span><br><span class="line"> <span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span>**</span><br><span class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br></pre></td></tr></table></figure><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题就是一个简单的字符串处理，注意逻辑处理就好，难度不大，直接上代码。</p><p>不过越是容易的题目，越不容易写出精简的代码，本题打印最简单的方法可由一行代码实现。</p><h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="comment"># user input</span></span><br><span class="line">  symbol = input(<span class="string">"Please enter a symbol: "</span>)</span><br><span class="line">  pos = eval(input(<span class="string">"Please enter a positive position \nof the symbol on the first line: "</span>))</span><br><span class="line"></span><br><span class="line">  <span class="comment"># print the leaves</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(pos):</span><br><span class="line">      print((pos - <span class="number">1</span> - i) * <span class="string">" "</span> + (<span class="number">2</span> * i + <span class="number">1</span>) * symbol)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      本题就是一个简单的字符串处理，注意逻辑处理就好，难度不大，直接上代码。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
     
   </entry>
   
