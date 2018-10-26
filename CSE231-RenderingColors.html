@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C++实现本地和服务器版本号比较">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="基础的Python作业，主要就是用while和if结合三方库来画图。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：实现本地和服务器版本号比较">
-<meta property="og:url" content="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+<meta property="og:title" content="Python代写：CSE231-RenderingColors">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE231-RenderingColors.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C++实现本地和服务器版本号比较">
+<meta property="og:description" content="基础的Python作业，主要就是用while和if结合三方库来画图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-23T12:36:10.909Z">
+<meta property="og:updated_time" content="2018-10-26T01:41:03.725Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：实现本地和服务器版本号比较">
-<meta name="twitter:description" content="C++实现本地和服务器版本号比较">
+<meta name="twitter:title" content="Python代写：CSE231-RenderingColors">
+<meta name="twitter:description" content="基础的Python作业，主要就是用while和if结合三方库来画图。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/本地和服务器版本号比较.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE231-RenderingColors.html"/>
 
 
 
 
 
-  <title>C++代写：实现本地和服务器版本号比较 | 留学生CS编程作业代写</title>
+  <title>Python代写：CSE231-RenderingColors | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE231-RenderingColors.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：实现本地和服务器版本号比较</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：CSE231-RenderingColors</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T19:37:50+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T09:37:48+08:00">
+                2018-10-26
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C++实现本地和服务器版本号比较
+                  基础的Python作业，主要就是用while和if结合三方库来画图。
               </div>
           
 
@@ -360,8 +360,28 @@
       
 
       
-        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>函数需求，对任意软件的两个版本号进行比较，返回较大的版本号。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></span><br><span class="line"><span class="comment">// 导入string头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 导入std::vector头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">// split_wstring用于分割字符串</span></span><br><span class="line"><span class="comment">// "1.2.3.14" -&gt; "1", "2", "3", "14" </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// wstring是宽char，Unicode编码，一般情况下一个字符占两个字节大小</span></span><br><span class="line"><span class="built_in">vector</span>&lt;wstring&gt; split_wstring(wstring &amp;szInput, wstring &amp;szToken)&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;wstring&gt; result;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> begin = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">// 得到szToken的长度</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> size = szToken.size();</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">		<span class="comment">// 从begin开始，查找下一个szToken的位置</span></span><br><span class="line">		pos = szInput.find(szToken, begin);</span><br><span class="line">		<span class="keyword">if</span> (pos == wstring::npos)&#123;</span><br><span class="line">			<span class="comment">// 如果已经到达szInput的末尾，截取最后一个放入result vector，然后退出while循环</span></span><br><span class="line">			result.push_back(szInput.substr(begin));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 截取从begin开始(pos - begin)个长度的串，放入result vector</span></span><br><span class="line">		result.push_back(szInput.substr(begin, pos - begin));</span><br><span class="line">		<span class="comment">// 更新begin的位置，用于下一次搜索</span></span><br><span class="line">		begin = pos + size;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 版本比较函数 </span></span><br><span class="line"><span class="comment">// 返回：</span></span><br><span class="line"><span class="comment">// val: 0:相等;1:大于服务器版本,-1:小于服务器版本,2:版本字段数不一致</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CompareVersion</span><span class="params">(<span class="built_in">std</span>::wstring wszLoc, <span class="built_in">std</span>::wstring wszSvr)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 分别调用split_wstring获取切分后的vector</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; locVerFields = split_wstring(wszLoc, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; srvVerFields = split_wstring(wszSvr, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> loc_size = locVerFields.size();</span><br><span class="line">	<span class="keyword">int</span> srv_size = srvVerFields.size();</span><br><span class="line">	<span class="comment">// 如果长度不等，则返回版本字段数不一致的标志</span></span><br><span class="line">	<span class="keyword">if</span> (loc_size != srv_size)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> retval = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; locVerFields.size(); i++)&#123;</span><br><span class="line">		<span class="comment">// 按下标依次比较</span></span><br><span class="line">		<span class="keyword">int</span> istrcmp = <span class="number">0</span>;</span><br><span class="line">		istrcmp = locVerFields[i].compare(srvVerFields[i]);</span><br><span class="line">		<span class="keyword">if</span> ( istrcmp == <span class="number">0</span> )&#123;</span><br><span class="line">			<span class="keyword">if</span> (i == locVerFields.size()<span class="number">-1</span>)&#123;</span><br><span class="line">				<span class="comment">// 如果最后一个也相等，则返回相等</span></span><br><span class="line">				retval = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>( istrcmp == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果大于，则wszLoc大于wszSvr（大于服务器版本）</span></span><br><span class="line">			retval = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span> (istrcmp &lt; <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果小于，则wszLoc小于wszSvr（小于服务器版本）</span></span><br><span class="line">			retval = <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> retval;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> _tmain(<span class="keyword">int</span> argc, _TCHAR* argv[])&#123;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszLocal = <span class="string">L"1.2.3.14"</span>;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszServer = <span class="string">L"1.2.3.15"</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 调用比较函数</span></span><br><span class="line">	<span class="keyword">int</span> res = CompareVersion(wszLocal, wszServer);</span><br><span class="line"> </span><br><span class="line">	<span class="comment">// 输出结果</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\r\n"</span>, res);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 暂停，等待输入后退出</span></span><br><span class="line">	system(<span class="string">"pause"</span>); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>You will use Turtle graphics to draw a picture containing multiple shapes of multiple colors and arranged to be visually pleasing. Although you are free to decide the precise shape(s) and layout for your picture, some aspect of the picture must depend on a numeric value input by the user. For example, the input might determine the size of the shapes, the number of shapes, or their spacing.</p>
+<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Originally written as a part of the logo programming language, Turtle graphics is one of the oldest graphics programs. It is a 2D graphics package that uses a Cartesian coordinate system and a “turtle,” which you can imagine has a pen attached to its body. The turtle can move around the plane, drawing as it goes. Python has a module that implements the behavior of the original turtle graphics program and this module is simply called “turtle” (see Appendix B of the text and the comments in the sample file turtleSample.py).</p>
+<h3 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h3><p>Your program must:</p>
+<ol>
+<li>Output a brief descriptive message of what the program does.</li>
+<li>Repeatedly prompt for the input until the user supplies values of the correct form (discard incorrect inputs). Your prompt should say what form of input is needed.</li>
+<li>Draw a picture containing multiple shapes of multiple colors, where the input value(s) is (are) used to determine some aspect of the shapes and/or their layout.</li>
+<li>Adhere to 1-6 of the Coding Standard</li>
+</ol>
+<p>In programming your solution, you must:</p>
+<ol>
+<li>Use at least two repetition (while or for) statements.</li>
+<li>Use at least one selection (if) statement.</li>
+</ol>
+<p>We show example output produced by two different programs that meet these requirements at the end of this write-up. You may be creative and create your own program, or you may choose to mimic one of these two examples. The second example shows error checking being tested.</p>
+<h3 id="Creating-Colors"><a href="#Creating-Colors" class="headerlink" title="Creating Colors"></a>Creating Colors</h3><p>There are many ways to create a color but a common one used in computer graphics is the process of additive color. Combining different amounts of red, green and blue can create most (but not all) colors. In turtle, you can specify a color by giving three floating-point values, each in the range from 0.0 to 1.0, indicating the amount (fraction or percent) of each color. For instance, (1.0, 0.0, 0.0) is red, (0.0, 1.0, 0.0) is green, and (0.5, 0.5, 0.0) is brown.</p>
+<p>You can find the codes for many colors on a color chart.</p>
+<p>A convenient way to generate different colors is to repeatedly call the random function in the random module to obtain values for the color amounts. First, import the random module: import random<br>Then, each call to random.random() returns a pseudo random (floating-point) number in the range 0.0 to 1.0. A sample program using this method to create a color and draw a figure is provided in the project directory: turtleSample.py</p>
+<h3 id="Using-turtle-graphics"><a href="#Using-turtle-graphics" class="headerlink" title="Using turtle graphics"></a>Using turtle graphics</h3><p>In order to use turtle graphics in Python you must first import the turtle module. You can then use the help function in the shell to find out what methods this module includes and what they do. Just type import turtle in the Python Shell window, hit enter, and then type help(turtle) and scroll up through the list and information. For more details Google “Python 3 turtle.” A sample Python program, turtleSample.py, is provided in the project directory. The comments in this file describe methods that you might want to use for this project. When running your program in Spyder, you may need to look under other windows to find the turtle drawing window.</p>
+<h3 id="Keeping-the-window-up"><a href="#Keeping-the-window-up" class="headerlink" title="Keeping the window up"></a>Keeping the window up</h3><p>If the drawing window has a tendency to disappear too quickly, you can “hold” the window by using the sleep function in the time module, as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line"><span class="selector-tag">time</span>.sleep(seconds)</span><br></pre></td></tr></table></figure></p>
+<p>The program will wait the number of seconds indicated before it ends.</p>
+
       
     </div>
     
@@ -378,7 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -391,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Advanced-Math-Analysis-with-Matlab-Course-Project.html" rel="next" title="Matlab代写：Advanced Math Analysis with Matlab Course Project">
-                <i class="fa fa-chevron-left"></i> Matlab代写：Advanced Math Analysis with Matlab Course Project
+              <a href="/COMP9021-Tangram.html" rel="next" title="Python代写：COMP9021-Tangram">
+                <i class="fa fa-chevron-left"></i> Python代写：COMP9021-Tangram
               </a>
             
           </div>
@@ -400,10 +420,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS455-RandomWalk.html" rel="prev" title="Java代写：CS455 RandomWalk">
-                Java代写：CS455 RandomWalk <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirements"><span class="nav-number">1.</span> <span class="nav-text">Requirements</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Description"><span class="nav-number">3.</span> <span class="nav-text">Project Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-Colors"><span class="nav-number">4.</span> <span class="nav-text">Creating Colors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-turtle-graphics"><span class="nav-number">5.</span> <span class="nav-text">Using turtle graphics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keeping-the-window-up"><span class="nav-number">6.</span> <span class="nav-text">Keeping the window up</span></a></li></ol></div>
             
 
           </div>

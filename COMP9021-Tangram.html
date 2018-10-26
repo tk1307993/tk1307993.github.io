@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Game," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C++实现本地和服务器版本号比较">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：实现本地和服务器版本号比较">
-<meta property="og:url" content="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+<meta property="og:title" content="Python代写：COMP9021-Tangram">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP9021-Tangram.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C++实现本地和服务器版本号比较">
+<meta property="og:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-23T12:36:10.909Z">
+<meta property="og:updated_time" content="2018-10-24T14:11:08.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：实现本地和服务器版本号比较">
-<meta name="twitter:description" content="C++实现本地和服务器版本号比较">
+<meta name="twitter:title" content="Python代写：COMP9021-Tangram">
+<meta name="twitter:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/本地和服务器版本号比较.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP9021-Tangram.html"/>
 
 
 
 
 
-  <title>C++代写：实现本地和服务器版本号比较 | 留学生CS编程作业代写</title>
+  <title>Python代写：COMP9021-Tangram | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/本地和服务器版本号比较.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP9021-Tangram.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：实现本地和服务器版本号比较</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：COMP9021-Tangram</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T19:37:50+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-24T22:08:04+08:00">
+                2018-10-24
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C++实现本地和服务器版本号比较
+                  用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。
               </div>
           
 
@@ -360,8 +360,19 @@
       
 
       
-        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>函数需求，对任意软件的两个版本号进行比较，返回较大的版本号。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></span><br><span class="line"><span class="comment">// 导入string头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 导入std::vector头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">// split_wstring用于分割字符串</span></span><br><span class="line"><span class="comment">// "1.2.3.14" -&gt; "1", "2", "3", "14" </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// wstring是宽char，Unicode编码，一般情况下一个字符占两个字节大小</span></span><br><span class="line"><span class="built_in">vector</span>&lt;wstring&gt; split_wstring(wstring &amp;szInput, wstring &amp;szToken)&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;wstring&gt; result;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> begin = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">// 得到szToken的长度</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> size = szToken.size();</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">		<span class="comment">// 从begin开始，查找下一个szToken的位置</span></span><br><span class="line">		pos = szInput.find(szToken, begin);</span><br><span class="line">		<span class="keyword">if</span> (pos == wstring::npos)&#123;</span><br><span class="line">			<span class="comment">// 如果已经到达szInput的末尾，截取最后一个放入result vector，然后退出while循环</span></span><br><span class="line">			result.push_back(szInput.substr(begin));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 截取从begin开始(pos - begin)个长度的串，放入result vector</span></span><br><span class="line">		result.push_back(szInput.substr(begin, pos - begin));</span><br><span class="line">		<span class="comment">// 更新begin的位置，用于下一次搜索</span></span><br><span class="line">		begin = pos + size;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 版本比较函数 </span></span><br><span class="line"><span class="comment">// 返回：</span></span><br><span class="line"><span class="comment">// val: 0:相等;1:大于服务器版本,-1:小于服务器版本,2:版本字段数不一致</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CompareVersion</span><span class="params">(<span class="built_in">std</span>::wstring wszLoc, <span class="built_in">std</span>::wstring wszSvr)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 分别调用split_wstring获取切分后的vector</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; locVerFields = split_wstring(wszLoc, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::wstring&gt; srvVerFields = split_wstring(wszSvr, <span class="built_in">std</span>::wstring(<span class="string">L"."</span>));</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> loc_size = locVerFields.size();</span><br><span class="line">	<span class="keyword">int</span> srv_size = srvVerFields.size();</span><br><span class="line">	<span class="comment">// 如果长度不等，则返回版本字段数不一致的标志</span></span><br><span class="line">	<span class="keyword">if</span> (loc_size != srv_size)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> retval = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; locVerFields.size(); i++)&#123;</span><br><span class="line">		<span class="comment">// 按下标依次比较</span></span><br><span class="line">		<span class="keyword">int</span> istrcmp = <span class="number">0</span>;</span><br><span class="line">		istrcmp = locVerFields[i].compare(srvVerFields[i]);</span><br><span class="line">		<span class="keyword">if</span> ( istrcmp == <span class="number">0</span> )&#123;</span><br><span class="line">			<span class="keyword">if</span> (i == locVerFields.size()<span class="number">-1</span>)&#123;</span><br><span class="line">				<span class="comment">// 如果最后一个也相等，则返回相等</span></span><br><span class="line">				retval = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>( istrcmp == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果大于，则wszLoc大于wszSvr（大于服务器版本）</span></span><br><span class="line">			retval = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span> (istrcmp &lt; <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">// 如果小于，则wszLoc小于wszSvr（小于服务器版本）</span></span><br><span class="line">			retval = <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="comment">// 返回结果</span></span><br><span class="line">	<span class="keyword">return</span> retval;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> _tmain(<span class="keyword">int</span> argc, _TCHAR* argv[])&#123;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszLocal = <span class="string">L"1.2.3.14"</span>;</span><br><span class="line">	<span class="built_in">std</span>::wstring wszServer = <span class="string">L"1.2.3.15"</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 调用比较函数</span></span><br><span class="line">	<span class="keyword">int</span> res = CompareVersion(wszLocal, wszServer);</span><br><span class="line"> </span><br><span class="line">	<span class="comment">// 输出结果</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\r\n"</span>, res);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 暂停，等待输入后退出</span></span><br><span class="line">	system(<span class="string">"pause"</span>); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>The assignment consists of three parts, from easiest to more difficult. Each part is worth 3 marks.<br>For each test, the automarking script will let your program run for 30 seconds.</p>
+<p>As all output is True or False, each test will actually consist of a number of subtests of similar difficulty, and passing one test will mean passing all associated subtests; failing at least one of the subtests of a test will result in scoring 0 to that test.<br>Up to one mark will reward good comments, good choice of names for identifiers and functions, readability of code, simplicity of statements, compactness of functions. This will be determined manually.</p>
+<p>One extra mark will be awarded for making available to the class a good test case, consisting of two similar sets of pieces and two solved tangrams built from such a set, which can then be used by everyone for testing purposes.</p>
+<p>Late assignments will be penalised: the mark for a late submission will be the minimum of the awarded mark and 10 minus the number of full and partial days that have elapsed from the due date.</p>
+<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>The game of tangram consists in creating shapes out of pieces. We assume that each piece has its own colour, different to the colour of any other piece in the set we are working with. Just for reference, here is the list the colours that are available to us</p>
+<h3 id="Pieces"><a href="#Pieces" class="headerlink" title="Pieces"></a>Pieces</h3><p>Here is an example of the contents of the file pieces A.xml, typical of the contents of any file of this kind (so only the number of pieces, the colour names, and the various coordinates can differ from one such file to another - we do not bother with allowing for variations, in the use of space in particular).</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg version ="1.1" xmlns ="http://www.w3.org/2000/svg"&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 50 </span>50 L<span class="number"> 50 </span>90 L<span class="number"> 90 </span>90 z" fill="red" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 160 </span>170 L<span class="number"> 160 </span>130 L<span class="number"> 120 </span>130 z" fill="green" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 200 </span>30 L<span class="number"> 180 </span>30 L<span class="number"> 180 </span>50 L<span class="number"> 220 </span>50 z" fill="blue" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 40 </span>100 L<span class="number"> 40 </span>140 L<span class="number"> 60 </span>140 L<span class="number"> 60 </span>120 z" fill="yellow" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 210 </span>70 L<span class="number"> 230 </span>90 L<span class="number"> 270 </span>90 L<span class="number"> 270 </span>50 L<span class="number"> 230 </span>50 z" fill="purple" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 180 </span>130 L<span class="number"> 180 </span>170 L<span class="number"> 220 </span>210 L<span class="number"> 240 </span>190 z" fill="olive" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 100 </span>200 L<span class="number"> 120 </span>180 L<span class="number"> 80 </span>140 L<span class="number"> 80 </span>180 z" fill="magenta" /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+<p>Note that the coordinates are nonnegative integers. This means that the sets of pieces we consider rule out those of the traditional game of tangram, where 2 is involved everywhere…</p>
+<p>We require every piece to be a convex polygon. An .xml file should represent a piece with n sides (n &gt; 3) by an enumeration of n pairs of coordinates, those of consecutive vertices, the first vertex being arbitrary, and the enumeration being either clockwise or anticlockwise.</p>
+<h3 id="First-Task"><a href="#First-Task" class="headerlink" title="First Task"></a>First Task</h3><p>You have to check that the pieces represented in an .xml file satisfy our constraints. So you have to check that each piece is convex, and if it represents a polygon with n sides (n &gt; 3) then the representation consists of an enumeration of the n vertices, either clockwise or anticlockwise. Here is the expected behaviour of your program.</p>
+<h3 id="Second-Task"><a href="#Second-Task" class="headerlink" title="Second Task"></a>Second Task</h3><p>You have to check whether the sets of pieces represented in two .xml files are identical, allowing for pieces to be flipped over and allowing for different orientations. Here is the expected behaviour of your program.</p>
+<h3 id="Third-Task"><a href="#Third-Task" class="headerlink" title="Third Task"></a>Third Task</h3><p>You have to check whether the pieces represented in an .xml file are a solution to a tangram puzzle represented in another .xml file. Here is the expected behaviour of your program.</p>
+
       
     </div>
     
@@ -378,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Game/" rel="tag"># Game</a>
           
         </div>
       
@@ -391,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Advanced-Math-Analysis-with-Matlab-Course-Project.html" rel="next" title="Matlab代写：Advanced Math Analysis with Matlab Course Project">
-                <i class="fa fa-chevron-left"></i> Matlab代写：Advanced Math Analysis with Matlab Course Project
+              <a href="/FIT2071-VisualTextQuest.html" rel="next" title="C++代写：FIT2071-VisualTextQuest">
+                <i class="fa fa-chevron-left"></i> C++代写：FIT2071-VisualTextQuest
               </a>
             
           </div>
@@ -401,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS455-RandomWalk.html" rel="prev" title="Java代写：CS455 RandomWalk">
-                Java代写：CS455 RandomWalk <i class="fa fa-chevron-right"></i>
+              <a href="/CSE231-RenderingColors.html" rel="prev" title="Python代写：CSE231-RenderingColors">
+                Python代写：CSE231-RenderingColors <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -556,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirements"><span class="nav-number">1.</span> <span class="nav-text">Requirements</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pieces"><span class="nav-number">3.</span> <span class="nav-text">Pieces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Task"><span class="nav-number">4.</span> <span class="nav-text">First Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Second-Task"><span class="nav-number">5.</span> <span class="nav-text">Second Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Third-Task"><span class="nav-number">6.</span> <span class="nav-text">Third Task</span></a></li></ol></div>
             
 
           </div>

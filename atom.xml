@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-10-20T03:03:45.984Z</updated>
+  <updated>2018-10-26T01:41:03.725Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：CSE231-RenderingColors</title>
+    <link href="https://tk1307993.coding.me/CSE231-RenderingColors.html"/>
+    <id>https://tk1307993.coding.me/CSE231-RenderingColors.html</id>
+    <published>2018-10-26T01:37:48.000Z</published>
+    <updated>2018-10-26T01:41:03.725Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>You will use Turtle graphics to draw a picture containing multiple shapes of multiple colors and arranged to be visually pleasing. Although you are free to decide the precise shape(s) and layout for your picture, some aspect of the picture must depend on a numeric value input by the user. For example, the input might determine the size of the shapes, the number of shapes, or their spacing.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Originally written as a part of the logo programming language, Turtle graphics is one of the oldest graphics programs. It is a 2D graphics package that uses a Cartesian coordinate system and a “turtle,” which you can imagine has a pen attached to its body. The turtle can move around the plane, drawing as it goes. Python has a module that implements the behavior of the original turtle graphics program and this module is simply called “turtle” (see Appendix B of the text and the comments in the sample file turtleSample.py).</p><h3 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h3><p>Your program must:</p><ol><li>Output a brief descriptive message of what the program does.</li><li>Repeatedly prompt for the input until the user supplies values of the correct form (discard incorrect inputs). Your prompt should say what form of input is needed.</li><li>Draw a picture containing multiple shapes of multiple colors, where the input value(s) is (are) used to determine some aspect of the shapes and/or their layout.</li><li>Adhere to 1-6 of the Coding Standard</li></ol><p>In programming your solution, you must:</p><ol><li>Use at least two repetition (while or for) statements.</li><li>Use at least one selection (if) statement.</li></ol><p>We show example output produced by two different programs that meet these requirements at the end of this write-up. You may be creative and create your own program, or you may choose to mimic one of these two examples. The second example shows error checking being tested.</p><h3 id="Creating-Colors"><a href="#Creating-Colors" class="headerlink" title="Creating Colors"></a>Creating Colors</h3><p>There are many ways to create a color but a common one used in computer graphics is the process of additive color. Combining different amounts of red, green and blue can create most (but not all) colors. In turtle, you can specify a color by giving three floating-point values, each in the range from 0.0 to 1.0, indicating the amount (fraction or percent) of each color. For instance, (1.0, 0.0, 0.0) is red, (0.0, 1.0, 0.0) is green, and (0.5, 0.5, 0.0) is brown.</p><p>You can find the codes for many colors on a color chart.</p><p>A convenient way to generate different colors is to repeatedly call the random function in the random module to obtain values for the color amounts. First, import the random module: import random<br>Then, each call to random.random() returns a pseudo random (floating-point) number in the range 0.0 to 1.0. A sample program using this method to create a color and draw a figure is provided in the project directory: turtleSample.py</p><h3 id="Using-turtle-graphics"><a href="#Using-turtle-graphics" class="headerlink" title="Using turtle graphics"></a>Using turtle graphics</h3><p>In order to use turtle graphics in Python you must first import the turtle module. You can then use the help function in the shell to find out what methods this module includes and what they do. Just type import turtle in the Python Shell window, hit enter, and then type help(turtle) and scroll up through the list and information. For more details Google “Python 3 turtle.” A sample Python program, turtleSample.py, is provided in the project directory. The comments in this file describe methods that you might want to use for this project. When running your program in Spyder, you may need to look under other windows to find the turtle drawing window.</p><h3 id="Keeping-the-window-up"><a href="#Keeping-the-window-up" class="headerlink" title="Keeping the window up"></a>Keeping the window up</h3><p>If the drawing window has a tendency to disappear too quickly, you can “hold” the window by using the sleep function in the time module, as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line"><span class="selector-tag">time</span>.sleep(seconds)</span><br></pre></td></tr></table></figure></p><p>The program will wait the number of seconds indicated before it ends.</p>]]></content>
+    
+    <summary type="html">
+    
+      基础的Python作业，主要就是用while和if结合三方库来画图。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python代写：COMP9021-Tangram</title>
+    <link href="https://tk1307993.coding.me/COMP9021-Tangram.html"/>
+    <id>https://tk1307993.coding.me/COMP9021-Tangram.html</id>
+    <published>2018-10-24T14:08:04.000Z</published>
+    <updated>2018-10-24T14:11:08.573Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>The assignment consists of three parts, from easiest to more difficult. Each part is worth 3 marks.<br>For each test, the automarking script will let your program run for 30 seconds.</p><p>As all output is True or False, each test will actually consist of a number of subtests of similar difficulty, and passing one test will mean passing all associated subtests; failing at least one of the subtests of a test will result in scoring 0 to that test.<br>Up to one mark will reward good comments, good choice of names for identifiers and functions, readability of code, simplicity of statements, compactness of functions. This will be determined manually.</p><p>One extra mark will be awarded for making available to the class a good test case, consisting of two similar sets of pieces and two solved tangrams built from such a set, which can then be used by everyone for testing purposes.</p><p>Late assignments will be penalised: the mark for a late submission will be the minimum of the awarded mark and 10 minus the number of full and partial days that have elapsed from the due date.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>The game of tangram consists in creating shapes out of pieces. We assume that each piece has its own colour, different to the colour of any other piece in the set we are working with. Just for reference, here is the list the colours that are available to us</p><h3 id="Pieces"><a href="#Pieces" class="headerlink" title="Pieces"></a>Pieces</h3><p>Here is an example of the contents of the file pieces A.xml, typical of the contents of any file of this kind (so only the number of pieces, the colour names, and the various coordinates can differ from one such file to another - we do not bother with allowing for variations, in the use of space in particular).</p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg version ="1.1" xmlns ="http://www.w3.org/2000/svg"&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 50 </span>50 L<span class="number"> 50 </span>90 L<span class="number"> 90 </span>90 z" fill="red" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 160 </span>170 L<span class="number"> 160 </span>130 L<span class="number"> 120 </span>130 z" fill="green" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 200 </span>30 L<span class="number"> 180 </span>30 L<span class="number"> 180 </span>50 L<span class="number"> 220 </span>50 z" fill="blue" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 40 </span>100 L<span class="number"> 40 </span>140 L<span class="number"> 60 </span>140 L<span class="number"> 60 </span>120 z" fill="yellow" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 210 </span>70 L<span class="number"> 230 </span>90 L<span class="number"> 270 </span>90 L<span class="number"> 270 </span>50 L<span class="number"> 230 </span>50 z" fill="purple" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 180 </span>130 L<span class="number"> 180 </span>170 L<span class="number"> 220 </span>210 L<span class="number"> 240 </span>190 z" fill="olive" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 100 </span>200 L<span class="number"> 120 </span>180 L<span class="number"> 80 </span>140 L<span class="number"> 80 </span>180 z" fill="magenta" /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure><p>Note that the coordinates are nonnegative integers. This means that the sets of pieces we consider rule out those of the traditional game of tangram, where 2 is involved everywhere…</p><p>We require every piece to be a convex polygon. An .xml file should represent a piece with n sides (n &gt; 3) by an enumeration of n pairs of coordinates, those of consecutive vertices, the first vertex being arbitrary, and the enumeration being either clockwise or anticlockwise.</p><h3 id="First-Task"><a href="#First-Task" class="headerlink" title="First Task"></a>First Task</h3><p>You have to check that the pieces represented in an .xml file satisfy our constraints. So you have to check that each piece is convex, and if it represents a polygon with n sides (n &gt; 3) then the representation consists of an enumeration of the n vertices, either clockwise or anticlockwise. Here is the expected behaviour of your program.</p><h3 id="Second-Task"><a href="#Second-Task" class="headerlink" title="Second Task"></a>Second Task</h3><p>You have to check whether the sets of pieces represented in two .xml files are identical, allowing for pieces to be flipped over and allowing for different orientations. Here is the expected behaviour of your program.</p><h3 id="Third-Task"><a href="#Third-Task" class="headerlink" title="Third Task"></a>Third Task</h3><p>You have to check whether the pieces represented in an .xml file are a solution to a tangram puzzle represented in another .xml file. Here is the expected behaviour of your program.</p>]]></content>
+    
+    <summary type="html">
+    
+      用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：FIT2071-VisualTextQuest</title>
@@ -194,11 +238,11 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
     
     
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
       <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
     
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -421,50 +465,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CS635-DigitalImageProcessing</title>
-    <link href="https://tk1307993.coding.me/CS635-DigitalImageProcessing.html"/>
-    <id>https://tk1307993.coding.me/CS635-DigitalImageProcessing.html</id>
-    <published>2018-08-14T13:29:17.000Z</published>
-    <updated>2018-08-14T13:34:08.031Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>市场上有一些成熟软件可以做Digital image process，如Matlab和R。这两款软件提供了丰富的图像处理函数，以及优秀的交互，和简易的调试功能，因此受到图像处理工程师的青睐。</p><p>C++虽然也可以使用二维数组的存储方法来存储图像，并实现等同于Matlab和R的算法。但是编程的复杂性远远大于前者。</p><p>虽然说，用C/C++编出的图像处理软件性能会超过Matlab和R，但是这种差异需要大规模的图像才会体现出来。而目前业内对于大规模的图像处理，往往会采用云计算分布式的做法，而不是单纯的使用一台计算机进行运算。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, you are required to build a simple software framework for digital image processing.<br>Your program should be able to read and write PPM / PGM image files (either binary or ASCII), and perform color or geometric transformation.</p><p>The programming language is C/C++. The preferred programming environment is Visual C++ (VC) 2012. If you choose to use a different platform, your submitted source code should be compatible with a Visual C++ .Net compiler, i.e., one can build a working executable for Windows from your source code.</p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题的复杂的地方在于PPM / PGM图像格式的解码以及存储。<br>PPM格式由两部分组成：</p><ol><li>图像的存储格式以及图像的特征（包括魔数、图像大小）</li><li>图像的数据部分（从左到右、从上往下）</li></ol><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出PPM文件的读取函数<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> image&lt;rgb&gt; *PPM::loadPPM(<span class="keyword">const</span> <span class="keyword">char</span> *name) &#123;</span><br><span class="line">  <span class="keyword">char</span> buf[<span class="number">2048</span>];</span><br><span class="line">  <span class="comment">/* read header */</span></span><br><span class="line">  <span class="built_in">std</span>::<span class="function">ifstream <span class="title">file</span><span class="params">(name, <span class="built_in">std</span>::ios::binary | <span class="built_in">std</span>::ios::in)</span></span>;</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">strncmp</span>(buf, <span class="string">"P5"</span>, <span class="number">2</span>)) &#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Version not support."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">int</span> width = atoi(buf);</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="keyword">int</span> height = atoi(buf);</span><br><span class="line">  readHeader(file, buf);</span><br><span class="line">  <span class="comment">/* read data */</span></span><br><span class="line">  image&lt;rgb&gt; *im = <span class="keyword">new</span> image&lt;rgb&gt;(width, height);</span><br><span class="line">  file.read((<span class="keyword">char</span>*)imPtr(im, <span class="number">0</span>, <span class="number">0</span>), width * height * <span class="keyword">sizeof</span>(rgb));</span><br><span class="line">  <span class="keyword">return</span> im;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      本题在于PPM格式处理
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Image Processing" scheme="https://tk1307993.coding.me/tags/Image-Processing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CS251 Sorting</title>
-    <link href="https://tk1307993.coding.me/CS251-Sorting.html"/>
-    <id>https://tk1307993.coding.me/CS251-Sorting.html</id>
-    <published>2018-08-12T03:22:06.000Z</published>
-    <updated>2018-08-12T03:23:52.687Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement void quicksort(unsigned int *a, int n) as a “C” style function in the file quicksort.cc</p><ol><li>The pivot should always be chosen as the first element of the array.</li><li>See the given quicksort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li><li>The main function in quicksort.cc reads from the file “quicksortinput” the n integers and writes the n integers to the file “quicksortoutput” in ascending sorted order. See “quicksortsampleinput” and “quicksortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li><li>The function sorts the array a of n positive integers with the quick sort algorithm.</li></ol><p>Implement void radixsort(unsigned int *a, int n) as a “C” style function in the file radixsort.cc</p><ol><li>The elements of the array are positive and are represented with 32 bits.</li><li>See the given radixsort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li><li>The main function in radixsort.cc reads from the file “radixsortinput” the n integers and writes the n integers to the file “radixsortoutput” in ascending sorted order. See “radixsortsampleinput” and “radixsortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li><li>The function sorts the array a of n positive integers using the radix sort algorithm.</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>需要实现Quicksort算法以及Radix sort算法。</p><p>本题难度不大，但需要理解和掌握这两种算法的原理和特点。</p><p>此外需要注意的是，测试集并非是结构化的数据，需要对测试集中字符进行分割，同时处理空行的问题。</p>]]></content>
-    
-    <summary type="html">
-    
-      工程编程中，Sorting通常都是出现在三方库中直接调用。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
