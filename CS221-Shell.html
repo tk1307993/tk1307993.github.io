@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="File System," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
-<meta name="keywords" content="File System">
+<meta name="description" content="实现类似Linux Shell的功能，并能够运行诸如ls, cat之类的命令。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：ECE222 Directory Listing">
-<meta property="og:url" content="https://tk1307993.coding.me/ECE222-Directory-Listing.html">
+<meta property="og:title" content="C代写：CS221-Shell">
+<meta property="og:url" content="https://tk1307993.coding.me/CS221-Shell.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
+<meta property="og:description" content="实现类似Linux Shell的功能，并能够运行诸如ls, cat之类的命令。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-26T13:43:20.163Z">
+<meta property="og:updated_time" content="2018-10-28T15:44:47.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：ECE222 Directory Listing">
-<meta name="twitter:description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
+<meta name="twitter:title" content="C代写：CS221-Shell">
+<meta name="twitter:description" content="实现类似Linux Shell的功能，并能够运行诸如ls, cat之类的命令。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ECE222-Directory-Listing.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS221-Shell.html"/>
 
 
 
 
 
-  <title>C代写：ECE222 Directory Listing | 留学生CS编程作业代写</title>
+  <title>C代写：CS221-Shell | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECE222-Directory-Listing.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS221-Shell.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：ECE222 Directory Listing</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CS221-Shell</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T21:41:38+08:00">
-                2018-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T09:37:48+08:00">
+                2018-10-28
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题需要实现文件系统中，类似ls命令显示的结果。
+                  实现类似Linux Shell的功能，并能够运行诸如ls, cat之类的命令。
               </div>
           
 
@@ -360,11 +360,24 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, each student is to write a program that provides a file listing for the given directory. The program should list the filename, file size, and time last modified for each file within the directory. The program should provide the user with the option to sort the listing based on filename, on file size, or on time last modified. The program should run once and quit (it does not loop).</p>
-<p>The syntax (usage) for the program should be:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prog_name [<span class="string">directory</span>] [<span class="string">[-s</span>][<span class="symbol">-t</span>]]</span><br></pre></td></tr></table></figure></p>
-<p>where –s indicates sort by file size and –t indicates sort by time last modified. These flags are optional but mutually exclusive. The directory is also optional; if it is omitted than a default directory of “.” (the current directory) should be assumed. Every possible combination of command line arguments, from the above syntax, will be tested.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要实现文件系统中，类似ls命令显示的结果。<br>本题较为简单，如果掌握了基本的Linux函数库用法可以事半功倍。此外需要注意的是命令行参数的处理方法。最后按照测试集显示的格式，做出准确的输出即可。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出命令行参数的解析逻辑<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> arg;</span><br><span class="line">  <span class="keyword">int</span> sort_by_size = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> sort_by_time = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ((arg = getopt(argc, argv, <span class="string">"st"</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">switch</span> (arg) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'s'</span>:</span><br><span class="line">      sort_by_size = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'t'</span>:</span><br><span class="line">      sort_by_time = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"bad argument: %c\n"</span>, arg);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>You are to write a C program that provides functionality similar to the shell. Your starting point is the supplied code smsh.c (and associated headers and files implementing some functions).</p>
+<p>Compile this first and then run it. You should discover that it basically provides the functionality that allows a user to type in commands (like “ls” “ls –l” “cat filename” etc. – or names of binaries with the complete path specified, possibly with options). You should also see what it doesn’t do<br>(here is a partial list):</p>
+<ol>
+<li>It doesn’t allow for I/O redirection:</li>
+<li>It doesn’t allow for single command redirect of stdin, stdout or stderr.</li>
+<li>It doesn’t allow for commands to be piped together</li>
+<li>It doesn’t allow for any job control (^Z will stop the program itself, not the last job it started)</li>
+<li>It doesn’t handle builtins. Builtins are not commands exec’d but are commands that the shell handles directly rather than forking and exec’ing. See man builtin.</li>
+<li>It doesn’t do globbing/wildcard expansion (e.g., “cat *” ).</li>
+<li>It doesn’t allow variables to be set, doesn’t have an environment as an object you can manipulate etc</li>
+<li>It doesn’t understand the syntax of shell programs/scripts – no loops, no conditionals, etc etc.</li>
+</ol>
+<p>You task is to add to this functionality, incrementally, in the order given:</p>
+<ol>
+<li>Produce a source file smshv1.c that will be compiled to the binary smshv1 that allows cmds to be piped together. In essence, this is assignment2 integrated into this “shell”. Assignment 2 didn’t parse a command line with the “|” symbols in it. You are given, in addition to the files for the starting version of the shell, a file which is a basic solution to assignment2 – this is provided for those people that didn’t manage to get a working solution to assignment2: you are welcome to use this in your code or, of course, you can use your code from assignment2. This introduces the concept of a job. A job is either a single cmd (with or without args) or a combination of commands piped together. To appreciate this try (in the real shell) cat | more (which will of course “just sit there” as cat has no input until you type). Then press ^Z and you see that the combination of cmds is stopped as a single job, which can be resumed.</li>
+<li>Produce a source file smshv2.c that adds functionality to smshv1 to allow for parsing of (and implementation of!) redirection of I/O. This should work for a single command (with or without args) and with redirection of two or three streams, and with this form of indirection in a pipe.</li>
+<li>Produce a source file smshv3.c that adds functionality to smshv2 to allow for limited job control. The functionality is merely that when one types something like “cat myfilename &amp;” that the prompt returns automatically so the user can type in another command without having to wait until that job completes. Note this should work for single commands and for multi-command jobs.</li>
+</ol>
 
       
     </div>
@@ -382,7 +395,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/File-System/" rel="tag"># File System</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -395,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS335-SpaceRacingSimulator.html" rel="next" title="Java代写：CS335 Space Racing Simulator">
-                <i class="fa fa-chevron-left"></i> Java代写：CS335 Space Racing Simulator
+              <a href="/CSE231-RenderingColors.html" rel="next" title="Python代写：CSE231-RenderingColors">
+                <i class="fa fa-chevron-left"></i> Python代写：CSE231-RenderingColors
               </a>
             
           </div>
@@ -404,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS353-DatabaseSystem.html" rel="prev" title="PHP代写：CS353 Database System">
-                PHP代写：CS353 Database System <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></div>
             
 
           </div>

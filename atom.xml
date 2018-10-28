@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-10-26T01:41:03.725Z</updated>
+  <updated>2018-10-28T15:44:47.142Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CS221-Shell</title>
+    <link href="https://tk1307993.coding.me/CS221-Shell.html"/>
+    <id>https://tk1307993.coding.me/CS221-Shell.html</id>
+    <published>2018-10-28T01:37:48.000Z</published>
+    <updated>2018-10-28T15:44:47.142Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>You are to write a C program that provides functionality similar to the shell. Your starting point is the supplied code smsh.c (and associated headers and files implementing some functions).</p><p>Compile this first and then run it. You should discover that it basically provides the functionality that allows a user to type in commands (like “ls” “ls –l” “cat filename” etc. – or names of binaries with the complete path specified, possibly with options). You should also see what it doesn’t do<br>(here is a partial list):</p><ol><li>It doesn’t allow for I/O redirection:</li><li>It doesn’t allow for single command redirect of stdin, stdout or stderr.</li><li>It doesn’t allow for commands to be piped together</li><li>It doesn’t allow for any job control (^Z will stop the program itself, not the last job it started)</li><li>It doesn’t handle builtins. Builtins are not commands exec’d but are commands that the shell handles directly rather than forking and exec’ing. See man builtin.</li><li>It doesn’t do globbing/wildcard expansion (e.g., “cat *” ).</li><li>It doesn’t allow variables to be set, doesn’t have an environment as an object you can manipulate etc</li><li>It doesn’t understand the syntax of shell programs/scripts – no loops, no conditionals, etc etc.</li></ol><p>You task is to add to this functionality, incrementally, in the order given:</p><ol><li>Produce a source file smshv1.c that will be compiled to the binary smshv1 that allows cmds to be piped together. In essence, this is assignment2 integrated into this “shell”. Assignment 2 didn’t parse a command line with the “|” symbols in it. You are given, in addition to the files for the starting version of the shell, a file which is a basic solution to assignment2 – this is provided for those people that didn’t manage to get a working solution to assignment2: you are welcome to use this in your code or, of course, you can use your code from assignment2. This introduces the concept of a job. A job is either a single cmd (with or without args) or a combination of commands piped together. To appreciate this try (in the real shell) cat | more (which will of course “just sit there” as cat has no input until you type). Then press ^Z and you see that the combination of cmds is stopped as a single job, which can be resumed.</li><li>Produce a source file smshv2.c that adds functionality to smshv1 to allow for parsing of (and implementation of!) redirection of I/O. This should work for a single command (with or without args) and with redirection of two or three streams, and with this form of indirection in a pipe.</li><li>Produce a source file smshv3.c that adds functionality to smshv2 to allow for limited job control. The functionality is merely that when one types something like “cat myfilename &amp;” that the prompt returns automatically so the user can type in another command without having to wait until that job completes. Note this should work for single commands and for multi-command jobs.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      实现类似Linux Shell的功能，并能够运行诸如ls, cat之类的命令。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>Python代写：CSE231-RenderingColors</title>
@@ -238,11 +260,11 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
     
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -443,28 +465,6 @@
     
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CS4410 GamesTechnologyAssignment</title>
-    <link href="https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html"/>
-    <id>https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html</id>
-    <published>2018-08-15T12:17:47.000Z</published>
-    <updated>2018-08-15T12:19:47.466Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>相比同时代的Space Invaders，由于Galaxian采用了当时的最新技术，游戏体验有了质的飞跃，是当时最受欢迎的街机游戏之一。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment you develop an arcade style name Galaxian. The game needs to be implemented in OpenGL engine. You should define your own game objectives, such as final goals and the level of player interaction. Lives and scoring should also be planned.</p><p>The difficulty lies in how to manage the objects on the screen, the enemy flight path, in particular, and how they can track the ship. The algorithm can avoid the enemy collisions between each other, and how to aim at the player’s position.<br>Your program provide the following functions:</p><ol><li>OOP design</li><li>OpenGL graphics</li><li>a simple intro menu</li><li>texture animations</li><li>sound</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Galaxian也就是FC小蜜蜂，需要实现的游戏元素有：</p><ol><li>我方飞机的交互，上下左右键，以及发射子弹，暂停等按键</li><li>敌方飞机生成，需要自动生成敌方飞机，以及敌方飞机被消灭后新敌方飞机的生成</li><li>碰撞检测，包括我方飞机和敌方飞机、我方子弹和敌方飞机、敌方子弹和我方飞机</li><li>得分、生命、关卡的逻辑，包括难度</li><li>音效、图像、画质等多媒体元素</li><li>AI，敌机需要有一定智能，包括躲避、跟踪、击落我方飞机</li></ol><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出鼠标键盘交互的逻辑<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Galaxian::HandleEvents(Event* event) &#123;</span><br><span class="line">  kbarray = GetKeyState(<span class="literal">NULL</span>);</span><br><span class="line">  <span class="keyword">switch</span>(event-&gt;type) &#123;</span><br><span class="line">    <span class="keyword">case</span> KEYDOWN:</span><br><span class="line">      OnKeyDown(event-&gt;key.keysym.sym, event-&gt;key.keysym.mod, event-&gt;key.keysym.unicode);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> KEYUP:</span><br><span class="line">      OnKeyUp(event-&gt;key.keysym.sym, event-&gt;key.keysym.mod, event-&gt;key.keysym.unicode);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOUSEBUTTONDOWN:</span><br><span class="line">      <span class="keyword">switch</span>(event-&gt;button.button) &#123;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_LEFT:</span><br><span class="line">          OnLButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_RIGHT:</span><br><span class="line">          OnRButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_MIDDLE:</span><br><span class="line">          OnMButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOUSEBUTTONUP:</span><br><span class="line">      <span class="keyword">switch</span>(event-&gt;button.button) &#123;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_LEFT:</span><br><span class="line">          OnLButtonUp(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_RIGHT:</span><br><span class="line">          OnRButtonUp(event-&gt;button.x,Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_MIDDLE:</span><br><span class="line">          OnMButtonUp(event-&gt;button.x,Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      第一代Galaxian游戏在1979年登场，之后在1981年推出了升级版Galara，以及1984年的加强版Gaplus。作为早期电子游戏，Galaxian在街机市场是十分火爆的。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
