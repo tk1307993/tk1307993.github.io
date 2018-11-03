@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-11-03T00:02:49.178Z</updated>
+  <updated>2018-11-03T07:19:41.812Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：ImageProcessing3</title>
+    <link href="https://tk1307993.coding.me/Java-ImageProcessing3.html"/>
+    <id>https://tk1307993.coding.me/Java-ImageProcessing3.html</id>
+    <published>2018-11-03T07:18:59.000Z</published>
+    <updated>2018-11-03T07:19:41.812Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Assignment-5"><a href="#Assignment-5" class="headerlink" title="Assignment 5"></a>Assignment 5</h1><p>In this repository, you should find the following complete interfaces and classes:</p><ul><li>The basic underlying interface Pixel and its implementations GrayPixel and ColorPixel from assignments 3 and 4.</li><li>The Picture and SubPicture interfaces as defined and described in assignment 4.</li><li>My implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture from the assignemnt 4 solution.</li></ul><p>The appropriate code for the following classes from my assignment 4 solution is missing in these classes:</p><ul><li>The SubPicture interface called SubPictureImpl</li><li>The Pixel iterators called SampleIterator and ZigZagIterator</li><li>The SubPicture interators called WindowIterator and TileIterator</li></ul><p>In this assignment, you’ll fill out these missing implementations in order to recreate my a4 solution. Additionally, you will be asked to refactor the code of MutablePixelArrayPictrue, ImmutablePixelArrayPicture, and SubPictureImpl using inheritance.</p><p>The first thing you should do is read the implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture carefully to understand how they work. A lot of the code in these classes is repeated. You should note the ways in which the code is similar and is different. In particular, notice that the rectangle, circle, and picture paint methods of ImmutablePixelArrayPicture go through an extra step of creating an immutable result picture at the very end of these methods using a helper function called copyAsImmutable.</p><h2 id="Novice"><a href="#Novice" class="headerlink" title="Novice"></a>Novice</h2><p>Fill out the code for SubPictureImpl. You can and should copy much of this code from the other picture implementations as appropriate. Be sure to reread the A4 description for how this interface should work. In particular, pay attention to the fact that a subpicture’s mutabiliity (or immutability) with respect to pixel operations should reflect the underlying source picture and that a subpicture maintains caption information independently of the underyling source picture. </p><h2 id="Adept"><a href="#Adept" class="headerlink" title="Adept"></a>Adept</h2><p>Fill out the code for the various iterators (i.e., SampleIterator, ZigZagIterator, WindowIterator, and TileIterator). Again, look to the A4 description for how these iterators are supposed to work.</p><h2 id="Jedi"><a href="#Jedi" class="headerlink" title="Jedi"></a>Jedi</h2><p>Refactor the code of MutablePixelArrayPicture, ImmutablerPixelArrayPicture, and SubPictureImpl into the following class hierarchy:</p><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">-------------------------------------------------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                                                                        </span>|</span><br><span class="line">PixelArrayPicture                                                        SubPictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                             </span>|</span><br><span class="line">MutablePixelArrayPicture      ImmutablePixelArrayPicture</span><br></pre></td></tr></table></figure><p>The above graph indicates that PictureImpl should be the root parent class of all Picture implementations including SubPictureImpl. PixelArrayPicture should be the common parent class of both MutablePixelArrayPicture and ImmutablePixelArrayPicture.</p><p>You should refactor the code from MutablePixzelArrayPicture, ImmutablePixelArrayPicture, and SubPictureImpl as appropriate. Please use these class names (i.e., PictureImpl and PixelArrayPicture) exactly. </p><h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><ul><li>Novice: 5 points</li><li>Adept: 15 points</li><li><p>Jedi: 5 points</p><p>NOTE: all code should be in the a5 package. Do not refer to any code in any prior assignment packages.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      使用Java实现可变及不可变图像相关处理
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：ImageProcessing2</title>
@@ -282,11 +304,11 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
     
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -443,28 +465,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS207 Hotel Booking Application</title>
-    <link href="https://tk1307993.coding.me/CS207-HotelBookingApplication.html"/>
-    <id>https://tk1307993.coding.me/CS207-HotelBookingApplication.html</id>
-    <published>2018-08-25T04:00:59.000Z</published>
-    <updated>2018-08-25T04:04:18.253Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>一个成熟的酒店管理系统，还可以接入或被接入其他系统。只要做好接口设计，给出稳定、可拓展的接口，这类系统便可以反复利用。<br>当然，对于酒店管理系统的重构，也是十分头疼的一件事。由于要逐个梳理需求，在重构中要避免需求的落下。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Below are the features of this project that you should implement in this course.</p><ol><li>As a user, he can login with a username and password and launch the hotel booking application.</li><li>As a user, he can search available rooms in the hotel by entering a departure date, and book the standard room, big bed room or business suite room.</li><li>As a user, he can display search results sorted by floor, cost and date.</li><li>As a user, he can cancel the reservation room.</li><li>This application will use a txt file to load the user’s information. The file should contains the following properties:<br>LastName, FirstName, Gender, Age, Email, CreditCardNumber, BillingAddress, ExpriyDate.</li></ol><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本次作业需要实现酒店管理系统的一部分业务功能，即用户使用部分，包括了用户登录、预订查询、查询排序、预定房间和预订取消等功能。代码的实现需要结合所给出的框架来完成，因此熟悉框架的结构成为了一个不可缺少的过程。</p><p>需要注意的是，对于此类系统，一个通用的设计模型是：先判断传入参数和合法性，再判断是否拥有执行权限，最后再做相关业务逻辑。</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出emailAddress地址的业务逻辑代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">validateEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (emailAddress == <span class="keyword">null</span> || emailAddress.equals(<span class="string">""</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Pattern p = Pattern.compile(<span class="string">"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"</span>);</span><br><span class="line">    Matcher m = p.matcher(emailAddress);  </span><br><span class="line">    <span class="keyword">return</span> m.matches();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (validateEmailAddress(emailAddress) == <span class="keyword">false</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> EmailException(emailAddress);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// do business logic</span></span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
     
   </entry>
   

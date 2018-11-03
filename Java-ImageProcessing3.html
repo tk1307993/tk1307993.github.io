@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Database," />
+  <meta name="keywords" content="Image Process," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Pathfinding是在平面上两点之间找出路径的问题。">
-<meta name="keywords" content="Database">
+<meta name="description" content="使用Java实现可变及不可变图像相关处理">
+<meta name="keywords" content="Image Process">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database代写：ECS165A-NormalForm">
-<meta property="og:url" content="https://tk1307993.coding.me/ECS165A-NormalForm.html">
+<meta property="og:title" content="Java代写：ImageProcessing3">
+<meta property="og:url" content="https://tk1307993.coding.me/Java-ImageProcessing3.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta property="og:description" content="使用Java实现可变及不可变图像相关处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-08T03:54:20.974Z">
+<meta property="og:updated_time" content="2018-11-03T07:19:41.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Database代写：ECS165A-NormalForm">
-<meta name="twitter:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta name="twitter:title" content="Java代写：ImageProcessing3">
+<meta name="twitter:description" content="使用Java实现可变及不可变图像相关处理">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ECS165A-NormalForm.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/Java-ImageProcessing3.html"/>
 
 
 
 
 
-  <title>Database代写：ECS165A-NormalForm | 留学生CS编程作业代写</title>
+  <title>Java代写：ImageProcessing3 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECS165A-NormalForm.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/Java-ImageProcessing3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Database代写：ECS165A-NormalForm</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：ImageProcessing3</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T11:51:48+08:00">
-                2018-09-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T15:18:59+08:00">
+                2018-11-03
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Other/" itemprop="url" rel="index">
-                    <span itemprop="name">Other</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Pathfinding是在平面上两点之间找出路径的问题。
+                  使用Java实现可变及不可变图像相关处理
               </div>
           
 
@@ -360,25 +360,33 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Normal From是数据库理论里面最恶心的问题，从1NF到6NF，加上BCNF，DKNF以及UF。不像编程作业，有运行结果作参考，做这种理论题简直是受罪，每一题都得反复推理。</p>
-<p>像下面给出的这个作业，除了题量大以外，每个问题都是多解问题，拿满分几乎是不可能的事情。</p>
-<p>1) For this problem you will consider following relation and set of FDs:<br>R(A,B,C,D,E)</p>
-<p>AB → E</p>
-<p>B → C</p>
-<p>CE → A</p>
-<p>AE → D</p>
-<p>a) What are the keys of R?</p>
-<p>b) Show that the set of FDs is a minimal basis; if it is not a minimal basis, find a minimal basis for the FDs.</p>
-<p>c) What are all of the BCNF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
-<p>d) Decompose R into BCNF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
-<p>e) What are all of the 3NF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
-<p>f) Decompose R into 3NF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
-<p>g) What are all of the 4NF MVD violations that follow from the FDs?</p>
-<p>h) Decompose R into 4NF. For each relation, list the keys, FDs and MVD.</p>
-<p>i) If you project the relation R onto S(A,B,C) what nontrivial FDs and MVDs hold in S?</p>
-<p>2) For this problem you will consider the following relations and FDs:<br>Courses(C,T,H,R,S,G)<br>C → T<br>HR → C<br>HT → R<br>HS → R<br>CS → G<br>Where C, T, H, R, S, and G are the course, teacher, hour, room, student, and grade respectively. With a proposed decomposition of:<br>R1(C, T, H)<br>R2(C, H, R, G)<br>R3(C, R, S)<br>a) Use the chase test to prove/disprove that holds HS → G in Courses.<br>b) Use the chase test to prove/disprove that holds THR → S in Courses.<br>c) Use the chase test to prove/disprove the proposed decomposition has a lossless join.<br>d) Decompose Courses into 3NF.<br>e) Which of your relations in 3NF are not in BCNF?<br>f) Which of your relations in 3NF are not in 4NF?</p>
-<p>3) Design an academic genealogy database with one entity set: Academics.<br>Consider academics with doctoral degrees only. The information to record about academics includes their name, discipline, year of graduation, institution, dissertation title, dissertation chair, dissertation committee members (assume two others distinct from chair), and academic progeny.</p>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>最后还是想说一下，这样的多个解的作业真的相当恶心，做的时候需要反复推导，查阅各种资料来证明，而且第二个问的chase test完全就是slides里面的方法，学习理解也花了不少时间。</p>
+        <h1 id="Assignment-5"><a href="#Assignment-5" class="headerlink" title="Assignment 5"></a>Assignment 5</h1><p>In this repository, you should find the following complete interfaces and classes:</p>
+<ul>
+<li>The basic underlying interface Pixel and its implementations GrayPixel and ColorPixel from assignments 3 and 4.</li>
+<li>The Picture and SubPicture interfaces as defined and described in assignment 4.</li>
+<li>My implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture from the assignemnt 4 solution.</li>
+</ul>
+<p>The appropriate code for the following classes from my assignment 4 solution is missing in these classes:</p>
+<ul>
+<li>The SubPicture interface called SubPictureImpl</li>
+<li>The Pixel iterators called SampleIterator and ZigZagIterator</li>
+<li>The SubPicture interators called WindowIterator and TileIterator</li>
+</ul>
+<p>In this assignment, you’ll fill out these missing implementations in order to recreate my a4 solution. Additionally, you will be asked to refactor the code of MutablePixelArrayPictrue, ImmutablePixelArrayPicture, and SubPictureImpl using inheritance.</p>
+<p>The first thing you should do is read the implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture carefully to understand how they work. A lot of the code in these classes is repeated. You should note the ways in which the code is similar and is different. In particular, notice that the rectangle, circle, and picture paint methods of ImmutablePixelArrayPicture go through an extra step of creating an immutable result picture at the very end of these methods using a helper function called copyAsImmutable.</p>
+<h2 id="Novice"><a href="#Novice" class="headerlink" title="Novice"></a>Novice</h2><p>Fill out the code for SubPictureImpl. You can and should copy much of this code from the other picture implementations as appropriate. Be sure to reread the A4 description for how this interface should work. In particular, pay attention to the fact that a subpicture’s mutabiliity (or immutability) with respect to pixel operations should reflect the underlying source picture and that a subpicture maintains caption information independently of the underyling source picture. </p>
+<h2 id="Adept"><a href="#Adept" class="headerlink" title="Adept"></a>Adept</h2><p>Fill out the code for the various iterators (i.e., SampleIterator, ZigZagIterator, WindowIterator, and TileIterator). Again, look to the A4 description for how these iterators are supposed to work.</p>
+<h2 id="Jedi"><a href="#Jedi" class="headerlink" title="Jedi"></a>Jedi</h2><p>Refactor the code of MutablePixelArrayPicture, ImmutablerPixelArrayPicture, and SubPictureImpl into the following class hierarchy:</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">-------------------------------------------------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                                                                        </span>|</span><br><span class="line">PixelArrayPicture                                                        SubPictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                             </span>|</span><br><span class="line">MutablePixelArrayPicture      ImmutablePixelArrayPicture</span><br></pre></td></tr></table></figure>
+<p>The above graph indicates that PictureImpl should be the root parent class of all Picture implementations including SubPictureImpl. PixelArrayPicture should be the common parent class of both MutablePixelArrayPicture and ImmutablePixelArrayPicture.</p>
+<p>You should refactor the code from MutablePixzelArrayPicture, ImmutablePixelArrayPicture, and SubPictureImpl as appropriate. Please use these class names (i.e., PictureImpl and PixelArrayPicture) exactly. </p>
+<h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><ul>
+<li>Novice: 5 points</li>
+<li>Adept: 15 points</li>
+<li><p>Jedi: 5 points</p>
+<p>NOTE: all code should be in the a5 package. Do not refer to any code in any prior assignment packages.</p>
+</li>
+</ul>
 
       
     </div>
@@ -396,7 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Database/" rel="tag"># Database</a>
+            <a href="/tags/Image-Process/" rel="tag"># Image Process</a>
           
         </div>
       
@@ -409,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP3007-Pathfinding.html" rel="next" title="Java代写：COMP3007 Pathfinding">
-                <i class="fa fa-chevron-left"></i> Java代写：COMP3007 Pathfinding
+              <a href="/Java-ImageProcessing2.html" rel="next" title="Java代写：ImageProcessing2">
+                <i class="fa fa-chevron-left"></i> Java代写：ImageProcessing2
               </a>
             
           </div>
@@ -418,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS308-Pipes.html" rel="prev" title="C代写：CS308-Pipes">
-                C代写：CS308-Pipes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">2.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Assignment-5"><span class="nav-number">1.</span> <span class="nav-text">Assignment 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Novice"><span class="nav-number">1.1.</span> <span class="nav-text">Novice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adept"><span class="nav-number">1.2.</span> <span class="nav-text">Adept</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jedi"><span class="nav-number">1.3.</span> <span class="nav-text">Jedi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grading"><span class="nav-number">1.4.</span> <span class="nav-text">Grading</span></a></li></ol></li></ol></div>
             
 
           </div>
