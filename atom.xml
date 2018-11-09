@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-11-07T14:57:36.810Z</updated>
+  <updated>2018-11-09T03:02:10.546Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：CITS1001-2048</title>
+    <link href="https://tk1307993.coding.me/CITS1001-2048.html"/>
+    <id>https://tk1307993.coding.me/CITS1001-2048.html</id>
+    <published>2018-11-09T02:58:30.000Z</published>
+    <updated>2018-11-09T03:02:10.546Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>2048 is a recent online computer game. Play takes place on a 4x4 board of squares on which a sequence of tiles appears, each holding a number. Players move tiles around by sliding rows and columns, with the aim of combining identical tiles to make higher numbers. The player’s score is determined largely by the tiles on the final board.<br>You can play 2048 online to get familiar with the game. In this project you will construct a computer player for a simplified version of 2048, and also an interface for a human player.</p><h2 id="The-rules-of-2048"><a href="#The-rules-of-2048" class="headerlink" title="The rules of 2048"></a>The rules of 2048</h2><p>Tiles</p><p>2048 is played on a 4x4 grid of squares. Each square is either empty, or it holds a tile holding a number in {2, 4, 8, 16, 32, 64, …}, i.e. a power of two. At the start of the game the board holds between one and<br>sixteen 2tiles.</p><p>Moves</p><p>The player makes a sequence of moves, each of which is Left, Right, Up, or Down. The description below is for Up moves probably you can translate for the other three possibilities, otherwise they are described here.</p><p>An Up move causes all columns on the board to attempt to slide upwards.</p><ul><li>If no column can legally slide, nothing happens.</li><li>Otherwise all legal slides are implemented, and then a new 2-tile appears in the leftmost empty square of the bottom row.</li></ul><p>Testing slides<br>A column’s attempt to slide upwards is deemed legal if either or both of the following apply.</p><ul><li>A nonempty square in that column has an empty square above it.</li><li>Two adjacent squares in that column hold identical tiles.</li><li>A column cannot slide upwards if it has X tiles at the top with no adjacent identical tiles, and 4X empty squares at the bottom.</li></ul><p>Implementing slides</p><p>When a slide is implemented, the following occurs.</p><ul><li>All squares slide to the top of the column, then</li><li>where there are two adjacent squares holding identical tiles K, those tiles combine into a single tile 2K on the higher square, and all lower tiles slide up again. </li><li>A tile can participate in only one combination in a given move.</li></ul><h2 id="Game-over"><a href="#Game-over" class="headerlink" title="Game over"></a>Game over</h2><p>The game is over when no more successful (i.e. legal) moves are possible.</p><h2 id="Scoring"><a href="#Scoring" class="headerlink" title="Scoring"></a>Scoring</h2><p>Each successful move gets one point, and each unsuccessful move loses one point so the score can go up or down as the game proceeds.</p><h2 id="Tasks"><a href="#Tasks" class="headerlink" title="Tasks"></a>Tasks</h2><p>Each link above gives you a skeleton of the required class, including instance variables, constructors, and methods. You are required to complete the methods and constructors whose bodies are marked with the comment TODO, in Play2048.java, GameState.java, and Square.java. Make sure you understand the connections between the classes, and where each method fits into the scheme described above.</p><p>I suggest you tackle these tasks in roughly the order above, although it may be helpful to write a constructor for Play2048 and a board display method early, to make testing easier. Here are some tips. If</p><p>I add to this list, I will update the document version number.</p><ul><li>The move description on the main page is for an Up move; whereas the first move you are likely to implement is a Left move. Make sure that this discrepancy doesn’t cause you any problems!</li><li>When performing moves, you need to update the existing board. Creating new array(s) will not make the tester happy.</li><li>You may add instance variables to Play2048, although make sure that the information being stored really needs an instance variable. Do not add instance variables to the other classes.</li><li>Avoid repetitious code! There is much less work here than it may appear…</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      做一个2048的游戏，和手机上的类似。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenGL代写：CSCI336-3DArtGallery</title>
@@ -441,28 +463,6 @@
     
     
       <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Database代写：ECS165A-NormalForm</title>
-    <link href="https://tk1307993.coding.me/ECS165A-NormalForm.html"/>
-    <id>https://tk1307993.coding.me/ECS165A-NormalForm.html</id>
-    <published>2018-09-08T03:51:48.000Z</published>
-    <updated>2018-09-08T03:54:20.974Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Normal From是数据库理论里面最恶心的问题，从1NF到6NF，加上BCNF，DKNF以及UF。不像编程作业，有运行结果作参考，做这种理论题简直是受罪，每一题都得反复推理。</p><p>像下面给出的这个作业，除了题量大以外，每个问题都是多解问题，拿满分几乎是不可能的事情。</p><p>1) For this problem you will consider following relation and set of FDs:<br>R(A,B,C,D,E)</p><p>AB → E</p><p>B → C</p><p>CE → A</p><p>AE → D</p><p>a) What are the keys of R?</p><p>b) Show that the set of FDs is a minimal basis; if it is not a minimal basis, find a minimal basis for the FDs.</p><p>c) What are all of the BCNF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p><p>d) Decompose R into BCNF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p><p>e) What are all of the 3NF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p><p>f) Decompose R into 3NF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p><p>g) What are all of the 4NF MVD violations that follow from the FDs?</p><p>h) Decompose R into 4NF. For each relation, list the keys, FDs and MVD.</p><p>i) If you project the relation R onto S(A,B,C) what nontrivial FDs and MVDs hold in S?</p><p>2) For this problem you will consider the following relations and FDs:<br>Courses(C,T,H,R,S,G)<br>C → T<br>HR → C<br>HT → R<br>HS → R<br>CS → G<br>Where C, T, H, R, S, and G are the course, teacher, hour, room, student, and grade respectively. With a proposed decomposition of:<br>R1(C, T, H)<br>R2(C, H, R, G)<br>R3(C, R, S)<br>a) Use the chase test to prove/disprove that holds HS → G in Courses.<br>b) Use the chase test to prove/disprove that holds THR → S in Courses.<br>c) Use the chase test to prove/disprove the proposed decomposition has a lossless join.<br>d) Decompose Courses into 3NF.<br>e) Which of your relations in 3NF are not in BCNF?<br>f) Which of your relations in 3NF are not in 4NF?</p><p>3) Design an academic genealogy database with one entity set: Academics.<br>Consider academics with doctoral degrees only. The information to record about academics includes their name, discipline, year of graduation, institution, dissertation title, dissertation chair, dissertation committee members (assume two others distinct from chair), and academic progeny.</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>最后还是想说一下，这样的多个解的作业真的相当恶心，做的时候需要反复推导，查阅各种资料来证明，而且第二个问的chase test完全就是slides里面的方法，学习理解也花了不少时间。</p>]]></content>
-    
-    <summary type="html">
-    
-      Pathfinding是在平面上两点之间找出路径的问题。
-    
-    </summary>
-    
-      <category term="Other" scheme="https://tk1307993.coding.me/categories/Other/"/>
-    
-    
-      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
     
   </entry>
   
