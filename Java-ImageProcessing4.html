@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Operating System," />
+  <meta name="keywords" content="Image Process," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。">
-<meta name="keywords" content="Operating System">
+<meta name="description" content="实现观察者和Decorator模式">
+<meta name="keywords" content="Image Process">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS308-Pipes">
-<meta property="og:url" content="https://tk1307993.coding.me/CS308-Pipes.html">
+<meta property="og:title" content="Java代写：ImageProcessing4">
+<meta property="og:url" content="https://tk1307993.coding.me/Java-ImageProcessing4.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。">
+<meta property="og:description" content="实现观察者和Decorator模式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-09T07:20:29.715Z">
+<meta property="og:updated_time" content="2018-11-14T12:21:21.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS308-Pipes">
-<meta name="twitter:description" content="Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。">
+<meta name="twitter:title" content="Java代写：ImageProcessing4">
+<meta name="twitter:description" content="实现观察者和Decorator模式">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS308-Pipes.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/Java-ImageProcessing4.html"/>
 
 
 
 
 
-  <title>C代写：CS308-Pipes | 留学生CS编程作业代写</title>
+  <title>Java代写：ImageProcessing4 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS308-Pipes.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/Java-ImageProcessing4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS308-Pipes</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：ImageProcessing4</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T11:51:48+08:00">
-                2018-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T20:19:34+08:00">
+                2018-11-14
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Nameless pipes可以做很多事情，比如在父子进程中，通过nameless pipes进行父子进程的通信。
+                  实现观察者和Decorator模式
               </div>
           
 
@@ -360,30 +360,70 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>结合Unix的系统工具，甚至可以将输入输出流通过fd传给子进程。下面的作业便是通过nameless pipes将数据传递给Unix的sort和grep工具。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This problem will require you to write two different, but similar, programs that each spawn a child, let the child process load itself with a Linux/UNIX type command (the grep and sort commands will be used in this assignment), and then send data to and retrieve data from the child process. Each of your programs will need to:<br>Create 2 nameless pipes</p>
-<ol>
-<li>Create a child process</li>
-<li>The parent will be responsible for managing any data files that the child command will need sent via the pipe</li>
-<li>The parent will collect all output from the child command sent through the pipe, process it as required and write required results to the standard output</li>
-<li>The parent will terminate with success when the pipe being read from the child command shows EOF<br>Perform the appropriate channel management with the processes’ standard IO channels and the pipe channels to create a circular connection through the UNIX command</li>
-<li>standard input to the command child will be sent as output from the parent</li>
-</ol>
-<h3 id="For-the-sort-command"><a href="#For-the-sort-command" class="headerlink" title="For the sort command"></a>For the sort command</h3><p>from your parent process, open the file for reading</p>
-<ol>
-<li>Read each line of the file and write it into (the parent’s) OUT pipe to the child process that has exec’d sort</li>
-<li>Read the file back from the child running sort from the (parent’s) IN pipe, and write the required results to stdout (or a file if you choose)</li>
-<li>sort must sort the data sent by the parent first by phone number area code and then by last name within each area code</li>
-<li>Your equired output will be a summary of the sorted results returned by the child running sort that consists of a listing of each unique area code and the number of people found in the data sent to sort for that code</li>
-</ol>
-<h3 id="For-the-grep-command"><a href="#For-the-grep-command" class="headerlink" title="For the grep command"></a>For the grep command</h3><p>from your parent process, open the file for reading<br>Read each line of the file and write it into (the parent’s) OUT pipe to a child process that exec’d grep</p>
-<ol>
-<li>The child process running grep must filter its incoming lines, looking for any line that has the string “123” in it</li>
-<li>The child process running grep must write back each matching line to the parent process by writing it into the (parent’s) IN pipe</li>
-<li>You (the parent) must read back grep’s output from your IN pipe and print out a single number indicating how many lines had the matching string as your report. You must count the lines returned by grep in your parent process (do not have grep count the lines)</li>
-<li>You must now repeat this grep exercise using the file</li>
-</ol>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>熟悉父子进程和nameless pipe的话，这个作业难度并不高。不过需要注意的是，对EOF的处理，稍有不慎，程序将卡死在sort和grep中，无法退出。</p>
+        <h1 id="Assignment-6"><a href="#Assignment-6" class="headerlink" title="Assignment 6"></a>Assignment 6</h1><p>The goal of this assignment is to:</p>
+<ul>
+<li>Exercise the Observer/Observable design pattern</li>
+<li>Exercise the Decorator design pattern</li>
+</ul>
+<p>Read through the code in the a6 package and make sure you understand it. For the most part, it should be pretty familiar by now. I’ve streamlined the Picture interface a bit by removing all of the iterators introduced in a5. In addition to the interfaces Picture and SubPicture along with their implmentations are three new interfaces described as follows:</p>
+<ul>
+<li><p>Region</p>
+<p>This abstraction represents a rectangular area in coordinate space. A region is defined by “top” and “bottom” y-coordinates and a “left” and “right” x-coordinates. An (x,y) pair that is within these coordinates (inclusive), is inside the region. These boundary coordinate values are available via the getters, getTop(), getBottom(), getLeft(), and getRight(). </p>
+<p>A Region also has methods for calculating its intersection and union with another Region. The intersect method should throw a NoIntersectionException (also defined in this package) if there is no intersection with the region passed in as a parameter or if the parameter value passed in is null. The union method should produce a Region object corresponding to the smallest encompassing area of itself and the Region passed in as a parameter. If null is passed to a Region’s union method, the method should return itself (i.e., the object it was called on). In other words, while it is illegal to ask for the a region’s intersection with null, asking for the union with null is legal. </p>
+</li>
+<li><p>ObservablePicture</p>
+<p>This interface extends the Picture interface and represents a mutable picture that is capable of registering “region of interest observers” that implement the ROIObserver interface (described below). The methods of this interface include:</p>
+<ul>
+<li><p>registerROIObserver(ROIObserver o, Region r)</p>
+<p>This method registers the observer “o” with the region “r”. This means that if a paint operation affects a pixel within the specified region, this observer should be notified. This observer should NOT be notified of paint operations that only affect pixels outside of the region. The same observer can be registered multiple times with possibly different specified regions of interest.</p>
+</li>
+<li><p>unregisterROIObservers(Region r)</p>
+<p>This method unregisters any previously registered observers that have an observed region of interest that intersects the specified region r.</p>
+</li>
+<li><p>unregisterROIObserver(ROIObserver o)</p>
+<p>This method unregisters a previously registered observer. Note, this observer may have been registered multiple times with different specified regions of interest. All registrations associated with this observer should be unregistered.</p>
+</li>
+<li><p>findROIObservers(Region r)</p>
+<p>This method returns an array of ROIObserver objects (possibly empty) that have registered regions of interest that intersect the given region “r”. The same observer object may appear more than once in the result if it happens to be registered more than once with regions of interest that intersect the specified region.</p>
+</li>
+<li><p>suspendObservable()</p>
+<p>This method temporarily suspends notification of registered observers. This makes it possible to make changes using a number of paint operations and then notify registered observers of all of the changes at once when resumeObservable() is called.</p>
+</li>
+<li><p>resumeObservable()</p>
+<p>This method resumes notification of registered observers if previously suspended. Observers are notified of all changes made between suspension and resumption immediately upon calling this method.</p>
+</li>
+</ul>
+</li>
+<li><p>ROIObserver</p>
+<p>This interface is the required interface for any object that wants to register with an ObservablePicture as an observer. It includes only a single method:</p>
+<ul>
+<li><p>notify(ObservablePicture p, Region r)</p>
+<p>This is the method that is called when the observer is being notified of changes. The first argument is the ObservablePicture object that is notifying the observer. The second argument is the intersection of the observer’s registered region of interest and the region of the frame that encompasses all of the changes to be reported. If a ROIObserver is registered more than once with different regions that intersect the changed region, the notify method is called once for each registration with the appropriate intersection.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="How-ROIObserver-Should-Work"><a href="#How-ROIObserver-Should-Work" class="headerlink" title="How ROIObserver Should Work"></a>How ROIObserver Should Work</h2><p>As described above, a registered ROIObserver should be notified whenever one or more pixels within its region of interest has possibly changed due to a paint operation. By using suspendObservable() and resumeObservable(), the observable picture may in fact report the pixel changes of multiple paint operations all at once. The second argument to the notification method describes the intersection of the region encompassing all of the changed pixels being reported and the region of interest associated with the registered ROIObserver. </p>
+<p>Below is an example scenario that should illustrate how this works. In this example, I’ll use the following shorthand to specificy a region that is defined by the corners (a,b) and (c,d) where (a,b) is the top left of the region and (c,d) is the bottom right of the region:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">a</span>,b)-&gt;(<span class="name">c</span>,d)</span><br></pre></td></tr></table></figure>
+<p>Suppose we have a single ObservablePicture object P that is 10 pixels wide and 10 pixels tall.</p>
+<p>Suppose ROIObserver A is registered as an observer of P with the region of interest (1,1)-&gt;(5,5).</p>
+<p>Suppose ROIObserver B is registered as an observer of P twice; once with the region of interest (0,0)-&gt;(3,3) and once with the region (2,2)-&gt;(7,7).</p>
+<p>If we have not called suspendObservable() on P, then calling any paint method will cause these registered observers to be notified if the region that encompasses the changed pixels intersects with the registered region of interest. So, for example, if we call the single pixel version of the paint method on P at position (1,1), then A will be notified once with the region (1,1)-&gt;(1,1) as the second argument to the notification method and B will also be notified once, again with the region (1,1)-&gt;(1,1) as the second argument to the notification method. Similarly, if we call the rectangular region paint method on P in order to paint the rectangular region from (1,1)-&gt;(4,4), then A will be notified once with the region (1,1)-&gt;(4,4) as the second argument since the changed region lies entirely within the registered region of interest. B, however, will be notified twice. Once with the region (1,1)-&gt;(3,3) as the second parameter because that is the intersection of the region of interest (0,0)-&gt;(3,3) with the changed region (1,1)-&gt;(4,4); and a second time with the region (2,2)-&gt;(4,4) as the second parameter because that is the intersection of the region of interest (2,2)-&gt;(7,7) with the changed region (1,1)-&gt;(4,4). </p>
+<p>Paint operations that only affect pixels outside of a region of interest do not result in notification. For example, if we call the single pixel paint method on P at position (8,8), no one is notified because the affected pixel position is outside of any registered regions of interest. </p>
+<p>For the circular version of paint, you should inform observers as if the entire rectangular region from (cx-radius, cy-radius) -&gt; (cx+radius, cy+radius) is affected.</p>
+<p>Things are a bit trickier if we use suspendObservable() and resumeObservable(). In this case, the ObservablePicture object needs to keep track of the smallest region that encompasses all pixel changes between the time suspendObservable() is called and the time when resumeObservable() is called. At the time that resumeObservable() is called, all registered observers with a region of interest that intersects this accumulated region of changes will be notified. The second argument to the notification method should be the intersection of the region encompassing the pixel changes and each registered region of interest.</p>
+<p>For example, suppose we call suspendObservable() and then use the single pixel paint method on P to change the following pixel positions: (2,1), (3,2), and (4,4).</p>
+<p>At this point, the changes associated with these multiple calls to paint is encompassed by the region (2,1)-&gt;(4,4).</p>
+<p>Now if we call resumeObservable(), A should be notified with region (2,1)-&gt;(4,4) because that is the intersection of the overall region that changed and its region of interest, namely (1,1)-&gt;(5,5). </p>
+<p>B, however, should be notified twice; once with the region (2,1)-&gt;(3,3) as the intersection of the changed region and the region of interest (0,0)-&gt;(3,3) and once with the region (2,2)-&gt;(4,4) as the intersection of the changed region and the region of interest (2,2)-&gt;(7,7).</p>
+<h2 id="What-To-Do"><a href="#What-To-Do" class="headerlink" title="What To Do"></a>What To Do</h2><p>First, create an implementation of the Region interface called RegionImpl. The constructor for RegionImpl should have the following declaration:</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> RegionImpl(<span class="built_in">int</span> <span class="built_in">left</span>, <span class="built_in">int</span> top, <span class="built_in">int</span> <span class="built_in">right</span>, <span class="built_in">int</span> bottom)</span><br></pre></td></tr></table></figure>
+<p>The RegionImpl constructor should throw an IllegalArgumentException if left is greater than right or top is greater than bottom.</p>
+<p>Second, create an implementation of ObservablePicture called ObservablePictureImpl that uses the decorator pattern to wrap an existing Picture object and makes it observable as described above. The constructor for ObservablePictureImpl should have the following declaration:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public ObservablePictureImpl(<span class="name">Picture</span> p)</span><br></pre></td></tr></table></figure>
+<p>The Picture to be decorated is passed in as the parameter p. Note that while ObservablePictureImpl object is mutable with respect to paint operations (i.e., always returns itself), the underlying decorated picture object may or may not be. In other words, the ObservablePictureImpl object may end up replacing its decorated Picture object if painting on it results in a different object. </p>
+<h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><p>This assignbment is worth 20 points. It is not officially separated into subparts, but you can expect up to 5 points will come from testing your implementation of Region and the rest from testing your implementation of ObservablePicture.</p>
 
       
     </div>
@@ -401,7 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
+            <a href="/tags/Image-Process/" rel="tag"># Image Process</a>
           
         </div>
       
@@ -414,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ECS165A-NormalForm.html" rel="next" title="Database代写：ECS165A-NormalForm">
-                <i class="fa fa-chevron-left"></i> Database代写：ECS165A-NormalForm
+              <a href="/CS104-Matrix.html" rel="next" title="C代写：CS104-Matrix">
+                <i class="fa fa-chevron-left"></i> C代写：CS104-Matrix
               </a>
             
           </div>
@@ -423,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CPT270-Cinemas.html" rel="prev" title="PHP代写：CPT270-Cinemas">
-                PHP代写：CPT270-Cinemas <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -579,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For-the-sort-command"><span class="nav-number">3.</span> <span class="nav-text">For the sort command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For-the-grep-command"><span class="nav-number">4.</span> <span class="nav-text">For the grep command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">5.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Assignment-6"><span class="nav-number">1.</span> <span class="nav-text">Assignment 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-ROIObserver-Should-Work"><span class="nav-number">1.1.</span> <span class="nav-text">How ROIObserver Should Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-To-Do"><span class="nav-number">1.2.</span> <span class="nav-text">What To Do</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grading"><span class="nav-number">1.3.</span> <span class="nav-text">Grading</span></a></li></ol></li></ol></div>
             
 
           </div>
