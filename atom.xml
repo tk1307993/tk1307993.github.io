@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>C代写：CS104-WordCount</title>
+    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
+    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
+    <published>2018-11-14T12:19:34.000Z</published>
+    <updated>2018-11-15T14:25:51.625Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C代写：CS104-Matrix</title>
     <link href="https://tk1307993.coding.me/CS104-Matrix.html"/>
     <id>https://tk1307993.coding.me/CS104-Matrix.html</id>
@@ -392,11 +414,11 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Hive" scheme="https://tk1307993.coding.me/tags/Hive/"/>
     
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -438,28 +460,6 @@
     </summary>
     
       <category term="JS" scheme="https://tk1307993.coding.me/categories/JS/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>R代写：CSC120-EuclideanMinimumWeightMatching</title>
-    <link href="https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html"/>
-    <id>https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html</id>
-    <published>2018-09-16T07:43:03.000Z</published>
-    <updated>2018-09-16T07:46:41.532Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You should use an R script for grouping up all dots in a vector including an even number of dots in this assignment, in a way that tries to minimize the sum of the distances between the dots in each of the pairs. This problem can arise in many contexts, including design of experiments in statistics. Doing this will provide practice in basic R scriptming facilities such as vectors and matrices, and use of if and for, in use of R’s plotting facilities, and in how to divide a script into several functions that can be understood and sometimes used separately.</p><p>The output of the script is a vector of pairs of input dots, with each of the input dots being in exactly one pair. The order of the pairs and the order of dots in each pair are not important. The objective is to try to find a vector of pairs for which the total of the distances from one dot in a pair to the other is small. Ideally, this total distance would be as small as possible, but the method used in this assignment is not guaranteed to find a vector of groupings that achieve this minimum, it just tries to make the total distance as small as it can.</p><p>The input for this problem is a vector of n dots in k-dimensional Euclidean space. The number of dots, n, will always be even. For the actual data you will work with, k is two, so the input is a vector of dots in the plane, but except for the 2-dimensional plotting function described below, your script should work for any dimensionality, k, and for any even number of dots, n.</p><p>We also must specify how a function to find the groupings will work. For this assignment, you should write a function called find_groupings that can be called with a single argument that is a matrix of dots, as specified above, and which will return as its value a matrix giving the pairs of dots that we hope have a small total distance. (Below, some additional optional arguments to find_groupings will be specified.)</p><p>In designing this script, we must decide how to represent the input (a vector of dots) as an R data structure. For this assignment, we will use an n by k matrix, in which each row represents a dot in k-dimensional Euclidean space. We must also decide how to represent the vector of pairs of dots that is the output. We will use an n=2 by 2 matrix for this, in which each row contains two integers between 1 and n, which index the rows for the two dots in the input matrix.</p>]]></content>
-    
-    <summary type="html">
-    
-      一共写6个函数，运行后需要画10张图，然后找其中最优的欧氏距离。
-    
-    </summary>
-    
-      <category term="R" scheme="https://tk1307993.coding.me/categories/R/"/>
     
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
