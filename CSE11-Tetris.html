@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="一个21点的扑克牌游戏，作业提供了框架以及游戏引擎，不过UI库是学校内部的，需要学习成本。刨除UI部分，整体不难，无非就是deal, hit, stand三个按钮，然后label显示得分。">
+<meta name="description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS415-Blackjack">
-<meta property="og:url" content="https://tk1307993.coding.me/CS415-Blackjack.html">
+<meta property="og:title" content="Java代写：CSE11-Tetris">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE11-Tetris.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="一个21点的扑克牌游戏，作业提供了框架以及游戏引擎，不过UI库是学校内部的，需要学习成本。刨除UI部分，整体不难，无非就是deal, hit, stand三个按钮，然后label显示得分。">
+<meta property="og:description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-24T02:44:55.815Z">
+<meta property="og:updated_time" content="2018-11-17T04:57:35.160Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS415-Blackjack">
-<meta name="twitter:description" content="一个21点的扑克牌游戏，作业提供了框架以及游戏引擎，不过UI库是学校内部的，需要学习成本。刨除UI部分，整体不难，无非就是deal, hit, stand三个按钮，然后label显示得分。">
+<meta name="twitter:title" content="Java代写：CSE11-Tetris">
+<meta name="twitter:description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS415-Blackjack.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE11-Tetris.html"/>
 
 
 
 
 
-  <title>Java代写：CS415-Blackjack | 留学生CS编程作业代写</title>
+  <title>Java代写：CSE11-Tetris | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS415-Blackjack.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE11-Tetris.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS415-Blackjack</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE11-Tetris</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T10:41:52+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-17T12:51:16+08:00">
+                2018-11-17
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  一个21点的扑克牌游戏，作业提供了框架以及游戏引擎，不过UI库是学校内部的，需要学习成本。刨除UI部分，整体不难，无非就是deal, hit, stand三个按钮，然后label显示得分。
+                  做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。
               </div>
           
 
@@ -360,28 +360,49 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>We have written several classes that set up the application, the cards and the game board. You will need to write a class named Game and other classes of your choice that will make the game functional. The game should follow the above rules and you should display a control panel that displays scores and control buttons to run the game.</p>
-<h3 id="The-Starting-Files"><a href="#The-Starting-Files" class="headerlink" title="The Starting Files"></a>The Starting Files</h3><p>Start by downloading the files posted on the public 8P directory.</p>
+        <h2 id="The-Program-Tetris"><a href="#The-Program-Tetris" class="headerlink" title="The Program - Tetris"></a>The Program - Tetris</h2><p>This is a double programming assignment. It is intended to NOT be doable in a single night. It’s long with a non-optimized solution taking about 700-800 lines of code and white space (not including comments). It’s much more complex than any of your other programs but at the time of the assignment we have already covered the critical material. This assignment synthesizes nearly everything covered so far in CSE11.</p>
+<p>The goal is to create a Tetris game program that you play on your computer. To achieve this goal you will be using Arrays (or ArrayLists), rectangular arrays, Threads, graphical user interfaces with java Swing objects, for loops, while loops, Boolean expressions, and good program design.</p>
+<p>This is a much more substantial program than your previous assignments and you should expect it take you much more time. Begin early. Ask questions. Be Patient and develop in stages. You have several weeks. Use them!.<br>A full lecture will be devoted to questions and hints for this project.</p>
+<p>If you do nothing on this program the first week, you will find it very difficult and frustrating. Start working the first week. Read the suggested development process. The program is quite doable, but NOT if you try to solve the entire problem at once, or in a single week.</p>
+<p>What the Final Game looks like when initialized and after being played for awhile with default the default blocksize (20 pixels)</p>
+<h2 id="Basic-rules-operation-of-the-game"><a href="#Basic-rules-operation-of-the-game" class="headerlink" title="Basic rules/operation of the game"></a>Basic rules/operation of the game</h2><p>There are seven Tetris shapes (each happens to occupy four grid squares).</p>
+<p>When a new game is begun and empty field/board that is 10 blocks wide, 20 blocks high is created. Then a Randomly-selected shape is created and begins moving downwards toward the bottom of the grid. The shape starts roughly at the center top row. A shape may be rotated clockwise or counter-clockwise by the user. A shape may be moved left or right. And the user may drop the shape into place.</p>
+<p>A shape may not be moved out of bounds. It may not be rotated if the rotation would make it run into an existing block on the board. When shape can no longer move downwards (hits the bottom, or runs into existing blocks, a new shape is automatically created.</p>
+<p>The game is over when a shape cannot fit onto the grid.</p>
+<h2 id="Movement"><a href="#Movement" class="headerlink" title="Movement"></a>Movement</h2><p>The player has five keys at his/her disposal to move the current Tetris shape</p>
+<ol>
+<li>h – moves the Tetris shape left</li>
+<li>l – moves the Tetris shape right</li>
+<li>j – rotates the Tetris shape counter clockwise</li>
+<li>k – rotates the Tetris shape clockwise</li>
+<li>spacebar – drops the shape downwards from its current position until it would stop</li>
+</ol>
+<h2 id="Scoring"><a href="#Scoring" class="headerlink" title="Scoring"></a>Scoring</h2><ol>
+<li>Every time a shape moves downwards, score should be incremented by 10.</li>
+<li>Rows completed when a single shape stops movement<br> . 1 row – 100<ol start="2">
+<li>2 rows – 400</li>
+<li>3 rows – 800</li>
+<li>4 rows – 1600</li>
+</ol>
+</li>
+</ol>
+<h2 id="Automated-Speedup"><a href="#Automated-Speedup" class="headerlink" title="Automated Speedup"></a>Automated Speedup</h2><p>blocks should begin movement at 1 row/second. maximum speed should be 20 rows/second.</p>
+<p>Block movement should speed up every 2000 points, until 40000 points are reached, and then maximum speed should be maintained<br>The Game is over when the next random piece will not fit. You may draw the final piece or not draw it (not drawn in the is diagram)</p>
+<h2 id="The-Major-Classes"><a href="#The-Major-Classes" class="headerlink" title="The Major Classes"></a>The Major Classes</h2><p>When creating a larger program, one has to figure out how to break up the problem into smaller components. Since, this is likely the first big program you’ve ever created, this assignment guides you through some of this process. Let’s begin by looking at the most likely classes, and then expanding</p>
 <ul>
-<li>Board.java Our class that represents the playing board, do not edit this file.</li>
-<li>Card.java Our class that represents one card, do not edit this file.</li>
-<li>BlackJackApp.java Our class, the main application, do not edit this file.</li>
-<li>Game.java A skeleton for your main class.</li>
-<li>cards_gif.jar A jar file containing the card images.</li>
+<li>Tetris Shapes</li>
+<li>the grid (or field) over in which shapes are being placed</li>
+<li>The graphical interface</li>
 </ul>
-<p>You will be writing the Game class and other classes as required by your design. Do not change and do not submit Board.java, Card.java, BlackJackApp.java or any images. Submit only Game.java and other java files that you write.</p>
-<h3 id="The-Game-Class"><a href="#The-Game-Class" class="headerlink" title="The Game Class"></a>The Game Class</h3><p>This is the primary class that you will write, as it is now it is just a skeleton that sends a few test messages to the Board. You will need to add the code that plays the game and displays the information. You will need to<br>create a display text box to show the following information:</p>
-<ul>
-<li>The amount of money the player has (starts at $500)<br>*The players current card count</li>
-<li>The result and win/loss amount for the current deal and messages saying what to do next. (You will probably want to create a “Display” class to handle these tasks.)</li>
-<li>You will need to add labeled buttons (clickable Rectangles) to get the users choices, the choice are:</li>
-<li>Deal: Deal a new hand (A new hand can’t begin until the previous hand is finished)</li>
-<li>Hit: Player gets another card</li>
-<li>Stand: Player ends the hand (then dealer finished hand and bets are paid)</li>
-</ul>
-<h3 id="Chunking-and-Design"><a href="#Chunking-and-Design" class="headerlink" title="Chunking and Design"></a>Chunking and Design</h3><p>Don’t try to do everything in one method or one class, it will become much too complicated. Write multiple classes and many “helper” methods that handle some small part of the problem. Breaking a problem up into these smaller pieces is sometimes called “chunking”. Poorly chunked code may lose points.</p>
-<p>As usual, think carefully about the class design, for example you probably want a separate class to represent the display and another class to represent the buttons, etc..</p>
-<h3 id="Evaluation-and-Incremental-development"><a href="#Evaluation-and-Incremental-development" class="headerlink" title="Evaluation and Incremental development"></a>Evaluation and Incremental development</h3><p>Develop your program in small steps; the following suggests some useful steps and how we will evaluate your assignment. If, when you develop your program you cannot finish one of the following steps and it breaks the program, be sure to backup to where the program was working. A program that doesn’t compile or crashes is worth a lot less than a program that does just the first step below.</p>
+<h2 id="Summary-of-Class-Interactions"><a href="#Summary-of-Class-Interactions" class="headerlink" title="Summary of Class Interactions"></a>Summary of Class Interactions</h2><ol>
+<li>A Shape is an array of logical coordinates. It knows nothing about graphics. It can be told to rotated and report information about itself.</li>
+<li>The TetrisGrid is the bounded X-Y playing field. It is the place where shapes interact with existing (placed) blocks. Hence it can enforce the rules of the game.</li>
+<li>The ShapeMover is the automated mechanism of forcing the current shape to move downwards. The ShapeMover will attempt to move/rotate the shape.</li>
+<li>Tetris is the Graphical interface that sets up the All components. It responds to some user input</li>
+<li>GraphicsGrid is the graphical representation of TetrisGrid.</li>
+<li>Coord is a “helper” class.</li>
+<li>You will need to decide exactly how information is communicated among the various classes to achieve your goals. Ask questions and think about this for a while. Understanding how your classes should interact will make your debugging much faster</li>
+</ol>
 
       
     </div>
@@ -412,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSE6242-D3GraphsAndVisualization.html" rel="next" title="JS代写：CSE6242-D3GraphsAndVisualization">
-                <i class="fa fa-chevron-left"></i> JS代写：CSE6242-D3GraphsAndVisualization
+              <a href="/CS104-WordCount.html" rel="next" title="C代写：CS104-WordCount">
+                <i class="fa fa-chevron-left"></i> C代写：CS104-WordCount
               </a>
             
           </div>
@@ -421,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CA675-TF-IDF.html" rel="prev" title="Hadoop代写：CA675-TF-IDF">
-                Hadoop代写：CA675-TF-IDF <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -577,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Starting-Files"><span class="nav-number">2.</span> <span class="nav-text">The Starting Files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Game-Class"><span class="nav-number">3.</span> <span class="nav-text">The Game Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chunking-and-Design"><span class="nav-number">4.</span> <span class="nav-text">Chunking and Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Evaluation-and-Incremental-development"><span class="nav-number">5.</span> <span class="nav-text">Evaluation and Incremental development</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Program-Tetris"><span class="nav-number">1.</span> <span class="nav-text">The Program - Tetris</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-rules-operation-of-the-game"><span class="nav-number">2.</span> <span class="nav-text">Basic rules/operation of the game</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Movement"><span class="nav-number">3.</span> <span class="nav-text">Movement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scoring"><span class="nav-number">4.</span> <span class="nav-text">Scoring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Automated-Speedup"><span class="nav-number">5.</span> <span class="nav-text">Automated Speedup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Major-Classes"><span class="nav-number">6.</span> <span class="nav-text">The Major Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary-of-Class-Interactions"><span class="nav-number">7.</span> <span class="nav-text">Summary of Class Interactions</span></a></li></ol></div>
             
 
           </div>
