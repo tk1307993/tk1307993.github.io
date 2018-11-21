@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-11-17T04:57:35.160Z</updated>
+  <updated>2018-11-21T12:03:34.555Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：COMP2129-PageRank</title>
+    <link href="https://tk1307993.coding.me/COMP2129-PageRank.html"/>
+    <id>https://tk1307993.coding.me/COMP2129-PageRank.html</id>
+    <published>2018-11-21T04:51:16.000Z</published>
+    <updated>2018-11-21T12:03:34.555Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Task-Description"><a href="#Task-Description" class="headerlink" title="Task Description"></a>Task Description</h2><p>n this assignment your task is to implement the PageRank algorithm in C using the power method described below and then optimise and parallelise your code to ensure peak performance is achieved.</p><p>The PageRank algorithm was developed in 1996 by Larry Page and Sergey Brin when they were graduate students at Stanford University. Google and other search engines compare words in search phrases to words in web pages and use ranking algorithms to determine the most relevant results.</p><p>PageRank assigns a score to a set of web pages that indicates their importance. The underlying idea behind PageRank is to model a user who is clicking on web pages and following links from one page to another. In this framework, important pages are those which have incoming links from many other pages, or have incoming links from other pages with a high PageRank score, or both.</p><p>You are encouraged to ask questions on Ed using the assignments category. As with any assignment, make sure that your work is your own, and you do not share your code or solutions with other students.</p><h2 id="The-PageRank-algorithm"><a href="#The-PageRank-algorithm" class="headerlink" title="The PageRank algorithm"></a>The PageRank algorithm</h2><p>PageRank is an iterative algorithm that is repeated until a stopping criteria is met. The last iteration gives us the result of the search, which is a score per web page. A high score indicates a very relevant web page whereas a low score indicates a not so relevant web page for a search. Sorting the web pages by their scores in descending order gives us the order for the result list of a search query.</p><h2 id="Implementation-details"><a href="#Implementation-details" class="headerlink" title="Implementation details"></a>Implementation details</h2><p>Your program must implement the PageRank algorithm using the power method described above.</p><p>The header file pagerank.h contains an init function that processes the list of pages and edges from standard input and stores a linked list of pages and corresponding inlinks in the following structs</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">page</span> &#123;</span></span><br><span class="line">  <span class="keyword">char</span>* name;       <span class="comment">// name of this page</span></span><br><span class="line">  <span class="keyword">size_t</span> index;     <span class="comment">// index of this page</span></span><br><span class="line">  <span class="keyword">size_t</span> noutlinks; <span class="comment">// number of outlinks from this page</span></span><br><span class="line">  node* inlinks;    <span class="comment">// linked list of pages with inlinks to this page</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">  page* page; <span class="comment">// pointer to the page data structure</span></span><br><span class="line">  node* next; <span class="comment">// pointer to the next page in the list</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>Your program must produce no errors when built on the lab machines and ed with the command:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clang -O1 <span class="attribute">-std</span>=gnu11 <span class="attribute">-march</span>=native -lm -pthread pagerank.c -o pagerank</span><br></pre></td></tr></table></figure></p><p>Your program output must match the exact output format shown by the prototype and on Ed. You are encouraged to submit your assignment while you are working on it, so you can obtain some feedback.</p><h2 id="Program-input"><a href="#Program-input" class="headerlink" title="Program input"></a>Program input</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;dampening factor&gt;</span><br><span class="line">&lt;<span class="built_in">number</span> <span class="keyword">of</span> pages&gt;</span><br><span class="line">&lt;<span class="built_in">name</span> <span class="keyword">of</span> web page&gt;</span><br><span class="line">...</span><br><span class="line">&lt;<span class="built_in">number</span> <span class="keyword">of</span> edges&gt;</span><br><span class="line">&lt;source page&gt; &lt;destination page&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>The first line specifies the dampening factor to be used by the program. The second line defines the number of pages to be declared, followed by a list of page names with one name per line. Then, the number of edges in the graph is specified, followed by a list of edges with one edge per line.</p><p>The init function reads the input and terminates outputting an error message if the input is invalid.</p><p>The input is considered invalid if a page name exceeds the maximum length, the dampening factor is not in the range 0 &lt; d &lt; 1, a page is declared twice, or an edge is defined to a nonexistent page.</p>]]></content>
+    
+    <summary type="html">
+    
+      用C实现PageRank算法，同时需要对大数据量节点的情况进行优化。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CSE11-Tetris</title>
@@ -441,28 +463,6 @@
       <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS415-Blackjack</title>
-    <link href="https://tk1307993.coding.me/CS415-Blackjack.html"/>
-    <id>https://tk1307993.coding.me/CS415-Blackjack.html</id>
-    <published>2018-09-24T02:41:52.000Z</published>
-    <updated>2018-09-24T02:44:55.815Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>We have written several classes that set up the application, the cards and the game board. You will need to write a class named Game and other classes of your choice that will make the game functional. The game should follow the above rules and you should display a control panel that displays scores and control buttons to run the game.</p><h3 id="The-Starting-Files"><a href="#The-Starting-Files" class="headerlink" title="The Starting Files"></a>The Starting Files</h3><p>Start by downloading the files posted on the public 8P directory.</p><ul><li>Board.java Our class that represents the playing board, do not edit this file.</li><li>Card.java Our class that represents one card, do not edit this file.</li><li>BlackJackApp.java Our class, the main application, do not edit this file.</li><li>Game.java A skeleton for your main class.</li><li>cards_gif.jar A jar file containing the card images.</li></ul><p>You will be writing the Game class and other classes as required by your design. Do not change and do not submit Board.java, Card.java, BlackJackApp.java or any images. Submit only Game.java and other java files that you write.</p><h3 id="The-Game-Class"><a href="#The-Game-Class" class="headerlink" title="The Game Class"></a>The Game Class</h3><p>This is the primary class that you will write, as it is now it is just a skeleton that sends a few test messages to the Board. You will need to add the code that plays the game and displays the information. You will need to<br>create a display text box to show the following information:</p><ul><li>The amount of money the player has (starts at $500)<br>*The players current card count</li><li>The result and win/loss amount for the current deal and messages saying what to do next. (You will probably want to create a “Display” class to handle these tasks.)</li><li>You will need to add labeled buttons (clickable Rectangles) to get the users choices, the choice are:</li><li>Deal: Deal a new hand (A new hand can’t begin until the previous hand is finished)</li><li>Hit: Player gets another card</li><li>Stand: Player ends the hand (then dealer finished hand and bets are paid)</li></ul><h3 id="Chunking-and-Design"><a href="#Chunking-and-Design" class="headerlink" title="Chunking and Design"></a>Chunking and Design</h3><p>Don’t try to do everything in one method or one class, it will become much too complicated. Write multiple classes and many “helper” methods that handle some small part of the problem. Breaking a problem up into these smaller pieces is sometimes called “chunking”. Poorly chunked code may lose points.</p><p>As usual, think carefully about the class design, for example you probably want a separate class to represent the display and another class to represent the buttons, etc..</p><h3 id="Evaluation-and-Incremental-development"><a href="#Evaluation-and-Incremental-development" class="headerlink" title="Evaluation and Incremental development"></a>Evaluation and Incremental development</h3><p>Develop your program in small steps; the following suggests some useful steps and how we will evaluate your assignment. If, when you develop your program you cannot finish one of the following steps and it breaks the program, be sure to backup to where the program was working. A program that doesn’t compile or crashes is worth a lot less than a program that does just the first step below.</p>]]></content>
-    
-    <summary type="html">
-    
-      一个21点的扑克牌游戏，作业提供了框架以及游戏引擎，不过UI库是学校内部的，需要学习成本。刨除UI部分，整体不难，无非就是deal, hit, stand三个按钮，然后label显示得分。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
