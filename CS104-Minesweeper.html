@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="实现一个Minesweeper，即扫雷游戏，跑过测试即可。这个作业比较坑的地方是测试集里面采用的随机数种子，只有Linux中能过，MacOS中不能过。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C代写：CS104-Minesweeper">
+<meta property="og:url" content="https://tk1307993.coding.me/CS104-Minesweeper.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="实现一个Minesweeper，即扫雷游戏，跑过测试即可。这个作业比较坑的地方是测试集里面采用的随机数种子，只有Linux中能过，MacOS中不能过。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-24T01:49:31.499Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C代写：CS104-Minesweeper">
+<meta name="twitter:description" content="实现一个Minesweeper，即扫雷游戏，跑过测试即可。这个作业比较坑的地方是测试集里面采用的随机数种子，只有Linux中能过，MacOS中不能过。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS104-Minesweeper.html"/>
+
+
+
+
+
+  <title>C代写：CS104-Minesweeper | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS104-Minesweeper.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C代写：CS104-Minesweeper</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-24T09:44:35+08:00">
+                2018-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  实现一个Minesweeper，即扫雷游戏，跑过测试即可。这个作业比较坑的地方是测试集里面采用的随机数种子，只有Linux中能过，MacOS中不能过。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>For your final project you will be implementing the computer game minesweeper. The game of minesweeper works as follows:</p>
+<ol>
+<li>There is a rectangular grid of tiles</li>
+<li>Hidden under some of the tiles are mines</li>
+<li>Your goal is to mark all the tiles that contain mines and uncover all the tiles that don’t contain mines</li>
+<li>If you uncover a tile that contains a mine you lose the game</li>
+<li>If you uncover a tile that doesn’t contain a mine, it tells you how many mines are hidden in the eight surrounding squares<br>Here are some example boards with all of their contents revealed so that you can get an idea as to what they look like.</li>
+</ol>
+<p>Example 1:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> * * <span class="number">2</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">5</span> * <span class="number">3</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> * * <span class="number">2</span> <span class="number">0</span></span><br><span class="line">  <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>Example 2:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">8</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">7</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">6</span> <span class="number">0</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span></span><br><span class="line"><span class="number">5</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">4</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">3</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="number">0</span> * <span class="number">2</span> * <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> * <span class="number">2</span> * *</span><br><span class="line">  <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><ol>
+<li>Name your executable mine_sweeper.out</li>
+<li>You must submit a makefile named Makefile, along with the necessary .c and .h files needed to compile your program<ol>
+<li>a. You must have at least 2 .c files</li>
+</ol>
+</li>
+<li>Your program should accept the following command line arguments<ol>
+<li>a. The number of rows</li>
+<li>b. The number of columns</li>
+<li>c. The number of mines</li>
+<li>d. Optionally a seed to the random number generator</li>
+<li>e. If no seed is given then you should seed the random number generator with the current time</li>
+<li>f. If not enough command line parameters are given your program should print a usage message and terminate.</li>
+</ol>
+</li>
+<li>You MUST USE A STRUCT to store your board state<br>a. This includes but is not limited to: the size of your board, the number of mines on the board, and the status of each tile (revealed, concealed, marked, etc)<br>During each turn the user will be asked to select a row and column number to take an action on<br>a. You must validate that the tile they select is contained within the board<br>b. If the row and column are not valid, you should repeatedly ask the user for a new row and column until they enter a valid one.<br>After selecting a tile the user will be presented with a list of actions to take based on the tile they selected<ol>
+<li>a. If the tile is concealed, they may reveal it, mark it as a mine, mark it as a possible mine, or cancel their move</li>
+<li>b. If the tile is marked as a mine, they may remove their marker or cancel their move.</li>
+<li>c. If the tile is marked as a possible mine, they may remove their marker or cancel their move</li>
+<li>d. If the tile is already revealed tell the user that the tile is already revealed</li>
+<li>e. If the user chooses to cancel their action or the tile is already revealed the user should be asked for a new tile and a new action to take on it</li>
+</ol>
+</li>
+<li>We will be using the following symbols in your board<ol>
+<li>a. #: a concealed tile</li>
+<li>b. *: a mine</li>
+<li>c. !: a tile marked as a mine</li>
+<li>d. ?: a tile marked as potentially being a mine</li>
+</ol>
+</li>
+<li>Since mines will be randomly distributed around the board it is important that you follow the same algorithm for placing mines as I did. The algorithm is<ol>
+<li>a. For each mine that needs to be placed:</li>
+</ol>
+</li>
+<li>randomly choose a row</li>
+<li>randomly choose a column</li>
+<li>If the board at the row and column does not contain a mine place it there<br>else repeat beginning at sub-step 1<br>b. You should also print out where you place your mines so that you can confirm that they are being placed in the same locations as my program<br>Each tile that does not contain a mine, once revealed, shows the number of mines contained in the 8 tiles surrounding it<br>a. If the user reveals a concealed tile that has 0 mines surrounding it, then not only that tile but all concealed tiles that do not contain mines next to it should also be revealed</li>
+<li>If a new tile is encountered that has 0 mines surrounding it, the process repeats</li>
+<li>Hint, this involves recursion</li>
+<li>The user losers if they reveal a mine</li>
+<li>The user wins if they reveal all non-mine tiles and have marked all tiles that contain a mine</li>
+<li>After the game is over the entire board should be revealed whether the user won or not should be displayed.</li>
+</ol>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">./mine_sweeper.out<span class="number"> 4 </span>5<span class="number"> 2 </span>2</span><br><span class="line">Placing mine at 2, 4</span><br><span class="line">Placing mine at 0, 0</span><br><span class="line">There are<span class="number"> 2 </span>mines left</span><br><span class="line">3 <span class="comment"># # # # #</span></span><br><span class="line">2 <span class="comment"># # # # #</span></span><br><span class="line">1 <span class="comment"># # # # #</span></span><br><span class="line">0 <span class="comment"># # # # #</span></span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 3 </span>0</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 0</span><br><span class="line">There are<span class="number"> 2 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 <span class="comment"># 1 0 0 0</span></span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 0 </span>0</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 2</span><br><span class="line">There are<span class="number"> 1 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 !<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 2 </span>4</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 1</span><br><span class="line">There are<span class="number"> 1 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 ?</span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 !<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 3 </span>4</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 0</span><br><span class="line">There are<span class="number"> 1 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 1</span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 ?</span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 !<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 2 </span>4</span><br><span class="line">Enter Action</span><br><span class="line">0. UnQuestion</span><br><span class="line">1. Cancel</span><br><span class="line">Action: 0</span><br><span class="line">There are<span class="number"> 1 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 1</span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 !<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 0 </span>0</span><br><span class="line">Enter Action</span><br><span class="line">0. UnMark</span><br><span class="line">1. Cancel</span><br><span class="line">Action: 0</span><br><span class="line">There are<span class="number"> 2 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 1</span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 <span class="comment"># 1 0 0 0</span></span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 0 </span>0</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 2</span><br><span class="line">There are<span class="number"> 1 </span>mines left</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 1</span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 <span class="comment">#</span></span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 !<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 1 </span>1</span><br><span class="line">This tile is already revealed.</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 0 </span>2</span><br><span class="line">This tile is already revealed.</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 2 </span>99</span><br><span class="line">Enter row a row between 0-3 and a column between 0-4:<span class="number"> 2 </span>4</span><br><span class="line">Enter Action</span><br><span class="line">0. Reveal</span><br><span class="line">1. Question</span><br><span class="line">2. Mark</span><br><span class="line">3. Cancel</span><br><span class="line">Action: 0</span><br><span class="line">3<span class="number"> 0 </span>0<span class="number"> 0 </span>1 1</span><br><span class="line">2<span class="number"> 0 </span>0<span class="number"> 0 </span>1 *</span><br><span class="line">1<span class="number"> 1 </span>1<span class="number"> 0 </span>1 1</span><br><span class="line">0 *<span class="number"> 1 </span>0<span class="number"> 0 </span>0</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 2 </span>3 4</span><br><span class="line">You Lost :(</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP2129-PageRank.html" rel="next" title="C代写：COMP2129-PageRank">
+                <i class="fa fa-chevron-left"></i> C代写：COMP2129-PageRank
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">3.</span> <span class="nav-text">Example</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
