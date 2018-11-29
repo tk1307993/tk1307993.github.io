@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Data Structure," />
+  <meta name="keywords" content="JavaFX,Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
-<meta name="keywords" content="Algorithm,Data Structure">
+<meta name="description" content="虽然是JavaFX的Project，但是由于start code已经实现了大部分逻辑功能，因此整体难度不大。整个Project采用MVC设计模式，只要遵循这个设计原则，就能完成大部分的code。">
+<meta name="keywords" content="JavaFX,Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS3530 Rat In A Maze Problem">
-<meta property="og:url" content="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
+<meta property="og:title" content="Java代写：CS141-LangtonsAntColony">
+<meta property="og:url" content="https://tk1307993.coding.me/CS141-LangtonsAntColony.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
+<meta property="og:description" content="虽然是JavaFX的Project，但是由于start code已经实现了大部分逻辑功能，因此整体难度不大。整个Project采用MVC设计模式，只要遵循这个设计原则，就能完成大部分的code。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T12:23:13.292Z">
+<meta property="og:updated_time" content="2018-11-29T12:38:21.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS3530 Rat In A Maze Problem">
-<meta name="twitter:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
+<meta name="twitter:title" content="Java代写：CS141-LangtonsAntColony">
+<meta name="twitter:description" content="虽然是JavaFX的Project，但是由于start code已经实现了大部分逻辑功能，因此整体难度不大。整个Project采用MVC设计模式，只要遵循这个设计原则，就能完成大部分的code。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS141-LangtonsAntColony.html"/>
 
 
 
 
 
-  <title>C++代写：CS3530 Rat In A Maze Problem | 留学生CS编程作业代写</title>
+  <title>Java代写：CS141-LangtonsAntColony | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS141-LangtonsAntColony.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS3530 Rat In A Maze Problem</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：CS141-LangtonsAntColony</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T20:19:28+08:00">
-                2018-08-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T20:19:28+08:00">
+                2018-11-29
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Writing/" itemprop="url" rel="index">
-                    <span itemprop="name">Writing</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。
+                  虽然是JavaFX的Project，但是由于start code已经实现了大部分逻辑功能，因此整体难度不大。整个Project采用MVC设计模式，只要遵循这个设计原则，就能完成大部分的code。
               </div>
           
 
@@ -360,28 +360,22 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。当向前搜索到某一步，根据目标函数得到的结果不是最优时，进行回溯，重新选择探索方向。由此得到最优解。<br>回溯法解决问题的基本步骤一般为：</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Download the zip file LangtonAnts.zip. This is a JavaFX project that simulates the running of a popular cellular automata simulation called Langton’s Ant.</p>
+<p>The program works mostly. What you will be doing is adding your own improvements to my program as listed below. This will give you some practice in working with an already written code as this a common task for software engineers.</p>
+<h3 id="What-the-program-does"><a href="#What-the-program-does" class="headerlink" title="What the program does"></a>What the program does</h3><p>When you first run the program, you will see a grid of squares about 20 by 20. Each square is a ‘cell’ in the simulation. A cell has a ‘state’ which is shown as a different color. In the original Langton Ant simulation there were only 2 states but this program can handle from 2 to 10 states. It is currently set to 6 states.</p>
+<p>If you left click on a square, an ‘ant’ will appear on it. The original Langton Ant simulation had one ant but this simulation can have as many ants as you want. But keep in mind the more ants, the slower the simulation will run as it needs to move every ant at each step.</p>
+<p>When the simulation is running, an ant will move to an adjacent square (up, down, left or right). To determine which square to move to, the ant first turns 90 degrees to the left (L) or right (R) according to a rule based on the state the cell is in. For example, if the cell is in state 3, the program will look up state 3 in a list of rules. The list is stored as a string of ‘L’ or ‘R’ characters. The rule in the string is the index that matches the state number. If the character is ‘L’, then the ant turns 90 to the left (adds 90 to it’s angle). If a ‘R’, then the ant turns 90 to the right (subtracts 90 from it’s angle). It then moves to the adjacent cell in the direction the ant is heading.</p>
+<h3 id="What-You-Need-To-Do"><a href="#What-You-Need-To-Do" class="headerlink" title="What You Need To Do"></a>What You Need To Do</h3><p>The following improvements are needed to be done on the program.</p>
 <ol>
-<li>根据给定问题，定义目标函数，并保证该问题至少有一个解</li>
-<li>确定搜索的空间结构，确保回溯法可以遍历整个解空间</li>
-<li>通过深度优先算法的形式，搜素整个解空间，并通过适当剪纸来减少冗余的搜索</li>
+<li>Settings Dialog Pane: Right now the number of rows, the number of states and the rulestring (set of ‘L’ and ‘R’ commands as a string) are all fixed in the code. Write a dialog pane that allows the user to at least change the number of rows(from 2 to 100), number of states(from 2 to 10) and the rulestring. Make sure to check for user input being in the right ranges and print an error message to the window (not the console) if they are not valid. Also, make sure the rulestring has the same length as the number of states and that it only consists of ‘L’ and ‘R’ characters.<br>Then add the settings pane to the MainPane. You might need to make span more than one row or column so use the GridPane add method which allows you to input how many rows/columns to span.</li>
+<li>Draw a more interesting ant Right now the ant is just a black Ellipse. Make it either more interesting or more artistic. An idea would be to use a ImageView instead of using an Ellipse (or a Polygon object that looks more like an ant). At least do this for a cell size of 10 pixels or larger. You can keep the Ellipse for smaller cell sizes as the images get a bit too small to even see at 10 pixels or less.</li>
+<li>Add some more interesting animation Right now all that happens is the ants disappear from one cell and appear on another and cells change colors. Add some interesting animation to the ant’s movement (or possibly to the cell’s changing color). You can use maybe PathTransition to gradually move the ant or FadeTransition to fade out the ant from one cell and fade in the ant to the other. OR you can try some other idea for animation as long as it uses a subclass of Animation and makes sense for the program.</li>
+<li>Add some text to the window to show the number of steps completed The step field is in the MainPane class. You can update this text in the run() method.</li>
+<li>Buttons to speed up or slow down the simulation. Add these to the buttonPanel.</li>
+<li>Add a button to turn off or on the extra animation you added This is to allow the simulation to run faster as animation tends to slow down the processing of each step.</li>
+<li>A better action for the right click on a cell Note that I have created my own custom event called CellClickedEvent for the CellPane class’s use. I needed this to create or delete an ant in the Model class which resides in the MainPane class. So when a mouse clicks on a CellPane on the board, I fire an event (which goes to all panes) so that the MainPane can get the information needed to create or delete an ant.<br>Right now, the right mouse button will delete an ant but I don’t find this action very useful. So come up with something more useful to do with the right mouse button (like turning an ant on the cell 90 degrees or changing the state of the cell underneath).<br>You will need to change the CellPane’s mouse handler and maybe add some extra fields to the CellClickedEvent class that you can set by changing the constructor for this class. It doesn’t necessarily have to be the MainPane that picks up the CellClickedEvent event but it does have to be a class that subclasses a JavaFX Parent class (so Model and Ant wont work here).</li>
 </ol>
-<p>回溯法的一个应用场景便是解决迷宫问题。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this problem you will solve the “Rat in a maze problem”, using Stacks and Queues (Lectures 12-14).<br>The main points we shall be covering are:</p>
-<p>Using Stacks and Queues in an application</p>
-<ol>
-<li>Re-enforcement of the usage and advantages of makefiles / make utility in UNIX/Linux</li>
-<li>Use of abstract data types in C++, and separate compilation</li>
-<li>Use of header files and libraries for Stacks and Queues</li>
-</ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要采用Stack和Queue来解决迷宫问题。</p>
-<p>栈用于存放回溯算法中的搜索路径，由于栈的后进先出特性，可以很容易的实现回溯。</p>
-<p>队列用于存放已经搜索过的最优路径，由于队列的先进先出特性，可以很容易的进行目标函数的计算。</p>
-<p>目标函数：从(0, 0)走到(N, N)的Taxicab geometry，也就是曼哈顿距离。</p>
-<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>题目搜给的迷宫为<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">011101000100000</span></span><br><span class="line"><span class="number">010001100111100</span></span><br><span class="line"><span class="number">011001000000000</span></span><br><span class="line"><span class="number">001000010111111</span></span><br><span class="line"><span class="number">001011000010000</span></span><br><span class="line"><span class="number">001000101010100</span></span><br><span class="line"><span class="number">000010010000100</span></span><br></pre></td></tr></table></figure></p>
-<p>我们需要利用回溯法，从左上角走到右下角</p>
-<p>下面给出程序的回溯搜索算法部分的代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">bool</span> SearchEngine::DoMove(<span class="keyword">int</span> movePosition) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">switch</span> (movePosition) &#123;</span><br><span class="line">    <span class="keyword">case</span> MOVE_LEFT:  </span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;      </span><br><span class="line">      SearchEngine::DoMove(MOVE_RIGHT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_UP:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_DOWN);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_RIGHT:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_LEFT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_DOWN:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_UP);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -398,9 +392,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/JavaFX/" rel="tag"># JavaFX</a>
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -413,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP435-Multimedia-Technologies-TME5.html" rel="next" title="Written代写：COMP435 Multimedia Technologies TME5">
-                <i class="fa fa-chevron-left"></i> Written代写：COMP435 Multimedia Technologies TME5
+              <a href="/CS422-DevelopingUserInterfaces.html" rel="next" title="UI代写：CS422-DevelopingUserInterfaces">
+                <i class="fa fa-chevron-left"></i> UI代写：CS422-DevelopingUserInterfaces
               </a>
             
           </div>
@@ -422,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP1001-MoreTextProcessing.html" rel="prev" title="Python代写：COMP1001-MoreTextProcessing">
-                Python代写：COMP1001-MoreTextProcessing <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number"></span> <span class="nav-text">Tips</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-the-program-does"><span class="nav-number">2.</span> <span class="nav-text">What the program does</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-You-Need-To-Do"><span class="nav-number">3.</span> <span class="nav-text">What You Need To Do</span></a></li></ol></div>
             
 
           </div>
