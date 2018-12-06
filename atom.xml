@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-12-02T04:15:56.393Z</updated>
+  <updated>2018-12-06T12:46:38.812Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CIS2500-Rogue-like</title>
+    <link href="https://tk1307993.coding.me/CIS2500-Rogue-like.html"/>
+    <id>https://tk1307993.coding.me/CIS2500-Rogue-like.html</id>
+    <published>2018-12-06T12:42:53.000Z</published>
+    <updated>2018-12-06T12:46:38.812Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You will implement the basic features of a “Rogue-like” computer game. Your program will accept an input file describing the layout of a single level with 6 rooms in it, and your program should draw all six rooms in a single window. Your program will also have a hero that the user can control, and move around the level.</p><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>When started, your program should accept one command line argument (using argc and argv). The command line argument is a path to the level file. This file is a description of the level to be drawn.</p><p>Your program should start by opening the file, parsing the room descriptions line by line, and storing the data in an appropriate struct. Once done, close the file.</p><p>The program should then initialize ncurses, draw the level to the screen, and enter a “game loop”. While in the game loop, your program should accept input from the user to manipulate the world and update the screen appropriately. If the user presses the quit key, your program should exit the game loop, clean up ncurses, print the player’s amount of gold and return.<br>While in the game loop, the user is able to move the hero around the level. If the hero steps on a door, they should be teleported. Stepping on a door in room 1, should teleport the hero to a door in room 2. Stepping on a door in room 2, should teleport the hero to a door in room 3. Room 4 doors teleport the hero to room 5 doors. Room 5 doors teleport the hero to room 6 doors. And room 6 doors teleport the hero to room 1 doors. See Figure 1 for room numbering.</p><h3 id="Additional-Notes"><a href="#Additional-Notes" class="headerlink" title="Additional Notes"></a>Additional Notes</h3><ol><li>The hero should be unable to step on walls, and should therefore be unable to walk outside of rooms.</li><li>The hero should be unable to walk on weak monsters or strong monsters.</li><li>If the hero steps on a small gold or big gold, the value of that gold piece should be added to the hero’s gold amount. The hero starts with 0 gold.</li><li>If the hero steps on a collectable, it should be removed from the screen. The following elements are collectable: Small gold, Big gold, Common weapon, Rare weapon, Equipment, Potion.</li><li>If the hero steps on stairs going up or down, the program should execute the normal quitting procedure.</li></ol><h3 id="Level-File"><a href="#Level-File" class="headerlink" title="Level File"></a>Level File</h3><ul><li>The input file will contain 6 rooms. You are expected to draw the rooms 3 across and 2 down. No room will be larger than 18 rows X 23 columns.</li><li>Each line of the file will consist of a space-delimited line of text.</li><li>Each line of the file will be less than 150 characters.</li><li>No room will have more than 10 elements (excluding room dimensions, and doors).</li><li>Lines will always have a newline at the end.</li><li>The first element of the input string will ALWAYS be the room dimensions given as rowsXcolumns (i.e. 10X12). The dimensions given are the dimensions of the floor of the room. The walls must surround the floor.</li><li>Following the room dimensions are room elements. These elements can be in any order.</li><li>Door elements will begin with a lowercase d followed by a letter representing the wall that the door is in. For example, de3 is a door in the east wall in position three from the north edge (where the floor corner is position 0, and walls start at 1). There will never be more than one door per wall.</li><li>All other (not room dimension or door) elements will begin with a lowercase letter followed by coordinates. For example: w6,8 means there is a weapon at row 6 column 8 where the northwest floor corner of the room is 0,0.</li><li>For this assignment, you can assume the file inputted will follow this specification as closely as possible.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>Python代写：CSC521-MonteCarloSimulate</title>
@@ -173,28 +195,6 @@
   </entry>
   
   <entry>
-    <title>C代写：CS104-WordCount</title>
-    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
-    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
-    <published>2018-11-14T12:19:34.000Z</published>
-    <updated>2018-11-15T14:25:51.625Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java代写：ImageProcessing4</title>
     <link href="https://tk1307993.coding.me/Java-ImageProcessing4.html"/>
     <id>https://tk1307993.coding.me/Java-ImageProcessing4.html</id>
@@ -210,6 +210,28 @@
     </summary>
     
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C代写：CS104-WordCount</title>
+    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
+    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
+    <published>2018-11-14T12:19:34.000Z</published>
+    <updated>2018-11-15T14:25:51.625Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
       <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
@@ -430,30 +452,6 @@
     </summary>
     
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="MangoDB" scheme="https://tk1307993.coding.me/tags/MangoDB/"/>
-    
-      <category term="NodeJS" scheme="https://tk1307993.coding.me/tags/NodeJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NodeJS代写：CSC309-SharingEconomy</title>
-    <link href="https://tk1307993.coding.me/CSC309-SharingEconomy.html"/>
-    <id>https://tk1307993.coding.me/CSC309-SharingEconomy.html</id>
-    <published>2018-10-14T10:18:14.000Z</published>
-    <updated>2018-10-14T10:29:23.889Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>In this project, (i) first, you specify what you want to implement (e.g., a car rental platform, a room sharing platform, etc.), (ii) then you design the details of your application (e.g., the software web-page mock-ups, project task allocation among team members) and (iii) finally you specify an architecture for your project, plan your tests, and implement it ensuring it will scale and will be secure. Submit Phase (i) and (ii) as part 1 and Phase (iii) as Part 2. Submit a complete project report with Part 2.</p><p>Although there is no specific project topic here, you have to deliver a list of common features no matter what topic you choose. We provide two sample projects in the appendix. These are provided to inspire you. That is, you will not receive the creativity mark, if you choose any one of these two projects. Also, these projects are sample only, use your imagination to create an application that users can easily use.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Your application should be built using NodeJS or any framework depended on NodeJS as backend programming language and you should try to host on any hosting server of your choice (e.g., Heroku provides free hosting). Follow this tutorial to get yourself familiar with Heroku.</p><p>Your project must include the following features:</p><ol><li>Profiling: You must design and implement a set of features representing user profiles. Using the profiling features, users can update their personal information, and can see the profile of other users.</li><li>User Authentication and Authorization: Your system must authenticate users based on passwords. Your application also needs to support at least one 3rd party authentication such as Google/Facebook/Github sign-in, or two-factor authentication. Users have different roles in your system, and you must authorize them when they are conducting certain tasks. For instance, a normal user cannot change the password of other users, or update someone else’s personal information.</li><li>Social Network: In any sharing economy platform, we will have a social network. In AirBNB, hosts and guests form a social network; In Uber, drivers and passengers form a social network. In such networks, users can interact with one another: can review each other, provide references, and other users make decision based on those reviews and interactions.</li><li>Rating and Commenting: When users use a shared resource provided by another user, they must be able to rate and comment on that offering. Using this commenting and rating features, others can decide whether to use that resource or not. For example, on AirBNB, a guest can review the host and the place. Others will read reviews and decide whether to rent that place or not.</li><li>Search and Recommendation System: Y our system should provide the basic functionalities to search the shared economy. Using this feature, users should be able to search and discover what they want to use. It is really important that you use a smart recommendation system that ranks the matching entries according to user’s query and personal data. Moreover, using the same recommendation system, the system should show similar things when a user is browsing a certain item. For instance, when one is looking at a room on AirBNB, the system lists similar properties on the same page.</li><li>Admin: You should provide basic admin functionalities, including but not limited to changing passwords, updating and deleting information, and initializing/repopulating the database.</li><li>Note that you will get up to extra 10 points for any significant additional features.</li></ol><p>All feature functionality should have proper test cases with good comments in code.</p><p>You should take care of at least two well known security vulnerability, using a framework is fine. In your project report, you should document how this requirement is meet.</p><p>Once you have finished the first version of your project, measure the performance. Apply performance improvement techniques and show how much performance you have improved.</p>]]></content>
-    
-    <summary type="html">
-    
-      基于Web的Sharing Economy System，不过后端需要用NodeJS，数据库要用MongoDB，前端自然也是JavaScript，算是比较少见的组合。
-    
-    </summary>
-    
-      <category term="NodeJS" scheme="https://tk1307993.coding.me/categories/NodeJS/"/>
     
     
       <category term="MangoDB" scheme="https://tk1307993.coding.me/tags/MangoDB/"/>
