@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-12-06T12:46:38.812Z</updated>
+  <updated>2018-12-08T06:10:25.457Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CIS2500-Rogue-like-Part2</title>
+    <link href="https://tk1307993.coding.me/CIS2500-Rogue-like-Part2.html"/>
+    <id>https://tk1307993.coding.me/CIS2500-Rogue-like-Part2.html</id>
+    <published>2018-12-08T06:07:11.000Z</published>
+    <updated>2018-12-08T06:10:25.457Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You will implement additional features to a simple “Rogue-like” computer game that was described in the CIS 2500: Assignment 2 Specification (further referred to as A2 Spec). You are encouraged to reuse your code from Assignment 2, but don’t be afraid to rewrite portions of it.</p><p>It is assumed that the program described by this specification also follows the A2 Spec. In the event a requirement described in this document directly conflicts with another described in the A2 Spec, the requirement in this document is to be followed.</p><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Your program must implement all features described in the A2 Spec, in addition to the following:</p><ol><li>Status bar and notifications</li><li>Hallways</li><li>Inventory, item stats, and item use</li><li>Player and enemy stats</li><li>Combat</li></ol><p>Refer to the following sections for the definition of each feature. As previously stated: In the event a requirement described in this document directly conflicts with another described in the A2 Spec, the requirement in this document is to be followed.</p><h3 id="Status-bar-and-notifications"><a href="#Status-bar-and-notifications" class="headerlink" title="Status bar and notifications"></a>Status bar and notifications</h3><p>During level loading, your program should reserve a blank line at the top and bottom of the screen. The program will use the top line for notifications, and the bottom line as a status bar.</p><p>The notification bar will be responsible for printing messages for the user. A message should be printed in this bar after an event occurs. Messages should automatically be cleared every time the player presses a key. The following tables document events, when they occur, and what message should be displayed.</p><p>The status bar will be responsible for displaying the hero’s health, potion count, attack, and inventory count. This information should be displayed at all times, and get updated each time the player presses a key. It should be formatted as follows:<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Health: <span class="string">[A]</span>, Potions: <span class="string">[B]</span>, Attack: <span class="string">[C]</span>, Inv: <span class="string">[D]</span>/<span class="number">5</span></span><br></pre></td></tr></table></figure></p><p>Where:<br>[A] is the hero’s current health</p><p>[B] is the hero’s current potion count</p><p>[C] is the hero’s current attack rating</p><p>[D] is the number of items in the hero’s inventory, excluding potions. The value has a maximum of 5.</p><h3 id="Hallways"><a href="#Hallways" class="headerlink" title="Hallways"></a>Hallways</h3><p>Your program should no longer teleport the hero when they step on a door. Instead, the hero will open the door, triggering a Door event, and be able to use Hallways to traverse the level.<br>During game initialization, before, during, or after your program draws rooms to the screen it should also draw hallways. Hallways, denoted by the symbol #, can be walked on by the hero. They should be drawn extending from doors, and should be generated in a manner that ensures every room is accessible by the hero through at least one path. Every door must have a hallway.<br>Notes:</p><ul><li>You can wrap hallways around the screen (similar to pacman mazes), if you want.</li><li>Hallways can connect to other hallways.</li><li>Hallways can have deadends, as long as there is some path that leads to every room.</li><li>It’s easiest to map each door to its closest adjacent room.</li><li>You can assume every room will have at least one door. You cannot assume the location of that door.</li><li>Don’t forget to leave room for hallways when you draw your rooms, including the top and bottom edges of the terminal.</li></ul><h3 id="Inventory-item-stats-and-item-use"><a href="#Inventory-item-stats-and-item-use" class="headerlink" title="Inventory, item stats, and item use"></a>Inventory, item stats, and item use</h3><p>Your program should keep track of items that the hero picks up during the game, and print out the players inventory at the end of the game underneath their gold. This print out should include the items stat. The stat should be randomly generated when parsing the level file, and fall within the specified range. The following is a list of items that can be added to the hero’s inventory.</p><p>The hero can have a maximum of 5 items in their inventory. In a case where a hero has 5 items in their inventory, and steps on an item that can be added to their inventory, a BagFull event should occur, and the item should be removed from the screen without it being added to the hero’s inventory.</p><p>Potions and gold can always be picked up by the hero, and should be added to the potion count and gold count respectively, instead of the inventory. When the game starts, the hero should start with 1 potion, and 0 gold.</p><p>Your program should now allow the player to use potions. Figure 1 describes the activity that should occur when the p key is pressed.</p><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Aquator: No cycles. Monster does <span class="built_in">not</span> <span class="built_in">move</span>.</span><br><span class="line">Bat: <span class="number">1</span> cycle. <span class="built_in">Move</span> <span class="built_in">in</span> a <span class="built_in">random</span> <span class="built_in">direction</span>.</span><br><span class="line">Snake: <span class="number">4</span> cycles. <span class="number">1</span>: <span class="built_in">Move</span> right. <span class="number">2</span>: <span class="built_in">Move</span> right. <span class="number">3</span>: <span class="built_in">Move</span> left. <span class="number">4</span>: <span class="built_in">Move</span> left.</span><br><span class="line">Zombie: <span class="number">2</span> cycles. <span class="number">1</span>: <span class="built_in">Move</span> up. <span class="number">2</span>: <span class="built_in">Move</span> down.</span><br><span class="line">Troll: <span class="number">4</span> cycles. <span class="number">1</span>: <span class="built_in">Move</span> up. <span class="number">2</span>: <span class="built_in">Move</span> right. <span class="number">3</span>: <span class="built_in">Move</span> down. <span class="number">4</span>: <span class="built_in">Move</span> left.</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      代写一个Rogue-like的游戏，是C代写：CIS2500 Rogue-like的Part3部分，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>C代写：CIS2500-Rogue-like</title>
@@ -433,30 +455,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CS214-SinglyLinkedList</title>
-    <link href="https://tk1307993.coding.me/CS214-SinglyLinkedList.html"/>
-    <id>https://tk1307993.coding.me/CS214-SinglyLinkedList.html</id>
-    <published>2018-10-19T13:04:54.000Z</published>
-    <updated>2018-10-19T13:06:52.192Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This practical will once again test your knowledge on linked list, with an emphasize on computational complexity.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Create a singly linked list for storing positive integers. Each node will store one integer.</p><p>For example, 12-&gt;3-&gt;5-&gt;777-&gt;111 is such a list. There are hive nodes in this list. 12 is the head node and 111 is the tail node. (111 points to NULL.)</p><p>Your linked list starts empty. It should support the following three operations:</p><ul><li>Add x to tail: Create a new node whose data field contains x. Append this node at the end of the list.<br>For example, for the list 12-&gt;3-&gt;5-&gt;777-&gt;111, if we add 2 to the tail, then the list becomes 12-&gt;3-&gt;5-&gt;777-&gt;111-&gt;2.</li><li>Remove from head: If the list is empty, then do nothing. Otherwise, remove the head node from the list.<br>For example, for the list 12-&gt;3-&gt;5-&gt;777-&gt;111, if we remove a node from its head, then it becomes 3-&gt;5-&gt;777-&gt;111.</li><li>Find middle node: Find the middle node(s) from the list and returns the corresponding data field(s).<br>If the number of nodes is odd, then the middle node is just the one in the middle of the list. For the list 12-&gt;3-&gt;5-&gt;777-&gt;111, there are ve nodes, the middle node’s data field contains 5.<br>If the number of nodes is even, then the middle nodes are the two nodes in the middle of the list. For the list 12-&gt;3-&gt;5-&gt;777-&gt;111-&gt;2, there are six nodes, the middle nodes’ data fields contain 5 and 777.<br>If the number of nodes is zero, then return 0.</li></ul><p>Your implementation should satisfy that all the above three operations take O(1) (constant) time.</p><p>Create a main function that takes in one line. The line contains a list of operations. An operation is either of the form “Aint” (e.g., A123, A23, A111) or of the form “R”. A123 means add 123 to the tail. R means remove a node from head. Your output should be the status of the list after all the operations (use the form int1-&gt;int2-&gt;int3 if there are multiple nodes in the list; use the form int1 if there is only one node in the list; output “empty” if the list is empty). Your output should be followed by the middle value(s).</p><p>Please separate your results by space.</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A888 A111 R A777 A5 A3</span><br><span class="line"><span class="keyword">Sample</span> output: 111-&gt;777-&gt;5-&gt;3 777 5</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A888 A111 R A777 A5 A3 <span class="built_in">R</span></span><br><span class="line"><span class="keyword">Sample</span> output: 777-&gt;5-&gt;3 5</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: R A777</span><br><span class="line"><span class="keyword">Sample</span> output: 777 777</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: A777 <span class="built_in">R</span></span><br><span class="line"><span class="keyword">Sample</span> output: empty 0</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      实现一个单链表，也就是Singly Linked List，算是基础的数据结构了。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="MangoDB" scheme="https://tk1307993.coding.me/tags/MangoDB/"/>
-    
-      <category term="NodeJS" scheme="https://tk1307993.coding.me/tags/NodeJS/"/>
     
   </entry>
   
