@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Artificial Intelligence," />
+  <meta name="keywords" content="Game," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Pathfinding是在平面上两点之间找出路径的问题。">
-<meta name="keywords" content="Algorithm,Artificial Intelligence">
+<meta name="description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
+<meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：COMP3007 Pathfinding">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP3007-Pathfinding.html">
+<meta property="og:title" content="C#代写：INM378-Digital-Signal-Processing">
+<meta property="og:url" content="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta property="og:description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-01T02:57:44.518Z">
+<meta property="og:updated_time" content="2018-12-11T12:24:45.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：COMP3007 Pathfinding">
-<meta name="twitter:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta name="twitter:title" content="C#代写：INM378-Digital-Signal-Processing">
+<meta name="twitter:description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP3007-Pathfinding.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html"/>
 
 
 
 
 
-  <title>Java代写：COMP3007 Pathfinding | 留学生CS编程作业代写</title>
+  <title>C#代写：INM378-Digital-Signal-Processing | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3007-Pathfinding.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：COMP3007 Pathfinding</h2>
+          <h2 class="post-title" itemprop="name headline">C#代写：INM378-Digital-Signal-Processing</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-01T10:53:10+08:00">
-                2018-09-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T20:22:46+08:00">
+                2018-12-11
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Pathfinding是在平面上两点之间找出路径的问题。
+                  这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。
               </div>
           
 
@@ -360,35 +360,24 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Pathfinding is the problem of finding a path between two points on a plane. It is a fundamental task in robotics and AI. Perhaps the most obvious usage of pathfnding is in computer games, when an object is instructed to move from its current position to a goal position, while avoiding obstacles (e.g., walls, enemy fire) along the way.</p>
-<p>Pathfinding in commercial games is frequently accomplished using search algorithms. We consider a simplified version in this assignment. The following shows a 2D map drawn using ASCII characters:</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">7</span> <span class="number">8</span> X</span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">8</span> <span class="number">8</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">6</span> <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">6</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">7</span> <span class="number">7</span> <span class="number">1</span> X X X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">8</span> <span class="number">8</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line">X <span class="number">8</span> <span class="number">7</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>Given a start position and an end position on the map, our aim is to find a path from the start position to the end position. The character “X” denotes an obstacle that cannot be traversed by a path, while the digits represent the elevation at the respective positions.</p>
-<p>Any position is indicated by the coordinates (i, j), where i is the row number (ordered top to bottom) and j is the column number (ordered left to right). For example, the top left position is (1, 1), the bottom right is (10, 10), while the position with elevation “3” is (4, 9). Given start position (1, 1) and end position (10, 10), a possible path is</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">* * * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">7</span> <span class="number">8</span> X</span><br><span class="line"><span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">8</span> <span class="number">8</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> * * * * * * * <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> <span class="number">1</span> * <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> * * <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">6</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> X <span class="number">1</span> * * *</span><br><span class="line"><span class="number">7</span> <span class="number">7</span> <span class="number">1</span> X X X <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br><span class="line"><span class="number">8</span> <span class="number">8</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br><span class="line">X <span class="number">8</span> <span class="number">7</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> *</span><br></pre></td></tr></table></figure>
-<p>Note that we use 4-connectedness for paths, which means any two points on the path are only connected if they are vertically or horizontally (but not diagonally!) adjacent.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Following the lecture notes, we formulate the problem as follows:</p>
+        <h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>This coursework has a games stream and a data stream, which have some common and some specific tasks.</p>
+<p>For the common task, implement a filter either in FMOD with C++ or C# (games stream) or in Matlab (data stream).</p>
+<p>For the Data part, choose a dataset and apply prediction and classification using Fourier analysis, filtering and correlation.</p>
+<p>For the Games part, implement the sound and music elements listed below your coursework for INM379 or INM376 with C++ or a new demo built using XNA and C# with the stub provided on Moodle.</p>
 <ol>
-<li>States: Any obstacle-free position (i; j) on the map.</li>
-<li>Initial state: A position (i0, j0) given by the user.</li>
-<li>Actions: Since we consider 4-connectedness, only four actions are available: Up, down, left and right (your program must expand each node in this order). Available actions for positions adjacent to the map boundary or obstacles are reduced accordingly.</li>
-<li>Transition model: Moving left moves the current position to the left, etc.</li>
-<li>Goal test: Check if the current state is the end position (i, j) given by the user.</li>
-<li>Path cost: Given a map M and a path P = {(i0, j0), (i1, j1), … ,(iN, jN)}, the cost of the path is calculated. In words, the cost of a path is the sum of the costs between two adjacent points of the path, and the cost between adjacent points is 1 plus the difference between the elevation of the two points if we climb “uphill”, or simply 1 if we stay “level” or slide “downhill”.</li>
+<li>Common: DSP, controllable filter. Program a controllable filter based on a delay line If you do the Games track, implement the filter for real time use with a circular buffer in an FMOD custom DSP. If you do the Data track, implement a filter function offline use with filter modulated by a sine function at 2Hz.</li>
+<li>a. Games: 3D Sound: Place a sound source in a 3D world where it can be moved around using the mouse and/or keyboard. Make sure that the sound in the 3D world is adapted with distance roll-off including filtering, occlusion, and Doppler effect.<br>Implement dynamic filter control for an object of your choice, e.g. for the engine of your car, based on the speed.</li>
+<li>b. Data: Character recognition: Program a character classifier using 2d-correlation to classify digits.<br>Time series prediction: Use Fourier analysis for implementing a time series predictor.</li>
+<li>c. Games 2 (for pairs): 3D Occlusion: Implement a 3D objects in your game/demo, that you register with the FMOD framework to achieve an occlusion effect.<br>Flanger: Implement a Flanger effect (time-varying delay) as an FMOD custom DSP effect, that apply to a sound source in your game.</li>
+<li>d. Theory (for pairs): Frequency domain filtering: Implement the filter from task 1 in the frequency domain. Use the SFFT and compare the results with task 1. Explain what the advantages and disadvantages of processing in the frequency and the time domain are.</li>
+<li>Give a presentation of your program. This serves to communicate your work to your fellow students and the lecturers, to verify that you did write the program yourself, and to give you feedback. If you do not give a presentation, you will receive 0 marks for the whole coursework.</li>
 </ol>
-<p>This means shorter paths which avoid climbing cost less. As an example, the cost in the path in the previous page is 25. What is the optimal (cheapest) path?</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>Solve pathfinding using Breadth-First Search (BFS), Uniform-Cost Search (UCS) and ASearch. You should base your program on the pseudocode GRAPH-SEARCH in the lecture slides, and carefully think about the appropriate data structures to use. For A Search, you must implement two heuristics:</p>
-<ol>
-<li>Euclidean distance between current position and end position.</li>
-<li>Manhattan distance between current position and end position.</li>
-</ol>
-<p>For the map in Page 1 with start position (1, 1) and end position (10, 10), your program should help you answer these questions:</p>
-<ol>
-<li>Are the paths returned by the three methods different?</li>
-<li>What about the optimality of the returned paths?</li>
-<li>Which method is the most computationally and memory efficient?</li>
-<li>Do the two heuristics for A* Search provide different solutions?</li>
-<li>Does checking for repeated states matter in this problem?</li>
+<p>Report: Write a short report that explains how you solved the tasks, where to find the solutions in your submitted code and any specific points you would like me to pay attention to (no more than 600 words)</p>
+<h3 id="Background-Information-and-Support"><a href="#Background-Information-and-Support" class="headerlink" title="Background Information and Support"></a>Background Information and Support</h3><p>For every step of the coursework, relevant information, examples and data will be provided in the lectures and tutorials.</p>
+<h3 id="Coding-Style"><a href="#Coding-Style" class="headerlink" title="Coding Style"></a>Coding Style</h3><ol>
+<li>Your code must be properly indented.</li>
+<li>Every method in your code must be commented w.r.t. its purpose, its parameters and its return values.</li>
+<li>Comments and style will be marked together with the code.</li>
 </ol>
 
       
@@ -407,9 +396,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
+            <a href="/tags/Game/" rel="tag"># Game</a>
           
         </div>
       
@@ -422,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS207-HotelBookingApplication.html" rel="next" title="Java代写：CS207 Hotel Booking Application">
-                <i class="fa fa-chevron-left"></i> Java代写：CS207 Hotel Booking Application
+              <a href="/CIS2500-Rogue-like-Part2.html" rel="next" title="C代写：CIS2500-Rogue-like-Part2">
+                <i class="fa fa-chevron-left"></i> C代写：CIS2500-Rogue-like-Part2
               </a>
             
           </div>
@@ -431,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ECS165A-NormalForm.html" rel="prev" title="Database代写：ECS165A-NormalForm">
-                Database代写：ECS165A-NormalForm <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task"><span class="nav-number">1.</span> <span class="nav-text">Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-Information-and-Support"><span class="nav-number">2.</span> <span class="nav-text">Background Information and Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Style"><span class="nav-number">3.</span> <span class="nav-text">Coding Style</span></a></li></ol></div>
             
 
           </div>
