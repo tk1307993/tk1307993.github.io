@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。">
+<meta name="description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CIS2500-Rogue-like">
-<meta property="og:url" content="https://tk1307993.coding.me/CIS2500-Rogue-like.html">
+<meta property="og:title" content="Python代写：CMPT120-Mario">
+<meta property="og:url" content="https://tk1307993.coding.me/CMPT120-Mario.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。">
+<meta property="og:description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T12:46:38.812Z">
+<meta property="og:updated_time" content="2018-12-14T02:12:59.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CIS2500-Rogue-like">
-<meta name="twitter:description" content="代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。">
+<meta name="twitter:title" content="Python代写：CMPT120-Mario">
+<meta name="twitter:description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CIS2500-Rogue-like.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CMPT120-Mario.html"/>
 
 
 
 
 
-  <title>C代写：CIS2500-Rogue-like | 留学生CS编程作业代写</title>
+  <title>Python代写：CMPT120-Mario | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CIS2500-Rogue-like.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CMPT120-Mario.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CIS2500-Rogue-like</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：CMPT120-Mario</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T20:42:53+08:00">
-                2018-12-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-14T10:10:48+08:00">
+                2018-12-14
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。
+                  代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。
               </div>
           
 
@@ -360,29 +360,27 @@
       
 
       
-        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You will implement the basic features of a “Rogue-like” computer game. Your program will accept an input file describing the layout of a single level with 6 rooms in it, and your program should draw all six rooms in a single window. Your program will also have a hero that the user can control, and move around the level.</p>
-<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>When started, your program should accept one command line argument (using argc and argv). The command line argument is a path to the level file. This file is a description of the level to be drawn.</p>
-<p>Your program should start by opening the file, parsing the room descriptions line by line, and storing the data in an appropriate struct. Once done, close the file.</p>
-<p>The program should then initialize ncurses, draw the level to the screen, and enter a “game loop”. While in the game loop, your program should accept input from the user to manipulate the world and update the screen appropriately. If the user presses the quit key, your program should exit the game loop, clean up ncurses, print the player’s amount of gold and return.<br>While in the game loop, the user is able to move the hero around the level. If the hero steps on a door, they should be teleported. Stepping on a door in room 1, should teleport the hero to a door in room 2. Stepping on a door in room 2, should teleport the hero to a door in room 3. Room 4 doors teleport the hero to room 5 doors. Room 5 doors teleport the hero to room 6 doors. And room 6 doors teleport the hero to room 1 doors. See Figure 1 for room numbering.</p>
-<h3 id="Additional-Notes"><a href="#Additional-Notes" class="headerlink" title="Additional Notes"></a>Additional Notes</h3><ol>
-<li>The hero should be unable to step on walls, and should therefore be unable to walk outside of rooms.</li>
-<li>The hero should be unable to walk on weak monsters or strong monsters.</li>
-<li>If the hero steps on a small gold or big gold, the value of that gold piece should be added to the hero’s gold amount. The hero starts with 0 gold.</li>
-<li>If the hero steps on a collectable, it should be removed from the screen. The following elements are collectable: Small gold, Big gold, Common weapon, Rare weapon, Equipment, Potion.</li>
-<li>If the hero steps on stairs going up or down, the program should execute the normal quitting procedure.</li>
+        <h3 id="Problam-Statement"><a href="#Problam-Statement" class="headerlink" title="Problam Statement"></a>Problam Statement</h3><p>Over our next two assignments, we shall build our own version of the game Mario. Well, a simple TUI version. TUI means Text-based User Interface or Textual User Interface as opposed to GUI, which stands for Graphical User Interface.</p>
+<p>The goal of our Assignment 4 is to set up our game, i.e., set up the maze Mario is meant to travel through. This maze will contain obstacles, Mario himself and an exit gate. The goal of our Assignment 5 will be to allow the user to play our game by moving Mario around the maze.</p>
+<p>Let’s start with Assignment 4, shall we. In order to develop our Assignment 4 in an incremental fashion, I propose the following scheme: considering the algorithm below, let’s develop, test and debug each of its steps, one at a time, and move on to the next step only when the step we have been working on is completed. Here is our algorithm:</p>
+<ol>
+<li>Welcome the user.</li>
+<li>Create a maze with a width of mazeWidth and a height of mazeHeight.<ol>
+<li>a. Assign the value 15 to the variable mazeWidth and the value 12 to the variable mazeHeight. Note that the values of these two variables will change, so let’s make sure we develop our program such that modifying the values of these variables can be done easily.</li>
+<li>b. Originally, each cell must contain this string “ . “. Note that the content of our cells will change, so let’s make sure we develop our program such that we can easily change the content of our cells.<br>Display a boundary around our maze.</li>
+<li>a. Originally, we must use the “-“ symbol to create the top and the bottom parts of the boundary around our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
+<li>b. Originally, we must use the “|” symbol to create the side sections of the boundary around our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol. The side sections of the boundary may be tricky to construct! Suggestion: One way to build them is to create a string for each of the row of our maze. This string will contain blank spaces, a number (see 4. b. below), 2 symbols indicating a side section of the boundary and the actual row of our maze.</li>
+<li>c. This boundary is not part of our maze, it is outside our maze.</li>
 </ol>
-<h3 id="Level-File"><a href="#Level-File" class="headerlink" title="Level File"></a>Level File</h3><ul>
-<li>The input file will contain 6 rooms. You are expected to draw the rooms 3 across and 2 down. No room will be larger than 18 rows X 23 columns.</li>
-<li>Each line of the file will consist of a space-delimited line of text.</li>
-<li>Each line of the file will be less than 150 characters.</li>
-<li>No room will have more than 10 elements (excluding room dimensions, and doors).</li>
-<li>Lines will always have a newline at the end.</li>
-<li>The first element of the input string will ALWAYS be the room dimensions given as rowsXcolumns (i.e. 10X12). The dimensions given are the dimensions of the floor of the room. The walls must surround the floor.</li>
-<li>Following the room dimensions are room elements. These elements can be in any order.</li>
-<li>Door elements will begin with a lowercase d followed by a letter representing the wall that the door is in. For example, de3 is a door in the east wall in position three from the north edge (where the floor corner is position 0, and walls start at 1). There will never be more than one door per wall.</li>
-<li>All other (not room dimension or door) elements will begin with a lowercase letter followed by coordinates. For example: w6,8 means there is a weapon at row 6 column 8 where the northwest floor corner of the room is 0,0.</li>
-<li>For this assignment, you can assume the file inputted will follow this specification as closely as possible.</li>
-</ul>
+</li>
+<li>At the top and left of the boundary, display numbers. These numbers will help the user to select a cell in our maze.<br>a. To produce the top row of numbers, we can build and print a string that will be made of blank spaces and numbers.<br>b. To produce the left-side column of numbers may be tricky! See the suggestion described in 3. b. above.<br>Add aNumOfRewardingObstacles of rewarding obstacles to our maze.<br>a. Assign the value 20 to aNumOfRewardingObstacles. Note that this number will change, so let’s make sure we develop our program such that we can easily change this number.<br>b. Originally, we must use the symbol “R” to indicate that a cell of our maze contains a rewarding obstacle. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.<br>c. All these obstacles must be randomly located in our maze.<br>d. We cannot position more than 1 obstacle (of any types) in a cell.</li>
+<li>Add aNumOfExplodingObstacles of exploding obstacles to our maze.<br>a. Assign the value 20 to aNumOfExplodingObstacles. Note that this number will change, so let’s make sure we develop our program such that we can easily change this number.<br>b. Originally, we must use the symbol “E” to indicate that a cell of our maze contains an exploding obstacle. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.<br>c. All these obstacles must be randomly located in our maze.<br>d. We cannot position more than 1 obstacle (of any types) in a cell.</li>
+<li>Ask the user for Mario’s initial location in the maze.<br>a. Let’s make sure that the user has entered a location that makes sense:<br>i. The user has entered 2 integers separated by a blank space. The user has<br>1) not simply pressed the Enter key, or<br>2) entered a string, or<br>3) entered 1 integer or 1 float, or<br>4) entered 2 numbers of which one or both are floats, or<br>5) entered more than 2 integers or floats.<br>ii. The row number entered by the user does not exceed the maximum number of rows of our maze.<br>iii. The column number entered by the user does not exceed the maximum number of columns of our maze.<br>iv. Finally, the user has entered the row number and column number of an empty cell.<br>b. Add Mario at that location. Originally, we must use the symbol “M” to indicate the location of Mario in our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
+<li>The Sample Run 1, posted on our course web site below the description of this assignment, illustrates how the program responds to the user when s/he has entered invalid data described in the step (7.) above.<br>Based on Mario’s location, our program is to place the exit gate on the top or bottom part of our boundary according to the following rule:<br>a. Imagine we divide our maze into 4 quadrants: top right, top left, bottom right, bottom left.<br>i. If the user has placed Mario in the top right quadrant, then our program positions the exit gate on the bottom section of the boundary to the left of the median (imaginary vertical line dividing our maze in two).<br>ii. If the user has placed Mario in the top left quadrant, then our program positions the exit gate on the bottom section of the boundary to the right of the median.<br>iii. If the user has placed Mario in the bottom right quadrant, then our program positions the exit gate on the top section of the boundary to the left of the median.<br>iv. If the user has placed Mario in the bottom left quadrant, then our program positions the exit gate on the top section of the boundary to the right of the median.<br>b. Originally, we must use the symbol “=” to indicate the exit gate on the top or bottom part of the boundary of our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
+<li>The code we create for Assignment 4 must produce exactly the same output as the one shown in the images included above and the Sample Runs. Of course, the position of our obstacles (both types), of Mario and of the exit gate will be different but everything else must be the same.</li>
+</ol>
+<h3 id="Caution"><a href="#Caution" class="headerlink" title="Caution"></a>Caution</h3><p>Remember that indices of list elements start at 0, while the numbers displayed above and to the left of our maze start at 1. Therefore, when the user selects the cell in which Mario is to be placed on our maze, once we read these two numbers (the row and column numbers), we may have to decrement them by 1 in order to use these numbers as indices.</p>
+<h3 id="Marking"><a href="#Marking" class="headerlink" title="Marking"></a>Marking</h3><p>When marking Assignment 4, we will look at how well our solution satisfies the description and requirements of this assignment as described in the problem Statement section above as well as the criteria listed here:</p>
 
       
     </div>
@@ -413,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC521-MonteCarloSimulate.html" rel="next" title="Python代写：CSC521-MonteCarloSimulate">
-                <i class="fa fa-chevron-left"></i> Python代写：CSC521-MonteCarloSimulate
+              <a href="/INM378-Digital-Signal-Processing.html" rel="next" title="C#代写：INM378-Digital-Signal-Processing">
+                <i class="fa fa-chevron-left"></i> C#代写：INM378-Digital-Signal-Processing
               </a>
             
           </div>
@@ -422,10 +420,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CIS2500-Rogue-like-Part2.html" rel="prev" title="C代写：CIS2500-Rogue-like-Part2">
-                C代写：CIS2500-Rogue-like-Part2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem"><span class="nav-number">1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Additional-Notes"><span class="nav-number">3.</span> <span class="nav-text">Additional Notes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Level-File"><span class="nav-number">4.</span> <span class="nav-text">Level File</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problam-Statement"><span class="nav-number">1.</span> <span class="nav-text">Problam Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Caution"><span class="nav-number">2.</span> <span class="nav-text">Caution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Marking"><span class="nav-number">3.</span> <span class="nav-text">Marking</span></a></li></ol></div>
             
 
           </div>
