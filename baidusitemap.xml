@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/COMP2129-Minesweeper.html</loc>
+    <lastmod>2018-12-22T13:38:53.830Z</lastmod>
+    <data>
+        <display>
+        <title>C代写：COMP2129-Minesweeper</title>
+        <pubTime>2018-12-22T13:34:47.000Z</pubTime>
+        
+        <tag>Game</tag>
+         
+         
+           
+             
+              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS1101-Gate.html</loc>
     <lastmod>2018-12-18T13:56:14.140Z</lastmod>
     <data>
@@ -1381,9 +1401,9 @@
         <title>Python代写：CSC108H Tic-Tac-Toe</title>
         <pubTime>2018-07-17T13:55:40.000Z</pubTime>
         
-        <tag>Game</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Game</tag>
          
          
            
