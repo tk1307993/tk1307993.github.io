@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="第一代Galaxian游戏在1979年登场，之后在1981年推出了升级版Galara，以及1984年的加强版Gaplus。作为早期电子游戏，Galaxian在街机市场是十分火爆的。">
-<meta name="keywords" content="Game">
+<meta name="description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS4410 GamesTechnologyAssignment">
-<meta property="og:url" content="https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html">
+<meta property="og:title" content="C++代写：CMPT115-Huffman-Tree-Part1">
+<meta property="og:url" content="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part1.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="第一代Galaxian游戏在1979年登场，之后在1981年推出了升级版Galara，以及1984年的加强版Gaplus。作为早期电子游戏，Galaxian在街机市场是十分火爆的。">
+<meta property="og:description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-15T12:19:47.466Z">
+<meta property="og:updated_time" content="2018-12-25T11:51:15.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS4410 GamesTechnologyAssignment">
-<meta name="twitter:description" content="第一代Galaxian游戏在1979年登场，之后在1981年推出了升级版Galara，以及1984年的加强版Gaplus。作为早期电子游戏，Galaxian在街机市场是十分火爆的。">
+<meta name="twitter:title" content="C++代写：CMPT115-Huffman-Tree-Part1">
+<meta name="twitter:description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part1.html"/>
 
 
 
 
 
-  <title>C++代写：CS4410 GamesTechnologyAssignment | 留学生CS编程作业代写</title>
+  <title>C++代写：CMPT115-Huffman-Tree-Part1 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS4410 GamesTechnologyAssignment</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：CMPT115-Huffman-Tree-Part1</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-15T20:17:47+08:00">
-                2018-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T19:48:01+08:00">
+                2018-12-25
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  第一代Galaxian游戏在1979年登场，之后在1981年推出了升级版Galara，以及1984年的加强版Gaplus。作为早期电子游戏，Galaxian在街机市场是十分火爆的。
+                  作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。
               </div>
           
 
@@ -360,26 +360,43 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>相比同时代的Space Invaders，由于Galaxian采用了当时的最新技术，游戏体验有了质的飞跃，是当时最受欢迎的街机游戏之一。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment you develop an arcade style name Galaxian. The game needs to be implemented in OpenGL engine. You should define your own game objectives, such as final goals and the level of player interaction. Lives and scoring should also be planned.</p>
-<p>The difficulty lies in how to manage the objects on the screen, the enemy flight path, in particular, and how they can track the ship. The algorithm can avoid the enemy collisions between each other, and how to aim at the player’s position.<br>Your program provide the following functions:</p>
+        <h3 id="Task-description"><a href="#Task-description" class="headerlink" title="Task description"></a>Task description</h3><p>This is a programming assignment. Get started early! Unanticipated problems will arise in your work, and you will need time to sort them out.</p>
+<p>Clarifying questions can be posted on the CMPT 115 Moodle forums. Help with debugging can be obtained by working in the lab during Help Desk hours of your instructors and TAs. Expect high demand for this kind of help on Fridays.</p>
+<p>All C++ source code files must contain your name, student number, and NSID; and the course, assignment number, and question number as comments at the top of the file. All C++ programs must compile with g++ on the command line without errors or warnings, using the standard flags described in tutorial, namely -Wall -pedantic.</p>
+<p>You may, of course, work on your assignment using Eclipse, or any other C++ IDE, on your personal notebooks or desktops, or on any computer in the Spinks labs. We cannot always help you with problems arising specifically from the IDE, but C++ should have the same bahaviour on all these systems. There are good reasons to use an IDE like Eclipse or MSVS, but there are good reasons to learn to use the command-line too. Learn both!</p>
+<p>Use of String class or string or other object-oriented code (except for cin or cout and any others explicitly allowed in an assignment specification) will result in a flat deduction of 25%. (That means: don’t use advanced techniques to avoid learning the concepts we are attempting to teach you!)</p>
+<h3 id="The-Big-Picture"><a href="#The-Big-Picture" class="headerlink" title="The Big Picture"></a>The Big Picture</h3><p>For this assignment, you will be implementing the Huffman Tree encoding algorithm for file compression. We’re giving you 2 weeks for all of this work. It’s crucial that you do not leave it to the last minute. (All this talk about code is confusing; sometimes the word code refers to C++ code. Sometimes it refers to the Huffman code. And, unfortunately, we will have to refer to ASCII code as well. We’ll try to be clear.)</p>
+<p>The main application here to read a file, say message.txt, containing some text, and then to translate (“encode”) the text using the Huffman code. Your program will write the Huffman coded text to a new file, say coded-message.txt. Your program will also be required to read the very same Huffman coded text from coded-message.txt, and decode it, resulting in an exact duplicate of original message. This will demonstrate that your application uses the Huffman code correctly.</p>
+<p>This is almost a real application. It’s artificial in the sense that your main program will encode and decode the same message. A real file-compression application will either encode a file, or decode it, but usually not both. Students who want a challenge can go beyond the requirements to write a file compression utility. Another unrealistic aspect is that we’re using a text-file as the compressed file, which actually causes the “compressed file” to be larger than the original. Don’t worry about that; the Huffman code, and the use of lists and trees is what we’re interested in.</p>
+<h3 id="Files-and-more-files"><a href="#Files-and-more-files" class="headerlink" title="Files and more files"></a>Files and more files</h3><p>We’re giving you a lot of material to start with, by providing partially implemented ADTs:</p>
+<ul>
+<li>List.cc, List.h: These files have List and Iterator ADT defined.</li>
+<li>TreeNode.cc, TreeNode.h: These files define the TreeNode ADT, which is similar to the material on Trees in Lecture Topic 10.</li>
+<li>Frequency.cc, Frequency.h: These files define an ADT to store a character and an integer.</li>
+<li>FrequencyList.cc, FrequencyList.h: These files define an ADT wrapper for Lists, with two special operations that you have to define.</li>
+<li>Huffman.cc, Huffman.h: These files define two new ADTs: The HUffmanTree, and the HuffmanCodec. These are explained in more detail below.</li>
+</ul>
+<p>For consistency, all of the ADT implementation files have the extension “.cc” so you can recognize them.</p>
+<p>You should find List.cc and TreeNode.cc familiar, as you’ve seen variations of it in previous lectures and assignments. We have made a few simple exercises using Lists and TreeNodes to get started, but most of the List and TreeNode ADT is given. You should review the ADT definitions, to become familiar with the operation names, and to know the details of how the operations are called (i.e., parameters and return values).</p>
+<p>There are some utility files that we provided:</p>
+<ul>
+<li>Element.h, TreeElement.h: These define the data that get stored in our Lists and Trees. You won’t have to change them for this assignment.</li>
+<li>copy.cc, copy.h: These define a useful funciton for making safe copies of C-strings. We’ve used this function several times.</li>
+<li>LOCALE.h: A file with 2 symbols defined. We’ve used #include “LOCALE.h” in all of the other files.</li>
+<li>message.txt: You can use any message file you like, but we’ve provided one that is roughly at the size limit of what the application should be able to do. It’s also topical.</li>
+</ul>
+<p>There are two application files for your use:</p>
+<ul>
+<li>testADTs.cpp: a program that tests almost everything about the ADTs above. There are more than 50 tests, and if they all come back as “Passed” you are almost finished!</li>
+<li>a9app.cpp: This is the application program. Once you have passed all the tests, build this, and see if your work is finished! YOu may make alterations to this file, but you can leave it as given, and the application will run just fine if your ADT operations are working properly.</li>
+</ul>
+<h3 id="Steps-briefly"><a href="#Steps-briefly" class="headerlink" title="Steps (briefly)"></a>Steps (briefly)</h3><p>Each of the following steps is explained more carefully below!</p>
 <ol>
-<li>OOP design</li>
-<li>OpenGL graphics</li>
-<li>a simple intro menu</li>
-<li>texture animations</li>
-<li>sound</li>
+<li>Download the files, and make sure everything runs right.</li>
+<li>Follow the Exercises in this assignment. The first few are warm-ups, so that you become familiar with the process you should follow. For each exercise:<br>a. Read the exercise.<br>b. Add some code to one or more of the files.<br>c. Build the testADT program, and check if the output shows that your work was successful. The testing in testADT is pretty thorough.</li>
+<li>The final exercise tests your work using the a9app.cc program, which should prove to you that everything is working well.</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>Galaxian也就是FC小蜜蜂，需要实现的游戏元素有：</p>
-<ol>
-<li>我方飞机的交互，上下左右键，以及发射子弹，暂停等按键</li>
-<li>敌方飞机生成，需要自动生成敌方飞机，以及敌方飞机被消灭后新敌方飞机的生成</li>
-<li>碰撞检测，包括我方飞机和敌方飞机、我方子弹和敌方飞机、敌方子弹和我方飞机</li>
-<li>得分、生命、关卡的逻辑，包括难度</li>
-<li>音效、图像、画质等多媒体元素</li>
-<li>AI，敌机需要有一定智能，包括躲避、跟踪、击落我方飞机</li>
-</ol>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出鼠标键盘交互的逻辑<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Galaxian::HandleEvents(Event* event) &#123;</span><br><span class="line">  kbarray = GetKeyState(<span class="literal">NULL</span>);</span><br><span class="line">  <span class="keyword">switch</span>(event-&gt;type) &#123;</span><br><span class="line">    <span class="keyword">case</span> KEYDOWN:</span><br><span class="line">      OnKeyDown(event-&gt;key.keysym.sym, event-&gt;key.keysym.mod, event-&gt;key.keysym.unicode);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> KEYUP:</span><br><span class="line">      OnKeyUp(event-&gt;key.keysym.sym, event-&gt;key.keysym.mod, event-&gt;key.keysym.unicode);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOUSEBUTTONDOWN:</span><br><span class="line">      <span class="keyword">switch</span>(event-&gt;button.button) &#123;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_LEFT:</span><br><span class="line">          OnLButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_RIGHT:</span><br><span class="line">          OnRButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_MIDDLE:</span><br><span class="line">          OnMButtonDown(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOUSEBUTTONUP:</span><br><span class="line">      <span class="keyword">switch</span>(event-&gt;button.button) &#123;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_LEFT:</span><br><span class="line">          OnLButtonUp(event-&gt;button.x, Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_RIGHT:</span><br><span class="line">          OnRButtonUp(event-&gt;button.x,Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> BUTTON_MIDDLE:</span><br><span class="line">          OnMButtonUp(event-&gt;button.x,Height-event-&gt;button.y);</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Download-all-the-files-and-build"><a href="#Download-all-the-files-and-build" class="headerlink" title="Download all the files and build"></a>Download all the files and build</h3><p>Moodle has the complete set of files. It will help a lot if do this work in a new folder. The complete list of files to download is here:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Element.h</span><br><span class="line">Frequency.cc</span><br><span class="line">Frequency.h</span><br><span class="line">FrequencyList.cc</span><br><span class="line">FrequencyList.h</span><br><span class="line">Huffman.cc</span><br><span class="line">Huffman.h</span><br><span class="line">LOCALE.h</span><br><span class="line">List.cc</span><br><span class="line">List.h</span><br><span class="line">TreeElement.h</span><br><span class="line">TreeNode.cc</span><br><span class="line">TreeNode.h</span><br><span class="line">a9app.cpp</span><br><span class="line">copy.cc</span><br><span class="line">copy.h</span><br><span class="line">message.txt</span><br><span class="line">testADTs.cpp</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -397,7 +414,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Game/" rel="tag"># Game</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -410,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS635-DigitalImageProcessing.html" rel="next" title="C++代写：CS635-DigitalImageProcessing">
-                <i class="fa fa-chevron-left"></i> C++代写：CS635-DigitalImageProcessing
+              <a href="/COMP2129-Minesweeper.html" rel="next" title="C代写：COMP2129-Minesweeper">
+                <i class="fa fa-chevron-left"></i> C代写：COMP2129-Minesweeper
               </a>
             
           </div>
@@ -419,10 +436,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSC120H-Simulating-Canadian-Elections.html" rel="prev" title="Python代写：CSC120H Simulating Canadian Elections">
-                Python代写：CSC120H Simulating Canadian Elections <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-description"><span class="nav-number">1.</span> <span class="nav-text">Task description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Big-Picture"><span class="nav-number">2.</span> <span class="nav-text">The Big Picture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Files-and-more-files"><span class="nav-number">3.</span> <span class="nav-text">Files and more files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Steps-briefly"><span class="nav-number">4.</span> <span class="nav-text">Steps (briefly)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Download-all-the-files-and-build"><span class="nav-number">5.</span> <span class="nav-text">Download all the files and build</span></a></li></ol></div>
             
 
           </div>
