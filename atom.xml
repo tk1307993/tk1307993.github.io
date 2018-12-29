@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2018-12-25T11:51:15.317Z</updated>
+  <updated>2018-12-29T01:27:05.805Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CMPT115-Huffman-Tree-Part2</title>
+    <link href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html"/>
+    <id>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html</id>
+    <published>2018-12-29T01:23:12.000Z</published>
+    <updated>2018-12-29T01:27:05.805Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Exercise-1-Warmup-Completing-Frequency-cc"><a href="#Exercise-1-Warmup-Completing-Frequency-cc" class="headerlink" title="Exercise 1 Warmup: Completing Frequency.cc"></a>Exercise 1 Warmup: Completing Frequency.cc</h3><p>We’ll use the Frequency ADT to store a character, e.g., ‘a’, and a count of how many times it appears in some text, e.g., 7. The frequency record will be stored in the Huffman trees.</p><p>The Frequency interface is complete, and defined in Frequency.h. It’s basically a storage unit for characters and integers. The implementation is almost complete, but the constructor, createFrequency() is incomplete. Here’s what is in the Frequency.cc file:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CONSTRUCTOR</span></span><br><span class="line"><span class="comment">// pre: d is the character data being counted,</span></span><br><span class="line"><span class="comment">//      c is the count.</span></span><br><span class="line"><span class="comment">// post: allocates memory for a new frequency record</span></span><br><span class="line"><span class="comment">// return: a reference to the new record</span></span><br><span class="line"><span class="function">Frequency *<span class="title">createFrequency</span><span class="params">(<span class="keyword">char</span> d, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>It currently does nothing. Complete this operation, by allocating a record, and storing the appropriate data.</p><h3 id="Exercise-Summary"><a href="#Exercise-Summary" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><ol><li>Complete createFrequency() as indicated.</li><li>Build the testADT app, and run it.</li><li>If your code does the right things, the first 4 tests should all report “Passed.”</li></ol><h4 id="What-to-hand-in"><a href="#What-to-hand-in" class="headerlink" title="What to hand in:"></a>What to hand in:</h4><p>The file Frequency.cc containing your code for createFrequency() described above.</p><h4 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h4><p>5 marks: createFrequency() builds a Frequency record and correctly initializes it with the given data.</p><h3 id="Exercise-2-Warmup-Completing-TreeNode-cc"><a href="#Exercise-2-Warmup-Completing-TreeNode-cc" class="headerlink" title="Exercise 2 Warmup: Completing TreeNode.cc"></a>Exercise 2 Warmup: Completing TreeNode.cc</h3><p>We’ll use the TreeNode ADT to help us build Huffman trees. In our application, a TreeNode will store a reference to a Frequency record; see TreeNode.h and TreeElement.h. Most of the TreeNode implementation is complete. There are two operations that are currently incomplete: the constructor, createTreeNode(), and the operation height().</p><p>The constructor currently looks like this:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CONSTRUCTOR</span></span><br><span class="line"><span class="comment">// pre: d is a reference to a TreeElement</span></span><br><span class="line"><span class="comment">// post: allocates memory for the TreeNode</span></span><br><span class="line"><span class="comment">// return: reference to the TreeNode record</span></span><br><span class="line"><span class="function">TreeNode *<span class="title">createTreeNode</span><span class="params">(TreeElement d)</span></span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Complete it so that it allocates a correctly initialize TreeNode record.<br>The height operation currently looks like this:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// height(n)</span></span><br><span class="line"><span class="comment">// pre: n is a reference to a TreeNode</span></span><br><span class="line"><span class="comment">// return: the height of the tree</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode *n)</span></span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Complete this function so that it returns the height of a tree whose root is given as the parameter n.<br>Hints:</p><ul><li>This function must be recursive.</li><li>The height of a NULL tree is 0.</li><li>There is a function called max(a,b) you can use. It returns the larger of a or b. This function is defined in a C++ library called “algorithm” which we’ve already #included for you.</li></ul><h3 id="Exercise-Summary-1"><a href="#Exercise-Summary-1" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><ol><li>Complete createTreeNode() as indicated.</li><li>Complete height() as indicated.</li><li>Build the testADT app, and run it.</li></ol><p>If your code does the right things, tests 5-16 should all report “Passed.”</p><h4 id="What-to-hand-in-1"><a href="#What-to-hand-in-1" class="headerlink" title="What to hand in:"></a>What to hand in:</h4><p>The file TreeNode.cc containing your code for the two operations described above.</p>]]></content>
+    
+    <summary type="html">
+    
+      这是Huffman作业的第二部分，分为三个小练习。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CMPT115-Huffman-Tree-Part1</title>
@@ -327,28 +349,6 @@
   </entry>
   
   <entry>
-    <title>C代写：CS104-WordCount</title>
-    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
-    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
-    <published>2018-11-14T12:19:34.000Z</published>
-    <updated>2018-11-15T14:25:51.625Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java代写：ImageProcessing4</title>
     <link href="https://tk1307993.coding.me/Java-ImageProcessing4.html"/>
     <id>https://tk1307993.coding.me/Java-ImageProcessing4.html</id>
@@ -364,6 +364,28 @@
     </summary>
     
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C代写：CS104-WordCount</title>
+    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
+    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
+    <published>2018-11-14T12:19:34.000Z</published>
+    <updated>2018-11-15T14:25:51.625Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
       <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
@@ -430,28 +452,6 @@
     </summary>
     
       <category term="OpenGL" scheme="https://tk1307993.coding.me/categories/OpenGL/"/>
-    
-    
-      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：ImageProcessing3</title>
-    <link href="https://tk1307993.coding.me/Java-ImageProcessing3.html"/>
-    <id>https://tk1307993.coding.me/Java-ImageProcessing3.html</id>
-    <published>2018-11-03T07:18:59.000Z</published>
-    <updated>2018-11-03T07:19:41.812Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Assignment-5"><a href="#Assignment-5" class="headerlink" title="Assignment 5"></a>Assignment 5</h1><p>In this repository, you should find the following complete interfaces and classes:</p><ul><li>The basic underlying interface Pixel and its implementations GrayPixel and ColorPixel from assignments 3 and 4.</li><li>The Picture and SubPicture interfaces as defined and described in assignment 4.</li><li>My implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture from the assignemnt 4 solution.</li></ul><p>The appropriate code for the following classes from my assignment 4 solution is missing in these classes:</p><ul><li>The SubPicture interface called SubPictureImpl</li><li>The Pixel iterators called SampleIterator and ZigZagIterator</li><li>The SubPicture interators called WindowIterator and TileIterator</li></ul><p>In this assignment, you’ll fill out these missing implementations in order to recreate my a4 solution. Additionally, you will be asked to refactor the code of MutablePixelArrayPictrue, ImmutablePixelArrayPicture, and SubPictureImpl using inheritance.</p><p>The first thing you should do is read the implementations of MutablePixelArrayPicture and ImmutablePixelArrayPicture carefully to understand how they work. A lot of the code in these classes is repeated. You should note the ways in which the code is similar and is different. In particular, notice that the rectangle, circle, and picture paint methods of ImmutablePixelArrayPicture go through an extra step of creating an immutable result picture at the very end of these methods using a helper function called copyAsImmutable.</p><h2 id="Novice"><a href="#Novice" class="headerlink" title="Novice"></a>Novice</h2><p>Fill out the code for SubPictureImpl. You can and should copy much of this code from the other picture implementations as appropriate. Be sure to reread the A4 description for how this interface should work. In particular, pay attention to the fact that a subpicture’s mutabiliity (or immutability) with respect to pixel operations should reflect the underlying source picture and that a subpicture maintains caption information independently of the underyling source picture. </p><h2 id="Adept"><a href="#Adept" class="headerlink" title="Adept"></a>Adept</h2><p>Fill out the code for the various iterators (i.e., SampleIterator, ZigZagIterator, WindowIterator, and TileIterator). Again, look to the A4 description for how these iterators are supposed to work.</p><h2 id="Jedi"><a href="#Jedi" class="headerlink" title="Jedi"></a>Jedi</h2><p>Refactor the code of MutablePixelArrayPicture, ImmutablerPixelArrayPicture, and SubPictureImpl into the following class hierarchy:</p><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">-------------------------------------------------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                                                                        </span>|</span><br><span class="line">PixelArrayPicture                                                        SubPictureImpl</span><br><span class="line">     |</span><br><span class="line"><span class="string">     </span>|<span class="string">------------------------------</span></span><br><span class="line"><span class="string">     </span>|<span class="string">                             </span>|</span><br><span class="line">MutablePixelArrayPicture      ImmutablePixelArrayPicture</span><br></pre></td></tr></table></figure><p>The above graph indicates that PictureImpl should be the root parent class of all Picture implementations including SubPictureImpl. PixelArrayPicture should be the common parent class of both MutablePixelArrayPicture and ImmutablePixelArrayPicture.</p><p>You should refactor the code from MutablePixzelArrayPicture, ImmutablePixelArrayPicture, and SubPictureImpl as appropriate. Please use these class names (i.e., PictureImpl and PixelArrayPicture) exactly. </p><h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><ul><li>Novice: 5 points</li><li>Adept: 15 points</li><li><p>Jedi: 5 points</p><p>NOTE: all code should be in the a5 package. Do not refer to any code in any prior assignment packages.</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      使用Java实现可变及不可变图像相关处理
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
       <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
