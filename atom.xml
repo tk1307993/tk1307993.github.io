@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-01-09T11:27:11.031Z</updated>
+  <updated>2019-01-19T02:05:50.947Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CS341-Timing-Instructions</title>
+    <link href="https://tk1307993.coding.me/CS341-Timing-Instructions.html"/>
+    <id>https://tk1307993.coding.me/CS341-Timing-Instructions.html</id>
+    <published>2019-01-19T02:03:20.000Z</published>
+    <updated>2019-01-19T02:05:50.947Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="I-OBJECTIVES"><a href="#I-OBJECTIVES" class="headerlink" title="I. OBJECTIVES"></a>I. OBJECTIVES</h3><p>The purpose of this assignment is to build a package of timing routines for the SAPC and use it to time code on the SAPC to determine memory access time on the SAPC with and without caching. This code does not run on UNIX. Read the Intel 8254 Programmable Interval Timer (PIT) Data Sheet. Look at $pcex/timer.c for an example of C code for accessing the timer. Copy all the files needed for this project.</p><h3 id="II-The-timing-package"><a href="#II-The-timing-package" class="headerlink" title="II. The timing package"></a>II. The timing package</h3><p>A package is a set of utilities that can be called by a program that wants to use them. When designing a package we carefully consider the things in it that must be visible to the caller, specify those, and require that everything else be internal and invisible. The visible parts of the timing package you will build are in “timepack.h”. A customer for the package’s services includes that header file (using #include) in the program for compilation and links his or her object code with “timepack_sapc.opc” to build the executable. You are asked to modify “timepack_sapc.c” to provide a high resolution timer service for programs running on the SAPC.</p><h3 id="Existing-Code"><a href="#Existing-Code" class="headerlink" title="Existing Code"></a>Existing Code</h3><p>Every package should have a test program showing that it works by calling it in all important ways. This test program is called a “driver” because it sits on top of the package and drives it like we test-drive a car – start up, do this, do that, stop, shut down. It is also called a “unit test” program because it tests just this one package separate from any other package in a bigger program. If you suspect something is wrong in a certain package, you’ll try to make its unit test fail, and then you debug the problem in the relatively simple environment of the unit test, rather than in the bigger program. The test program for timepack is testpack.c. You can build testpack and testpack.lnx right away and run them. Note what is printed out by testpack.lnx. Capture this in a typescript1 file. It shows that the timing package (as provided) can time things on the SAPC to 55-ms accuracy, but not to the microsecond accuracy we want. The next step is to get your timepack_sapc.c fixed up for the higher resolution and the unit test executable testpack.lnx will show it.</p><p>Modifed Code<br>You’re working directly with the hardware device, the Programmable Interval Timer (PIT) with its interrupt handler. This code has been provided to you in a). The timepack_sapc.c as provided can measure time in timer “ticks” at an 18.2-Hz (55 ms/tick) standard PC tick rate.To use the PIT to measure higher precision, you make use of “downcounts” within the timer chip. What you need to do is determine how many counts have downcounted in the timer since the last tick and compute a higher accuracy time. By doing this at both the start and the end of the time interval being measured, you can compute the elapsed time accurate to a few microseconds, a very respectable timer service. You’ll need to modify the timepack_sapc.c to achieve this.</p><p>Since timer downcounts count down from 64K at the tick, you need to subtract the register value from 65536 to get the number of downcounts since last tick:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">number</span> <span class="keyword">of</span> downcounts <span class="keyword">since</span> tick = <span class="number">65536</span> - observed_count (<span class="keyword">in</span> register)</span><br></pre></td></tr></table></figure></p><p>Thus the accurate time between A and B is<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">= 202<span class="built_in"> clock </span>ticks + (65536 – 43000) downcounts - (200<span class="built_in"> clock </span>ticks + (65536 – 35000) downcounts)</span><br><span class="line">= 2<span class="built_in"> clock </span>ticks – 8000 downcounts</span><br></pre></td></tr></table></figure></p><h3 id="III-Timing-i486-instructions-and-a-C-loop"><a href="#III-Timing-i486-instructions-and-a-C-loop" class="headerlink" title="III. Timing i486 instructions and a C loop"></a>III. Timing i486 instructions and a C loop</h3><p>In this part of the assignment you will use the timing package to time x86 instructions. Instruction execution time is measured in system clock cycles, here 2.5 nsecs for our 400Mhz Pentium systems. The PC timer 0 is accurate only in the usec (microsecond) range so you will need to loop many times and divide by the loop count to get the accuracy needed.</p><p>The actual instructions to be timed appear in loops in “itests.s”, which is an x86 assembler source. These are called from itimes.c.</p><p>Finish “itests.s”, so that the third instruction to be timed (immediate move of IDATA to register) is properly implemented. Add a fourth instruction of your choice “itests.s” and “itimes.c”</p><p>You can use the provided makefile to build an optimized version of the SAPC executable file. The provided makefile has the following definitions:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># development build: -g provides debugging support, slows down execution</span><br><span class="line"># <span class="keyword">Use</span> -O2 optimization, no -g on <span class="keyword">final</span> timing runs<span class="comment">!</span></span><br><span class="line">PC_CFLAGS_DEV = -g -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line">PC_CFLAGS_OPT = -O2 -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line"># make <span class="keyword">default</span> PC_CFLAGS be PC_CFLAGS_DEV</span><br><span class="line">O = DEV</span><br><span class="line"># allow user to override DEV via O=OPT on the command line</span><br><span class="line">PC_CFLAGS = $(PC_CFLAGS_$(O))</span><br></pre></td></tr></table></figure></p><h3 id="FINAL-NOTE"><a href="#FINAL-NOTE" class="headerlink" title="FINAL NOTE"></a>FINAL NOTE</h3><p>In the event that you are unable to correctly complete this assignment by the due date, do not remove the work you were able to accomplish – partial credit is always better than none.</p>]]></content>
+    
+    <summary type="html">
+    
+      这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Hardware" scheme="https://tk1307993.coding.me/tags/Hardware/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenGL代写：CA1-Computer-Animation-and-Visualisation</title>
@@ -434,28 +456,6 @@
     </summary>
     
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CS104-WordCount</title>
-    <link href="https://tk1307993.coding.me/CS104-WordCount.html"/>
-    <id>https://tk1307993.coding.me/CS104-WordCount.html</id>
-    <published>2018-11-14T12:19:34.000Z</published>
-    <updated>2018-11-15T14:25:51.625Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement 1"></a>Requirement 1</h2><p>Write a program called wcount.c that counts all the words in a given file</p><ol><li>Name your executable wcount.out</li><li>The name of the file to count the words in will be passed on the command line</li><li>For this problem we will define a word as a series of 1 or more non-whitespace<br>characters</li></ol><p>Use isspace to determine if a character is white space or not<br>Examples<br>Assume we have file named fun.txt that contains the following:</p><p>Computer sciences classes are great!<br>Even though I spend all my time doing homework :(</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">../wcount <span class="function"><span class="keyword">fun</span>.<span class="title">txt</span></span></span><br><span class="line">There are <span class="number">15</span> word(s).</span><br></pre></td></tr></table></figure><h2 id="Requirement-2"><a href="#Requirement-2" class="headerlink" title="Requirement 2"></a>Requirement 2</h2><p>Write a program called perimeter.c that calculates the perimeter of a polygon.</p><ol><li>Name your executable perimeter.out</li><li>The points of the polygon will be stored in a file and this file will be passed on the command line arguments</li><li>The file itself will be a binary file containing integers</li><li>The first integer in the file is the number of points contained in the file</li><li>The remaining integers are the points, with the first integer being the x coordinate and the second integer being the y coordinate.</li><li>There is an edge between each adjacent point and between the first point and the last point</li><li>Each file contains at least 3 points</li><li>The perimeter of a polygon is the sum of the lengths of all of its edges<br>Use a double to store your perimeter and report the perimeter to the nearest 2 decimal points.<br>You MUST store your points in a struct to receive credit for this problem.<br>As an aside the example tests do not form actual polygons but assume that they do.</li></ol><p>Example. Assume that there is a file called example.txt. It will store the following information but in binary form. This example is just to give you a visualization of the data.</p><h2 id="Requirement-3"><a href="#Requirement-3" class="headerlink" title="Requirement 3"></a>Requirement 3</h2><p>Write a program called tail.c that prints out the last N lines of a given file</p><ol><li>Name your executable tail.out</li><li>Arguments to your program will be passed on the command line in the following order</li><li>For an additional challenge try to solve the problem where there is no limit on the length of a line</li><li>My solution to dealing with any length lines involved using the functions ftell and fseek.</li><li>There is no limit to the number of lines in a file</li><li>Some lines may only contain the newline character, these still count as a line<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">10</span></span><br><span class="line">It</span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../tail<span class="selector-class">.out</span> meme<span class="selector-class">.txt</span> <span class="number">2</span></span><br><span class="line">is</span><br><span class="line">over <span class="number">9000</span>!!!</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      很基础的C程序，实现统计输入文件中的单词总数，此外还需要写一个计算多边形的小程序，以及一个打印行尾的小程序。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
       <category term="Image Process" scheme="https://tk1307993.coding.me/tags/Image-Process/"/>

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game," />
+  <meta name="keywords" content="Hardware," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
-<meta name="keywords" content="Game">
+<meta name="description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
+<meta name="keywords" content="Hardware">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：FIT2071-VisualTextQuest">
-<meta property="og:url" content="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html">
+<meta property="og:title" content="C代写：CS341-Timing-Instructions">
+<meta property="og:url" content="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
+<meta property="og:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T03:03:45.984Z">
+<meta property="og:updated_time" content="2019-01-19T02:05:50.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：FIT2071-VisualTextQuest">
-<meta name="twitter:description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
+<meta name="twitter:title" content="C代写：CS341-Timing-Instructions">
+<meta name="twitter:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html"/>
 
 
 
 
 
-  <title>C++代写：FIT2071-VisualTextQuest | 留学生CS编程作业代写</title>
+  <title>C代写：CS341-Timing-Instructions | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：FIT2071-VisualTextQuest</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CS341-Timing-Instructions</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-20T10:59:11+08:00">
-                2018-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T10:03:20+08:00">
+                2019-01-19
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。
+                  这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。
               </div>
           
 
@@ -360,22 +360,17 @@
       
 
       
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Unlike previous assignments where we revealed the required functionality lab-by-lab in “portfolio tasks” as you were taught the required concepts, for this assignment we are giving you the full specification up front. This is because we have now covered all the language features you need.</p>
-<p>Recap (the story so far!):<br>In Assignment 1 you created a very simple turn based adventure game where the player created a character, choosing a name and a vocation for the character in order to set some default statistics. The main game loop simply applied events from a file that affected the player’s health. The game ended when the player died. You could also save the current state of the character at any time.</p>
-<p>In Assignment 2 you used what you had learned about OO and classes to better structure the code. You modelled Events and Vocations with simple classes. You added a Character class, and Player and Enemy subclasses of Character. Possibly you added further subclasses of Enemy. Then you added the notion of turn-based Fights involving a collection of Character subclasses.<br>For Assignment 3 (the final instalment of the TextQuest trilogy) you will start to add some visual elements to the game. It will still be text-based but we will introduce the notion of a 2D map.</p>
-<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>You can start with your code from Assignment 2 – or if you are unhappy with it (or it is non-existant) you are welcome to start with our sample solution for Assignment 2 (available on Moodle).</p>
-<p>If you haven’t already, then introduce a Game class to hold all the data, state and functions not already associated with other classes. Introduce a Room class.</p>
-<p>Introduce a Room class. A room contains a collection of 0 or more Events that occur in that room and also a collection of 0 or more Enemies that attack the player. Also, a room will have four nullable pointers to other Rooms (e.g. north, east, south and west).</p>
-<p>Create a 10x10 grid (e.g. a 2D array) of Rooms. Then you will need to create “doors” between adjacent rooms. You can do this randomly to create a maze. Remember to connect the rooms in both directions. For example: if the east pointer of the Room at array position 1,5 points to the Room at array position 1,6 then room 1,6 should have a west pointer back to 1,5.</p>
-<p>So the player can see where they are, you will need to display the map. You can be as fancy with this as you like, but here’s an example of a basic ASCII representation that you might use (this one is 4x4, yours will be bigger):<br>Now, the player starts the game in a particular room (could be random) and at the beginning of each turn in the game they can choose an open door (N,S,E or W) to pass through. If there are enemies in the room then there will be a fight (as in Assignment 2). If there are events (e.g. a health potion, a trap, a magic sword) then these can happen after the fight.</p>
-<p>The game will be more fun if the player has to explore. Implement a “fog of war” feature. That is, the map starts off obscured (e.g. covered in *) with only the exits to the current room visible, and is gradually revealed as the player moves around.<br>REQUIREMENT: Please allow the player to choose a “cheat” mode on startup where the full map is shown all the time. This will make your life easier in debugging but will also make it easier for us to mark!</p>
-<p>Save and load should be extended to store the full state of the map and rooms</p>
-<h3 id="Further-Functionality"><a href="#Further-Functionality" class="headerlink" title="Further Functionality"></a>Further Functionality</h3><p>The above is a bare minimum we will expect to see. Implementing it perfectly will get you CR (~60%). To get D or above, you will need to add some more interesting elements. Here are some suggestions – but feel free to go further:</p>
-<p>Add navigation within a room: when you enter a room, pop up a small (e.g. 5x5) map showing the location of enemies and events within the room. The player can move around inside the room to see what the events are and attack enemies in adjacent squares.<br>Have the enemies move around! From room to room or just within a room. They could move randomly or you could give them some simple AI (e.g. always move towards the player).</p>
-<p>We have already suggested events can involve items. Make this a more formal notion (e.g. with an Item class) and give the character an inventory.</p>
-<p>We will reward creativity but ultimately you will be marked based on clean, functional, working code that demonstrates a good understanding of the C++ language features and OO design as covered in the course.</p>
-<p>This is reflected in the sample marking guide that is provided.</p>
-<h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>For this assignment, you are also required to submit a diagram showing your overall Object-Oriented approach to solving this assignment. Your diagram does not have to be completed with any formal tools (it can be hand drawn as long as it is legible) but you must submit a PNG/JPG or PDF file that shows what classes you have and how they are related (inheritance for example). NO OTHER FILE FORMAT MAY BE SUBMITTED. This is important for us to look at as we grade your assignment so we can have a basic understanding of how your program has been designed.</p>
+        <h3 id="I-OBJECTIVES"><a href="#I-OBJECTIVES" class="headerlink" title="I. OBJECTIVES"></a>I. OBJECTIVES</h3><p>The purpose of this assignment is to build a package of timing routines for the SAPC and use it to time code on the SAPC to determine memory access time on the SAPC with and without caching. This code does not run on UNIX. Read the Intel 8254 Programmable Interval Timer (PIT) Data Sheet. Look at $pcex/timer.c for an example of C code for accessing the timer. Copy all the files needed for this project.</p>
+<h3 id="II-The-timing-package"><a href="#II-The-timing-package" class="headerlink" title="II. The timing package"></a>II. The timing package</h3><p>A package is a set of utilities that can be called by a program that wants to use them. When designing a package we carefully consider the things in it that must be visible to the caller, specify those, and require that everything else be internal and invisible. The visible parts of the timing package you will build are in “timepack.h”. A customer for the package’s services includes that header file (using #include) in the program for compilation and links his or her object code with “timepack_sapc.opc” to build the executable. You are asked to modify “timepack_sapc.c” to provide a high resolution timer service for programs running on the SAPC.</p>
+<h3 id="Existing-Code"><a href="#Existing-Code" class="headerlink" title="Existing Code"></a>Existing Code</h3><p>Every package should have a test program showing that it works by calling it in all important ways. This test program is called a “driver” because it sits on top of the package and drives it like we test-drive a car – start up, do this, do that, stop, shut down. It is also called a “unit test” program because it tests just this one package separate from any other package in a bigger program. If you suspect something is wrong in a certain package, you’ll try to make its unit test fail, and then you debug the problem in the relatively simple environment of the unit test, rather than in the bigger program. The test program for timepack is testpack.c. You can build testpack and testpack.lnx right away and run them. Note what is printed out by testpack.lnx. Capture this in a typescript1 file. It shows that the timing package (as provided) can time things on the SAPC to 55-ms accuracy, but not to the microsecond accuracy we want. The next step is to get your timepack_sapc.c fixed up for the higher resolution and the unit test executable testpack.lnx will show it.</p>
+<p>Modifed Code<br>You’re working directly with the hardware device, the Programmable Interval Timer (PIT) with its interrupt handler. This code has been provided to you in a). The timepack_sapc.c as provided can measure time in timer “ticks” at an 18.2-Hz (55 ms/tick) standard PC tick rate.To use the PIT to measure higher precision, you make use of “downcounts” within the timer chip. What you need to do is determine how many counts have downcounted in the timer since the last tick and compute a higher accuracy time. By doing this at both the start and the end of the time interval being measured, you can compute the elapsed time accurate to a few microseconds, a very respectable timer service. You’ll need to modify the timepack_sapc.c to achieve this.</p>
+<p>Since timer downcounts count down from 64K at the tick, you need to subtract the register value from 65536 to get the number of downcounts since last tick:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">number</span> <span class="keyword">of</span> downcounts <span class="keyword">since</span> tick = <span class="number">65536</span> - observed_count (<span class="keyword">in</span> register)</span><br></pre></td></tr></table></figure></p>
+<p>Thus the accurate time between A and B is<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">= 202<span class="built_in"> clock </span>ticks + (65536 – 43000) downcounts - (200<span class="built_in"> clock </span>ticks + (65536 – 35000) downcounts)</span><br><span class="line">= 2<span class="built_in"> clock </span>ticks – 8000 downcounts</span><br></pre></td></tr></table></figure></p>
+<h3 id="III-Timing-i486-instructions-and-a-C-loop"><a href="#III-Timing-i486-instructions-and-a-C-loop" class="headerlink" title="III. Timing i486 instructions and a C loop"></a>III. Timing i486 instructions and a C loop</h3><p>In this part of the assignment you will use the timing package to time x86 instructions. Instruction execution time is measured in system clock cycles, here 2.5 nsecs for our 400Mhz Pentium systems. The PC timer 0 is accurate only in the usec (microsecond) range so you will need to loop many times and divide by the loop count to get the accuracy needed.</p>
+<p>The actual instructions to be timed appear in loops in “itests.s”, which is an x86 assembler source. These are called from itimes.c.</p>
+<p>Finish “itests.s”, so that the third instruction to be timed (immediate move of IDATA to register) is properly implemented. Add a fourth instruction of your choice “itests.s” and “itimes.c”</p>
+<p>You can use the provided makefile to build an optimized version of the SAPC executable file. The provided makefile has the following definitions:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># development build: -g provides debugging support, slows down execution</span><br><span class="line"># <span class="keyword">Use</span> -O2 optimization, no -g on <span class="keyword">final</span> timing runs<span class="comment">!</span></span><br><span class="line">PC_CFLAGS_DEV = -g -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line">PC_CFLAGS_OPT = -O2 -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line"># make <span class="keyword">default</span> PC_CFLAGS be PC_CFLAGS_DEV</span><br><span class="line">O = DEV</span><br><span class="line"># allow user to override DEV via O=OPT on the command line</span><br><span class="line">PC_CFLAGS = $(PC_CFLAGS_$(O))</span><br></pre></td></tr></table></figure></p>
+<h3 id="FINAL-NOTE"><a href="#FINAL-NOTE" class="headerlink" title="FINAL NOTE"></a>FINAL NOTE</h3><p>In the event that you are unable to correctly complete this assignment by the due date, do not remove the work you were able to accomplish – partial credit is always better than none.</p>
 
       
     </div>
@@ -393,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Game/" rel="tag"># Game</a>
+            <a href="/tags/Hardware/" rel="tag"># Hardware</a>
           
         </div>
       
@@ -406,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS214-SinglyLinkedList.html" rel="next" title="C++代写：CS214-SinglyLinkedList">
-                <i class="fa fa-chevron-left"></i> C++代写：CS214-SinglyLinkedList
+              <a href="/CA1-Computer-Animation-and-Visualisation.html" rel="next" title="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
+                <i class="fa fa-chevron-left"></i> OpenGL代写：CA1-Computer-Animation-and-Visualisation
               </a>
             
           </div>
@@ -415,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP9021-Tangram.html" rel="prev" title="Python代写：COMP9021-Tangram">
-                Python代写：COMP9021-Tangram <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Further-Functionality"><span class="nav-number">3.</span> <span class="nav-text">Further Functionality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Diagram"><span class="nav-number">4.</span> <span class="nav-text">Class Diagram</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-OBJECTIVES"><span class="nav-number">1.</span> <span class="nav-text">I. OBJECTIVES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#II-The-timing-package"><span class="nav-number">2.</span> <span class="nav-text">II. The timing package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Existing-Code"><span class="nav-number">3.</span> <span class="nav-text">Existing Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#III-Timing-i486-instructions-and-a-C-loop"><span class="nav-number">4.</span> <span class="nav-text">III. Timing i486 instructions and a C loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FINAL-NOTE"><span class="nav-number">5.</span> <span class="nav-text">FINAL NOTE</span></a></li></ol></div>
             
 
           </div>
