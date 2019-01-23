@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,QT,OpenGL," />
+  <meta name="keywords" content="Network Programming,SQLite," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业是一个OpenGL的3D小游戏，另外编程的时候不仅需要使用QT，还需要使用提供的NGL图形库来开发。">
-<meta name="keywords" content="Algorithm,QT,OpenGL">
+<meta name="description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
+<meta name="keywords" content="Network Programming,SQLite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
-<meta property="og:url" content="https://tk1307993.coding.me/CA1-Computer-Animation-and-Visualisation.html">
+<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part1">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part1.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业是一个OpenGL的3D小游戏，另外编程的时候不仅需要使用QT，还需要使用提供的NGL图形库来开发。">
+<meta property="og:description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T11:27:11.031Z">
+<meta property="og:updated_time" content="2019-01-23T11:58:12.764Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
-<meta name="twitter:description" content="这次需要代写的作业是一个OpenGL的3D小游戏，另外编程的时候不仅需要使用QT，还需要使用提供的NGL图形库来开发。">
+<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part1">
+<meta name="twitter:description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CA1-Computer-Animation-and-Visualisation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part1.html"/>
 
 
 
 
 
-  <title>OpenGL代写：CA1-Computer-Animation-and-Visualisation | 留学生CS编程作业代写</title>
+  <title>C代写：CSE320-Wolfie-Chat-Part1 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CA1-Computer-Animation-and-Visualisation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OpenGL代写：CA1-Computer-Animation-and-Visualisation</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part1</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-09T19:25:02+08:00">
-                2019-01-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T19:55:39+08:00">
+                2019-01-23
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenGL/" itemprop="url" rel="index">
-                    <span itemprop="name">OpenGL</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业是一个OpenGL的3D小游戏，另外编程的时候不仅需要使用QT，还需要使用提供的NGL图形库来开发。
+                  这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。
               </div>
           
 
@@ -360,25 +360,23 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>OpenGL is a relative low-level 3d API which does not support object/scene management. This is usually left to the user of the API. For example, importing and exporting data to and from OpenGL has to be implemented by the application programmer. Hierarchical structures although indirectly supported using Push and Pop matrix operations have no direct support in OpenGL.<br>You task is to develop a set of C++ classes / data structures and algorithms that provide a high level OpenGL object/scene management for one of the following:</p>
-<ol>
-<li>Develop a small library that provide an interface that allows the simulation of real world physic such as gravity, friction springs; To demonstrate the library a simple particle system with physics and collisions could be written.</li>
-<li>A simple 3D game using OpenGL which should allow for the detection of object collisions in 3D space and user control of the game characters. (3D space invaders would be a good example).</li>
-<li>Develop a framework that allows the simulation of a Craig Reynolds-like flocking system using OpenGL. The system should allow for any number of boids to be added to the scene, with detection of objects within a scene.<br>.4 Develop a system that provide an interface that allows L-systems (Lindermayer systems) based modelling of plant like structures using OpenGL. The L system should read in the grammar of the system from a file.</li>
-<li>A simple raytracing framework that will read a scene file and render out the scene using materials / lights supplied in the scene file.</li>
-<li>Other project Ideas may be discussed with the unit leader.</li>
-</ol>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>You are required to use the NGL graphics library as part of the assignment, if more functionality is required a software update request can be made to Jon Macey or you may use other libraries but this must be justified in the design of the project. It is also expected that the project uses the main Qt development system and is capable of running within this environment. Third party libraries such as GLUT should not be used, however if you are developing a game SDL could be considered.</p>
-<p>It is suggested that the program be written using C++ and OpenGL however any system may be used for the final program.<br>For example Python exporting to renderman for rendering would be acceptable, however realtime visualisation with OpenGL for the system would be a bonus.</p>
-<h3 id="Part-1-Research-and-Design"><a href="#Part-1-Research-and-Design" class="headerlink" title="Part 1: Research and Design"></a>Part 1: Research and Design</h3><p>For the first part of the project a report should be submitted containing initial research into the topic including references to sources and initial design consideration for the project. Marks will be awarded for clarity of research and use of images / algorithms. Initial design of the C++ data structures and algorithms required should also be carried out however no code is expected to be submitted at this stage. Note that it is expected that most of the design will be in the form of a “programming sketch book” using hand drawn data diagrams, a full written report is not expected at this stage. The main emphasis is the research and design into the area chosen. At this stage we are more interested in Code design and the algorithmic approach to the problem and not the cosmetic / artistic design of the program.</p>
-<h3 id="Part-2-Implementation"><a href="#Part-2-Implementation" class="headerlink" title="Part 2: Implementation"></a>Part 2: Implementation</h3><p>The 2nd part of the assignment involves the implementation of the system based on the initial research and design. As software design is an iterative process it is expected that the actual program will have evolved from the initial report and this process should be reflected on in the final project report. Marks will be awarded for good use of C++, data structure design and documentation of the code with respect to and algorithms and techniques used.</p>
-<p>The program must be able to be configured by the use of a text based configuration file to set-up initial program states or values.</p>
-<h3 id="INTENDED-LEARNING-OUTCOMES"><a href="#INTENDED-LEARNING-OUTCOMES" class="headerlink" title="INTENDED LEARNING OUTCOMES"></a>INTENDED LEARNING OUTCOMES</h3><p>This assignment will allow you to demonstrate your ability of the following learning outcomes.</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this assignment you will be creating a chat service much like Google’s Hangouts, called Wolfie Chat. The goal is to learn about network programming in C. You will implement the service so that it adheres to the Wolfie Protocol.</p>
+<p>The concept of a protocol is an important one to understand. When implementing the protocol you need to follow the requirements and description TO THE LETTER. The idea is to create a standard so that anyone implementing the Wolfie Protocol will be able to connect and operate with any other program implementing the same protocol. Any client and chat should work with any server if the protocol is used correctly (HINT HINT think grading).</p>
+<p>Certain public networks like wolfienet secure or starbucks will not allow you to connect your client and server together over the network. You may also want to test your client by connecting to another group’s server, and your server by having other group’s clients connect to it. This is a good way to ensure that the protocol is implemented correctly in your client/server programs. While we encourage testing this way, THIS IS NOT an open invitation to share code with other groups. You should not be showing or sharing code with anyone else. To perform these tests you should simply be telling your client programs to connect to the IP address and port number at which these servers are running at. You have been warned!</p>
+<h3 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h3><p>In this assignment you are allowed groups of two members. Unless stated otherwise, we will assume that you are in the same group as the previous assignment. If you wish to divorce your partner from the previous assignment and assemble a new group please follow the directions in hw4.</p>
+<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Make the directory hw5 in the root of your git repository. All files which you create for this assignment should be placed in this directory. You should also create a Makefile, which generates the server program called server, a client program called client, and your chat program called chat. When we navigate to the hw5 directory and type make these three programs should be generated.</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cd hw5</span><br><span class="line">$ make</span><br><span class="line">gcc -Wa11 -Werror server.c -o server</span><br><span class="line">gcc -Wal1 -Werror client.c -o client</span><br><span class="line">gcc -Wa11 -Werror chat.c -o chat</span><br><span class="line">$ ls</span><br><span class="line">chat chat.c<span class="built_in"> client </span>client.c Makefile README.md<span class="built_in"> server </span>server.c</span><br></pre></td></tr></table></figure>
+<p>A good strategy for splitting up the work in this assignment should be to have one partner create the client/chat program and the other partner create the server. Test out each part as you implement it to ensure that it works (don’t just build the entire thing separately and hope it all works in the end.) It’s also okay to test both the server and client locally on your own machine, but you really should test it out over a real network as well.</p>
+<h3 id="Helpful-Resources"><a href="#Helpful-Resources" class="headerlink" title="Helpful Resources"></a>Helpful Resources</h3><p>You should make sure you understand chapter 11, 12.2, and 12.3 in your textbook. Also if you didn’t understand files, fork, execute, and pipes from the previous homework, make sure you review chapter 10.1-10.4 and 10.6-10.12.</p>
+<p>An AMAZING reference on sockets which summarizes the man pages can be found here (Don’t worry that the site is called python). Additionally you may also want to read Bee’s Guide to Network Programming. It has a good mix of tutorials, explanations, and descriptions of the functions you need to use for this assignment. You may also want to consider using wireshark or tcpdump to monitor the network packets.</p>
+<h3 id="Things-to-be-aware-of"><a href="#Things-to-be-aware-of" class="headerlink" title="Things to be aware of"></a>Things to be aware of</h3><p>Aside from the issues which occur in the protocol (such as a user with duplicate names), you also need to handle other external errors such as connections getting lost, client program getting killed, server program getting killed, etc. You should look to handle:</p>
 <ul>
-<li>understand and apply Object Oriented concepts and techniques to the design and implementation of CGI systems</li>
-<li>demonstrate an ability to analyze and select suitable data structures for program development.</li>
-<li>demonstrate an ability to understand and implement computer animation related algorithms using OOP</li>
-<li>develop GUI based systems using a suitable API for animation</li>
+<li>EINTR</li>
+<li>EPIPE</li>
+<li>ECONNREFUSED</li>
+<li>ECHILD</li>
+<li>EJNVAL</li>
+<li>SIGCHILD</li>
 </ul>
 
       
@@ -397,11 +395,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
           
-            <a href="/tags/QT/" rel="tag"># QT</a>
-          
-            <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
+            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
           
         </div>
       
@@ -414,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CMPT115-Huffman-Tree-Part4.html" rel="next" title="C++代写：CMPT115-Huffman-Tree-Part4">
-                <i class="fa fa-chevron-left"></i> C++代写：CMPT115-Huffman-Tree-Part4
+              <a href="/CS341-Timing-Instructions.html" rel="next" title="C代写：CS341-Timing-Instructions">
+                <i class="fa fa-chevron-left"></i> C代写：CS341-Timing-Instructions
               </a>
             
           </div>
@@ -423,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS341-Timing-Instructions.html" rel="prev" title="C代写：CS341-Timing-Instructions">
-                C代写：CS341-Timing-Instructions <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -579,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">2.</span> <span class="nav-text">Note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-Research-and-Design"><span class="nav-number">3.</span> <span class="nav-text">Part 1: Research and Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-Implementation"><span class="nav-number">4.</span> <span class="nav-text">Part 2: Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INTENDED-LEARNING-OUTCOMES"><span class="nav-number">5.</span> <span class="nav-text">INTENDED LEARNING OUTCOMES</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Groups"><span class="nav-number">2.</span> <span class="nav-text">Groups</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">3.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Helpful-Resources"><span class="nav-number">4.</span> <span class="nav-text">Helpful Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Things-to-be-aware-of"><span class="nav-number">5.</span> <span class="nav-text">Things to be aware of</span></a></li></ol></div>
             
 
           </div>
