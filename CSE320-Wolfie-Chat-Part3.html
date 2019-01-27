@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals," />
+  <meta name="keywords" content="Network Programming,SQLite," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
+<meta name="keywords" content="Network Programming,SQLite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS207 Hotel Booking Application">
-<meta property="og:url" content="https://tk1307993.coding.me/CS207-HotelBookingApplication.html">
+<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part3">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
+<meta property="og:description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-25T04:04:18.253Z">
+<meta property="og:updated_time" content="2019-01-27T11:47:51.553Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS207 Hotel Booking Application">
-<meta name="twitter:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
+<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part3">
+<meta name="twitter:description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS207-HotelBookingApplication.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html"/>
 
 
 
 
 
-  <title>Java代写：CS207 Hotel Booking Application | 留学生CS编程作业代写</title>
+  <title>C代写：CSE320-Wolfie-Chat-Part3 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS207-HotelBookingApplication.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS207 Hotel Booking Application</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part3</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-25T12:00:59+08:00">
-                2018-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-27T19:44:44+08:00">
+                2019-01-27
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。
+                  这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。
               </div>
           
 
@@ -360,18 +360,27 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>一个成熟的酒店管理系统，还可以接入或被接入其他系统。只要做好接口设计，给出稳定、可拓展的接口，这类系统便可以反复利用。<br>当然，对于酒店管理系统的重构，也是十分头疼的一件事。由于要逐个梳理需求，在重构中要避免需求的落下。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Below are the features of this project that you should implement in this course.</p>
+        <h3 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h3><p>The diagram below represents the general control flow of the Client. Study the figure carefully and ask clarification question on piazza.</p>
+<p>The client begins by automatically using the command line args (see usage below) to connect to the server. It then proceeds to the login stage which at this time will be automatic as all that needs to be sent to the server is the client’s username. However, use some planning when implementing this section as you will later add support to ask the user for a password while logging in. Upon a successful login your client proceeds to block on I/O Multiplexing, this means your program is waiting on input from either the server’s socket or stdin.</p>
 <ol>
-<li>As a user, he can login with a username and password and launch the hotel booking application.</li>
-<li>As a user, he can search available rooms in the hotel by entering a departure date, and book the standard room, big bed room or business suite room.</li>
-<li>As a user, he can display search results sorted by floor, cost and date.</li>
-<li>As a user, he can cancel the reservation room.</li>
-<li>This application will use a txt file to load the user’s information. The file should contains the following properties:<br>LastName, FirstName, Gender, Age, Email, CreditCardNumber, BillingAddress, ExpriyDate.</li>
+<li>When receiving input your program will diverge depending on where the input comes from. In the case of stdin your client will handle the command given and do what is described below for the given command.</li>
+<li>When receiving input from the server socket, your program will handle the protocol as described in the document. One example would be, printing the time logged when the EM IT verb is received from the server.</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本次作业需要实现酒店管理系统的一部分业务功能，即用户使用部分，包括了用户登录、预订查询、查询排序、预定房间和预订取消等功能。代码的实现需要结合所给出的框架来完成，因此熟悉框架的结构成为了一个不可缺少的过程。</p>
-<p>需要注意的是，对于此类系统，一个通用的设计模型是：先判断传入参数和合法性，再判断是否拥有执行权限，最后再做相关业务逻辑。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出emailAddress地址的业务逻辑代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">validateEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (emailAddress == <span class="keyword">null</span> || emailAddress.equals(<span class="string">""</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Pattern p = Pattern.compile(<span class="string">"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"</span>);</span><br><span class="line">    Matcher m = p.matcher(emailAddress);  </span><br><span class="line">    <span class="keyword">return</span> m.matches();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (validateEmailAddress(emailAddress) == <span class="keyword">false</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> EmailException(emailAddress);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// do business logic</span></span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">/client </span>[-hcv] NAME SERVER_IP SERVER_PORT</span><br><span class="line">-h           Displays this help menu, <span class="keyword">and</span> returns EXIT_SUCCESS.</span><br><span class="line">-c           Requests <span class="keyword">to</span><span class="built_in"> server </span><span class="keyword">to</span> create a new user</span><br><span class="line">-v           Verbose <span class="builtin-name">print</span> all<span class="built_in"> incoming </span><span class="keyword">and</span> outgoing protocol verbs content</span><br><span class="line">NAME         This is the username <span class="keyword">to</span> display when chatting.</span><br><span class="line">SERVER_IP    The ipaddress of the<span class="built_in"> server </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br><span class="line">SERVER_PORT  The<span class="built_in"> port </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br></pre></td></tr></table></figure>
+<p>To make things easier to read, use the ansii escape codes to help color your messages on the client as you did with the server.</p>
+<h3 id="WOLFIE-Protocol"><a href="#WOLFIE-Protocol" class="headerlink" title="WOLFIE Protocol"></a>WOLFIE Protocol</h3><p>Now we will attempt to describe the protocol. This is how the server and client program communicate with each other. It is important that you follow the protocol described exactly. During the grading process we will test your client program with a server we have made and your server with a client we have made. As long as you follow the protocol correctly none of this should matter.</p>
+<p>In the diagrams we use the symbol CR to represent \r and NL to represent \n (The software that creates the diagram parses \n as a newline so we had to change the symbols). You must replace all occurrences of CR NL with the correct values.<br>Example:<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM student <span class="keyword">CR</span> NL <span class="keyword">CR</span> NL</span><br></pre></td></tr></table></figure></p>
+<p>should be translated to<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM student <span class="symbol">\r</span><span class="symbol">\n</span><span class="symbol">\r</span><span class="symbol">\n</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Login-to-the-server"><a href="#Login-to-the-server" class="headerlink" title="Login to the server"></a>Login to the server</h3><p>When the server accepts the client connection request, it will immediately spawn a login thread to handle the login work. The client will initiate the login transaction with the server by sending the WOLFIE verb to the server. The server will respond to the client by replying with EIFLOW (wolfie backwards). Then the server can expect the client to identify itself with the IAM verb. If everything is correct, the server will respond with HI. At this point the client is logged in. You should retain their login time in the data structure you employed to store user information. You can now send a follow up message to the client which alerts them to the message of the day by sending MOTD. The MOTD should print out on the client upon receipt.</p>
+<blockquote>
+<p>The ellipses … represent that there is more communication further down, but just not illustrated in this part of the diagram.</p>
+</blockquote>
+<h3 id="Failed-login"><a href="#Failed-login" class="headerlink" title="Failed login"></a>Failed login</h3><p>It is possible for a login attempt to fail. If a user logs in using the same name as someone already connected, the server should reject that user. The server will send the ERR verb followed by theand the corresponding.</p>
+<blockquote>
+<p>A list of all error codes can be located at the end of the document.</p>
+</blockquote>
+<h3 id="Logout-client-Initiates"><a href="#Logout-client-Initiates" class="headerlink" title="Logout (client Initiates)"></a>Logout (client Initiates)</h3><p>When the user types /logout into their terminal, it begins the process of disconnecting cleanly. The client will send BYE and then receive a BYE response from the server. Implementing the client so that it waits for confirmation from the server is a polite way of making sure the server has properly removed the user from it’s data structures and is in an acceptable state for the user to then disconnect.</p>
+<h3 id="Shutdown-server-initiates"><a href="#Shutdown-server-initiates" class="headerlink" title="Shutdown (server initiates)"></a>Shutdown (server initiates)</h3><p>Finally if the user were to type /shutdown it would initiate the above protocol to terminate the connection with all connected users. It will send BYE to ALL CONNECTED USERS. It would then clean up any open files and sockets it may have open and then terminate.</p>
 
       
     </div>
@@ -389,7 +398,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+          
+            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
           
         </div>
       
@@ -402,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC120H-Simulating-Canadian-Elections.html" rel="next" title="Python代写：CSC120H Simulating Canadian Elections">
-                <i class="fa fa-chevron-left"></i> Python代写：CSC120H Simulating Canadian Elections
+              <a href="/CSE320-Wolfie-Chat-Part2.html" rel="next" title="C代写：CSE320-Wolfie-Chat-Part2">
+                <i class="fa fa-chevron-left"></i> C代写：CSE320-Wolfie-Chat-Part2
               </a>
             
           </div>
@@ -411,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP3007-Pathfinding.html" rel="prev" title="Java代写：COMP3007 Pathfinding">
-                Java代写：COMP3007 Pathfinding <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Client"><span class="nav-number">1.</span> <span class="nav-text">Client</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Usage"><span class="nav-number">2.</span> <span class="nav-text">Usage:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WOLFIE-Protocol"><span class="nav-number">3.</span> <span class="nav-text">WOLFIE Protocol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Login-to-the-server"><span class="nav-number">4.</span> <span class="nav-text">Login to the server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Failed-login"><span class="nav-number">5.</span> <span class="nav-text">Failed login</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logout-client-Initiates"><span class="nav-number">6.</span> <span class="nav-text">Logout (client Initiates)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shutdown-server-initiates"><span class="nav-number">7.</span> <span class="nav-text">Shutdown (server initiates)</span></a></li></ol></div>
             
 
           </div>
