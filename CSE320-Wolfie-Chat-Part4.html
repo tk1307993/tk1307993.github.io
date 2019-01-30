@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Network Programming,SQLite," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="这是接之前作业的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
+<meta name="keywords" content="Network Programming,SQLite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CSC120H Simulating Canadian Elections">
-<meta property="og:url" content="https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html">
+<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part4">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。">
+<meta property="og:description" content="这是接之前作业的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-20T12:58:23.102Z">
+<meta property="og:updated_time" content="2019-01-30T13:41:46.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CSC120H Simulating Canadian Elections">
-<meta name="twitter:description" content="高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。">
+<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part4">
+<meta name="twitter:description" content="这是接之前作业的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html"/>
 
 
 
 
 
-  <title>Python代写：CSC120H Simulating Canadian Elections | 留学生CS编程作业代写</title>
+  <title>C代写：CSE320-Wolfie-Chat-Part4 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CSC120H Simulating Canadian Elections</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part4</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-20T20:53:30+08:00">
-                2018-08-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T21:38:23+08:00">
+                2019-01-30
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。
+                  这是接之前作业的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。
               </div>
           
 
@@ -360,18 +360,39 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>高大上的Elections，特别是在大选中，投票往往会采用电子选箱，也就是智能选举系统。</p>
-<p>相比纸质选票，电子计票有着快速计票、实时计票、节省人工成本、计票可回收利用等优点。尤其是差额票，对于候选人较多的情况，电子计票的优势就更大了。</p>
-<p>电子计票系统中，最重要的部件就是识别有效选票、鉴别无效选票、统计选票，对识别器质量已经算法有较高的要求。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>There are so many different kinds of voting systems, especial electronic voting system in the world. In this assignment you will be comparing four of them: Approval Voting; Plurality, also known as First Past the Post; Copeland’s Method and the Borda Count. You will be simulating Canadian elections, where voters are choosing between the four major federal parties (New Democratic Party, Green Party, Liberal Party, Conservative Party).</p>
+        <h3 id="User-to-User-Chats"><a href="#User-to-User-Chats" class="headerlink" title="User to User Chats"></a>User to User Chats</h3><p>In this part you will be enhancing your client to allow for communication between other clients. In order to separate individual user to user chats, you will need to implement a chat executable program which your client will execute as child processes. Using the xterm program in tandem with this chat executable you’ll be able to create a client that spawns new windows as needed to display chats. The behavior will emulate what you may be familiar with on facebook or google hangouts functionality in terms of automatically spawning new small windows dedicated for chatting as opposed to monopolizing the user’s entire view of the screen.</p>
+<p>When a client wants to begin a chat session with another user, they type into the client window on stdin the client command /chat. This will trigger the client to send to the server a new verb, MSG. The MSG verb will be used for communication of ALL chat messages between the server and client. Let’s consider an example:</p>
 <ol>
-<li>Approval Voting: everyone can vote many options</li>
-<li>Plurality: everyone can vote only one candidate</li>
-<li>Copeland’s Method: everyone can rank the candidates</li>
-<li>The Borda Count: everyone can rank the candidates</li>
+<li>Paul initiates chat using the /chat command, the message is formatted into the MSG\r\n\r\n protocol and sent to the server.<br>When the server receives the MSG verb, it sends the same message back to both the To and FROM user.</li>
+<li>When Paul’s and Neal’s client receive the MSG\r\n\r\n back from the server, the client program will create a UNIX Domain Socket to share with the child process (for the pop-up chat window) to communicate over, then fork and execv an xterm terminal which will run your ./chat program.</li>
+<li>The chat program is a simple program which takes input from stdin and sends to the Client program, prints on stdout messages from the client program, and handles the command /close which terminates the child process (same as closing the terminal window).</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><h4 id="计票过程"><a href="#计票过程" class="headerlink" title="计票过程"></a>计票过程</h4><p>对于Approval Voting计票法，每人可投多个候选人，因此不需要考虑无效选票，检票时，当发现其中候选人之一出现选票时，记录下来<br>对于Plurality计票法，每人仅可投一位候选人，因此当出现多位时，该选票记为废票。有效票则记录在候选人票数中<br>对于Copeland’s Method计票法，每人给出排名，如果允许重复排名则不会出现无效选票，反之则需要剔除无效选票。根据选票中的票值排序，按照权值加到候选人票数，并记录下来<br>对于The Borda Count计票法，类似Copeland’s Method</p>
-<h4 id="验票过程"><a href="#验票过程" class="headerlink" title="验票过程"></a>验票过程</h4><p>对于Approval Voting计票法，验票则是将候选人的票数从高到低排序<br>对于Plurality计票法，同Approval Voting，将候选人的票数从高到低排序<br>对于Copeland’s Method计票法，将候选人的加权和从高到低排序<br>对于The Borda Count计票法，类似Copeland’s Method，将候选人的加权和从高到低排序</p>
+<p>This is the initial creation of all user to user chats. Once both users have an xterm chat window open for communication, the users can freely type messages to each other. Incoming messages should be proceeded by the &gt; symbol and outgoing messages by &lt; in the chat window. With each message entered in the xterm on stdin, the chat program should relay the information to the client through their Unix Domain socket. The client then converts the message into the Wolfie Protocol MSG verb and sends to the server. The below figure illustrates the steps.</p>
+<p>A user can close a chat window at anytime using either the close button on the xterm window or by using the command /close. When the window is closed on one client it has no impact on the client who was chatting with the user. In the figure below Paul closed the chat window but Neal still has it open. When Neal types a message to Paul it is sent to the server (Step 1). The sewer will forward the message back to Paul &amp; Neal (Step 2). Since Paul has no existing window, his client creates a new window and displays the message. Neal’s client will just display the message since the xterm is already open.</p>
+<p>Paul closed the chat window and then wants to send Neal a new message. To initiate the chat again, he would need to type /chat command in his client. This will send the MSG verb to the sewer (Step 1 in figure below). Upon the server’s response, Paul’s client would spawn a new chat window. Neal and Paul’s chat windows will then both display the</p>
+<p>Overall, the protocol MSG verb is generic. The server has no knowledge of the chat windows open or closed. It is the client program’s responsibility to open, close, and manage the chat windows. In this way, it doesn’t matter if the xterm window is closed because every time MSG is received the client will check to see if a window already exists for communicating with theuser and if not it will fork and exec a new xterm process to become the window needed for communication. If the window does exist then the message is passed through the Unix domain socket and displayed appropriately on the chat window.</p>
+<p>If one of the user’s disconnects from the server or does not exist, but a message is sent to this user, the server will respond with an ERR message.</p>
+<h3 id="Added-Client-command"><a href="#Added-Client-command" class="headerlink" title="Added Client command"></a>Added Client command</h3><h4 id="chat"><a href="#chat" class="headerlink" title="/chat"></a>/chat</h4><p>The /chat command requires the name of the user to send the message to and the message to be sent. The client program will send to the server the MSG verb to communicate the message to the other user.</p>
+<h4 id="logout"><a href="#logout" class="headerlink" title="/logout"></a>/logout</h4><p>Update the functionality of the command to now additionally close all the chat windows and all file descriptors prior to exiting the client program.</p>
+<h3 id="Chat-Program"><a href="#Chat-Program" class="headerlink" title="Chat Program"></a>Chat Program</h3><p>Usage:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./chat UNIX_SOCKET_FD</span><br><span class="line">UNIX_SOCKET_FD          The Unix Domain <span class="keyword">File</span> Descriptor <span class="keyword">number</span>.</span><br></pre></td></tr></table></figure></p>
+<p>When the server sends MSG verb to your client it should fork and exec xterm, which in turn will exec your chat program in a basic terminal. This will act as the interface to communicate with another user much like chats on Facebook or hangouts work. These will act as the small popups to chat in while the client remains the manager for the connection with the server. The chat program will use Unix domain sockets to communicate with the parent client process. Using socketpair() you can declare two anonymous sockets and pass the file descriptor to the chat program as an argument. You can also declare the sockets as you would normally using socket(). In either case you must use AF_UNIX as the domain.</p>
+<p>xterm is a powerful terminal emulator as it allows for a lot of customization using command line arguments. You should study the man page for xterm to see what arguments will help make your program as easy to use as possible. To get you started, the format to fork and exec the ./chatprogram in xterm is as follows:</p>
+<blockquote>
+<p>Example execution string: “xterm -geometry 45x35+%d -T %s -e ./chat. %d”</p>
+</blockquote>
+<p>Each of the arguments have the following meaning.</p>
+<ul>
+<li><p>-geometry geometry: This argument allows you to set the size and location of the xterm window opened. Geometry format is described here under “geometry specifications”. However, all you really need to know is that is takes the format WIDTHxHEIGHT+XOFF+YOFF where width and height are in characters and XOFF and YOFF is in pixels. In the suggested execution string above you can see that you can omit the YOFF value and you can use sprintf to set the XOFF so the windows spawned are not stacked on one another.</p>
+</li>
+<li><p>-T string: With this flag you can set the title of the string to the username being communicated with so the user has a quick reference of which window is chatting with whom. Use %s format specifier to insert the username for the chat.</p>
+</li>
+<li><p>-e program [arguments … ]: finally there is the most important flag. -e specifies the executable to be run when the terminal opens. The arguments to the program follow immediately after as you would type them in the terminal. The execution string shows how you would pass the unix domain socket file descriptor. Use %s format specifier for the file descriptor of the Unix domain socket.</p>
+</li>
+</ul>
+<p>The chat program should prompt the user for input, anything the user types in followed by pressing the enter-key should be considered a message with the exception of the /close command. The /close command simply closes the window and the Unix domain socket in the parent. There is no protocol messages that need to be exchanged with the server when this command is used. The Client forwards each MSG received to the corresponding chat window via each open chat’s Unix domain socket.</p>
+<p>The protocol has new verbs that must be implemented to support these user features. As we have seen in the figures, the MSG verb will deliver the information of who the message is to, whom it is from, and the message being sent. Additionally, add a new verb, UOFF, which will be used to notify ALL clients connected to the server of a user logging out or disconnecting from the server.</p>
+<h3 id="Client-crash-or-error-termlnatlon"><a href="#Client-crash-or-error-termlnatlon" class="headerlink" title="Client crash or error termlnatlon"></a>Client crash or error termlnatlon</h3><p>Crashes happen so the UOFF verb should handle both the case of a client disconnecting and of a client logging off. If someone’s chatting partner disconnects and the chat window is still open for that user, when the UOFF verb is received, the chat window should print a message that informs the user of the disconnection. The xterm window should then close on any key press. This is to prevent the user from attempting to send anything to a disconnected user. Think about how the server can handle errors when trying to pass along user messages, and accordingly turn that error into a UOFF broadcast verb to notify all clients of the user’s disconnection.</p>
+<h3 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h3><p>On the server side the communication threads must handle receiving and sending messages to the proper clients using the MSGprotocol defined in the prior figures. The server also must handle forwarding the UOFF verb to all still connected clients when a user disconnects or logs off the server.</p>
 
       
     </div>
@@ -389,7 +410,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+          
+            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
           
         </div>
       
@@ -402,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS4410-GamesTechnologyAssignment.html" rel="next" title="C++代写：CS4410 GamesTechnologyAssignment">
-                <i class="fa fa-chevron-left"></i> C++代写：CS4410 GamesTechnologyAssignment
+              <a href="/CSE320-Wolfie-Chat-Part3.html" rel="next" title="C代写：CSE320-Wolfie-Chat-Part3">
+                <i class="fa fa-chevron-left"></i> C代写：CSE320-Wolfie-Chat-Part3
               </a>
             
           </div>
@@ -411,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS207-HotelBookingApplication.html" rel="prev" title="Java代写：CS207 Hotel Booking Application">
-                Java代写：CS207 Hotel Booking Application <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计票过程"><span class="nav-number">3.1.</span> <span class="nav-text">计票过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验票过程"><span class="nav-number">3.2.</span> <span class="nav-text">验票过程</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#User-to-User-Chats"><span class="nav-number">1.</span> <span class="nav-text">User to User Chats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Added-Client-command"><span class="nav-number">2.</span> <span class="nav-text">Added Client command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#chat"><span class="nav-number">2.1.</span> <span class="nav-text">/chat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logout"><span class="nav-number">2.2.</span> <span class="nav-text">/logout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chat-Program"><span class="nav-number">3.</span> <span class="nav-text">Chat Program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client-crash-or-error-termlnatlon"><span class="nav-number">4.</span> <span class="nav-text">Client crash or error termlnatlon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Server"><span class="nav-number">5.</span> <span class="nav-text">Server</span></a></li></ol></div>
             
 
           </div>
