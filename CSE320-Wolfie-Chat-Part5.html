@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Data Structure," />
+  <meta name="keywords" content="Network Programming,SQLite," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
-<meta name="keywords" content="Algorithm,Data Structure">
+<meta name="description" content="这是这一系列作业的最后一部分了，这部分包括用户账户管理以及安全的实现，此外还有一些杂项和收尾工作。">
+<meta name="keywords" content="Network Programming,SQLite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS3530 Rat In A Maze Problem">
-<meta property="og:url" content="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
+<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part5">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part5.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
+<meta property="og:description" content="这是这一系列作业的最后一部分了，这部分包括用户账户管理以及安全的实现，此外还有一些杂项和收尾工作。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T12:23:13.292Z">
+<meta property="og:updated_time" content="2019-02-13T10:21:42.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS3530 Rat In A Maze Problem">
-<meta name="twitter:description" content="Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。">
+<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part5">
+<meta name="twitter:description" content="这是这一系列作业的最后一部分了，这部分包括用户账户管理以及安全的实现，此外还有一些杂项和收尾工作。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part5.html"/>
 
 
 
 
 
-  <title>C++代写：CS3530 Rat In A Maze Problem | 留学生CS编程作业代写</title>
+  <title>C代写：CSE320-Wolfie-Chat-Part5 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS3530 Rat In A Maze Problem</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part5</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T20:19:28+08:00">
-                2018-08-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-13T18:18:37+08:00">
+                2019-02-13
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Writing/" itemprop="url" rel="index">
-                    <span itemprop="name">Writing</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。
+                  这是这一系列作业的最后一部分了，这部分包括用户账户管理以及安全的实现，此外还有一些杂项和收尾工作。
               </div>
           
 
@@ -360,28 +360,34 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Rat in a maze problem，是用回溯法求解迷宫问题的经典例题。回溯法是一种优选的搜索法，根据择优的条件向前或向后搜索，最终获得目标。当向前搜索到某一步，根据目标函数得到的结果不是最优时，进行回溯，重新选择探索方向。由此得到最优解。<br>回溯法解决问题的基本步骤一般为：</p>
-<ol>
-<li>根据给定问题，定义目标函数，并保证该问题至少有一个解</li>
-<li>确定搜索的空间结构，确保回溯法可以遍历整个解空间</li>
-<li>通过深度优先算法的形式，搜素整个解空间，并通过适当剪纸来减少冗余的搜索</li>
-</ol>
-<p>回溯法的一个应用场景便是解决迷宫问题。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this problem you will solve the “Rat in a maze problem”, using Stacks and Queues (Lectures 12-14).<br>The main points we shall be covering are:</p>
-<p>Using Stacks and Queues in an application</p>
-<ol>
-<li>Re-enforcement of the usage and advantages of makefiles / make utility in UNIX/Linux</li>
-<li>Use of abstract data types in C++, and separate compilation</li>
-<li>Use of header files and libraries for Stacks and Queues</li>
-</ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要采用Stack和Queue来解决迷宫问题。</p>
-<p>栈用于存放回溯算法中的搜索路径，由于栈的后进先出特性，可以很容易的实现回溯。</p>
-<p>队列用于存放已经搜索过的最优路径，由于队列的先进先出特性，可以很容易的进行目标函数的计算。</p>
-<p>目标函数：从(0, 0)走到(N, N)的Taxicab geometry，也就是曼哈顿距离。</p>
-<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>题目搜给的迷宫为<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">011101000100000</span></span><br><span class="line"><span class="number">010001100111100</span></span><br><span class="line"><span class="number">011001000000000</span></span><br><span class="line"><span class="number">001000010111111</span></span><br><span class="line"><span class="number">001011000010000</span></span><br><span class="line"><span class="number">001000101010100</span></span><br><span class="line"><span class="number">000010010000100</span></span><br></pre></td></tr></table></figure></p>
-<p>我们需要利用回溯法，从左上角走到右下角</p>
-<p>下面给出程序的回溯搜索算法部分的代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">bool</span> SearchEngine::DoMove(<span class="keyword">int</span> movePosition) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">switch</span> (movePosition) &#123;</span><br><span class="line">    <span class="keyword">case</span> MOVE_LEFT:  </span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;      </span><br><span class="line">      SearchEngine::DoMove(MOVE_RIGHT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_UP:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_DOWN);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_RIGHT:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_UP) &amp;&amp; SearchEngine::Search(MOVE_UP, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_LEFT);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MOVE_DOWN:</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_LEFT) &amp;&amp; SearchEngine::Search(MOVE_LEFT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_RIGHT) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (SearchEngine::TryMove(MOVE_DOWN) &amp;&amp; SearchEngine::Search(MOVE_RIGHT, length - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      SearchEngine::DoMove(MOVE_UP);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="User-Accounts-amp-Basic-Security"><a href="#User-Accounts-amp-Basic-Security" class="headerlink" title="User Accounts &amp; Basic Security"></a>User Accounts &amp; Basic Security</h3><p>Now it is time to add persistence to your server by creating user accounts. The user can then login and out of the server using a password. The server must be modified to contain a shared resource which holds user account information. Additionally, the login protocol must be updated to allow for account validation, eg. passwords.</p>
+<blockquote>
+<p>You will replace the login protocol from Part I with the account login protocol.</p>
+</blockquote>
+<h3 id="Password-Criteria"><a href="#Password-Criteria" class="headerlink" title="Password Criteria"></a>Password Criteria</h3><p>Passwords must meet the following criteria to be valid:</p>
+<ul>
+<li>Must be at least 5 characters in length</li>
+<li>Must contain at least 1 uppercase character</li>
+<li>Must contain at least 1 symbol character</li>
+<li>Must contain at least 1 number character<blockquote>
+<p>Example: Cool320!</p>
+</blockquote>
+</li>
+</ul>
+<p>When the user types in the password, use the gctpass function so the password is not displayed as it is typed.</p>
+<h3 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h3><p>Usage updated:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">/server </span>[-hv] PORT_NUMBER MOTD [ACCOUNTS_FILE]</span><br><span class="line">-h             Displays help menu &amp; returns EXIT_SUCCESS.</span><br><span class="line">-v             Verbose <span class="builtin-name">print</span> all<span class="built_in"> incoming </span><span class="keyword">and</span> outgoing protocol verbs &amp; content.</span><br><span class="line">PORT_NUMBER   <span class="built_in"> Port </span>number <span class="keyword">to</span> listen on.</span><br><span class="line">MOTD           Message <span class="keyword">to</span> display <span class="keyword">to</span> the<span class="built_in"> client </span>when they connect.</span><br><span class="line">ACCOUNTS_FILE  File containing username <span class="keyword">and</span> password data <span class="keyword">to</span> be loaded upon execution.</span><br></pre></td></tr></table></figure></p>
+<p>The server will request a password when a user attempts to log in. Also, it will create a new password for new users when they identify themselves upon login. There should now be two data structures central to your program: a Users list and an Accounts list. The Users list is a list of the users currently logged into the server. The Accounts list is the persistent list of users and their passwords loaded and saved to a file on the server’s execution and termination respectively. If an accounts file is provided on the command line, your server should load this file into the accounts list upon start-up. If no file is provided, the server should start with no existing accounts.</p>
+<blockquote>
+<p>Do not use an array for either of these data structures, it MUST be an extendable format such as a linked list within your server program.</p>
+</blockquote>
+<h3 id="Added-Server-Command"><a href="#Added-Server-Command" class="headerlink" title="Added Server Command"></a>Added Server Command</h3><h4 id="accts"><a href="#accts" class="headerlink" title="/accts"></a>/accts</h4><p>When /accts is typed into the server’s terminal it should dump a list of all user accounts and information. This printout should be similarly formatted to the output of the /users command.</p>
+<h4 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h4><p>To add user authentication we will modify the client program to take an additional argument for creating a new user on the server. When the optional -c argument is included, the client will attempt to create a new user on the server. If the argument is not provided, the client will attempt to login to the server as an existing user with an account.<br>Usage updated:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">/client </span>[-hcv] NAME SERVER_IP SERVER_PORT</span><br><span class="line">-h             Displays this help menu, <span class="keyword">and</span> returns EXIT_SUCCESS.</span><br><span class="line">-c             Requests <span class="keyword">to</span><span class="built_in"> server </span><span class="keyword">to</span> create a new user</span><br><span class="line">-v             Verbose <span class="builtin-name">print</span> all<span class="built_in"> incoming </span><span class="keyword">and</span> outgoing protocol verbs content.</span><br><span class="line">NAME           This is the username <span class="keyword">to</span> display when chatting.</span><br><span class="line">SERVER_IP      The ipaddress of the<span class="built_in"> server </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br><span class="line">SERVER_PORT    The<span class="built_in"> port </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br></pre></td></tr></table></figure></p>
+<h3 id="User-Authentication-Protocol"><a href="#User-Authentication-Protocol" class="headerlink" title="User Authentication Protocol"></a>User Authentication Protocol</h3><p>The protocol for logging into the server will now additionally include user creation. We will introduce new verbs IAMNEW, HINEW, NEWPASS.</p>
+<blockquote>
+<p>Remember when the client prompts the user to enter their password, use the getpass function so the password is not displayed as it typed.</p>
+</blockquote>
+<p>Once a user account has been established with the server, on subsequent client connections the user must be validated. We will introduce new verbs AUTH, HINEW, NEWPASS.</p>
+
       
     </div>
     
@@ -398,9 +404,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
           
         </div>
       
@@ -413,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP435-Multimedia-Technologies-TME5.html" rel="next" title="Written代写：COMP435 Multimedia Technologies TME5">
-                <i class="fa fa-chevron-left"></i> Written代写：COMP435 Multimedia Technologies TME5
+              <a href="/CSE320-Wolfie-Chat-Part4.html" rel="next" title="C代写：CSE320-Wolfie-Chat-Part4">
+                <i class="fa fa-chevron-left"></i> C代写：CSE320-Wolfie-Chat-Part4
               </a>
             
           </div>
@@ -422,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP1001-MoreTextProcessing.html" rel="prev" title="Python代写：COMP1001-MoreTextProcessing">
-                Python代写：COMP1001-MoreTextProcessing <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number"></span> <span class="nav-text">Tips</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Accounts-amp-Basic-Security"><span class="nav-number">1.</span> <span class="nav-text">User Accounts &amp; Basic Security</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Password-Criteria"><span class="nav-number">2.</span> <span class="nav-text">Password Criteria</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Server"><span class="nav-number">3.</span> <span class="nav-text">Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Added-Server-Command"><span class="nav-number">4.</span> <span class="nav-text">Added Server Command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#accts"><span class="nav-number">4.1.</span> <span class="nav-text">/accts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Client"><span class="nav-number">4.2.</span> <span class="nav-text">Client</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Authentication-Protocol"><span class="nav-number">5.</span> <span class="nav-text">User Authentication Protocol</span></a></li></ol></div>
             
 
           </div>
