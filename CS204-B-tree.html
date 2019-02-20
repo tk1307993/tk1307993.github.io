@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这是Huffman作业的第二部分，分为三个小练习。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="次需要代写的作业是用C++实现一个B-tree，给了基本的框架代码，以及给定的输入和输出样式。虽然不难写，但是这种作业稍微有一个Bug，就会导致排查相当麻烦。">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CMPT115-Huffman-Tree-Part2">
-<meta property="og:url" content="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html">
+<meta property="og:title" content="C++代写：CS204-B-tree">
+<meta property="og:url" content="https://tk1307993.coding.me/CS204-B-tree.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这是Huffman作业的第二部分，分为三个小练习。">
+<meta property="og:description" content="次需要代写的作业是用C++实现一个B-tree，给了基本的框架代码，以及给定的输入和输出样式。虽然不难写，但是这种作业稍微有一个Bug，就会导致排查相当麻烦。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-29T01:27:05.805Z">
+<meta property="og:updated_time" content="2019-02-20T13:48:20.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CMPT115-Huffman-Tree-Part2">
-<meta name="twitter:description" content="这是Huffman作业的第二部分，分为三个小练习。">
+<meta name="twitter:title" content="C++代写：CS204-B-tree">
+<meta name="twitter:description" content="次需要代写的作业是用C++实现一个B-tree，给了基本的框架代码，以及给定的输入和输出样式。虽然不难写，但是这种作业稍微有一个Bug，就会导致排查相当麻烦。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS204-B-tree.html"/>
 
 
 
 
 
-  <title>C++代写：CMPT115-Huffman-Tree-Part2 | 留学生CS编程作业代写</title>
+  <title>C++代写：CS204-B-tree | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS204-B-tree.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CMPT115-Huffman-Tree-Part2</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：CS204-B-tree</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-29T09:23:12+08:00">
-                2018-12-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T21:46:00+08:00">
+                2019-02-20
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这是Huffman作业的第二部分，分为三个小练习。
+                  次需要代写的作业是用C++实现一个B-tree，给了基本的框架代码，以及给定的输入和输出样式。虽然不难写，但是这种作业稍微有一个Bug，就会导致排查相当麻烦。
               </div>
           
 
@@ -360,35 +360,11 @@
       
 
       
-        <h3 id="Exercise-1-Warmup-Completing-Frequency-cc"><a href="#Exercise-1-Warmup-Completing-Frequency-cc" class="headerlink" title="Exercise 1 Warmup: Completing Frequency.cc"></a>Exercise 1 Warmup: Completing Frequency.cc</h3><p>We’ll use the Frequency ADT to store a character, e.g., ‘a’, and a count of how many times it appears in some text, e.g., 7. The frequency record will be stored in the Huffman trees.</p>
-<p>The Frequency interface is complete, and defined in Frequency.h. It’s basically a storage unit for characters and integers. The implementation is almost complete, but the constructor, createFrequency() is incomplete. Here’s what is in the Frequency.cc file:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CONSTRUCTOR</span></span><br><span class="line"><span class="comment">// pre: d is the character data being counted,</span></span><br><span class="line"><span class="comment">//      c is the count.</span></span><br><span class="line"><span class="comment">// post: allocates memory for a new frequency record</span></span><br><span class="line"><span class="comment">// return: a reference to the new record</span></span><br><span class="line"><span class="function">Frequency *<span class="title">createFrequency</span><span class="params">(<span class="keyword">char</span> d, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>It currently does nothing. Complete this operation, by allocating a record, and storing the appropriate data.</p>
-<h3 id="Exercise-Summary"><a href="#Exercise-Summary" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><ol>
-<li>Complete createFrequency() as indicated.</li>
-<li>Build the testADT app, and run it.</li>
-<li>If your code does the right things, the first 4 tests should all report “Passed.”</li>
-</ol>
-<h4 id="What-to-hand-in"><a href="#What-to-hand-in" class="headerlink" title="What to hand in:"></a>What to hand in:</h4><p>The file Frequency.cc containing your code for createFrequency() described above.</p>
-<h4 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h4><p>5 marks: createFrequency() builds a Frequency record and correctly initializes it with the given data.</p>
-<h3 id="Exercise-2-Warmup-Completing-TreeNode-cc"><a href="#Exercise-2-Warmup-Completing-TreeNode-cc" class="headerlink" title="Exercise 2 Warmup: Completing TreeNode.cc"></a>Exercise 2 Warmup: Completing TreeNode.cc</h3><p>We’ll use the TreeNode ADT to help us build Huffman trees. In our application, a TreeNode will store a reference to a Frequency record; see TreeNode.h and TreeElement.h. Most of the TreeNode implementation is complete. There are two operations that are currently incomplete: the constructor, createTreeNode(), and the operation height().</p>
-<p>The constructor currently looks like this:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CONSTRUCTOR</span></span><br><span class="line"><span class="comment">// pre: d is a reference to a TreeElement</span></span><br><span class="line"><span class="comment">// post: allocates memory for the TreeNode</span></span><br><span class="line"><span class="comment">// return: reference to the TreeNode record</span></span><br><span class="line"><span class="function">TreeNode *<span class="title">createTreeNode</span><span class="params">(TreeElement d)</span></span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Complete it so that it allocates a correctly initialize TreeNode record.<br>The height operation currently looks like this:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// height(n)</span></span><br><span class="line"><span class="comment">// pre: n is a reference to a TreeNode</span></span><br><span class="line"><span class="comment">// return: the height of the tree</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode *n)</span></span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Complete this function so that it returns the height of a tree whose root is given as the parameter n.<br>Hints:</p>
-<ul>
-<li>This function must be recursive.</li>
-<li>The height of a NULL tree is 0.</li>
-<li>There is a function called max(a,b) you can use. It returns the larger of a or b. This function is defined in a C++ library called “algorithm” which we’ve already #included for you.</li>
-</ul>
-<h3 id="Exercise-Summary-1"><a href="#Exercise-Summary-1" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><ol>
-<li>Complete createTreeNode() as indicated.</li>
-<li>Complete height() as indicated.</li>
-<li>Build the testADT app, and run it.</li>
-</ol>
-<p>If your code does the right things, tests 5-16 should all report “Passed.”</p>
-<h4 id="What-to-hand-in-1"><a href="#What-to-hand-in-1" class="headerlink" title="What to hand in:"></a>What to hand in:</h4><p>The file TreeNode.cc containing your code for the two operations described above.</p>
+        <h3 id="Files-to-hand-in-are"><a href="#Files-to-hand-in-are" class="headerlink" title="Files to hand in are"></a>Files to hand in are</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BTree.cpp</span><br><span class="line">InternalNode.cpp</span><br><span class="line">InernalNode.h</span><br><span class="line">LeafNode.cpp</span><br><span class="line">LeafNode.h</span><br><span class="line">authors.csv</span><br></pre></td></tr></table></figure>
+<h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">BTreeDriver.cpp</span><br><span class="line">BTreeDebugDriver.cpp</span><br><span class="line">BTree.cpp</span><br><span class="line">BTree.h</span><br><span class="line">BTreeNode.cpp</span><br><span class="line">BTreeNode.h</span><br><span class="line">InternalNode.cpp</span><br><span class="line">InernalNode.h</span><br><span class="line">LeafNode.cpp</span><br><span class="line">LeafNode.h</span><br><span class="line">Makefile (uses BTreeDebugDriver<span class="selector-class">.cpp</span> to produce BTree)</span><br><span class="line">Makefile2 (uses BTreeDriver<span class="selector-class">.cpp</span> to produce BTree2)</span><br><span class="line">QueueAr.cpp</span><br><span class="line">QueueAr.h</span><br><span class="line">vector.h</span><br><span class="line">vector.cpp</span><br><span class="line">dsexceptions.h</span><br></pre></td></tr></table></figure>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Your program will read a file that contains a series of integers that it will insert into a BTree, and then print to the screen a breadth first traversal of the BTree. Your task will be to provide the implementation code for the BTree, InternalNode, and LeafNode classes. Since the insert methods for the nodes will be quite long, you should add new methods so that no method is more than 30 lines long. We will not grade on style, but the TAs and I will be of little help with poor quality code. You may only alter those files that will be handed in. The program will take three command line parameters: 1) filename; 2) M, the number of children that internal nodes have; and 3) L, the number of integers each leaf node holds. The input file will not include more than 1000 integers. Since only integers will be stored in the BTree class, I did not implement it as a template. When a node splits, the new node created will always contain at least as many entries as the remaining old node, and will contain the larger values. The output must match that shown in the sample.</p>
+<p>There is one change in the data structure from the book’s; the internal nodes should keep track of the minimum value for every child. You will find this easier than not having the minimum for the first child.</p>
+<p>How did I write this code so fast? I used procedural abstraction. I thought about the tasks, their subtasks, and the subtasks of those subtasks. (You should write them down.) If I could state a subtask, then I planned on writing a separate function to do just that subtask. I found that the tasks of the InternalNode class matched that of the LeafNode class, so I postponed as much work on the InternalNode class as long as possible so that I could learn from my LeafNode mistakes. I worked top down with stubs for the subtasks, and got that iteration to compile without warnings! This avoids making the same mistake repeatedly—the compiler is a very good teacher. When I could do even minimal testing, I did it. What I learned from debugging kept me from duplicating those mistakes in later code, and reminded me of issues that I had forgot about. Sometimes when I addressed a new issue in a method I discovered that I had to add a lot of code. If there is a whole lot of new code, the issue deserved its own method with an appropriate name. It is a simple matter of cutting and pasting, and keeps each method short, and understandable. By the time I was done my LeafNode class had nine methods, and no method has more than 30 lines. Once the LeafNode class worked perfectly, I copied the LeafNode class methods as InternalNode class methods, and did a search and replace from values to keys! Though there are child sibling and parent issues for the InternalNode class, the basic LeafNode code provided a great starting point. In the end my InernalNode class had 13 methods. In comparison to the first time I wrote this with long insert functions a few years ago, the debugging was much faster this time because of the small methods</p>
 
       
     </div>
@@ -406,7 +382,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -419,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CMPT115-Huffman-Tree-Part1.html" rel="next" title="C++代写：CMPT115-Huffman-Tree-Part1">
-                <i class="fa fa-chevron-left"></i> C++代写：CMPT115-Huffman-Tree-Part1
+              <a href="/CS306-Hotel-Reservation-System.html" rel="next" title="PHP代写：CS306-Hotel-Reservation-System">
+                <i class="fa fa-chevron-left"></i> PHP代写：CS306-Hotel-Reservation-System
               </a>
             
           </div>
@@ -428,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CMPT115-Huffman-Tree-Part3.html" rel="prev" title="C++代写：CMPT115-Huffman-Tree-Part3">
-                C++代写：CMPT115-Huffman-Tree-Part3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-1-Warmup-Completing-Frequency-cc"><span class="nav-number">1.</span> <span class="nav-text">Exercise 1 Warmup: Completing Frequency.cc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-Summary"><span class="nav-number">2.</span> <span class="nav-text">Exercise Summary</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-to-hand-in"><span class="nav-number">2.1.</span> <span class="nav-text">What to hand in:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Grading"><span class="nav-number">2.2.</span> <span class="nav-text">Grading</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-2-Warmup-Completing-TreeNode-cc"><span class="nav-number">3.</span> <span class="nav-text">Exercise 2 Warmup: Completing TreeNode.cc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-Summary-1"><span class="nav-number">4.</span> <span class="nav-text">Exercise Summary</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-to-hand-in-1"><span class="nav-number">4.1.</span> <span class="nav-text">What to hand in:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Files-to-hand-in-are"><span class="nav-number">1.</span> <span class="nav-text">Files to hand in are</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Files"><span class="nav-number">2.</span> <span class="nav-text">Files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">3.</span> <span class="nav-text">Description</span></a></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-02-16T01:16:11.869Z</updated>
+  <updated>2019-02-20T13:48:20.314Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS204-B-tree</title>
+    <link href="https://tk1307993.coding.me/CS204-B-tree.html"/>
+    <id>https://tk1307993.coding.me/CS204-B-tree.html</id>
+    <published>2019-02-20T13:46:00.000Z</published>
+    <updated>2019-02-20T13:48:20.314Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Files-to-hand-in-are"><a href="#Files-to-hand-in-are" class="headerlink" title="Files to hand in are"></a>Files to hand in are</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BTree.cpp</span><br><span class="line">InternalNode.cpp</span><br><span class="line">InernalNode.h</span><br><span class="line">LeafNode.cpp</span><br><span class="line">LeafNode.h</span><br><span class="line">authors.csv</span><br></pre></td></tr></table></figure><h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">BTreeDriver.cpp</span><br><span class="line">BTreeDebugDriver.cpp</span><br><span class="line">BTree.cpp</span><br><span class="line">BTree.h</span><br><span class="line">BTreeNode.cpp</span><br><span class="line">BTreeNode.h</span><br><span class="line">InternalNode.cpp</span><br><span class="line">InernalNode.h</span><br><span class="line">LeafNode.cpp</span><br><span class="line">LeafNode.h</span><br><span class="line">Makefile (uses BTreeDebugDriver<span class="selector-class">.cpp</span> to produce BTree)</span><br><span class="line">Makefile2 (uses BTreeDriver<span class="selector-class">.cpp</span> to produce BTree2)</span><br><span class="line">QueueAr.cpp</span><br><span class="line">QueueAr.h</span><br><span class="line">vector.h</span><br><span class="line">vector.cpp</span><br><span class="line">dsexceptions.h</span><br></pre></td></tr></table></figure><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Your program will read a file that contains a series of integers that it will insert into a BTree, and then print to the screen a breadth first traversal of the BTree. Your task will be to provide the implementation code for the BTree, InternalNode, and LeafNode classes. Since the insert methods for the nodes will be quite long, you should add new methods so that no method is more than 30 lines long. We will not grade on style, but the TAs and I will be of little help with poor quality code. You may only alter those files that will be handed in. The program will take three command line parameters: 1) filename; 2) M, the number of children that internal nodes have; and 3) L, the number of integers each leaf node holds. The input file will not include more than 1000 integers. Since only integers will be stored in the BTree class, I did not implement it as a template. When a node splits, the new node created will always contain at least as many entries as the remaining old node, and will contain the larger values. The output must match that shown in the sample.</p><p>There is one change in the data structure from the book’s; the internal nodes should keep track of the minimum value for every child. You will find this easier than not having the minimum for the first child.</p><p>How did I write this code so fast? I used procedural abstraction. I thought about the tasks, their subtasks, and the subtasks of those subtasks. (You should write them down.) If I could state a subtask, then I planned on writing a separate function to do just that subtask. I found that the tasks of the InternalNode class matched that of the LeafNode class, so I postponed as much work on the InternalNode class as long as possible so that I could learn from my LeafNode mistakes. I worked top down with stubs for the subtasks, and got that iteration to compile without warnings! This avoids making the same mistake repeatedly—the compiler is a very good teacher. When I could do even minimal testing, I did it. What I learned from debugging kept me from duplicating those mistakes in later code, and reminded me of issues that I had forgot about. Sometimes when I addressed a new issue in a method I discovered that I had to add a lot of code. If there is a whole lot of new code, the issue deserved its own method with an appropriate name. It is a simple matter of cutting and pasting, and keeps each method short, and understandable. By the time I was done my LeafNode class had nine methods, and no method has more than 30 lines. Once the LeafNode class worked perfectly, I copied the LeafNode class methods as InternalNode class methods, and did a search and replace from values to keys! Though there are child sibling and parent issues for the InternalNode class, the basic LeafNode code provided a great starting point. In the end my InernalNode class had 13 methods. In comparison to the first time I wrote this with long insert functions a few years ago, the debugging was much faster this time because of the small methods</p>]]></content>
+    
+    <summary type="html">
+    
+      次需要代写的作业是用C++实现一个B-tree，给了基本的框架代码，以及给定的输入和输出样式。虽然不难写，但是这种作业稍微有一个Bug，就会导致排查相当麻烦。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP代写：CS306-Hotel-Reservation-System</title>
@@ -449,30 +471,6 @@
     
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS141-LangtonsAntColony</title>
-    <link href="https://tk1307993.coding.me/CS141-LangtonsAntColony.html"/>
-    <id>https://tk1307993.coding.me/CS141-LangtonsAntColony.html</id>
-    <published>2018-11-29T12:19:28.000Z</published>
-    <updated>2018-11-29T12:38:21.330Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Download the zip file LangtonAnts.zip. This is a JavaFX project that simulates the running of a popular cellular automata simulation called Langton’s Ant.</p><p>The program works mostly. What you will be doing is adding your own improvements to my program as listed below. This will give you some practice in working with an already written code as this a common task for software engineers.</p><h3 id="What-the-program-does"><a href="#What-the-program-does" class="headerlink" title="What the program does"></a>What the program does</h3><p>When you first run the program, you will see a grid of squares about 20 by 20. Each square is a ‘cell’ in the simulation. A cell has a ‘state’ which is shown as a different color. In the original Langton Ant simulation there were only 2 states but this program can handle from 2 to 10 states. It is currently set to 6 states.</p><p>If you left click on a square, an ‘ant’ will appear on it. The original Langton Ant simulation had one ant but this simulation can have as many ants as you want. But keep in mind the more ants, the slower the simulation will run as it needs to move every ant at each step.</p><p>When the simulation is running, an ant will move to an adjacent square (up, down, left or right). To determine which square to move to, the ant first turns 90 degrees to the left (L) or right (R) according to a rule based on the state the cell is in. For example, if the cell is in state 3, the program will look up state 3 in a list of rules. The list is stored as a string of ‘L’ or ‘R’ characters. The rule in the string is the index that matches the state number. If the character is ‘L’, then the ant turns 90 to the left (adds 90 to it’s angle). If a ‘R’, then the ant turns 90 to the right (subtracts 90 from it’s angle). It then moves to the adjacent cell in the direction the ant is heading.</p><h3 id="What-You-Need-To-Do"><a href="#What-You-Need-To-Do" class="headerlink" title="What You Need To Do"></a>What You Need To Do</h3><p>The following improvements are needed to be done on the program.</p><ol><li>Settings Dialog Pane: Right now the number of rows, the number of states and the rulestring (set of ‘L’ and ‘R’ commands as a string) are all fixed in the code. Write a dialog pane that allows the user to at least change the number of rows(from 2 to 100), number of states(from 2 to 10) and the rulestring. Make sure to check for user input being in the right ranges and print an error message to the window (not the console) if they are not valid. Also, make sure the rulestring has the same length as the number of states and that it only consists of ‘L’ and ‘R’ characters.<br>Then add the settings pane to the MainPane. You might need to make span more than one row or column so use the GridPane add method which allows you to input how many rows/columns to span.</li><li>Draw a more interesting ant Right now the ant is just a black Ellipse. Make it either more interesting or more artistic. An idea would be to use a ImageView instead of using an Ellipse (or a Polygon object that looks more like an ant). At least do this for a cell size of 10 pixels or larger. You can keep the Ellipse for smaller cell sizes as the images get a bit too small to even see at 10 pixels or less.</li><li>Add some more interesting animation Right now all that happens is the ants disappear from one cell and appear on another and cells change colors. Add some interesting animation to the ant’s movement (or possibly to the cell’s changing color). You can use maybe PathTransition to gradually move the ant or FadeTransition to fade out the ant from one cell and fade in the ant to the other. OR you can try some other idea for animation as long as it uses a subclass of Animation and makes sense for the program.</li><li>Add some text to the window to show the number of steps completed The step field is in the MainPane class. You can update this text in the run() method.</li><li>Buttons to speed up or slow down the simulation. Add these to the buttonPanel.</li><li>Add a button to turn off or on the extra animation you added This is to allow the simulation to run faster as animation tends to slow down the processing of each step.</li><li>A better action for the right click on a cell Note that I have created my own custom event called CellClickedEvent for the CellPane class’s use. I needed this to create or delete an ant in the Model class which resides in the MainPane class. So when a mouse clicks on a CellPane on the board, I fire an event (which goes to all panes) so that the MainPane can get the information needed to create or delete an ant.<br>Right now, the right mouse button will delete an ant but I don’t find this action very useful. So come up with something more useful to do with the right mouse button (like turning an ant on the cell 90 degrees or changing the state of the cell underneath).<br>You will need to change the CellPane’s mouse handler and maybe add some extra fields to the CellClickedEvent class that you can set by changing the constructor for this class. It doesn’t necessarily have to be the MainPane that picks up the CellClickedEvent event but it does have to be a class that subclasses a JavaFX Parent class (so Model and Ant wont work here).</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      虽然是JavaFX的Project，但是由于start code已经实现了大部分逻辑功能，因此整体难度不大。整个Project采用MVC设计模式，只要遵循这个设计原则，就能完成大部分的code。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="JavaFX" scheme="https://tk1307993.coding.me/tags/JavaFX/"/>
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
