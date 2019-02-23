@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="File System," />
+  <meta name="keywords" content="Algorithm,Operating System," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
-<meta name="keywords" content="File System">
+<meta name="description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
+<meta name="keywords" content="Algorithm,Operating System">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：ECE222 Directory Listing">
-<meta property="og:url" content="https://tk1307993.coding.me/ECE222-Directory-Listing.html">
+<meta property="og:title" content="OS代写：COMP3080-Memory-Allocation">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
+<meta property="og:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-26T13:43:20.163Z">
+<meta property="og:updated_time" content="2019-02-23T05:46:00.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：ECE222 Directory Listing">
-<meta name="twitter:description" content="本题需要实现文件系统中，类似ls命令显示的结果。">
+<meta name="twitter:title" content="OS代写：COMP3080-Memory-Allocation">
+<meta name="twitter:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ECE222-Directory-Listing.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html"/>
 
 
 
 
 
-  <title>C代写：ECE222 Directory Listing | 留学生CS编程作业代写</title>
+  <title>OS代写：COMP3080-Memory-Allocation | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECE222-Directory-Listing.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：ECE222 Directory Listing</h2>
+          <h2 class="post-title" itemprop="name headline">OS代写：COMP3080-Memory-Allocation</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T21:41:38+08:00">
-                2018-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T13:43:35+08:00">
+                2019-02-23
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题需要实现文件系统中，类似ls命令显示的结果。
+                  本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.
               </div>
           
 
@@ -360,12 +360,24 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, each student is to write a program that provides a file listing for the given directory. The program should list the filename, file size, and time last modified for each file within the directory. The program should provide the user with the option to sort the listing based on filename, on file size, or on time last modified. The program should run once and quit (it does not loop).</p>
-<p>The syntax (usage) for the program should be:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prog_name [<span class="string">directory</span>] [<span class="string">[-s</span>][<span class="symbol">-t</span>]]</span><br></pre></td></tr></table></figure></p>
-<p>where –s indicates sort by file size and –t indicates sort by time last modified. These flags are optional but mutually exclusive. The directory is also optional; if it is omitted than a default directory of “.” (the current directory) should be assumed. Every possible combination of command line arguments, from the above syntax, will be tested.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要实现文件系统中，类似ls命令显示的结果。<br>本题较为简单，如果掌握了基本的Linux函数库用法可以事半功倍。此外需要注意的是命令行参数的处理方法。最后按照测试集显示的格式，做出准确的输出即可。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出命令行参数的解析逻辑<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> arg;</span><br><span class="line">  <span class="keyword">int</span> sort_by_size = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> sort_by_time = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ((arg = getopt(argc, argv, <span class="string">"st"</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">switch</span> (arg) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'s'</span>:</span><br><span class="line">      sort_by_size = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'t'</span>:</span><br><span class="line">      sort_by_time = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"bad argument: %c\n"</span>, arg);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The program you will write will read a file which contains memory allocation requests and memory free operations. The allocation and free operations will be made against an initially empty fixed sized free memory pool. The program must support three allocation policies:</p>
+<ul>
+<li>First fit linked list</li>
+<li>Best fit linked list</li>
+<li>Buddy system power of 2 block allocation (using a minimum allocation of 32 bytes)</li>
+</ul>
+<h4 id="Your-program-must"><a href="#Your-program-must" class="headerlink" title="Your program must:"></a>Your program must:</h4><ol>
+<li>Accept three command line arguments, such that argv[1] is the policy to use, argv[2] is the total memory free pool size and argv[3] is the name of the file containing the allocation and free requests. The memory size of the total free pool for the main test cases will be 1 MByte, and 512KB. You may use other sizes in any additional experiments you attempt, but make sure you describe your configuration and results in your write-up.</li>
+<li>Read each line of the input file in argv[3] and carry out one of the following actions:</li>
+<li>Make a memory allocation if enough memory is available to satisfy an allocation request.</li>
+<li>Return memory to a linked list and carry out any coalescing (buddying up) required.</li>
+<li>Refuse the allocation only if there is not enough memory to satisfy it in any available free partition. Refused requests are remembered, so that you know to take no action when you see the corresponding free operation in the input stream. (For each alloc there is a free.)</li>
+<li>Generate one line of output for each line of input, providing information about which request this is, how the request was handled, what the total amount of free space after the request is, and what the size of the largest free partition after the request is. Sample input and output files are shown below.</li>
+<li>So you should submit 6 files, each containing your output for the 1MB and 512KB cases for all three algorithms, and a final summary in your write-up that provides the results of each test in a format similar to:<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">490</span> of <span class="number">500</span></span><br><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">512</span>KB: <span class="keyword">Total</span> Allocations <span class="number">374</span> of <span class="number">500</span></span><br><span class="line">Best <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">492</span> of <span class="number">500</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="INPUT-FORMAT"><a href="#INPUT-FORMAT" class="headerlink" title="INPUT FORMAT:"></a>INPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SERIAL-NUM   REQUEST   SIZE   SERIAL-MATCH</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span></span><br><span class="line">    <span class="number">4</span>         free                  <span class="number">2</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span></span><br><span class="line">    <span class="number">6</span>         free                  <span class="number">1</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span></span><br></pre></td></tr></table></figure>
+<h3 id="OUTPUT-FORMAT"><a href="#OUTPUT-FORMAT" class="headerlink" title="OUTPUT FORMAT:"></a>OUTPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MANAGEMENT POLICY = First Fit       POOL SIZE = <span class="number">512</span> KB</span><br><span class="line">SERIAL-NUM   REQUEST   SIZE   ALLOC-ADDR   TOTAL-FREE   LARGEST-PART</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span>           <span class="number">0</span>     <span class="number">504288</span>        <span class="number">504288</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span>       <span class="number">20000</span>     <span class="number">404288</span>        <span class="number">404288</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span>      <span class="number">120000</span>     <span class="number">399238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">4</span>         free    <span class="number">100000</span>                 <span class="number">499238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span>       <span class="number">20000</span>     <span class="number">428738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">6</span>         free     <span class="number">20000</span>           <span class="number">0</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span>          <span class="number">-1</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -382,7 +394,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/File-System/" rel="tag"># File System</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
           
         </div>
       
@@ -395,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS335-SpaceRacingSimulator.html" rel="next" title="Java代写：CS335 Space Racing Simulator">
-                <i class="fa fa-chevron-left"></i> Java代写：CS335 Space Racing Simulator
+              <a href="/CS204-B-tree.html" rel="next" title="C++代写：CS204-B-tree">
+                <i class="fa fa-chevron-left"></i> C++代写：CS204-B-tree
               </a>
             
           </div>
@@ -404,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS353-DatabaseSystem.html" rel="prev" title="PHP代写：CS353 Database System">
-                PHP代写：CS353 Database System <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Your-program-must"><span class="nav-number">1.1.</span> <span class="nav-text">Your program must:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INPUT-FORMAT"><span class="nav-number">2.</span> <span class="nav-text">INPUT FORMAT:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OUTPUT-FORMAT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT FORMAT:</span></a></li></ol></div>
             
 
           </div>

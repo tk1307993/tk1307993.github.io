@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-02-20T13:48:20.314Z</updated>
+  <updated>2019-02-23T05:46:00.378Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OS代写：COMP3080-Memory-Allocation</title>
+    <link href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html"/>
+    <id>https://tk1307993.coding.me/COMP3080-Memory-Allocation.html</id>
+    <published>2019-02-23T05:43:35.000Z</published>
+    <updated>2019-02-23T05:46:00.378Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The program you will write will read a file which contains memory allocation requests and memory free operations. The allocation and free operations will be made against an initially empty fixed sized free memory pool. The program must support three allocation policies:</p><ul><li>First fit linked list</li><li>Best fit linked list</li><li>Buddy system power of 2 block allocation (using a minimum allocation of 32 bytes)</li></ul><h4 id="Your-program-must"><a href="#Your-program-must" class="headerlink" title="Your program must:"></a>Your program must:</h4><ol><li>Accept three command line arguments, such that argv[1] is the policy to use, argv[2] is the total memory free pool size and argv[3] is the name of the file containing the allocation and free requests. The memory size of the total free pool for the main test cases will be 1 MByte, and 512KB. You may use other sizes in any additional experiments you attempt, but make sure you describe your configuration and results in your write-up.</li><li>Read each line of the input file in argv[3] and carry out one of the following actions:</li><li>Make a memory allocation if enough memory is available to satisfy an allocation request.</li><li>Return memory to a linked list and carry out any coalescing (buddying up) required.</li><li>Refuse the allocation only if there is not enough memory to satisfy it in any available free partition. Refused requests are remembered, so that you know to take no action when you see the corresponding free operation in the input stream. (For each alloc there is a free.)</li><li>Generate one line of output for each line of input, providing information about which request this is, how the request was handled, what the total amount of free space after the request is, and what the size of the largest free partition after the request is. Sample input and output files are shown below.</li><li>So you should submit 6 files, each containing your output for the 1MB and 512KB cases for all three algorithms, and a final summary in your write-up that provides the results of each test in a format similar to:<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">490</span> of <span class="number">500</span></span><br><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">512</span>KB: <span class="keyword">Total</span> Allocations <span class="number">374</span> of <span class="number">500</span></span><br><span class="line">Best <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">492</span> of <span class="number">500</span></span><br></pre></td></tr></table></figure></li></ol><h3 id="INPUT-FORMAT"><a href="#INPUT-FORMAT" class="headerlink" title="INPUT FORMAT:"></a>INPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SERIAL-NUM   REQUEST   SIZE   SERIAL-MATCH</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span></span><br><span class="line">    <span class="number">4</span>         free                  <span class="number">2</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span></span><br><span class="line">    <span class="number">6</span>         free                  <span class="number">1</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span></span><br></pre></td></tr></table></figure><h3 id="OUTPUT-FORMAT"><a href="#OUTPUT-FORMAT" class="headerlink" title="OUTPUT FORMAT:"></a>OUTPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MANAGEMENT POLICY = First Fit       POOL SIZE = <span class="number">512</span> KB</span><br><span class="line">SERIAL-NUM   REQUEST   SIZE   ALLOC-ADDR   TOTAL-FREE   LARGEST-PART</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span>           <span class="number">0</span>     <span class="number">504288</span>        <span class="number">504288</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span>       <span class="number">20000</span>     <span class="number">404288</span>        <span class="number">404288</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span>      <span class="number">120000</span>     <span class="number">399238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">4</span>         free    <span class="number">100000</span>                 <span class="number">499238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span>       <span class="number">20000</span>     <span class="number">428738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">6</span>         free     <span class="number">20000</span>           <span class="number">0</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span>          <span class="number">-1</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.
+    
+    </summary>
+    
+      <category term="OS" scheme="https://tk1307993.coding.me/categories/OS/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS204-B-tree</title>
@@ -449,28 +473,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python代写：CSC521-MonteCarloSimulate</title>
-    <link href="https://tk1307993.coding.me/CSC521-MonteCarloSimulate.html"/>
-    <id>https://tk1307993.coding.me/CSC521-MonteCarloSimulate.html</id>
-    <published>2018-12-02T04:13:36.000Z</published>
-    <updated>2018-12-02T04:15:56.393Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Problem1"><a href="#Problem1" class="headerlink" title="Problem1"></a>Problem1</h3><p>Your have N servers behind a load balancer. When a request arrives it is automatically assigned to one of the available servers. Requests arrive at random intervals according with the exponential distribution with an average of 100 requests per second. When a server receives a request, it processes the request and this takes a random time described by the pareto distribution. </p><p>The minimum time is 2 seconds and the average time is 3 seconds. Each server can process only one request at the time. One server costs $2000/month. If a request arrives and all servers are busy the request is dropped. You earn $0.01 for every request you process and you pay $0.10 in penalties for every request you drop. What is the value of N that allows you to guarantee that 90% of the requests are processed? What is the value of N that maximizes profit? What is the value of N below which you would operate at a loss?</p><p>Write a short paper (10 pages), explaining the problem, your solution, answers to the above questions with explanations, and an appendix containing the code (commented and indented).<br>The paper should contain at least one graph of income vs time for one simulated scenario.</p><p>I recommend that each simulate once simulates one minute. Also each call to simulate many should run at least 100 simulate once.</p><h3 id="Problem2"><a href="#Problem2" class="headerlink" title="Problem2"></a>Problem2</h3><p>Consider the following stocks of the 5 Large-Cap hardware manufacturers in 2016: AAPL, EMC, HPQ, QCOM, STX. Download the historical daily closing prices for these stocks for the last 5 years. For each compute the average yearly return and yearly volatility (average over the past 5 years). You invest $1M in each of these stocks ($5M total). </p><p>Implement a Monte Carlo simulation to compute the value of the portfolio in one year. What is the average portfolio value in one year? What is the 5% VAR (defined as the amount such that in no more than 5% of the simulated scenarios, the portfolio value in one year is below said value). Perform the simulation computation in two ways:</p><ol><li>simulate each stock separately using a gaussian model for the logreturn.</li><li>use resampling. Which is of the two methods is correct and why? What would be the price of a call option that pays you $1M if, after three months, 4 of the 5 stocks have a value below their current value?</li></ol><p>Write a short paper (10 pages), explaining the problem, your solution, answers to the above questions with explanations, and an appendix containing the code (commented and indented).</p><p>The paper should contain at least one graph showing the simulated stock prices in one simulated scenario and one plot of the distribution from which the VAR is computed.</p>]]></content>
-    
-    <summary type="html">
-    
-      用MonteCarlo算法解决两个Problem，start code中提供了所需的算法lib。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
