@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-02-23T05:46:00.378Z</updated>
+  <updated>2019-02-26T13:03:49.631Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：COMS227-StringList</title>
+    <link href="https://tk1307993.coding.me/COMS227-StringList.html"/>
+    <id>https://tk1307993.coding.me/COMS227-StringList.html</id>
+    <published>2019-02-26T13:01:10.000Z</published>
+    <updated>2019-02-26T13:03:49.631Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This is a short set of problems using interfaces. You will implement a class called StringList that uses interfaces for performing various kinds of processing on streams of text, as well as some sample classes that implement those interfaces. In all, you’ll implement six classes:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">StringList.java</span><br><span class="line">NonCommentLineSelector.java</span><br><span class="line">CommentRemover.java</span><br><span class="line">LetterCollecter.java</span><br><span class="line">LineNumberer.java</span><br><span class="line">LocCounter.java</span><br></pre></td></tr></table></figure></p><p>Note that the file StringListTest.java, found in the default package, will not compile until you have created stubs for the six required classes.</p><p>None of the code is very complex; the purpose is just to get you thinking about interfaces a bit.</p><p>A StringList (not surprisingly) represents a list of strings. (Most likely, in fact, you’ll use an instance variable of type ArrayListto store the strings themselves.) The interesting part is in the operations map, filter, and reduce. These are based on the four interfaces defined in the package api: Combiner, IntCombiner, Selector, and Transformation. They are all very simple and have only one method each. You can take a look at the javadoc or sample code for more details.<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public StringList map(<span class="name">Transformation</span> <span class="literal">t</span>)</span><br></pre></td></tr></table></figure></p><p>Returns a new StringList obtained by invoking the given Transformation’s apply method to each string in this StringList. The apply method just takes a string and returns a (possibly different) string.<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> StringList filter(<span class="keyword">Selector</span> <span class="keyword">selector</span>)</span><br></pre></td></tr></table></figure></p><p>Returns a new StringList containing only the elements of this StringList for which the Selector’s select method returns true. The select method just takes a string and returns true or false.<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">String</span> reduce(Combiner combiner, <span class="keyword">String</span> initialValue)</span><br></pre></td></tr></table></figure></p><p>Returns a string resulting from a reduction operation using the given Combiner and the given initial value. A Combiner has one method, combine, that takes two strings and returns a string. The idea of a “reduction” is to initialize an accumulator variable with the given initial value, and then to iterate over the list, replacing the accumulator value with the result of combining it with the next item in the list.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reduce</span><span class="params">(IntCombiner combiner, <span class="keyword">int</span> initialValue)</span></span></span><br></pre></td></tr></table></figure></p><p>Returns an integer resulting from a reduction operation using the given IntCombiner and the given initial value. Similar to the reduce operation above, but the accumulated value is an int.</p><p>The meaning of the reduce operation may not be obvious. The next section of this document includes a detailed explanation and examples. You should also look at the example StringListTest.java. found in the default package of the sample code.<br>In addition to the StringList class, you’ll implement some examples of classes that implement the interfaces in the api package so you can try things out. These are:<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NonCommentLineSelector</span> <span class="keyword">implements</span> <span class="title">Selector</span></span></span><br></pre></td></tr></table></figure></p><p>The select method returns true if the given string does not have “//“ as its first nonwhitespace characters.<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CommentRemover</span> <span class="keyword">implements</span> <span class="title">Transformation</span></span></span><br></pre></td></tr></table></figure></p><p>The apply method returns a new string in which any text following “//“ is removed.<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LocCounter</span> <span class="keyword">implements</span> <span class="title">IntCombiner</span></span></span><br></pre></td></tr></table></figure></p><p>Given an integer n and a string, the combine method returns n if the string is a comment line, a blank line, or a line whose only text, other than an end-of-line comment, is a single curly brace; otherwise the method returns n + 1. (Using a LocCounter in the reduce method has the general effect of counting “lines of code” that are actual program statements.)<br><code>`public class LetterCollector implements Combiner</code><br>Given two strings first and second, appends onto first all characters in second that don’t already occur in first. (Using a LetterCollector in the reduce method returns a string in which each character occurring in the strings appears exactly once.) Not case sensitive.</p>]]></content>
+    
+    <summary type="html">
+    
+      本次作业是要实现一个StringList，具体是要求练习掌握Interface的编程方法。程序的主干代码已经给出，按照文档补充缺失的部分即可。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>OS代写：COMP3080-Memory-Allocation</title>
@@ -444,28 +466,6 @@
     <summary type="html">
     
       代写一个Rogue-like的游戏，是C代写：CIS2500 Rogue-like的Part3部分，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CIS2500-Rogue-like</title>
-    <link href="https://tk1307993.coding.me/CIS2500-Rogue-like.html"/>
-    <id>https://tk1307993.coding.me/CIS2500-Rogue-like.html</id>
-    <published>2018-12-06T12:42:53.000Z</published>
-    <updated>2018-12-06T12:46:38.812Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You will implement the basic features of a “Rogue-like” computer game. Your program will accept an input file describing the layout of a single level with 6 rooms in it, and your program should draw all six rooms in a single window. Your program will also have a hero that the user can control, and move around the level.</p><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>When started, your program should accept one command line argument (using argc and argv). The command line argument is a path to the level file. This file is a description of the level to be drawn.</p><p>Your program should start by opening the file, parsing the room descriptions line by line, and storing the data in an appropriate struct. Once done, close the file.</p><p>The program should then initialize ncurses, draw the level to the screen, and enter a “game loop”. While in the game loop, your program should accept input from the user to manipulate the world and update the screen appropriately. If the user presses the quit key, your program should exit the game loop, clean up ncurses, print the player’s amount of gold and return.<br>While in the game loop, the user is able to move the hero around the level. If the hero steps on a door, they should be teleported. Stepping on a door in room 1, should teleport the hero to a door in room 2. Stepping on a door in room 2, should teleport the hero to a door in room 3. Room 4 doors teleport the hero to room 5 doors. Room 5 doors teleport the hero to room 6 doors. And room 6 doors teleport the hero to room 1 doors. See Figure 1 for room numbering.</p><h3 id="Additional-Notes"><a href="#Additional-Notes" class="headerlink" title="Additional Notes"></a>Additional Notes</h3><ol><li>The hero should be unable to step on walls, and should therefore be unable to walk outside of rooms.</li><li>The hero should be unable to walk on weak monsters or strong monsters.</li><li>If the hero steps on a small gold or big gold, the value of that gold piece should be added to the hero’s gold amount. The hero starts with 0 gold.</li><li>If the hero steps on a collectable, it should be removed from the screen. The following elements are collectable: Small gold, Big gold, Common weapon, Rare weapon, Equipment, Potion.</li><li>If the hero steps on stairs going up or down, the program should execute the normal quitting procedure.</li></ol><h3 id="Level-File"><a href="#Level-File" class="headerlink" title="Level File"></a>Level File</h3><ul><li>The input file will contain 6 rooms. You are expected to draw the rooms 3 across and 2 down. No room will be larger than 18 rows X 23 columns.</li><li>Each line of the file will consist of a space-delimited line of text.</li><li>Each line of the file will be less than 150 characters.</li><li>No room will have more than 10 elements (excluding room dimensions, and doors).</li><li>Lines will always have a newline at the end.</li><li>The first element of the input string will ALWAYS be the room dimensions given as rowsXcolumns (i.e. 10X12). The dimensions given are the dimensions of the floor of the room. The walls must surround the floor.</li><li>Following the room dimensions are room elements. These elements can be in any order.</li><li>Door elements will begin with a lowercase d followed by a letter representing the wall that the door is in. For example, de3 is a door in the east wall in position three from the north edge (where the floor corner is position 0, and walls start at 1). There will never be more than one door per wall.</li><li>All other (not room dimension or door) elements will begin with a lowercase letter followed by coordinates. For example: w6,8 means there is a weapon at row 6 column 8 where the northwest floor corner of the room is 0,0.</li><li>For this assignment, you can assume the file inputted will follow this specification as closely as possible.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      代写一个Rogue-like的游戏，Rogue-like属于RPG游戏中的一类，游戏最大的特点就是每次生成迷宫的都是随机的。 这只是Part 2的作业，后续还有更复杂的Part 3。
     
     </summary>
     
