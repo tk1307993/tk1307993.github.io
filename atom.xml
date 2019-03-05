@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-03-01T15:43:39.363Z</updated>
+  <updated>2019-03-05T02:28:55.391Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP代写：CS952-Database-And-Web-Systems-Development</title>
+    <link href="https://tk1307993.coding.me/CS952-Database-And-Web-Systems-Development.html"/>
+    <id>https://tk1307993.coding.me/CS952-Database-And-Web-Systems-Development.html</id>
+    <published>2019-03-05T02:25:34.000Z</published>
+    <updated>2019-03-05T02:28:55.391Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Lab-Exercises-HTML-PHP-CSS-and-JavaScript"><a href="#Lab-Exercises-HTML-PHP-CSS-and-JavaScript" class="headerlink" title="Lab Exercises: HTML, PHP, CSS and JavaScript"></a>Lab Exercises: HTML, PHP, CSS and JavaScript</h3><p>The aim of these exercises is for you to build some simple web pages and to make sure you know how to use our systems for web development. The following tasks should be done in a plain text editor and saved as .html, .php, .css, or .js files where appropriate. You should then copy these files to DEVWEB. If you use Linux or Unix, go to the DEVWEB directory then to the 2015 directory (if you do not have a 2015 directory you will have to create one). If you put a file called ex.html in that directory you can view it in your web browser from any internet connected computer.</p><p>If you use Windows on any of the Departmental machines you will find the DEVWEB folder mapped to your Q: drive.</p><p>These exercises are worth up to 10% of the overall mark for CS 952 Database and Web Systems Development.</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Please note that some of the later questions ask you to build on your solutions to earlier questions. You should therefore make sure that you save your solution to each question in separate files and that you do not overwrite your earlier solutions. For example, the solution file for question one could be named q1.html, the solution files for question 2 could be named q2.html (this will be a modified version of q1.html) and q2.php, the solution files for question 3 could be named q3.html (this will be a modified version of q1.html or q2.html) and q3.php (this will be a modified version of q2.php). The files that you create for each question should be placed in a directory or folder which you should zip and upload via Myplace.</p><p>This is an individual exercise: any copying of code (except from the lecture notes or the W3Schools website) may result in disciplinary measures. No late submissions will be accepted without medical certification, this should be provided at the earliest opportunity.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="http://www.w3schools.com/" target="_blank" rel="noopener">http://www.w3schools.com/</a> has online tutorials for HTML, CSS, PHP and JavaScript. The tutorial on PHP includes sections on form handling and validation as well as MySQL. The tutorial on JavaScript also includes sections on form validation.</p><h3 id="Q1-HTML-Simple-form-example"><a href="#Q1-HTML-Simple-form-example" class="headerlink" title="Q1 HTML Simple form example"></a>Q1 HTML Simple form example</h3><p>Using the following script showallparameters.php as your server action (and using the POST method), code the following form using HTML forms and check the correct data is sent to the server:</p><p>The job categories are “Marketing”, “Human Resources” and “Technical Support”. Don’t worry about the right alignment of the textual labels, but after you have a simple form working you should embed it in a table so that the form entry elements are nicely aligned. Also, if you wish, add some JavaScript error correction to check that something is entered in Name, Telephone, E-mail, Gender and Days Available (this is tricky).</p><p>You may wish to use <a href="http://validator.w3.org/" target="_blank" rel="noopener">http://validator.w3.org/</a> with advanced options to make sure that your file conforms with W3 open standards.</p><h3 id="Q2-PHP"><a href="#Q2-PHP" class="headerlink" title="Q2: PHP"></a>Q2: PHP</h3><p>Write a decent handler for the form in Q1 which shows the data nicely formatted back to the user.<br>Add code to this PHP script to send a fixed email to you whenever the form is submitted. See <a href="http://uk3.php.net/function.mail" target="_blank" rel="noopener">http://uk3.php.net/function.mail</a> for mail manual and Google for examples.</p><p>Change this code so that the email contains the same information echoed back to the user.</p><h3 id="Q3-MySQL"><a href="#Q3-MySQL" class="headerlink" title="Q3: MySQL"></a>Q3: MySQL</h3><p>Design a single table database to store the values from the form in Q1.</p><p>Create this database in phpMyAdmin on devweb2015 then update your PHP from Q2 to save into the database rather than emailing you.<br>Test your submissions using your form and phpMyAdmin to view the submissions.</p><h3 id="Q4-PHP-Error-Checking"><a href="#Q4-PHP-Error-Checking" class="headerlink" title="Q4: PHP Error Checking"></a>Q4: PHP Error Checking</h3><p>Add code to the PHP in Q1..3 to check:</p><ul><li>The name is completed</li><li>The telephone number is complete</li><li>The e-mail is complete (you could try using regular expressions)</li><li>One of Male or Female is selected</li><li>At least one day is selected [tricky]</li><li>Add PHP so that if the name field is all capitals, it is changed to Title Case before storing.</li></ul><h3 id="Q5-CSS"><a href="#Q5-CSS" class="headerlink" title="Q5: CSS"></a>Q5: CSS</h3><p>Write HTML for the left-hand image on the last page.</p><p>Add CSS styling to make the page look like the right-hand image with minimal changes to the HTML (you only need add class and id statements) (NB: the band at top bottom is dark blue, rest of page has light blue background)</p><p>Create a CSS box in the middle of the page with maximum width 700 pixels and a nice water like image outside this box.</p><p>Add a horizontal navigation menu at the top of the page with sections for “accommodation”, “local information”, and “weather”.</p><h3 id="Q6-Extensions"><a href="#Q6-Extensions" class="headerlink" title="Q6: Extensions"></a>Q6: Extensions</h3><p>Recode the checks in Q4 in JavaScript. [Why would you do this?]</p><ul><li>Add two date fields to your form from Q1 for “Application Date” and “Job Start Date” then</li><li>Add JavaScript to check the fields are date formatted</li><li>Add JavaScript to check that the job start date is after the application date</li><li>Add JavaScript to copy the value of the application date to the start date if it changes, and the user hasn’t yet entered a start date</li></ul><p>If you wish you may find a public domain Calendar function in JavaScript and include this in your code to show a little calendar for the start date.</p><p>Add an administrator interface for your database in Q3 that allows the user to view all submissions and delete rows – use phpMyAdmin to create the SQL for deletion and then copy that into PHP.</p><p>Finally add a new script (PHP page) that shows a specific row of the table nicely formatted for printing as a job application and link this into the table view (i.e. have a “print me” button link).</p>]]></content>
+    
+    <summary type="html">
+    
+      这是一个Lab作业代写，需要做5个Web页面。内容比较基础，不过涵盖了HTML, PHP, CSS, JavaScript以及MySQL的使用。
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://tk1307993.coding.me/categories/PHP/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：KIT101-Sentence-Cipher</title>
@@ -450,28 +474,6 @@
     </summary>
     
       <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#代写：INM378-Digital-Signal-Processing</title>
-    <link href="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html"/>
-    <id>https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html</id>
-    <published>2018-12-11T12:22:46.000Z</published>
-    <updated>2018-12-11T12:24:45.461Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>This coursework has a games stream and a data stream, which have some common and some specific tasks.</p><p>For the common task, implement a filter either in FMOD with C++ or C# (games stream) or in Matlab (data stream).</p><p>For the Data part, choose a dataset and apply prediction and classification using Fourier analysis, filtering and correlation.</p><p>For the Games part, implement the sound and music elements listed below your coursework for INM379 or INM376 with C++ or a new demo built using XNA and C# with the stub provided on Moodle.</p><ol><li>Common: DSP, controllable filter. Program a controllable filter based on a delay line If you do the Games track, implement the filter for real time use with a circular buffer in an FMOD custom DSP. If you do the Data track, implement a filter function offline use with filter modulated by a sine function at 2Hz.</li><li>a. Games: 3D Sound: Place a sound source in a 3D world where it can be moved around using the mouse and/or keyboard. Make sure that the sound in the 3D world is adapted with distance roll-off including filtering, occlusion, and Doppler effect.<br>Implement dynamic filter control for an object of your choice, e.g. for the engine of your car, based on the speed.</li><li>b. Data: Character recognition: Program a character classifier using 2d-correlation to classify digits.<br>Time series prediction: Use Fourier analysis for implementing a time series predictor.</li><li>c. Games 2 (for pairs): 3D Occlusion: Implement a 3D objects in your game/demo, that you register with the FMOD framework to achieve an occlusion effect.<br>Flanger: Implement a Flanger effect (time-varying delay) as an FMOD custom DSP effect, that apply to a sound source in your game.</li><li>d. Theory (for pairs): Frequency domain filtering: Implement the filter from task 1 in the frequency domain. Use the SFFT and compare the results with task 1. Explain what the advantages and disadvantages of processing in the frequency and the time domain are.</li><li>Give a presentation of your program. This serves to communicate your work to your fellow students and the lecturers, to verify that you did write the program yourself, and to give you feedback. If you do not give a presentation, you will receive 0 marks for the whole coursework.</li></ol><p>Report: Write a short report that explains how you solved the tasks, where to find the solutions in your submitted code and any specific points you would like me to pay attention to (no more than 600 words)</p><h3 id="Background-Information-and-Support"><a href="#Background-Information-and-Support" class="headerlink" title="Background Information and Support"></a>Background Information and Support</h3><p>For every step of the coursework, relevant information, examples and data will be provided in the lectures and tutorials.</p><h3 id="Coding-Style"><a href="#Coding-Style" class="headerlink" title="Coding Style"></a>Coding Style</h3><ol><li>Your code must be properly indented.</li><li>Every method in your code must be commented w.r.t. its purpose, its parameters and its return values.</li><li>Comments and style will be marked together with the code.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。
-    
-    </summary>
-    
-      <category term="C#" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
