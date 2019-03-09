@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Web,Database,MySQL," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="一共写6个函数，运行后需要画10张图，然后找其中最优的欧氏距离。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="这次代写的这个Web作业，题目很发散，按要求实现题目之一就好。不过这是一个需要用Python和MySQL实现的Web作业，也算比较冷门的了。">
+<meta name="keywords" content="Web,Database,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R代写：CSC120-EuclideanMinimumWeightMatching">
-<meta property="og:url" content="https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html">
+<meta property="og:title" content="Database代写：CS108-Web-Based-Application">
+<meta property="og:url" content="https://tk1307993.coding.me/CS108-Web-Based-Application.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="一共写6个函数，运行后需要画10张图，然后找其中最优的欧氏距离。">
+<meta property="og:description" content="这次代写的这个Web作业，题目很发散，按要求实现题目之一就好。不过这是一个需要用Python和MySQL实现的Web作业，也算比较冷门的了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-16T07:46:41.532Z">
+<meta property="og:updated_time" content="2019-03-09T09:35:14.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="R代写：CSC120-EuclideanMinimumWeightMatching">
-<meta name="twitter:description" content="一共写6个函数，运行后需要画10张图，然后找其中最优的欧氏距离。">
+<meta name="twitter:title" content="Database代写：CS108-Web-Based-Application">
+<meta name="twitter:description" content="这次代写的这个Web作业，题目很发散，按要求实现题目之一就好。不过这是一个需要用Python和MySQL实现的Web作业，也算比较冷门的了。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS108-Web-Based-Application.html"/>
 
 
 
 
 
-  <title>R代写：CSC120-EuclideanMinimumWeightMatching | 留学生CS编程作业代写</title>
+  <title>Database代写：CS108-Web-Based-Application | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS108-Web-Based-Application.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">R代写：CSC120-EuclideanMinimumWeightMatching</h2>
+          <h2 class="post-title" itemprop="name headline">Database代写：CS108-Web-Based-Application</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-16T15:43:03+08:00">
-                2018-09-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-09T09:51:08+08:00">
+                2019-03-09
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R/" itemprop="url" rel="index">
-                    <span itemprop="name">R</span>
+                  <a href="/categories/Database/" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  一共写6个函数，运行后需要画10张图，然后找其中最优的欧氏距离。
+                  这次代写的这个Web作业，题目很发散，按要求实现题目之一就好。不过这是一个需要用Python和MySQL实现的Web作业，也算比较冷门的了。
               </div>
           
 
@@ -360,11 +360,30 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You should use an R script for grouping up all dots in a vector including an even number of dots in this assignment, in a way that tries to minimize the sum of the distances between the dots in each of the pairs. This problem can arise in many contexts, including design of experiments in statistics. Doing this will provide practice in basic R scriptming facilities such as vectors and matrices, and use of if and for, in use of R’s plotting facilities, and in how to divide a script into several functions that can be understood and sometimes used separately.</p>
-<p>The output of the script is a vector of pairs of input dots, with each of the input dots being in exactly one pair. The order of the pairs and the order of dots in each pair are not important. The objective is to try to find a vector of pairs for which the total of the distances from one dot in a pair to the other is small. Ideally, this total distance would be as small as possible, but the method used in this assignment is not guaranteed to find a vector of groupings that achieve this minimum, it just tries to make the total distance as small as it can.</p>
-<p>The input for this problem is a vector of n dots in k-dimensional Euclidean space. The number of dots, n, will always be even. For the actual data you will work with, k is two, so the input is a vector of dots in the plane, but except for the 2-dimensional plotting function described below, your script should work for any dimensionality, k, and for any even number of dots, n.</p>
-<p>We also must specify how a function to find the groupings will work. For this assignment, you should write a function called find_groupings that can be called with a single argument that is a matrix of dots, as specified above, and which will return as its value a matrix giving the pairs of dots that we hope have a small total distance. (Below, some additional optional arguments to find_groupings will be specified.)</p>
-<p>In designing this script, we must decide how to represent the input (a vector of dots) as an R data structure. For this assignment, we will use an n by k matrix, in which each row represents a dot in k-dimensional Euclidean space. We must also decide how to represent the vector of pairs of dots that is the output. We will use an n=2 by 2 matrix for this, in which each row contains two integers between 1 and n, which index the rows for the two dots in the input matrix.</p>
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>You will develop a web-based application with a database back-end for storage and retrieval of data. Choose your own adventure: select a subject matter related to your major or personal interests.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Some recent CS108 projects have included:</p>
+<ul>
+<li>Interactive dictionary for English/Junta language translation</li>
+<li>Inventory system for chemistry lab / reactive agents</li>
+<li>Social network for a gardening club</li>
+<li>High school basketball win/loss records &amp; standings</li>
+<li>Fisheries information tracking endangered species</li>
+<li>Geographic information system for archeology dig</li>
+<li>Compact disc inventory and sales</li>
+<li>Calorie counting database/user interface</li>
+<li>Local artists list their works for sale (with pictures)</li>
+<li>Car rental and return</li>
+<li>Special of the day listing for restaurant</li>
+</ul>
+<h3 id="Detailed-Requirements"><a href="#Detailed-Requirements" class="headerlink" title="Detailed Requirements"></a>Detailed Requirements</h3><p>You should begin by picking a concrete but simple interaction and modeling the data and functionality to implement it. For example, in a car rental application you might show a list of cars and allow a customer to complete a rental for one car. Start small; you can always add more interactions and details after you get the first one working.</p>
+<p>Your application will model some kind of useful function, with a web-based interface (HTML) and data storage in a relational database (MySQL). A single interaction might be sufficient for this project, but a single web page certainly is not. You should have multiple web pages with logical transitions between the pages using buttons or links.</p>
+<p>Projects must demonstrate reading from, inserting into, and updating database tables from your web interface. Points will be awarded for the general complexity of the project, with more complex projects scoring higher than very simple projects that mimic in-class assignments. After your work is functionally complete, you should enhance the look and feel of the application as the aesthetics (colors, images and fonts) will count for a small portion of your grade.</p>
+<h3 id="Topic-Proposal"><a href="#Topic-Proposal" class="headerlink" title="Topic Proposal"></a>Topic Proposal</h3><p>Your proposal should be brief (about 3 sentences) and describe the general subject matter (e.g., car rental), the specific interaction you will model (e.g. car selection and checkout) and the data you will require for this interaction (e.g., table of cars, table of customers, table of rentals which matches cars with customers).</p>
+<h3 id="Data-Requirements"><a href="#Data-Requirements" class="headerlink" title="Data Requirements"></a>Data Requirements</h3><p>What kind of data will your application need to interact with? Describe the data in terms of records and fields. What attributes does each record need to have? How will you uniquely identify a record?</p>
+<p>Make up some sample data (about 5 records) so that you can use to begin thinking about and testing the program’s interactions. You might want to use a spreadsheet program like Excel to create these records, which will also enable importing them into the database later. We will demonstrate how to create tables and records in MySQL at the scheduled lab session this week.</p>
+<h3 id="Planning-Your-Time"><a href="#Planning-Your-Time" class="headerlink" title="Planning Your Time"></a>Planning Your Time</h3><p>You have 4 weeks to complete this project. Here are some guidelines on what you should be working on at what time:</p>
+<h3 id="roject-Demonstration-Video"><a href="#roject-Demonstration-Video" class="headerlink" title="roject Demonstration Video"></a>roject Demonstration Video</h3><p>You will present your project by making a short (2-3 minute) video screen capture, with you narrating as you demonstrate the application. Think about this as a demonstration for a potential customer or employer. This will speed the grading, and provide you with a lasting artifact of your work, which you can demonstrate to potential employers. Your demonstration should not show any code or database records, but must demonstrate every major feature of your application.</p>
+<p>I recommend that you write a brief outline of what you will show in which order. Then, use a screen capture tool (I suggest QuickTime player for Mac or Tiny Take for Windows or any similar program). Record your video, and post it to YouTube (a private/unlisted URL is fine).</p>
 
       
     </div>
@@ -382,7 +401,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Database/" rel="tag"># Database</a>
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
           
         </div>
       
@@ -395,8 +418,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CPT270-Cinemas.html" rel="next" title="PHP代写：CPT270-Cinemas">
-                <i class="fa fa-chevron-left"></i> PHP代写：CPT270-Cinemas
+              <a href="/CS952-Database-And-Web-Systems-Development.html" rel="next" title="PHP代写：CS952-Database-And-Web-Systems-Development">
+                <i class="fa fa-chevron-left"></i> PHP代写：CS952-Database-And-Web-Systems-Development
               </a>
             
           </div>
@@ -405,8 +428,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CSE6242-D3GraphsAndVisualization.html" rel="prev" title="JS代写：CSE6242-D3GraphsAndVisualization">
-                JS代写：CSE6242-D3GraphsAndVisualization <i class="fa fa-chevron-right"></i>
+              <a href="/CS159-Socket-Programming-FTP-Server.html" rel="prev" title="FTP代写：CS159-Socket-Programming-FTP-Server">
+                FTP代写：CS159-Socket-Programming-FTP-Server <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -560,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Detailed-Requirements"><span class="nav-number">3.</span> <span class="nav-text">Detailed Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic-Proposal"><span class="nav-number">4.</span> <span class="nav-text">Topic Proposal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Requirements"><span class="nav-number">5.</span> <span class="nav-text">Data Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Planning-Your-Time"><span class="nav-number">6.</span> <span class="nav-text">Planning Your Time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#roject-Demonstration-Video"><span class="nav-number">7.</span> <span class="nav-text">roject Demonstration Video</span></a></li></ol></div>
             
 
           </div>
