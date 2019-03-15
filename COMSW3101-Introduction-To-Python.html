@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithm,Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本次需要代写的Python作业，包含了5个算术问题需要解决。">
+<meta name="keywords" content="Algorithm,Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：COMSW3101-Introduction-To-Python">
+<meta property="og:url" content="https://tk1307993.coding.me/COMSW3101-Introduction-To-Python.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="本次需要代写的Python作业，包含了5个算术问题需要解决。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-15T15:34:31.756Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：COMSW3101-Introduction-To-Python">
+<meta name="twitter:description" content="本次需要代写的Python作业，包含了5个算术问题需要解决。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMSW3101-Introduction-To-Python.html"/>
+
+
+
+
+
+  <title>Python代写：COMSW3101-Introduction-To-Python | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMSW3101-Introduction-To-Python.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：COMSW3101-Introduction-To-Python</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-15T23:31:26+08:00">
+                2019-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  本次需要代写的Python作业，包含了5个算术问题需要解决。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Problem-1-Decrypting-Government-Data"><a href="#Problem-1-Decrypting-Government-Data" class="headerlink" title="Problem 1 - Decrypting Government Data"></a>Problem 1 - Decrypting Government Data</h3><p>Your job is to summarize this gov data about oil consumation</p>
+<ul>
+<li>The format of the file is rather bizzare - note that each line has data for two months, in two different years! (Plus I had to hand edit the file to make it parseable)</li>
+<li>Fortunately, Python is great for untangling and manipulating data.</li>
+<li>Write a generator that reads from the given url over the network, and produces a summary line for a year’s data on each ‘next’ call</li>
+<li>remember that urllib.request returns ‘bytes arrays’, not strings</li>
+<li>The generator should read the lines of the oil2.txt file in a lazy fashion - it should only read 13 lines for every two years of output. Note a loop can have any number of ‘yield’ calls in it.</li>
+<li>Ignore the monthly data, just extract the yearly info</li>
+<li>Drop the month column</li>
+<li>In addition to the ‘oil’ generator function, my solution had a separate helper function, ‘def makeCSV- Line(year, data):’</li>
+</ul>
+<h3 id="Here-is-the-first-two-years-of-data-2014-and-2013"><a href="#Here-is-the-first-two-years-of-data-2014-and-2013" class="headerlink" title="Here is the first two years of data, 2014 and 2013"></a>Here is the first two years of data, 2014 and 2013</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Year,Quantity,QuantityChange,Unknown,Unknown2,Price,PriceChange</span><br><span class="line"><span class="number">2014</span>,<span class="number">2700903</span>,<span class="number">-112867</span>,<span class="number">246409332</span>,<span class="number">-26397845</span>,<span class="number">91.23</span>,<span class="number">-5.72</span></span><br><span class="line"><span class="number">2013</span>,<span class="number">2813770</span>,<span class="number">-283638</span>,<span class="number">272807177</span>,<span class="number">-40367786</span>,<span class="number">96.95</span>,<span class="number">-4.15</span></span><br><span class="line"><span class="number">2012</span>,<span class="number">3097408</span>,<span class="number">-224509</span>,<span class="number">313174963</span>,<span class="number">-18407090</span>,<span class="number">101.11</span>,<span class="number">1.29</span></span><br><span class="line"><span class="number">2011</span>,<span class="number">3321917</span>,<span class="number">-55160</span>,<span class="number">331582053</span>,<span class="number">79421544</span>,<span class="number">99.82</span>,<span class="number">25.15</span></span><br><span class="line"><span class="number">2010</span>,<span class="number">3377077</span>,<span class="number">62290</span>,<span class="number">252160509</span>,<span class="number">63448733</span>,<span class="number">74.67</span>,<span class="number">17.74</span></span><br><span class="line"><span class="number">2009</span>,<span class="number">3314787</span>,<span class="number">-275841</span>,<span class="number">188711776</span>,<span class="number">-153200712</span>,<span class="number">56.93</span>,<span class="number">-38.29</span></span><br><span class="line"><span class="number">2008</span>,<span class="number">3590628</span>,<span class="number">-99940</span>,<span class="number">341912488</span>,<span class="number">104700835</span>,<span class="number">95.22</span>,<span class="number">30.95</span></span><br><span class="line"><span class="number">2007</span>,<span class="number">3690568</span>,<span class="number">-43658</span>,<span class="number">237211653</span>,<span class="number">20584322</span>,<span class="number">64.28</span>,<span class="number">6.26</span></span><br><span class="line"><span class="number">2006</span>,<span class="number">3734226</span>,<span class="number">-20445</span>,<span class="number">216627331</span>,<span class="number">40871990</span>,<span class="number">58.01</span>,<span class="number">11.20</span></span><br><span class="line"><span class="number">2005</span>,<span class="number">3754671</span>,<span class="number">-66308</span>,<span class="number">175755341</span>,<span class="number">44012676</span>,<span class="number">46.81</span>,<span class="number">12.33</span></span><br><span class="line"><span class="number">2004</span>,<span class="number">3820979</span>,<span class="number">144974</span>,<span class="number">131742665</span>,<span class="number">32575492</span>,<span class="number">34.48</span>,<span class="number">7.50</span></span><br><span class="line"><span class="number">2003</span>,<span class="number">3676005</span>,<span class="number">257983</span>,<span class="number">99167173</span>,<span class="number">21883842</span>,<span class="number">26.98</span>,<span class="number">4.37</span></span><br><span class="line"><span class="number">2002</span>,<span class="number">3418022</span>,<span class="number">-53045</span>,<span class="number">77283331</span>,<span class="number">2990437</span>,<span class="number">22.61</span>,<span class="number">1.21</span></span><br><span class="line"><span class="number">2001</span>,<span class="number">3471067</span>,<span class="number">71827</span>,<span class="number">74292894</span>,<span class="number">-15583539</span>,<span class="number">21.40</span>,<span class="number">-5.04</span></span><br><span class="line"><span class="number">2000</span>,<span class="number">3399240</span>,<span class="number">171148</span>,<span class="number">89876433</span>,<span class="number">38986812</span>,<span class="number">26.44</span>,<span class="number">10.68</span></span><br><span class="line"><span class="number">1999</span>,<span class="number">3228092</span>,<span class="number">-14620</span>,<span class="number">50889621</span>,<span class="number">13637399</span>,<span class="number">15.76</span>,<span class="number">4.28</span></span><br><span class="line"><span class="number">1998</span>,<span class="number">3242712</span>,<span class="number">173281</span>,<span class="number">37252222</span>,<span class="number">-16973685</span>,<span class="number">11.49</span>,<span class="number">-6.18</span></span><br><span class="line"><span class="number">1997</span>,<span class="number">3069431</span>,<span class="number">175785</span>,<span class="number">54225907</span>,<span class="number">-704950</span>,<span class="number">17.67</span>,<span class="number">-1.32</span></span><br><span class="line"><span class="number">1996</span>,<span class="number">2893646</span>,<span class="number">126333</span>,<span class="number">54930857</span>,<span class="number">11181204</span>,<span class="number">18.98</span>,<span class="number">3.17</span></span><br></pre></td></tr></table></figure>
+<p>now that we have something that looks like a CVS file, can do all kinds of things</p>
+<p>Input:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">with <span class="keyword">open</span>(<span class="string">'/tmp/oil.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> <span class="keyword">f</span>:</span><br><span class="line">  <span class="keyword">for</span> <span class="keyword">l</span> in oil(url):</span><br><span class="line">  <span class="keyword">f</span>.<span class="keyword">write</span>(<span class="keyword">l</span> + <span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">o</span> = oil(url)</span><br><span class="line"><span class="keyword">ls</span> = <span class="keyword">list</span>(<span class="keyword">o</span>)</span><br><span class="line">s = <span class="string">'\n'</span>.<span class="keyword">join</span>(<span class="keyword">ls</span>)</span><br><span class="line">import pandas <span class="keyword">as</span> pd</span><br><span class="line">import io</span><br><span class="line"># we will cover StringIO <span class="keyword">next</span> week - kind of <span class="keyword">an</span> <span class="string">'in-memory'</span> <span class="keyword">file</span></span><br><span class="line">df = pd.read_csv(io.StringIO(s))</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">    Year Quantity QuantityChange    Unknown   Unknown2   Price PriceChange</span><br><span class="line"><span class="number">0</span>   <span class="number">2014</span>  <span class="number">2700903</span>        <span class="number">-112867</span>  <span class="number">246409332</span>  <span class="number">-26397845</span>   <span class="number">91.23</span>       <span class="number">-5.72</span></span><br><span class="line"><span class="number">1</span>   <span class="number">2013</span>  <span class="number">2813770</span>        <span class="number">-283638</span>  <span class="number">272807177</span>  <span class="number">-40367786</span>   <span class="number">96.95</span>       <span class="number">-4.15</span></span><br><span class="line"><span class="number">2</span>   <span class="number">2012</span>  <span class="number">3097408</span>        <span class="number">-224509</span>  <span class="number">313174963</span>  <span class="number">-18407090</span>  <span class="number">101.11</span>        <span class="number">1.29</span></span><br><span class="line"><span class="number">3</span>   <span class="number">2011</span>  <span class="number">3321917</span>         <span class="number">-55160</span>  <span class="number">331582053</span>   <span class="number">79421544</span>   <span class="number">99.82</span>       <span class="number">25.15</span></span><br><span class="line"><span class="number">4</span>   <span class="number">2010</span>  <span class="number">3377077</span>          <span class="number">62290</span>  <span class="number">252160509</span>   <span class="number">63448733</span>   <span class="number">74.67</span>       <span class="number">17.74</span></span><br><span class="line"><span class="number">5</span>   <span class="number">2009</span>  <span class="number">3314787</span>        <span class="number">-275841</span>  <span class="number">188711776</span> <span class="number">-153200712</span>   <span class="number">56.93</span>      <span class="number">-38.29</span></span><br><span class="line"><span class="number">6</span>   <span class="number">2008</span>  <span class="number">3590628</span>         <span class="number">-99940</span>  <span class="number">341912488</span>  <span class="number">104700835</span>   <span class="number">95.22</span>       <span class="number">30.95</span></span><br><span class="line"><span class="number">7</span>   <span class="number">2007</span>  <span class="number">3690568</span>         <span class="number">-43658</span>  <span class="number">237211653</span>   <span class="number">20584322</span>   <span class="number">64.28</span>        <span class="number">6.26</span></span><br><span class="line"><span class="number">8</span>   <span class="number">2006</span>  <span class="number">3734226</span>         <span class="number">-20445</span>  <span class="number">216627331</span>   <span class="number">40871990</span>   <span class="number">58.01</span>       <span class="number">11.20</span></span><br><span class="line"><span class="number">9</span>   <span class="number">2005</span>  <span class="number">3754671</span>         <span class="number">-66308</span>  <span class="number">175755341</span>   <span class="number">44012676</span>   <span class="number">46.81</span>       <span class="number">12.33</span></span><br><span class="line"><span class="number">10</span>  <span class="number">2004</span>  <span class="number">3820979</span>         <span class="number">144974</span>  <span class="number">131742665</span>   <span class="number">32575492</span>   <span class="number">34.48</span>        <span class="number">7.50</span></span><br><span class="line"><span class="number">11</span>  <span class="number">2003</span>  <span class="number">3676005</span>         <span class="number">257983</span>   <span class="number">99167173</span>   <span class="number">21883842</span>   <span class="number">26.98</span>        <span class="number">4.37</span></span><br><span class="line"><span class="number">12</span>  <span class="number">2002</span>  <span class="number">3418022</span>         <span class="number">-53045</span>   <span class="number">77283331</span>    <span class="number">2990437</span>   <span class="number">22.61</span>        <span class="number">1.21</span></span><br><span class="line"><span class="number">13</span>  <span class="number">2001</span>  <span class="number">3471067</span>          <span class="number">71827</span>   <span class="number">74292894</span>  <span class="number">-15583539</span>   <span class="number">21.40</span>       <span class="number">-5.04</span></span><br><span class="line"><span class="number">14</span>  <span class="number">2000</span>  <span class="number">3399240</span>         <span class="number">171148</span>   <span class="number">89876433</span>   <span class="number">38986812</span>   <span class="number">26.44</span>       <span class="number">10.68</span></span><br><span class="line"><span class="number">15</span>  <span class="number">1999</span>  <span class="number">3228092</span>         <span class="number">-14620</span>   <span class="number">50889621</span>   <span class="number">13637399</span>   <span class="number">15.76</span>        <span class="number">4.28</span></span><br><span class="line"><span class="number">16</span>  <span class="number">1998</span>  <span class="number">3242712</span>         <span class="number">173281</span>   <span class="number">37252222</span>  <span class="number">-16973685</span>   <span class="number">11.49</span>       <span class="number">-6.18</span></span><br><span class="line"><span class="number">17</span>  <span class="number">1997</span>  <span class="number">3069431</span>         <span class="number">175785</span>   <span class="number">54225907</span>    <span class="number">-704950</span>   <span class="number">17.67</span>       <span class="number">-1.32</span></span><br><span class="line"><span class="number">18</span>  <span class="number">1996</span>  <span class="number">2893646</span>         <span class="number">126333</span>   <span class="number">54930857</span>   <span class="number">11181204</span>   <span class="number">18.98</span>        <span class="number">3.17</span></span><br><span class="line"><span class="number">19</span>  <span class="number">1995</span>  <span class="number">2767313</span>          <span class="number">63116</span>   <span class="number">43749653</span>    <span class="number">5270236</span>   <span class="number">15.81</span>        <span class="number">1.58</span></span><br><span class="line"><span class="number">20</span>  <span class="number">1994</span>  <span class="number">2704197</span>         <span class="number">160822</span>   <span class="number">38479417</span>      <span class="number">10041</span>   <span class="number">14.23</span>       <span class="number">-0.90</span></span><br><span class="line"><span class="number">21</span>  <span class="number">1993</span>  <span class="number">2543375</span>         <span class="number">248805</span>   <span class="number">38469376</span>     <span class="number">-83679</span>   <span class="number">15.13</span>       <span class="number">-1.68</span></span><br></pre></td></tr></table></figure>
+<h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem 2"></a>Problem 2</h3><ul>
+<li>suppose we want to convert between C(Celsius) and F(Fahrenheit), using the equation 9C = 5 (F-32)</li>
+<li>could write functions ‘c2f’ and ‘f2c’</li>
+<li>do all computation in floating point for this problem</li>
+</ul>
+<h3 id="Problem-3-Hamlet"><a href="#Problem-3-Hamlet" class="headerlink" title="Problem 3 - Hamlet"></a>Problem 3 - Hamlet</h3><p>Python is very popular in ‘digital humanities’</p>
+<p>MIT has the complete works of Shakespeare in a simple html format</p>
+<p>You will do a simple analysis of Hamlet by reading the html file, one line at a time(usual iteration scheme) and doing pattern matching</p>
+<p>The goal is to return a list of the linecnt, total number of ‘speeches’(look at the file format), and a dict showing the number of ‘speeches’ each character gives</p>
+<p>Your program should read directly from the url given, but you may want to download a copy to examine the structure of the file.<br>remember that usrlib.request returns ‘byte arrays’, not strings</p>
+<p>here’s a short sample of the file</p>
+<h3 id="Problem-5"><a href="#Problem-5" class="headerlink" title="Problem 5"></a>Problem 5</h3><p>define the <strong>mul</strong> method for polydict<br>Input:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[pd1, pd2, pd3, pd1 * pd2, pd1 * pd3, pd2 * pd3]</span><br></pre></td></tr></table></figure></p>
+<p>Output:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[+ <span class="number">3</span> * X ** <span class="number">2</span> + <span class="number">2</span> * X + <span class="number">1</span>,</span><br><span class="line"> + <span class="number">5</span> * X ** <span class="number">2</span> + <span class="number">10</span> * x,</span><br><span class="line"> <span class="number">3</span> * X ** <span class="number">2</span> + <span class="number">2</span> * X + <span class="number">1</span>,</span><br><span class="line"> <span class="number">5</span> * X ** <span class="number">2</span> + <span class="number">10</span> * X,</span><br><span class="line"> <span class="number">5</span> * X ** <span class="number">2</span> + <span class="number">10</span> * X ** <span class="number">-1</span>,</span><br><span class="line"> <span class="number">15</span> * X ** <span class="number">4</span> + <span class="number">40</span> * X ** <span class="number">3</span> + <span class="number">25</span> * X ** <span class="number">2</span> + <span class="number">10</span> * X,</span><br><span class="line"> <span class="number">15</span> * X ** <span class="number">4</span> + <span class="number">10</span> * X ** <span class="number">3</span> + <span class="number">5</span> * X ** <span class="number">2</span> + <span class="number">30</span> * X + <span class="number">20</span> * X ** <span class="number">-1</span>,</span><br><span class="line"> <span class="number">25</span> * X ** <span class="number">4</span> + <span class="number">50</span> * X ** <span class="number">3</span> + <span class="number">50</span> * X + <span class="number">100</span>]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS698-Flight-Data-Analysis.html" rel="next" title="Hadoop代写：CS698-Flight-Data-Analysis">
+                <i class="fa fa-chevron-left"></i> Hadoop代写：CS698-Flight-Data-Analysis
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-1-Decrypting-Government-Data"><span class="nav-number">1.</span> <span class="nav-text">Problem 1 - Decrypting Government Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Here-is-the-first-two-years-of-data-2014-and-2013"><span class="nav-number">2.</span> <span class="nav-text">Here is the first two years of data, 2014 and 2013</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2"><span class="nav-number">3.</span> <span class="nav-text">Problem 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-3-Hamlet"><span class="nav-number">4.</span> <span class="nav-text">Problem 3 - Hamlet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-5"><span class="nav-number">5.</span> <span class="nav-text">Problem 5</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
