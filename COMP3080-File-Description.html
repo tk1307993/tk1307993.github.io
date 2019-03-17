@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Database," />
+  <meta name="keywords" content="Operating System,File System," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这个作业是个大杂烩，sort，B+ tree，query，transactions，log，BCNF，总之什么都要涉及一点。">
-<meta name="keywords" content="Algorithm,Database">
+<meta name="description" content="本次需要代写的作业要求实现文件系统的高级操作，如查看文件的大小、创建时间、修改时间、用户、用户组等等meta信息。">
+<meta name="keywords" content="Operating System,File System">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database代写：CSC370-Database">
-<meta property="og:url" content="https://tk1307993.coding.me/CSC370-Database.html">
+<meta property="og:title" content="Operating System代写：COMP3080-File-Description">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3080-File-Description.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这个作业是个大杂烩，sort，B+ tree，query，transactions，log，BCNF，总之什么都要涉及一点。">
+<meta property="og:description" content="本次需要代写的作业要求实现文件系统的高级操作，如查看文件的大小、创建时间、修改时间、用户、用户组等等meta信息。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-05T10:20:43.894Z">
+<meta property="og:updated_time" content="2019-03-17T11:51:26.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Database代写：CSC370-Database">
-<meta name="twitter:description" content="这个作业是个大杂烩，sort，B+ tree，query，transactions，log，BCNF，总之什么都要涉及一点。">
+<meta name="twitter:title" content="Operating System代写：COMP3080-File-Description">
+<meta name="twitter:description" content="本次需要代写的作业要求实现文件系统的高级操作，如查看文件的大小、创建时间、修改时间、用户、用户组等等meta信息。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSC370-Database.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3080-File-Description.html"/>
 
 
 
 
 
-  <title>Database代写：CSC370-Database | 留学生CS编程作业代写</title>
+  <title>Operating System代写：COMP3080-File-Description | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC370-Database.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3080-File-Description.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Database代写：CSC370-Database</h2>
+          <h2 class="post-title" itemprop="name headline">Operating System代写：COMP3080-File-Description</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T18:18:14+08:00">
-                2018-10-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:48:38+08:00">
+                2019-03-17
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Database/" itemprop="url" rel="index">
-                    <span itemprop="name">Database</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这个作业是个大杂烩，sort，B+ tree，query，transactions，log，BCNF，总之什么都要涉及一点。
+                  本次需要代写的作业要求实现文件系统的高级操作，如查看文件的大小、创建时间、修改时间、用户、用户组等等meta信息。
               </div>
           
 
@@ -360,25 +360,21 @@
       
 
       
-        <h3 id="Ex-1"><a href="#Ex-1" class="headerlink" title="Ex.1"></a>Ex.1</h3><p>Consider a disk with average seek time of 10 ms, average rotational latency of 5 ms, and a transfer time of 1 ms for a 4KB block. The cost of reading/writing a block is the sum of these values (i.e. 16 ms). We are asked to sort a large relation consisting of 10,000,000 blocks of 4KB each. For this, we use a computer on which the main memory available for buffering is 320 blocks (somewhat small memory). We begin as usual by creating sorted runs of 320 blocks each in phase 1. Then, we do 319-way merges. Determine the number of phases needed, and evaluate the cost of the Multi Phase Multiway Merge Sort.</p>
-<h3 id="Ex-2"><a href="#Ex-2" class="headerlink" title="Ex.2"></a>Ex.2</h3><p>Build a B+ tree index with n=3 using the following sequence of keys:<br>2, 15, 31, 32, 6, 18, 19, 20, 3, 4, 5, 40, 41, 42</p>
-<p>Redraw the tree each time an insertion is done.</p>
-<h3 id="Ex-3"><a href="#Ex-3" class="headerlink" title="Ex.3"></a>Ex.3</h3><p>Consider the following query plan.</p>
-<p>What is the cost in terms of number of I/Os for this plan?</p>
-<p>Notes. The result of the left selection, being small, is kept in main memory, where it is sorted. The result of the right selection is pipelined to the join operator, i.e. the generation of the sorted sublists for the first phase of sort is done on the fly.<br>Do not count the I/Os for writing the final results (after projection).</p>
-<p>Consult queryeval.pdf for the table statistics.</p>
-<h3 id="Ex-4"><a href="#Ex-4" class="headerlink" title="Ex.4"></a>Ex.4</h3><p>For each of the schedules of transactions T1, T2, and T3 below:</p>
-<ol>
-<li>r1(A); r2(B); r3(C); r1(B); r2(C); r3(D); w1(A); w2(B); w3(C);</li>
-<li>r1(A); r2(B); r3(C); r1(B); r2(C); r3(A); w1(A); w2(B); w3(C);</li>
-</ol>
-<p>do each of the following:</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The program you will write will accept from 0 to an arbitrary number of command line file names and produce an output structure for each identified file (or all files in the working directory if no command line file names are listed) as shown below:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FILENAME</span><br><span class="line">FILE_TYPE</span><br><span class="line">PERMISSIONS</span><br><span class="line">OWNER_NAME</span><br><span class="line">GROUP_NAME</span><br><span class="line">DATE_OF_LAST_MODIFICATION</span><br><span class="line">LINK_COUNT</span><br><span class="line">SIZE_IN_BYTES <span class="keyword">OR</span> DEV INFO</span><br><span class="line">INODE_NUMBER</span><br></pre></td></tr></table></figure></p>
+<p>Example:<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">FILENAME:</span></span><br><span class="line">alpha</span><br><span class="line"><span class="symbol">FILE_TYPE:</span></span><br><span class="line">ordinary</span><br><span class="line"><span class="symbol">PERMISSIONS:</span></span><br><span class="line">rw- r-- r--</span><br><span class="line"><span class="symbol">OWNER_NAME:</span></span><br><span class="line">jedwards</span><br><span class="line"><span class="symbol">GROUP_NAM:</span></span><br><span class="line">grad</span><br><span class="line"><span class="symbol">DATE_OF_LAST_MODIFICATION:</span></span><br><span class="line">Mar <span class="number">30</span> <span class="number">08</span>:<span class="number">11</span> <span class="number">2003</span></span><br><span class="line"><span class="symbol">LINK_COUNT:</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="symbol">SIZE_IN_BYTES:</span></span><br><span class="line"><span class="number">1345</span> (<span class="keyword">or</span> <span class="number">12</span>, <span class="number">6</span> dev info)</span><br><span class="line"><span class="symbol">INODE_NUMBER:</span></span><br><span class="line"><span class="number">347</span></span><br><span class="line">*******&lt; a blank line between entries &gt;*******</span><br></pre></td></tr></table></figure></p>
+<p>System calls needed on a UNIX system include:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dirent.h&gt;</span></span></span><br><span class="line">getdirentries(<span class="keyword">int</span> fd, <span class="keyword">char</span> *buf, <span class="keyword">int</span> nbytes, <span class="keyword">long</span> *basep)</span><br></pre></td></tr></table></figure>
+<p>which reads up to nbytes of data into buf in the form:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span>   d_ino;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span>  d_reclen;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span>  d_namlen;</span><br><span class="line"><span class="keyword">char</span>            d_name[MAXNAMLEN + <span class="number">1</span>];</span><br></pre></td></tr></table></figure></p>
+<p>see the man pages for more detail. This routine is difficult to use, so you may find the library routines opendir() and readdir() easier to use as shown in class.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">ctime</span><span class="params">(<span class="keyword">long</span> *clock)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>see the man pages for more detail. This data structure may vary somewhat from platform to platform (see the stat.h header and its #includes), but the entry names shown above are common to all Unix/Linux type platforms</p>
+<p>The getdirentries() call requires that you use the open() system call to open a directory, and you can then use getdirentries() to extract filenames from the directory. (You may want to check out the library routines opendir() and readdir(), which will do this for you in a more friendly way.) Your program will have to work in two basic modes:</p>
 <ul>
-<li>Insert shared and exclusive locks, and insert unlock actions. Place a shared lock immediately in front of each read action that is not followed by a write action of the same element by the same transaction. Place an exclusive lock in front of every other read or write action. Place the necessary unlocks at the end of every transaction.<br>Tell what happens when each schedule is run by a scheduler that supports shared and exclusive locks.</li>
-<li>Insert shared and exclusive locks in a way that allows upgrading. Place a shared lock in front of every read, an exclusive lock in front of every write, and place the necessary unlocks at the ends of the transactions.<br>Tell what happens when each schedule is run by a scheduler that supports shared locks, exclusive locks, and upgrading.</li>
-<li>Insert shared, exclusive, and update locks, along with unlock actions. Place a shared lock in front of every read action that is not going to be upgraded, place an update lock in front of every read action that will be upgraded, and place an exclusive lock in front of every write action. Place unlocks at the ends of transactions, as usual.</li>
-<li>Tell what happens when each schedule is run by a scheduler that supports shared, exclusive, and update locks.</li>
+<li>if called with no arguments (as with ls) it must find the names of all the files in the current directory (including dotted files) and print information in the format shown above for each file object.</li>
+<li>if called with a series of file names (from the command line as with ls abc xyz etc) it must print information in the format shown above for each named object in the argv [ ] vector (wildcard characters are not allowed).</li>
 </ul>
+<p>File types include ordinary (-), directory (d), symbolic link (l), character device (c), and block device (b). You must show sample output with each of these types. (You do not have to worry about pipe (p) and UNIX domain socket (s) types, nor do you have to print resolution names for symbolic link (l) types.) There are several additional library routines and header file macros and defined constants that can help you get this done.</p>
+<p>If you compile your code on mercury, you will need to define a compile time symbol to work properly with NFS mounted file objects:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">Bash-$</span><span class="bash">  gcc -D_FILE_OFFSET_BITS=64 -g -o <span class="built_in">stat</span> stat.c</span></span><br></pre></td></tr></table></figure></p>
+<p>You won’t need this if you compile on cs but it will not hurt to include it either way (cs is a 64 bit Linux, while mercury is a 32 bit Linux)</p>
 
       
     </div>
@@ -396,9 +392,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
           
-            <a href="/tags/Database/" rel="tag"># Database</a>
+            <a href="/tags/File-System/" rel="tag"># File System</a>
           
         </div>
       
@@ -411,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS2401-STLContainer.html" rel="next" title="C++代写：CS2401 STLContainer">
-                <i class="fa fa-chevron-left"></i> C++代写：CS2401 STLContainer
+              <a href="/COMSW3101-Introduction-To-Python.html" rel="next" title="Python代写：COMSW3101-Introduction-To-Python">
+                <i class="fa fa-chevron-left"></i> Python代写：COMSW3101-Introduction-To-Python
               </a>
             
           </div>
@@ -420,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java-ImageProcessing.html" rel="prev" title="Java代写：Image Process">
-                Java代写：Image Process <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-1"><span class="nav-number">1.</span> <span class="nav-text">Ex.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-2"><span class="nav-number">2.</span> <span class="nav-text">Ex.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-3"><span class="nav-number">3.</span> <span class="nav-text">Ex.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ex-4"><span class="nav-number">4.</span> <span class="nav-text">Ex.4</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li></ol></div>
             
 
           </div>
