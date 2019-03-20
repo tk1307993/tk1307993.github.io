@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CS1003-Data-Processing-with-MapReduce.html</loc>
+    <lastmod>2019-03-20T13:54:06.603Z</lastmod>
+    <data>
+        <display>
+        <title>Hadoop代写：CS1003-Data-Processing-with-MapReduce</title>
+        <pubTime>2019-03-20T13:49:54.000Z</pubTime>
+        
+        <tag>MapReduce</tag>
+         
+        <tag>Hadoop</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hadoop" url="https://tk1307993.coding.me/categories/Hadoop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/COMP3080-File-Description.html</loc>
     <lastmod>2019-03-17T11:51:26.154Z</lastmod>
     <data>
@@ -57,9 +79,9 @@
         
         <tag>MapReduce</tag>
          
-        <tag>AWS</tag>
-         
         <tag>Hadoop</tag>
+         
+        <tag>AWS</tag>
          
          
            
@@ -1095,11 +1117,11 @@
         <title>Hadoop代写：CA675-TF-IDF</title>
         <pubTime>2018-09-25T02:41:52.000Z</pubTime>
         
+        <tag>Algorithm</tag>
+         
         <tag>Hive</tag>
          
         <tag>MapReduce</tag>
-         
-        <tag>Algorithm</tag>
          
          
            
@@ -1877,9 +1899,9 @@
         <title>Python代写：CSC108H Tic-Tac-Toe</title>
         <pubTime>2018-07-17T13:55:40.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
