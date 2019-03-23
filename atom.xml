@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-03-20T13:54:06.603Z</updated>
+  <updated>2019-03-23T07:22:32.667Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS3410-Game-Design</title>
+    <link href="https://tk1307993.coding.me/CS3410-Game-Design.html"/>
+    <id>https://tk1307993.coding.me/CS3410-Game-Design.html</id>
+    <published>2019-03-23T07:20:29.000Z</published>
+    <updated>2019-03-23T07:22:32.667Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><h4 id="Flexible-design-Demonstrate-flexibility-by"><a href="#Flexible-design-Demonstrate-flexibility-by" class="headerlink" title="Flexible design. Demonstrate flexibility by:"></a>Flexible design. Demonstrate flexibility by:</h4><p>Implementing at least two different versions for one or a set of features. The variation needs to be behavioural, not parametric. For example, writing a game where the user drives a car and the bitmap image of the car can be changed, or changing the probability of an event happening, will not be considered a variation that fulfills this requirement.</p><p>Showing that adding versions to the set of features is achieved by adding new code rather than by modifying existing code.</p><h4 id="Reliable-code-Demonstrate-reliability-by"><a href="#Reliable-code-Demonstrate-reliability-by" class="headerlink" title="Reliable code. Demonstrate reliability by:"></a>Reliable code. Demonstrate reliability by:</h4><p>Arguing that a significant set of features have corresponding test cases.</p><p>You demo a relatively stable version of your project and no errors occur during the demo.</p><p>You have an effective resource management policy. For example, you can use “valgrind” to check and show evidence of the effectiveness of your memory management scheme, or you can use smart pointers, if applicable.</p><h4 id="Reasonable-scope-Show-that-your-project-is-not-trivial"><a href="#Reasonable-scope-Show-that-your-project-is-not-trivial" class="headerlink" title="Reasonable scope. Show that your project is not trivial:"></a>Reasonable scope. Show that your project is not trivial:</h4><p>Describe the features of your project by describing use case stories (an example is in your textbook), or listing the features that you implemented (you can include your test lists annotated with explanations so that the test list makes sense to an outside reader).</p><p>Provide code statistics. Tools for this purpose exist. For example, you can look at: CCCC (C and C++ Code Counter, <a href="http://sourceforge.net/projects/cccc/" target="_blank" rel="noopener">http://sourceforge.net/projects/cccc/</a> ).</p><h3 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation:"></a>Implementation:</h3><p>Source code commented using doxygen.</p><p>Source code naming and formatting conventions are consistent.</p><p>Building from sources is clearly explained and appropriately managed.</p><p>Use of a version control system is absolutely necessary. Show evidence that every team member has contributed code to the project. Bitbucket, for example, has the ability to show the users who have pushed commits to the remote repository. Every member should have at least one commit used in the project.</p><h3 id="FINAL-PROJECT-REPORT-grading-scheme"><a href="#FINAL-PROJECT-REPORT-grading-scheme" class="headerlink" title="FINAL PROJECT REPORT (grading scheme)"></a>FINAL PROJECT REPORT (grading scheme)</h3><p>Provide evidence that you fulfill each of the four requirements above (10% allocated for each requirement, total 40%). Please note that claims of the type “our implementation used shared_ptr classes” or “we have written a lot of code” are only claims. They need to be followed by evidence such as reference to the source code or doxygen documentation, or code statistics. Your report need not fill many pages, but it should be to the point. Please avoid double space lines and verbose formulations.</p>]]></content>
+    
+    <summary type="html">
+    
+      这次需要代写的游戏自由发挥，游戏内容不限
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>Hadoop代写：CS1003-Data-Processing-with-MapReduce</title>
@@ -469,28 +491,6 @@
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
     
       <category term="OpenGL" scheme="https://tk1307993.coding.me/tags/OpenGL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CMPT115-Huffman-Tree-Part4</title>
-    <link href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html"/>
-    <id>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html</id>
-    <published>2019-01-05T03:55:54.000Z</published>
-    <updated>2019-01-05T04:00:19.059Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Exercise-7-Completing-the-Huffman-Codec-ADT"><a href="#Exercise-7-Completing-the-Huffman-Codec-ADT" class="headerlink" title="Exercise 7 Completing the Huffman Codec ADT"></a>Exercise 7 Completing the Huffman Codec ADT</h3><p>To complete the C The other ADT in Huffman.cc is called the Huffman Codec. The word “codec” is a contraction of two words: “COde” and “DECode”. This ADT does the work of coding and decoding using a Huffman tree. The Huffman Codec is a record that stores two records: the Huffman Tree thatwas created in the previous exercise, and a codebook, which was created by analysing the Huffman tree. The codebook has a place to store a C-string for every ASCII character, though most of the codebook will be filled with NULL references; only the characters in the original message will have a code. The function find_codes() builds the codebook using the Huffman Tree.</p><p>In this exercise, you’ll complete the encode() operations for the Huffman Codec. Here’s what it looks like currently:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// encode(hcdc, message)</span></span><br><span class="line"><span class="comment">// encode a message using the Huffman Codec</span></span><br><span class="line"><span class="comment">// Pre: hcdc is a referene to a HuffmanCodec</span></span><br><span class="line"><span class="comment">//      message:: a cstring to encode</span></span><br><span class="line"><span class="comment">// Return a cstring containing the encoded message</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">encode</span><span class="params">(HuffmanCodec *h, <span class="keyword">const</span> <span class="keyword">char</span> message[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Your job is to complete this function.</p><h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>The operation has to encode each character in the given message. The output of this function is a reference to a C-string, so we have to allocate a C-string big enough to fill with the encoded message. Use a large size, just to be sure.</p><p>To encode the message, you have to look at each character in the message, and copy its code from the Codec’s codebook to the encoded C-string. It’s possible to use strcat() for this, but it’s just as easy to write your own loop to copy the code for a character from the codebook to the coded C-string. Remember that you’re looking at the message one character at a time, but you are copying several characters into the coded C-string.</p><p>The encoded C-string is probably twice as long as the original message. That’s because we’re using ‘0’ and ‘1’ in the codebook; a real compression utility would use bits 0 and 1, not characters. That’s okay for us; seeing the code is much easier to debug.</p><h3 id="Exercise-Summary"><a href="#Exercise-Summary" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><p>Complete encode() as indicated.</p><p>Build the testADT app, and run it.</p><p>If your code does the right things, tests 45-48 should all report “Passed.”</p><h3 id="Exercise-8-Completing-the-Huffman-Codec-ADT"><a href="#Exercise-8-Completing-the-Huffman-Codec-ADT" class="headerlink" title="Exercise 8 Completing the Huffman Codec ADT"></a>Exercise 8 Completing the Huffman Codec ADT</h3><p>To complete the Huffman Codec, we need an algorithm to decode a coded string. The operation to decode a coded string is called decode(). We’ve given it to you in the file Huffman.cc. It calls a function called decode_char(), whose job it is to step through the Huffman tree, starting at the root, and winding up at a leaf; decode_char() returns the character stored in the Frequency record stored at the leaf. (We cannot use the codebook for decoding! We have to use the Huffman Tree. To decode a character using the Huffman tree requires us to step down from tbhe root to a leaf, which should be fairly short. The complexity of stepping through the tree is O(h) where h is the height of the Huffman Tree. If we used the codebook, we’d have to look at each possible code, and try to figure out if the code we’re looking at is a code in the codebook. This would require at least O(nh) time, where n is the number of characters in the message. So use the tree!</p><p>Here’s what decode_char() looks like currently:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// decode_char(tnode, message, d) &#123;</span></span><br><span class="line"><span class="comment">// decode one character from the message.</span></span><br><span class="line"><span class="comment">// Pre: tnode is a node in a huffman tree</span></span><br><span class="line"><span class="comment">//      message:: cstring, the whole message to decode</span></span><br><span class="line"><span class="comment">//      d:: a reference to an int containing the current</span></span><br><span class="line"><span class="comment">//          index in the message</span></span><br><span class="line"><span class="comment">// Post: d has been increased by the number of 0s and 1s used to</span></span><br><span class="line"><span class="comment">//       encode the character</span></span><br><span class="line"><span class="comment">// Return: the decoded character</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">decode_char</span><span class="params">(TreeNode *t, <span class="keyword">char</span> message[], <span class="keyword">int</span> *d)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="string">'.'</span>; <span class="comment">// dot returned for no good reason</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Your job is to complete this function.</p>]]></content>
-    
-    <summary type="html">
-    
-      这是Huffman作业的第四部分，也是最后一部分，同样分为三个小练习。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
