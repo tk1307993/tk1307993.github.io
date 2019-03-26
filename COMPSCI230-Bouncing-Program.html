@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这次需要代写的Java作业是完善一个UI程序，需要使用面向对象编程设计，特别是OOP中的继承和多态。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：COMPSCI230-Bouncing-Program">
+<meta property="og:url" content="https://tk1307993.coding.me/COMPSCI230-Bouncing-Program.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="这次需要代写的Java作业是完善一个UI程序，需要使用面向对象编程设计，特别是OOP中的继承和多态。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-26T13:41:16.970Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：COMPSCI230-Bouncing-Program">
+<meta name="twitter:description" content="这次需要代写的Java作业是完善一个UI程序，需要使用面向对象编程设计，特别是OOP中的继承和多态。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMPSCI230-Bouncing-Program.html"/>
+
+
+
+
+
+  <title>Java代写：COMPSCI230-Bouncing-Program | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMPSCI230-Bouncing-Program.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：COMPSCI230-Bouncing-Program</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T21:37:17+08:00">
+                2019-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这次需要代写的Java作业是完善一个UI程序，需要使用面向对象编程设计，特别是OOP中的继承和多态。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Introduction-The-Bouncing-Program"><a href="#Introduction-The-Bouncing-Program" class="headerlink" title="Introduction - The Bouncing Program"></a>Introduction - The Bouncing Program</h3><p>The application, as given, is a simple bouncing program. Different shapes move around in various paths.</p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><p>The user can create a new shape by clicking anywhere within the panel area of the program. The properties of the newly created shape are based on the current values saved in the appropriate UI fields (e.g. height, width etc).</p>
+<h3 id="Selecting-deselecting-shapes"><a href="#Selecting-deselecting-shapes" class="headerlink" title="Selecting/deselecting shapes:"></a>Selecting/deselecting shapes:</h3><p>A user can select a shape by clicking anywhere on the shape. If a shape is selected, all its handles are shown. The user can change the path types/widths/heights for all selected shapes by changing the current values with the help of the tools provided at the top of the application interface. (But the shape type can’t be modified once a shape has been created.)</p>
+<p>Clicking on a selected shape will deselect it.</p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Shape-Combo-Box"><a href="#Shape-Combo-Box" class="headerlink" title="Shape Combo Box"></a>Shape Combo Box</h3><p>The ‘Shape’ combo box sets the current shape type for new shapes. Clicking in the panel area for Shape Creation will create the selected type of the shape. A rectangle or a circle can be selected in the program.</p>
+<h3 id="Path-Combo-Box"><a href="#Path-Combo-Box" class="headerlink" title="Path Combo Box"></a>Path Combo Box</h3><p>Users may select one of several moving paths for shapes from the ‘Path’ combo box. Selecting a new path changes the path of all currently selected shapes. Additionally, the new path becomes the current path for any new shapes that are created.</p>
+<h3 id="Width-TextField"><a href="#Width-TextField" class="headerlink" title="Width TextField"></a>Width TextField</h3><p>Users may change the current width of new shapes and currently selected shapes by entering a valid number in the width text field and pressing “ENTER”.</p>
+<h3 id="Height-TextField"><a href="#Height-TextField" class="headerlink" title="Height TextField"></a>Height TextField</h3><p>Users may change the current height of new shapes and currently selected shapes by entering a valid number in the height text field and pressing “ENTER”.</p>
+<h3 id="Border-Colour-Button"><a href="#Border-Colour-Button" class="headerlink" title="Border Colour Button"></a>Border Colour Button</h3><p>Users may change the current border colour of new shapes and currently selected shapes by selecting a colour from the colour dialog box and pressing “OK”.</p>
+<h3 id="Start-Button"><a href="#Start-Button" class="headerlink" title="Start Button"></a>Start Button</h3><p>Starts the animation.</p>
+<h3 id="Stop-Button"><a href="#Stop-Button" class="headerlink" title="Stop Button"></a>Stop Button</h3><p>Stops the animation.</p>
+<h3 id="Animation-Slider"><a href="#Animation-Slider" class="headerlink" title="Animation Slider"></a>Animation Slider</h3><p>Users may use the animation delay slider to adjust the speed of the animation.</p>
+<h3 id="Popup-Menu"><a href="#Popup-Menu" class="headerlink" title="Popup Menu"></a>Popup Menu</h3><p>The application has a popup menu, which is activated by clicking the right mouse button anywhere in the panel area (on a windows machine). The popup menu contains a menu item called “Clear All” which allows the user to clear all shapes from the program.</p>
+<h3 id="What-you-are-to-do"><a href="#What-you-are-to-do" class="headerlink" title="What you are to do"></a>What you are to do</h3><p>Firstly, become familiar with the program supplied. The files included in the program are as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A2.java</span><br><span class="line">AnimationPanel.java</span><br><span class="line">MovingShape.java</span><br><span class="line">MovingRectangle.java</span><br></pre></td></tr></table></figure></p>
+<p>Download all source files from the assignment course page. The design and implementation of the program will be covered in lectures, please refer to the relevant material. It is strongly recommended to start as early as you can and implement the parts you know as soon as they are taught in lectures.</p>
+<p>Your assignment is divided into several stages for ease of completion. Please complete the assignment in order of the stages.</p>
+<h3 id="Stage-1-Using-An-ArrayList-10-marks"><a href="#Stage-1-Using-An-ArrayList-10-marks" class="headerlink" title="Stage 1: Using An ArrayList (10 marks)"></a>Stage 1: Using An ArrayList (10 marks)</h3><p>In this part you are required to modify classes in A2 which enable users to store instances of shapes using an ArrayList.</p>
+<h3 id="Stage-2-Pen-Width-5-marks"><a href="#Stage-2-Pen-Width-5-marks" class="headerlink" title="Stage 2: Pen Width (5 marks)"></a>Stage 2: Pen Width (5 marks)</h3><p>In this part you are required to modify classes in A2 which enable users to change the pen width of all the currently selected shapes and the current pen width that will be used when creating new shapes.</p>
+<p>You are required to add a setCurrentPenWidth() method into the AnimationPanel class in order to set the pen width of all the currently selected shapes and the pen width that will be used when creating new shapes. You are also required to add a getCurrentPenWidth() method into the AnimationPanel class to return the CURRENT pen width.</p>
+<p>You should add the set and get methods to the MovingShape class in order to set or get the pen width of shapes. You should also modify the draw method of MovingRectangle class (and all subclasses) in order to use the pen width attribute stored in the superclass to draw the shape.</p>
+<h3 id="Stage-3-Adding-new-Shapes-25"><a href="#Stage-3-Adding-new-Shapes-25" class="headerlink" title="Stage 3: Adding new Shapes (25%)"></a>Stage 3: Adding new Shapes (25%)</h3><p>The MovingShape is an abstract class which contains two abstract methods: draw and contains. You are required to add new subclasses. You may need to implement some or all abstract methods for the new shapes. You may also need to add a private instance field to store a specific property of the new shape. You will need to think carefully on the structure of the inheritance hierarchy.</p>
+<h3 id="Stage-3B-MovingPolygon-Class-10-marks"><a href="#Stage-3B-MovingPolygon-Class-10-marks" class="headerlink" title="Stage 3B: MovingPolygon Class (10 marks)"></a>Stage 3B: MovingPolygon Class (10 marks)</h3><p>You are required to add a new class to the bouncing program. This class should draw a polygon based on the current width, height, pen width, border colour and the bouncing path stored in the AnimationPanel. Some examples are shown in the following diagram. You can choose any one or all of them.</p>
+<h3 id="Stage-3C-MovingRotatingSquare-Class-10-marks"><a href="#Stage-3C-MovingRotatingSquare-Class-10-marks" class="headerlink" title="Stage 3C: MovingRotatingSquare Class (10 marks)"></a>Stage 3C: MovingRotatingSquare Class (10 marks)</h3><p>You are required to add a new class to the bouncing program. This class should draw a list of rotating squares based on the current width, height, pen width, border colour and the bouncing path stored in the AnimationPanel. Some examples are shown in the following diagram.</p>
+<p>You may need to use methods from the AffineTransform class to rotate squares.</p>
+<h3 id="Stage-4-Adding-a-New-Path-10-marks-JumpingPath-class"><a href="#Stage-4-Adding-a-New-Path-10-marks-JumpingPath-class" class="headerlink" title="Stage 4: Adding a New Path (10 marks): JumpingPath class"></a>Stage 4: Adding a New Path (10 marks): JumpingPath class</h3><p>In this part, you are required to add a jumping path to the bouncing program.</p>
+<p>The MovingPath is an abstract inner class which contains an abstract method. You are required to add a new subclass which extends the MovingPath. You may need to add a private instance field to store a specific property of the new path. You will need to think carefully on the structure of the inheritance hierarchy.</p>
+<h3 id="A2-amp-MovingShape"><a href="#A2-amp-MovingShape" class="headerlink" title="A2 &amp; MovingShape"></a>A2 &amp; MovingShape</h3><p>Next, you are required to add a new ImageIcon to the ‘Path’ combo box control in the A2 class for the new type of path. You are also required to modify the setPath method in the MovingShape class which allows users to create a new subclass instance. An example is shown as below:</p>
+<h3 id="Assessment-criteria"><a href="#Assessment-criteria" class="headerlink" title="Assessment criteria"></a>Assessment criteria</h3><ul>
+<li>Users should be able to add a new shape which bounce off using the jumping path idea.</li>
+<li>Users should be able to change the bouncing path of the selected shapes to the jumping path.</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS3410-Game-Design.html" rel="next" title="C++代写：CS3410-Game-Design">
+                <i class="fa fa-chevron-left"></i> C++代写：CS3410-Game-Design
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction-The-Bouncing-Program"><span class="nav-number">1.</span> <span class="nav-text">Introduction - The Bouncing Program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Actions"><span class="nav-number">2.</span> <span class="nav-text">Actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Selecting-deselecting-shapes"><span class="nav-number">3.</span> <span class="nav-text">Selecting/deselecting shapes:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tools"><span class="nav-number"></span> <span class="nav-text">Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shape-Combo-Box"><span class="nav-number">1.</span> <span class="nav-text">Shape Combo Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Combo-Box"><span class="nav-number">2.</span> <span class="nav-text">Path Combo Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Width-TextField"><span class="nav-number">3.</span> <span class="nav-text">Width TextField</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Height-TextField"><span class="nav-number">4.</span> <span class="nav-text">Height TextField</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Border-Colour-Button"><span class="nav-number">5.</span> <span class="nav-text">Border Colour Button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-Button"><span class="nav-number">6.</span> <span class="nav-text">Start Button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stop-Button"><span class="nav-number">7.</span> <span class="nav-text">Stop Button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animation-Slider"><span class="nav-number">8.</span> <span class="nav-text">Animation Slider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Popup-Menu"><span class="nav-number">9.</span> <span class="nav-text">Popup Menu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-you-are-to-do"><span class="nav-number">10.</span> <span class="nav-text">What you are to do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-1-Using-An-ArrayList-10-marks"><span class="nav-number">11.</span> <span class="nav-text">Stage 1: Using An ArrayList (10 marks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-2-Pen-Width-5-marks"><span class="nav-number">12.</span> <span class="nav-text">Stage 2: Pen Width (5 marks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-3-Adding-new-Shapes-25"><span class="nav-number">13.</span> <span class="nav-text">Stage 3: Adding new Shapes (25%)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-3B-MovingPolygon-Class-10-marks"><span class="nav-number">14.</span> <span class="nav-text">Stage 3B: MovingPolygon Class (10 marks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-3C-MovingRotatingSquare-Class-10-marks"><span class="nav-number">15.</span> <span class="nav-text">Stage 3C: MovingRotatingSquare Class (10 marks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stage-4-Adding-a-New-Path-10-marks-JumpingPath-class"><span class="nav-number">16.</span> <span class="nav-text">Stage 4: Adding a New Path (10 marks): JumpingPath class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A2-amp-MovingShape"><span class="nav-number">17.</span> <span class="nav-text">A2 &amp; MovingShape</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assessment-criteria"><span class="nav-number">18.</span> <span class="nav-text">Assessment criteria</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
