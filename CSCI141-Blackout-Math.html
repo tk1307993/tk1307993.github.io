@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：CSCI141-Blackout-Math">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI141-Blackout-Math.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-29T10:38:13.602Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：CSCI141-Blackout-Math">
+<meta name="twitter:description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI141-Blackout-Math.html"/>
+
+
+
+
+
+  <title>Python代写：CSCI141-Blackout-Math | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI141-Blackout-Math.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：CSCI141-Blackout-Math</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-29T21:37:17+08:00">
+                2019-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Ploblem"><a href="#Ploblem" class="headerlink" title="Ploblem"></a>Ploblem</h3><p>Blackout Math is a puzzle in which you are given an incorrect arithmetic equation, such as this one:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">288 </span>/ <span class="number">24</span> × <span class="number">6</span> = <span class="number">18</span> × <span class="number">13</span> × <span class="number">8</span></span><br></pre></td></tr></table></figure></p>
+<p>To solve the puzzle, figure out which two squares must be blacked out to create a correct equation. Blacked out squares are simply skipped over when reading the new equation. Note that you can choose to black out an operation — for example, if you black out the last multiplication sign, the right side would read 18 x 138. You are not allowed to black out the equal sign!<br>In this particular instance of the puzzle, the answer is as follows:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">288 </span>/ <span class="number">4</span> × <span class="number">6</span> = <span class="number">18</span> × <span class="number">3</span> × <span class="number">8</span></span><br></pre></td></tr></table></figure></p>
+<p>as both sides of the equation now evaluate to 432.<br>Here is another puzzle for you to try:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">168 </span>/ <span class="number">24</span> + <span class="number">8</span> = <span class="number">11</span> × <span class="number">3</span> - <span class="number">16</span></span><br></pre></td></tr></table></figure></p>
+<p>In this project, you will develop a program that reads in Blackout Math puzzles from a file and determines their solutions.</p>
+<h3 id="Building-your-solution"><a href="#Building-your-solution" class="headerlink" title="Building your solution"></a>Building your solution</h3><p>Once your solution is complete, it will work as follows:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Open up <span class="keyword">a</span> <span class="built_in">file</span> <span class="keyword">of</span> Blackout Math puzzles</span><br><span class="line">  For <span class="keyword">each</span> puzzle:</span><br><span class="line">    For <span class="keyword">each</span> possible pair <span class="keyword">of</span> <span class="keyword">characters</span> <span class="keyword">in</span> <span class="keyword">the</span> puzzle</span><br><span class="line">      Determine <span class="keyword">the</span> <span class="keyword">string</span> that results <span class="built_in">from</span> deleting those <span class="keyword">characters</span></span><br><span class="line">      Compute <span class="keyword">the</span> <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">each</span> side <span class="keyword">of</span> <span class="keyword">the</span> equation</span><br><span class="line">      If <span class="keyword">the</span> <span class="literal">two</span> sides have <span class="keyword">the</span> same <span class="built_in">value</span>, success!</span><br></pre></td></tr></table></figure></p>
+<p>However, it will be easier to build your solution from the inside out — that is, first create a function that computes the value of one side of one equation, then use that to build a checker for a single puzzle, and so on. Here we will give you some hints for how to complete this process.</p>
+<h3 id="Computing-the-value-of-an-expression"><a href="#Computing-the-value-of-an-expression" class="headerlink" title="Computing the value of an expression"></a>Computing the value of an expression</h3><p>Consider the following string: 5 × 2 + 3 – going from left to right, your program will have to check whether each character represents a digit or an operation, and keep a running total of the current value of the expression. Also note that when you come to a number, you have to remember what the last character was – knowing only that the current character is a 3 only helps if you know that you were supposed to add it to the previous value of the expression! The Python function isdigit will be helpful for this process. To get started, write a skeleton of a compute function that takes a string and goes through it character by character, converting the numbers to ints and printing “add”, “subtract”, “multiply” or “divide” for each operation as they are encountered.</p>
+<p>Now, consider the expression 5 + 2 × 3 – if we parse this string from left to right (as we would usually process it in a loop), we will get 21, but according to the standard order of operations, we should do the multiplication first, then the addition, to get 11. In effect, when going left-to-right, we need to delay the addition until the multiplication has been completed. One way to do that is to save the addition on a stack, then pop it off the stack and execute it once the multiplication has finished. You also need to save the numbers themselves on a separate stack until they are needed. Of course, if you have multiple additions or subtractions in a row, then you need to only save the last one, so when you see a second addition or subtraction, you need to compute the result of the first before saving the result and the most recent operation.</p>
+<p>If we have parentheses as well, this also can be easily handled with a stack, again essentially forcing the contents of the parentheses to happen first.</p>
+<p>The pseudocode for handling order-of-operations (for just the four standard operations plus parentheses) using a pair of stacks is as follows:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Determine what <span class="keyword">the</span> next <span class="keyword">item</span> <span class="keyword">in</span> <span class="keyword">the</span> <span class="keyword">string</span> is, call this X</span><br><span class="line">If X is <span class="keyword">a</span> <span class="built_in">number</span>, push <span class="keyword">it</span> onto <span class="keyword">the</span> <span class="built_in">number</span> stack</span><br><span class="line">If X is <span class="keyword">any</span> <span class="keyword">of</span> <span class="keyword">the</span> <span class="literal">four</span> arithmetic operations:</span><br><span class="line">  While <span class="keyword">the</span> top <span class="keyword">of</span> <span class="keyword">the</span> operation stack is equal <span class="keyword">or</span> higher precedence <span class="built_in">to</span> X:</span><br><span class="line">    Pop <span class="keyword">the</span> top <span class="literal">two</span> numbers <span class="built_in">from</span> <span class="keyword">the</span> <span class="built_in">number</span> stack <span class="keyword">and</span> <span class="literal">one</span> operation <span class="built_in">from</span> <span class="keyword">the</span> operation stack</span><br><span class="line">    Apply <span class="keyword">the</span> operation that you just popped, push <span class="keyword">the</span> <span class="built_in">result</span> onto <span class="keyword">the</span> <span class="built_in">number</span> stack</span><br><span class="line">  Push X onto <span class="keyword">the</span> operation stack</span><br><span class="line">If X is (, push <span class="keyword">it</span> onto <span class="keyword">the</span> operation stack</span><br><span class="line">If X is ),</span><br><span class="line">  While <span class="keyword">the</span> top <span class="keyword">of</span> <span class="keyword">the</span> operation stack is <span class="keyword">not</span> <span class="string">'('</span>:</span><br><span class="line">    Pop <span class="keyword">the</span> top <span class="literal">two</span> numbers <span class="built_in">from</span> <span class="keyword">the</span> <span class="built_in">number</span> stack <span class="keyword">and</span> <span class="keyword">the</span> top operation <span class="built_in">from</span> <span class="keyword">the</span> operation stack</span><br><span class="line">    Apply <span class="keyword">the</span> operation that you just popped, push <span class="keyword">the</span> <span class="built_in">result</span> onto <span class="keyword">the</span> <span class="built_in">number</span> stack</span><br><span class="line">    Pop off <span class="keyword">the</span> (</span><br><span class="line">Once you reach <span class="keyword">the</span> <span class="function"><span class="keyword">end</span> <span class="title">of</span> <span class="title">the</span> <span class="title">input</span>, <span class="title">while</span> <span class="title">the</span> <span class="title">stacks</span> <span class="title">are</span> <span class="title">not</span> <span class="title">empty</span>:</span></span><br><span class="line">  Pop <span class="keyword">the</span> top <span class="literal">two</span> numbers <span class="built_in">from</span> <span class="keyword">the</span> <span class="built_in">number</span> stack <span class="keyword">and</span> <span class="keyword">the</span> top operation <span class="built_in">from</span> <span class="keyword">the</span> operation stack</span><br><span class="line">  Apply <span class="keyword">the</span> operation that you just popped, push <span class="keyword">the</span> <span class="built_in">result</span> onto <span class="keyword">the</span> <span class="built_in">number</span> stack</span><br></pre></td></tr></table></figure></p>
+<p>To get a feel for how and why this works, trace this pseudocode for the input 2 + 5 × (6 - 3) - 6 by noting what is in each stack after reading each character.</p>
+<p>Finally, consider the string 5 × 12 + 3 – in this case, when you come to a number, you cannot count on it being immediately used. Instead, you have to continue building up the value of the current number until you read an operation, then you can incorporate that into the expression. Figure out what happens when the 1 is read by your function, then the 2, and finally the +. Modify your compute function to handle the case of multi-digit numbers. As above, trace the correct execution on paper and then test the code on a few different cases.</p>
+<h3 id="Error-handling"><a href="#Error-handling" class="headerlink" title="Error handling"></a>Error handling</h3><p>In many cases in this course, we do not worry about handling errors in input as they are not critical to the problem at hand. However, in this case, we can expect “errors” to occur when parsing. This is because we will be deleting arbitrary characters from the puzzle. For example, when trying to solve our first example 288 / 24 × 6=18 × 13 × 8 we might try deleting the 6, leaving a left side of 288 / 24×. We know right away that this is not a possible solution to the puzzle, but our compute function must still handle this gracefully. Luckily, the stack-based algorithm will handle most of these cases easily – if we get to the end of the input and have anything other than one number and no operators left, there was erroneous input. Other error cases that you may discover can also be dealt with via the parsing algorithm itself.</p>
+<h3 id="Testing-whether-an-equation-is-correct"><a href="#Testing-whether-an-equation-is-correct" class="headerlink" title="Testing whether an equation is correct"></a>Testing whether an equation is correct</h3><p>Once we can evaluate a single expression, it is simple to compute whether two sides of an equation are equal. You may find the Python functions find (with slicing) or split useful to locate the equal sign in your equation (if it still has one!). Write a function called test that takes in a string and uses your compute function to decide if the string represents the correct solution to a Blackout Math puzzle.</p>
+<h3 id="Computing-all-possible-pairs-of-characters"><a href="#Computing-all-possible-pairs-of-characters" class="headerlink" title="Computing all possible pairs of characters"></a>Computing all possible pairs of characters</h3><p>To solve a Blackout Math puzzle, you have to find the two squares to black out, or in our case, two characters to remove from the string. For a computer, the simplest thing to do is simply to test all possible pairs of characters. Note that although the two examples in this writeup are the same length, not all Blackout Math puzzles will be.</p>
+<p>Write a function solve that takes in a full Blackout Math puzzle as a string and loops through all possible pairs of characters. For each pair of characters, create the string that results when those two characters are removed, and use your evaluate function to see which of those represents the solution! This is a good time to make sure that your error handling works, as this loop will send many malformed equations to your evaluate function – consider how compute will report errors, and how evaluate will handle them. Remember, that the two characters that are removed COULD be on the same side of the equals sign.</p>
+<h3 id="Using-a-binary-tree-to-compute-all-possible-solutions"><a href="#Using-a-binary-tree-to-compute-all-possible-solutions" class="headerlink" title="Using a binary tree to compute all possible solutions"></a>Using a binary tree to compute all possible solutions</h3><p>Now that you have done this for all possible combinations of two blacked out characters, you need to now do it for any arbitrary number of blacked out characters.</p>
+<p>To do this you are required to use a binary tree. The tree will be structured such that all leaf nodes of the tree are all possible combinations of blacked out characters.</p>
+<p>The left child of the tree will be the equation with the current character blacked out. The right child will be the equation with the current character not blacked out.</p>
+<p>To construct the tree you will consider one character at a time in the equation. You will make two children, one with the current value blacked out and one with the value not blacked out. Each level of the tree will represent all possible combinations of a new character character being added to the statement.</p>
+<p>Your function for making the tree will be recursive in nature, as recursion is the easiest way to process a binary tree.<br>Psuedocode for making the tree:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def makeTree( equation, <span class="built_in">value</span> ):</span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> equation is <span class="literal">empty</span>, we have reached <span class="keyword">the</span> leaves <span class="keyword">of</span> this branch:</span><br><span class="line">    <span class="built_in">set</span> left <span class="keyword">and</span> <span class="literal">right</span> children <span class="built_in">to</span> None</span><br><span class="line">  otherwise:</span><br><span class="line">    we need <span class="built_in">to</span> <span class="built_in">create</span> <span class="keyword">the</span> left <span class="keyword">and</span> <span class="literal">right</span> children:</span><br><span class="line">    - left will be <span class="keyword">a</span> recursive call <span class="built_in">to</span> make tree <span class="keyword">with</span>:</span><br><span class="line">      - <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> removed <span class="built_in">from</span> <span class="keyword">the</span> equation</span><br><span class="line">      - <span class="keyword">the</span> same <span class="built_in">value</span></span><br><span class="line">    - <span class="literal">right</span> will be <span class="keyword">a</span> recursive call <span class="built_in">to</span> make tree <span class="keyword">with</span>:</span><br><span class="line">      - <span class="keyword">the</span> equation <span class="keyword">with</span> <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> removed</span><br><span class="line">      - <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> <span class="keyword">of</span> <span class="keyword">the</span> equation appended <span class="built_in">to</span> <span class="keyword">the</span> <span class="built_in">value</span></span><br><span class="line">  make <span class="keyword">a</span> binary tree node <span class="keyword">with</span> <span class="keyword">the</span> left, <span class="literal">right</span>, <span class="keyword">and</span> current <span class="built_in">value</span></span><br><span class="line">  <span class="literal">return</span> <span class="keyword">the</span> binary tree node</span><br></pre></td></tr></table></figure></p>
+<p>In the case of the tree presented above, there are no valid solutions. These trees can get large. There are actually 2 n possible leaf nodes, where n is the length of the equation. For example, the equation 3 + 2 / 5 = 5 + 3 × 2 will have 2 11 possible leaf nodes. That’s 2048 leaf nodes!</p>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><p>As you develop your solution, make sure to thoroughly test each function as well as the overall solution. For the compute function, it probably makes sense to test simple expressions first, then more complex ones (including parentheses), and finally ones that will cause errors of various kinds.</p>
+<p>For the overall solution, you should test some different puzzles including some of your own creation (making a puzzle isn’t that hard!). Make sure that your code works for all the puzzles – but we will not test with any puzzle that does not have a solution. Note that some puzzles, such as the one given at the top of this assignment, do not rely on order of operations, so can be used for testing whether or not you have implemented that algorithm.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMPSCI230-Bouncing-Program.html" rel="next" title="Java代写：COMPSCI230-Bouncing-Program">
+                <i class="fa fa-chevron-left"></i> Java代写：COMPSCI230-Bouncing-Program
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ploblem"><span class="nav-number">1.</span> <span class="nav-text">Ploblem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-your-solution"><span class="nav-number">2.</span> <span class="nav-text">Building your solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Computing-the-value-of-an-expression"><span class="nav-number">3.</span> <span class="nav-text">Computing the value of an expression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-handling"><span class="nav-number">4.</span> <span class="nav-text">Error handling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing-whether-an-equation-is-correct"><span class="nav-number">5.</span> <span class="nav-text">Testing whether an equation is correct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Computing-all-possible-pairs-of-characters"><span class="nav-number">6.</span> <span class="nav-text">Computing all possible pairs of characters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-a-binary-tree-to-compute-all-possible-solutions"><span class="nav-number">7.</span> <span class="nav-text">Using a binary tree to compute all possible solutions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing"><span class="nav-number">8.</span> <span class="nav-text">Testing</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
