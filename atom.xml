@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-04-04T09:21:20.690Z</updated>
+  <updated>2019-04-07T10:35:13.144Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#代写：CIS340-Campus-Cafeteria</title>
+    <link href="https://tk1307993.coding.me/CIS340-Campus-Cafeteria.html"/>
+    <id>https://tk1307993.coding.me/CIS340-Campus-Cafeteria.html</id>
+    <published>2019-04-07T11:48:38.000Z</published>
+    <updated>2019-04-07T10:35:13.144Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Design a Campus Cafeteria application prototype complete with UML design documentation. Your application must match your delivered UML diagrams (all UML must be completed using the Astah UML tool). Your application shall take advantage of the C# programming language to provide a way to rapidly develop a working prototype.</p><p>The application will allow customers (both students &amp; non-students) to purchase meals. Non-students will pay with a card and students will have the option to use their meal plan or pay with a card (in the event they are out of meal credits). A customer will select the meal type and quantity of meals then pay. Students will need to verify their identity to use meal plan credits or select to pay with card. As an incentive, Students who maintain a GPA over 3.5 are given 1 free meal. The Campus is on a tight budget so a limited number of meals will be served for each meal type.</p><p>Your application will utilize an object-oriented design. The delivered project must contain a class called Menu, Customer, and Meal. Certain classes will only be used as a class while others will require objects to be created. The application must have the following requirements:</p><h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><ul><li>Menu class (rename program class or create a new class as shown in tutorials. “Program” will not be accepted as a Class name) doesn’t need any attributes. All data items should be declared within the Main method or other methods that are inside your Menu class code block.</li><li>Menu class will perform the following actions (can be methods)</li><li>Customer objects will contain data (all data will be instance variables)</li><li>Customer objects will perform all manipulations on the above customer data</li><li>Meal class/objects will contain data (this can be a class with only static members or used to create objects with instance members. It will depend on how you decide to design the application</li><li>Meal class/objects will perform all manipulations on the above meal data</li></ul><h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><p>While completing the application, document your application using UML. Create a Class Diagram for your application showing objects, attributes, methods, relationships, relationship text, and multiplicities. In the class diagram make sure to identify the following for all objects:</p><ul><li>Attributes and their data type</li><li>Methods with their defined return type and passing parameters</li><li>For all passing parameters make sure to have the parameter name and data type</li><li>Create relationships based on your code (if a class calls a method in another class there is a relationship).</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      这次作业是用C#代写一个校园自助餐厅的应用，实现基本的菜单处理逻辑。UI按照所给的example，用简单的命令行即可。
+    
+    </summary>
+    
+      <category term="C#" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CSCI1300-Working-with-real-data</title>
@@ -452,30 +474,6 @@
     <summary type="html">
     
       这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
-      <category term="SQLite" scheme="https://tk1307993.coding.me/tags/SQLite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CSE320-Wolfie-Chat-Part2</title>
-    <link href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part2.html"/>
-    <id>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part2.html</id>
-    <published>2019-01-26T05:03:58.000Z</published>
-    <updated>2019-01-26T05:06:04.765Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>he Wolfie Chat program will allow users logged into the the Wolfie Chat server to send messages to each other. Chats between users will each be displayed on the client machine in independent windows, just as Google Hangouts does.</p><p>Clients will attempt to establish a connection with the server through the accept thread. The accept thread on the server will create a connection with the Client and spawn the Login Thread. The Login thread will then communicate with the client via the Wolfie Protocol to successful/unsuccessfully log the user into the Wolfie Chat system. Upon successful/unsuccessful login, the Login thread will terminate. A Login thread will be created for each connection attempt and terminated upon completion. Multiple login threads can exist simultaneously if multiple users are attempting to login.</p><p>If the user is successfully logged on, then the server will act as the middle man for all communications between the users connected to the server. A Communication thread on the server will be spawned when the first user logs onto the server and terminate when no user is logged in. This thread will then service all additional users who connect. An overview of the architecture is shown below.</p><h3 id="Part-I-Establishing-a-connection"><a href="#Part-I-Establishing-a-connection" class="headerlink" title="Part I - Establishing a connection"></a>Part I - Establishing a connection</h3><p>In this part we will work on establishing a simple login procedure between the client and server program. At the end of it you should have multiple users logged in who can simply ask the server “how long have I been connected”. The server should then respond to the correct user and let them know how long. Also the client should be able to ask “who else is connected” and the server will return a list of connected users. Once this part is completed, you should be able to extend the concepts to make a more complex application which will allow users connected with the server to communicate with each other.</p><h3 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h3><p>Below is a diagram representing the internal control flow of the server program. As discussed above this is the main accept thread which is running when the server program is run. Login threads are spawned as necessary to handle each user’s login attempt. A successfully logged in user then communicates with the server via the communication thread.</p><h3 id="Accept-Thread-main"><a href="#Accept-Thread-main" class="headerlink" title="Accept Thread (main())"></a>Accept Thread (main())</h3><p>The primary server program will accept commands from the user via stdin and connections from the client program via the bound “listen” socket. When the server accepts an incoming connection from a client it should spawn a new login thread and begin the login process. If it detects input from the keyboard, it should parse that input for a list of commands and handle it accordingly. This section of the process will use a form of I/O multiplexing to listen for input on both the server socket and from stdin.</p><p>I/O multiplexing is exposed via the following interfaces - select, poll, or epoll. They all have their pros and cons, but it is up to you to choose which technique you should use. You will use I/O multiplexing in both the server and your client program. In your server, you will multiplex on each socket for the connected users in the communication thread, and in the accept thread you will multiplex on the accept socket and stdin.</p><p>The benefits of I/O multiplexing are that the program will be put into a suspended state while no activity is being performed on the fd’s, and when one of the fd’s is written to, it will alert your program that something happens, and you can then act on it. The other benefits to these techniques is that they work in a synchronous manner, but allow you to have behavior similar to doing things concurrently, without the overhead of spawning new threads, or starting new processes.</p><h3 id="Login-Thread"><a href="#Login-Thread" class="headerlink" title="Login Thread"></a>Login Thread</h3><p>When a client connects to the server, the server should spawn a thread to handle the login protocol with the server. The login protocol is defined later in Part I. The Login thread will need to check the list of users on the server (shared resource between server threads) to see if the username is already in use. If the name is not in use, the login thread will then complete the protocol to log the user into the server. We will simply treat login for this part as a first come first serve process. If student1 logs in as user1 then student2 tries to login as user1, student1 will successfully log in and student2 will be rejected. Any relevant data about the connecting user should be a of structure you define that makes their information easily accessible. An in-exhaustive list of things relevant to save are: the time of login, the socket on which they communicate, the username, and the ip address. You are encouraged to add any other fields of data that assist in your implementation.</p><h3 id="Communication-Thread"><a href="#Communication-Thread" class="headerlink" title="Communication Thread"></a>Communication Thread</h3><p>When there is at least one user logged in to the server a thread must be spawned to handle the communication to and from the server and later between all of the clients. In your communication thread you will use I/O multiplexing on the set of file descriptors (fds) used to communicate with the clients.</p><blockquote><p>You must use I/O multiplexing.</p></blockquote><h3 id="Server-commands"><a href="#Server-commands" class="headerlink" title="Server commands"></a>Server commands</h3><p>Aside from handling connections from various clients, the server also has to handle input from stdin. This input should represent commands that the person operating the server might want to use. These commands are transparent to the clients connected and are mainly used as a way to gather information by the server operator.</p><h5 id="users"><a href="#users" class="headerlink" title="/users"></a>/users</h5><p>When /users is typed into the server’s terminal it should dump a list of currently logged in users to stdout (NOTE: this does not send anything over the network, this is only on the server side.). This can be a great way to debug your program, it is advised you take some time to make neatly formatted print statements that print out relevant data. (Think, toString() function for your user structs).</p><h5 id="help"><a href="#help" class="headerlink" title="/help"></a>/help</h5><p>When /help is typed into the server’s terminal it should list all the commands which the server accepts and what they do.</p><h5 id="shutdown"><a href="#shutdown" class="headerlink" title="/shutdown"></a>/shutdown</h5><p>When /shutdown is typed into the server’s terminal it should cleanly disconnect all connected users. Save any state that it must and then close all the sockets and files which it is using and free any heap memory allocated.</p>]]></content>
-    
-    <summary type="html">
-    
-      这是接上次作业的第二部分，需要实现整个聊天通信的大体框架，包括服务端Server和客户端Client的编程。
     
     </summary>
     
