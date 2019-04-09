@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals," />
+  <meta name="keywords" content="Game," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业是处理一个真实的数据集，并按照需求所给的信息展示数据。">
-<meta name="keywords" content="Fundamentals">
+<meta name="description" content="作业要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
+<meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CSCI1300-Working-with-real-data">
-<meta property="og:url" content="https://tk1307993.coding.me/CSCI1300-Working-with-real-data.html">
+<meta property="og:title" content="Java代写：COMS227-Yahtzee-Part1">
+<meta property="og:url" content="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业是处理一个真实的数据集，并按照需求所给的信息展示数据。">
+<meta property="og:description" content="作业要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-04T09:21:20.690Z">
+<meta property="og:updated_time" content="2019-04-09T12:59:08.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CSCI1300-Working-with-real-data">
-<meta name="twitter:description" content="这次需要代写的作业是处理一个真实的数据集，并按照需求所给的信息展示数据。">
+<meta name="twitter:title" content="Java代写：COMS227-Yahtzee-Part1">
+<meta name="twitter:description" content="作业要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSCI1300-Working-with-real-data.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html"/>
 
 
 
 
 
-  <title>Java代写：CSCI1300-Working-with-real-data | 留学生CS编程作业代写</title>
+  <title>Java代写：COMS227-Yahtzee-Part1 | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI1300-Working-with-real-data.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CSCI1300-Working-with-real-data</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：COMS227-Yahtzee-Part1</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-04T19:48:38+08:00">
-                2019-04-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T20:52:28+08:00">
+                2019-04-09
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业是处理一个真实的数据集，并按照需求所给的信息展示数据。
+                  作业要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。
               </div>
           
 
@@ -360,24 +360,33 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment you will have the opportunity to apply what you’ve learned this semester about programming to an actual problem and actual data. For this assignment we will use social media data collected during the 2014 Carlton Complex Wildfire in Eastern Washington State. This data set was part of my dissertation research on the integration of public social media communication into emergency response.</p>
-<p>The development of information and communication technologies (ICTs) has changed how members of the public communicate and share information with each other during crisis and disaster events. Researchers in the field of crisis informatics look at social media communications for insight into how these technologies are reshaping the information space surrounding a disaster and provide new ways for the public to participate in both sharing of information and response. My research focuses on the challenges faced by emergency responders as they work to leverage these channels as part of their emergency communications plan and also the solutions being developed to support the monitoring of an often complex and unwieldy information space as events unfold.<br>I work with an innovative group of emergency responders who are part of the social media in emergency management community (SMEM) that have pioneered a new form of digital volunteerism within the emergency response community called a Virtual Operational Support Team (VOST). Members of VOST teams have a mix of social media communication skills and training in public information work and emergency response protocols. During a disaster, a VOST team extends the resources of the emergency response team on the ground coordinating public social media communications and gathering relevant situational awareness information for the incident management team.</p>
-<p>This dataset was taken from the 2014 Carlton Complex Wildfire. The fire started on July 14th, when a lightning storm moved through the Methow Valley in Eastern Washington State. On July 17th, adverse weather conditions caused the fire to grow explosively overnight from approximately forty-nine thousand acres to over a hundred and fifty thousand acres. This rate of fire growth is somewhat unprecedented and the fires burned through the towns of Pateros and Twisp resulting in large-scale evacuations and the destruction of over 300 homes. The fire also destroyed critical infrastructure resulting in widespread power and cellular outages in many place for over a week. The data set for this fire starts on July 17th when Portland NIMO, a federal Type I team, was assigned to the fire and the NIMO VOST was activated until July 27th when the team stood down. The fire ultimately grew to 256 thousand acres making it the largest wildfire in Washington State history (eclipsed by the 2015 Okanogan Complex in the same area a year later).<br>As a researcher on CU’s Project EPIC, my role on the VOST was to provide analytical support to the public information team on the ground using data collected through the Twitter API. I developed Python scripts that expanded the links to embedded content and massaged the data in useful ways for analysis in Tableau, a data visualization tool. At the end of each day, I worked on a comprehensive summary that was forwarded to the public information team as a reference for the morning briefing the following day.</p>
-<p>Twitter is a particularly interesting platform for analysis during a disaster because the Twitter stream can show you what is relevant in the moment across a wide variety of sources. The ability to retweet information reinforces its currency and acts as recommendation to others in a Twitterer’s network or following the conversation. In addition, the ability to embed links and media provides visibility to what is being shared across multiple social media platforms simultaneously.</p>
-<h3 id="Data-Set-Description"><a href="#Data-Set-Description" class="headerlink" title="Data Set Description"></a>Data Set Description</h3><p>The full dataset for this fire contains over 24 thousand tweets and related information. I hava created multiple data extract files from this dataset so that you can work with information on a more manageable scale.</p>
-<p>As part of the analysis, we coded the most commonly occurring sources of information (Twitter accounts and URL domains) using the following values:</p>
-<h3 id="Tweet-extracts"><a href="#Tweet-extracts" class="headerlink" title="Tweet extracts"></a>Tweet extracts</h3><p>Each row in the tweet extracts is an individual tweet and contains the following columns:</p>
-<h3 id="A-final-message"><a href="#A-final-message" class="headerlink" title="A final message"></a>A final message</h3><p>After the user selects No, and you exit your loop, you need to print another message to the user. In this message, briefly explain the easiest, hardest, and most and least enjoyable portions of this project. Then, exit the program.</p>
-<h2 id="Implementation-Details-Technical-Requirements"><a href="#Implementation-Details-Technical-Requirements" class="headerlink" title="Implementation Details/ Technical Requirements"></a>Implementation Details/ Technical Requirements</h2><h3 id="Store-data-from-the-files-in-an-object"><a href="#Store-data-from-the-files-in-an-object" class="headerlink" title="Store data from the files in an object"></a>Store data from the files in an object</h3><p>Your program needs to have at least one class. A technical requirement of this project is that you create a class to support the functionality of the program. The class(es) you create will depend on the problem and data you are working with. For instance, if you are working with individual tweets you may need a Tweet class. If you are working geocoded tweets you may also want a Geocode class that stores the latitude /longitude data.</p>
-<p>The first thing your program needs to do, even before displaying the welcome message, is input the data from the txt files. Data should be read in from the files and stored in the appropriate variable in your class to support what your program does. You should structure your program to read in all data only one time.</p>
-<h3 id="Other-requirements"><a href="#Other-requirements" class="headerlink" title="Other requirements:"></a>Other requirements:</h3><ol>
-<li>All variables in your class need to be private and accessed through public methods. For example, if one of the class variables is latitude then you will need getLatitude() and setLatitude() methods.</li>
-<li>You need at least three objects. For example if you create a class Tweet, then you need at least three instances of Tweet in your program.</li>
-<li>You are welcome to generate new data files to support your program’s functionality. For example, if you are working with the URL domains extract, you may want to limit your analysis to domains that occur at least 25 times. The data in these sub-extracts is sorted by count, so you can import the .csv file into Excel and delete the rows that fall below 25. You can also write a program or talk to us about the specific slice of data you are interested in.</li>
-<li>If you store data in an array, you can create an array that is larger than you need and leave some of it unused. Look at the arrays in the AppleFarmer class for an example of what you might do for this assignment. You will need to keep track of how much ofthe array is used. The technique for doing this is the same as using the Curren tDay variable in AppleFarmer.</li>
-<li>The easiest way to read the .csv files is to use getline() for each line in the file and then use stringstream to parse the line. 6. There are examples of how to do both of these things in notes provided on the Moodle.</li>
-<li>When you submit your program, include all data files you used in your project directory.</li>
-</ol>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this assignment you will implement a number of classes for an implementation of a dice game based on the game Yahtzee. The purposes of this assignment are:</p>
+<ul>
+<li>To use interfaces and inheritance in a realistic way</li>
+<li>To give you a chance to make some design decisions related to inheritance</li>
+<li>To give you more practice using arrays and ArrayLists</li>
+</ul>
+<h3 id="Summary-of-tasks"><a href="#Summary-of-tasks" class="headerlink" title="Summary of tasks"></a>Summary of tasks</h3><p>You will implement the following classes:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">YahtzeeGame</span></span><br><span class="line"><span class="attribute">Hand</span></span><br></pre></td></tr></table></figure></p>
+<p>plus, at a minimum, the following eight classes, all of which directly or indirectly implement the Category interface:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">AllButOneOfAKind</span></span><br><span class="line"><span class="attribute">AllButTwoOfAKind</span></span><br><span class="line"><span class="attribute">AllOfAKind</span></span><br><span class="line"><span class="attribute">Chance</span></span><br><span class="line"><span class="attribute">CountOccurrences</span></span><br><span class="line"><span class="attribute">FullHouse</span></span><br><span class="line"><span class="attribute">LargeStraight</span></span><br><span class="line"><span class="attribute">SmallStraight</span></span><br></pre></td></tr></table></figure></p>
+<p>All of your code goes in package hw3 . In addition to the classes listed above, you will implement whatever additional classes you decide are necessary in order to exploit inheritance to facilitate code reuse. See the discussion of scoring categories below for more information.</p>
+<p>The exact definition of each of the eight category classes listed above can be found by reading the class javadoc.</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Yahtzee is normally played with five six-sided dice and a scorecard. One round consists of rolling the dice up to three times, and then filling one of the categories on the scorecard with a score. The score depends on both the criteria for the category and the actual dice values, and the player will normally choose an unfilled category so as to maximize the resulting score.</p>
+<p>In our version of the game, the number of dice, the maximum value on the dice (i.e., the number of faces), the max number of rolls per round, and the types of categories on the scorecard, will all be configurable.</p>
+<p>If you are not at all familiar with the game, don’t worry, it is not too complicated. Take a look at the Wikipedia page for an overview, <a href="https://en.wikipedia.org/wiki/Yahtzee" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Yahtzee</a></p>
+<p>Note that our version of the game does not include several features described on Wikipedia or in the traditional versions of the game. In particular, we do not distinguish the “upper section” and “lower section” categories, there is no bonus for the “upper section”, there is no special bonus for a second Yahtzee, and there are no jokers.</p>
+<p>The two key abstractions in the design are hands and scoring categories.</p>
+<h3 id="Hands"><a href="#Hands" class="headerlink" title="Hands"></a>Hands</h3><p>A hand, represented by the Hand class that you will implement, is a basically a list of integers representing the current states of all the dice (in the traditional game there would be 5 numbers with possible values 1 through 6). However, the dice are partitioned into two lists: available dice and fixed dice. Initially, all dice are available. When the dice are “rolled”, random values in the appropriate range are generated for the available dice only; the fixed values are not modified. If the maximum number of rolls has not yet been reached, the player can choose to “keep” some of the current available dice values, which means they are moved to the fixed list so they won’t be modified by the next roll. Likewise, the player can choose to “free” any of the fixed values, so they will be re-rolled. Note that in this design, an individual die isn’t represented by a special type of object; a die value is just an integer. All methods that return arrays containing dice values must return the values in ascending order.</p>
+<p>After the maximum number of rolls is reached, all dice are automatically moved to the fixed list and the hand can no longer be modified. A new hand must be created for the next round.</p>
+<p>See the javadoc for details. Also note that the client normally obtains a new Hand using the method createNewHand in the YahtzeeGame class, not by calling the constructor directly. (You can see how this works by reading at the doOneTurn() method of the sample UI.)</p>
+<p>Hand example. Suppose we display a dice group as a string by listing first the available dice and then the fixed dice in parentheses. For example, in a game with 5 dice, after the first roll we might see the values such as this:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">6</span> ()</span><br></pre></td></tr></table></figure></p>
+<p>Depending on which scoring categories you need to fill, you might decide to keep 2, 3, and 4 (perhaps in the hope of completing a straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span><span class="number">6</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p>
+<p>On the next roll, the 6 and the other 3 are then replaced by random values, but the 2, 3, and 4 you selected remain fixed. If (for example) you now roll a 2 and a 5, you would have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">5</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p>
+<p>At this point you could choose to keep the 5 (to make a small straight, maybe hoping the next roll will give you a large straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span>(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<p>In the traditional game, you get a maximum of three rolls; in that case if you (for example) rolled a 4, you’d end up with<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<p>That is, when you reach the maximum number of rolls, all dice are automatically fixed. Once all dice are fixed, we say the hand is complete. At this point in the game, the player chooses one of the scoring categories and uses the completed hand to fill that category.</p>
+<h3 id="Scoring-categories"><a href="#Scoring-categories" class="headerlink" title="Scoring categories"></a>Scoring categories</h3><p>A scoring category represents one row of the score sheet. A category object stores the actual score for that category along with the hand that was used to fill the category. A given category object also contains the algorithms needed to a) determine whether a given hand satisfies the criteria defined for the category (e.g., is it a straight, or three-of-a-kind, or whatever), and b) determine what the potential score would be for a given hand, if it were used to fill that category.</p>
+<p>There are many different possible categories, each with its own particular algorithms. For example, the traditional game has a three-of-a-kind category: a hand satisfies the category if it contains any three numbers that are the same, and it is scored by summing the values of all the dice. The traditional game also has a “large straight” category: a hand satisfies the category if it has 5 consecutive values, and it always receives a fixed score of 40.</p>
+<p>This is where polymorphism becomes useful. The client using this code (e.g., think of the client as the text-based UI provided in the sample code) does not care about the details of what the categories are or how each category calculates its score. The client just needs to be able to invoke methods on a category to find out whether a given dice group satisfies it, what the score would be, and to inform the category when it has been selected to be filled by a given hand.</p>
 
       
     </div>
@@ -395,7 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/Game/" rel="tag"># Game</a>
           
         </div>
       
@@ -408,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSCI141-Blackout-Math.html" rel="next" title="Python代写：CSCI141-Blackout-Math">
-                <i class="fa fa-chevron-left"></i> Python代写：CSCI141-Blackout-Math
+              <a href="/CIS340-Campus-Cafeteria.html" rel="next" title="C#代写：CIS340-Campus-Cafeteria">
+                <i class="fa fa-chevron-left"></i> C#代写：CIS340-Campus-Cafeteria
               </a>
             
           </div>
@@ -417,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CIS340-Campus-Cafeteria.html" rel="prev" title="C#代写：CIS340-Campus-Cafeteria">
-                C#代写：CIS340-Campus-Cafeteria <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Set-Description"><span class="nav-number">2.</span> <span class="nav-text">Data Set Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tweet-extracts"><span class="nav-number">3.</span> <span class="nav-text">Tweet extracts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-final-message"><span class="nav-number">4.</span> <span class="nav-text">A final message</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementation-Details-Technical-Requirements"><span class="nav-number"></span> <span class="nav-text">Implementation Details/ Technical Requirements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Store-data-from-the-files-in-an-object"><span class="nav-number">1.</span> <span class="nav-text">Store data from the files in an object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other-requirements"><span class="nav-number">2.</span> <span class="nav-text">Other requirements:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary-of-tasks"><span class="nav-number">2.</span> <span class="nav-text">Summary of tasks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">3.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hands"><span class="nav-number">4.</span> <span class="nav-text">Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scoring-categories"><span class="nav-number">5.</span> <span class="nav-text">Scoring categories</span></a></li></ol></div>
             
 
           </div>
