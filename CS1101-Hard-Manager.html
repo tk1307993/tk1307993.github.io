@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本次作业仍然和上次一样，考察Object Oriented Programming的概念，实现一个具有现实意义的小项目。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CS1101-Hard-Manager">
+<meta property="og:url" content="https://tk1307993.coding.me/CS1101-Hard-Manager.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="本次作业仍然和上次一样，考察Object Oriented Programming的概念，实现一个具有现实意义的小项目。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-14T01:59:24.170Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CS1101-Hard-Manager">
+<meta name="twitter:description" content="本次作业仍然和上次一样，考察Object Oriented Programming的概念，实现一个具有现实意义的小项目。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS1101-Hard-Manager.html"/>
+
+
+
+
+
+  <title>Java代写：CS1101-Hard-Manager | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS1101-Hard-Manager.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CS1101-Hard-Manager</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-14T09:56:30+08:00">
+                2019-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  本次作业仍然和上次一样，考察Object Oriented Programming的概念，实现一个具有现实意义的小项目。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-Aim"><a href="#1-Aim" class="headerlink" title="1. Aim"></a>1. Aim</h3><p>The purpose of this assignment is to:</p>
+<ol>
+<li>Create client files that use the class to model “real world” scenarios.</li>
+<li>Instantiate objects, create arrays of objects.</li>
+<li>Generate random integers and random Boolean values.</li>
+<li>Call methods on objects.</li>
+</ol>
+<p>It is recommended that you read and understand all the instructions below before starting the exercises.</p>
+<h3 id="2-Files-Needed"><a href="#2-Files-Needed" class="headerlink" title="2. Files Needed"></a>2. Files Needed</h3><p>You will be provided with starter files for both exercises in this assignment. Create a project in Eclipse for this assignment and copy both starter files into this project. Be sure to complete the standard header comments at the top of each file.</p>
+<h3 id="3-To-be-Handed-In"><a href="#3-To-be-Handed-In" class="headerlink" title="3. To be Handed In"></a>3. To be Handed In</h3><p>The files HerdManager.java and FillTheCorral.java should be submitted on-line via the HW15 page on Blackboard. Be sure to name the file/class exactly as specified. There is no MPL component for this assignment.</p>
+<h3 id="4-Programming-Exercises"><a href="#4-Programming-Exercises" class="headerlink" title="4. Programming Exercises"></a>4. Programming Exercises</h3><p>For both exercises below, a fully functioning Gate class is necessary. If you implemented your Gate class correctly, you can use that class. Note that the toString() method prints out a statement that is different from the toString() output. The toString() method should return the statement after the semicolon (and space) (i.e., after “West Gate: “ and “East Gate: “). You will need to update that method.</p>
+<p>Note: when dealing with Gate objects in these exercises, you must use the interface (the methods) that was specified for the Gate class in HW14. You cannot add any new public behavior or modify the interface to your Gate class that was not specified in HW14.</p>
+<h3 id="Exercise-1-HerdManager-java"><a href="#Exercise-1-HerdManager-java" class="headerlink" title="Exercise 1: HerdManager.java"></a>Exercise 1: HerdManager.java</h3><p>In this exercise, you will build a client program that simulates the movement of an escargatoire of snails in and out of a pen.</p>
+<ol>
+<li>Create a public static final integer HERD to indicate the size of your escargatoire. Set the constant to 24 for this simulation.</li>
+<li>Create two gates in your main() method and call them westGate and eastGate. You will need to call both methods described below in the main() method.</li>
+<li>Create the setGates() method that accepts as input parameters two Gate objects. This method will set the westGate to allow snails to re-enter the pen, leaving the pasture, and set the eastGate to OUT, to allow snails to leave the pen and go to pasture. Note: make sure the order of the parameters that are passed to this method is the following: westGate, eastGate.</li>
+<li>Create the simulateHerd() method that accepts two Gate objects and a Random object as input parameters.</li>
+</ol>
+<p>Note: make sure the order of the parameters that are passed to this method are as listed above, where the order of the two Gate objects are: westGate, eastGate.</p>
+<p>Set the number of snails in the pen equal to the size of the HERD. The method should run ten iterations of the simulation. In each iteration, randomly select one of the gates to the pen and move a random number of snails through that gate (in or out depending on the swing direction), thus changing the number of snails in the pen and out to pasture (an illustration is shown in Figure 1). Suggestion: to select a random gate, use nextBoolean() to get a random boolean value (only two possible values).</p>
+<p>You must be sure that neither of these numbers (in the pen or out to pasture) is ever negative and that the sum total of snails is always equal to the size of the HERD. If, during some iteration, there are no snails currently out to pasture, then you should not randomly select a gate, but rather would move a random number of snails through the eastGate and out to pasture (an illustration is shown in Figure 2). You must do a similar thing when there are no more snails in the pen.</p>
+<p>Also, the range of random numbers generated should change according to which gate you have selected and how many snails are currently available to go through that selected gate. However, the value should always be greater than zero.</p>
+<p>Print out the status of the gates after creating the objects, after setting (opening) the gates, and the necessary information for each iteration as shown in the example execution of HerdManager.java below. Note that the first output line in the simulateHerd() method has been included in your starter file. Your output format must match the example execution exactly.</p>
+<h4 id="Example-execution-1"><a href="#Example-execution-1" class="headerlink" title="Example execution 1"></a>Example execution 1</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">West Gate: The gate is locked.</span><br><span class="line">East Gate: The gate is locked.</span><br><span class="line"></span><br><span class="line">West Gate: This gate is <span class="keyword">not</span> locked <span class="keyword">and</span> swings <span class="built_in">to</span> enter <span class="keyword">the</span> pen only.</span><br><span class="line">East Gate: This gate is <span class="keyword">not</span> locked <span class="keyword">and</span> swings <span class="built_in">to</span> exit <span class="keyword">the</span> pen only.</span><br><span class="line"></span><br><span class="line">There are currently <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line"></span><br><span class="line">There are currently <span class="number">8</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">16</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">6</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">28</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">4</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">20</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">3</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">21</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">2</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">22</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">7</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">17</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">6</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">18</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">5</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">19</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br></pre></td></tr></table></figure>
+<h4 id="Example-execution-2"><a href="#Example-execution-2" class="headerlink" title="Example execution 2"></a>Example execution 2</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">West Gate: The gate is locked.</span><br><span class="line">East Gate: The gate is locked.</span><br><span class="line"></span><br><span class="line">West Gate: This gate is <span class="keyword">not</span> locked <span class="keyword">and</span> swings <span class="built_in">to</span> enter <span class="keyword">the</span> pen only.</span><br><span class="line">East Gate: This gate is <span class="keyword">not</span> locked <span class="keyword">and</span> swings <span class="built_in">to</span> exit <span class="keyword">the</span> pen only.</span><br><span class="line"></span><br><span class="line">There are currently <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line"></span><br><span class="line">There are currently <span class="number">4</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">20</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">3</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">21</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">21</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">3</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">11</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">13</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">2</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">22</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">1</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">23</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">0</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">24</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">20</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">4</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br><span class="line">There are currently <span class="number">11</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pen <span class="keyword">and</span> <span class="number">13</span> snails <span class="keyword">in</span> <span class="keyword">the</span> pasture.</span><br></pre></td></tr></table></figure>
+<h3 id="Exercise-2-FillTheCorral-java"><a href="#Exercise-2-FillTheCorral-java" class="headerlink" title="Exercise 2: FillTheCorral.java"></a>Exercise 2: FillTheCorral.java</h3><p>In this exercise, you will build a client program that simulates moving snails from a pasture into four different corrals. It’s a bit of a game really. Following the best practices for writing programs, fill in the methods provided in the starter file to accomplish the following. Use a Random object to initially set each of the four gates to a specific swing direction or closed. So, the gates for each of the four corrals will be set to swing IN to the corral, OUT of the corral, or remain locked (an illustration is shown in Figure 3). Note that one of these gates must be set to IN (more details in a moment).</p>
+<p>The program begins with five snails out to pasture and an infinite number of snails in each corral. A random number of snails, not to exceed the number already out to pasture, attempt to pass through a randomly chosen corral gate.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMS227-Yahtzee-Part2.html" rel="next" title="Java代写：COMS227-Yahtzee-Part2">
+                <i class="fa fa-chevron-left"></i> Java代写：COMS227-Yahtzee-Part2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Aim"><span class="nav-number">1.</span> <span class="nav-text">1. Aim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Files-Needed"><span class="nav-number">2.</span> <span class="nav-text">2. Files Needed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-To-be-Handed-In"><span class="nav-number">3.</span> <span class="nav-text">3. To be Handed In</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Programming-Exercises"><span class="nav-number">4.</span> <span class="nav-text">4. Programming Exercises</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-1-HerdManager-java"><span class="nav-number">5.</span> <span class="nav-text">Exercise 1: HerdManager.java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-execution-1"><span class="nav-number">5.1.</span> <span class="nav-text">Example execution 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-execution-2"><span class="nav-number">5.2.</span> <span class="nav-text">Example execution 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-2-FillTheCorral-java"><span class="nav-number">6.</span> <span class="nav-text">Exercise 2: FillTheCorral.java</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
