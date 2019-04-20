@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="STL," />
+  <meta name="keywords" content="Game," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
-<meta name="keywords" content="STL">
+<meta name="description" content="本次代写的作业内容，是完成一个简单的文本的RPG游戏。作业属于Lab作业，难度不大。">
+<meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS251 AVLTree">
-<meta property="og:url" content="https://tk1307993.coding.me/CS251-AVLTree.html">
+<meta property="og:title" content="C++代写：FIT2071-TextQuest">
+<meta property="og:url" content="https://tk1307993.coding.me/FIT2071-TextQuest.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
+<meta property="og:description" content="本次代写的作业内容，是完成一个简单的文本的RPG游戏。作业属于Lab作业，难度不大。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-11T02:31:40.006Z">
+<meta property="og:updated_time" content="2019-04-20T00:47:15.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS251 AVLTree">
-<meta name="twitter:description" content="STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。">
+<meta name="twitter:title" content="C++代写：FIT2071-TextQuest">
+<meta name="twitter:description" content="本次代写的作业内容，是完成一个简单的文本的RPG游戏。作业属于Lab作业，难度不大。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS251-AVLTree.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/FIT2071-TextQuest.html"/>
 
 
 
 
 
-  <title>C++代写：CS251 AVLTree | 留学生CS编程作业代写</title>
+  <title>C++代写：FIT2071-TextQuest | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS251-AVLTree.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT2071-TextQuest.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS251 AVLTree</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：FIT2071-TextQuest</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T10:29:31+08:00">
-                2018-08-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T08:43:54+08:00">
+                2019-04-20
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。
+                  本次代写的作业内容，是完成一个简单的文本的RPG游戏。作业属于Lab作业，难度不大。
               </div>
           
 
@@ -360,22 +360,48 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AVL Tree也就是AVL树，是早的自平衡二叉查找树。其任意节点的两颗子树最大高度差仅为1，因此也被称为高度平衡树。</p>
-<p>相对红黑树，AVL树目前的应用场景已经非常下了，大部分还是用于学习和研究。</p>
-<p>AVL树最大的特点是，树的查找、插入和删除在平均和最坏情况下都是O(log n)，但增加和删除节点可能需要旋转这颗树，使其重新平衡。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement a C++ AVL Tree class AVLTree in files AVLTree.h and AVLTree.cpp</p>
-<ol>
-<li>The constructor AVLTree () builds the AVLTree.</li>
-<li>The destructor ~AVLTree() deallocates all dynamically allocated memory.</li>
-<li>The void insert(int k) method inserts the key k into the AVLTree, and does not do anything if the key is already stored.</li>
-<li>The void remove(int k) method removes key k from the AVLTree and does not do anything if AVLTree does not contain key k.</li>
-<li>The items stored are positive integers which serve both as keys and as elements.</li>
-<li>The void printInorder() method prints the tree to the standard output using an inorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li>
-<li>The void printPostorder() method prints the tree to the standard output using postorder traversal; it prints a (key, height) pair for each node and ends with a newline.</li>
-</ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要用实现一个AVL树。AVL树本身代码不复杂，但是需要考虑到接口兼容STL库，这才是本题最大的难点。</p>
-<p>STL库，作为C++中大量使用模板的库，对于初学者来说十分难以理解。</p>
-<p>我的建议是可以参考一些简易的STL实现，有简入难，一步一步学习。</p>
+        <h3 id="Task-Details"><a href="#Task-Details" class="headerlink" title="Task Details"></a>Task Details</h3><p>The Weeks 2 and 3 laboratory exercises contain a designated “Main Portfolio Exercise”. These are a series of exercises that add to each other to form a main portfolio program: TextQuest. You are to submit a final, completed version of that game.</p>
+<p>uccessful completion of the exercises as described in the laboratory exercises may obtain you up to a maximum of 80% of the total assignment marks. In order to obtain a higher mark you should seek to include some advanced functionality (as described in the Week 3 portfolio description). The additional functionality should demonstrate advanced or more complex application of principles covered to date. It need not be large amounts of work but should demonstrate a willingness to explore new and advanced concepts. You must detail what you have done in an accompanying “readme” file.</p>
+<p>The assignment must be created and submitted as a Visual Studio 2013 project. You may complete the exercises in your preferred IDE, however you should create a Visual Studio project in order to submit. This project must then be zipped up into one zip file for submission. The zip file MUST be named “FIT2071-AA1-YourAuthcateID.zip”. This zip file must be submitted via the Moodle assignment submission page. Note to reduce the file size of your zip, you can delete the “ipch” folder from your project before zipping without affecting your program.</p>
+<p>Explicit assessment criteria are provided over the page, however please note you will be assessed on the following broad criteria:</p>
+<ul>
+<li>Meeting functional requirements as described in the exercise description</li>
+<li>Demonstrating a solid understanding of the week’s C++ concepts, including good practice</li>
+<li>Following the unit Programming Style Guide</li>
+<li>Creating solutions that are as efficient and extensible as possible</li>
+</ul>
+<p>NOTE! Your submitted program MUST compile and run. Any submission that do not compile will be awarded zero marks. This means you should continually compile and test your code as you do it, ensuring it compiles at every step of the way.</p>
+<p>If you have any questions or concerns please contact Tim as soon as possible.</p>
+<h3 id="Week2"><a href="#Week2" class="headerlink" title="Week2"></a>Week2</h3><p>Main Portfolio Exercise: TextQuest</p>
+<p>This week’s portfolio exercise is to begin building a (very simple) text-based Role Playing game. We will be building upon this exercise in the next week to culminate in the submission of a game built up with the 2 portfolio exercises from weeks 2 and 3. This week we will start by writing the basic structure of the code to create a character and save the character data to a file.</p>
+<p>Step 1. Prompt the player to enter a name for their character and save that name to a file.</p>
+<p>Step 2. You will also need to read a file containing the default statistics associated with the different character vocations that the player can choose. Add code to your program to read in the vocation file which is a comma-separated list, with four fields corresponding to: vocation, health, strength and magic. The vocation field is a text string, the remaining fields are smallish integers. Here’s an example vocation file:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Warrior,<span class="number">100</span>,<span class="number">120</span>,<span class="number">0</span> </span><br><span class="line">Mage,<span class="number">80</span>,<span class="number">60</span>,<span class="number">100</span> </span><br><span class="line">Rogue,<span class="number">60</span>,<span class="number">80</span>,<span class="number">50</span></span><br></pre></td></tr></table></figure></p>
+<p>Your program should read this file, print the list of vocations to the console and ask the player to select one by entering its number in the list (starting from 0).</p>
+<p>Now write out the character information to a file which should again be a comma separated file containing five fields: name, vocation, health, strength and magic. The health score should (initially) come from the value specified in the vocation file (the second field). Here’s an example output:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TimTheMagical,Mage,<span class="number">80</span>,<span class="number">60</span>,<span class="number">100</span></span><br></pre></td></tr></table></figure></p>
+<p>Bonus: What happens if we try to save another character? Why does this happen? How might we overcome this issue to allow us to save multiple characters?</p>
+<p>Next week we will complete the basic game with code to resurrect the character from such a save file, make a turn loop where stuff happens pseudo-randomly affecting health until the character dies! Don’t worry, we will also start to do stuff with the strength and magic fields.</p>
+<h3 id="Week3"><a href="#Week3" class="headerlink" title="Week3"></a>Week3</h3><p>Main Portfolio Exercise: TextQuest continued</p>
+<p>This week’s portfolio exercise is to complete last week’s TextQuest game.</p>
+<p>By now you should have a program that allows the user to create a character, choose the character’s name and choose a vocation for the character from a list of possible vocations and their health, strength and magic stats. Finally it should be saving the created character in a separate file (check last week’s lab portfolio exercise for details).</p>
+<p>This week, we are going to again extend the program in several steps, we’re up to Step 3:</p>
+<p>Step 3. Add to your code the ability to either read an existing character from the file created on a previous run, or create a new character from scratch.</p>
+<p>Step 4. Now we are going to create the actual game loop. The game loop will apply a sequence of events that output a message to the screen and modify the character’s health score. Here’s a sample events file (also available on Moodle).<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">An enemy Warrior hits you with his weapon!,-50 </span><br><span class="line">An enemy Mage casts an evil spell on you!,-20 </span><br><span class="line">You found a<span class="built_in"> health </span>potion!,25 </span><br><span class="line">An enemy Rogue backstabs you <span class="keyword">from</span> the shadows!,-40 </span><br><span class="line">You got eaten by a Dragon!,-1000</span><br></pre></td></tr></table></figure></p>
+<p>After each event, if the player’s health score is not yet 0, they should be prompted whether to continue (y/n). Answering ‘y’ will apply another event. Answering ‘n’ should end the loop. Before the program finishes it should write out the player’s current stats (in the same file as in Step 1/2).</p>
+<p>HD Bonus: Implementing the basic functionality described in Steps 1-4 will enable you to achieve a maximum of 80% of the available marks. In order to achieve the final 20% (or “HD” component) you should seek to include some advanced functionality. The additional functionality should demonstrate advanced or more complex application of principles covered to date. It need not be large amounts of work but should demonstrate a willingness to explore new and advanced concepts. Note however that your program must still satisfy all functionality as detailed in Steps 1-4. You must describe your additions in the readme file included with your submission (see below).</p>
+<p>Here are some ideas for things you could add:</p>
+<ul>
+<li>basic validation (check if the file is empty before trying to read from it, check that the name was not left blank, check that the vocation entered was within range etc.)</li>
+<li>the ability to save/load multiple characters</li>
+<li>events that allow the player to fight back at the cost of strength (if warrior/rogue) or magic (if mage)</li>
+<li>a simple xp/level system</li>
+</ul>
+<p>Readme.txt Document: as described in the (separate) assignment hand-out you will also need to submit a brief text document explaining how your program works. To get marks for any extra functionality you may have implemented, it must be highlighted and explained clearly in this document.</p>
+<p>Full details of submission are detailed in the assignment brief on Moodle. However, important things to note include:</p>
+<ul>
+<li>Your submitted program MUST compile and run in VISUAL STUDIO 2013. If a program will not compile it will be awarded ZERO marks. NO exceptions. This means you must continually compile and test your code!</li>
+<li>You can discuss ideas with others, but your code and your readme.txt document must be your own work. We will be checking! Monash applies heavy penalties to students who plagiarise.</li>
+</ul>
+<p>Please note! It is not expected that you need to implement this game as an object-oriented solution. We will be writing fully object-oriented programs in the remaining assessment items.</p>
 
       
     </div>
@@ -393,7 +419,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
+            <a href="/tags/Game/" rel="tag"># Game</a>
           
         </div>
       
@@ -406,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP1001-MoreTextProcessing.html" rel="next" title="Python代写：COMP1001-MoreTextProcessing">
-                <i class="fa fa-chevron-left"></i> Python代写：COMP1001-MoreTextProcessing
+              <a href="/CS6024-Dynamic-SQL.html" rel="next" title="Oracle代写：CS6024-Dynamic-SQL">
+                <i class="fa fa-chevron-left"></i> Oracle代写：CS6024-Dynamic-SQL
               </a>
             
           </div>
@@ -415,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS251-Sorting.html" rel="prev" title="C代写：CS251 Sorting">
-                C代写：CS251 Sorting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-Details"><span class="nav-number">1.</span> <span class="nav-text">Task Details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week2"><span class="nav-number">2.</span> <span class="nav-text">Week2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week3"><span class="nav-number">3.</span> <span class="nav-text">Week3</span></a></li></ol></div>
             
 
           </div>
