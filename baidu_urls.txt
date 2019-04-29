@@ -1,5 +1,5 @@
+https://tk1307993.coding.me/CME213-Neural-Networks-on-CUDA-Part2.html
 https://tk1307993.coding.me/CME213-Neural-Networks-on-CUDA-Part1.html
 https://tk1307993.coding.me/CS125-Course-Scheduler.html
 https://tk1307993.coding.me/ADDS10-Polish-Notation.html
 https://tk1307993.coding.me/FIT2071-TextQuest.html
-https://tk1307993.coding.me/CS6024-Dynamic-SQL.html
