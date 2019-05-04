@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-05-02T09:13:47.031Z</updated>
+  <updated>2019-05-04T12:52:29.681Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：FIT2071-TextQuest2</title>
+    <link href="https://tk1307993.coding.me/FIT2071-TextQuest2.html"/>
+    <id>https://tk1307993.coding.me/FIT2071-TextQuest2.html</id>
+    <published>2019-05-04T12:49:37.000Z</published>
+    <updated>2019-05-04T12:52:29.681Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Task-Details"><a href="#Task-Details" class="headerlink" title="Task Details"></a>Task Details</h3><p>The Weeks 4 to 7 laboratory exercises contain a designated “Main Portfolio Exercise”. These are a series of exercises that add to each other to form a main portfolio program: ClassyTextQuest. Note that these build upon the Weeks 2-3 portfolio exercises for Assignment 1. If you did not satisfactorily complete Assignment 1, you may optionally use the sample code for assignment 1 available on Moodle. You are to submit a final, completed version of the game, along with a document detailing your program design (diagrammatically explaining the class structure and textually explaining the operation) and detailing any changes to the specification, including all extra functionality and advanced concepts.</p><p>Successful completion of the exercises as described in the laboratory exercises may obtain you up to a maximum of 80% of the total assignment marks. In order to obtain a higher mark you should seek to include some advanced functionality (as described in the Bonus sections of the portfolio description). The additional functionality should demonstrate advanced or more complex application of principles covered to date. It need not be large amounts of work but should demonstrate a willingness to explore new and advanced concepts. You must detail what you have done in the accompanying document.</p><p>Explicit assessment criteria are provided over the page, however please note you will be assessed on the following broad criteria:</p><ul><li>Meeting functional requirements as described in the exercise description</li><li>Demonstrating a solid understanding of the C++ concepts taught up to and including week 7, including good practice</li><li>Following the unit Programming Style Guide</li><li>Creating solutions that are as efficient and extensible as possible</li></ul><p>NOTE! Your submitted program MUST compile and run. Any submission that do not compile will be awarded zero marks. This means you<br>should continually compile and test your code as you do it, ensuring it compiles at every step of the way.</p><p>If you have any questions or concerns, please contact Tim as soon as possible.</p><h3 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h3><h4 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h4><p>This week we are going to reconsider the design for Assignment 1.</p><p>Start thinking about how you can use object oriented design to achieve a more structured program.</p><p>What could be the different classes in the TextQuest game? What data members and member functions (methods) do these classes need to provide?</p><p>Create a diagram (any drawing software or just pen and paper is fine). You will eventually need to submit your design together with your working code as part of your documentation.</p><p>Remember we have a character, vocations, events and maybe more depending on what extra functionality you have considered: e.g. enemies, items, etc.</p><h4 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h4><p>Now we are going to consider how some of the new C++ features we have learned can help us better structure our code and add extra features.</p><p>Functions:</p><p>How can you reorganise your code from assignment 1 into clearly defined functions that keep the different “concerns” of the program well separated? For now, create some functions in the global scope of your main C++ file from assignment 1. In coming weeks we will learn how to separate these across different files and achieve better “encapsulation”.</p><p>Arrays:<br>You may have found the gameplay from Assignment 1 became tedious after a while since the events always occurred in precisely the same order. Let’s start to make it more interesting. Change your program to load the events into two arrays (an array of descriptions and another for the health modifiers).</p><p>Last week we had a lab exercise to generate random numbers from 0 to 100. Now you can do the same thing, to generate a random number between 0 and the number of events, in order to randomly select which event comes next.</p><h4 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h4><p>This week we will continue our rewrite of TextQuest with classes. Now that you can write your own custom classes, it is time for you to write three of the classes you will need for your game. These should be based upon your Class Diagrams from last week.</p><h4 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h4><p>This week we are going to create two new classes: Player and Enemy that both inherit from Character.</p><p>Character will have a virtual function called attack. The attack function’s parameter is a list (such as a vector) of potential target characters.</p><p>The Player class’ implementation of the attack function should prompt the user to choose one of the targets. It will then apply damage (a health deduction) to the target based on the relative magic and strength of that target (up to you precisely what formula to use – choose something that seems fair and fun).</p><p>The Enemy’s attack function will also choose a target but do so automatically (i.e. without prompting the user. There are different strategies enemies might use: e.g. always choose the player, do it randomly or based on any logic you like: it could even damage multiple targets!).</p><p>Now, in the main game loop, in addition to the events that are currently being applied, you should add a random chance of a fight occurring (make fight a separate function).</p><p>When a fight occurs, you should populate a vector of Character containing the Player and also one or more randomly generated Enemy. Now a sub-loop should start iterating over the vector giving each Character a chance to attack. That is, you will call the Character’s implementation of the attack member function, passing in the contents of the Character vector. After the attack is complete, remove any dead characters (whose health is &lt;= 0) from the vector. If the Player is dead, the fight and the game ends. If the Player is the only one left, then they win the fight and you can return to the main game loop.</p><p>Bonus: how you generate the enemies is up to you. A simple way would be just to have random stats and a random name (from a list of possibilities). Alternately, you could design sub-classes of Enemy, each with their own interesting variation on the attack function - and randomly choose which ones to construct in each fight.</p><h4 id="Week-7"><a href="#Week-7" class="headerlink" title="Week 7"></a>Week 7</h4><p>This week we will finalise our Classy TextQuest RPG. To this point you have the basic skeleton of the game as well as classes for the major components (e.g. Character, Player, Enemy, Event, Vocation, etc). Now that you know all about pointers and class inheritance you can finish off the classes and the final game play. Also, we talked this week about overloading the operator. Have a think about where you might use this in your code. You also know how to plug memory leaks now, so make sure any objects you create with new are also deleted at the appropriate time.</p>]]></content>
+    
+    <summary type="html">
+    
+      Text Quest游戏的第二次作业，按照要求完成对应的类即可。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+  </entry>
   
   <entry>
     <title>C代写：COMP20005-Path-Planning</title>
@@ -461,28 +485,6 @@
       <category term="Hadoop" scheme="https://tk1307993.coding.me/tags/Hadoop/"/>
     
       <category term="AWS" scheme="https://tk1307993.coding.me/tags/AWS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FTP代写：CS159-Socket-Programming-FTP-Server</title>
-    <link href="https://tk1307993.coding.me/CS159-Socket-Programming-FTP-Server.html"/>
-    <id>https://tk1307993.coding.me/CS159-Socket-Programming-FTP-Server.html</id>
-    <published>2019-03-09T09:31:12.000Z</published>
-    <updated>2019-03-09T09:34:46.731Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Your task is to create a very simple FTP server program using sockets.</p><ol><li>The server needs to be able to interpret the protocol commands, including: LIST, RETR, STOR</li><li>The client should be a standard command line FTP client application (available on your OS). The application commands that should work from the client are:<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dir (<span class="built_in">or</span> <span class="keyword">ls</span>)</span><br><span class="line"><span class="built_in">get</span> <span class="symbol">&lt;filename&gt;</span></span><br><span class="line"><span class="keyword">put</span> <span class="symbol">&lt;filename&gt;</span></span><br></pre></td></tr></table></figure></li></ol><p>Assume that the files to be transferred are text only (ASCII rather than binaries). There is no need to implement text X binary modes.</p><h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>This exercise makes use of the FTP protocol directly from a command line application. You have probably used FTP before, but in a transparent way (perhaps via a browser).</p><p>FTP is an acronym used with different meanings, each with its set of commands:</p><p>FTP protocol commands (e.g., USER, PASV, PORT etc)</p><p>FTP application commands, associated with a FTP client (e.g., get, put, dir etc).</p><p>When using different Operating Systems one might find that the FTP application works in different ways, even though they may be using the same FTP protocol. The commands described below should work in most OS. However different FTP clients may have incomplete implementations or use nonstandard FTP application commands.</p><p>To start the exercise:</p><ol><li>1) Open a terminal</li><li>2) Issue the command:</li></ol><h3 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h3><p>We have seen some examples using the application called telnet to connect to servers listening to certain ports (see some examples in Chapter 2). Does that work with FTP?</p><h3 id="Part-3"><a href="#Part-3" class="headerlink" title="Part 3"></a>Part 3</h3><p>Understanding the difference between FTP “protocol commands” and “application commands”:</p><p>We have looked at protocol commands, such as: RETR, USER, PASS, STOR etc.</p><p>Also, there are application commands with an FTP client: get, put, ls etc</p><h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>Your submission has to be a single source file (server) compatible with GCC (if using other compilers to develop the assignment, make sure the final source compiles on GCC). Submit to Stream.</p><p>This assignment is worth 10 marks.</p><p>You may lose marks for late assignments.</p>]]></content>
-    
-    <summary type="html">
-    
-      这个需要代写的作业要求基于Linux Socket编程，实现一个FTP Server。需要支持常见的上传(put)、下载(get)和列表(ls)等命令。
-    
-    </summary>
-    
-      <category term="FTP" scheme="https://tk1307993.coding.me/categories/FTP/"/>
-    
-    
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
