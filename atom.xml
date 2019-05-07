@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-05-04T12:52:29.681Z</updated>
+  <updated>2019-05-07T00:46:52.547Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS1926-Simple-Application</title>
+    <link href="https://tk1307993.coding.me/CS1926-Simple-Application.html"/>
+    <id>https://tk1307993.coding.me/CS1926-Simple-Application.html</id>
+    <published>2019-05-07T00:44:34.000Z</published>
+    <updated>2019-05-07T00:46:52.547Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>This assessment is consist of 5 tasks. You need to prepare the following for each question</p><ul><li>Programming object list</li><li>Algorithm</li><li>C++ Coding</li><li><h3 id="Scenario-1-Mathematics-operation"><a href="#Scenario-1-Mathematics-operation" class="headerlink" title="Scenario 1: Mathematics operation"></a>Scenario 1: Mathematics operation</h3>Write a C++ program that will display the calculator menu. The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input two integer vales for the calculation.<br>Example<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MENU</span><br><span class="line"><span class="number">1.</span> Add</span><br><span class="line"><span class="number">2.</span> <span class="keyword">Subtract</span></span><br><span class="line"><span class="number">3.</span> Multiply</span><br><span class="line"><span class="number">4.</span> <span class="keyword">Divide</span></span><br><span class="line"><span class="number">5.</span> <span class="keyword">Modulus</span> <span class="keyword">Enter</span> your choice: <span class="number">1</span></span><br><span class="line"><span class="keyword">Enter</span> your two numbers: <span class="number">12</span> <span class="number">15</span> Result: <span class="number">27</span></span><br><span class="line"><span class="keyword">Continue</span>? y</span><br></pre></td></tr></table></figure></li></ul><h3 id="Scenario-2-Sorting-Number"><a href="#Scenario-2-Sorting-Number" class="headerlink" title="Scenario 2: Sorting Number"></a>Scenario 2: Sorting Number</h3><p>Write a C++ program (using function overloaded) to sort 10 integer values, or 10 long values, or 10 double values. Number lists provide below:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">valListInt = <span class="number">23</span>, <span class="number">2</span>, <span class="number">34</span>, <span class="number">23</span>, <span class="number">43</span>, <span class="number">22</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">43</span>, <span class="number">34</span></span><br><span class="line">valListLong = <span class="number">7000</span>, <span class="number">15</span>, <span class="number">34</span>, <span class="number">2373645</span>, <span class="number">43</span>, <span class="number">22</span>, <span class="number">9392929294</span>, <span class="number">46</span>, <span class="number">32</span>, <span class="number">111143</span> valListDbl = <span class="number">23.3847239</span>, <span class="number">2.3974</span>, <span class="number">34.183734</span>, <span class="number">23.0</span>, <span class="number">43.36381</span>, <span class="number">22.3</span>, <span class="number">32.0</span>, <span class="number">32.1919</span>, <span class="number">43.938363</span>, <span class="number">34.38364</span></span><br></pre></td></tr></table></figure></p><h3 id="Scenario-3-Order-number"><a href="#Scenario-3-Order-number" class="headerlink" title="Scenario 3: Order number"></a>Scenario 3: Order number</h3><p>Create the C++ Function named multiples so that it has two parameters x, and n. The first parameter x will be overloaded with int, double and float. n will always be int. The return type is void. A Function created from multiples will compute.<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sum = <span class="number">1</span> + <span class="keyword">x</span> + <span class="number">2</span><span class="keyword">x</span> + <span class="number">3</span><span class="keyword">x</span> + … + nx e.g n = <span class="number">4</span></span><br><span class="line">sum = <span class="number">1</span> + <span class="keyword">x</span> + <span class="number">2</span><span class="keyword">x</span> + <span class="number">3</span><span class="keyword">x</span> + <span class="number">4</span><span class="keyword">x</span></span><br><span class="line"><span class="keyword">and</span> display the result on screen.</span><br></pre></td></tr></table></figure></p><h3 id="Scenario-4-Temperature-record"><a href="#Scenario-4-Temperature-record" class="headerlink" title="Scenario 4: Temperature record"></a>Scenario 4: Temperature record</h3><p>Write a program that takes a maximum and minimum temperature of the city from Monday to Sunday, and three functions that calculate on average temperature, maximum temperature and minimum temperature of that week.<br>Example<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Please</span> <span class="selector-tag">enter</span> <span class="selector-tag">this</span> <span class="selector-tag">week</span> <span class="selector-tag">temperature</span>,</span><br><span class="line">       <span class="selector-tag">Monday</span>: 19<span class="selector-class">.0</span> 14<span class="selector-class">.0</span></span><br><span class="line">       <span class="selector-tag">Tuesday</span>: 24<span class="selector-class">.5</span> 12<span class="selector-class">.5</span></span><br><span class="line">       <span class="selector-tag">Wednesday</span>: 22<span class="selector-class">.0</span> 9<span class="selector-class">.5</span></span><br><span class="line">       <span class="selector-tag">Thursday</span>: 17<span class="selector-class">.0</span> 9<span class="selector-class">.0</span></span><br><span class="line">       <span class="selector-tag">Friday</span>: 17<span class="selector-class">.0</span> 10<span class="selector-class">.0</span></span><br><span class="line">       <span class="selector-tag">Saturday</span>: 23<span class="selector-class">.0</span> 12<span class="selector-class">.0</span></span><br><span class="line">       <span class="selector-tag">Sunday</span>: 22<span class="selector-class">.0</span> 15<span class="selector-class">.5</span></span><br><span class="line"><span class="selector-tag">This</span> <span class="selector-tag">week</span>,</span><br><span class="line">       <span class="selector-tag">minimum</span> <span class="selector-tag">temperature</span> <span class="selector-tag">is</span>: 9<span class="selector-class">.0</span></span><br><span class="line">       <span class="selector-tag">maximum</span> <span class="selector-tag">temperature</span> <span class="selector-tag">is</span>: 24<span class="selector-class">.5</span></span><br><span class="line">       <span class="selector-tag">average</span> <span class="selector-tag">temperature</span> <span class="selector-tag">is</span>: 16<span class="selector-class">.21</span></span><br></pre></td></tr></table></figure></p><h3 id="Scenario-5-String-and-Character-Function"><a href="#Scenario-5-String-and-Character-Function" class="headerlink" title="Scenario 5: String and Character Function"></a>Scenario 5: String and Character Function</h3><p>Write a program that reads in a string provided the user. Return the following statistics about the string:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Length</span><br><span class="line"><span class="built_in">Number</span> <span class="keyword">of</span> vowels</span><br><span class="line"><span class="built_in">Number</span> <span class="keyword">of</span> lower <span class="keyword">case</span> characters</span><br><span class="line"><span class="built_in">Number</span> <span class="keyword">of</span> upper <span class="keyword">case</span> characters</span><br><span class="line"><span class="built_in">Number</span> <span class="keyword">of</span> numerals</span><br><span class="line"><span class="built_in">Number</span> <span class="keyword">of</span> other symbols</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      这个需要代写的C++程序，属于偏基础的内容。根据五个不同的场景，编写对应的代码。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：FIT2071-TextQuest2</title>
@@ -34,9 +58,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
@@ -459,32 +483,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hadoop代写：CS698-Flight-Data-Analysis</title>
-    <link href="https://tk1307993.coding.me/CS698-Flight-Data-Analysis.html"/>
-    <id>https://tk1307993.coding.me/CS698-Flight-Data-Analysis.html</id>
-    <published>2019-03-12T12:56:09.000Z</published>
-    <updated>2019-03-12T12:59:13.272Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><ol><li>Form a project team of two students (including yourself).</li><li>Install Hadoop/Oozie on your AWS VMs.</li><li>Download the Airline On-time Performance data set (flight data set) from the period of October 1987 to April 2008 on the Statistical Computing website: <a href="http://stat-computing.org/dataexpo/2009/the-data.html" target="_blank" rel="noopener">http://stat-computing.org/dataexpo/2009/the-data.html</a></li><li>Design, implement, and run an Oozie workflow to find out<ul><li>a. the 3 airlines with the highest and lowest probability, respectively, for being on schedule;</li><li>b. the 3 airports with the longest and shortest average taxi time per flight (both in and out), respectively; and</li><li>c. the most common reason for flight cancellations.</li></ul></li></ol><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ol><li>Your workflow must contain at least three MapReduce jobs that run in fully distributed mode.</li><li>Run your workflow to analyze the entire data set (total 22 years from 1987 to 2008) at one time on two VMs first and then gradually increase the system scale to the maximum allowed number of VMs for at least 5 increment steps, and measure each corresponding workflow execution time.</li><li>Run your workflow to analyze the data in a progressive manner with an increment of 1 year, i.e. the first year (1987), the first 2 years (1987-1988), the first 3 years (1987-1989), …, and the total 22 years (1987-2008), on the maximum allowed number of VMs, and measure each corresponding workflow execution time.</li></ol><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ol><li>A commands.txt text file that lists all the commands you used to run your code and produce the required results in fully distributed mode</li><li>An output.txt text file that stores the final results from all the runs</li><li>The source code of your MapReduce programs (including the JAR files) and any other programs you might have developed and included in the workflow</li><li>The Oozie workflow XML file</li><li>A project report in PDF that includes:<br>a. A diagram that shows the structure of your Oozie workflow<br>b. A detailed description of the algorithm you designed to solve each of the problems<br>c. A performance measurement plot that compares the workflow execution time in response to an increasing number of VMs used for processing the entire data set (22 years) and an in-depth discussion on the observed performance comparison results<br>d. A performance measurement plot that compares the workflow execution time in response to an increasing data size (from 1 year to 22 years) and an in-depth discussion on the observed performance comparison results</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      这次需要代写的是一个大数据的作业，需要在AWS上搭建Hadoop来进行计算。此外，数据集也非常大，也包含了脏数据需要处理。
-    
-    </summary>
-    
-      <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
-    
-    
-      <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
-    
-      <category term="Hadoop" scheme="https://tk1307993.coding.me/tags/Hadoop/"/>
-    
-      <category term="AWS" scheme="https://tk1307993.coding.me/tags/AWS/"/>
     
   </entry>
   
