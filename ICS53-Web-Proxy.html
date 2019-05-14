@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Network Programming,Linux Network,Web," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="工程编程中，Sorting通常都是出现在三方库中直接调用。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="用C语言编写一个Http代理服务器，本质上还是一个Linux网络的Socket编程，实现网络数据的双工转发和日志记录即可。需要注意的地方是信号和异常的处理。">
+<meta name="keywords" content="Network Programming,Linux Network,Web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS251 Sorting">
-<meta property="og:url" content="https://tk1307993.coding.me/CS251-Sorting.html">
+<meta property="og:title" content="C代写：ICS53-Web-Proxy">
+<meta property="og:url" content="https://tk1307993.coding.me/ICS53-Web-Proxy.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="工程编程中，Sorting通常都是出现在三方库中直接调用。">
+<meta property="og:description" content="用C语言编写一个Http代理服务器，本质上还是一个Linux网络的Socket编程，实现网络数据的双工转发和日志记录即可。需要注意的地方是信号和异常的处理。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T03:23:52.687Z">
+<meta property="og:updated_time" content="2019-05-14T13:31:51.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS251 Sorting">
-<meta name="twitter:description" content="工程编程中，Sorting通常都是出现在三方库中直接调用。">
+<meta name="twitter:title" content="C代写：ICS53-Web-Proxy">
+<meta name="twitter:description" content="用C语言编写一个Http代理服务器，本质上还是一个Linux网络的Socket编程，实现网络数据的双工转发和日志记录即可。需要注意的地方是信号和异常的处理。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS251-Sorting.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/ICS53-Web-Proxy.html"/>
 
 
 
 
 
-  <title>C代写：CS251 Sorting | 留学生CS编程作业代写</title>
+  <title>C代写：ICS53-Web-Proxy | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS251-Sorting.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ICS53-Web-Proxy.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS251 Sorting</h2>
+          <h2 class="post-title" itemprop="name headline">C代写：ICS53-Web-Proxy</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T11:22:06+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-14T21:29:51+08:00">
+                2019-05-14
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  工程编程中，Sorting通常都是出现在三方库中直接调用。
+                  用C语言编写一个Http代理服务器，本质上还是一个Linux网络的Socket编程，实现网络数据的双工转发和日志记录即可。需要注意的地方是信号和异常的处理。
               </div>
           
 
@@ -360,23 +360,22 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Implement void quicksort(unsigned int *a, int n) as a “C” style function in the file quicksort.cc</p>
-<ol>
-<li>The pivot should always be chosen as the first element of the array.</li>
-<li>See the given quicksort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li>
-<li>The main function in quicksort.cc reads from the file “quicksortinput” the n integers and writes the n integers to the file “quicksortoutput” in ascending sorted order. See “quicksortsampleinput” and “quicksortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li>
-<li>The function sorts the array a of n positive integers with the quick sort algorithm.</li>
-</ol>
-<p>Implement void radixsort(unsigned int *a, int n) as a “C” style function in the file radixsort.cc</p>
-<ol>
-<li>The elements of the array are positive and are represented with 32 bits.</li>
-<li>See the given radixsort.cc file for how to determine running times. You can modify this file as you wish but I should be able to run it to get your output in the file specified.</li>
-<li>The main function in radixsort.cc reads from the file “radixsortinput” the n integers and writes the n integers to the file “radixsortoutput” in ascending sorted order. See “radixsortsampleinput” and “radixsortsampleoutput” for formatting details. Please make sure that your program can EXACTLY reproduce that output file given the input file. You may want to use the “diff” program to test this.</li>
-<li>The function sorts the array a of n positive integers using the radix sort algorithm.</li>
-</ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>需要实现Quicksort算法以及Radix sort算法。</p>
-<p>本题难度不大，但需要理解和掌握这两种算法的原理和特点。</p>
-<p>此外需要注意的是，测试集并非是结构化的数据，需要对测试集中字符进行分割，同时处理空行的问题。</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>A Web proxy is a program that acts as a middleman between a Web browser and an end server. Instead of contacting the end server directly to get a Web page, the browser contacts the proxy, which forwards the request on to the end server. When the end server replies to the proxy, the proxy sends the reply on to the browser.</p>
+<p>Proxies are used for many purposes. Sometimes proxies are used in firewalls, such that the proxy is the only way for a browser inside the firewall to contact an end server outside. The proxy may do translation on the page, for instance, to make it viewable on a Web-enabled cell phone. Proxies are also used as anonymizers.</p>
+<p>By stripping a request of all identifying information, a proxy can make the browser anonymous to the end server. Proxies can even be used to cache Web objects, by storing a copy of, say, an image when a request for it is first made, and then serving that image in response to future requests rather than going to the end server.</p>
+<p>In this lab, you will write a Web proxy that logs requests. You will write a simple sequential proxy that repeatedly waits for a request, forwards the request to the end server, and returns the result back to the browser, keeping a log of such requests in a disk file. This will help you understand basics about network programming and the HTTP protocol.</p>
+<h3 id="Logistics"><a href="#Logistics" class="headerlink" title="Logistics"></a>Logistics</h3><p>As always, you must work in a group of two or more people. You will need to upload the source code and have a TA checkoff your code.</p>
+<h3 id="Hand-Out-Instructions"><a href="#Hand-Out-Instructions" class="headerlink" title="Hand Out Instructions"></a>Hand Out Instructions</h3><p>If you want to, you may use the code provided by the book in the csapp.c, and csapp.h files. These can be downloaded from the course webpage.</p>
+<h3 id="Implementing-a-Sequential-Web-Proxy"><a href="#Implementing-a-Sequential-Web-Proxy" class="headerlink" title="Implementing a Sequential Web Proxy"></a>Implementing a Sequential Web Proxy</h3><p>In this part you will implement a sequential logging proxy. Your proxy should open a socket and listen for a connection request. When it receives a connection request, it should accept the connection, read the HTTP request, and parse it to determine the name of the end server. It should then open a connection to the end server, send it the request, receive the reply, and forward the reply to the browser if the request is not blocked.<br>Since your proxy is a middleman between client and end server, it will have elements of both. It will act as a server to the web browser, and as a client to the end server. Thus you will get experience with both client and server programming.</p>
+<h3 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h3><p>Your proxy should keep track of all requests in a log file named proxy.log. Each log file entry should be a file of the form:<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Date</span>: browserIP <span class="keyword">URL</span> size</span><br></pre></td></tr></table></figure></p>
+<p>where browserIP is the IP address of the browser, URL is the URL asked for, size is the size in bytes of the object that was returned. For instance:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Sun</span> 8 <span class="selector-tag">May</span> 2016 02<span class="selector-pseudo">:51</span><span class="selector-pseudo">:02</span> <span class="selector-tag">EST</span>: 128<span class="selector-class">.2</span><span class="selector-class">.111</span><span class="selector-class">.38</span></span><br></pre></td></tr></table></figure></p>
+<p>Note that size is essentially the number of bytes received from the end server, from the time the connection is opened to the time it is closed. Only requests that are met by a response from an end server should be logged. We have provided the function format log entry in csapp.c to create a log entry in the required format.</p>
+<h3 id="Port-Numbers"><a href="#Port-Numbers" class="headerlink" title="Port Numbers"></a>Port Numbers</h3><p>You proxy should listen for its connection requests on the port number passed in on the command line:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unix&gt; .<span class="built_in">/proxy </span>15213</span><br></pre></td></tr></table></figure></p>
+<p>You may use any port number p, where 1024 ≤ p ≤ 65536, and where p is not currently being used by any other system or user services (including other students’ proxies). See /etc/services for a list of the port numbers reserved by other system services.</p>
+<p>Your sequential proxy should correctly accept connections, forward the requests to the end server, and pass the response back to the browser, making a log entry for each request. Your program should be able to proxy browser requests to the following Web sites and correctly log the requests.</p>
+<h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>Initially, you should debug your proxy using telnet as the client.</p>
+<p>Later, test your proxy with a real browser. Explore the browser settings until you find “proxies”, then enter the host and port where you’re running yours. With Netscape, choose Edit, then Preferences, then Advanced, then Proxies, then Manual Proxy</p>
+<p>Configuration. In Internet Explorer, choose Tools, then Options, then Connections, then LAN Settings. Check ‘Use proxy server’ and click Advanced. Just set your HTTP proxy, because that’s all your code is going to be able to handle.</p>
 
       
     </div>
@@ -394,7 +393,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+          
+            <a href="/tags/Linux-Network/" rel="tag"># Linux Network</a>
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
           
         </div>
       
@@ -407,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS251-AVLTree.html" rel="next" title="C++代写：CS251 AVLTree">
-                <i class="fa fa-chevron-left"></i> C++代写：CS251 AVLTree
+              <a href="/CS373-Hash-Tables.html" rel="next" title="Java代写：CS373-Hash-Tables">
+                <i class="fa fa-chevron-left"></i> Java代写：CS373-Hash-Tables
               </a>
             
           </div>
@@ -416,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS635-DigitalImageProcessing.html" rel="prev" title="C++代写：CS635-DigitalImageProcessing">
-                C++代写：CS635-DigitalImageProcessing <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -572,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">2.</span> <span class="nav-text">Analysis</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logistics"><span class="nav-number">2.</span> <span class="nav-text">Logistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hand-Out-Instructions"><span class="nav-number">3.</span> <span class="nav-text">Hand Out Instructions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-a-Sequential-Web-Proxy"><span class="nav-number">4.</span> <span class="nav-text">Implementing a Sequential Web Proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logging"><span class="nav-number">5.</span> <span class="nav-text">Logging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Port-Numbers"><span class="nav-number">6.</span> <span class="nav-text">Port Numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hints"><span class="nav-number">7.</span> <span class="nav-text">Hints</span></a></li></ol></div>
             
 
           </div>

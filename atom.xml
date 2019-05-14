@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-05-12T12:26:49.555Z</updated>
+  <updated>2019-05-14T13:31:51.952Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：ICS53-Web-Proxy</title>
+    <link href="https://tk1307993.coding.me/ICS53-Web-Proxy.html"/>
+    <id>https://tk1307993.coding.me/ICS53-Web-Proxy.html</id>
+    <published>2019-05-14T13:29:51.000Z</published>
+    <updated>2019-05-14T13:31:51.952Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>A Web proxy is a program that acts as a middleman between a Web browser and an end server. Instead of contacting the end server directly to get a Web page, the browser contacts the proxy, which forwards the request on to the end server. When the end server replies to the proxy, the proxy sends the reply on to the browser.</p><p>Proxies are used for many purposes. Sometimes proxies are used in firewalls, such that the proxy is the only way for a browser inside the firewall to contact an end server outside. The proxy may do translation on the page, for instance, to make it viewable on a Web-enabled cell phone. Proxies are also used as anonymizers.</p><p>By stripping a request of all identifying information, a proxy can make the browser anonymous to the end server. Proxies can even be used to cache Web objects, by storing a copy of, say, an image when a request for it is first made, and then serving that image in response to future requests rather than going to the end server.</p><p>In this lab, you will write a Web proxy that logs requests. You will write a simple sequential proxy that repeatedly waits for a request, forwards the request to the end server, and returns the result back to the browser, keeping a log of such requests in a disk file. This will help you understand basics about network programming and the HTTP protocol.</p><h3 id="Logistics"><a href="#Logistics" class="headerlink" title="Logistics"></a>Logistics</h3><p>As always, you must work in a group of two or more people. You will need to upload the source code and have a TA checkoff your code.</p><h3 id="Hand-Out-Instructions"><a href="#Hand-Out-Instructions" class="headerlink" title="Hand Out Instructions"></a>Hand Out Instructions</h3><p>If you want to, you may use the code provided by the book in the csapp.c, and csapp.h files. These can be downloaded from the course webpage.</p><h3 id="Implementing-a-Sequential-Web-Proxy"><a href="#Implementing-a-Sequential-Web-Proxy" class="headerlink" title="Implementing a Sequential Web Proxy"></a>Implementing a Sequential Web Proxy</h3><p>In this part you will implement a sequential logging proxy. Your proxy should open a socket and listen for a connection request. When it receives a connection request, it should accept the connection, read the HTTP request, and parse it to determine the name of the end server. It should then open a connection to the end server, send it the request, receive the reply, and forward the reply to the browser if the request is not blocked.<br>Since your proxy is a middleman between client and end server, it will have elements of both. It will act as a server to the web browser, and as a client to the end server. Thus you will get experience with both client and server programming.</p><h3 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h3><p>Your proxy should keep track of all requests in a log file named proxy.log. Each log file entry should be a file of the form:<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Date</span>: browserIP <span class="keyword">URL</span> size</span><br></pre></td></tr></table></figure></p><p>where browserIP is the IP address of the browser, URL is the URL asked for, size is the size in bytes of the object that was returned. For instance:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Sun</span> 8 <span class="selector-tag">May</span> 2016 02<span class="selector-pseudo">:51</span><span class="selector-pseudo">:02</span> <span class="selector-tag">EST</span>: 128<span class="selector-class">.2</span><span class="selector-class">.111</span><span class="selector-class">.38</span></span><br></pre></td></tr></table></figure></p><p>Note that size is essentially the number of bytes received from the end server, from the time the connection is opened to the time it is closed. Only requests that are met by a response from an end server should be logged. We have provided the function format log entry in csapp.c to create a log entry in the required format.</p><h3 id="Port-Numbers"><a href="#Port-Numbers" class="headerlink" title="Port Numbers"></a>Port Numbers</h3><p>You proxy should listen for its connection requests on the port number passed in on the command line:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unix&gt; .<span class="built_in">/proxy </span>15213</span><br></pre></td></tr></table></figure></p><p>You may use any port number p, where 1024 ≤ p ≤ 65536, and where p is not currently being used by any other system or user services (including other students’ proxies). See /etc/services for a list of the port numbers reserved by other system services.</p><p>Your sequential proxy should correctly accept connections, forward the requests to the end server, and pass the response back to the browser, making a log entry for each request. Your program should be able to proxy browser requests to the following Web sites and correctly log the requests.</p><h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>Initially, you should debug your proxy using telnet as the client.</p><p>Later, test your proxy with a real browser. Explore the browser settings until you find “proxies”, then enter the host and port where you’re running yours. With Netscape, choose Edit, then Preferences, then Advanced, then Proxies, then Manual Proxy</p><p>Configuration. In Internet Explorer, choose Tools, then Options, then Connections, then LAN Settings. Check ‘Use proxy server’ and click Advanced. Just set your HTTP proxy, because that’s all your code is going to be able to handle.</p>]]></content>
+    
+    <summary type="html">
+    
+      用C语言编写一个Http代理服务器，本质上还是一个Linux网络的Socket编程，实现网络数据的双工转发和日志记录即可。需要注意的地方是信号和异常的处理。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
+    
+      <category term="Linux Network" scheme="https://tk1307993.coding.me/tags/Linux-Network/"/>
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS373-Hash-Tables</title>
@@ -34,9 +60,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -132,9 +158,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
@@ -238,9 +264,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -461,30 +487,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hadoop代写：CS1003-Data-Processing-with-MapReduce</title>
-    <link href="https://tk1307993.coding.me/CS1003-Data-Processing-with-MapReduce.html"/>
-    <id>https://tk1307993.coding.me/CS1003-Data-Processing-with-MapReduce.html</id>
-    <published>2019-03-20T13:49:54.000Z</published>
-    <updated>2019-03-20T13:54:06.603Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Key-Competency"><a href="#Key-Competency" class="headerlink" title="Key Competency"></a>Key Competency</h3><ul><li>using MapReduce to process data</li></ul><h3 id="Necessary-Skills"><a href="#Necessary-Skills" class="headerlink" title="Necessary Skills"></a>Necessary Skills</h3><ul><li>expressing an algorithm in the MapReduce style</li><li>choosing appropriate classes and methods from the MapReduce API</li><li>testing and debugging</li><li>writing clear, tidy, consistent and understandable code</li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><p>The practical involves manipulating fairly large data files using the Hadoop implementation of MapReduce.</p><p>When working in the lab, it is highly recommended that you copy a small subset of these files to your local machine under /cs/scratch/username , and use them to develop and test your program. Do not use the input files directly from studres or your home folder as this will exhaust the network.</p><p>Your program should perform the following operations:</p><ul><li>Obtain the absolute paths of the input and output directories from the user. The input must be read in from files in the input directory, and must be written to files in the output directory.</li><li>Find all character level or word level n-grams for text fragments contained within files in the given input directory written in a given language, depending on the user’s input</li><li>Print the list of n-grams and their frequency to a file in the output directory, in alphabetical order</li></ul><p>Your program should deal gracefully with possible errors such as the web resource file being unavailable, or the response containing data in an unexpected format. The source code for your program should follow common style guidelines, including:</p><ol><li>formatting code neatly</li><li>consistency in name formats for methods, fields, variables</li><li>avoiding embedded “magic numbers” and string literals</li><li>minimising code duplication</li><li>avoiding long methods</li><li>using comments and informative method/variable names to make the code clear to the reader</li></ol><h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>Hand in via MMS, a zip file containing the following:</p><p>Your Java source files</p><ul><li>A brief report (maximum 3 pages) explaining the decisions you made, how you tested your program, and how you solved any difficulties that you encountered. Include instructions on how to run your program and any dependencies that need resolving. You can use any software you like to write your report, but your submitted version must be in PDF format.</li><li>Also within your report:</li><li>Highlight one piece of feedback from your previous submissions, and explain how you used it to improve this submission</li><li>If you had to carry out a similar large-scale data processing task in future, would you choose Hadoop or basic file manipulation as you did in earlier practicals? Write a brief comparison of the two methods, explaining the advantages and disadvantages of each, and justify your choice.</li></ul><h3 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h3><p>If you wish to experiment further, you could try any or all of the following:</p><ol><li>Give the user an option to order the n-grams by occurrence frequency. Hint: You could use the ‘Most Popular Word’ example on studres as a starting point.</li><li>Perform additional queries on the data, such as:<ol start="2"><li>a. Count all text fragments containing a given string by the user in a given language</li><li>b. Find which word occurs in the highest number of different languages</li><li>c. Any other additional statistics/queries about the data you could generate using Hadoop</li></ol></li></ol><h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>Here is one possible sequence for developing your solution. It is recommended that you make a new method or class at each stage, so that you can easily go back to a previous stage if you run into problems. Please use demonstrator support in the labs whenever possible.</p><ol><li>You will need to examine the structure of the data files, to see how the text fragments and language specifications are represented.</li><li>Tackle one problem at a time, beginning with selecting all text in a particular language, which requires a mapper class but no reducer. Initially, you can use a fixed search language String in your mapper class for testing purposes.</li><li>To select only text in the required language, the difficulty is that the language is recorded in a different line from the text fragment, so will be processed in a different call to map. This can be solved using a field in the mapper object to record the most recently encountered language. The map method can then either update this field, if the current line contains a language, or check the language field value, if the current line contains a text fragment.</li><li>To test, first make a new directory and copy 10 or 20 of the data files into it—the full data set will take inconveniently long to run.</li><li>Once this works, refine your solution so that the search language is passed as a parameter. Recall that you can pass a parameter value to a mapper or reducer by calling the method.</li><li>To return text in the specified language as n-grams, you will need to also pass the user’s specified n-gram type and size as parameters, using the same methods in Step 5. Following this, it is recommended that you reuse your n-gram creation code from Practical 2 to split each String into its corresponding n-grams. Remember that, unlike Practical 2, you do not need to represent word boundaries with an underscore.</li><li>In order to output the n-gram frequencies alongside the n-grams themselves, you will need to implement a reducer class that groups duplicate n-grams and sums their total frequency. For a reminder of how to do this, review the ‘Word Count’ example on studres.</li><li>For ordering your output n-grams, recall that sorting order is specified with the setOutputKeyComparatorClass method of the JobConf class.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      这个代写的作业是使用Hadoop来处理数据，搭建Hadoop平台，分析数据，编写对应的Map函数和Reduce函数来完成。
-    
-    </summary>
-    
-      <category term="Hadoop" scheme="https://tk1307993.coding.me/categories/Hadoop/"/>
-    
-    
-      <category term="MapReduce" scheme="https://tk1307993.coding.me/tags/MapReduce/"/>
-    
-      <category term="Hadoop" scheme="https://tk1307993.coding.me/tags/Hadoop/"/>
     
   </entry>
   
