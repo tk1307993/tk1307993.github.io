@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,Algorithm," />
+  <meta name="keywords" content="Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
-<meta name="keywords" content="Data Structure,Algorithm">
+<meta name="description" content="这次要代写的是一个AI作业，完成一个lecture里面的probabilistic graphical model (PGM).">
+<meta name="keywords" content="Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：ADDS10-Polish-Notation">
-<meta property="og:url" content="https://tk1307993.coding.me/ADDS10-Polish-Notation.html">
+<meta property="og:title" content="AI代写：CS3049-Likelihood-Weighted-Sampling">
+<meta property="og:url" content="https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
+<meta property="og:description" content="这次要代写的是一个AI作业，完成一个lecture里面的probabilistic graphical model (PGM).">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-22T13:26:04.545Z">
+<meta property="og:updated_time" content="2019-05-23T15:25:56.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：ADDS10-Polish-Notation">
-<meta name="twitter:description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
+<meta name="twitter:title" content="AI代写：CS3049-Likelihood-Weighted-Sampling">
+<meta name="twitter:description" content="这次要代写的是一个AI作业，完成一个lecture里面的probabilistic graphical model (PGM).">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ADDS10-Polish-Notation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html"/>
 
 
 
 
 
-  <title>C++代写：ADDS10-Polish-Notation | 留学生CS编程作业代写</title>
+  <title>AI代写：CS3049-Likelihood-Weighted-Sampling | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ADDS10-Polish-Notation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：ADDS10-Polish-Notation</h2>
+          <h2 class="post-title" itemprop="name headline">AI代写：CS3049-Likelihood-Weighted-Sampling</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-22T21:23:36+08:00">
-                2019-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T23:23:36+08:00">
+                2019-05-23
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业是用树来实现Polish Notation，没什么难度。
+                  这次要代写的是一个AI作业，完成一个lecture里面的probabilistic graphical model (PGM).
               </div>
           
 
@@ -360,20 +360,25 @@
       
 
       
-        <h2 id="Prefix-to-infix-based-on-tree-data-structure"><a href="#Prefix-to-infix-based-on-tree-data-structure" class="headerlink" title="Prefix to infix based on tree data structure"></a>Prefix to infix based on tree data structure</h2><h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Create a directory for this assignment inside your SVN file system. Remember to commit your work early and often.</p>
-<h3 id="Important-Notice"><a href="#Important-Notice" class="headerlink" title="Important Notice"></a>Important Notice</h3><p>This assignment will only be marked by the testing script on websubmission (because our tutors’ contracts end before the deadline). There will be six test cases (1 mark each). The total mark is six as usual. You don’t have to write a design, because the testing script won’t be able to understand it anyway. (But feel free to write one for your own benefit.) The testing script doesn’t care about your code style either, so feel free to use variable names like aa, bb, cc, dd (I know some of you love these kinds of names – well, jk, please don’t).</p>
-<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Polish notation, also known as Polish prefix notation or simply prefix notation, is a form of notation for logic, arithmetic, and algebra. Its distinguishing feature is that it places operators to the left of their operands. (Many Lisp family programming languages require prefix notation, including the popular language Clojure.)</p>
-<p>The expression for adding the numbers 1 and 2 is, in prefix notation, written “+ 1 2” rather than “1 + 2”. In more complex expressions, the operators still precede their operands, but the operands may themselves be nontrivial expressions including operators of their own. For instance, the expression that would be written in conventional infix notation as<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">5</span> + <span class="number">6</span>) * <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>can be written in prefix as<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* (+ <span class="number">5</span> <span class="number">6</span>) <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>You only need to care about binary operators: + - * and /</p>
-<p>Also, you only need to care about operands that are from 0 to 9 (single digit).</p>
-<p>For binary operators, prefix representation is unambiguous, and bracketing the prefix expression is un-necessary. As such, the previous expression can be further simplified to<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* + <span class="number">5</span> <span class="number">6</span> <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>The processing of the product is deferred until its two operands are available (i.e., 5 plus 6, then multiplies the result with 7). As with any notation, the innermost expressions are evaluated first, but in prefix notation this “innermost-ness” is conveyed by order rather than bracketing.</p>
-<p>You are asked to create a class that converts prefix expressions to infix expressions. You are asked to use a tree data structure to achieve this task. (Hint: use a binary tree, use the leaf nodes to store the operands and use the non-leaf nodes to store the operators.)</p>
-<p>Create a main function that takes in one line. The line contains a list of operators and operands separated by spaces. The input doesn’t contain parenthesis. An operator is a character from +, -, *, and /. An operand is an integer from 0 to 9. You are asked to determine whether this line describes a valid prefix expression.</p>
-<p>If so, output its infix form. Otherwise, output “Error”. (Division by zero is considered error.)</p>
-<p>When you output the infix form, the output format should follow two rules</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * - 5 6 7</span><br><span class="line"><span class="keyword">Sample</span> output: (5 - 6) * 7</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * 5</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * 5 6 7</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: + * - 5 6 7 3</span><br><span class="line"><span class="keyword">Sample</span> output: ((5 - 6) * 7) + 3</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: / + * - 5 6 7 3 9</span><br><span class="line"><span class="keyword">Sample</span> output: (((5 - 6) * 7) + 3) / 9</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: / + * - 5 6 7 3 0</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br></pre></td></tr></table></figure>
+        <h3 id="Probabilistic-graphical-models"><a href="#Probabilistic-graphical-models" class="headerlink" title="Probabilistic graphical models"></a>Probabilistic graphical models</h3><p>Your task is to write a program to implement likelihood weighted sampling, as described in lecture 18, to perform inference on an arbitrary probabilistic graphical model (PGM) of boolean random variables. You will need to parse an input text file that encodes the graph and the conditional probability distributions for each variable (conditioned on its parents). The format of the file is given in the section below. Two networks have been defined in this format and can be downloaded, along with two queries each from the forum, in file ass3.zip.</p>
+<p>Your program must be able to parse any file of this format to create and populate an internal data structure of the PGM.<br>Your program must then prompt the user via the console (or read from redirected standard input) for a single variable query, parse the query correctly and evaluate the conditional probability distribution of the query variable, given the evidence. The result must be written as two decimal values (corresponding to the values of P(QueryVar=true|…) and P(QueryVar=false|…)) onto the standard output stream, separated by white space. For example:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0<span class="selector-class">.872</span> 0<span class="selector-class">.128</span></span><br></pre></td></tr></table></figure></p>
+<p>Note that if you write anything else before these two numbers, automark will interpret that output as the answer, almost certainly resulting in a test failure.</p>
+<h3 id="File-format"><a href="#File-format" class="headerlink" title="File format"></a>File format</h3><p>The graphical model will be specified by a text file with format:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">N</span><br><span class="line"></span><br><span class="line">rv0 rv1 ... rvN<span class="number">-1</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> ... <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> ... <span class="number">1</span></span><br><span class="line">...</span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">1</span> ... <span class="number">0</span></span><br><span class="line">mat0</span><br><span class="line"></span><br><span class="line">mat1</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">matN<span class="number">-1</span></span><br></pre></td></tr></table></figure></p>
+<p>Here:</p>
+<ul>
+<li>N is the number of random variables in the network;</li>
+<li>rv are the random variable names (arbitrary alphanumeric strings);</li>
+<li>mat are two dimensional arrays of real numbers (in ASCII) that specify the conditional probability table of each random variable conditioned on its parents;</li>
+<li>The matrix of zeros and ones specifes the directed arcs in the graph; a one (1) in the i,j entry indicates there is an edge from i to j (so the ith variable is a parent of the jth variable.</li>
+</ul>
+<p>The format of the Conditional Probability Table (CPT) matrices is a bit subtle. If a node has m parents, then the matrix needs to specify the probability of each outcome (true, false) conditioned on 2^m different combinations of parent values, so the matrix will be 2^m × 2 (rows × columns). Treating true as 1, and false as 0, concatenate the values of the parents in their numerical order from most significant bit to least significant bit (left to right) to create a row index r. The entry in the first column, rth row is then the probability that the variable is true given the values of the other variables (the entry in the corresponding 2nd column is the probability that the variable is false). Thus, the first row of the matrix corresponds to all conditioning variables taken the value false (r = 000 … 0), and the last row has all conditioning variables true (r = 111 … 1).</p>
+<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>Write your program in Java or C/C++. In the case of Java, name your program inference.java. Your program must be able to be compiled and run as follows:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> javac inference.java</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> java inference graphfile.txt</span></span><br></pre></td></tr></table></figure></p>
+<p>In the case of C/C++, you must supply a makefile Makefile with a rule called inference to compile your program into a Linux executable binary named inference.bin. Your program must be able to be compiled and run as follows:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make inference</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./inference.bin graphfile.txt</span></span><br></pre></td></tr></table></figure></p>
+<p>NOTE1: If a makefile exists, the marking script will assume that the program is written in C/C++, otherwise Java will be assumed.<br>NOTE2: graphfile.txt is of course a placeholder for the name of the file containing the PGM structure.</p>
+<h3 id="Submission-and-assessment"><a href="#Submission-and-assessment" class="headerlink" title="Submission and assessment"></a>Submission and assessment</h3><p>You must submit your program on the Computer Science Web Submission System. This means you must create the assignment under your own SVN repository to store the submission files.</p>
+<p>Your code will be compiled and run, testing its outputs for the two networks with two queries each that have been provided to you, and an additional three networks with two queries each. None of the networks will contain more than 16 variables. Since the results are stochastic, the query answers will not be exact and will vary from run to run. The asnwers will therefore be tested against a tolerance of ±0.01 (i.e. your answers must be within 1% of the true values), so you must ensure convergence to this level of precision. If it passes all tests you will get 15% of the overall course mark. The objective of the tests is to check for the correct operation of your implementation. Hence, the basis of the assessment is to compare your results against the expected results. You must also ensure that you have an efficient implementation.</p>
+<h3 id="Using-other-source-code"><a href="#Using-other-source-code" class="headerlink" title="Using other source code"></a>Using other source code</h3><p>You may not use other source code for this assignment. You should personally and carefully implement the likelihood weighted sampling to fully understand the concept.</p>
+
       
     </div>
     
@@ -390,9 +395,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
-          
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -405,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FIT2071-TextQuest.html" rel="next" title="C++代写：FIT2071-TextQuest">
-                <i class="fa fa-chevron-left"></i> C++代写：FIT2071-TextQuest
+              <a href="/CSSE7023-Train-Management-System-GUI.html" rel="next" title="Java代写：CSSE7023-Train-Management-System-GUI">
+                <i class="fa fa-chevron-left"></i> Java代写：CSSE7023-Train-Management-System-GUI
               </a>
             
           </div>
@@ -414,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS125-Course-Scheduler.html" rel="prev" title="Java代写：CS125-Course-Scheduler">
-                Java代写：CS125-Course-Scheduler <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -570,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prefix-to-infix-based-on-tree-data-structure"><span class="nav-number">1.</span> <span class="nav-text">Prefix to infix based on tree data structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">1.1.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Important-Notice"><span class="nav-number">1.2.</span> <span class="nav-text">Important Notice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Description"><span class="nav-number">1.3.</span> <span class="nav-text">Problem Description</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Probabilistic-graphical-models"><span class="nav-number">1.</span> <span class="nav-text">Probabilistic graphical models</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-format"><span class="nav-number">2.</span> <span class="nav-text">File format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables"><span class="nav-number">3.</span> <span class="nav-text">Deliverables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-and-assessment"><span class="nav-number">4.</span> <span class="nav-text">Submission and assessment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-other-source-code"><span class="nav-number">5.</span> <span class="nav-text">Using other source code</span></a></li></ol></div>
             
 
           </div>
