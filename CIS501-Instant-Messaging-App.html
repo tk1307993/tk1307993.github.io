@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals," />
+  <meta name="keywords" content="MVC,Network Programming," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C语言基础练习题。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="这次需要代写的作业是用C#来写一个Server/Client架构的IM通信工具，本质上就是一个网络编程加业务逻辑堆叠的产物。">
+<meta name="keywords" content="MVC,Network Programming">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS50 C Programming Assignment6">
-<meta property="og:url" content="https://tk1307993.coding.me/CS50-C-Programming-Assignment-6.html">
+<meta property="og:title" content="C#代写：CIS501-Instant-Messaging-App">
+<meta property="og:url" content="https://tk1307993.coding.me/CIS501-Instant-Messaging-App.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C语言基础练习题。">
+<meta property="og:description" content="这次需要代写的作业是用C#来写一个Server/Client架构的IM通信工具，本质上就是一个网络编程加业务逻辑堆叠的产物。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T01:43:35.556Z">
+<meta property="og:updated_time" content="2019-05-25T10:46:26.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS50 C Programming Assignment6">
-<meta name="twitter:description" content="C语言基础练习题。">
+<meta name="twitter:title" content="C#代写：CIS501-Instant-Messaging-App">
+<meta name="twitter:description" content="这次需要代写的作业是用C#来写一个Server/Client架构的IM通信工具，本质上就是一个网络编程加业务逻辑堆叠的产物。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-6.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CIS501-Instant-Messaging-App.html"/>
 
 
 
 
 
-  <title>C代写：CS50 C Programming Assignment6 | 留学生CS编程作业代写</title>
+  <title>C#代写：CIS501-Instant-Messaging-App | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-6.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CIS501-Instant-Messaging-App.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS50 C Programming Assignment6</h2>
+          <h2 class="post-title" itemprop="name headline">C#代写：CIS501-Instant-Messaging-App</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-29T09:37:57+08:00">
-                2018-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-25T18:43:34+08:00">
+                2019-05-25
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                    <span itemprop="name">C#</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C语言基础练习题。
+                  这次需要代写的作业是用C#来写一个Server/Client架构的IM通信工具，本质上就是一个网络编程加业务逻辑堆叠的产物。
               </div>
           
 
@@ -360,18 +360,33 @@
       
 
       
-        <h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
-<li>Work on an assignment by yourself without sharing the answer to a classmate. (It is great that students study together but an assignment is an individual task. It is not a group project.)</li>
-<li>Start to do an assignment early and ask the teacher if you have a question.</li>
-<li>Add a comment with your name at the top of your source code</li>
-<li>Put all your files that you want to submit into one zip file</li>
-<li>Your folder should have your last name, first name, your class and assignment number. Example: rattanasook_hathairat_cs50_6.zip</li>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this project, you are to design and implement an Instant Messaging App (IM App) using the Model View Controller architecture design with delegates. The IM App consists of a front-end (Client) and a back-end (Server) component.</p>
+<p>The IM App builds on the WebSocket Chat Client/Server Apps exercises that we did in class on with some additional functionality as listed bellow:</p>
+<ul>
+<li>Users can log in/out from the Server; logging in requires a name and password, which are managed in the Server and must be persisted across running sessions by serializing the account objects as a JSON string stored in a file.</li>
+<li>Once logged in, users can manage their contact list by adding and removing contact entries.</li>
+<li>At the client side, the contact list shows each contact’s status (online/offline). This status is dynamically updated as the users in the list log in/out from the server.</li>
+<li>A user X, while online, can establish a 2-way chat session with another user (with online status) in X’s contact list. Conversations are not recorded/saved in the Server.</li>
+<li>While user X is chatting with user Y, any of them can add a third user Z (also online) to have a group chat.</li>
+<li>Similar to the class exercise, the Client and Server Apps communicate via a WebSocket connection. Moreover, each chat message should be time-stamped and the client GUI should indicate who sends the message in the chat window.</li>
 </ul>
-<h6 id="Please-save-the-program-with-the-name-‘files-c’"><a href="#Please-save-the-program-with-the-name-‘files-c’" class="headerlink" title="Please save the program with the name ‘files.c’"></a>Please save the program with the name ‘files.c’</h6><p>Write a program that merges two files as follows. The two files are in the docsharing which you can download it.<br>One file will contain usernames (usernames.txt):<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">foster001</span></span><br><span class="line"><span class="keyword">smith023</span></span><br><span class="line"><span class="keyword">nyuyen002</span></span><br><span class="line"><span class="keyword">…</span></span><br></pre></td></tr></table></figure></p>
-<p>The other file will contain passwords (passwords.txt):<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">x</span><span class="number">34</span>rdf<span class="number">3</span>e</span><br><span class="line">p<span class="number">43e4</span>rdd</span><br><span class="line">w<span class="number">32</span>eds<span class="number">22</span></span><br><span class="line">…</span><br></pre></td></tr></table></figure></p>
-<p>The program should create a third file matching username and passwords (usernamesPasswords.txt):<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">foster001</span> x34rdf3e</span><br><span class="line"><span class="keyword">smith023 </span>p43e4rdd</span><br><span class="line"><span class="symbol">nyuyen002</span> w32eds22</span><br><span class="line">… …</span><br></pre></td></tr></table></figure></p>
-<p>Give the user of your programs the option of displaying you output file.</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下边是完整实现<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> USERNAME_FILE <span class="meta-string">"usernames.txt"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PASSWORD_FILE <span class="meta-string">"passwords.txt"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMBINE_FILE <span class="meta-string">"usernamesPasswords.txt"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> display; <span class="comment">// Whether to show result</span></span><br><span class="line">	FILE* u_file; <span class="comment">// File handler to username</span></span><br><span class="line">	FILE* p_file; <span class="comment">// File handler to password</span></span><br><span class="line">	FILE* o_file; <span class="comment">// File handler to output file</span></span><br><span class="line">	<span class="keyword">char</span> line_u[<span class="number">128</span>];</span><br><span class="line">	<span class="keyword">char</span> line_p[<span class="number">128</span>];</span><br><span class="line">	<span class="keyword">char</span> line_o[<span class="number">512</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(argc == <span class="number">2</span> &amp;&amp; <span class="built_in">strcmp</span>(argv[<span class="number">1</span>], <span class="string">"-s"</span>) == <span class="number">0</span>)&#123;</span><br><span class="line">		display = <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"You can add -s option to display output.\n"</span>);</span><br><span class="line">		display = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Open file</span></span><br><span class="line">	u_file = fopen(USERNAME_FILE, <span class="string">"r"</span>);</span><br><span class="line">	p_file = fopen(PASSWORD_FILE, <span class="string">"r"</span>);</span><br><span class="line">	o_file = fopen(COMBINE_FILE, <span class="string">"w"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Read file line by line</span></span><br><span class="line">	<span class="keyword">while</span>(!feof(u_file))&#123;</span><br><span class="line">		fgets(line_u, <span class="number">128</span>, u_file);</span><br><span class="line">		fgets(line_p, <span class="number">128</span>, p_file);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Replace '\n' to '\0'</span></span><br><span class="line">		line_u[<span class="built_in">strlen</span>(line_u) - <span class="number">1</span>] = <span class="string">'\0'</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Concat strings</span></span><br><span class="line">		<span class="built_in">sprintf</span>(line_o, <span class="string">"%s\t%s"</span>, line_u, line_p);</span><br><span class="line">		<span class="keyword">if</span>(display == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%s"</span>, line_o);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// Output file</span></span><br><span class="line">		<span class="built_in">fprintf</span>(o_file, <span class="string">"%s"</span>, line_o);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Close file handler</span></span><br><span class="line">	fclose(u_file);</span><br><span class="line">	fclose(p_file);</span><br><span class="line">	fflush(o_file);</span><br><span class="line">	fclose(o_file);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Use-Cases"><a href="#Use-Cases" class="headerlink" title="Use Cases"></a>Use Cases</h3><p>As you might have experienced when using some IM app, there are many IM features that can be provided. Bellow are the minimal use cases that your solution must provide.</p>
+<p>Log in/Sign in. A user A launches the Client app (C) and enters a name (n) and password (p) to log into the Server (S). Server S can respond to C in two ways:</p>
+<p>Login is successful – if p matches what is in n’s account record, or if n is a new name, in this case, S creates a new account with name n and password p.</p>
+<p>Login is unsuccessful – if p does not match the information in n’s account records.</p>
+<p>Server-Client Synch. After a successful login, Server S communicates A’s contact list to client C (empty if n is a new name), and let other online users, that have A in their contact lost, know that A is now online, (the other user’s contact list displays A as online). A can use client C to do any of the following:</p>
+<p>Add a new contact. A enters contact name (e.g. b). If an account exists in server S with name b, server S adds b to A’s contact list (persisted), and let client A know so it can update/display A’s contact list appropriately. Otherwise, (if b does not exists), server S notifies client C (and thus A) that b does not exists.</p>
+<p>Remove an existing contact (e.g. C). A selects the contact c from A’s contact list, confirms/cancels the removal of the contact. If confirmed, server S removes c from A’s contact list (persisted, and let client A know). If cancelled, nothing should happen.</p>
+<p>Chat with a contact (or more) (e.g. D) that is online. Client A opens a chat window where A can send messages to D (and vice versa). Server S sends both clients (e.g. A and D) the contact list that both have in common.</p>
+<p>Either A or D add a third client E to the chat (E is common to A and D). Server S sends E the chat history for that particular session.</p>
+<p>Log out. Server S notifies other online users that have A in their contact list that A is now offline (the other user’s client displays A status accordingly).</p>
+<p>Note that the above description left out some details; for example, when A is chatting with D And somehow D goes offline, should A’s client close the chat window? In such unspecified cases, you are given the degree of freedom to creatively decide how your solution should behave.</p>
+<h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><h4 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h4><p>In this phase, you are to write use case realizations, create class and state diagrams for your server and client apps. The goal of your architecture design is to increase/benefit coupling and cohesion, and non functional requirements like. Here is the list of artifact expected in your design:</p>
+<p>Elaborate a detailed Use Case Realization for the Use Cases “Add a new contact” and “Log out”.</p>
+<p>Class Diagrams for your solution that follows the MVC architecture with interfaces, delegates, and patterns as appropriate. Note that your class diagram should include classes (whose objects will be de/serialized) for client/server communication. You can submit your diagrams as PDF files generated form a computer program (e.g. Visio), or scanned if you create nice and CLEAR drawings.<br>State Diagrams for the controllers in your MVC.</p>
+<h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4><p>In this phase, you are to implement the client and the server apps that fulfill all the functional requirements described in the Use Cases. If you have made some revisions on your diagrams, submit the revised class and state diagrams along with your implementation.</p>
+<h4 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h4><p>Design<br>Your submissions should consist of PDF documents named TeamN-FP-DesignName.PDF, where N is your team number, and DesignName can be “UCR” for use case realization, “CD” for class diagram, or “SD” for state diagram.</p>
+<h4 id="Implementation-1"><a href="#Implementation-1" class="headerlink" title="Implementation"></a>Implementation</h4><p>VS projects, C# code, and other files should be submitted using your GitHub account. Each team member must upload to GitHub his or her team solution.</p>
 
       
     </div>
@@ -389,7 +404,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/MVC/" rel="tag"># MVC</a>
+          
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
           
         </div>
       
@@ -402,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC411-DigitClassification.html" rel="next" title="Python代写：CSC411 Digit Classification">
-                <i class="fa fa-chevron-left"></i> Python代写：CSC411 Digit Classification
+              <a href="/CS3049-Likelihood-Weighted-Sampling.html" rel="next" title="AI代写：CS3049-Likelihood-Weighted-Sampling">
+                <i class="fa fa-chevron-left"></i> AI代写：CS3049-Likelihood-Weighted-Sampling
               </a>
             
           </div>
@@ -411,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS413-DataSecurity.html" rel="prev" title="Java代写：CS413 Data Security">
-                Java代写：CS413 Data Security <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">1.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Please-save-the-program-with-the-name-‘files-c’"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">Please save the program with the name ‘files.c’</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">2.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Cases"><span class="nav-number">2.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements"><span class="nav-number">3.</span> <span class="nav-text">Requirements</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Design"><span class="nav-number">3.1.</span> <span class="nav-text">Design</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementation"><span class="nav-number">3.2.</span> <span class="nav-text">Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Submission"><span class="nav-number">3.3.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementation-1"><span class="nav-number">3.4.</span> <span class="nav-text">Implementation</span></a></li></ol></li></ol></div>
             
 
           </div>
