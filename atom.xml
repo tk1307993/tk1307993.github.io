@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-05-25T10:46:26.816Z</updated>
+  <updated>2019-05-28T12:36:15.935Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#代写：COMP5348-Video-Store</title>
+    <link href="https://tk1307993.coding.me/COMP5348-Video-Store.html"/>
+    <id>https://tk1307993.coding.me/COMP5348-Video-Store.html</id>
+    <published>2019-05-28T12:33:41.000Z</published>
+    <updated>2019-05-28T12:36:15.935Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Enterprise applications usually need to integrate with a number of legacy or third party systems to fulfill business requirements. In this assignment, your task is to provide a suitable integration solution to integrate the VideoStore application with the 3 other applications shown in Figure 1. Integration with these 3 applications is required in order to support the following workflow for submitting orders:</p><p>When an order is placed, the video store application should:</p><ul><li>Request a transfer of funds from the customer’s account to VideoStore’s account using the services provided by the Bank Application.</li><li>If the transfer is successful, the video store requests delivery for the purchased items from DeliverCo. DeliveryCo notifies the video store when delivery is complete. Further:</li><li>The customer is notified via email (using the EmailService) when a delivery is submitted to DeliveryCo, AND when DeliveryCo claims that the delivery is complete.</li><li>The stock levels for an ordered media item should also be updated if an order is successfully submitted.</li></ul><p>If the transfer fails, the customer is notified via email (using the EmailService) that there is a problem with their credit, and that the purchase order cannot proceed.</p><p>The four applications are currently integrated through synchronous point to point calls, and most of the workflow described above can be seen in VideoStore.Business.Components/OrderProvider::SubmitOrder().The solution is setup with a customer account username: “Customer” and password: “Customer”. We suggest you use this account for your testing. The current integration solution is functional, but isn’t ideal in addressing quality attributes like availability and reliability. In lectures and tutorials you looked at technologies including asynchronous messaging, message oriented middleware and web services. You will need to modify the integration solution provided and improve its availability and fault-tolerance. You need to take the following into account:</p><ol><li>How are the availability and reliability quality attributes improved? You need to show message diagrams for various cases of subsystem failure (eg What happens if the VideoStore is up and the Bank component is down?).</li><li>Apart from availability and reliability, how are the other quality attributes mentioned in the first lecture affected by your design? System architects need to make trade-offs between different quality attributes (eg: tolerating more failures vs improved performance when there are no failures), and this is acceptable as long as the architect can correctly justify their choices.</li></ol><p>You will need to consider how your solution handles failure conditions (not just the one above but also any other failure conditions you can identify). You can assume that the delivery company will eventually be successful in delivering any orders they receive but that their system may go down. In your submission you will need to include a report which describes your integration solution and answers questions 1, and 2, giving specific scenarios that illustrate how your integration solution improves availability and fault tolerance, and how your solution affects other quality attributes.</p><h3 id="Group-Formation"><a href="#Group-Formation" class="headerlink" title="Group Formation"></a>Group Formation</h3><p>Each group should contain 3 students. In exceptional cases (with lecturer’s permission in advance) a group may have 4 students, but such a group may be required to take on additional work.</p><p>A group is formed when the students involved each join it through the sign-up sheet on the eLearning site for comp5348. Once someone joins a group, they can see the Assignment itself.</p><h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>A zipped file containing source code for your application and a readme file explaining how to run your application.</p><p>A description of how your code works focusing on message exchanges between your components and showing how you will handle the unavailability of various systems. You should justify trade-offs that you made. That is, your report must include answers to questions 1 and 2 from the assignment description.</p><p>A copy of the Academic Honesty cover sheet (group work version) signed by all members of the group Submit deliverables 1 and 2 through eLearning, and hand in deliverable 3 in person at the lab.</p><h3 id="Some-Q-amp-A"><a href="#Some-Q-amp-A" class="headerlink" title="Some Q &amp; A"></a>Some Q &amp; A</h3><blockquote><p>Q1) How do I run the 4 applications and the VideoStore web-client?</p></blockquote><p>A1) a) Create the Videos, Bank, and Deliveries databases along with their associated tables.<br>b) Start each of the applications by right clicking on the following projects, and then clicking on Debug &gt; Start New Instance : Bank.Process; DeliveryCo.Process; EmailService.Process; VideoStore.Process. You can then also start the VideoStore web client by right clicking on VideoStore.WebClient and then clicking on Debug &gt; Start New Instance. Remember to login with the username “Customer” and the password “Customer” (both without the quotes).</p><blockquote><p> Q2) Do I need to modify the EmailService so that it actually sends emails?</p></blockquote><p>A2) No, the EmailProvider simply needs to print out that a message was sent to a certain address for this assignment (which is the current implementation).</p><blockquote><p>Q3) The debugger stops when I try to place an order when the Customer has insufficient funds; or when I place an order for a media item with insufficient stock. How can I observe the application functionality without the debugger stopping in these situations?</p></blockquote><p>A3) Before placing your order you can “Detach” the debugger (Debugger &gt; Detach All) to observe the overall functionality in the question’s scenarios without being interrupted by the debugger.</p>]]></content>
+    
+    <summary type="html">
+    
+      需求是一堆User Story加上几张软件UML图，业务逻辑得靠现有的代码去推敲。
+    
+    </summary>
+    
+      <category term="C#" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>C#代写：CIS501-Instant-Messaging-App</title>
@@ -467,28 +489,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#代写：CIS340-Campus-Cafeteria</title>
-    <link href="https://tk1307993.coding.me/CIS340-Campus-Cafeteria.html"/>
-    <id>https://tk1307993.coding.me/CIS340-Campus-Cafeteria.html</id>
-    <published>2019-04-07T11:48:38.000Z</published>
-    <updated>2019-04-07T10:35:13.144Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Design a Campus Cafeteria application prototype complete with UML design documentation. Your application must match your delivered UML diagrams (all UML must be completed using the Astah UML tool). Your application shall take advantage of the C# programming language to provide a way to rapidly develop a working prototype.</p><p>The application will allow customers (both students &amp; non-students) to purchase meals. Non-students will pay with a card and students will have the option to use their meal plan or pay with a card (in the event they are out of meal credits). A customer will select the meal type and quantity of meals then pay. Students will need to verify their identity to use meal plan credits or select to pay with card. As an incentive, Students who maintain a GPA over 3.5 are given 1 free meal. The Campus is on a tight budget so a limited number of meals will be served for each meal type.</p><p>Your application will utilize an object-oriented design. The delivered project must contain a class called Menu, Customer, and Meal. Certain classes will only be used as a class while others will require objects to be created. The application must have the following requirements:</p><h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><ul><li>Menu class (rename program class or create a new class as shown in tutorials. “Program” will not be accepted as a Class name) doesn’t need any attributes. All data items should be declared within the Main method or other methods that are inside your Menu class code block.</li><li>Menu class will perform the following actions (can be methods)</li><li>Customer objects will contain data (all data will be instance variables)</li><li>Customer objects will perform all manipulations on the above customer data</li><li>Meal class/objects will contain data (this can be a class with only static members or used to create objects with instance members. It will depend on how you decide to design the application</li><li>Meal class/objects will perform all manipulations on the above meal data</li></ul><h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><p>While completing the application, document your application using UML. Create a Class Diagram for your application showing objects, attributes, methods, relationships, relationship text, and multiplicities. In the class diagram make sure to identify the following for all objects:</p><ul><li>Attributes and their data type</li><li>Methods with their defined return type and passing parameters</li><li>For all passing parameters make sure to have the parameter name and data type</li><li>Create relationships based on your code (if a class calls a method in another class there is a relationship).</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      这次作业是用C#代写一个校园自助餐厅的应用，实现基本的菜单处理逻辑。UI按照所给的example，用简单的命令行即可。
-    
-    </summary>
-    
-      <category term="C#" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
