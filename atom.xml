@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-05-28T12:36:15.935Z</updated>
+  <updated>2019-06-01T01:21:38.208Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaFX代写：CSE2100-Cosmic-Wimpout</title>
+    <link href="https://tk1307993.coding.me/CSE2100-Cosmic-Wimpout.html"/>
+    <id>https://tk1307993.coding.me/CSE2100-Cosmic-Wimpout.html</id>
+    <published>2019-06-01T01:19:30.000Z</published>
+    <updated>2019-06-01T01:21:38.208Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>For this project, you will implement a JavaFX-based two-player (human vs. computer) version of the dice game called Cosmic Wimpout. You will need to use many or all of the techniques covered in class this semester, like arrays, classes, inheritance and polymorphism, and GUI programming.</p><p>Cosmic Wimpout is played with five six-sided dice. Four of these dice have the following values printed on their faces: 10, 2, 3, 4, 5, 6. The fifth die is called the “Sun” die, and has the image of a star (the “Flaming Sun”) in place of the 3. Thus, its faces have the values 10, 2, *(sun), 4, 5, and 6. The sun is treated as a wild value; that is, it may be substituted for any other face value. During a player’s turn, he rolls all five of these dice.</p><p>Play follows the official rules:</p><ol><li>The players agree on a game goal, usually 300 or 500 points (this is known as the Winning Total). The first player to exceed this score wins the game.</li><li>Each player rolls one of the regular dice (not the “Sun” die). The player who rolls the highest face value goes first (10 beats 6). If a tie occurs, the tied players roll again.<br>When it becomes a player’s turn, he begins by rolling all five dice, and counts up the score for that roll:</li><li>Five matching faces are called a Freight Train. A Freight Train is worth a number of points equal to 100 times the face showing on any one die. For example, a Freight Train consisting of five 4’s is worth 400 points.</li><li>If a player rolls five sixes, he automatically wins the game.</li><li>Too Many Points: Rolling five 10’s (a Supernova) automatically knocks a player out of the game.<br>Three matching faces on the same throw are called a flash, and are worth 10 points times the face value. For example, three 5’s are worth 50 points.</li><li>If the “Flaming Sun” comes up, it can be used to form the third value in a flash, or it can be treated as a 5 or a 10 for the purposes of scoring. If a Flaming Sun is rolled along with a pair of any other values, the Flaming Sun MUST be used to form a flash.<br>5’s and 10’s that do not form part of a flash are worth 5 or 10 points, respectively.</li><li>If a player rolls something other than numbers (5 or 10), flashes, or a Freight Train, he is said to have wimped out, and loses his turn. He does not gain any points for that turn.</li><li>If a player rolls anything that will earn him points during a turn (a 5 or 10 on one or more dice, or a flash, or a freight train), he may set aside those dice and re-roll the remaining dice to accumulate more points. He may continue to re-roll and accumulate points until he either wimps out (losing all points for the turn) or chooses to stop voluntarily.</li><li>A player officially enters the game when he gets 35 or more points on his first roll. Until a player enters the game, he does not accumulate any points from rolling the dice. Your program should announce when each player enters the game.<br>You May Not Want To But You Must: If a player scores with all five dice, he must continue his turn and roll all five dice again. He continues to accumulate points until he either wimps out or scores with four or fewer dice.</li><li>The Futtless Rule: All flashes must be cleared. To clear a flash (three of a kind), a player must re-roll all non-scoring dice. If one or more of the re-rolled dice match the dice that make up the flash, the player must repeat the re-roll until none of them match the flash value.</li><li>The current player may voluntarily end his turn whenever he rolls and does not wimp out, except when he has fewer than 35 points or is subject to the “You May Not Want To But You Must” rule or the Futtless Rule. When a player ends his turn without wimping out, he adds his accumulated points to his total.<br>12。 Last Licks: When a player reaches the Winning Total, each of the other players receives one last roll, which they must use to attempt to catch up in terms of points.</li></ol><p>Your program should use JavaFX to present an appealing user interface for the game (focus on implementing a text-based version of the game first, then add the GUI at the end).</p><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>A player rolls<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">5 </span><span class="number">10</span> <span class="number">3</span> <span class="number">4</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></p><p>The 5 and 10 are scoring dice, so they are set aside (for a total of 15 points so far). The player chooses to re-roll the remaining three dice, obtaining:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10 </span><span class="number">10</span> <span class="number">4</span></span><br></pre></td></tr></table></figure></p><p>(Note that this does not create a flash, since three 10s were not rolled at the same time)<br>Now the player chooses to stop (he has not wimped out, since he rolled at least one scoring die), and take his 35 points for the turn.<br>Suppose the current player rolls<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">5 </span><span class="number">3</span> <span class="number">5</span> * <span class="number">4</span></span><br></pre></td></tr></table></figure></p><p>This creates a flash worth 50 points (the Flaming Sun counts as the third 5 for the purposes of the flash). This flash must be cleared, so the player re-rolls the 3 and 4, getting:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">5</span></span><br></pre></td></tr></table></figure></p><p>Since the 5 duplicates the flash that was just rolled, both dice must be re-rolled:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10 </span><span class="number">3</span></span><br></pre></td></tr></table></figure></p><p>This clears the flash (since the player didn’t roll a 5 this time), but 3 is a non-scoring value (remember that only 5 and 10 count as scoring values outside of a flash or freight train). As a result, the player has wimped out, and will not earn any points for this turn.</p><h3 id="Grading-Rubric"><a href="#Grading-Rubric" class="headerlink" title="Grading Rubric"></a>Grading Rubric</h3><p>This program is worth a total of 40 points, broken down as follows:</p><ul><li>Game correctly plays one turn by the human player - 10 points</li><li>Game correctly plays one turn by the computer - 10 points</li><li>Game correctly plays to completion - 10 points</li><li>Graphical User Interface - 10 points</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      代写一个和电脑玩的骰子游戏，用JavaFX做界面。游戏叫Cosmic Wimpout，玩法倒是挺新颖的。
+    
+    </summary>
+    
+      <category term="C#" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>C#代写：COMP5348-Video-Store</title>
@@ -172,9 +196,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -270,9 +294,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
@@ -376,9 +400,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -460,28 +484,6 @@
     <summary type="html">
     
       接上一个Part1，这部分是关于Yahtzee这个游戏规则部分以及UI部分的实现。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：COMS227-Yahtzee-Part1</title>
-    <link href="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html"/>
-    <id>https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html</id>
-    <published>2019-04-09T12:52:28.000Z</published>
-    <updated>2019-04-09T12:59:08.194Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this assignment you will implement a number of classes for an implementation of a dice game based on the game Yahtzee. The purposes of this assignment are:</p><ul><li>To use interfaces and inheritance in a realistic way</li><li>To give you a chance to make some design decisions related to inheritance</li><li>To give you more practice using arrays and ArrayLists</li></ul><h3 id="Summary-of-tasks"><a href="#Summary-of-tasks" class="headerlink" title="Summary of tasks"></a>Summary of tasks</h3><p>You will implement the following classes:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">YahtzeeGame</span></span><br><span class="line"><span class="attribute">Hand</span></span><br></pre></td></tr></table></figure></p><p>plus, at a minimum, the following eight classes, all of which directly or indirectly implement the Category interface:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">AllButOneOfAKind</span></span><br><span class="line"><span class="attribute">AllButTwoOfAKind</span></span><br><span class="line"><span class="attribute">AllOfAKind</span></span><br><span class="line"><span class="attribute">Chance</span></span><br><span class="line"><span class="attribute">CountOccurrences</span></span><br><span class="line"><span class="attribute">FullHouse</span></span><br><span class="line"><span class="attribute">LargeStraight</span></span><br><span class="line"><span class="attribute">SmallStraight</span></span><br></pre></td></tr></table></figure></p><p>All of your code goes in package hw3 . In addition to the classes listed above, you will implement whatever additional classes you decide are necessary in order to exploit inheritance to facilitate code reuse. See the discussion of scoring categories below for more information.</p><p>The exact definition of each of the eight category classes listed above can be found by reading the class javadoc.</p><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Yahtzee is normally played with five six-sided dice and a scorecard. One round consists of rolling the dice up to three times, and then filling one of the categories on the scorecard with a score. The score depends on both the criteria for the category and the actual dice values, and the player will normally choose an unfilled category so as to maximize the resulting score.</p><p>In our version of the game, the number of dice, the maximum value on the dice (i.e., the number of faces), the max number of rolls per round, and the types of categories on the scorecard, will all be configurable.</p><p>If you are not at all familiar with the game, don’t worry, it is not too complicated. Take a look at the Wikipedia page for an overview, <a href="https://en.wikipedia.org/wiki/Yahtzee" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Yahtzee</a></p><p>Note that our version of the game does not include several features described on Wikipedia or in the traditional versions of the game. In particular, we do not distinguish the “upper section” and “lower section” categories, there is no bonus for the “upper section”, there is no special bonus for a second Yahtzee, and there are no jokers.</p><p>The two key abstractions in the design are hands and scoring categories.</p><h3 id="Hands"><a href="#Hands" class="headerlink" title="Hands"></a>Hands</h3><p>A hand, represented by the Hand class that you will implement, is a basically a list of integers representing the current states of all the dice (in the traditional game there would be 5 numbers with possible values 1 through 6). However, the dice are partitioned into two lists: available dice and fixed dice. Initially, all dice are available. When the dice are “rolled”, random values in the appropriate range are generated for the available dice only; the fixed values are not modified. If the maximum number of rolls has not yet been reached, the player can choose to “keep” some of the current available dice values, which means they are moved to the fixed list so they won’t be modified by the next roll. Likewise, the player can choose to “free” any of the fixed values, so they will be re-rolled. Note that in this design, an individual die isn’t represented by a special type of object; a die value is just an integer. All methods that return arrays containing dice values must return the values in ascending order.</p><p>After the maximum number of rolls is reached, all dice are automatically moved to the fixed list and the hand can no longer be modified. A new hand must be created for the next round.</p><p>See the javadoc for details. Also note that the client normally obtains a new Hand using the method createNewHand in the YahtzeeGame class, not by calling the constructor directly. (You can see how this works by reading at the doOneTurn() method of the sample UI.)</p><p>Hand example. Suppose we display a dice group as a string by listing first the available dice and then the fixed dice in parentheses. For example, in a game with 5 dice, after the first roll we might see the values such as this:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">6</span> ()</span><br></pre></td></tr></table></figure></p><p>Depending on which scoring categories you need to fill, you might decide to keep 2, 3, and 4 (perhaps in the hope of completing a straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span><span class="number">6</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p><p>On the next roll, the 6 and the other 3 are then replaced by random values, but the 2, 3, and 4 you selected remain fixed. If (for example) you now roll a 2 and a 5, you would have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">5</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p><p>At this point you could choose to keep the 5 (to make a small straight, maybe hoping the next roll will give you a large straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span>(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p><p>In the traditional game, you get a maximum of three rolls; in that case if you (for example) rolled a 4, you’d end up with<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p><p>That is, when you reach the maximum number of rolls, all dice are automatically fixed. Once all dice are fixed, we say the hand is complete. At this point in the game, the player chooses one of the scoring categories and uses the completed hand to fill that category.</p><h3 id="Scoring-categories"><a href="#Scoring-categories" class="headerlink" title="Scoring categories"></a>Scoring categories</h3><p>A scoring category represents one row of the score sheet. A category object stores the actual score for that category along with the hand that was used to fill the category. A given category object also contains the algorithms needed to a) determine whether a given hand satisfies the criteria defined for the category (e.g., is it a straight, or three-of-a-kind, or whatever), and b) determine what the potential score would be for a given hand, if it were used to fill that category.</p><p>There are many different possible categories, each with its own particular algorithms. For example, the traditional game has a three-of-a-kind category: a hand satisfies the category if it contains any three numbers that are the same, and it is scored by summing the values of all the dice. The traditional game also has a “large straight” category: a hand satisfies the category if it has 5 consecutive values, and it always receives a fixed score of 40.</p><p>This is where polymorphism becomes useful. The client using this code (e.g., think of the client as the text-based UI provided in the sample code) does not care about the details of what the categories are or how each category calculates its score. The client just needs to be able to invoke methods on a category to find out whether a given dice group satisfies it, what the score would be, and to inform the category when it has been selected to be filled by a given hand.</p>]]></content>
-    
-    <summary type="html">
-    
-      作业要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。
     
     </summary>
     
