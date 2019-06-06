@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="JAI,JMF,Swing," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题使用Java JAI和JMF库分别实现一个ImageViewer和MediaPlayer">
-<meta name="keywords" content="JAI,JMF,Swing">
+<meta name="description" content="用Java基础类实现一个图书馆的小应用，可以借书、还书、管理书等等，属于很基础但是有一定工程量的程序。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：COMP435 Multimedia Technologies TME1">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html">
+<meta property="og:title" content="Java代写：FIT9131-My-Library">
+<meta property="og:url" content="https://tk1307993.coding.me/FIT9131-My-Library.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题使用Java JAI和JMF库分别实现一个ImageViewer和MediaPlayer">
+<meta property="og:description" content="用Java基础类实现一个图书馆的小应用，可以借书、还书、管理书等等，属于很基础但是有一定工程量的程序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T13:58:42.890Z">
+<meta property="og:updated_time" content="2019-06-06T01:53:27.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：COMP435 Multimedia Technologies TME1">
-<meta name="twitter:description" content="本题使用Java JAI和JMF库分别实现一个ImageViewer和MediaPlayer">
+<meta name="twitter:title" content="Java代写：FIT9131-My-Library">
+<meta name="twitter:description" content="用Java基础类实现一个图书馆的小应用，可以借书、还书、管理书等等，属于很基础但是有一定工程量的程序。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/FIT9131-My-Library.html"/>
 
 
 
 
 
-  <title>Java代写：COMP435 Multimedia Technologies TME1 | 留学生CS编程作业代写</title>
+  <title>Java代写：FIT9131-My-Library | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT9131-My-Library.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：COMP435 Multimedia Technologies TME1</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：FIT9131-My-Library</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-02T21:53:29+08:00">
-                2018-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-06T09:50:50+08:00">
+                2019-06-06
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题使用Java JAI和JMF库分别实现一个ImageViewer和MediaPlayer
+                  用Java基础类实现一个图书馆的小应用，可以借书、还书、管理书等等，属于很基础但是有一定工程量的程序。
               </div>
           
 
@@ -360,34 +360,51 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Using Java Advanced Images (JAI) and Java Multimedia Framework (JMF) as examples, this exercise will familiarize students with API packages. Before you start working on this assignment you should read Unit 1 of the course to get an idea of the two packages, their pros and cons, current issues, and other alternatives.</p>
-<p>This assignment is a programming exercise aimed at developing a simple image viewer and a media player. If you have a working knowledge of Java, the coding should be fairly simple. Do not overdo the exercise. It is not the purpose of the exercise to develop killer multimedia applications. It is hoped that you will enjoy this exercise.</p>
-<p>The assignment assumes a certain programming expertise using Java Swing. If you are not comfortable, Sun has a great tutorial on Swing:<br><a href="http://docs.oracle.com/javase/tutorial/uiswing/" target="_blank" rel="noopener">http://docs.oracle.com/javase/tutorial/uiswing/</a></p>
-<p>This assignment is divided into two parts, and you must deliver two programs:</p>
-<h4 id="Part-1-Write-an-image-viewer-using-JAI"><a href="#Part-1-Write-an-image-viewer-using-JAI" class="headerlink" title="Part 1: Write an image viewer using JAI"></a>Part 1: Write an image viewer using JAI</h4><p>Your JAI image viewer must have the following components and functionalities:</p>
-<ol>
-<li>A menu bar with a File option that opens a file from a file dialog, and an Exit option to quit the application.</li>
-<li>Zoom-in, Zoom-out and Normal buttons. You should enable and disable the buttons whenever appropriate.</li>
-<li>A scrollable pane to view the image.</li>
-<li>The viewer must support JPEG and BMP. You may add other file formats if you wish.</li>
-</ol>
-<h4 id="Part-2-Write-a-media-player-using-JMF"><a href="#Part-2-Write-a-media-player-using-JMF" class="headerlink" title="Part 2: Write a media player using JMF."></a>Part 2: Write a media player using JMF.</h4><p>Your MMF media player should have the following components and functionalities:</p>
-<ol>
-<li>It should play video files in MPEG, AVI and MOV formats, and audio files in MIDI format. Feel free to add other supported formats.</li>
-<li>A menu bar with an Open option to open a media file, a Close option to close the currently opened file, and an Exit option to quit the application.</li>
-<li>A control that consists of the following buttons:<ol>
-<li>Playbutton – plays the current video or audio file.</li>
-<li>Stopbutton – stops the current video or audio file.</li>
-<li>Pausebutton – stop playing the current video or audio file. When the play button is pressed, it continues to play the file from the paused position.</li>
-</ol>
-</li>
-<li>Position bar – display the current position of the media file.</li>
-</ol>
-<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>You are required to submit the following:</p>
-<ol>
-<li>All source codes.</li>
-<li>A setup guide to allow your tutor to set up the necessary environment to run both programs.<br>All files must be zipped into one single file using Winzip. Keep a clean directory structure so that Part 1 and Part 2 are unzipped into separate directories.</li>
-</ol>
+        <h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>For this assignment you are required to write a program, My Library, that simulates a very small library of electronic books. This section specifies the required functionality of this program.</p>
+<p>Even though this program is functionally very different from the program you wrote in Assignment 1, you should be able to re-use much of your previous code here - if you have designed the classes/logic in your previous program properly. This is one of the major benefits of an object-oriented program - the ability to re-use classes.</p>
+<p>My Library should provide the following features:</p>
+<ul>
+<li>maintains a list (using a Java Collection class) of Borrower objects<br>each Borrower object represents a person who is allowed to borrow some books from the library</li>
+<li>maintains a fixed list of exactly 10 books</li>
+<li>each book is implemented using a String, which consists of the book’s title and the author</li>
+<li>each book can be borrowed by different borrowers at the same time</li>
+<li>(HD level) maintains a fixed list of unlimited Book objects</li>
+<li>each Book object represents a single (electronic) book which can be borrowed by different borrowers at the same time</li>
+<li>a book has a rating (children/adult), which limits its availability to a borrower based on his age</li>
+<li>allows each borrower to borrow up to 2 books at any one time</li>
+<li>lists the details of an existing borrower and the books he has currently borrowed</li>
+<li>produces a report of all borrowers</li>
+<li>allows a borrower to borrow/return a book</li>
+<li>loads a list of borrowers from a text file</li>
+<li>a sample data file will be provided to you – your program must be able to read the data from this file</li>
+<li>(HD level) loads a list of books from a text file</li>
+<li>a sample data file will be provided to you – your program must be able to read the data from this file</li>
+<li>saves the list of current borrowers (with the borrowed books) to a text file</li>
+</ul>
+<p>You are to demonstrate the following programming techniques in your program:</p>
+<ul>
+<li>reading/writing data from/to text files</li>
+<li>using appropriate Java Collection class or classes to store data</li>
+<li>using code to manipulate the data in the collection(s)</li>
+<li>performing simple searches, filtered by some given criteria</li>
+<li>using program constructs such as repetitions &amp; selections</li>
+<li>using appropriate classes to represent the various objects in the program</li>
+</ul>
+<p>There will be a description of the “HD level” features later in this document.</p>
+<p>You are also required to produce a partial Test Strategy for your program.</p>
+<h3 id="Program-Logic"><a href="#Program-Logic" class="headerlink" title="Program Logic"></a>Program Logic</h3><p>When the program starts, it should automatically load a text file called “borrowers.txt” which contains details of all borrowers currently stored in the system. The actual format of this text file is described later in this document. The data loaded should be stored in some appropriate data structures. No other reading from (or writing to) file is required while the program is in operation, until the user chooses to exit, at which point the program saves all the in-memory data back to the same text file (borrowers.txt).</p>
+<p>In other words, all the file I/O operations are performed automatically by the program, once at the start and once at the end, and require no interactions with the user.</p>
+<p>When the program is running, it should repeatedly display a menu with at these options (non-HD level), such as:<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the My Library</span><br><span class="line">====================</span><br><span class="line">(1) Register New Borrower</span><br><span class="line">(2) Manage Borrower</span><br><span class="line">(3) List All Borrowers</span><br><span class="line">(4) Display Help</span><br><span class="line">(5) Exit Library</span><br><span class="line">Choose an option:</span><br></pre></td></tr></table></figure></p>
+<h3 id="Program-Design"><a href="#Program-Design" class="headerlink" title="Program Design"></a>Program Design</h3><p>Your program must demonstrate your understanding of the object-oriented concepts and general programming constructs presented in FIT9131. You must use appropriate data structures to store the various objects (list of borrowers, list of books (HD-level), etc) in the program.</p>
+<p>You must be able to justify the choice of the data structures during your interview. You must document any additional assumptions you made.</p>
+<p>Appropriate validations of values for fields and local variables should also be implemented. You should not allow an object of a class to be initialized/set to an invalid state.</p>
+<p>Discuss with your tutor what classes are appropriate, and how they interact with each other. The main requirements are: (1) the borrowers (and for the HD level, the books) must be implemented as objects, and they must be stored in some appropriate Java collections, and (2) the list of books within each borrower object must also be stored in some appropriate Java collections.</p>
+<p>Your program must deal with invalid values entered by the user in a sensible manner. For instance, if a user enters “abc” when a number is expected, your program should not crash.</p>
+<p>All on-screen input/output should be formatted in a user-friendly manner. Sensible error messages should be displayed whenever appropriate (eg. entering a duplicate borrower ID, entering a number outside the allowable valid range, etc).</p>
+<h3 id="Test-Strategy"><a href="#Test-Strategy" class="headerlink" title="Test Strategy"></a>Test Strategy</h3><p>For this assignment, you are required to produce and submit a partial Test Strategy for the program.</p>
+<p>Your Test Strategy will be only for one class - the Borrower class.</p>
+<p>There is no need to produce Test Strategy for any other classes you have used in your program.</p>
+<p>You must provide a Test Plan, plus detailed sets of Test Data, Expected Results and Actual Results for the Borrower class.</p>
 
       
     </div>
@@ -405,11 +422,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JAI/" rel="tag"># JAI</a>
-          
-            <a href="/tags/JMF/" rel="tag"># JMF</a>
-          
-            <a href="/tags/Swing/" rel="tag"># Swing</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -422,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS140-Matrix-VectorMultiplication.html" rel="next" title="C代写：CS140 Matrix-Vector Multiplication">
-                <i class="fa fa-chevron-left"></i> C代写：CS140 Matrix-Vector Multiplication
+              <a href="/CSE2100-Cosmic-Wimpout.html" rel="next" title="JavaFX代写：CSE2100-Cosmic-Wimpout">
+                <i class="fa fa-chevron-left"></i> JavaFX代写：CSE2100-Cosmic-Wimpout
               </a>
             
           </div>
@@ -431,10 +444,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP435-Multimedia-Technologies-TME2.html" rel="prev" title="Java代写：COMP435 Multimedia Technologies TME2">
-                Java代写：COMP435 Multimedia Technologies TME2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +596,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-1-Write-an-image-viewer-using-JAI"><span class="nav-number">1.1.</span> <span class="nav-text">Part 1: Write an image viewer using JAI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-2-Write-a-media-player-using-JMF"><span class="nav-number">1.2.</span> <span class="nav-text">Part 2: Write a media player using JMF.</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables"><span class="nav-number">2.</span> <span class="nav-text">Deliverables</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">1.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Logic"><span class="nav-number">2.</span> <span class="nav-text">Program Logic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Design"><span class="nav-number">3.</span> <span class="nav-text">Program Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-Strategy"><span class="nav-number">4.</span> <span class="nav-text">Test Strategy</span></a></li></ol></div>
             
 
           </div>
