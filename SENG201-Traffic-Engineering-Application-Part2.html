@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：SENG201-Traffic-Engineering-Application-Part2">
+<meta property="og:url" content="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-08T01:22:19.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：SENG201-Traffic-Engineering-Application-Part2">
+<meta name="twitter:description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html"/>
+
+
+
+
+
+  <title>Java代写：SENG201-Traffic-Engineering-Application-Part2 | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：SENG201-Traffic-Engineering-Application-Part2</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-08T09:19:35+08:00">
+                2019-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Some-simplifying-assumptions"><a href="#Some-simplifying-assumptions" class="headerlink" title="Some simplifying assumptions"></a>Some simplifying assumptions</h3><p>We will make a few assumptions in order to make the problem simpler.</p>
+<ul>
+<li>All intersections involve one north-south rood meeting an east-west road.</li>
+<li>Signal faces are oriented to the north, 4 south, east or west and are located at the north-west, north-east, south-west or south-east corners of intersections. No overhead signal faces need be considered.</li>
+<li>Semi-actuated intersections need not be considered. If necessary, we can always add a SemiActuatedPhasePlan class later to cope with these.</li>
+<li>Signal faces contain 3 lights: one of each colour and all of the same shape.</li>
+<li>For “round” signal faces, green lights are always followed by yellow lights which are followed in turn by red lights in each cycle. We need not consider other sequences — such as those in countries where another yellow interval occurs between red and green.</li>
+<li>Change intervals and all-red intervals are treated as separate phases.</li>
+<li>Only passive detectors are used. These can report, when asked, whether they have seen any vehicles pass over them.</li>
+<li>No phases are optional.</li>
+</ul>
+<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>You should be able to begin the following activities already and you will find them helpful preparation for the next part which will be available soom.</p>
+<ul>
+<li>Make sure you read the description of the way intersections work and that you understand it fully.</li>
+<li>Observe some real intersections in action. You can start this right away. Identify the signal faces, traffic streams and phases.</li>
+<li>For the active phase plan, draw up a table listing the phases and the state of each stream in the phase.</li>
+<li>Note which signal faces are associated with each traffic stream. Remember that signal faces might shared between streams.</li>
+<li>Using Smarties TM, Pebbles TM or other tools, construct a diagram such as that<br>shown in Figure 5 to show the lights displayed in the signal faces in each phase.</li>
+<li>Time some phases. Do you think your intersection is unactuated or fully-actuated?</li>
+<li>Do you think it has more than one phase plan? For example, is there any difference between rush hour and off peak plans?</li>
+</ul>
+<h3 id="Our-toolkit"><a href="#Our-toolkit" class="headerlink" title="Our toolkit"></a>Our toolkit</h3><p>Figure 6 shows a very simple intersection monitor — an instance of IntersectionMonitor. Near the top is a panel showing the intersection’s signal faces, together with their locations and orientations.</p>
+<p>The monitor displays a “row” for each phase — the active phase is highlighted. As well as the phase description, there is some information about each stream and a colour chip showing the state of each stream (remember that signal faces can be shared between streams) in the corresponding phase.</p>
+<p>A transcript provides a log of the activity at the intersection. Each entry has a time stamp (traffic.misc.TimeStamp) and the transcript can be saved in a file for subsequent analysis.</p>
+<p>Given an Intersection, an IntersectionMonitor can display information about its state. The traffic package contains classes (such as TrafficStream which can be used to assemble an intersection.</p>
+<p>Intersections may also be constructed by reading intersection descriptions from a file. Figure 7 shows the description file corresponding to the intersection of Figure 6.</p>
+<ul>
+<li>The file contains a number of tags, such as SignalFaces — valid tags are found in traffic.Tags.</li>
+<li>Lines beginning with // are treated as comments and empty lines are ignored.</li>
+<li>Within a tag body each line contains one or more fields. The fields are separated by tabs (which are shown underlined in Figure 7). Why tabs? The idea is to make it easy to use a Scanner to parse the content of the line. Using commas as separators seems appealing but ultimately the hassle of escaping commas inside field content is frustrating.</li>
+</ul>
+<h3 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h3><p>Now that you have completed the activities, you are ready to start working with intersection data.</p>
+<ul>
+<li>Obtain a copy of the intersection monitor demonstrated in class — from the Learn assessment page where you found this document.</li>
+<li>Run it and familiarise yourself with the way it displays information about elements such as phases, streams and signal faces.</li>
+<li>The File menu contains an item to run a working demo, plus one to read files, such as the one in Firgure 7, in the format described.</li>
+<li>The Intersection menu can be used to start and stop the intersection’s phase plan cycle. The signal faces will change to reflect the current phase.</li>
+<li>Information about the changing states of the intersection appears in the transcript pane. The Transcript menu incldes an item which allows the transcript content to be saved for later analysis.</li>
+<li>Write an intersection file for each intersection you oberved as desribed and check that it is correct by loading and running it.</li>
+</ul>
+<h3 id="Using-the-resources-provided"><a href="#Using-the-resources-provided" class="headerlink" title="Using the resources provided"></a>Using the resources provided</h3><ul>
+<li>You will find the javadoc in the api folder.</li>
+<li>Create an Eclipse project (e.g. myassignment).</li>
+<li>Create a package traffic.diy in the src directory. This is where the code you will write/modify goes.</li>
+<li>Add the Java source files from the skeleton folder to the package you created. These contain the sources for classes MyIntersectionMonitor,ModelIntersection and MyIntersectionLoader.</li>
+<li>In the Project — Properties dialog, add the JAR file traffic-library-1.2.jar to the build path (using the Add External JARs button).</li>
+<li>You should now be able to run the application (there’s a main method in MyIntersectionMonitor.</li>
+</ul>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>We’ll update you on the exact details of your submission soon.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/SENG201-Traffic-Engineering-Application-Part1.html" rel="next" title="Java代写：SENG201-Traffic-Engineering-Application-Part1">
+                <i class="fa fa-chevron-left"></i> Java代写：SENG201-Traffic-Engineering-Application-Part1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-simplifying-assumptions"><span class="nav-number">1.</span> <span class="nav-text">Some simplifying assumptions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">2.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Our-toolkit"><span class="nav-number">3.</span> <span class="nav-text">Our toolkit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Next-steps"><span class="nav-number">4.</span> <span class="nav-text">Next steps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-resources-provided"><span class="nav-number">5.</span> <span class="nav-text">Using the resources provided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">6.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
