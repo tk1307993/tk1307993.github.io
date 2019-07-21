@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-07-15T13:20:00.739Z</updated>
+  <updated>2019-07-21T00:53:09.735Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：CT010-Students-Car-Park-Registration-System</title>
+    <link href="https://tk1307993.coding.me/CT010-Students-Car-Park-Registration-System.html"/>
+    <id>https://tk1307993.coding.me/CT010-Students-Car-Park-Registration-System.html</id>
+    <published>2019-07-21T13:16:52.000Z</published>
+    <updated>2019-07-21T00:53:09.735Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The management of APU has completed the construction of a three story car park where students may park their cars. The car park can accommodate a total of 45 cars, where each level will have 15 parking spaces. In order to facilitate the management of the car park, and enable students to rent parking spaces, a system is needed to handle the registration of students for each available car park for each semester. A student, once registered may park his or her car at the car park for duration of 120 days. The system would be used by the parking administration office to register students who wishes to park at the car park. The users should be able to insert, update, delete, read the following information about the students, parking spaces as well as user details.</p><h3 id="System-Requirement"><a href="#System-Requirement" class="headerlink" title="System Requirement"></a>System Requirement</h3><ol><li><p>The system must require user to enter his or her ID and an assigned password before using the system. Upon login, the system shall display the user’s actual name on the system’s user interface.</p></li><li><p>The system must have the following functionalities:</p><ul><li>New Registration where students who wish to park their car at the car park is registered by the system. Once registered, a parking bay is assigned by the system depending on the availability of parking bays. If all the parking bays are already assigned, then the system shall indicate to the user its status.</li><li>Cancel (Delete) a registration where a student who do not wish to park at the car park anymore. The parking bay occupied then will be released, and the student’s record will be deleted from the system.</li><li>Update a student’s information such as Car Number, Contact Number and E-mail address. Other student’s information such as StudentID, FirstName and LastName should not be available for editing. To facilitate the update process, a Search for the student’s information using the StudentID will be required.</li></ul></li></ol><p>The applications can be developed using structure programming or object-oriented approach. Data may be stored in collections i.e. array of objects or into data files</p><h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>This is a group assignment. Each group should consist of 2 – 3 members only. Upon submission of your assignment, you would be required to present your assignment at a date and time specified by your module lecturer.</p><p>Each team member is required to contribute towards all sections of the assignment, present and explain his or her contribution of the work done. Each team member should also be able to answer questions posed with regards to the project and / or subject matter.</p><h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>You are required to submit:</p><p>A softcopy of the program coded in Python – submitted on a CD. The program should include the following:</p><ul><li>Basic programming concepts such as displaying and reading of inputs, displaying of outputs, declaration of variables and assignment of values, comments – to explain various parts of the program, etc.</li><li>Using selection control structures and iteration structures and arrays</li><li>Object-oriented concepts such as the use of classes / objects / inheritance / constructors</li><li>Documentation of the system, that incorporates basic documentation standards such as header and footer, page numbering and which includes</li><li>Cover page</li><li>Table of contents</li><li>Workload matrix to indicate the contribution of each individual for each required component (shown in %age form) and signed off by each team member</li><li>Design of the program – using use case diagram, use case description, class diagram, IPO (input, process, output) chart, pseudocode or flowcharts – which adheres to the basic requirements listed above</li><li>Test plan</li><li>Sample outputs when the program is executed with some explanation of the outputs / sections of the program<br>References</li><li>The documentation should be comb-bound with the CD attached.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      代写一个停车场的小应用，结合数据库实现增删改查，纯体力作业。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CSE214-Restaurants-Menu</title>
@@ -451,30 +473,6 @@
     
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：FIT2071-TextQuest2</title>
-    <link href="https://tk1307993.coding.me/FIT2071-TextQuest2.html"/>
-    <id>https://tk1307993.coding.me/FIT2071-TextQuest2.html</id>
-    <published>2019-05-04T12:49:37.000Z</published>
-    <updated>2019-05-04T12:52:29.681Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Task-Details"><a href="#Task-Details" class="headerlink" title="Task Details"></a>Task Details</h3><p>The Weeks 4 to 7 laboratory exercises contain a designated “Main Portfolio Exercise”. These are a series of exercises that add to each other to form a main portfolio program: ClassyTextQuest. Note that these build upon the Weeks 2-3 portfolio exercises for Assignment 1. If you did not satisfactorily complete Assignment 1, you may optionally use the sample code for assignment 1 available on Moodle. You are to submit a final, completed version of the game, along with a document detailing your program design (diagrammatically explaining the class structure and textually explaining the operation) and detailing any changes to the specification, including all extra functionality and advanced concepts.</p><p>Successful completion of the exercises as described in the laboratory exercises may obtain you up to a maximum of 80% of the total assignment marks. In order to obtain a higher mark you should seek to include some advanced functionality (as described in the Bonus sections of the portfolio description). The additional functionality should demonstrate advanced or more complex application of principles covered to date. It need not be large amounts of work but should demonstrate a willingness to explore new and advanced concepts. You must detail what you have done in the accompanying document.</p><p>Explicit assessment criteria are provided over the page, however please note you will be assessed on the following broad criteria:</p><ul><li>Meeting functional requirements as described in the exercise description</li><li>Demonstrating a solid understanding of the C++ concepts taught up to and including week 7, including good practice</li><li>Following the unit Programming Style Guide</li><li>Creating solutions that are as efficient and extensible as possible</li></ul><p>NOTE! Your submitted program MUST compile and run. Any submission that do not compile will be awarded zero marks. This means you<br>should continually compile and test your code as you do it, ensuring it compiles at every step of the way.</p><p>If you have any questions or concerns, please contact Tim as soon as possible.</p><h3 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h3><h4 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h4><p>This week we are going to reconsider the design for Assignment 1.</p><p>Start thinking about how you can use object oriented design to achieve a more structured program.</p><p>What could be the different classes in the TextQuest game? What data members and member functions (methods) do these classes need to provide?</p><p>Create a diagram (any drawing software or just pen and paper is fine). You will eventually need to submit your design together with your working code as part of your documentation.</p><p>Remember we have a character, vocations, events and maybe more depending on what extra functionality you have considered: e.g. enemies, items, etc.</p><h4 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h4><p>Now we are going to consider how some of the new C++ features we have learned can help us better structure our code and add extra features.</p><p>Functions:</p><p>How can you reorganise your code from assignment 1 into clearly defined functions that keep the different “concerns” of the program well separated? For now, create some functions in the global scope of your main C++ file from assignment 1. In coming weeks we will learn how to separate these across different files and achieve better “encapsulation”.</p><p>Arrays:<br>You may have found the gameplay from Assignment 1 became tedious after a while since the events always occurred in precisely the same order. Let’s start to make it more interesting. Change your program to load the events into two arrays (an array of descriptions and another for the health modifiers).</p><p>Last week we had a lab exercise to generate random numbers from 0 to 100. Now you can do the same thing, to generate a random number between 0 and the number of events, in order to randomly select which event comes next.</p><h4 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h4><p>This week we will continue our rewrite of TextQuest with classes. Now that you can write your own custom classes, it is time for you to write three of the classes you will need for your game. These should be based upon your Class Diagrams from last week.</p><h4 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h4><p>This week we are going to create two new classes: Player and Enemy that both inherit from Character.</p><p>Character will have a virtual function called attack. The attack function’s parameter is a list (such as a vector) of potential target characters.</p><p>The Player class’ implementation of the attack function should prompt the user to choose one of the targets. It will then apply damage (a health deduction) to the target based on the relative magic and strength of that target (up to you precisely what formula to use – choose something that seems fair and fun).</p><p>The Enemy’s attack function will also choose a target but do so automatically (i.e. without prompting the user. There are different strategies enemies might use: e.g. always choose the player, do it randomly or based on any logic you like: it could even damage multiple targets!).</p><p>Now, in the main game loop, in addition to the events that are currently being applied, you should add a random chance of a fight occurring (make fight a separate function).</p><p>When a fight occurs, you should populate a vector of Character containing the Player and also one or more randomly generated Enemy. Now a sub-loop should start iterating over the vector giving each Character a chance to attack. That is, you will call the Character’s implementation of the attack member function, passing in the contents of the Character vector. After the attack is complete, remove any dead characters (whose health is &lt;= 0) from the vector. If the Player is dead, the fight and the game ends. If the Player is the only one left, then they win the fight and you can return to the main game loop.</p><p>Bonus: how you generate the enemies is up to you. A simple way would be just to have random stats and a random name (from a list of possibilities). Alternately, you could design sub-classes of Enemy, each with their own interesting variation on the attack function - and randomly choose which ones to construct in each fight.</p><h4 id="Week-7"><a href="#Week-7" class="headerlink" title="Week 7"></a>Week 7</h4><p>This week we will finalise our Classy TextQuest RPG. To this point you have the basic skeleton of the game as well as classes for the major components (e.g. Character, Player, Enemy, Event, Vocation, etc). Now that you know all about pointers and class inheritance you can finish off the classes and the final game play. Also, we talked this week about overloading the operator. Have a think about where you might use this in your code. You also know how to plug memory leaks now, so make sure any objects you create with new are also deleted at the appropriate time.</p>]]></content>
-    
-    <summary type="html">
-    
-      Text Quest游戏的第二次作业，按照要求完成对应的类即可。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
