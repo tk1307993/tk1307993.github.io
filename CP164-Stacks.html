@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Data Structure,Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这是Huffman作业的第四部分，也是最后一部分，同样分为三个小练习。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
+<meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CMPT115-Huffman-Tree-Part4">
-<meta property="og:url" content="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html">
+<meta property="og:title" content="Python代写：CP164-Stacks">
+<meta property="og:url" content="https://tk1307993.coding.me/CP164-Stacks.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这是Huffman作业的第四部分，也是最后一部分，同样分为三个小练习。">
+<meta property="og:description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-05T04:00:19.059Z">
+<meta property="og:updated_time" content="2019-08-02T02:28:52.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CMPT115-Huffman-Tree-Part4">
-<meta name="twitter:description" content="这是Huffman作业的第四部分，也是最后一部分，同样分为三个小练习。">
+<meta name="twitter:title" content="Python代写：CP164-Stacks">
+<meta name="twitter:description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CP164-Stacks.html"/>
 
 
 
 
 
-  <title>C++代写：CMPT115-Huffman-Tree-Part4 | 留学生CS编程作业代写</title>
+  <title>Python代写：CP164-Stacks | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CP164-Stacks.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CMPT115-Huffman-Tree-Part4</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：CP164-Stacks</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T11:55:54+08:00">
-                2019-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T10:25:25+08:00">
+                2019-08-02
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这是Huffman作业的第四部分，也是最后一部分，同样分为三个小练习。
+                  这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。
               </div>
           
 
@@ -360,20 +360,31 @@
       
 
       
-        <h3 id="Exercise-7-Completing-the-Huffman-Codec-ADT"><a href="#Exercise-7-Completing-the-Huffman-Codec-ADT" class="headerlink" title="Exercise 7 Completing the Huffman Codec ADT"></a>Exercise 7 Completing the Huffman Codec ADT</h3><p>To complete the C The other ADT in Huffman.cc is called the Huffman Codec. The word “codec” is a contraction of two words: “COde” and “DECode”. This ADT does the work of coding and decoding using a Huffman tree. The Huffman Codec is a record that stores two records: the Huffman Tree thatwas created in the previous exercise, and a codebook, which was created by analysing the Huffman tree. The codebook has a place to store a C-string for every ASCII character, though most of the codebook will be filled with NULL references; only the characters in the original message will have a code. The function find_codes() builds the codebook using the Huffman Tree.</p>
-<p>In this exercise, you’ll complete the encode() operations for the Huffman Codec. Here’s what it looks like currently:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// encode(hcdc, message)</span></span><br><span class="line"><span class="comment">// encode a message using the Huffman Codec</span></span><br><span class="line"><span class="comment">// Pre: hcdc is a referene to a HuffmanCodec</span></span><br><span class="line"><span class="comment">//      message:: a cstring to encode</span></span><br><span class="line"><span class="comment">// Return a cstring containing the encoded message</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">encode</span><span class="params">(HuffmanCodec *h, <span class="keyword">const</span> <span class="keyword">char</span> message[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Your job is to complete this function.</p>
-<h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>The operation has to encode each character in the given message. The output of this function is a reference to a C-string, so we have to allocate a C-string big enough to fill with the encoded message. Use a large size, just to be sure.</p>
-<p>To encode the message, you have to look at each character in the message, and copy its code from the Codec’s codebook to the encoded C-string. It’s possible to use strcat() for this, but it’s just as easy to write your own loop to copy the code for a character from the codebook to the coded C-string. Remember that you’re looking at the message one character at a time, but you are copying several characters into the coded C-string.</p>
-<p>The encoded C-string is probably twice as long as the original message. That’s because we’re using ‘0’ and ‘1’ in the codebook; a real compression utility would use bits 0 and 1, not characters. That’s okay for us; seeing the code is much easier to debug.</p>
-<h3 id="Exercise-Summary"><a href="#Exercise-Summary" class="headerlink" title="Exercise Summary"></a>Exercise Summary</h3><p>Complete encode() as indicated.</p>
-<p>Build the testADT app, and run it.</p>
-<p>If your code does the right things, tests 45-48 should all report “Passed.”</p>
-<h3 id="Exercise-8-Completing-the-Huffman-Codec-ADT"><a href="#Exercise-8-Completing-the-Huffman-Codec-ADT" class="headerlink" title="Exercise 8 Completing the Huffman Codec ADT"></a>Exercise 8 Completing the Huffman Codec ADT</h3><p>To complete the Huffman Codec, we need an algorithm to decode a coded string. The operation to decode a coded string is called decode(). We’ve given it to you in the file Huffman.cc. It calls a function called decode_char(), whose job it is to step through the Huffman tree, starting at the root, and winding up at a leaf; decode_char() returns the character stored in the Frequency record stored at the leaf. (We cannot use the codebook for decoding! We have to use the Huffman Tree. To decode a character using the Huffman tree requires us to step down from tbhe root to a leaf, which should be fairly short. The complexity of stepping through the tree is O(h) where h is the height of the Huffman Tree. If we used the codebook, we’d have to look at each possible code, and try to figure out if the code we’re looking at is a code in the codebook. This would require at least O(nh) time, where n is the number of characters in the message. So use the tree!</p>
-<p>Here’s what decode_char() looks like currently:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// decode_char(tnode, message, d) &#123;</span></span><br><span class="line"><span class="comment">// decode one character from the message.</span></span><br><span class="line"><span class="comment">// Pre: tnode is a node in a huffman tree</span></span><br><span class="line"><span class="comment">//      message:: cstring, the whole message to decode</span></span><br><span class="line"><span class="comment">//      d:: a reference to an int containing the current</span></span><br><span class="line"><span class="comment">//          index in the message</span></span><br><span class="line"><span class="comment">// Post: d has been increased by the number of 0s and 1s used to</span></span><br><span class="line"><span class="comment">//       encode the character</span></span><br><span class="line"><span class="comment">// Return: the decoded character</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">decode_char</span><span class="params">(TreeNode *t, <span class="keyword">char</span> message[], <span class="keyword">int</span> *d)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag">TODO:</span> complete this function</span></span><br><span class="line">  <span class="keyword">return</span> <span class="string">'.'</span>; <span class="comment">// dot returned for no good reason</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Your job is to complete this function.</p>
+        <h3 id="Using-Versus-Extending-an-ADT"><a href="#Using-Versus-Extending-an-ADT" class="headerlink" title="Using Versus Extending an ADT"></a>Using Versus Extending an ADT</h3><p>Note: In this and future labs we make a distinction between using an ADT and extending an ADT. You must be clear on this distinction:</p>
+<h3 id="Using-an-ADT"><a href="#Using-an-ADT" class="headerlink" title="Using an ADT"></a>Using an ADT</h3><p>When asked to use an ADT write a program that is implementation independent, i.e. the program uses only ADT methods (such as those for a stack) and works for either the array or linked implementation of a data structure. Do not change any code in the ADT implementation files such as stack_array.py.</p>
+<h3 id="Extending-an-ADT"><a href="#Extending-an-ADT" class="headerlink" title="Extending an ADT"></a>Extending an ADT</h3><p>When asked to extend an ADT you are going to add new methods to an ADT, meaning that you are going to add code to one or both of the array or linked implementation of a data structure, such as stack_array.py.</p>
+<h3 id="The-Stack-ADT-Abstract-Data-Type"><a href="#The-Stack-ADT-Abstract-Data-Type" class="headerlink" title="The Stack ADT (Abstract Data Type)"></a>The Stack ADT (Abstract Data Type)</h3><p>A stack is a data structure that follows LIFO (Last In, First Out) rules. Data is added to the top of a stack and removed from the top of a stack. The Stack ADT provides methods for manipulating data in a stack.<br>A reminder of some important points of ADT use are:</p>
+<ul>
+<li>No matter what the underlying implementation of the stack programs should access a stack only through these methods.</li>
+<li>As a corollary to the first point, the stack can be implemented in any number of ways so long as any given implementation follows the ADT function requirements. The implementation must invisible to the program using the Stack ADT.</li>
+<li>A stack may store any type of data, although all the data it stores should be of the same type.</li>
+</ul>
+<p>The following code imports a stack class and the Food class then initializes a stack:<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> stack_array <span class="keyword">import</span> Stack</span><br><span class="line"><span class="keyword">from</span> food <span class="keyword">import</span> Food</span><br><span class="line"></span><br><span class="line">s = Stack()</span><br><span class="line"> ...</span><br></pre></td></tr></table></figure></p>
+<h3 id="Project-References"><a href="#Project-References" class="headerlink" title="Project References"></a>Project References</h3><p>As we work through the term we will be creating a number of different data structures and adding more functionality to the Food library already written. Making sure that each new project has the latest version of a data structure or Food library is difficult to do if we are reduced to copying and pasting our pydev modules into each new project. Fortunately, Eclipse provides a much better mechanism to reference code. Setting up Project References allows you to link one Pydev project to another, and to use the code from one project in another with the import and from … import * statements already shown. Nothing needs to be changed in your source code.</p>
+<p>To make a reference from one project to another in Eclipse, right click on a project name in the Navigator pane. From the resulting pop-up menu click on Properties and then on Project References in the resulting dialog box.</p>
+<p>Click on the check box of all projects that you wish to reference from the current project. In this example the project album is already selected, and the project data_structures will be added as a reference. Once this is done all of the classes in both album and data_structures will be available through import statements.</p>
+<p>A few things to keep in mind when using project references:</p>
+<ul>
+<li>All referenced projects must be open when attempting to run a program.</li>
+<li>Submit all referenced projects as part of your Eclipse archive (.zip) file when submitting exercises or the markers will not be able to run your programs. You may select multiple projects to include in an Eclipse archive file.</li>
+<li>Do not use the same Pydev module names in two different referenced projects or Eclipse will not know which one an import statement is supposed to be referring to.</li>
+<li>Project references go one way only. If the project stacks references the project data_structures, then data_structures should not reference stacks. Circular references are a very bad idea.</li>
+<li>Upon occasion referenced projects may become ‘out of sync’ with the project that references them. To fix this, right-click on the project and choose Refresh to update Eclipse from the file system.</li>
+</ul>
+<h3 id="Array-based-Stacks"><a href="#Array-based-Stacks" class="headerlink" title="Array-based Stacks"></a>Array-based Stacks</h3><p>The file stack_array.py is a text file containing the basic outline of the array-based Stack class. Copy this code into the Pydev module stack_array.py in your login_data_structures project (where login is your Network login). Thus, a student with the Network login barn4520 should name their projects barn4520_Food and barn4520_data_structures.) The Lab Instructor will walk you through this library and discuss its inner workings.</p>
+<h3 id="Tasks"><a href="#Tasks" class="headerlink" title="Tasks"></a>Tasks</h3><p>(If you were unable to complete Lab 1 correctly, you may use these files: food.py, food_utilities.py, and foods.txt as the basis for your lab. These files will not be available until after the labs for the previous week are completed.)</p>
+<p>For the appropriate tasks you may download and use the Food class definition in food.py from Lab 1.</p>
+<p>For all of your data structures (stacks, queues, BSTs, etc.), put your code into libraries in your Pydev project login_data_structures.</p>
 
       
     </div>
@@ -391,6 +402,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
@@ -404,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CMPT115-Huffman-Tree-Part3.html" rel="next" title="C++代写：CMPT115-Huffman-Tree-Part3">
-                <i class="fa fa-chevron-left"></i> C++代写：CMPT115-Huffman-Tree-Part3
+              <a href="/CIS304-Bank-Account-Application.html" rel="next" title="Java代写：CIS304-Bank-Account-Application">
+                <i class="fa fa-chevron-left"></i> Java代写：CIS304-Bank-Account-Application
               </a>
             
           </div>
@@ -413,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CA1-Computer-Animation-and-Visualisation.html" rel="prev" title="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
-                OpenGL代写：CA1-Computer-Animation-and-Visualisation <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-7-Completing-the-Huffman-Codec-ADT"><span class="nav-number">1.</span> <span class="nav-text">Exercise 7 Completing the Huffman Codec ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hints"><span class="nav-number">2.</span> <span class="nav-text">Hints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-Summary"><span class="nav-number">3.</span> <span class="nav-text">Exercise Summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-8-Completing-the-Huffman-Codec-ADT"><span class="nav-number">4.</span> <span class="nav-text">Exercise 8 Completing the Huffman Codec ADT</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-Versus-Extending-an-ADT"><span class="nav-number">1.</span> <span class="nav-text">Using Versus Extending an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-an-ADT"><span class="nav-number">2.</span> <span class="nav-text">Using an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extending-an-ADT"><span class="nav-number">3.</span> <span class="nav-text">Extending an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Stack-ADT-Abstract-Data-Type"><span class="nav-number">4.</span> <span class="nav-text">The Stack ADT (Abstract Data Type)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-References"><span class="nav-number">5.</span> <span class="nav-text">Project References</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-based-Stacks"><span class="nav-number">6.</span> <span class="nav-text">Array-based Stacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks"><span class="nav-number">7.</span> <span class="nav-text">Tasks</span></a></li></ol></div>
             
 
           </div>
