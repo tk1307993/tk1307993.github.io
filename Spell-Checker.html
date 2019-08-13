@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
-<meta name="keywords" content="Game">
+<meta name="description" content="Implementing a Spell Checker">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#代写：INM378-Digital-Signal-Processing">
-<meta property="og:url" content="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html">
+<meta property="og:title" content="Java代写：Spell Checker">
+<meta property="og:url" content="https://tk1307993.coding.me/Spell-Checker.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
+<meta property="og:description" content="Implementing a Spell Checker">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-11T12:24:45.461Z">
+<meta property="og:updated_time" content="2019-08-13T16:06:19.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#代写：INM378-Digital-Signal-Processing">
-<meta name="twitter:description" content="这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。">
+<meta name="twitter:title" content="Java代写：Spell Checker">
+<meta name="twitter:description" content="Implementing a Spell Checker">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/Spell-Checker.html"/>
 
 
 
 
 
-  <title>C#代写：INM378-Digital-Signal-Processing | 留学生CS编程作业代写</title>
+  <title>Java代写：Spell Checker | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/Spell-Checker.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C#代写：INM378-Digital-Signal-Processing</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：Spell Checker</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T20:22:46+08:00">
-                2018-12-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-14T00:04:52+08:00">
+                2019-08-14
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这个作业要求处理游戏中的Digital Signal Processing，即数字信号，特别是对音频信号的处理。信号都是流式信号(stream)，处理的时候需要一帧一帧的进行。
+                  Implementing a Spell Checker
               </div>
           
 
@@ -360,25 +360,36 @@
       
 
       
-        <h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>This coursework has a games stream and a data stream, which have some common and some specific tasks.</p>
-<p>For the common task, implement a filter either in FMOD with C++ or C# (games stream) or in Matlab (data stream).</p>
-<p>For the Data part, choose a dataset and apply prediction and classification using Fourier analysis, filtering and correlation.</p>
-<p>For the Games part, implement the sound and music elements listed below your coursework for INM379 or INM376 with C++ or a new demo built using XNA and C# with the stub provided on Moodle.</p>
-<ol>
-<li>Common: DSP, controllable filter. Program a controllable filter based on a delay line If you do the Games track, implement the filter for real time use with a circular buffer in an FMOD custom DSP. If you do the Data track, implement a filter function offline use with filter modulated by a sine function at 2Hz.</li>
-<li>a. Games: 3D Sound: Place a sound source in a 3D world where it can be moved around using the mouse and/or keyboard. Make sure that the sound in the 3D world is adapted with distance roll-off including filtering, occlusion, and Doppler effect.<br>Implement dynamic filter control for an object of your choice, e.g. for the engine of your car, based on the speed.</li>
-<li>b. Data: Character recognition: Program a character classifier using 2d-correlation to classify digits.<br>Time series prediction: Use Fourier analysis for implementing a time series predictor.</li>
-<li>c. Games 2 (for pairs): 3D Occlusion: Implement a 3D objects in your game/demo, that you register with the FMOD framework to achieve an occlusion effect.<br>Flanger: Implement a Flanger effect (time-varying delay) as an FMOD custom DSP effect, that apply to a sound source in your game.</li>
-<li>d. Theory (for pairs): Frequency domain filtering: Implement the filter from task 1 in the frequency domain. Use the SFFT and compare the results with task 1. Explain what the advantages and disadvantages of processing in the frequency and the time domain are.</li>
-<li>Give a presentation of your program. This serves to communicate your work to your fellow students and the lecturers, to verify that you did write the program yourself, and to give you feedback. If you do not give a presentation, you will receive 0 marks for the whole coursework.</li>
-</ol>
-<p>Report: Write a short report that explains how you solved the tasks, where to find the solutions in your submitted code and any specific points you would like me to pay attention to (no more than 600 words)</p>
-<h3 id="Background-Information-and-Support"><a href="#Background-Information-and-Support" class="headerlink" title="Background Information and Support"></a>Background Information and Support</h3><p>For every step of the coursework, relevant information, examples and data will be provided in the lectures and tutorials.</p>
-<h3 id="Coding-Style"><a href="#Coding-Style" class="headerlink" title="Coding Style"></a>Coding Style</h3><ol>
-<li>Your code must be properly indented.</li>
-<li>Every method in your code must be commented w.r.t. its purpose, its parameters and its return values.</li>
-<li>Comments and style will be marked together with the code.</li>
-</ol>
+        <h1 id="Homework-4-Programming"><a href="#Homework-4-Programming" class="headerlink" title="Homework 4 Programming"></a>Homework 4 Programming</h1><p>Please remember that to submit the assignment you will need to the Education drop down menu and select<br>assignment complete.</p>
+<h2 id="Problem-1-Implementing-a-Spell-Checker-35-points"><a href="#Problem-1-Implementing-a-Spell-Checker-35-points" class="headerlink" title="Problem 1 - Implementing a Spell Checker - 35 points"></a>Problem 1 - Implementing a Spell Checker - 35 points</h2><p>Implement a spell-checker by using a hash table. You will create a class called <code>SpellChecker</code> in the file <code>SpellChecker.java</code> that implements the interface <code>SpellCheckerInterface.java</code>.  The object will try to check for spelling errors in an input file, referencing a provided dictionary file. The <code>SpellChecker</code> object must accept the filename of the dictionary in its constructor. There is a sample dictionary file in the Codio workspace called <code>words.txt</code>.</p>
+<p>The constructor of the object must (itself or by calling other methods) parse the dictionary file, storing the words in a <code>HashSet</code> instance. The <code>SpellChecker</code> object will use this dictionary as a reference when checking for spelling errors in a specified input file. Please note that <strong>every word added to the <code>HashSet</code> instance must be in lower case</strong>. In addition to the constructor, you must implement two methods to complete the functionality of your <code>SpellChecker</code> object.</p>
+<ul>
+<li><code>public List&lt;String&gt; getIncorrectWords(String filename)</code> - This method should return a list of all words in the input file that are incorrectly spelled according to the dictionary file provided to the constructor. The String <code>filename</code> contains the name of the file to be spell-checked.</li>
+</ul>
+<p>We define a word as a sequence of characters with whitespace (one or more spaces and/or tabs) on either side. To check for incorrectly spelled words, you must first read the file and process it into words. Note, however, that your program must <strong>convert the file to lowercase and remove all punctuation</strong> in generating its list of words. This means that the line <code>hey!! it&#39;s nice to see you--how are you?</code> should become <code>hey, its, nice, to, see, youhow, are, you</code>. No other input processing is necessary and there are no exceptions to these rules. Punctuation is defined as any character that is not an upper or lower case alphabet, or a number (0-9). Once you split the line into words by splitting by whitespace, remove all punctuation from every word (and don’t forget to lower case each word as well).</p>
+<p>Your output list must contain the incorrect words that remain after processing input data (e.g. <code>youhow</code> in the above example).</p>
+<ul>
+<li><code>public Set&lt;String&gt; getSuggestions(String word)</code> - This method should return a set of all potential suggestions for the incorrectly spelled word that is provided as input.</li>
+</ul>
+<p>In order to generate a suggestion for a given word, implement the following spell checking techniques, where a character is defined as one of <code>a, b, c, ..., z</code>:</p>
+<ul>
+<li>Add one character - add a character at every point in the string (including at the very beginning and end)</li>
+<li>Remove one character - remove one character at a time from each position in the string</li>
+<li>Swap adjacent characters - swap every pair of adjacent characters in the string</li>
+</ul>
+<p>Your method should return all possible suggestions from each one of the techniques above. Note that the use of a <code>Set</code> object maintains only unique suggestions (i.e. no duplicates).</p>
+<p>You may choose to write a tester file, which might print out each incorrectly spelled word in an input file and its suggestions. Any tester you write will, as usual, not be graded. This is an optional step to encourage you to ensure that your code is indeed functional and correct.</p>
+<p>We have provided you a sample test file to spell-check. This file is called <code>test.txt</code>.</p>
+<h2 id="Problem-2-K-Best-Values-30-points"><a href="#Problem-2-K-Best-Values-30-points" class="headerlink" title="Problem 2 - K-Best Values - 30 points"></a>Problem 2 - K-Best Values - 30 points</h2><p>Find the k-best (i.e. largest) values in a set of data. Assume you are given a sequence of values, one value at a time. We do not know how many elements there are in this sequence. In fact, there could be infinitely many. Implement the class<br><code>KBestCounter&lt;T extends Comparable&lt;? super T&gt;&gt; implements KBest&lt;T&gt;</code> that keeps track of the k-largest elements seen so far in a sequence of data. The class should have two methods:</p>
+<ul>
+<li><p><code>public void count(T x)</code> - process the next element in the set of data. This operation must run in at worst <code>O(log k)</code> time.</p>
+</li>
+<li><p><code>public List&lt;T&gt; kbest()</code> - return a sorted (smallest to largest) list of the k-largest elements. This must run in at worst <code>O(k log k)</code> time. The method must not clobber the state of your class. This means that if you run this method twice in a row, it should return the same values.</p>
+</li>
+</ul>
+<p>Your <code>KBestCounter.java</code> class must implement the provided interface <code>KBest.java</code>.</p>
+<p>Use a priority queue to implement this functionality. We suggest using the built-in <code>java.util.PriorityQueue</code>.</p>
+<p>As always, feel free to implement your own tester file to ensure proper functionality.</p>
 
       
     </div>
@@ -396,7 +407,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Game/" rel="tag"># Game</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -409,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CIS2500-Rogue-like-Part2.html" rel="next" title="C代写：CIS2500-Rogue-like-Part2">
-                <i class="fa fa-chevron-left"></i> C代写：CIS2500-Rogue-like-Part2
+              <a href="/CS204-Hashing.html" rel="next" title="Python代写：CS204-Hashing">
+                <i class="fa fa-chevron-left"></i> Python代写：CS204-Hashing
               </a>
             
           </div>
@@ -418,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CMPT120-Mario.html" rel="prev" title="Python代写：CMPT120-Mario">
-                Python代写：CMPT120-Mario <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task"><span class="nav-number">1.</span> <span class="nav-text">Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-Information-and-Support"><span class="nav-number">2.</span> <span class="nav-text">Background Information and Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Style"><span class="nav-number">3.</span> <span class="nav-text">Coding Style</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Homework-4-Programming"><span class="nav-number">1.</span> <span class="nav-text">Homework 4 Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-1-Implementing-a-Spell-Checker-35-points"><span class="nav-number">1.1.</span> <span class="nav-text">Problem 1 - Implementing a Spell Checker - 35 points</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-K-Best-Values-30-points"><span class="nav-number">1.2.</span> <span class="nav-text">Problem 2 - K-Best Values - 30 points</span></a></li></ol></li></ol></div>
             
 
           </div>
