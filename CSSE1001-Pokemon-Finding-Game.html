@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game,MVC," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
+<meta name="keywords" content="Game,MVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：CSSE1001-Pokemon-Finding-Game">
+<meta property="og:url" content="https://tk1307993.coding.me/CSSE1001-Pokemon-Finding-Game.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-17T01:10:27.959Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：CSSE1001-Pokemon-Finding-Game">
+<meta name="twitter:description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSSE1001-Pokemon-Finding-Game.html"/>
+
+
+
+
+
+  <title>Python代写：CSSE1001-Pokemon-Finding-Game | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSSE1001-Pokemon-Finding-Game.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：CSSE1001-Pokemon-Finding-Game</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T09:02:45+08:00">
+                2019-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this assignment, you will be writing code that supports a simple Pokemon finding game. The basic idea of the application is that you explore multiple levels in search for Pokemon, which are then registered in your Dex. Rather than using functions, like assignment 1, you will be using Object-Oriented Programming (OOP). Further, you will be using the Model View Controller (MVC) design pattern. Your task is to write the Model. The View and Controller are provided, along with support code.</p>
+<p>As is typical with projects where more than one person is responsible for writing code, there needs to be a way of describing how the various components interact. This is achieved by defining an Application Programming Interface (API). For this assignment, you must implement your classes according to the API that has been specified, which will ensure that your code will interact properly with the supplied View/Controller code.</p>
+<p>One benefit to adhering to MVC is that the model can be developed and tested independently of the view or controller. It is recommended that you follow this approach. This means testing your model iteratively as you develop your code.</p>
+<h3 id="Assignment-Tasks"><a href="#Assignment-Tasks" class="headerlink" title="Assignment Tasks"></a>Assignment Tasks</h3><h4 id="Download-files"><a href="#Download-files" class="headerlink" title="Download files"></a>Download files</h4><p>The first task is to download a2.py and a2_files.zip. The file a2.py is for your assignment. Do not modify the assignment file outside the area provided for you to write your code.</p>
+<h4 id="Important-Definitions"><a href="#Important-Definitions" class="headerlink" title="Important Definitions"></a>Important Definitions</h4><p>While Pokemon is an irregular plural (meaning that its plural takes the same form as its singular, like sheep and fish), for the purposes of this assignment, multiple Pokemon are referred to as Pokemons for clarity.</p>
+<h4 id="Positions-amp-Coordinates"><a href="#Positions-amp-Coordinates" class="headerlink" title="Positions &amp; Coordinates"></a>Positions &amp; Coordinates</h4><p>A position is represented by a (row, column) pair of numbers.<br>A cell position is a position where the row and column are both integers. It represents the position of where an object in the game could be located.<br>A wall position is a position where either the row or column value is a float ending in .5 and the other is an integer. The .5 represents that the wall is located at a boundary betweeen two cell positions for that row or column.</p>
+<h4 id="Expecting-Registering-amp-Catching"><a href="#Expecting-Registering-amp-Catching" class="headerlink" title="Expecting, Registering, &amp; Catching"></a>Expecting, Registering, &amp; Catching</h4><p>Catching a Pokemon refers to the player adding it to their collection. Whilst moving around the game world, the player catches a Pokemon by moving onto a cell in which that Pokemon exists. When a Pokemon is caught, it is removed from the game world.<br>A Pokedex, henceforth abbreviated as Dex, maintains a registry of Pokemon that the player is expected to catch. A Pokemon is registered in a Dex when the player catches that Pokemon. Registering a Pokemon that has already been registered has no effect.</p>
+<h4 id="Game-Data"><a href="#Game-Data" class="headerlink" title="Game Data"></a>Game Data</h4><p>Game data can be loaded using either load\game_file(file) or load_game_url(url) from the support file. These functions will raise errors if the file/url do not exist or provide invalid JSON, as specified in their docstring comments. Game data consists of the following structure, comments added for clarity:<br><figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  levels: [               # <span class="type">List</span> <span class="keyword">of</span> levels <span class="keyword">in</span> game</span><br><span class="line">    &#123;</span><br><span class="line">      terrain: str,       # <span class="type">Name</span> <span class="keyword">of</span> the terrain <span class="keyword">type</span></span><br><span class="line">      rows: <span class="built_in">int</span>,          # <span class="type">Number</span> <span class="keyword">of</span> rows</span><br><span class="line">      columns: <span class="built_in">int</span>,       # <span class="type">Number</span> <span class="keyword">of</span> columns</span><br><span class="line">      player: (<span class="built_in">int</span>, <span class="built_in">int</span>), # <span class="type">Player's</span> starting position</span><br><span class="line">      pokemons: [         # <span class="type">List</span> <span class="keyword">of</span> pokemon existing <span class="keyword">in</span> level</span><br><span class="line">        &#123;name: str, position: (<span class="built_in">int</span>, <span class="built_in">int</span>)&#125;,</span><br><span class="line">        ...</span><br><span class="line">      ],</span><br><span class="line">      walls: [            # <span class="type">List</span> <span class="keyword">of</span> walls existing <span class="keyword">in</span> level</span><br><span class="line">        (<span class="built_in">int</span>, <span class="built_in">int</span>),</span><br><span class="line">        ...</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>For example, game data is a dictionary, containing the string “levels” as a key, whose value is a list of level data. Further, level data is a dictionary with multiple keys. The string “terrain” is one key that has a value that is a string indicating the name of the terrain. The string “walls” is another key that has a value that is a list of pairs of integers, each representing the location of a wall in the level.</p>
+<h4 id="Write-the-code"><a href="#Write-the-code" class="headerlink" title="Write the code"></a>Write the code</h4><p>There are several classes you need to write and these are described below. It is highly recommended that you review the support file, a2_support.py, before writing your code, as this contains many useful constants and functions. Do not use global variables in your code.</p>
+<h4 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h4><p>Each class and method that you write must have a suitable docstring comment, as specified in the course notes.</p>
+<h3 id="The-GameObject-Class"><a href="#The-GameObject-Class" class="headerlink" title="The GameObject Class"></a>The GameObject Class</h3><p>GameObject is the superclass for objects that exist in the game grid. Instances of GameObject are to be constructed with GameObject(name, position), where name is a string representing the name of the object and position is a grid position. Further, the following methods are to be implemented:</p>
+<ul>
+<li>set_position(self, position) Sets the position to position, which either is a cell position or None.</li>
+<li>get_position(self) Returns the current position of the instance.</li>
+<li>set_name(self, name) Sets the name to name.</li>
+<li>get_name(self) Returns the name of the instance.</li>
+<li><strong>str</strong>(self) Returns a human readable representation of this instance, according to GAME_OBJECT_FORMAT in the support file.</li>
+</ul>
+<h3 id="The-Pokemon-Class"><a href="#The-Pokemon-Class" class="headerlink" title="The Pokemon Class"></a>The Pokemon Class</h3><p>Pokemon inherits from GameObject and is used for managing the name and position of Pokemon within the game.<br>Instances of Pokemon are to be constructed with Pokemon(name, position, terrain), where name and position are as they are for GameObject, and terrain is a string representing the terrain in which the Pokemon exists.<br>Further, the following methods are to be implemented:</p>
+<ul>
+<li>set_terrain(self, terrain) Sets the terrain to terrain.</li>
+<li>get_terrain(self) Returns the terrain of the instance.</li>
+<li><strong>str</strong>(self) Returns a human readable representation of this instance, according to POKEMON_FORMAT in the support file.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; mew = Pokemon(<span class="string">"Mew"</span>, (<span class="number">20</span>, <span class="number">20</span>), <span class="string">"Mountain"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; str(mew)</span><br><span class="line"><span class="string">'Mew @ (20, 20) from Mountain'</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; mew.get_terrain()</span><br><span class="line"><span class="string">'Mountain'</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; mew.set_terrain(<span class="string">"Grass"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; str(mew)</span><br><span class="line"><span class="string">'Mew @ (20, 20) from Grass'</span></span><br></pre></td></tr></table></figure>
+<h4 id="The-Wall-Class"><a href="#The-Wall-Class" class="headerlink" title="The Wall Class"></a>The Wall Class</h4><p>Wall inherits from GameObject and implements no additional functionality. It is used for representing a wall in the game.</p>
+<h4 id="The-Player-Class"><a href="#The-Player-Class" class="headerlink" title="The Player Class"></a>The Player Class</h4><p>Player inherits from GameObject and is used for representing a player within a grid.<br>Instances are to be constructed with Player(name), where name is as it is for GameObject.<br>A Player must contain the following:</p>
+<ul>
+<li>A Dex to register all the Pokemon that the Player encounters.</li>
+<li>A list of Pokemon that the Player has caught, in the order they were caught.</li>
+</ul>
+<p>The following methods are to be implemented:</p>
+<ul>
+<li>get_pokemons(self) Returns a list of all Pokemon that this Player has caught, in the order they were caught.</li>
+<li>register_pokemon(self, pokemon) Catches the pokemon and adds to the Player’s Dex, where pokemon is a Pokemon, provided it is expected by the Player’s Dex. Otherwise, this method should raise an UnexpectedPokemonError.</li>
+<li><strong>str</strong>(self) Returns a human readable representation of this instance, according to PLAYER_FORMAT in the support file.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; mew = Pokemon(<span class="string">"Mew"</span>, (<span class="number">20</span>, <span class="number">20</span>), <span class="string">"Grass"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; d1 = Pokemon(<span class="string">"Dragonite"</span>, (<span class="number">1</span>, <span class="number">1</span>), <span class="string">"Mountain"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; d2 = Pokemon(<span class="string">"Dragonite"</span>, (<span class="number">1</span>, <span class="number">3</span>), <span class="string">"Mountain"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock = Player(DEFAULT_PLAYER_NAME)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; str(brock)</span><br><span class="line"><span class="string">'Ash @ None has caught 0'</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.set_name(<span class="string">"Brock"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.set_position((<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.register_pokemon(mew)</span><br><span class="line">Traceback (most recent call last)<span class="symbol">:</span></span><br><span class="line">    ... <span class="comment"># truncated for brevity</span></span><br><span class="line">a2_support.<span class="symbol">UnexpectedPokemonError:</span> Mew is <span class="keyword">not</span> expected by this Dex.</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.get_dex().expect_pokemons([<span class="string">'Mew'</span>, <span class="string">'Dratini'</span>, <span class="string">'Dragonair'</span>, <span class="string">'Dragonite'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.register_pokemon(mew)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.register_pokemon(d1)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.register_pokemon(d2)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; str(brock)</span><br><span class="line"><span class="string">'Brock @ (1, 1) has caught 3'</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; for pokemon in brock.get_pokemons(): print(pokemon)</span><br><span class="line">Mew @ (<span class="number">20</span>, <span class="number">20</span>) from Grass</span><br><span class="line">Dragonite @ (<span class="number">1</span>, <span class="number">1</span>) from Mountain</span><br><span class="line">Dragonite @ (<span class="number">1</span>, <span class="number">3</span>) from Mountain</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; print(brock.get_dex())</span><br><span class="line"><span class="number">2</span> <span class="symbol">Registered:</span> Dragonite, Mew</span><br><span class="line"><span class="number">2</span> <span class="symbol">Unregistered:</span> Dragonair, Dratini</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; brock.reset_pokemons()</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; str(brock)</span><br><span class="line"><span class="string">'Brock @ (1, 1) has caught 0'</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; print(brock.get_dex())</span><br><span class="line"><span class="number">0</span> <span class="symbol">Registered:</span></span><br><span class="line"><span class="number">0</span> <span class="symbol">Unregistered:</span></span><br></pre></td></tr></table></figure>
+<h4 id="The-Dex-Class"><a href="#The-Dex-Class" class="headerlink" title="The Dex Class"></a>The Dex Class</h4><p>The Dex class manages a registry of Pokemon that have been encountered. For the Dex class, pokemon refers only to the name of a pokemon, and not an instance of the Pokemon class.</p>
+<p>Instances are to be constructed using Dex(pokemon_names), where pokemon_names is a list of poke- mon names to be expected by this Dex. In order for a Dex to be complete, all the Pokemon that are expected must also be registered.</p>
+<p>A Dex must contain a dictionary whose keys are pokemon names that are expected by this Dex, and whose values indicate whether the corresponding pokemon is registered in this Dex (True: registered; False: unregistered).</p>
+<p>Further, the following methods must be defined for the Dex class.</p>
+<h4 id="The-Level-Class"><a href="#The-Level-Class" class="headerlink" title="The Level Class"></a>The Level Class</h4><p>The Level class manages data pertaining to an individual level in the game. A Level is considered complete when its Dex has no unregistered pokemon. N.b. It is possible to complete a level without having caught all pokemon that exist in that level, since there may be duplicate Pokemon.</p>
+<p>Instances are to be constructed with Level(player, data), where player is an instance of Player, and data is a dictionary of a single level’s data. When initialised, a Level should instruct the player’s Dex to expect all the Pokemon that could be encountered in the current level. If a level contains an invalid position (player start, pokemon, wall, etc.), it must raise an InvalidPositionError.</p>
+<h4 id="The-Game-Class"><a href="#The-Game-Class" class="headerlink" title="The Game Class"></a>The Game Class</h4><p>The Game class manages data pertaining to an entire game. Its constructor requires no arguments.</p>
+<ul>
+<li>An instance of the Player class, which will be used when instantiating each Level.</li>
+<li>A list of Levels in the order in which they are loaded. This list will be empty until either the load_file or load_url method is called, but upon loading a game, this list must contain instances of the Level class, one for each level in the game data.</li>
+</ul>
+<h3 id="Assessment-and-Marking-Criteria"><a href="#Assessment-and-Marking-Criteria" class="headerlink" title="Assessment and Marking Criteria"></a>Assessment and Marking Criteria</h3><p>In addition to providing a working solution to the assignment problem, the assessment will involve discussing your code submission with a tutor. This discussion will take place in the practical session you have signed up to in week 10. You must attend that session in order to obtain marks for the assignment.</p>
+<p>In preparation for your discussion with a tutor you may wish to consider:</p>
+<ul>
+<li>any parts of the assignment that you found particularly difficult, and how you overcame them to arrive at a solution;</li>
+<li>whether you considered any alternative ways of implementing a given function;</li>
+<li>where you have known errors in your code, their cause and possible solutions (if known).</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+            <a href="/tags/MVC/" rel="tag"># MVC</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS206-Very-Large-Integer.html" rel="next" title="Java代写：CS206-Very-Large-Integer">
+                <i class="fa fa-chevron-left"></i> Java代写：CS206-Very-Large-Integer
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">144</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Tasks"><span class="nav-number">2.</span> <span class="nav-text">Assignment Tasks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Download-files"><span class="nav-number">2.1.</span> <span class="nav-text">Download files</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Important-Definitions"><span class="nav-number">2.2.</span> <span class="nav-text">Important Definitions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Positions-amp-Coordinates"><span class="nav-number">2.3.</span> <span class="nav-text">Positions &amp; Coordinates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Expecting-Registering-amp-Catching"><span class="nav-number">2.4.</span> <span class="nav-text">Expecting, Registering, &amp; Catching</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Game-Data"><span class="nav-number">2.5.</span> <span class="nav-text">Game Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Write-the-code"><span class="nav-number">2.6.</span> <span class="nav-text">Write the code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Commenting"><span class="nav-number">2.7.</span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-GameObject-Class"><span class="nav-number">3.</span> <span class="nav-text">The GameObject Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Pokemon-Class"><span class="nav-number">4.</span> <span class="nav-text">The Pokemon Class</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Wall-Class"><span class="nav-number">4.1.</span> <span class="nav-text">The Wall Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Player-Class"><span class="nav-number">4.2.</span> <span class="nav-text">The Player Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Dex-Class"><span class="nav-number">4.3.</span> <span class="nav-text">The Dex Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Level-Class"><span class="nav-number">4.4.</span> <span class="nav-text">The Level Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Game-Class"><span class="nav-number">4.5.</span> <span class="nav-text">The Game Class</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assessment-and-Marking-Criteria"><span class="nav-number">5.</span> <span class="nav-text">Assessment and Marking Criteria</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
