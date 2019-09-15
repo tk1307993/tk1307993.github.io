@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals," />
+  <meta name="keywords" content="Algorithm,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C语言基础练习题。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的作业，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
+<meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS50 C Programming Assignment1">
-<meta property="og:url" content="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html">
+<meta property="og:title" content="Java代写：CS4750-Minimax-Tic-Tac-Toe">
+<meta property="og:url" content="https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C语言基础练习题。">
+<meta property="og:description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的作业，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-24T14:48:09.198Z">
+<meta property="og:updated_time" content="2019-09-15T12:27:52.863Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS50 C Programming Assignment1">
-<meta name="twitter:description" content="C语言基础练习题。">
+<meta name="twitter:title" content="Java代写：CS4750-Minimax-Tic-Tac-Toe">
+<meta name="twitter:description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的作业，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html"/>
 
 
 
 
 
-  <title>C代写：CS50 C Programming Assignment1 | 留学生CS编程作业代写</title>
+  <title>Java代写：CS4750-Minimax-Tic-Tac-Toe | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS50 C Programming Assignment1</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：CS4750-Minimax-Tic-Tac-Toe</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T22:26:39+08:00">
-                2018-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T20:25:06+08:00">
+                2019-09-15
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C语言基础练习题。
+                  在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的作业，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。
               </div>
           
 
@@ -360,16 +360,29 @@
       
 
       
-        <h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
-<li>Work on an assignment by yourself without sharing the answer to a classmate. (It is great that students study together but an assignment is an individual task. It is not a group project.)</li>
-<li>Start to do an assignment early and ask the teacher if you have a question.</li>
-<li>Add a comment with your name at the top of your source code</li>
-<li>Put all your files that you want to submit into one zip file</li>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this programming assignment, you are asked to implement programs to play a two-player game similar to tic-tac-toe: two players, X and O, take turns marking the spaces in a 4×4 grid. The player who succeeds in placing 3 of their marks consecutively in a horizontal, vertical, or diagonal row wins the game.<br>You may form a team of up to three people. The team can be different from that for the HW#2. One solution is submitted by each team electronically in Blackboard. You may use any programming language in your implementation.</p>
+<h3 id="Part-I-Beginner"><a href="#Part-I-Beginner" class="headerlink" title="Part I. Beginner"></a>Part I. Beginner</h3><p>Implement a simple player, called Beginner, who places marks sequentially in a blank square in increasing order of row number and then column number, i.e., (1,1), (1,2), (1,3), (1,4), (2,1), (2,2), …, unless it or the opponent wins the game immediately. Its algorithm is as follows:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Beginner-Decision</span> (<span class="title">state</span>) <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> player has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">the</span> position <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">a</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row<span class="comment"> // "Win"</span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> opponent has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">a</span> position next <span class="built_in">to</span> <span class="keyword">the</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row <span class="built_in">to</span> block <span class="keyword">the</span> opponent</span><br><span class="line">  <span class="literal">return</span> marking sequentially <span class="keyword">a</span> blank square <span class="keyword">in</span> increasing order <span class="keyword">of</span> row <span class="built_in">number</span> <span class="keyword">and</span> <span class="keyword">then</span> column <span class="built_in">number</span>.</span><br></pre></td></tr></table></figure></p>
+<p>“open 2-in-a-row” means that there is a blank space at one end of the 2-in-a-row, making it possible to become a 3-in-a-row.</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul>
+<li>a) A brief description of your implementation.</li>
+<li>b) Step-by-step of one game played between you (human) and the player Beginner. Beginner plays first.</li>
+<li>c) Your code with appropriate comments.</li>
 </ul>
-<h6 id="1-Please-save-the-program-with-the-name-‘cal-c’"><a href="#1-Please-save-the-program-with-the-name-‘cal-c’" class="headerlink" title="1. Please save the program with the name ‘cal.c’"></a>1. Please save the program with the name ‘cal.c’</h6><p>Write a program to input two integer values and out their sum and their difference. A sample run off the program follows. The user input is represented in boldface in the sample run. (page. 56, C by Discovery 4th edition, by Foster &amp; Foster)</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Example:</span></span><br><span class="line">Enter an <span class="string">integer:</span> <span class="number">45</span></span><br><span class="line">Enter another <span class="string">integer:</span> <span class="number">83</span></span><br><span class="line"><span class="number">45</span> + <span class="number">83</span> = <span class="number">128</span></span><br><span class="line"><span class="number">45</span> – <span class="number">83</span> = <span class="number">-38</span></span><br></pre></td></tr></table></figure>
-<h6 id="2-Please-save-the-program-with-the-name-‘guess-c’"><a href="#2-Please-save-the-program-with-the-name-‘guess-c’" class="headerlink" title="2. Please save the program with the name ‘guess.c’"></a>2. Please save the program with the name ‘guess.c’</h6><p>Write a C program that plays a number guessing game with the user. A sample run for the game follows. User input is shown in boldface in the sample run. (C by discovery)<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Welcome <span class="built_in">to</span> <span class="keyword">the</span> game <span class="keyword">of</span> Guess It!</span><br><span class="line">I will choose <span class="keyword">a</span> <span class="built_in">number</span> between <span class="number">1</span> <span class="keyword">and</span> <span class="number">200.</span></span><br><span class="line">You will <span class="keyword">try</span> <span class="built_in">to</span> guess that <span class="built_in">number</span>. If you guess wrong, I will tell you <span class="keyword">if</span> you guessed too high <span class="keyword">or</span> too low.</span><br><span class="line">You have <span class="number">5</span> tries <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">the</span> <span class="built_in">number</span>.</span><br><span class="line">OK, I am thinking <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">number</span>. Try <span class="built_in">to</span> guess <span class="keyword">it</span>.</span><br><span class="line">Your guess? <span class="number">50</span></span><br><span class="line">Too high!</span><br><span class="line">Your guess? <span class="number">12</span></span><br><span class="line">Too low!</span><br><span class="line">Your guess? <span class="number">112</span></span><br><span class="line">Too high!</span><br><span class="line">Your guess? <span class="number">250</span></span><br><span class="line">Illegal guess. Your guess must be between <span class="number">1</span> <span class="keyword">and</span> <span class="number">200.</span></span><br><span class="line">Try again. Your guess? <span class="number">30</span></span><br><span class="line">**** CORRECT ****</span><br><span class="line">Want <span class="built_in">to</span> play again? y</span><br><span class="line">Ok, I am thinking <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">number</span>. Try <span class="built_in">to</span> guess <span class="keyword">it</span>.</span><br><span class="line">Your guess? <span class="number">58</span></span><br><span class="line">**** CORRECT ****</span><br><span class="line">Want <span class="built_in">to</span> play again? n</span><br><span class="line">Goodbye, It was fun. Play again soon.</span><br></pre></td></tr></table></figure></p>
-<p>The following code will print out a random generator between 1-100 ten times.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c, n;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Ten random numbers in [1,100]\n"</span>);</span><br><span class="line">    <span class="keyword">for</span> (c = <span class="number">1</span>; c &lt;= <span class="number">10</span>; c++)</span><br><span class="line">    &#123;</span><br><span class="line">    n = rand() % <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Part-II-Advanced"><a href="#Part-II-Advanced" class="headerlink" title="Part II. Advanced"></a>Part II. Advanced</h3><p>Implement a minimax player, called Advanced, who runs the minimax algorithm on a 2-ply game tree, i.e., looking ahead 2 moves (one move by the player and one move by the opponent). The heuristic evaluation function for cutoff nodes is<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h(n) = [# <span class="keyword">of</span> <span class="keyword">open</span> <span class="number">2</span>-<span class="keyword">in</span>-a-row <span class="keyword">for</span> me] - [# <span class="keyword">of</span> <span class="keyword">open</span> <span class="number">2</span>-<span class="keyword">in</span>-a-row <span class="keyword">for</span> opponent].</span><br></pre></td></tr></table></figure></p>
+<p>For example, for player ‘x’, the value of the following state is<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h = (<span class="number">2</span><span class="number">-1</span>) = <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>When h values are the same, the search breaks tie randomly.</p>
+<h3 id="Submission-1"><a href="#Submission-1" class="headerlink" title="Submission"></a>Submission</h3><ul>
+<li>a) A brief description of your algorithm and implementation.</li>
+<li>b) Step-by-step of one game played between Beginner and Advanced. Beginner plays first. For every step played by Advanced, print the # of expanded nodes and the CPU execution time in milliseconds.</li>
+<li>c) Same as (b) except Advanced plays first.</li>
+</ul>
+<h3 id="Part-III-Master"><a href="#Part-III-Master" class="headerlink" title="Part III. Master"></a>Part III. Master</h3><p>Implement a player, called Master, who runs the minimax algorithm on a 4-ply game tree, i.e., looking ahead 4 moves (2 moves by the player and 2 moves by the opponent). The heuristic evaluation function for cutoff nodes is the same as in part II.</p>
+<h3 id="Submission-2"><a href="#Submission-2" class="headerlink" title="Submission"></a>Submission</h3><ul>
+<li>a) Step-by-step of one game played between Advanced and Master. Advanced plays first. For every step played by Advanced and Master, show the # of expanded nodes and the CPU execution time in milliseconds.</li>
+<li>b) Same as (b) except Master plays first.</li>
+<li>c) Your code with appropriate comments.</li>
+</ul>
+<p>Your submission should be a single pdf file with file name containing your name and assignment number. For example, firstnameInitial_lastname_hw4.pdf for HW4.</p>
 
       
     </div>
@@ -387,7 +400,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -400,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS101-BinaryArithmetic.html" rel="next" title="C代写：CS101 Binary Arithmetic">
-                <i class="fa fa-chevron-left"></i> C代写：CS101 Binary Arithmetic
+              <a href="/CS1591-Computational-Thinking.html" rel="next" title="Python代写：CS1591-Computational-Thinking">
+                <i class="fa fa-chevron-left"></i> Python代写：CS1591-Computational-Thinking
               </a>
             
           </div>
@@ -409,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS50-C-Programming-Assignment-5.html" rel="prev" title="C代写：CS50 C Programming Assignment5">
-                C代写：CS50 C Programming Assignment5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">1.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-Please-save-the-program-with-the-name-‘cal-c’"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1. Please save the program with the name ‘cal.c’</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-Please-save-the-program-with-the-name-‘guess-c’"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2. Please save the program with the name ‘guess.c’</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-I-Beginner"><span class="nav-number">2.</span> <span class="nav-text">Part I. Beginner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">3.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-II-Advanced"><span class="nav-number">4.</span> <span class="nav-text">Part II. Advanced</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-1"><span class="nav-number">5.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-III-Master"><span class="nav-number">6.</span> <span class="nav-text">Part III. Master</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-2"><span class="nav-number">7.</span> <span class="nav-text">Submission</span></a></li></ol></div>
             
 
           </div>
