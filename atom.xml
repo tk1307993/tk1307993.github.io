@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-09-18T13:27:18.990Z</updated>
+  <updated>2019-09-21T02:06:59.970Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++代写：CS1510-Data-Structures</title>
+    <link href="https://tk1307993.coding.me/CS1510-Data-Structures.html"/>
+    <id>https://tk1307993.coding.me/CS1510-Data-Structures.html</id>
+    <published>2019-09-21T02:05:38.000Z</published>
+    <updated>2019-09-21T02:06:59.970Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Using C++ Class and pointers, implement Single-Linked List of integers. You are not allowed to use STL. Consider the following for your linked list implementation:</p><ul><li>Update the List class implementations in the lecture slides so that the List does not have any duplicate value.</li><li>Also make the necessary updates to the List class to maintain a sorted list (i.e. the Nodes are in increasing order of data values). In particular, replace all the insert methods, and replace them with insert(int x), which inserts x in the right position so that the List remains sorted.</li><li>Implement DeleteMid() to delete the middle element (when the list contains an odd number of elements) or middle two elements (when the list contains an even number of elements).</li><li>Using recursion, implement Ascend() and Descend() to display the entire list in ascending and descending orders, respectively.</li></ul><h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span>              // Total no of <span class="keyword">input</span> sets</span><br><span class="line"><span class="symbol">5 </span><span class="number">10</span> <span class="number">4</span> <span class="number">4</span>        // <span class="keyword">Input</span> set <span class="number">1</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">5</span> <span class="number">3</span> <span class="number">5</span> <span class="number">9</span> -<span class="number">1</span> <span class="number">7</span>  // <span class="keyword">Input</span> set <span class="number">2</span></span><br><span class="line"><span class="symbol">5 </span><span class="number">4</span> <span class="number">3</span> <span class="number">2</span> -<span class="number">999</span>    // <span class="keyword">Input</span> set <span class="number">3</span></span><br></pre></td></tr></table></figure><h4 id="Sample-Output-for-Input-set-1"><a href="#Sample-Output-for-Input-set-1" class="headerlink" title="Sample Output (for Input set 1)"></a>Sample Output (for Input set 1)</h4><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Sorted <span class="keyword">List</span>: 4 5 10</span><br><span class="line"></span><br><span class="line">After Deleting Middle Element:</span><br><span class="line"><span class="keyword">List</span>: 4 10</span><br><span class="line"></span><br><span class="line"><span class="keyword">Display</span> <span class="keyword">List</span> <span class="keyword">in</span> Ascending <span class="keyword">Order</span>:</span><br><span class="line">4 10</span><br><span class="line"></span><br><span class="line"><span class="keyword">Display</span> <span class="keyword">List</span> <span class="keyword">in</span> Descending <span class="keyword">Order</span>:</span><br><span class="line">10 4</span><br><span class="line"></span><br><span class="line">and <span class="keyword">so</span> <span class="keyword">on</span> <span class="keyword">for</span> other <span class="keyword">sample</span> <span class="keyword">input</span> sets 2 and 3</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      代写数据结构里面的单链表实现，稍微麻烦一点的是，单链表排序需要用递归来实现。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CSCE310-Analytical-Problems</title>
@@ -356,9 +380,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
       <category term="Linux Network" scheme="https://tk1307993.coding.me/tags/Linux-Network/"/>
+    
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
@@ -380,9 +404,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
       <category term="Linux Network" scheme="https://tk1307993.coding.me/tags/Linux-Network/"/>
+    
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
@@ -442,28 +466,6 @@
     <summary type="html">
     
       基础Java作业代写，实现一个类似ArrayList/Vector的ADT，然后实现一个餐馆菜单应用即可。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CSC110-Cellular-Automaton</title>
-    <link href="https://tk1307993.coding.me/CSC110-Cellular-Automaton.html"/>
-    <id>https://tk1307993.coding.me/CSC110-Cellular-Automaton.html</id>
-    <published>2019-07-11T01:19:35.000Z</published>
-    <updated>2019-07-11T11:45:28.967Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Program-Specification"><a href="#Program-Specification" class="headerlink" title="Program Specification"></a>Program Specification</h3><p>In this program you will simulate a simple, one-dimensional cellular automaton. You will implement it using a list, where each element of the list represents 1 cell. Each cell has a state (or value) of dead or alive. You can represent these two states however you’d like (0/1, True/False or any other pairs of data).</p><p>What will this automaton do? It changes. I will refer to a change in the automaton as one step. In one step, all the cells have an opportunity to change (some will, some won’t). Going from left to right in the automaton, the new state of a cell is based on the old state of that current cell and based on the old state of the cells to the left and right.<br>Here are the rules:</p><ul><li>The new state of cell[j] will be alive If the old states of cell[j-1], cell[j], and cell[j+1] were all the same (either all alive or all dead),</li><li>Otherwise, the new state of cell[j] will be dead.</li></ul><p>Consequently, your program has to keep track of old states and new states while the automaton is going through one step. Remember, even though you’ve determined the new state of cell[j], the program still needs to know its old state when it becomes the neighbor of the next cell over.</p><p>What about the edge cells: cell[0] and cell[len(cell) - 1]? If we need to check the cell to the left and right that means using indices that are beyond the boundary of the list! Our solution is for your algorithm to assume that there are neighbors there, and that they are always dead. You should not store these values in the list (in otherwords, don’t make your list length 2 larger than it needs to be). Instead, your algorithm should handle these end cells separately.</p><p>Here is an example with a 6 cell automaton and running 4 steps. I’m going to use D for dead and A for alive so it’s easier to see. This automaton initially has all ALIVE cells:</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AAAAAA <span class="comment"># initial state</span></span><br><span class="line">DAAAAD <span class="comment"># after step 1. Notice that the edge cells changed to dead.</span></span><br><span class="line">DDAADD <span class="comment"># after step 2</span></span><br><span class="line"><span class="keyword">ADDDDA </span><span class="comment"># after step 3. Make sure you understand why the ends became alive.</span></span><br><span class="line">DDAADD <span class="comment"># after step 4</span></span><br></pre></td></tr></table></figure><blockquote><p>REQUIREMENT: The only list method you may use for this assignment is .append() Do not use any other list library methods to solve this problem. Do not turn the list into a string or other data type either. I want you to work with a list object and come up with all the algorithms yourself.</p></blockquote><h3 id="User-Input"><a href="#User-Input" class="headerlink" title="User Input"></a>User Input</h3><p>There are 2 pieces of information that your program needs from the user:</p><ol><li>The name of the file with the starting values of the automaton. You can read more about the file format below.</li><li>The number of steps to run. This must be a positive value.<br>Your program must handle invalid input for both of these: filename for a file that doesn’t exist; a non-positive number as well as an invalid type. If either input is invalid, display a helpful error message and prompt again.</li></ol><h3 id="Display"><a href="#Display" class="headerlink" title="Display"></a>Display</h3><p>For increased readability, if a cell’s state is alive, print the ‘+’ character. If a cell’s state is dead, print the space character, ‘ ‘. Print only these characters; don’t just call the print() function on the list. The program should not display commas or the surrounding list brackets [ ]. Also, do not print any blank lines between the displays. Print nothing else on the lines besides the state of the automaton. Print one complete step per line.</p><p>I recommend you change the font used by IDLE so these 2 characters have the same width:</p><ol><li>Under the Options Menu, choose Configure IDLE (on the MAC,choose Preferences under the IDLE menu)</li><li>Choose a font such as Courier New, Lucida Console, or Lucida Sans Typewriter (fixed-width fonts). This will change the font in both the shell window and the editor window.</li><li>You may also want to select bold so that the display patterns are easy to see.</li></ol><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><p>The text file will contain 4 lines. The first 3 lines will have either the word alive or dead, specifying a pattern. The 4th line is an integer, indicating how many times to repeat this pattern. For example:<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ALIVE</span></span><br><span class="line"><span class="built_in">ALIVE</span></span><br><span class="line"><span class="built_in">ALIVE</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure></p><p>Your program needs to read this data in and use it to intialize the automaton. For example, based on this file, the automaton will have a length of 60 cells.</p><p>You can use this example to create a text file, or create your own pattern.</p><h3 id="Documentation-and-Other-Style-Issues"><a href="#Documentation-and-Other-Style-Issues" class="headerlink" title="Documentation and Other Style Issues"></a>Documentation and Other Style Issues</h3><p>You should follow all of the commenting guidelines covered in the commenting guidelines.</p><h3 id="Written-Report"><a href="#Written-Report" class="headerlink" title="Written Report"></a>Written Report</h3><p>Please type up the answers to the following questions and include as a comment at the bottom of your .py file:</p><ol><li>How did you go about starting this assignment?</li><li>During development, where did you get stuck, if at all, and how did you get unstuck?</li><li>How did you test your program? Does your program meet the homework specification? If not, in what ways does it fall short?</li><li>What did you learn from this assignment? What would you do differently next time?</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      基础作业，练习List的使用方法，完成一个Cellular Automaton的小程序，自动画图。
     
     </summary>
     

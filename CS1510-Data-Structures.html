@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
+<meta name="description" content="代写数据结构里面的单链表实现，稍微麻烦一点的是，单链表排序需要用递归来实现。">
 <meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：ADDS10-Polish-Notation">
-<meta property="og:url" content="https://tk1307993.coding.me/ADDS10-Polish-Notation.html">
+<meta property="og:title" content="C++代写：CS1510-Data-Structures">
+<meta property="og:url" content="https://tk1307993.coding.me/CS1510-Data-Structures.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
+<meta property="og:description" content="代写数据结构里面的单链表实现，稍微麻烦一点的是，单链表排序需要用递归来实现。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-22T13:26:04.545Z">
+<meta property="og:updated_time" content="2019-09-21T02:06:59.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：ADDS10-Polish-Notation">
-<meta name="twitter:description" content="这次需要代写的作业是用树来实现Polish Notation，没什么难度。">
+<meta name="twitter:title" content="C++代写：CS1510-Data-Structures">
+<meta name="twitter:description" content="代写数据结构里面的单链表实现，稍微麻烦一点的是，单链表排序需要用递归来实现。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ADDS10-Polish-Notation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS1510-Data-Structures.html"/>
 
 
 
 
 
-  <title>C++代写：ADDS10-Polish-Notation | 留学生CS编程作业代写</title>
+  <title>C++代写：CS1510-Data-Structures | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ADDS10-Polish-Notation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS1510-Data-Structures.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：ADDS10-Polish-Notation</h2>
+          <h2 class="post-title" itemprop="name headline">C++代写：CS1510-Data-Structures</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-22T21:23:36+08:00">
-                2019-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-21T10:05:38+08:00">
+                2019-09-21
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业是用树来实现Polish Notation，没什么难度。
+                  代写数据结构里面的单链表实现，稍微麻烦一点的是，单链表排序需要用递归来实现。
               </div>
           
 
@@ -360,20 +360,15 @@
       
 
       
-        <h2 id="Prefix-to-infix-based-on-tree-data-structure"><a href="#Prefix-to-infix-based-on-tree-data-structure" class="headerlink" title="Prefix to infix based on tree data structure"></a>Prefix to infix based on tree data structure</h2><h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Create a directory for this assignment inside your SVN file system. Remember to commit your work early and often.</p>
-<h3 id="Important-Notice"><a href="#Important-Notice" class="headerlink" title="Important Notice"></a>Important Notice</h3><p>This assignment will only be marked by the testing script on websubmission (because our tutors’ contracts end before the deadline). There will be six test cases (1 mark each). The total mark is six as usual. You don’t have to write a design, because the testing script won’t be able to understand it anyway. (But feel free to write one for your own benefit.) The testing script doesn’t care about your code style either, so feel free to use variable names like aa, bb, cc, dd (I know some of you love these kinds of names – well, jk, please don’t).</p>
-<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Polish notation, also known as Polish prefix notation or simply prefix notation, is a form of notation for logic, arithmetic, and algebra. Its distinguishing feature is that it places operators to the left of their operands. (Many Lisp family programming languages require prefix notation, including the popular language Clojure.)</p>
-<p>The expression for adding the numbers 1 and 2 is, in prefix notation, written “+ 1 2” rather than “1 + 2”. In more complex expressions, the operators still precede their operands, but the operands may themselves be nontrivial expressions including operators of their own. For instance, the expression that would be written in conventional infix notation as<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">5</span> + <span class="number">6</span>) * <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>can be written in prefix as<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* (+ <span class="number">5</span> <span class="number">6</span>) <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>You only need to care about binary operators: + - * and /</p>
-<p>Also, you only need to care about operands that are from 0 to 9 (single digit).</p>
-<p>For binary operators, prefix representation is unambiguous, and bracketing the prefix expression is un-necessary. As such, the previous expression can be further simplified to<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* + <span class="number">5</span> <span class="number">6</span> <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
-<p>The processing of the product is deferred until its two operands are available (i.e., 5 plus 6, then multiplies the result with 7). As with any notation, the innermost expressions are evaluated first, but in prefix notation this “innermost-ness” is conveyed by order rather than bracketing.</p>
-<p>You are asked to create a class that converts prefix expressions to infix expressions. You are asked to use a tree data structure to achieve this task. (Hint: use a binary tree, use the leaf nodes to store the operands and use the non-leaf nodes to store the operators.)</p>
-<p>Create a main function that takes in one line. The line contains a list of operators and operands separated by spaces. The input doesn’t contain parenthesis. An operator is a character from +, -, *, and /. An operand is an integer from 0 to 9. You are asked to determine whether this line describes a valid prefix expression.</p>
-<p>If so, output its infix form. Otherwise, output “Error”. (Division by zero is considered error.)</p>
-<p>When you output the infix form, the output format should follow two rules</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * - 5 6 7</span><br><span class="line"><span class="keyword">Sample</span> output: (5 - 6) * 7</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * 5</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: * 5 6 7</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: + * - 5 6 7 3</span><br><span class="line"><span class="keyword">Sample</span> output: ((5 - 6) * 7) + 3</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: / + * - 5 6 7 3 9</span><br><span class="line"><span class="keyword">Sample</span> output: (((5 - 6) * 7) + 3) / 9</span><br><span class="line"><span class="keyword">Sample</span> <span class="keyword">input</span>: / + * - 5 6 7 3 0</span><br><span class="line"><span class="keyword">Sample</span> output: <span class="keyword">Error</span></span><br></pre></td></tr></table></figure>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Using C++ Class and pointers, implement Single-Linked List of integers. You are not allowed to use STL. Consider the following for your linked list implementation:</p>
+<ul>
+<li>Update the List class implementations in the lecture slides so that the List does not have any duplicate value.</li>
+<li>Also make the necessary updates to the List class to maintain a sorted list (i.e. the Nodes are in increasing order of data values). In particular, replace all the insert methods, and replace them with insert(int x), which inserts x in the right position so that the List remains sorted.</li>
+<li>Implement DeleteMid() to delete the middle element (when the list contains an odd number of elements) or middle two elements (when the list contains an even number of elements).</li>
+<li>Using recursion, implement Ascend() and Descend() to display the entire list in ascending and descending orders, respectively.</li>
+</ul>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span>              // Total no of <span class="keyword">input</span> sets</span><br><span class="line"><span class="symbol">5 </span><span class="number">10</span> <span class="number">4</span> <span class="number">4</span>        // <span class="keyword">Input</span> set <span class="number">1</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">5</span> <span class="number">3</span> <span class="number">5</span> <span class="number">9</span> -<span class="number">1</span> <span class="number">7</span>  // <span class="keyword">Input</span> set <span class="number">2</span></span><br><span class="line"><span class="symbol">5 </span><span class="number">4</span> <span class="number">3</span> <span class="number">2</span> -<span class="number">999</span>    // <span class="keyword">Input</span> set <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h4 id="Sample-Output-for-Input-set-1"><a href="#Sample-Output-for-Input-set-1" class="headerlink" title="Sample Output (for Input set 1)"></a>Sample Output (for Input set 1)</h4><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Sorted <span class="keyword">List</span>: 4 5 10</span><br><span class="line"></span><br><span class="line">After Deleting Middle Element:</span><br><span class="line"><span class="keyword">List</span>: 4 10</span><br><span class="line"></span><br><span class="line"><span class="keyword">Display</span> <span class="keyword">List</span> <span class="keyword">in</span> Ascending <span class="keyword">Order</span>:</span><br><span class="line">4 10</span><br><span class="line"></span><br><span class="line"><span class="keyword">Display</span> <span class="keyword">List</span> <span class="keyword">in</span> Descending <span class="keyword">Order</span>:</span><br><span class="line">10 4</span><br><span class="line"></span><br><span class="line">and <span class="keyword">so</span> <span class="keyword">on</span> <span class="keyword">for</span> other <span class="keyword">sample</span> <span class="keyword">input</span> sets 2 and 3</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -405,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FIT2071-TextQuest.html" rel="next" title="C++代写：FIT2071-TextQuest">
-                <i class="fa fa-chevron-left"></i> C++代写：FIT2071-TextQuest
+              <a href="/CSCE310-Analytical-Problems.html" rel="next" title="C++代写：CSCE310-Analytical-Problems">
+                <i class="fa fa-chevron-left"></i> C++代写：CSCE310-Analytical-Problems
               </a>
             
           </div>
@@ -414,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS125-Course-Scheduler.html" rel="prev" title="Java代写：CS125-Course-Scheduler">
-                Java代写：CS125-Course-Scheduler <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -570,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prefix-to-infix-based-on-tree-data-structure"><span class="nav-number">1.</span> <span class="nav-text">Prefix to infix based on tree data structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">1.1.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Important-Notice"><span class="nav-number">1.2.</span> <span class="nav-text">Important Notice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Description"><span class="nav-number">1.3.</span> <span class="nav-text">Problem Description</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.1.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-for-Input-set-1"><span class="nav-number">1.2.</span> <span class="nav-text">Sample Output (for Input set 1)</span></a></li></ol></li></ol></div>
             
 
           </div>
