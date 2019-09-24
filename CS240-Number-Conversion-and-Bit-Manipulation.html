@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Network Programming,SQLite," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
-<meta name="keywords" content="Network Programming,SQLite">
+<meta name="description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part3">
-<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html">
+<meta property="og:title" content="CS240-Number-Conversion-and-Bit-Manipulation">
+<meta property="og:url" content="https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
+<meta property="og:description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-27T11:47:51.553Z">
+<meta property="og:updated_time" content="2019-09-24T13:32:48.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part3">
-<meta name="twitter:description" content="这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。">
+<meta name="twitter:title" content="CS240-Number-Conversion-and-Bit-Manipulation">
+<meta name="twitter:description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html"/>
 
 
 
 
 
-  <title>C代写：CSE320-Wolfie-Chat-Part3 | 留学生CS编程作业代写</title>
+  <title>CS240-Number-Conversion-and-Bit-Manipulation | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part3</h2>
+          <h2 class="post-title" itemprop="name headline">CS240-Number-Conversion-and-Bit-Manipulation</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-27T19:44:44+08:00">
-                2019-01-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-24T21:24:14+08:00">
+                2019-09-24
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这是接之前作业的第三部分，这部分主要是实现Client端的编程，接受消息和处理用户输入部分，同样涉及到多路I/O复用(select/poll/epoll)，Socket编程等。
+                  虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。
               </div>
           
 
@@ -360,27 +360,20 @@
       
 
       
-        <h3 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h3><p>The diagram below represents the general control flow of the Client. Study the figure carefully and ask clarification question on piazza.</p>
-<p>The client begins by automatically using the command line args (see usage below) to connect to the server. It then proceeds to the login stage which at this time will be automatic as all that needs to be sent to the server is the client’s username. However, use some planning when implementing this section as you will later add support to ask the user for a password while logging in. Upon a successful login your client proceeds to block on I/O Multiplexing, this means your program is waiting on input from either the server’s socket or stdin.</p>
-<ol>
-<li>When receiving input your program will diverge depending on where the input comes from. In the case of stdin your client will handle the command given and do what is described below for the given command.</li>
-<li>When receiving input from the server socket, your program will handle the protocol as described in the document. One example would be, printing the time logged when the EM IT verb is received from the server.</li>
-</ol>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">/client </span>[-hcv] NAME SERVER_IP SERVER_PORT</span><br><span class="line">-h           Displays this help menu, <span class="keyword">and</span> returns EXIT_SUCCESS.</span><br><span class="line">-c           Requests <span class="keyword">to</span><span class="built_in"> server </span><span class="keyword">to</span> create a new user</span><br><span class="line">-v           Verbose <span class="builtin-name">print</span> all<span class="built_in"> incoming </span><span class="keyword">and</span> outgoing protocol verbs content</span><br><span class="line">NAME         This is the username <span class="keyword">to</span> display when chatting.</span><br><span class="line">SERVER_IP    The ipaddress of the<span class="built_in"> server </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br><span class="line">SERVER_PORT  The<span class="built_in"> port </span><span class="keyword">to</span> connect <span class="keyword">to</span>.</span><br></pre></td></tr></table></figure>
-<p>To make things easier to read, use the ansii escape codes to help color your messages on the client as you did with the server.</p>
-<h3 id="WOLFIE-Protocol"><a href="#WOLFIE-Protocol" class="headerlink" title="WOLFIE Protocol"></a>WOLFIE Protocol</h3><p>Now we will attempt to describe the protocol. This is how the server and client program communicate with each other. It is important that you follow the protocol described exactly. During the grading process we will test your client program with a server we have made and your server with a client we have made. As long as you follow the protocol correctly none of this should matter.</p>
-<p>In the diagrams we use the symbol CR to represent \r and NL to represent \n (The software that creates the diagram parses \n as a newline so we had to change the symbols). You must replace all occurrences of CR NL with the correct values.<br>Example:<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM student <span class="keyword">CR</span> NL <span class="keyword">CR</span> NL</span><br></pre></td></tr></table></figure></p>
-<p>should be translated to<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM student <span class="symbol">\r</span><span class="symbol">\n</span><span class="symbol">\r</span><span class="symbol">\n</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Login-to-the-server"><a href="#Login-to-the-server" class="headerlink" title="Login to the server"></a>Login to the server</h3><p>When the server accepts the client connection request, it will immediately spawn a login thread to handle the login work. The client will initiate the login transaction with the server by sending the WOLFIE verb to the server. The server will respond to the client by replying with EIFLOW (wolfie backwards). Then the server can expect the client to identify itself with the IAM verb. If everything is correct, the server will respond with HI. At this point the client is logged in. You should retain their login time in the data structure you employed to store user information. You can now send a follow up message to the client which alerts them to the message of the day by sending MOTD. The MOTD should print out on the client upon receipt.</p>
+        <h3 id="Step-0-Introduction"><a href="#Step-0-Introduction" class="headerlink" title="Step 0. Introduction"></a>Step 0. Introduction</h3><p>In this lab you will write a number converter, implement memdump to display memory content, introduction to pointers, implement string functions with pointers, and bit operations.</p>
+<h3 id="Step-1-Writing-a-number-converter"><a href="#Step-1-Writing-a-number-converter" class="headerlink" title="Step 1. Writing a number converter"></a>Step 1. Writing a number converter</h3><p>Using convert.c write a program to convert a given number from one base to another. The format is:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert <span class="tag">&lt;<span class="name">basefrom</span>&gt;</span> <span class="tag">&lt;<span class="name">baseto</span>&gt;</span> <span class="tag">&lt;<span class="name">number</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>You now know how to access the arguments on the command line. Assume that basefrom and baseto are integers between 2 and 25 (both inclusive). Since base 16 uses the characters A, B, C, D, E, F to represent decimal numbers 10 through 15, bases 17 through 20 will involve additional characters. For example, base 20 will involve the additional characters G, H, I and J. Use defensive programming to make sure your command line arguments are what you would expect. You may assume that no number (in any base) has more than 32 digits, and all numbers are nonnegative.</p>
+<p>To convert a number, say (123)9, from base 9 to another base such as base 8, simply convert from base 9 to decimal (i.e., base 10), to get the number, i.e.,</p>
 <blockquote>
-<p>The ellipses … represent that there is more communication further down, but just not illustrated in this part of the diagram.</p>
+<p>(1 x 92) + (2 x 91) + (3 x 90) = (102) 10</p>
 </blockquote>
-<h3 id="Failed-login"><a href="#Failed-login" class="headerlink" title="Failed login"></a>Failed login</h3><p>It is possible for a login attempt to fail. If a user logs in using the same name as someone already connected, the server should reject that user. The server will send the ERR verb followed by theand the corresponding.</p>
-<blockquote>
-<p>A list of all error codes can be located at the end of the document.</p>
-</blockquote>
-<h3 id="Logout-client-Initiates"><a href="#Logout-client-Initiates" class="headerlink" title="Logout (client Initiates)"></a>Logout (client Initiates)</h3><p>When the user types /logout into their terminal, it begins the process of disconnecting cleanly. The client will send BYE and then receive a BYE response from the server. Implementing the client so that it waits for confirmation from the server is a polite way of making sure the server has properly removed the user from it’s data structures and is in an acceptable state for the user to then disconnect.</p>
-<h3 id="Shutdown-server-initiates"><a href="#Shutdown-server-initiates" class="headerlink" title="Shutdown (server initiates)"></a>Shutdown (server initiates)</h3><p>Finally if the user were to type /shutdown it would initiate the above protocol to terminate the connection with all connected users. It will send BYE to ALL CONNECTED USERS. It would then clean up any open files and sockets it may have open and then terminate.</p>
+<p>and then convert to base 8 by doing repeated division, just the way you convert from decimal to binary (base 2) - simple, because you understand decimal (base 10) arithmetic. In this case you should get (146)8. The following link may refresh your memory.</p>
+<h3 id="Step-2-Implement-bit-operations"><a href="#Step-2-Implement-bit-operations" class="headerlink" title="Step 2. Implement bit operations."></a>Step 2. Implement bit operations.</h3><p>You will implement the bit operations described in the file lab4-src/bits.c . To test your implementation run testall.</p>
+<p>Notice that the printbits() should prints the 1s and 0s in one line followed by another line with the indices (mod 10) of the bits.</p>
+<h3 id="Step-3-Our-Tests"><a href="#Step-3-Our-Tests" class="headerlink" title="Step 3. Our Tests"></a>Step 3. Our Tests</h3><p>Also, make sure that your program passes our tests. To run the tests, compile your program and type<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./testall</span></span><br></pre></td></tr></table></figure></p>
+<p>or run each individual test as indicated in the output.</p>
+<p>Make sure that all tests pass and testall gives the maximum points.</p>
+<h3 id="Step-4-Turning-In-your-Project"><a href="#Step-4-Turning-In-your-Project" class="headerlink" title="Step 4. Turning In your Project"></a>Step 4. Turning In your Project</h3><p>Follow these instructions to turn in lab4.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd cs240</span><br><span class="line">turnin -c cs240 -v -<span class="selector-tag">p</span> lab4 lab4-src</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -398,9 +391,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
-          
-            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -413,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSE320-Wolfie-Chat-Part2.html" rel="next" title="C代写：CSE320-Wolfie-Chat-Part2">
-                <i class="fa fa-chevron-left"></i> C代写：CSE320-Wolfie-Chat-Part2
+              <a href="/CS1510-Data-Structures.html" rel="next" title="C++代写：CS1510-Data-Structures">
+                <i class="fa fa-chevron-left"></i> C++代写：CS1510-Data-Structures
               </a>
             
           </div>
@@ -422,10 +413,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSE320-Wolfie-Chat-Part4.html" rel="prev" title="C代写：CSE320-Wolfie-Chat-Part4">
-                C代写：CSE320-Wolfie-Chat-Part4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Client"><span class="nav-number">1.</span> <span class="nav-text">Client</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Usage"><span class="nav-number">2.</span> <span class="nav-text">Usage:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WOLFIE-Protocol"><span class="nav-number">3.</span> <span class="nav-text">WOLFIE Protocol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Login-to-the-server"><span class="nav-number">4.</span> <span class="nav-text">Login to the server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Failed-login"><span class="nav-number">5.</span> <span class="nav-text">Failed login</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logout-client-Initiates"><span class="nav-number">6.</span> <span class="nav-text">Logout (client Initiates)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shutdown-server-initiates"><span class="nav-number">7.</span> <span class="nav-text">Shutdown (server initiates)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-0-Introduction"><span class="nav-number">1.</span> <span class="nav-text">Step 0. Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-Writing-a-number-converter"><span class="nav-number">2.</span> <span class="nav-text">Step 1. Writing a number converter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-Implement-bit-operations"><span class="nav-number">3.</span> <span class="nav-text">Step 2. Implement bit operations.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3-Our-Tests"><span class="nav-number">4.</span> <span class="nav-text">Step 3. Our Tests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-4-Turning-In-your-Project"><span class="nav-number">5.</span> <span class="nav-text">Step 4. Turning In your Project</span></a></li></ol></div>
             
 
           </div>
