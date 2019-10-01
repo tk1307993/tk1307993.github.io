@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CS5201-Quaternion.html</loc>
+    <lastmod>2019-10-01T00:52:11.094Z</lastmod>
+    <data>
+        <display>
+        <title>CS5201-Quaternion</title>
+        <pubTime>2019-10-01T00:50:21.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CSC261-AVL-Tree.html</loc>
     <lastmod>2019-09-28T09:09:00.586Z</lastmod>
     <data>
@@ -898,9 +918,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
@@ -924,9 +944,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Security," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
-<meta name="keywords" content="Algorithm,Security">
+<meta name="description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS413 Data Security">
-<meta property="og:url" content="https://tk1307993.coding.me/CS413-DataSecurity.html">
+<meta property="og:title" content="CS5201-Quaternion">
+<meta property="og:url" content="https://tk1307993.coding.me/CS5201-Quaternion.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
+<meta property="og:description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T12:38:34.394Z">
+<meta property="og:updated_time" content="2019-10-01T00:52:11.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS413 Data Security">
-<meta name="twitter:description" content="本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。">
+<meta name="twitter:title" content="CS5201-Quaternion">
+<meta name="twitter:description" content="虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS413-DataSecurity.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS5201-Quaternion.html"/>
 
 
 
 
 
-  <title>Java代写：CS413 Data Security | 留学生CS编程作业代写</title>
+  <title>CS5201-Quaternion | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS413-DataSecurity.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS5201-Quaternion.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS413 Data Security</h2>
+          <h2 class="post-title" itemprop="name headline">CS5201-Quaternion</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T21:18:59+08:00">
-                2018-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-01T08:50:21+08:00">
+                2019-10-01
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解。
+                  虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。
               </div>
           
 
@@ -360,25 +360,18 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>古典密码在密码学中，有着举足轻重的作用。做为Data security领域的基础算法理念，离不开其中的置换和置乱两大算法。</p>
-<p>置换，即保持明文中的字符本身，但对字符的顺序进行重新排列的算法。</p>
-<p>置乱，即将明文中的字符，用其他字符或字符序列进行替换。</p>
-<p>而将经过加密的密文，找到其中的统计规律，并还原出其中的原文，称为密码破解。</p>
-<p>而本次作业就是需要找到统计规律，进行密码破解。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>An encrypted file, cryptfile1.txt, is given. Your task is to decrypt it. </p>
-<p>The file was encrypted using some substitution algorithm. The easiest way to break such encryptions is by an analysis of letter frequency. You can go to the library or the Web and get information on the relative frequency of letters in the English language. A program, LetterCount.java, is also given which would allow you to find this yourself. You would simply have to choose a source text file that is sufficiently long and sufficiently representative of English that the relative frequencies of letters in it is pretty much the same as the relative frequencies given in published sources. The real value of LetterCount.java is that it provides sample code that you code adapt to decryption purposes. </p>
-<p>This encryption is simple enough that in theory you could do it by hand. If you find that your initial attempt by hand is netting nothing, you may want to write a program to help. You should hand in the results of your decryption effort.</p>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要利用给出的Java框架，以及密文文件，写出解密算法，进行破解</p>
-<p>下面是一段密文：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pmefp wunhi igsrh lxjsv xlmwg hyhig</span><br><span class="line">rkfmk zsgep gsvhw hbdth <span class="keyword">swxtv </span><span class="keyword">shmkm</span></span><br><span class="line"><span class="keyword">otckt </span>euiig hgnmo ceess theoh snegs</span><br><span class="line">eepws lmrsw mwgep piheg vewlx lexek</span><br><span class="line">mepmr skmkw sjxlm wfvii heziv ekisr</span><br><span class="line">ehcwu xlias hoofo mkveg sette adrla</span><br><span class="line">xlivi lmrom fivxl lsphw ytsjv vphwq</span><br></pre></td></tr></table></figure></p>
-<p>首先自然是发现这段文字中，每个字母出现的频率是不一样的，首先猜测仅进行了置换。</p>
-<p>任意找一个词频表，试着解析。</p>
-<p>果然出现了apple，cable之类的可见词汇。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
-<li>根据不同的词频，写程序大胆猜测</li>
-<li>必要时需要进行分词，写程序对不同组合进行尝试</li>
-<li>当发现可见字符时，记录所采用的算法</li>
-<li>猜测密钥</li>
-</ol>
+        <h3 id="The-Concept"><a href="#The-Concept" class="headerlink" title="The Concept"></a>The Concept</h3><p>One of our goals this semester is to attain as much abstraction as possible in our data representation. To that end, we are first going to consider the concept of a “wrapper” for a basic? numeric type. The aim is to hide many of the implementation details from the user of the type. A programmer doesn’t need (or want) to know exactly what is happening when two integers or floats or complex numbers are added, multiplied, or disemboweled. They simply want the results of such actions. This assignment will have you “wrap” quaternions:<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">h</span> = a + bi + cj + dk</span><br></pre></td></tr></table></figure></p>
+<p>Now, you may be wondering what in the world is a quaternion. You can learn much (enough) about them by using one of the links on this webpage. It is not this one</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Your abstraction will be implemented with a class, of course. And, of course, your implementation should be transparent. This means that the functionality you build into your class should reflect the expected behavior of your type and that of the C++ primitives (int, float, etc.). So, in addition to the usual functions of a well defined and physiologically appealing class, you will need to overload operators so that operations such as<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 += h2</span><br></pre></td></tr></table></figure></p>
+<p>make sense and indeed work. In addition, you want your quaternions to be able to be based in numeric types of varying kinds. That is, you want the ability to have the a’s, b’s, c’s and d’s be int or float or double or whatever. So, you will template the class.</p>
+<p>Once you have your quaternion class, you will need to demonstrate how well it works. To do this, we want you to concurrently learn a little mathematics and to demonstrate your programming prowess by coding and applying a norm. Ok, so what is a norm? Loosely speaking, a norm is a way of measuring on a set of objects. It is a real-valued function of a set of things. The set of things you will be concerned with here is a set of quaternions. The norm you will implement is the L1 - norm (pr. “el 1 norm”) and is defined to be the sum of the “magnitudes” of the elements in that set. For a quaternion, we will define its magnitude as the square root of the sum of the squares of the component coefficients (a, b, c, d in the above example) of that quaternion. Thus, you must “pass” to your implementation of the norm a set of objects on which to operate. What, then, is the relationship between objects and operations here? This is your problem. You need to think carefully about your design. Use your UML. I passed out in class some sample code and UML to help you get your head around this idea. So you need to think about what class depends on what other class.</p>
+<p>It is possible to implement your norm operation either as a function or as a class. However, we will require that you implement it as a class for this assignment. The concept of representing an operation as a class may be foreign to you. But the method has definite advantages. It boils down to this: define a class with no data (in this case) and one (public) overloaded operator, the function evaluation operator. Using the class object then appears to be the use of a function. I will speak about this in class.</p>
+<p>We want you to use the STL vector class to contain your set of objects (quaternions). Then you will be able to do this and have a vector of quaternion values whose components are ints. Note: be careful to put that extra space between the two &gt; symbols if you are not compiling with c++11.</p>
+<h3 id="Program-Specifications"><a href="#Program-Specifications" class="headerlink" title="Program Specifications"></a>Program Specifications</h3><p>You will include in your submission source code for your templated quaternion class. You will include a default constructor (initializing to 0 + 0i + 0j + 0k) and another constructor taking 4 args to initialize the 4 parts of a quaternion. You will also have a copy constructor and a destructor. You will overload the following operators: (h is the name we’ll use for an arbitrary quaternion)<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+ =, +, -, - =, = =, ! = <span class="keyword">to</span> do <span class="keyword">the</span> obvious</span><br><span class="line">unary - so <span class="keyword">that</span> - h <span class="keyword">is</span> <span class="keyword">the</span> negative <span class="keyword">of</span> h</span><br><span class="line">* <span class="keyword">for</span> multiplying a quaternion <span class="keyword">by</span> a quaternion</span><br><span class="line">/ <span class="keyword">for</span> division <span class="keyword">of</span> quaternions h1 / h2 = h1 * (h2)<span class="number">-1</span></span><br><span class="line">= <span class="keyword">for</span> assignment</span><br><span class="line">[ ] <span class="keyword">to</span> <span class="literal">return</span> <span class="keyword">the</span> nth coefficient <span class="keyword">of</span> <span class="keyword">the</span> quaternion, <span class="keyword">with</span> <span class="number">0</span> <span class="keyword">returning</span> <span class="keyword">the</span> <span class="built_in">real</span> part, <span class="number">1</span> <span class="keyword">the</span> i part, <span class="number">2</span> <span class="keyword">the</span> j part, <span class="keyword">and</span> <span class="number">3</span> <span class="keyword">the</span> k part</span><br><span class="line">stream operators</span><br><span class="line">! <span class="keyword">to</span> <span class="literal">return</span> <span class="keyword">its</span> conjugate</span><br><span class="line">~ <span class="keyword">to</span> <span class="literal">return</span> <span class="keyword">the</span> magnitude</span><br></pre></td></tr></table></figure></p>
+<p>You will also include a function called mag that returns the magnitude.</p>
+<p>You will submit your implementation of the L1 - norm and a driver to test your constructs. The driver will read data values from a file. Here is a data set you may use for testing. It is in the format you are to assume:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">0</span> <span class="number">-1</span> <span class="number">-2</span> <span class="number">-3</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span></span><br><span class="line"><span class="number">-2</span> <span class="number">0</span> <span class="number">0</span> <span class="number">3</span> </span><br><span class="line"><span class="number">1</span> <span class="number">-1</span> <span class="number">-1</span> <span class="number">1</span></span><br><span class="line"><span class="number">8</span> <span class="number">8</span> <span class="number">8</span> <span class="number">8</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">.1</span> <span class="number">.2</span> <span class="number">.1</span> <span class="number">.1</span></span><br><span class="line"><span class="number">2</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>(Note: the first value in this file is the number of quaternions that are to follow. Each quaternion is a set of ordered quadruplets. White space will delimit each value in the file. Have your program read data according to this file format. Your program may be tested on other data sets using this format.) Apply the L1 - norm to the entire set of quaternions and output the result. Also, output the first two quaternions and then output. Include exception handling for division by zero, bad subscripting, and anything else clearly foolish. You will also submit during class a UML model of your code (hand-drawn if you like). Also submit during class the gradesheet. Be sure also to provide a makefile.</p>
+<p>Submit your driver with classes templated on floats. Name your executable “driver”.</p>
 
       
     </div>
@@ -396,9 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Security/" rel="tag"># Security</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -411,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS50-C-Programming-Assignment-6.html" rel="next" title="C代写：CS50 C Programming Assignment6">
-                <i class="fa fa-chevron-left"></i> C代写：CS50 C Programming Assignment6
+              <a href="/CSC261-AVL-Tree.html" rel="next" title="CSC261-AVL-Tree">
+                <i class="fa fa-chevron-left"></i> CSC261-AVL-Tree
               </a>
             
           </div>
@@ -420,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS140-Matrix-VectorMultiplication.html" rel="prev" title="C代写：CS140 Matrix-Vector Multiplication">
-                C代写：CS140 Matrix-Vector Multiplication <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Concept"><span class="nav-number">1.</span> <span class="nav-text">The Concept</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Specifications"><span class="nav-number">3.</span> <span class="nav-text">Program Specifications</span></a></li></ol></div>
             
 
           </div>
