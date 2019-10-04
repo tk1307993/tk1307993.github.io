@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CS110-Higher-Order-Functions.html</loc>
+    <lastmod>2019-10-04T00:59:45.528Z</lastmod>
+    <data>
+        <display>
+        <title>CS110-Higher-Order-Functions</title>
+        <pubTime>2019-10-04T00:57:10.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS5201-Quaternion.html</loc>
     <lastmod>2019-10-01T00:52:11.094Z</lastmod>
     <data>
@@ -918,9 +938,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
@@ -944,9 +964,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          

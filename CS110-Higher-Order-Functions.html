@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="虽然是入门级的Python作业，不过作业竟然要求使用lambda表达式来完成，而且还给了一个超大的数据集来做性能测试。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS110-Higher-Order-Functions">
+<meta property="og:url" content="https://tk1307993.coding.me/CS110-Higher-Order-Functions.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="虽然是入门级的Python作业，不过作业竟然要求使用lambda表达式来完成，而且还给了一个超大的数据集来做性能测试。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-04T00:59:45.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS110-Higher-Order-Functions">
+<meta name="twitter:description" content="虽然是入门级的Python作业，不过作业竟然要求使用lambda表达式来完成，而且还给了一个超大的数据集来做性能测试。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS110-Higher-Order-Functions.html"/>
+
+
+
+
+
+  <title>CS110-Higher-Order-Functions | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS110-Higher-Order-Functions.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS110-Higher-Order-Functions</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-04T08:57:10+08:00">
+                2019-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  虽然是入门级的Python作业，不过作业竟然要求使用lambda表达式来完成，而且还给了一个超大的数据集来做性能测试。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In the problems from the last homework, we did a bit of rudimentary Scrabble scoring. Your ultimate task here is to write a function that takes as input a rack - a list of letters - and returns the highest scoring word that can be made with those letters. This is the key ingredient in a computerized Scrabble game!</p>
+<p>In this problem, you may use recursion as well as the built-in higher-order functions map, filter, and reduce. In fact, if you write a function that needs to process a long list (e.g. a dictionary) with more than a few hundred items in it, you are much better off letting map, filter, or reduce cruise through those lists since they have been optimized to work very fast.</p>
+<p>There will be a few places here where using anonymous functions (lambda) is probably the cleanest and nicest way to do business. Use it when it’s the cleanest way to proceed.</p>
+<p>One of the objectives of this problem is to have you think about designing a more complicated program that involves several functions. You have complete autonomy in deciding what functions to write in order to reach the ultimate goal (see more on the two required functions below). Try to think carefully about which functions you will need and try to implement those functions so that they are as simple and clean as possible. Part of your score on this problem will be based on the elegance of your overall design and individual functions.</p>
+<p>Our solution has fewer than 9 functions, two of which we modified from our solution to Homework 1. The remaining 7 (or so) functions range from one to four lines of code per function. While you are not required to have the same number of functions and you may have a few slightly longer functions, this is intended to indicate that there is not much code that needs to be written here!</p>
+<p>Be sure to have a comment at the top of the file with your name(s), the filename, and the date. Any function that is even a bit complicated should at least have a short comment explaining to the reader how this function works. Also, include a docstring for every function that you write.</p>
+<p>All of your work should go into a single file named scrabble.py. Any tests and their results should go into this file, commented out of course. Make sure your file loads without producing any output. We will test your program by loading this file and testing your functions. Be sure they are properly named.</p>
+<ol>
+<li>Firstly, rewrite your definition of letterScore(letter, scoreList&gt; so it makes use of the built-in function filter.</li>
+<li>Secondly, rewrite your definition of wordScore(word, scoreList) so that it makes use of the built-in map and reduce.</li>
+<li>As an exercise in writing list comprehensions, define the following variables, using expressions made up of list comprehensions:<br>words – all of the words in the list Dictionary.<br>twoLetterWords – all of the words in the list Dictionary having exactly two letters.<br>lengths – a list of only the lengths of all words in Dictionary.</li>
+<li>Now the main problem.<br>A bit later in this problem, we’ll give you a fairly large dictionary of English words to use. For now, we recommend that you use the following tiny dictionary during the course of testing and development. Include this line near the top of your file. Now, it’s a global variable that can be used by any of your functions in that file. Similarly, you should include the scrabble letter score list from Homework 1.</li>
+</ol>
+<p>Don’t try to change the values of these global variables! As we’ll see soon, that can make Python angry. However, there’s no need to change the contents of the Dictionary or the scrabble letter scores during execution of the program.</p>
+<h3 id="The-details"><a href="#The-details" class="headerlink" title="The details"></a>The details</h3><p>Ultimately, there are two functions that we will be testing.</p>
+<p>scoreList(Rack) takes as input a Rack which is a list of lower-case letters and returns a list of all of the words in the global Dictionary that can be made from those letters and the score for each one. Specifically, this function returns a list of lists, each of which contains a string that can be made from the Rack and its Scrabble score. Here are some examples using the tiny Dictionary above:<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; scoreList([<span class="string">"a"</span>, <span class="string">"s"</span>, <span class="string">"m"</span>, <span class="string">"t"</span>, <span class="string">"p"</span>])</span><br><span class="line">[[<span class="string">'a'</span>, <span class="number">1</span>], [<span class="string">'am'</span>, <span class="number">4</span>], [<span class="string">'at'</span>, <span class="number">2</span>], [<span class="string">'spam'</span>, <span class="number">8</span>]]</span><br><span class="line">&gt;&gt;&gt; scoreList([<span class="string">"a"</span>, <span class="string">"s"</span>, <span class="string">"m"</span>, <span class="string">"o"</span>, <span class="string">"f"</span>, <span class="string">"o"</span>])</span><br><span class="line">[[<span class="string">'a'</span>, <span class="number">1</span>], [<span class="string">'am'</span>, <span class="number">4</span>], [<span class="string">'foo'</span>, <span class="number">6</span>]]</span><br></pre></td></tr></table></figure></p>
+<p>The order in which the words are presented is not important.</p>
+<p>bestWord(Rack) takes as input a Rack as above and returns a list with two elements: the highest possible scoring word from that Rack followed by its score. If there are ties, they can be broken arbitrarily. Here is an example, again using the tiny Dictionary above:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; bestWord([<span class="string">"a"</span>, <span class="string">"s"</span>, <span class="string">"m"</span>, <span class="string">"t"</span>, <span class="string">"p"</span>])</span><br><span class="line">[<span class="string">'spam'</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure></p>
+<p>Aside from these two functions, all of the other helper functions are up to you! Some of those helper functions may be functions that you wrote in Homework 1 or slight variants of those functions. However, you might find it useful to use a strategy in which you write a function that determines whether or not a given string can be made from the given Rack list. Then, another function can use that function to determine the list of all strings in the dictionary that can be made from the given Rack. Finally, another function might score those words.</p>
+<p>Remember to use map, reduce, or filter where appropriate - they are powerful and they are optimized to be very fast.</p>
+<p>Test each function carefully with small test inputs before you proceed to write the next function. This will save you a lot of time and aggravation!</p>
+<p>A reminder about in: Imagine that you are writing a function that attempts to determine if a given string S can be made from the letters in the Rack list. You might be tempted to scramble (“permute” to use a technical term) the Rack in every possible way as part of this process, but that is more work than necessary. Instead, you can test if the first symbol in your string, S[0], appears in the rack with the statement:</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> S[<span class="number">0</span>] <span class="keyword">in</span> Rack:</span><br><span class="line">  # <span class="keyword">if</span> <span class="literal">True</span> you will <span class="keyword">end</span> up here</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  # <span class="keyword">if</span> <span class="literal">False</span> you will <span class="keyword">end</span> up here</span><br></pre></td></tr></table></figure>
+<p>That in feature is very handy. Now, recursion will let you do the rest of the work without much effort on your part!<br>Although we don’t expect that you will end up doing huge recursive calls, you should know that Python can get snippy when there are a lot of recursive calls. By default, Python generally complains when there are 1000 or more recursive calls of the same function. To convince Python to be friendlier, you can use the following at the top of your file.</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br></pre></td></tr></table></figure>
+<p>sys.setrecursionlimit(10000)  # Allows up to 10000 recursive calls; the maximum permitted ranges from system to system</p>
+<h3 id="Trying-it-with-a-bigger-dictionary"><a href="#Trying-it-with-a-bigger-dictionary" class="headerlink" title="Trying it with a bigger dictionary"></a>Trying it with a bigger dictionary</h3><p>Finally, if you want to test out a big dictionary (it’s more fun than the little one above), you can download the file. It contains a large list of words (a bit over 4000 words). The list is still called Dictionary. After you have downloaded the file and placed it in the same directory as your Python file, you should do the following at the top of your Python file:</p>
+<figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dict <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+<p>Now, you can refer to Dictionary as a global variable. This is much nicer than cutting-and-pasting that very large list into your Python file. Here are some examples using that Dictionary.</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; scoreList([<span class="string">'w'</span>, <span class="string">'y'</span>, <span class="string">'l'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'o'</span>])</span><br><span class="line">[[<span class="string">'leo'</span>, <span class="number">3</span>], [<span class="string">'low'</span>, <span class="number">6</span>], [<span class="string">'lowly'</span>, <span class="number">11</span>], [<span class="string">'ow'</span>, <span class="number">5</span>], [<span class="string">'owe'</span>, <span class="number">6</span>], [<span class="string">'owl'</span>, <span class="number">6</span>], [<span class="string">'we'</span>, <span class="number">5</span>], [<span class="string">'well'</span>, <span class="number">7</span>], [<span class="string">'woe'</span>, <span class="number">6</span>], [<span class="string">'yell'</span>, <span class="number">7</span>], [<span class="string">'yo'</span>, <span class="number">5</span>]]</span><br></pre></td></tr></table></figure>
+<p>Notice that “yellow” is not in this dictionary. We “cropped” off words of length 6 or more to keep the dictionary from getting too large. Finally, here is an example of bestWord in action:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; bestWord([<span class="string">'w'</span>, <span class="string">'y'</span>, <span class="string">'l'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'o'</span>])</span><br><span class="line">[<span class="string">'lowly'</span>, <span class="number">11</span>]</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; bestWord([<span class="string">"s"</span>, <span class="string">"p"</span>, <span class="string">"a"</span>, <span class="string">"m"</span>, <span class="string">"y"</span>])</span><br><span class="line">[<span class="string">'may'</span>, <span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; bestWord([<span class="string">"s"</span>, <span class="string">"p"</span>, <span class="string">"a"</span>, <span class="string">"m"</span>, <span class="string">"y"</span>, <span class="string">"z"</span>])</span><br><span class="line">[<span class="string">'zap'</span>, <span class="number">14</span>]</span><br></pre></td></tr></table></figure>
+<p>And an even bigger dictionary!</p>
+<p>Want to try this with an even bigger dictionary? We’ve got one! The bad news is that it causes IDLE to crash on some computers. However, if you are running Python without IDLE (e.g. from the Unix shell) then this dictionary should work just fine!</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">from</span> <span class="keyword">bigdict </span><span class="meta">import</span> *</span><br></pre></td></tr></table></figure>
+<p>The dictionary is still called Dictionary and it is available as a global variable. Here is an example of it in use:</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; scoreList([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'v'</span>, <span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'y'</span>, <span class="string">'z'</span>, <span class="string">'z'</span>, <span class="string">'z'</span>])</span><br><span class="line">[[<span class="string">'ab'</span>, <span class="number">4</span>], [<span class="string">'aby'</span>, <span class="number">8</span>], [<span class="string">'ax'</span>, <span class="number">9</span>], [<span class="string">'ay'</span>, <span class="number">5</span>], [<span class="string">'ba'</span>, <span class="number">4</span>], [<span class="string">'bay'</span>, <span class="number">8</span>], [<span class="string">'by</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS5201-Quaternion.html" rel="next" title="CS5201-Quaternion">
+                <i class="fa fa-chevron-left"></i> CS5201-Quaternion
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">156</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-details"><span class="nav-number">2.</span> <span class="nav-text">The details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trying-it-with-a-bigger-dictionary"><span class="nav-number">3.</span> <span class="nav-text">Trying it with a bigger dictionary</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
