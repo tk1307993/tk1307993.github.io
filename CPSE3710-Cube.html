@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals," />
+  <meta name="keywords" content="OpenGL," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本次作业是要实现一个StringList，具体是要求练习掌握Interface的编程方法。程序的主干代码已经给出，按照文档补充缺失的部分即可。">
-<meta name="keywords" content="Fundamentals">
+<meta name="description" content="OpenGL的基础作业，包括四个问答题以及小程序。">
+<meta name="keywords" content="OpenGL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：COMS227-StringList">
-<meta property="og:url" content="https://tk1307993.coding.me/COMS227-StringList.html">
+<meta property="og:title" content="CPSE3710-Cube">
+<meta property="og:url" content="https://tk1307993.coding.me/CPSE3710-Cube.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本次作业是要实现一个StringList，具体是要求练习掌握Interface的编程方法。程序的主干代码已经给出，按照文档补充缺失的部分即可。">
+<meta property="og:description" content="OpenGL的基础作业，包括四个问答题以及小程序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-26T13:03:49.631Z">
+<meta property="og:updated_time" content="2019-10-11T14:09:14.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：COMS227-StringList">
-<meta name="twitter:description" content="本次作业是要实现一个StringList，具体是要求练习掌握Interface的编程方法。程序的主干代码已经给出，按照文档补充缺失的部分即可。">
+<meta name="twitter:title" content="CPSE3710-Cube">
+<meta name="twitter:description" content="OpenGL的基础作业，包括四个问答题以及小程序。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMS227-StringList.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CPSE3710-Cube.html"/>
 
 
 
 
 
-  <title>Java代写：COMS227-StringList | 留学生CS编程作业代写</title>
+  <title>CPSE3710-Cube | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMS227-StringList.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CPSE3710-Cube.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：COMS227-StringList</h2>
+          <h2 class="post-title" itemprop="name headline">CPSE3710-Cube</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T21:01:10+08:00">
-                2019-02-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T22:07:52+08:00">
+                2019-10-11
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本次作业是要实现一个StringList，具体是要求练习掌握Interface的编程方法。程序的主干代码已经给出，按照文档补充缺失的部分即可。
+                  OpenGL的基础作业，包括四个问答题以及小程序。
               </div>
           
 
@@ -360,19 +360,20 @@
       
 
       
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This is a short set of problems using interfaces. You will implement a class called StringList that uses interfaces for performing various kinds of processing on streams of text, as well as some sample classes that implement those interfaces. In all, you’ll implement six classes:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">StringList.java</span><br><span class="line">NonCommentLineSelector.java</span><br><span class="line">CommentRemover.java</span><br><span class="line">LetterCollecter.java</span><br><span class="line">LineNumberer.java</span><br><span class="line">LocCounter.java</span><br></pre></td></tr></table></figure></p>
-<p>Note that the file StringListTest.java, found in the default package, will not compile until you have created stubs for the six required classes.</p>
-<p>None of the code is very complex; the purpose is just to get you thinking about interfaces a bit.</p>
-<p>A StringList (not surprisingly) represents a list of strings. (Most likely, in fact, you’ll use an instance variable of type ArrayListto store the strings themselves.) The interesting part is in the operations map, filter, and reduce. These are based on the four interfaces defined in the package api: Combiner, IntCombiner, Selector, and Transformation. They are all very simple and have only one method each. You can take a look at the javadoc or sample code for more details.<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public StringList map(<span class="name">Transformation</span> <span class="literal">t</span>)</span><br></pre></td></tr></table></figure></p>
-<p>Returns a new StringList obtained by invoking the given Transformation’s apply method to each string in this StringList. The apply method just takes a string and returns a (possibly different) string.<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> StringList filter(<span class="keyword">Selector</span> <span class="keyword">selector</span>)</span><br></pre></td></tr></table></figure></p>
-<p>Returns a new StringList containing only the elements of this StringList for which the Selector’s select method returns true. The select method just takes a string and returns true or false.<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">String</span> reduce(Combiner combiner, <span class="keyword">String</span> initialValue)</span><br></pre></td></tr></table></figure></p>
-<p>Returns a string resulting from a reduction operation using the given Combiner and the given initial value. A Combiner has one method, combine, that takes two strings and returns a string. The idea of a “reduction” is to initialize an accumulator variable with the given initial value, and then to iterate over the list, replacing the accumulator value with the result of combining it with the next item in the list.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reduce</span><span class="params">(IntCombiner combiner, <span class="keyword">int</span> initialValue)</span></span></span><br></pre></td></tr></table></figure></p>
-<p>Returns an integer resulting from a reduction operation using the given IntCombiner and the given initial value. Similar to the reduce operation above, but the accumulated value is an int.</p>
-<p>The meaning of the reduce operation may not be obvious. The next section of this document includes a detailed explanation and examples. You should also look at the example StringListTest.java. found in the default package of the sample code.<br>In addition to the StringList class, you’ll implement some examples of classes that implement the interfaces in the api package so you can try things out. These are:<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NonCommentLineSelector</span> <span class="keyword">implements</span> <span class="title">Selector</span></span></span><br></pre></td></tr></table></figure></p>
-<p>The select method returns true if the given string does not have “//“ as its first nonwhitespace characters.<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CommentRemover</span> <span class="keyword">implements</span> <span class="title">Transformation</span></span></span><br></pre></td></tr></table></figure></p>
-<p>The apply method returns a new string in which any text following “//“ is removed.<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LocCounter</span> <span class="keyword">implements</span> <span class="title">IntCombiner</span></span></span><br></pre></td></tr></table></figure></p>
-<p>Given an integer n and a string, the combine method returns n if the string is a comment line, a blank line, or a line whose only text, other than an end-of-line comment, is a single curly brace; otherwise the method returns n + 1. (Using a LocCounter in the reduce method has the general effect of counting “lines of code” that are actual program statements.)<br><code>`
-public class LetterCollector implements Combiner</code><br>Given two strings first and second, appends onto first all characters in second that don’t already occur in first. (Using a LetterCollector in the reduce method returns a string in which each character occurring in the strings appears exactly once.) Not case sensitive.</p>
+        <h3 id="Written-questions"><a href="#Written-questions" class="headerlink" title="Written questions"></a>Written questions</h3><p>(1) Consider the intersection between two line segments L1 and L2 in 2D, where L1 is defined by two points P1 and P2 while L2 is defined by two points Q1 and Q2.</p>
+<p>Both line segments are represented using parametric form. Suppose that u1 is the parameter for L1 and u2 is the parameter for L2 . In the class, we have discussed some situations for the intersection between the two line segments. List all the possible situations for the intersection and, for each situation, show the range of u1 and u2, respectively.</p>
+<p>(2) Consider the graphics pipeline we have discussed in class. We understand that there are three operations in the pipeline: namely transformation, clipping, and projection, in that order. Assume that each such operation takes T time units. For a graphics application, suppose that it contains four separate vertices. Answer the following questions.</p>
+<p>(a) If we apply sequentially the three operations (in that order) to each vertex and process all the four vertices one after another, calculate how many time units we need to process them. Show your work.</p>
+<p>(b) Suppose that a graphic card implements the pipeline and needs T time units to conduct each operation. If we apply the pipeline in the card to process all the four vertices, calculate how many time units the card needs to process them. Show your work.</p>
+<p>(3) Consider viewing using a rectangle, i.e., only the parts of objects inside the rectangle are visible and consider clipping a line segment using the rectangle. It turns out that we only need to consider the line segment’s endpoints in order to determine whether it is completely visible, is partially clipped, or is completely clipped. Show this is true and draw all possible situations.</p>
+<p>(4) In program hello.c posted on the course website, find the following lines of code and answer the questions.<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glutInitWindowSize (<span class="number">250</span>, <span class="number">250</span>);</span><br><span class="line">glOrtho(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">-1.0</span>, <span class="number">1.0</span>);</span><br><span class="line">glVertex3f (<span class="number">0.25</span>, <span class="number">0.25</span>, <span class="number">0.0</span>); <span class="comment">// V1</span></span><br><span class="line">glVertex3f (<span class="number">0.75</span>, <span class="number">0.25</span>, <span class="number">0.0</span>); <span class="comment">// V2</span></span><br></pre></td></tr></table></figure></p>
+<p>(a) What does function glOrtho do?(b) Calculate the distance between the two points V1 and V2, in the unit of pixels, on the monitor.</p>
+<p>(b) Calculate the distance between the two points V1 and V2, in the unit of pixels, on the monitor.</p>
+<h3 id="Programming-questions"><a href="#Programming-questions" class="headerlink" title="Programming questions"></a>Programming questions</h3><p>Read carefully the program control.c on the course website and try it yourself.</p>
+<p>Also try the corresponding make file.</p>
+<p>First delete all the callback functions for keys and special keys. Your tasks are as follows.<br>(a) Create a cube using glBegin(GL_QUADS) … glEnd() by modifying control.c. (Note that in the original control.c, the program only creates four QUADs and there even exist some gaps among them.) Choose any color you like for each face (QUAD) of your cube.</p>
+<p>(b) Create a callback function myCBKey and install it. This function handles keys a and z, such that pressing a pushes the cube forward (away from you) while pressing z retreats the cube backward (back toward you). Your eye position is fixed.<br>Your program should be called lastname.c, where lastname is your last name. Also create a make file called lastnameMake, such that the marker can compile your program and check it.</p>
+<p>Send lastname.c and lastnameMake to your marker through your e-mail account. The subject of your e-mail should be read: Assignment 1, lastname. The marker’s e-mail address will be announced shortly.</p>
 
       
     </div>
@@ -390,7 +391,7 @@ public class LetterCollector implements Combiner</code><br>Given two strings fir
       
         <div class="post-tags">
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
           
         </div>
       
@@ -403,8 +404,8 @@ public class LetterCollector implements Combiner</code><br>Given two strings fir
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP3080-Memory-Allocation.html" rel="next" title="OS代写：COMP3080-Memory-Allocation">
-                <i class="fa fa-chevron-left"></i> OS代写：COMP3080-Memory-Allocation
+              <a href="/CS812-Safari-Rush-Hour.html" rel="next" title="CS812-Safari-Rush-Hour">
+                <i class="fa fa-chevron-left"></i> CS812-Safari-Rush-Hour
               </a>
             
           </div>
@@ -412,10 +413,6 @@ public class LetterCollector implements Combiner</code><br>Given two strings fir
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/KIT101-Sentence-Cipher.html" rel="prev" title="Java代写：KIT101-Sentence-Cipher">
-                Java代写：KIT101-Sentence-Cipher <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -568,7 +565,7 @@ public class LetterCollector implements Combiner</code><br>Given two strings fir
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Written-questions"><span class="nav-number">1.</span> <span class="nav-text">Written questions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-questions"><span class="nav-number">2.</span> <span class="nav-text">Programming questions</span></a></li></ol></div>
             
 
           </div>

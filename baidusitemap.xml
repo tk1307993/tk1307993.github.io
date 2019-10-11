@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CPSE3710-Cube.html</loc>
+    <lastmod>2019-10-11T14:09:14.393Z</lastmod>
+    <data>
+        <display>
+        <title>CPSE3710-Cube</title>
+        <pubTime>2019-10-11T14:07:52.000Z</pubTime>
+        
+        <tag>OpenGL</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS812-Safari-Rush-Hour.html</loc>
     <lastmod>2019-10-06T08:51:39.730Z</lastmod>
     <data>
@@ -962,9 +982,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
@@ -988,9 +1008,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
