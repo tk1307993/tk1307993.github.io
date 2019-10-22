@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-10-20T04:23:06.692Z</updated>
+  <updated>2019-10-22T14:49:26.324Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS3014-Shell</title>
+    <link href="https://tk1307993.coding.me/CS3014-Shell.html"/>
+    <id>https://tk1307993.coding.me/CS3014-Shell.html</id>
+    <published>2019-10-22T14:47:01.000Z</published>
+    <updated>2019-10-22T14:49:26.324Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This is an individual assignment. However, you are encouraged to help (and seek help from) your peers (except sharing code, of course). This assignment contains the following two parts: 1) observing the OS through the /proc file system; 2) building a shell. Everything you do in this warm-up assignment is at the user-level (outside of the OS kernel). Your code must be compiled for Linux, and our reference machines will be the ones in the CSIL lab(Make sure your code compiles and runs correctly on these machines).</p><h3 id="Building-a-shell"><a href="#Building-a-shell" class="headerlink" title="Building a shell"></a>Building a shell</h3><p>UNIX shells:<br>The OS command interpreter is the program that people interact with in order to launch and control programs. On UNIX systems, the command interpreter is often called shell: a user-level program that gives people a command-line interface to launching, suspending, and killing other programs. sh, ksh, csh, tcsh, bash, … are all examples of UNIX shells. You use a shell like this every time you log into a Linux machine at a CS computer lab and bring up a terminal. It might be useful to look at the manual pages of these shells, for example, type “man csh”.</p><p>The most rudimentary shell is structured as the following loop:</p><ul><li><p>Print out a prompt;</p></li><li><p>Read a line from the user;</p></li><li><p>Parse the line into the program name and an array of parameters;</p></li><li><p>Use the fork() system call to spawn a new child process;</p></li><li><p>The child process then uses the exec() system call (or one of its variants) to launch the specified program;</p></li><li><p>The parent process (the shell) uses the wait() system call (or one of its variants) to wait for the child to terminate;</p></li><li><p>Once the child (the launched program) finishes, the shell repeats the loop by jumping to 1.</p></li></ul><p>Although most commands people type on the shell prompt are the names of other UNIX programs (such as ps or cat), shells also recognize some special commands (called internal commands) that are not program names. For example, the exit command terminates the shell, and the cd command changes the current working directory. Shells directly make system calls to execute these commands, instead of forking a child process to handle them.</p><h3 id="Requirements-in-detail"><a href="#Requirements-in-detail" class="headerlink" title="Requirements in detail"></a>Requirements in detail</h3><p>Your job is to implement a very primitive shell that knows how to launch new programs in the foreground and the background. It should also recognize a few internal commands. More specifically, it should support the following features.</p><p>It should recognize the internal commands: exit, jobs, and cd. exit should use the exit() system call to terminate the shell. cd uses the chdir() system call to change to a new directory. If the command line does not indicate any internal commands, it should be in the following form:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">program</span> <span class="attr">name</span>&gt;</span> <span class="tag">&lt;<span class="name">arg1</span>&gt;</span> <span class="tag">&lt;<span class="name">arg2</span>&gt;</span> .... <span class="tag">&lt;<span class="name">argN</span>&gt;</span> [&amp;]</span><br></pre></td></tr></table></figure></p><p>Your shell should invoke the program, passing it the list of arguments in the command line. The shell must wait until the started program completes unless the user runs it in the background (with &amp;).</p><p>To allow users to pass arguments you need to parse the input line into words separated by whitespace (spaces and ‘\t’ tab characters). You might try to use strtok_r() for parsing (check the manual page of strtok_r() and Google it for examples of using it). In case you wonder, strtok_r() is a user-level utility, not a system call. This means this function is fulfilled without the help of the operating system kernel. To make the parsing easy for you, you can assume the ‘&amp;’ token (when used) is separated from the last argument with one or more spaces or ‘\t’ tab characters.</p><p>The shell runs programs using two core system calls: fork() and execvp(). Read the manual pages to see how to use them. In short, fork() creates an exact copy of the currently running process, and is used by the shell to spawn a new process. The execvp() call is used to overload the currently running program with a new program, which is how the shell turns a forked process into the program it wants to run. In addition, the shell must wait until the previously started program completes unless the user runs it in the background (with &amp;). This is done with the wait() system call or one of its variants (such as waitpid()). All these system calls can fail due to unforeseen reasons (see their manual pages for details). You should check their return status and report errors if they occur.</p><p>No input the user gives should cause the shell to exit (except when the user types exit or Ctrl+D). This means your shell should handle errors gracefully, no matter where they occur. Even if an error occurs in the middle of a long pipeline, it should be reported accurately and your shell should recover gracefully. In addition, your shell should not generate leaking open file descriptors. Hint: you can monitor the current open file descriptors of the shell process through the /proc file system.</p><p>Your shell needs to support pipes. Pipes allow the stdins and stdouts of a list of programs to be concatenated in a chain. More specifically, the first program’s stdout is directed to the stdin of the second program; the second program’s stdout is directed to the stdin of the third program; and so on so forth. Multiple piped programs in a command line are separated with the token “|’. A command line will therefore have the following form:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">program1</span>&gt;</span> <span class="tag">&lt;<span class="name">arglist1</span>&gt;</span> | <span class="tag">&lt;<span class="name">program2</span>&gt;</span> <span class="tag">&lt;<span class="name">arglist2</span>&gt;</span> | ... | <span class="tag">&lt;<span class="name">programN</span>&gt;</span> <span class="tag">&lt;<span class="name">arglistN</span>&gt;</span> [&amp;]</span><br></pre></td></tr></table></figure></p><p>Try an example like this: pick a text file with more than 10 lines (assume it is called textfile) and then type<br><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat textfile | <span class="type">gzip</span> -c | <span class="type">gunzip</span> -c | <span class="type">tail</span> -n <span class="number">10</span></span><br></pre></td></tr></table></figure></p><p>in a regular shell or in the working shell we provide. Pause a bit to think what it really does. Note that multiple processes need to be launched for piped commands and all of them should be waited on in a foreground execution. The pipe() and dup2() system calls will be useful.</p><p>Your compiled executable must be called my_shell.</p><h3 id="Administrative-policies"><a href="#Administrative-policies" class="headerlink" title="Administrative policies"></a>Administrative policies</h3><p>A note on the programming language:</p><p>C/C++ is the only choice for this assignment and all later programming assignments. We are not alone in this. Most existing operating system kernels (Linux and other UNIX variants) themselves are written in C; the remaining parts are written in assembly language. Higher-level languages (Java, Perl, …), while possible, are less desirable because C allows more flexible and direct control of system resources.</p>]]></content>
+    
+    <summary type="html">
+    
+      操作系统作业，代写一个类似于Unix的Shell的程序。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>CS246-Position-and-Matrix</title>
@@ -56,9 +78,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -194,9 +216,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -240,9 +262,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -451,28 +473,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：Spell Checker</title>
-    <link href="https://tk1307993.coding.me/Spell-Checker.html"/>
-    <id>https://tk1307993.coding.me/Spell-Checker.html</id>
-    <published>2019-08-13T16:04:52.000Z</published>
-    <updated>2019-08-13T16:06:19.939Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Homework-4-Programming"><a href="#Homework-4-Programming" class="headerlink" title="Homework 4 Programming"></a>Homework 4 Programming</h1><p>Please remember that to submit the assignment you will need to the Education drop down menu and select<br>assignment complete.</p><h2 id="Problem-1-Implementing-a-Spell-Checker-35-points"><a href="#Problem-1-Implementing-a-Spell-Checker-35-points" class="headerlink" title="Problem 1 - Implementing a Spell Checker - 35 points"></a>Problem 1 - Implementing a Spell Checker - 35 points</h2><p>Implement a spell-checker by using a hash table. You will create a class called <code>SpellChecker</code> in the file <code>SpellChecker.java</code> that implements the interface <code>SpellCheckerInterface.java</code>.  The object will try to check for spelling errors in an input file, referencing a provided dictionary file. The <code>SpellChecker</code> object must accept the filename of the dictionary in its constructor. There is a sample dictionary file in the Codio workspace called <code>words.txt</code>.</p><p>The constructor of the object must (itself or by calling other methods) parse the dictionary file, storing the words in a <code>HashSet</code> instance. The <code>SpellChecker</code> object will use this dictionary as a reference when checking for spelling errors in a specified input file. Please note that <strong>every word added to the <code>HashSet</code> instance must be in lower case</strong>. In addition to the constructor, you must implement two methods to complete the functionality of your <code>SpellChecker</code> object.</p><ul><li><code>public List&lt;String&gt; getIncorrectWords(String filename)</code> - This method should return a list of all words in the input file that are incorrectly spelled according to the dictionary file provided to the constructor. The String <code>filename</code> contains the name of the file to be spell-checked.</li></ul><p>We define a word as a sequence of characters with whitespace (one or more spaces and/or tabs) on either side. To check for incorrectly spelled words, you must first read the file and process it into words. Note, however, that your program must <strong>convert the file to lowercase and remove all punctuation</strong> in generating its list of words. This means that the line <code>hey!! it&#39;s nice to see you--how are you?</code> should become <code>hey, its, nice, to, see, youhow, are, you</code>. No other input processing is necessary and there are no exceptions to these rules. Punctuation is defined as any character that is not an upper or lower case alphabet, or a number (0-9). Once you split the line into words by splitting by whitespace, remove all punctuation from every word (and don’t forget to lower case each word as well).</p><p>Your output list must contain the incorrect words that remain after processing input data (e.g. <code>youhow</code> in the above example).</p><ul><li><code>public Set&lt;String&gt; getSuggestions(String word)</code> - This method should return a set of all potential suggestions for the incorrectly spelled word that is provided as input.</li></ul><p>In order to generate a suggestion for a given word, implement the following spell checking techniques, where a character is defined as one of <code>a, b, c, ..., z</code>:</p><ul><li>Add one character - add a character at every point in the string (including at the very beginning and end)</li><li>Remove one character - remove one character at a time from each position in the string</li><li>Swap adjacent characters - swap every pair of adjacent characters in the string</li></ul><p>Your method should return all possible suggestions from each one of the techniques above. Note that the use of a <code>Set</code> object maintains only unique suggestions (i.e. no duplicates).</p><p>You may choose to write a tester file, which might print out each incorrectly spelled word in an input file and its suggestions. Any tester you write will, as usual, not be graded. This is an optional step to encourage you to ensure that your code is indeed functional and correct.</p><p>We have provided you a sample test file to spell-check. This file is called <code>test.txt</code>.</p><h2 id="Problem-2-K-Best-Values-30-points"><a href="#Problem-2-K-Best-Values-30-points" class="headerlink" title="Problem 2 - K-Best Values - 30 points"></a>Problem 2 - K-Best Values - 30 points</h2><p>Find the k-best (i.e. largest) values in a set of data. Assume you are given a sequence of values, one value at a time. We do not know how many elements there are in this sequence. In fact, there could be infinitely many. Implement the class<br><code>KBestCounter&lt;T extends Comparable&lt;? super T&gt;&gt; implements KBest&lt;T&gt;</code> that keeps track of the k-largest elements seen so far in a sequence of data. The class should have two methods:</p><ul><li><p><code>public void count(T x)</code> - process the next element in the set of data. This operation must run in at worst <code>O(log k)</code> time.</p></li><li><p><code>public List&lt;T&gt; kbest()</code> - return a sorted (smallest to largest) list of the k-largest elements. This must run in at worst <code>O(k log k)</code> time. The method must not clobber the state of your class. This means that if you run this method twice in a row, it should return the same values.</p></li></ul><p>Your <code>KBestCounter.java</code> class must implement the provided interface <code>KBest.java</code>.</p><p>Use a priority queue to implement this functionality. We suggest using the built-in <code>java.util.PriorityQueue</code>.</p><p>As always, feel free to implement your own tester file to ensure proper functionality.</p>]]></content>
-    
-    <summary type="html">
-    
-      Implementing a Spell Checker
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
