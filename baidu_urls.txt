@@ -1,5 +1,5 @@
+https://tk1307993.coding.me/COMPSCI101-Python-Lists.html
 https://tk1307993.coding.me/CS180-Repetition.html
 https://tk1307993.coding.me/CS3014-Shell.html
 https://tk1307993.coding.me/CS246-Position-and-Matrix.html
 https://tk1307993.coding.me/COMP10002-Indexed-Document-Retrieval.html
-https://tk1307993.coding.me/CITS2002-cfind.html
