@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals," />
+  <meta name="keywords" content="Algorithm,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
-<meta name="keywords" content="Fundamentals">
+<meta name="description" content="代写人工智能课程的作业，不用全部实现，但是需要有基础功能，比如读写的support code，马卡洛夫决策过程相关。">
+<meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：SENG201-Traffic-Engineering-Application-Part2">
-<meta property="og:url" content="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html">
+<meta property="og:title" content="CS812-Inventory-Management-System">
+<meta property="og:url" content="https://tk1307993.coding.me/CS812-Inventory-Management-System.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
+<meta property="og:description" content="代写人工智能课程的作业，不用全部实现，但是需要有基础功能，比如读写的support code，马卡洛夫决策过程相关。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-08T01:22:19.989Z">
+<meta property="og:updated_time" content="2019-11-03T11:08:59.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：SENG201-Traffic-Engineering-Application-Part2">
-<meta name="twitter:description" content="交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。">
+<meta name="twitter:title" content="CS812-Inventory-Management-System">
+<meta name="twitter:description" content="代写人工智能课程的作业，不用全部实现，但是需要有基础功能，比如读写的support code，马卡洛夫决策过程相关。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS812-Inventory-Management-System.html"/>
 
 
 
 
 
-  <title>Java代写：SENG201-Traffic-Engineering-Application-Part2 | 留学生CS编程作业代写</title>
+  <title>CS812-Inventory-Management-System | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS812-Inventory-Management-System.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：SENG201-Traffic-Engineering-Application-Part2</h2>
+          <h2 class="post-title" itemprop="name headline">CS812-Inventory-Management-System</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-08T09:19:35+08:00">
-                2019-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T19:06:24+08:00">
+                2019-11-03
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  交通灯的应用的第二部分的代写，这部分就是按照要求和给的示例程序来写码了。
+                  代写人工智能课程的作业，不用全部实现，但是需要有基础功能，比如读写的support code，马卡洛夫决策过程相关。
               </div>
           
 
@@ -360,55 +360,51 @@
       
 
       
-        <h3 id="Some-simplifying-assumptions"><a href="#Some-simplifying-assumptions" class="headerlink" title="Some simplifying assumptions"></a>Some simplifying assumptions</h3><p>We will make a few assumptions in order to make the problem simpler.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Key to any retail shop, from Amazon to K-Mart to Coles, is its inventory management system - that is a system to decide what items to stock and how many should the stock be. In this assignment, we will see an application of Markov Decision Processes (MDPs) in such a system.</p>
+<h3 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h3><p>You have been hired to setup the inventory management system for Retail (R). R sells various types of electronics goods, designed and developed by staffs and students. R has multiple retail stores of various sizes, at different locations. Your task is to create a system that uses historical customer behaviour data from a store, to decide what type of items to order/return and how many, so that the store makes the most profit. The rest of this document describes the detail of the problem.</p>
+<p>Each retail store of R can be classified into one of five different classes of store, based on their capacities. The 5 types of stores, along with their stocking capacities and maximum ordering capabilities are:</p>
 <ul>
-<li>All intersections involve one north-south rood meeting an east-west road.</li>
-<li>Signal faces are oriented to the north, 4 south, east or west and are located at the north-west, north-east, south-west or south-east corners of intersections. No overhead signal faces need be considered.</li>
-<li>Semi-actuated intersections need not be considered. If necessary, we can always add a SemiActuatedPhasePlan class later to cope with these.</li>
-<li>Signal faces contain 3 lights: one of each colour and all of the same shape.</li>
-<li>For “round” signal faces, green lights are always followed by yellow lights which are followed in turn by red lights in each cycle. We need not consider other sequences — such as those in countries where another yellow interval occurs between red and green.</li>
-<li>Change intervals and all-red intervals are treated as separate phases.</li>
-<li>Only passive detectors are used. These can report, when asked, whether they have seen any vehicles pass over them.</li>
-<li>No phases are optional.</li>
+<li><p>Tiny store. This store sells up to 2 types of items and can stock at most 3 items. It can order at most 2 items per week and can return at most 1 item per week.</p>
+</li>
+<li><p>Small store. This store sells up to 2 types of items and can stock up to 8 items. It can order at most 3 items per week and can return at most 2 items per week.</p>
+</li>
+<li><p>Medium store. This store sells up to 3 types of items and can stock up to 8 items. It can order at most 3 items per week and can return at most 2 items per week.</p>
+</li>
+<li><p>Large store. This store sells up to 5 types of items and can stock up to 10 items. It can order at most 4 items per week and can return at most 2 items per week.</p>
+</li>
+<li><p>Mega store. This store sells up to 7 types of items and can stock up to 20 items. It can order at most 5 items per week and can return at most 3 items per week.</p>
+</li>
 </ul>
-<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>You should be able to begin the following activities already and you will find them helpful preparation for the next part which will be available soom.</p>
+<p>Each store can order items at no cost. Whenever an item is sold, the store keeps 75% of the payment and passes the rest to R headquarter. For each miss opportunity (i.e., failing to provide an item requested by a customer), the store is fined 25% of the price of the requested item by R headquarter. When a store returns an item, it must pay half of the price of the item to R headquarter.</p>
+<p>To simplify the problem, R assumes:</p>
 <ul>
-<li>Make sure you read the description of the way intersections work and that you understand it fully.</li>
-<li>Observe some real intersections in action. You can start this right away. Identify the signal faces, traffic streams and phases.</li>
-<li>For the active phase plan, draw up a table listing the phases and the state of each stream in the phase.</li>
-<li>Note which signal faces are associated with each traffic stream. Remember that signal faces might shared between streams.</li>
-<li>Using Smarties TM, Pebbles TM or other tools, construct a diagram such as that<br>shown in Figure 5 to show the lights displayed in the signal faces in each phase.</li>
-<li>Time some phases. Do you think your intersection is unactuated or fully-actuated?</li>
-<li>Do you think it has more than one phase plan? For example, is there any difference between rush hour and off peak plans?</li>
+<li><p>Stocking is done while the store is closed (Saturday-Sunday). Each store can only order the stocks once per week, which is on Saturday morning. The stock will be delivered and arrange on the shelves during the weekend, before it opens again for next week’s operation.</p>
+</li>
+<li><p>All items ordered will be delivered in good condition, on time. Also, the quality of the goods will not degrade over time.<br>When the order/return operation causes the store to have more items than its capacity, R will automatically cut the store’s order prior to delivery, so that there will be no excess items in the store. Assuming the types of items are indexed from 1, the items will be cut ascendingly, from items with the lowest index first. This cut will cost the store a penalty fee of $F per item cut.</p>
+</li>
+<li><p>The buying habit of the customers are independent between one another. Also, the buying habit of the customers of one store is independent from those of other stores. However, for each type of items in the store, the amount of items the customer buys do depend on the amount that is available in the store right after the most recent replenishment.</p>
+</li>
+<li><p>Within the week, the total number of items per type of goods that the customers of a store want to buy is at most equivalent to the total number of items that the store can stock.</p>
+</li>
+<li><p>The performance of the store is measured weekly, right after the store is closed for the week.</p>
+</li>
+<li><p>The inventory system should assume that the store will remain open forever.<br>Although for simplicity in computing the actual profit gained, the system will be tested on a finite number of weeks.</p>
+</li>
 </ul>
-<h3 id="Our-toolkit"><a href="#Our-toolkit" class="headerlink" title="Our toolkit"></a>Our toolkit</h3><p>Figure 6 shows a very simple intersection monitor — an instance of IntersectionMonitor. Near the top is a panel showing the intersection’s signal faces, together with their locations and orientations.</p>
-<p>The monitor displays a “row” for each phase — the active phase is highlighted. As well as the phase description, there is some information about each stream and a colour chip showing the state of each stream (remember that signal faces can be shared between streams) in the corresponding phase.</p>
-<p>A transcript provides a log of the activity at the intersection. Each entry has a time stamp (traffic.misc.TimeStamp) and the transcript can be saved in a file for subsequent analysis.</p>
-<p>Given an Intersection, an IntersectionMonitor can display information about its state. The traffic package contains classes (such as TrafficStream which can be used to assemble an intersection.</p>
-<p>Intersections may also be constructed by reading intersection descriptions from a file. Figure 7 shows the description file corresponding to the intersection of Figure 6.</p>
-<ul>
-<li>The file contains a number of tags, such as SignalFaces — valid tags are found in traffic.Tags.</li>
-<li>Lines beginning with // are treated as comments and empty lines are ignored.</li>
-<li>Within a tag body each line contains one or more fields. The fields are separated by tabs (which are shown underlined in Figure 7). Why tabs? The idea is to make it easy to use a Scanner to parse the content of the line. Using commas as separators seems appealing but ultimately the hassle of escaping commas inside field content is frustrating.</li>
-</ul>
-<h3 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h3><p>Now that you have completed the activities, you are ready to start working with intersection data.</p>
-<ul>
-<li>Obtain a copy of the intersection monitor demonstrated in class — from the Learn assessment page where you found this document.</li>
-<li>Run it and familiarise yourself with the way it displays information about elements such as phases, streams and signal faces.</li>
-<li>The File menu contains an item to run a working demo, plus one to read files, such as the one in Firgure 7, in the format described.</li>
-<li>The Intersection menu can be used to start and stop the intersection’s phase plan cycle. The signal faces will change to reflect the current phase.</li>
-<li>Information about the changing states of the intersection appears in the transcript pane. The Transcript menu incldes an item which allows the transcript content to be saved for later analysis.</li>
-<li>Write an intersection file for each intersection you oberved as desribed and check that it is correct by loading and running it.</li>
-</ul>
-<h3 id="Using-the-resources-provided"><a href="#Using-the-resources-provided" class="headerlink" title="Using the resources provided"></a>Using the resources provided</h3><ul>
-<li>You will find the javadoc in the api folder.</li>
-<li>Create an Eclipse project (e.g. myassignment).</li>
-<li>Create a package traffic.diy in the src directory. This is where the code you will write/modify goes.</li>
-<li>Add the Java source files from the skeleton folder to the package you created. These contain the sources for classes MyIntersectionMonitor,ModelIntersection and MyIntersectionLoader.</li>
-<li>In the Project — Properties dialog, add the JAR file traffic-library-1.2.jar to the build path (using the Add External JARs button).</li>
-<li>You should now be able to run the application (there’s a main method in MyIntersectionMonitor.</li>
-</ul>
-<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>We’ll update you on the exact details of your submission soon.</p>
+<p>Given the stochastic model of the customers’ behavior, the type of store, and information about the available items in the store immediately before the shopping order is made, the inventory management system should decide which types of items and how many should be ordered and returned, so that the store gains the maximum profit possible. Profit is defined as the income the store gets (i.e., 75% of the total payment received from customer) minus the sum of the cost of returning the items, the fines for miss opportunities, and the penalty fees for having items being cut from the order list by R headquarter.</p>
+<h3 id="What-you-need-to-do"><a href="#What-you-need-to-do" class="headerlink" title="What you need to do"></a>What you need to do</h3><p>Your tasks in this assignment can be classified into 4 parts:</p>
+<ol>
+<li><p>Design the solution. This task contains two main components, i.e., framing the problem as an MDP problem and deciding how to solve the problem. Note that you should design the MDP components, i.e., what are the states, actions, etc., manually. However, the exact parameters of your MDP problem will depend on the given input file. Please be aware that how you define your MDP problem might help or hurt your ability to solve the problem.</p>
+</li>
+<li><p>Implement your design. Your program is allowed a maximum of 3 minutes computation prior to each simulation run. If you use an online method for solving MDP, at each step during run-time, your program is allowed a maximum of 30 seconds computation time for a tiny/small/medium store and a maximum of 1 minute computation time for a large/mega store. Your program will be run on a PC with the same specification as those in the tutorial rooms. The time requirement is for a program that runs as a single-threaded process. If you use multi-threading, then we will divide the aforementioned time limit with the number of threads you use. Note: You are not allowed to use any library for linear algebra, optimization, and MDP solver.</p>
+</li>
+<li><p>Implement the basic value iteration to compare your design with the baseline (at least for the tiny and small stores).</p>
+</li>
+<li><p>Write a report. you only need to answer the questions we post for the Report (see the last part of this document). However, to answer these questions well, you do need to do #3.</p>
+</li>
+</ol>
+<h3 id="Input-and-Output-format"><a href="#Input-and-Output-format" class="headerlink" title="Input and Output format"></a>Input and Output format</h3><p>Input format. The input is a single .txt file, containing all the information about the store, the types and price of the items that can be sold at the store, and the store’s customers’ behaviour.</p>
+<h3 id="Output-format"><a href="#Output-format" class="headerlink" title="Output format"></a>Output format</h3><p>Your program should output the state, the order list, and the return list at each week.</p>
 
       
     </div>
@@ -426,7 +422,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -439,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/SENG201-Traffic-Engineering-Application-Part1.html" rel="next" title="Java代写：SENG201-Traffic-Engineering-Application-Part1">
-                <i class="fa fa-chevron-left"></i> Java代写：SENG201-Traffic-Engineering-Application-Part1
+              <a href="/COMPSCI101-Python-Lists.html" rel="next" title="COMPSCI101-Python-Lists">
+                <i class="fa fa-chevron-left"></i> COMPSCI101-Python-Lists
               </a>
             
           </div>
@@ -448,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSC110-Cellular-Automaton.html" rel="prev" title="Java代写：CSC110-Cellular-Automaton">
-                Java代写：CSC110-Cellular-Automaton <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -604,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-simplifying-assumptions"><span class="nav-number">1.</span> <span class="nav-text">Some simplifying assumptions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">2.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Our-toolkit"><span class="nav-number">3.</span> <span class="nav-text">Our toolkit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Next-steps"><span class="nav-number">4.</span> <span class="nav-text">Next steps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-resources-provided"><span class="nav-number">5.</span> <span class="nav-text">Using the resources provided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">6.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-problem"><span class="nav-number">2.</span> <span class="nav-text">The problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-you-need-to-do"><span class="nav-number">3.</span> <span class="nav-text">What you need to do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-and-Output-format"><span class="nav-number">4.</span> <span class="nav-text">Input and Output format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-format"><span class="nav-number">5.</span> <span class="nav-text">Output format</span></a></li></ol></div>
             
 
           </div>
