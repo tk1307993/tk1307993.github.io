@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game," />
+  <meta name="keywords" content="Algorithm,Game,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
-<meta name="keywords" content="Game">
+<meta name="description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
+<meta name="keywords" content="Algorithm,Game,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：COMP9021-Tangram">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP9021-Tangram.html">
+<meta property="og:title" content="COMP20003-2048-Game">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP20003-2048-Game.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta property="og:description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-24T14:11:08.573Z">
+<meta property="og:updated_time" content="2019-11-07T13:41:57.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：COMP9021-Tangram">
-<meta name="twitter:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta name="twitter:title" content="COMP20003-2048-Game">
+<meta name="twitter:description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP9021-Tangram.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP20003-2048-Game.html"/>
 
 
 
 
 
-  <title>Python代写：COMP9021-Tangram | 留学生CS编程作业代写</title>
+  <title>COMP20003-2048-Game | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP9021-Tangram.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP20003-2048-Game.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：COMP9021-Tangram</h2>
+          <h2 class="post-title" itemprop="name headline">COMP20003-2048-Game</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-24T22:08:04+08:00">
-                2018-10-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-07T21:40:13+08:00">
+                2019-11-07
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。
+                  代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。
               </div>
           
 
@@ -360,18 +360,36 @@
       
 
       
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>The assignment consists of three parts, from easiest to more difficult. Each part is worth 3 marks.<br>For each test, the automarking script will let your program run for 30 seconds.</p>
-<p>As all output is True or False, each test will actually consist of a number of subtests of similar difficulty, and passing one test will mean passing all associated subtests; failing at least one of the subtests of a test will result in scoring 0 to that test.<br>Up to one mark will reward good comments, good choice of names for identifiers and functions, readability of code, simplicity of statements, compactness of functions. This will be determined manually.</p>
-<p>One extra mark will be awarded for making available to the class a good test case, consisting of two similar sets of pieces and two solved tangrams built from such a set, which can then be used by everyone for testing purposes.</p>
-<p>Late assignments will be penalised: the mark for a late submission will be the minimum of the awarded mark and 10 minus the number of full and partial days that have elapsed from the due date.</p>
-<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>The game of tangram consists in creating shapes out of pieces. We assume that each piece has its own colour, different to the colour of any other piece in the set we are working with. Just for reference, here is the list the colours that are available to us</p>
-<h3 id="Pieces"><a href="#Pieces" class="headerlink" title="Pieces"></a>Pieces</h3><p>Here is an example of the contents of the file pieces A.xml, typical of the contents of any file of this kind (so only the number of pieces, the colour names, and the various coordinates can differ from one such file to another - we do not bother with allowing for variations, in the use of space in particular).</p>
-<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg version ="1.1" xmlns ="http://www.w3.org/2000/svg"&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 50 </span>50 L<span class="number"> 50 </span>90 L<span class="number"> 90 </span>90 z" fill="red" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 160 </span>170 L<span class="number"> 160 </span>130 L<span class="number"> 120 </span>130 z" fill="green" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 200 </span>30 L<span class="number"> 180 </span>30 L<span class="number"> 180 </span>50 L<span class="number"> 220 </span>50 z" fill="blue" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 40 </span>100 L<span class="number"> 40 </span>140 L<span class="number"> 60 </span>140 L<span class="number"> 60 </span>120 z" fill="yellow" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 210 </span>70 L<span class="number"> 230 </span>90 L<span class="number"> 270 </span>90 L<span class="number"> 270 </span>50 L<span class="number"> 230 </span>50 z" fill="purple" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 180 </span>130 L<span class="number"> 180 </span>170 L<span class="number"> 220 </span>210 L<span class="number"> 240 </span>190 z" fill="olive" /&gt;</span><br><span class="line">  &lt;path d="M<span class="number"> 100 </span>200 L<span class="number"> 120 </span>180 L<span class="number"> 80 </span>140 L<span class="number"> 80 </span>180 z" fill="magenta" /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
-<p>Note that the coordinates are nonnegative integers. This means that the sets of pieces we consider rule out those of the traditional game of tangram, where 2 is involved everywhere…</p>
-<p>We require every piece to be a convex polygon. An .xml file should represent a piece with n sides (n &gt; 3) by an enumeration of n pairs of coordinates, those of consecutive vertices, the first vertex being arbitrary, and the enumeration being either clockwise or anticlockwise.</p>
-<h3 id="First-Task"><a href="#First-Task" class="headerlink" title="First Task"></a>First Task</h3><p>You have to check that the pieces represented in an .xml file satisfy our constraints. So you have to check that each piece is convex, and if it represents a polygon with n sides (n &gt; 3) then the representation consists of an enumeration of the n vertices, either clockwise or anticlockwise. Here is the expected behaviour of your program.</p>
-<h3 id="Second-Task"><a href="#Second-Task" class="headerlink" title="Second Task"></a>Second Task</h3><p>You have to check whether the sets of pieces represented in two .xml files are identical, allowing for pieces to be flipped over and allowing for different orientations. Here is the expected behaviour of your program.</p>
-<h3 id="Third-Task"><a href="#Third-Task" class="headerlink" title="Third Task"></a>Third Task</h3><p>You have to check whether the pieces represented in an .xml file are a solution to a tangram puzzle represented in another .xml file. Here is the expected behaviour of your program.</p>
+        <h3 id="Assignment-description"><a href="#Assignment-description" class="headerlink" title="Assignment description"></a>Assignment description</h3><p>In this programming assignment you’ll be expected to build a solver for the 2048 game. The game has been described by the Wall Street Journal as “almost like Candy Crush for math geeks”. You can play the game compiling the code given to you using the keyboard, or using this web implementation <a href="http://2048game.com/" target="_blank" rel="noopener">http://2048game.com/</a>.</p>
+<h3 id="The-2048-game"><a href="#The-2048-game" class="headerlink" title="The 2048 game"></a>The 2048 game</h3><p>2048 is played on a 4x4 grid, with numbered tiles that slide smoothly when a player moves them using the four arrow keys. Every turn, a new tile will randomly appear in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.</p>
+<p>A scoreboard on the upper-right keeps track of the user’s score. The user’s score starts at zero, and is incremented whenever two tiles combine, by the value of the new tile.</p>
+<p>The game is won when a tile with a value of 2048 appears on the board, hence the name of the game. After reaching the 2048 tile, players can continue to play (beyond the 2048 tile) to reach higher scores. In this assignment, your solver should continue playing after reaching tile 2048. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.</p>
+<h3 id="The-Algorithm"><a href="#The-Algorithm" class="headerlink" title="The Algorithm"></a>The Algorithm</h3><p>Each possible configuration of the 2048 4x4 grid is called a state. The 2048 Graph G = (V, E) is implicitly defined. The vertex set V is defined as all the possible 4x4 configurations (states), and the edges E connecting two vertexes are defined by the legal movements (right, left, up, down).</p>
+<p>Your task is to find the path leading to the higest score, i.e. leading to the most rewarding vertex (state). A path is a sequence of movements. You are going to use a variant of Dijkstra to explore the most rewarding path first, up to a maximum depth D.</p>
+<p>Every time the game asks you for a movement (action), you should explore all possible paths up to depth D. Once you finished generating all the paths, you should return the first action only of the path leading to the highest score vertex. This action will be then executed by the game engine.</p>
+<p>You might have multiple paths with the same maximum score. If more than one action (left, right, up or down) begins paths with the same maximum score, you’ll have to break ties randomly.</p>
+<p>Make sure you manage the memory well. Everytime you finish running the algorithm, you have to free all the nodes from the memory, otherwise you are going to run out of memory fairly fast.</p>
+<p>When you applyAction you have to create a new node, that points to the parent, updates the board with the action chosen, updates the priority of the node with the new score, and updates any other auxiliary data in the node.</p>
+<p>You are going to need some auxiliary data structures to update the scores of the first 4 applicable actions. The function propagateBackScoreToFirstAction takes the score of the newly generated node, and propagates back the score to the first action of the path.</p>
+<p>This propagation can be either Maximeze or Average:</p>
+<p>If you Maximize, you have to make sure that the first action is updated to reflect the maximum score of any of its children up to depth D.</p>
+<p>If you Average, you have to make sure that the first action is updated to reflect the average score taking into account all its children up to depth D.</p>
+<h3 id="Deliverables-evaluation-and-delivery-rules"><a href="#Deliverables-evaluation-and-delivery-rules" class="headerlink" title="Deliverables, evaluation and delivery rules"></a>Deliverables, evaluation and delivery rules</h3><p>Deliverable 1 – Solver source code<br>You are expected to hand in the source code for your solver, written in C. Obviously, your source code is expected to compile and execute flawlessly using the following makefile command: make generating an executable called 2048. Remember to compile using the optimization flag gcc -O3 for doing your experiments, it will run twice faster than compiling with the debugging flag gcc -g. For the submission, please submit your makefile with gcc -g option, as our scripts need this flag for testing.</p>
+<p>Your implementation should achive scores higher than 5000 points.</p>
+<p>Base Code<br>You are given a base code. You can compile the code and play with the keyboard. The default solver chooses an action randomly. You are going to have to program your solver in the file ai.c. Look at the file 2048.c to know which function is called to select an action to execute.</p>
+<p>You are given the structure of a node, and also a priority queue implementation. Look into the utils.* files to know about the functions you can call to apply actions.</p>
+<p>You are free to change any file.</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>You can play the game with the keyboard by executing ./2048</p>
+<p>In order to execute your solver use the following command:</p>
+<p>./2048 ai &lt;max/avg&gt; <depth><br>for example:</depth></p>
+<p>./2048 ai avg 6<br>Will run average updates up to depth 6.</p>
+<p>If you append the option “slow” at the end, it will slow the ai so you can see it playing</p>
+<p>./2048 ai avg 6 slow</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>Your solver will print into an output.txt file the following information:</p>
+<p>Max Depth<br>Number of generated nodes.<br>Number of expanded nodes.<br>Number of expanded nodes per second.<br>Total Search Time, in seconds.<br>Maximum value in the board.<br>Score</p>
+<h4 id="Deliverable-2-–-Experimentation"><a href="#Deliverable-2-–-Experimentation" class="headerlink" title="Deliverable 2 – Experimentation"></a>Deliverable 2 – Experimentation</h4><p>Besides handing in the solver source code, you’re required to provide a table with the mean score and deviation, mean max tile and deviation, and total execution time for each type of propagation (max/avg) you implement and each max depth from 0,..,6.<br>In order to test your solver, you have to average over multiple runs because 2048 has a random component: tiles can appear in different locations after each move. A sample of 10 runs is enough.</p>
+<p>For each propagation type, plot a figure where the x axis is the depth, and y is the mean score.</p>
+<p>Explain your results using your figures and tables. Which max depth works best? Is it better to propagate max or avg?</p>
 
       
     </div>
@@ -389,7 +407,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
             <a href="/tags/Game/" rel="tag"># Game</a>
+          
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -402,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FIT2071-VisualTextQuest.html" rel="next" title="C++代写：FIT2071-VisualTextQuest">
-                <i class="fa fa-chevron-left"></i> C++代写：FIT2071-VisualTextQuest
+              <a href="/CS812-Inventory-Management-System.html" rel="next" title="CS812-Inventory-Management-System">
+                <i class="fa fa-chevron-left"></i> CS812-Inventory-Management-System
               </a>
             
           </div>
@@ -411,10 +433,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSE231-RenderingColors.html" rel="prev" title="Python代写：CSE231-RenderingColors">
-                Python代写：CSE231-RenderingColors <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pieces"><span class="nav-number">3.</span> <span class="nav-text">Pieces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Task"><span class="nav-number">4.</span> <span class="nav-text">First Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Second-Task"><span class="nav-number">5.</span> <span class="nav-text">Second Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Third-Task"><span class="nav-number">6.</span> <span class="nav-text">Third Task</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-description"><span class="nav-number">1.</span> <span class="nav-text">Assignment description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-2048-game"><span class="nav-number">2.</span> <span class="nav-text">The 2048 game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Algorithm"><span class="nav-number">3.</span> <span class="nav-text">The Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables-evaluation-and-delivery-rules"><span class="nav-number">4.</span> <span class="nav-text">Deliverables, evaluation and delivery rules</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">4.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">4.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deliverable-2-–-Experimentation"><span class="nav-number">4.3.</span> <span class="nav-text">Deliverable 2 – Experimentation</span></a></li></ol></li></ol></div>
             
 
           </div>
