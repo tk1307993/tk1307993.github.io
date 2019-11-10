@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CS112-Grade-Distribution.html</loc>
+    <lastmod>2019-11-10T00:51:15.294Z</lastmod>
+    <data>
+        <display>
+        <title>CS112-Grade-Distribution</title>
+        <pubTime>2019-11-10T00:46:35.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/COMP20003-2048-Game.html</loc>
     <lastmod>2019-11-08T14:57:33.967Z</lastmod>
     <data>
@@ -1150,9 +1170,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
@@ -1176,9 +1196,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
