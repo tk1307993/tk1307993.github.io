@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/COMP9021-Solve-Logical-Puzzles.html</loc>
+    <lastmod>2019-11-16T04:45:02.950Z</lastmod>
+    <data>
+        <display>
+        <title>COMP9021-Solve-Logical-Puzzles</title>
+        <pubTime>2019-11-16T04:41:57.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS316-Large-Data-Sorting.html</loc>
     <lastmod>2019-11-13T13:45:29.504Z</lastmod>
     <data>
@@ -1190,9 +1212,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
@@ -1216,9 +1238,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
