@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security," />
+  <meta name="keywords" content="Data Structure,Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="实现Bitcoin中的Hashcash Mining算法。">
-<meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security">
+<meta name="description" content="用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。">
+<meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：COMP30023 Hashcash Mining">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+<meta property="og:title" content="CS3350-Postfix-Expression-Evaluator">
+<meta property="og:url" content="https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta property="og:description" content="用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T10:51:23.076Z">
+<meta property="og:updated_time" content="2019-11-21T15:14:37.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：COMP30023 Hashcash Mining">
-<meta name="twitter:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta name="twitter:title" content="CS3350-Postfix-Expression-Evaluator">
+<meta name="twitter:description" content="用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html"/>
 
 
 
 
 
-  <title>C代写：COMP30023 Hashcash Mining | 留学生CS编程作业代写</title>
+  <title>CS3350-Postfix-Expression-Evaluator | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：COMP30023 Hashcash Mining</h2>
+          <h2 class="post-title" itemprop="name headline">CS3350-Postfix-Expression-Evaluator</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:37:55+08:00">
-                2018-07-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-21T23:11:46+08:00">
+                2019-11-21
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  实现Bitcoin中的Hashcash Mining算法。
+                  用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。
               </div>
           
 
@@ -360,10 +360,26 @@
       
 
       
-        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The aim of this project is to provide you with experience in writing (a) a program that interacts with other programs over a network (socket programming), and (b) multi-threaded applications. Specifically, you will write a server-based proof-of-work solver for the Hashcash mining algorithm used in Bitcoin.</p>
-<p>This requires you to implement the functions in the Simple Stratum Text Protocol (SSTP), which is used to format messages between clients and your server program. The SSTP is described in Section 3. Background information related to the the Bitcoin mining process is described in Section 2. Detailed requirements and implementation guidelines are listed in Section 4.</p>
-<p>Your program must be written in standard C. Use the POSIX pthread library for multi-threaded tasks. Other dynamic and static libraries are prohibited.</p>
-<p>Your program must run on the School of Engineering Linux server digitalis or digitalis2.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this homework, you will create and turn in your second program on BGUnix. Please see the documentation below for instructions on obtaining and configuring a BGUnix account.</p>
+<p>Once you have an account, SSH in and join the class by issuing the command:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="class"><span class="keyword">class</span> -<span class="title">join</span> <span class="title">cs3350</span></span></span><br></pre></td></tr></table></figure></p>
+<p>This should create a directory in your home directory named ‘cs3350’. All your work this semester must occur inside this directory (do not create a subdirectory unless the homework specifically requests one). Any required files will be automatically collected from this directory at the due date/time for the assignment!</p>
+<h3 id="Program-Details"><a href="#Program-Details" class="headerlink" title="Program Details"></a>Program Details</h3><p>In this program, you will implement a postfix expression evaluator. See the book and slides for the concrete algorithm you need to implement. You must use stacks (I provide LinkedStack.h/LinkedStack.cpp/StackInterface.h/Node.h/Node.cpp files in the class lib folder!).</p>
+<p>You must provide a hw3.cpp driver file that contains the implementation of the algorithm and a main method that instantiates runs the algorithm. The driver program should:</p>
+<ul>
+<li>Loops, asking the user to provide either a number (can be more than 1 digit!) or an operator (+ - / *)</li>
+<li>Stops the loop when -1 is entered (do not add -1 to the expression!)</li>
+<li>Evaluates the given postfix expression</li>
+<li>Displays the final result of evaluating the postfix expression (on a line by itself - this should be the last line displayed by your program!)</li>
+</ul>
+<h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p>Your code should include proper documentation/comments where appropriate. A portion of the grade is attributed directly to documentation (see the grading rubric provided on Canvas).</p>
+<p>Functions should be proceeded by a comment block documenting the function’s purpose.</p>
+<p>Blocks of code should contain comments describing what that block is contributing to the overall solution.</p>
+<h3 id="What-to-Turn-In"><a href="#What-to-Turn-In" class="headerlink" title="What to Turn In"></a>What to Turn In</h3><p>The automated turn-in collection script will save these files from your class directory:</p>
+<ul>
+<li>hw3.cpp</li>
+</ul>
+<p>The script will assume the following command line to compile your homework (your code must work with this exact command line!):<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">$</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">std=c</span><span class="literal">+</span><span class="literal">+</span><span class="comment">11</span> <span class="literal">-</span><span class="comment">Ilib</span> <span class="comment">hw3</span><span class="string">.</span><span class="comment">cpp</span></span><br></pre></td></tr></table></figure></p>
+<p>This assumes that LinkedStack.<em>/StackInterface.h/Node.</em> are in the lib/ directory.</p>
 
       
     </div>
@@ -381,13 +397,9 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Linux-Network/" rel="tag"># Linux Network</a>
-          
-            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
-          
-            <a href="/tags/Security/" rel="tag"># Security</a>
           
         </div>
       
@@ -400,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hello-world.html" rel="next" title="留学生Computer Science编程作业代写">
-                <i class="fa fa-chevron-left"></i> 留学生Computer Science编程作业代写
+              <a href="/COMP9021-Solve-Logical-Puzzles.html" rel="next" title="COMP9021-Solve-Logical-Puzzles">
+                <i class="fa fa-chevron-left"></i> COMP9021-Solve-Logical-Puzzles
               </a>
             
           </div>
@@ -409,10 +421,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS3024-Battleship.html" rel="prev" title="Python代写：CS3024 Battleship">
-                Python代写：CS3024 Battleship <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Details"><span class="nav-number">2.</span> <span class="nav-text">Program Details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Documentation"><span class="nav-number">3.</span> <span class="nav-text">Documentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Turn-In"><span class="nav-number">4.</span> <span class="nav-text">What to Turn In</span></a></li></ol></div>
             
 
           </div>

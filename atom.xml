@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-11-16T04:45:02.950Z</updated>
+  <updated>2019-11-21T15:14:37.809Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS3350-Postfix-Expression-Evaluator</title>
+    <link href="https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html"/>
+    <id>https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html</id>
+    <published>2019-11-21T15:11:46.000Z</published>
+    <updated>2019-11-21T15:14:37.809Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this homework, you will create and turn in your second program on BGUnix. Please see the documentation below for instructions on obtaining and configuring a BGUnix account.</p><p>Once you have an account, SSH in and join the class by issuing the command:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="class"><span class="keyword">class</span> -<span class="title">join</span> <span class="title">cs3350</span></span></span><br></pre></td></tr></table></figure></p><p>This should create a directory in your home directory named ‘cs3350’. All your work this semester must occur inside this directory (do not create a subdirectory unless the homework specifically requests one). Any required files will be automatically collected from this directory at the due date/time for the assignment!</p><h3 id="Program-Details"><a href="#Program-Details" class="headerlink" title="Program Details"></a>Program Details</h3><p>In this program, you will implement a postfix expression evaluator. See the book and slides for the concrete algorithm you need to implement. You must use stacks (I provide LinkedStack.h/LinkedStack.cpp/StackInterface.h/Node.h/Node.cpp files in the class lib folder!).</p><p>You must provide a hw3.cpp driver file that contains the implementation of the algorithm and a main method that instantiates runs the algorithm. The driver program should:</p><ul><li>Loops, asking the user to provide either a number (can be more than 1 digit!) or an operator (+ - / *)</li><li>Stops the loop when -1 is entered (do not add -1 to the expression!)</li><li>Evaluates the given postfix expression</li><li>Displays the final result of evaluating the postfix expression (on a line by itself - this should be the last line displayed by your program!)</li></ul><h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p>Your code should include proper documentation/comments where appropriate. A portion of the grade is attributed directly to documentation (see the grading rubric provided on Canvas).</p><p>Functions should be proceeded by a comment block documenting the function’s purpose.</p><p>Blocks of code should contain comments describing what that block is contributing to the overall solution.</p><h3 id="What-to-Turn-In"><a href="#What-to-Turn-In" class="headerlink" title="What to Turn In"></a>What to Turn In</h3><p>The automated turn-in collection script will save these files from your class directory:</p><ul><li>hw3.cpp</li></ul><p>The script will assume the following command line to compile your homework (your code must work with this exact command line!):<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">$</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">std=c</span><span class="literal">+</span><span class="literal">+</span><span class="comment">11</span> <span class="literal">-</span><span class="comment">Ilib</span> <span class="comment">hw3</span><span class="string">.</span><span class="comment">cpp</span></span><br></pre></td></tr></table></figure></p><p>This assumes that LinkedStack.<em>/StackInterface.h/Node.</em> are in the lib/ directory.</p>]]></content>
+    
+    <summary type="html">
+    
+      用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>COMP9021-Solve-Logical-Puzzles</title>
@@ -451,30 +475,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS4750-Minimax-Tic-Tac-Toe</title>
-    <link href="https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html"/>
-    <id>https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html</id>
-    <published>2019-09-15T12:25:06.000Z</published>
-    <updated>2019-09-15T12:27:52.863Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this programming assignment, you are asked to implement programs to play a two-player game similar to tic-tac-toe: two players, X and O, take turns marking the spaces in a 4×4 grid. The player who succeeds in placing 3 of their marks consecutively in a horizontal, vertical, or diagonal row wins the game.<br>You may form a team of up to three people. The team can be different from that for the HW#2. One solution is submitted by each team electronically in Blackboard. You may use any programming language in your implementation.</p><h3 id="Part-I-Beginner"><a href="#Part-I-Beginner" class="headerlink" title="Part I. Beginner"></a>Part I. Beginner</h3><p>Implement a simple player, called Beginner, who places marks sequentially in a blank square in increasing order of row number and then column number, i.e., (1,1), (1,2), (1,3), (1,4), (2,1), (2,2), …, unless it or the opponent wins the game immediately. Its algorithm is as follows:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Beginner-Decision</span> (<span class="title">state</span>) <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> player has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">the</span> position <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">a</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row<span class="comment"> // "Win"</span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> opponent has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">a</span> position next <span class="built_in">to</span> <span class="keyword">the</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row <span class="built_in">to</span> block <span class="keyword">the</span> opponent</span><br><span class="line">  <span class="literal">return</span> marking sequentially <span class="keyword">a</span> blank square <span class="keyword">in</span> increasing order <span class="keyword">of</span> row <span class="built_in">number</span> <span class="keyword">and</span> <span class="keyword">then</span> column <span class="built_in">number</span>.</span><br></pre></td></tr></table></figure></p><p>“open 2-in-a-row” means that there is a blank space at one end of the 2-in-a-row, making it possible to become a 3-in-a-row.</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul><li>a) A brief description of your implementation.</li><li>b) Step-by-step of one game played between you (human) and the player Beginner. Beginner plays first.</li><li>c) Your code with appropriate comments.</li></ul><h3 id="Part-II-Advanced"><a href="#Part-II-Advanced" class="headerlink" title="Part II. Advanced"></a>Part II. Advanced</h3><p>Implement a minimax player, called Advanced, who runs the minimax algorithm on a 2-ply game tree, i.e., looking ahead 2 moves (one move by the player and one move by the opponent). The heuristic evaluation function for cutoff nodes is<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h(n) = [# <span class="keyword">of</span> <span class="keyword">open</span> <span class="number">2</span>-<span class="keyword">in</span>-a-row <span class="keyword">for</span> me] - [# <span class="keyword">of</span> <span class="keyword">open</span> <span class="number">2</span>-<span class="keyword">in</span>-a-row <span class="keyword">for</span> opponent].</span><br></pre></td></tr></table></figure></p><p>For example, for player ‘x’, the value of the following state is<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h = (<span class="number">2</span><span class="number">-1</span>) = <span class="number">1</span></span><br></pre></td></tr></table></figure></p><p>When h values are the same, the search breaks tie randomly.</p><h3 id="Submission-1"><a href="#Submission-1" class="headerlink" title="Submission"></a>Submission</h3><ul><li>a) A brief description of your algorithm and implementation.</li><li>b) Step-by-step of one game played between Beginner and Advanced. Beginner plays first. For every step played by Advanced, print the # of expanded nodes and the CPU execution time in milliseconds.</li><li>c) Same as (b) except Advanced plays first.</li></ul><h3 id="Part-III-Master"><a href="#Part-III-Master" class="headerlink" title="Part III. Master"></a>Part III. Master</h3><p>Implement a player, called Master, who runs the minimax algorithm on a 4-ply game tree, i.e., looking ahead 4 moves (2 moves by the player and 2 moves by the opponent). The heuristic evaluation function for cutoff nodes is the same as in part II.</p><h3 id="Submission-2"><a href="#Submission-2" class="headerlink" title="Submission"></a>Submission</h3><ul><li>a) Step-by-step of one game played between Advanced and Master. Advanced plays first. For every step played by Advanced and Master, show the # of expanded nodes and the CPU execution time in milliseconds.</li><li>b) Same as (b) except Master plays first.</li><li>c) Your code with appropriate comments.</li></ul><p>Your submission should be a single pdf file with file name containing your name and assignment number. For example, firstnameInitial_lastname_hw4.pdf for HW4.</p>]]></content>
-    
-    <summary type="html">
-    
-      在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的作业，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
     
   </entry>
   
