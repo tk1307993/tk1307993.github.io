@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CPSC217-Climograph.html</loc>
+    <lastmod>2019-11-24T09:10:01.100Z</lastmod>
+    <data>
+        <display>
+        <title>CPSC217-Climograph</title>
+        <pubTime>2019-11-24T09:07:22.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+        <tag>Third-party</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html</loc>
     <lastmod>2019-11-21T15:14:37.809Z</lastmod>
     <data>
@@ -1234,9 +1256,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
@@ -1260,9 +1282,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-11-21T15:14:37.809Z</updated>
+  <updated>2019-11-24T09:10:01.100Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CPSC217-Climograph</title>
+    <link href="https://tk1307993.coding.me/CPSC217-Climograph.html"/>
+    <id>https://tk1307993.coding.me/CPSC217-Climograph.html</id>
+    <published>2019-11-24T09:07:22.000Z</published>
+    <updated>2019-11-24T09:10:01.100Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>A climograph is a visual representation of the climate for a location. it shows temperature data using a red line, and precipitation data using blue bars. One temperature point and one precipitation bar are plotted for each month of the year. An example climograph, using climate data from Victoria, BC, is shown below.</p><p>Your program will draw a climograph using data entered by the user. It will begin by drawing the graph components such as the axes, month names and labels. Then it will read 12 precipitation values, one for each month from January to December, and draw the appropriate bars. Your program will conclude by reading 12 temperature values for January through to December and plotting the temperature data.</p><p>Each temperature value will be plotted asa red dot. A red line will connect the dot for each month to the dot for the previous month (except for January).</p><h3 id="Additional-Requirements"><a href="#Additional-Requirements" class="headerlink" title="Additional Requirements"></a>Additional Requirements</h3><p>You must make appropriate use of loops. While it is acceptable to use a long series of statements to place the month names on the graph, the numeric labels for temperatures and precipitation must be displayed using a loop. You must also use loops to read input from the user and draw the precipitation bars / temperature lines. An assignment that uses 24 distinct input statements to read the precipitation and temperature data will receive a grade of D or less, even if everything works perfectly.</p><p>Your program must leave appropriate gaps between the bars.</p><p>Your graph must include small tick marks next to the temperature and rainfall numeric labels, as shown in the sample output.</p><p>Your program should use a temperature scale that ranges from -20 to +20 degrees Celsius, and a precipitation scale that ranges from 0 to 200 millimeters. If you receive a value outside of these ranges you should still plot it - it will just appear above or below the axes.</p><h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>You will probably find the dots for the temperature data easier to plot than the bars for the precipitation data. As such, you might want to tackle the dots for temperature data first, even though it is entered after the precipitation data.</p><p>You will probably find the precipitation data easier to plot than the lines for the temperature data. As such, you might want to tackle the precipitation data before trying to draw the lines for the temperature data.</p><p>The temperature data spacing will work out nicely if you represent 1 degree Celsius by 10 pixels.</p><p>The precipitation data spacing will work out nicely if you represent 1 millimeter of precipitation by 2 pixels.</p><p>The spacing will work out nicely if you allocate 50 pixels to each month of the year.</p><p>Every time you run your program you will need to enter 24 data values. You can automate this by using a feature known as l/O redirection, which will allow your program to read the values from a file instead of from the keyboard. For example, to use the values from the file named Calgary.txt instead of reading values from the keyboard, enter the command:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">python</span> <span class="selector-tag">A3n2</span><span class="selector-class">.py</span> &lt; <span class="selector-tag">Calgary</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure></p><p>The details of how I/O redirection works aren’t important within the scope of this course. but your ability to use it by following the pattern above will save you a significant amount of typing. Several sample data sets saved in the correct format are available on the course website. Feel free to get as much help as you need on I/O redirection from the Us or instructor.</p><h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>This assignment will be graded on a combination of functionality and style. A base grade will be determined from the general level of functionality of the program (Does it draw the axes and labels successfully? Does it plot the precipitation data correctly? Does it plot the temperature data correctly?). The base grade will be recorded as a mark out of 12.</p><p>Style will be graded on a subtractive scale from 0 to -3. For example, an assignment which receives a base grade of 12 (A), but has several stylistic problems resulting in a -2 adjustment will receive an overall grade of 10 (3+). Fractional marks will be rounded to the closest integer.</p><h3 id="Individual-Work"><a href="#Individual-Work" class="headerlink" title="Individual Work"></a>Individual Work</h3><p>All assignments in this course are to be completed individually. Students are advised to read the guidelines for avoiding plagiarism located on the course website. Students are also advised that electronic tools may be used to detect plagiarism.</p><h3 id="late-Penalty"><a href="#late-Penalty" class="headerlink" title="late Penalty"></a>late Penalty</h3><p>Late assignments will not be accepted.</p><h3 id="Submission-Instructions"><a href="#Submission-Instructions" class="headerlink" title="Submission Instructions"></a>Submission Instructions</h3><p>Your program must be submitted both on paper and electronically. Paper submissions, consisting of a printed copy of your .py file, should be deposited in the appropriate assignment drop box on the second floor of the math sciences building. Your electronic submission should be submitted to the Assignment 2 drop box in DZL.</p>]]></content>
+    
+    <summary type="html">
+    
+      Python的画图类型作业，用给的SimpleGraphics.py库来实现，这个库基于tkinter，但是相比前者要精简许多。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
+    
+  </entry>
   
   <entry>
     <title>CS3350-Postfix-Expression-Evaluator</title>
@@ -451,30 +475,6 @@
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++代写：CSCE310-Analytical-Problems</title>
-    <link href="https://tk1307993.coding.me/CSCE310-Analytical-Problems.html"/>
-    <id>https://tk1307993.coding.me/CSCE310-Analytical-Problems.html</id>
-    <published>2019-09-18T13:25:30.000Z</published>
-    <updated>2019-09-18T13:27:18.990Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>This assignment consists of 6 analytical problems and 2 programming problems. Your solutions to the analytical problems must be submitted, as one PDF, via webhandin. While handwritten (then scanned) solutions to the analytical problems are acceptable, you are strongly encouraged to typeset your solutions in L A TEX or a word processor with an equation editor. The legibility of your solutions is of great importance. It is required that your PDF’s filename not include spaces, percent signs, pound symbols, or parentheses.</p><h3 id="Programming-Assignment"><a href="#Programming-Assignment" class="headerlink" title="Programming Assignment"></a>Programming Assignment</h3><p>Your methods will be tested on the cse.unl.edu server, using<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc version <span class="number">4.8</span><span class="number">.1</span> <span class="number">20130909</span> [gcc<span class="number">-4</span>_8-branch revision <span class="number">202388</span>] (SUSE Linux).</span><br></pre></td></tr></table></figure></p><p>To ensure proper execution, you should test your submission in the webgrader<br>You will submit csce310hw002pt01.h, csce310hw002pt02.h, csce310hw002pt01.cpp, csce310hw002pt02.cpp (and maybe csce310hw002pt03.h and csce310hw002pt03.cpp), along with your PDF, via web handin.</p><h3 id="ourQuickSelect"><a href="#ourQuickSelect" class="headerlink" title="ourQuickSelect"></a>ourQuickSelect</h3><p>ourQuickSelect is a function that should take an integer value i and a vector of n integer values. ourQuickSelect should return the number of comparisions needed to find the i th smallest value in the vector using the quickselect algorithm. The first element in the vector should be used as the pivot. You may assume that each number in the vector is unique.</p><h3 id="sumToN"><a href="#sumToN" class="headerlink" title="sumToN"></a>sumToN</h3><p>sumToN is an adaptation of Exercise 6.1.7 on page 206. sumToN will take two arguments: a vector of integer values and another integer value. The function will return true if two unique values in the array sum to the quantitiy of the second input value. It may be assumed that the vector will be in ascending order.</p><h3 id="averageComparisions-10-Points-Extra-Credit-or-Honors-Contract"><a href="#averageComparisions-10-Points-Extra-Credit-or-Honors-Contract" class="headerlink" title="averageComparisions (10 Points Extra Credit or Honors Contract)"></a>averageComparisions (10 Points Extra Credit or Honors Contract)</h3><p>Given an array of n integers, return the average number of comparisons that would be required to successfully find an element in the array using binary search. You may assume that the values in the array will be provided in ascending order. When more than one element can be chosen in the search, choose the element with a smaller value.</p><h3 id="General-Guidelines"><a href="#General-Guidelines" class="headerlink" title="General Guidelines"></a>General Guidelines</h3><p>Sample header, source, and testing files have been provided. You may modify the .h and .cpp files as needed, but you will only be turning in the four/six files mentioned above. The webgrader will be compiling the code with the command g++ -o /path/to/executable.out /path/to/source/files/*.cpp for each part, but I will only be copying the files I asked for out of your submission and into separate directories for Part 1, Part 2, and Part 3.</p><h3 id="Written-Assignment"><a href="#Written-Assignment" class="headerlink" title="Written Assignment"></a>Written Assignment</h3><p>Question 1 (10 points)<br>Question 5.3.2 in The Design and Analysis of Algorithms</p><h3 id="Question-2-10-points"><a href="#Question-2-10-points" class="headerlink" title="Question 2 (10 points)"></a>Question 2 (10 points)</h3><p>(a) Draw a binary tree with 10 nodes labeled 0, 1, … , 9 in such a way that the inorder and preorder traversals of the tree yield the following lists: 3, 1, 7, 9, 5, 8, 2, 0, 6, 4 (Preorder) and 9, 7, 1, 5, 3, 8, 0, 6, 4, 2 (Inorder)</p><p>(b) Give an example of two permutations of the same n labels 0, 1, … , n − 1 that cannot be inorder and postorder traversal lists of the same binary tree.</p><p>(c) Design an algorithm that constructs a binary tree for which two given lists of n labels 0, 1, … , n − 1 are generated by the inorder and postorder traversals of the tree. Your algorithm should also indentify inputs for which the problem has no solution.</p><h3 id="Question-3-10-points"><a href="#Question-3-10-points" class="headerlink" title="Question 3 (10 points)"></a>Question 3 (10 points)</h3><p>Estimate how many searches will be needed to justify time spent on presorting an array of 10^6 elements if sorting is done by mergesort and searching is done by binary search. You may assume that all searches are for elements known to be in the array. What about an array of 10^9 elements?</p><h3 id="Question-4-10-points"><a href="#Question-4-10-points" class="headerlink" title="Question 4 (10 points)"></a>Question 4 (10 points)</h3><p>Question 6.1.1 in The Design and Analysis of Algorithms</p><h3 id="Question-5-10-points"><a href="#Question-5-10-points" class="headerlink" title="Question 5 (10 points)"></a>Question 5 (10 points)</h3><p>Question 6.1.9 in The Design and Analysis of Algorithms</p><h3 id="Question-6-10-points"><a href="#Question-6-10-points" class="headerlink" title="Question 6 (10 points)"></a>Question 6 (10 points)</h3><p>Question 6.5.1 in The Design and Analysis of Algorithms</p>]]></content>
-    
-    <summary type="html">
-    
-      代写两个算法程序以及六个算法分析题，代码题简单，但是分析题比较繁琐。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
