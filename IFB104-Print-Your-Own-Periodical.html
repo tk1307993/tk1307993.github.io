@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,Algorithm," />
+  <meta name="keywords" content="Algorithm,Web,Third-party," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
-<meta name="keywords" content="Data Structure,Algorithm">
+<meta name="description" content="这次需要代写的作业比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
+<meta name="keywords" content="Algorithm,Web,Third-party">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CP164-Stacks">
-<meta property="og:url" content="https://tk1307993.coding.me/CP164-Stacks.html">
+<meta property="og:title" content="IFB104-Print-Your-Own-Periodical">
+<meta property="og:url" content="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
+<meta property="og:description" content="这次需要代写的作业比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-02T02:28:52.822Z">
+<meta property="og:updated_time" content="2019-11-26T03:36:28.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CP164-Stacks">
-<meta name="twitter:description" content="这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。">
+<meta name="twitter:title" content="IFB104-Print-Your-Own-Periodical">
+<meta name="twitter:description" content="这次需要代写的作业比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CP164-Stacks.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html"/>
 
 
 
 
 
-  <title>Python代写：CP164-Stacks | 留学生CS编程作业代写</title>
+  <title>IFB104-Print-Your-Own-Periodical | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CP164-Stacks.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CP164-Stacks</h2>
+          <h2 class="post-title" itemprop="name headline">IFB104-Print-Your-Own-Periodical</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T10:25:25+08:00">
-                2019-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-26T11:33:32+08:00">
+                2019-11-26
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的是一个关于Stack的Lab作业，由于是Lab作业，工作量并不大，都是基本的Stack操作。
+                  这次需要代写的作业比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。
               </div>
           
 
@@ -360,31 +360,65 @@
       
 
       
-        <h3 id="Using-Versus-Extending-an-ADT"><a href="#Using-Versus-Extending-an-ADT" class="headerlink" title="Using Versus Extending an ADT"></a>Using Versus Extending an ADT</h3><p>Note: In this and future labs we make a distinction between using an ADT and extending an ADT. You must be clear on this distinction:</p>
-<h3 id="Using-an-ADT"><a href="#Using-an-ADT" class="headerlink" title="Using an ADT"></a>Using an ADT</h3><p>When asked to use an ADT write a program that is implementation independent, i.e. the program uses only ADT methods (such as those for a stack) and works for either the array or linked implementation of a data structure. Do not change any code in the ADT implementation files such as stack_array.py.</p>
-<h3 id="Extending-an-ADT"><a href="#Extending-an-ADT" class="headerlink" title="Extending an ADT"></a>Extending an ADT</h3><p>When asked to extend an ADT you are going to add new methods to an ADT, meaning that you are going to add code to one or both of the array or linked implementation of a data structure, such as stack_array.py.</p>
-<h3 id="The-Stack-ADT-Abstract-Data-Type"><a href="#The-Stack-ADT-Abstract-Data-Type" class="headerlink" title="The Stack ADT (Abstract Data Type)"></a>The Stack ADT (Abstract Data Type)</h3><p>A stack is a data structure that follows LIFO (Last In, First Out) rules. Data is added to the top of a stack and removed from the top of a stack. The Stack ADT provides methods for manipulating data in a stack.<br>A reminder of some important points of ADT use are:</p>
+        <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>Hardcopy periodicals such as newspapers, magazines, newsletters, etc. are all in decline as people increasingly turn to online media. Nonetheless, there is still a need for people to access regularly-updated information in an easy-to-read format. Here you will develop a program that produces a customised periodical in HTML format, using data downloaded from the World-Wide Web. The program will have a Graphical User Interface that allows the user to control production of the periodical, which can then be viewed in a standard web browser. Most importantly, your publication will comprise up-to-date data sourced from online “feeds” that are updated on a regular basis. To complete this assignment you will need to: (a) download web pages in Python and use regular expressions to extract particular elements from them, (b) create an HTML file containing the extracted elements, and (c) use Tkinter to provide a simple Graphical User Interface.</p>
+<h3 id="Illustrative-Example"><a href="#Illustrative-Example" class="headerlink" title="Illustrative Example"></a>Illustrative Example</h3><p>For the purposes of this task you have a totally free choice of what kind of periodical to produce. It could be:</p>
 <ul>
-<li>No matter what the underlying implementation of the stack programs should access a stack only through these methods.</li>
-<li>As a corollary to the first point, the stack can be implemented in any number of ways so long as any given implementation follows the ADT function requirements. The implementation must invisible to the program using the Stack ADT.</li>
-<li>A stack may store any type of data, although all the data it stores should be of the same type.</li>
+<li>a newspaper</li>
+<li>a current affairs magazine</li>
+<li>a fashion/lifestyle magazine</li>
+<li>a newsletter for online gamers</li>
+<li>a sports journal</li>
+<li>a science and technology review</li>
+<li>etc.</li>
 </ul>
-<p>The following code imports a stack class and the Food class then initializes a stack:<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> stack_array <span class="keyword">import</span> Stack</span><br><span class="line"><span class="keyword">from</span> food <span class="keyword">import</span> Food</span><br><span class="line"></span><br><span class="line">s = Stack()</span><br><span class="line"> ...</span><br></pre></td></tr></table></figure></p>
-<h3 id="Project-References"><a href="#Project-References" class="headerlink" title="Project References"></a>Project References</h3><p>As we work through the term we will be creating a number of different data structures and adding more functionality to the Food library already written. Making sure that each new project has the latest version of a data structure or Food library is difficult to do if we are reduced to copying and pasting our pydev modules into each new project. Fortunately, Eclipse provides a much better mechanism to reference code. Setting up Project References allows you to link one Pydev project to another, and to use the code from one project in another with the import and from … import * statements already shown. Nothing needs to be changed in your source code.</p>
-<p>To make a reference from one project to another in Eclipse, right click on a project name in the Navigator pane. From the resulting pop-up menu click on Properties and then on Project References in the resulting dialog box.</p>
-<p>Click on the check box of all projects that you wish to reference from the current project. In this example the project album is already selected, and the project data_structures will be added as a reference. Once this is done all of the classes in both album and data_structures will be available through import statements.</p>
-<p>A few things to keep in mind when using project references:</p>
+<p>However, whatever theme you choose, you must be able to find at least four different online web pages that contain regularly-updated stories or articles in different categories under the overall theme. Each such story must contain a heading, a photograph, some text and a publication date. A good source for such data is Rich Site Summary (RSS) web-feed documents. The appendix below lists some such sites, but you are encouraged to find your own of personal interest.</p>
+<p>To demonstrate the idea, we will publish our own newspaper, using data extracted from News Limited’s web site. Our demonstration program allows users to select from several categories, National News, Sports, World News, Business News, Entertainment and Technology. The program then downloads relevant data from the Web and uses it to produce an HTML document which can be read in a standard web browser.</p>
+<p>The screenshot below shows our example solution’s GUI when it first starts.</p>
+<p>The user is invited to select which categories of information they want included in their newspaper. In this case this is done by selecting check buttons, but other solutions are possible. Below the user has selected four news categories of interest.</p>
+<p>When ready the user then presses the button to start “printing” the newspaper (i.e., to create an HTML file containing its contents). The system downloads current data from the web site and generates the file. The user can follow the “printing” process’s progress in the small text window.</p>
+<p>As well as printing the latest top news items in each of the four categories, the system also generates a “masthead” which identifies the periodical.</p>
+<p>Once the file has been created the user can open it in their preferred web browser. Alternatively, pressing the “Read” button in the GUI above will open the file in the host operating system’s default browser.</p>
+<p>The generated document contains the masthead and the current top story in each of the selected categories. It is shown overleaf as viewed in the Firefox browser.</p>
+<p>Above you can see the masthead with the name of the periodical, The Daily Planet in this case, and an image indicating the nature of its contents. (Our fictional newspaper’s slogan and editor are also shown, but these features are optional.)</p>
+<p>Scrolling down in the HTML document shows the current top news item in each of the four selected categories when the program was run. Three of these are shown below, as they were when this demonstration was run. (Some of the images downloaded at this time were small “thumbnails”, hence their blurry appearance when enlarged.)</p>
+<p>Notice that each top news item displayed above contains:</p>
+<ol>
+<li>the category of story;</li>
+<li>the URL where the original data was found;</li>
+<li>the story’s title (headline);</li>
+<li>a photo illustrating the story;</li>
+<li>a short summary of the story; and</li>
+<li>the date and time the story appeared online.</li>
+</ol>
+<p>Most importantly, items 3 to 6 are all extracted “live” from the online web document indicated. This was done by downloading the HTML source and using regular expressions to find the necessary elements needed to construct our own version of the story. The first part of the HTML code generated by our Python program is shown below (as displayed in the Firefox browser).</p>
+<p>Although not intended for human consumption, the generated HTML code is nonetheless laid out neatly, and with comments indicating the purpose of each part.</p>
+<p>To compose our HTML document, Rich Site Summary (RSS) web-feed files are downloaded from the web site. RSS documents are XML files specifically intended to be machine-readable. They have a simple structure that makes it reasonably easy to extract their elements. An example of such a web document as it appears when examined in a web broswer is shown below.</p>
+<p>This was was the source of the data used to produce our National News story shown above. To compose the corresponding page for our newspaper we extracted the latest story’s headline, story text, date and the address of the associated JPEG image. This data was then integrated into our HTML code.</p>
+<p>We also discovered that sometimes the downloaded text contained unusual characters that are not handled properly in Python strings, most notably “smart” quotes, so we replaced these with plain characters before “printing” our newspaper.</p>
+<h3 id="Requirements-and-marking-guide"><a href="#Requirements-and-marking-guide" class="headerlink" title="Requirements and marking guide"></a>Requirements and marking guide</h3><p>To complete this task you are required to develop an application in Python similar to that above, using the provided publisher.py template file as your starting point. Your solution must support at least the following features.</p>
+<p>Generating a masthead<br>Your program must be able to generate an HTML file, publication.html, which begins with a ‘masthead’ identifying the nature of your periodical. When viewed in a web browser, the masthead part of the document must contain at least the following elements:</p>
 <ul>
-<li>All referenced projects must be open when attempting to run a program.</li>
-<li>Submit all referenced projects as part of your Eclipse archive (.zip) file when submitting exercises or the markers will not be able to run your programs. You may select multiple projects to include in an Eclipse archive file.</li>
-<li>Do not use the same Pydev module names in two different referenced projects or Eclipse will not know which one an import statement is supposed to be referring to.</li>
-<li>Project references go one way only. If the project stacks references the project data_structures, then data_structures should not reference stacks. Circular references are a very bad idea.</li>
-<li>Upon occasion referenced projects may become ‘out of sync’ with the project that references them. To fix this, right-click on the project and choose Refresh to update Eclipse from the file system.</li>
+<li>The name of the periodical.</li>
+<li>An image evocative of the periodical’s theme.</li>
 </ul>
-<h3 id="Array-based-Stacks"><a href="#Array-based-Stacks" class="headerlink" title="Array-based Stacks"></a>Array-based Stacks</h3><p>The file stack_array.py is a text file containing the basic outline of the array-based Stack class. Copy this code into the Pydev module stack_array.py in your login_data_structures project (where login is your Network login). Thus, a student with the Network login barn4520 should name their projects barn4520_Food and barn4520_data_structures.) The Lab Instructor will walk you through this library and discuss its inner workings.</p>
-<h3 id="Tasks"><a href="#Tasks" class="headerlink" title="Tasks"></a>Tasks</h3><p>(If you were unable to complete Lab 1 correctly, you may use these files: food.py, food_utilities.py, and foods.txt as the basis for your lab. These files will not be available until after the labs for the previous week are completed.)</p>
-<p>For the appropriate tasks you may download and use the Food class definition in food.py from Lab 1.</p>
-<p>For all of your data structures (stacks, queues, BSTs, etc.), put your code into libraries in your Pydev project login_data_structures.</p>
+<p>The image must be sourced from online (you cannot attach image files to your solution). Since it will never change, the URL for this particular image can be “hardwired” in your Python code. The HTML source generated by your Python program must be laid out neatly.</p>
+<h3 id="Generating-four-stories"><a href="#Generating-four-stories" class="headerlink" title="Generating four stories"></a>Generating four stories</h3><p>Your Python program must be capable of generating at least four distinct “stories” as part of your periodical. Each such story must be derived from a different online web page, and must represent the latest story in a particular category at the time when the program runs. When viewed in a web browser, each story must contain at least the following elements:</p>
+<ul>
+<li>the category of story,</li>
+<li>the URL where the original data was found,</li>
+<li>the story’s title (headline),</li>
+<li>an image illustrating the story,</li>
+<li>a short summary of the story, and</li>
+<li>the date and time the story appeared online.</li>
+</ul>
+<p>The last four of these items must all be extracted from the online document and must all belong together (i.e., you can’t have an image from one story and the headline from another). Each of the elements must be extracted from the original document separately. It is not acceptable to simply copy large chunks of the original document’s source code. The HTML source code generated by your Python program must be laid out neatly.</p>
+<p>The precise visual layout, colour and style of the story elements is up to you and is determined by the design of your generated HTML code. The periodical must be easy to read. No HTML markup tags or other odd characters should appear in any of the text displayed to the user.</p>
+<p>Data on the web changes frequently, so your solution must continue to work even after the web documents you use have been updated. For this reason it is unacceptable to “hardwire” your solution to the particular text and images appearing on the web on a particular day. Instead you will need to use text searching functions and regular expressions to actively find the text and images in the document, regardless of any updates that may have occurred since you wrote your program.</p>
+<h3 id="Code-quality-and-presentation"><a href="#Code-quality-and-presentation" class="headerlink" title="Code quality and presentation"></a>Code quality and presentation</h3><p>Your Python program code must be presented in a professional manner. See the coding guidelines in the IFB104 Code Presentation Guide (on Blackboard under Assessment) for suggestions on how to achieve this. In particular, each significant code segment must be clearly commented to say what it does, e.g., “Create the masthead”, “Extract the first headline from the web page’s source code”, etc.</p>
+<h3 id="Extra-feature"><a href="#Extra-feature" class="headerlink" title="Extra feature"></a>Extra feature</h3><p>Part B of this assignment will require you to make a ‘last-minute extension’ to your solution. The instructions for Part B will not be released until just before the final deadline for Assignment 2.</p>
+<p>You can add other features if you wish, as long as you meet these basic requirements. For instance, in our example above we included a button in the GUI which opened the generated HTML document in the default web browser. We also supported more than four story categories.</p>
+<p>You must complete the task using only basic Python features and the modules already imported into the provided template. In particular, you may not import any local image files. All displayed images and story text must be downloaded from online sources each time your program is run.</p>
+<p>However, your solution is not required to follow precisely our example shown above. Instead you are strongly encouraged to be creative in the your choices of stories to display, the design of your Graphical User Interface, and the design of your periodical.</p>
 
       
     </div>
@@ -402,9 +436,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
-          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Third-party/" rel="tag"># Third-party</a>
           
         </div>
       
@@ -417,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CIS304-Bank-Account-Application.html" rel="next" title="Java代写：CIS304-Bank-Account-Application">
-                <i class="fa fa-chevron-left"></i> Java代写：CIS304-Bank-Account-Application
+              <a href="/CPSC217-Climograph.html" rel="next" title="CPSC217-Climograph">
+                <i class="fa fa-chevron-left"></i> CPSC217-Climograph
               </a>
             
           </div>
@@ -426,10 +462,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CPSC4660-Database-Management-Systems.html" rel="prev" title="C代写：CPSC4660-Database-Management-Systems">
-                C代写：CPSC4660-Database-Management-Systems <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-Versus-Extending-an-ADT"><span class="nav-number">1.</span> <span class="nav-text">Using Versus Extending an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-an-ADT"><span class="nav-number">2.</span> <span class="nav-text">Using an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extending-an-ADT"><span class="nav-number">3.</span> <span class="nav-text">Extending an ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Stack-ADT-Abstract-Data-Type"><span class="nav-number">4.</span> <span class="nav-text">The Stack ADT (Abstract Data Type)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-References"><span class="nav-number">5.</span> <span class="nav-text">Project References</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-based-Stacks"><span class="nav-number">6.</span> <span class="nav-text">Array-based Stacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks"><span class="nav-number">7.</span> <span class="nav-text">Tasks</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Illustrative-Example"><span class="nav-number">2.</span> <span class="nav-text">Illustrative Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements-and-marking-guide"><span class="nav-number">3.</span> <span class="nav-text">Requirements and marking guide</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generating-four-stories"><span class="nav-number">4.</span> <span class="nav-text">Generating four stories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-quality-and-presentation"><span class="nav-number">5.</span> <span class="nav-text">Code quality and presentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extra-feature"><span class="nav-number">6.</span> <span class="nav-text">Extra feature</span></a></li></ol></div>
             
 
           </div>
