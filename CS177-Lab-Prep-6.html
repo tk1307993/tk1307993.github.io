@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Graphics,Fundanmental," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="使用Python Graphics绘图库完成作业">
+<meta name="keywords" content="Graphics,Fundanmental">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS177-Lab-Prep-6">
+<meta property="og:url" content="https://tk1307993.coding.me/CS177-Lab-Prep-6.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="使用Python Graphics绘图库完成作业">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-27T10:12:55.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS177-Lab-Prep-6">
+<meta name="twitter:description" content="使用Python Graphics绘图库完成作业">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS177-Lab-Prep-6.html"/>
+
+
+
+
+
+  <title>CS177-Lab-Prep-6 | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS177-Lab-Prep-6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS177-Lab-Prep-6</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-27T18:10:26+08:00">
+                2019-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Python Graphics绘图库完成作业
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Assignment-Description"><a href="#Assignment-Description" class="headerlink" title="Assignment Description:"></a>Assignment Description:</h3><p>In this assignment you will write and submit the labprep6.py program. Complete and submit the file by 11:59<br>pm on the night before your lab to receive full credit.</p>
+<h3 id="Python-Graphics-Library"><a href="#Python-Graphics-Library" class="headerlink" title="Python Graphics Library:"></a>Python Graphics Library:</h3><p>Carefully review the Graphics chapter in the Zelle text (Ch 4) covering this topic and the Python Graphics<br>library documentation found at: <a href="http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf" target="_blank" rel="noopener">http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf</a> before starting Lab<br>Prep 6. If you haven’t already, download the Graphics module graphics.py from Blackboard. Remember that it<br>must be in the same folder as labprep6.py</p>
+<h3 id="Steps-For-This-Assignment"><a href="#Steps-For-This-Assignment" class="headerlink" title="Steps For This Assignment:"></a>Steps For This Assignment:</h3><ol>
+<li>Setup your Python file labprep6.py with an appropriate comments header</li>
+<li>Organize labprep6.py using comments for each block of planned code</li>
+<li>In each block, write the necessary Python code to complete the task</li>
+<li>Save, test, then upload your completed labprep6.py Python program to Blackboard</li>
+</ol>
+<h4 id="TO-DO-1-Setup-Your-Python-Program-File-labprep6-py"><a href="#TO-DO-1-Setup-Your-Python-Program-File-labprep6-py" class="headerlink" title="TO DO #1: Setup Your Python Program File labprep6.py"></a>TO DO #1: Setup Your Python Program File labprep6.py</h4><p>In Python, the # sign indicates a comment, which documents and organizes your code. Python does not<br>execute these commented lines; they are used to make the program easier to understand. In the Python IDLE<br>editor, open a new program window. At the top of the file, create a program header by typing in the following<br>text:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> CS 177 – labprep6.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert your name, and Purdue ID here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Following Coding Standards and Guidelines</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert a description of the program here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br></pre></td></tr></table></figure></p>
+<h4 id="TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments"><a href="#TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments" class="headerlink" title="TO DO #2: Organize labprep6.py with pseudo code comments"></a>TO DO #2: Organize labprep6.py with pseudo code comments</h4><p>Plan and comment your program. By now, you should have had enough<br>practice to writing good, descriptive pseudo code comments for each<br>section and function.</p>
+<h4 id="TO-DO-3-The-main-Function"><a href="#TO-DO-3-The-main-Function" class="headerlink" title="TO DO #3: The main() Function"></a>TO DO #3: The main() Function</h4><p>Write a Python main() function that takes no arguments and returns no<br>values. This function should create a Graphics Window, of size 500x500<br>pixels. Set the background to light grey. Create a red Square (Rectangle<br>with equal sides measuring 30) in the center of the Graphics Window.<br>An example is shown in Figure 1.</p>
+<h4 id="TO-DO-4-Animating-the-square’s-movement"><a href="#TO-DO-4-Animating-the-square’s-movement" class="headerlink" title="TO DO #4: Animating the square’s movement"></a>TO DO #4: Animating the square’s movement</h4><p>Edit your main() function, so that it now waits for the user to click anywhere within the Graphics window.<br>Once a mouse click is detected, the red square should move from its current location to the location of the<br>mouse click.</p>
+<p>NOTE: To earn full credit, the square should not disappear and reappear to move across the screen – it must<br>appear to move smoothly across the window to the mouse click location. An example of this animation is<br>shown with the Lab Prep 6 assignment on Blackboard.</p>
+<p>HINT: It could be helpful to write a separate function that animates the square which will be called<br>within the main() function after a mouse click.</p>
+<p>The user will be able to click in the Window to move the square five (5) times. After the square reaches the fifth<br>mouse click location, display a Text object in the center of the Window: “Click to Exit”. One additional<br>click closes the Graphics window and ends the program without error messages.</p>
+<h4 id="Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard"><a href="#Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard" class="headerlink" title="Save and Submit your Completed labprep6.py File on Blackboard:"></a>Save and Submit your Completed labprep6.py File on Blackboard:</h4><p>Save your program with the file name labprep6.py, and submit it by 11:59 pm on the night before lab.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Graphics/" rel="tag"># Graphics</a>
+          
+            <a href="/tags/Fundanmental/" rel="tag"># Fundanmental</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/IFB104-Print-Your-Own-Periodical.html" rel="next" title="IFB104-Print-Your-Own-Periodical">
+                <i class="fa fa-chevron-left"></i> IFB104-Print-Your-Own-Periodical
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">173</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Description"><span class="nav-number">1.</span> <span class="nav-text">Assignment Description:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Graphics-Library"><span class="nav-number">2.</span> <span class="nav-text">Python Graphics Library:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Steps-For-This-Assignment"><span class="nav-number">3.</span> <span class="nav-text">Steps For This Assignment:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TO-DO-1-Setup-Your-Python-Program-File-labprep6-py"><span class="nav-number">3.1.</span> <span class="nav-text">TO DO #1: Setup Your Python Program File labprep6.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments"><span class="nav-number">3.2.</span> <span class="nav-text">TO DO #2: Organize labprep6.py with pseudo code comments</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TO-DO-3-The-main-Function"><span class="nav-number">3.3.</span> <span class="nav-text">TO DO #3: The main() Function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TO-DO-4-Animating-the-square’s-movement"><span class="nav-number">3.4.</span> <span class="nav-text">TO DO #4: Animating the square’s movement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard"><span class="nav-number">3.5.</span> <span class="nav-text">Save and Submit your Completed labprep6.py File on Blackboard:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

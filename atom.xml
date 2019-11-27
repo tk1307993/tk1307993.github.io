@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-11-26T03:36:28.318Z</updated>
+  <updated>2019-11-27T10:12:55.396Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS177-Lab-Prep-6</title>
+    <link href="https://tk1307993.coding.me/CS177-Lab-Prep-6.html"/>
+    <id>https://tk1307993.coding.me/CS177-Lab-Prep-6.html</id>
+    <published>2019-11-27T10:10:26.000Z</published>
+    <updated>2019-11-27T10:12:55.396Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Assignment-Description"><a href="#Assignment-Description" class="headerlink" title="Assignment Description:"></a>Assignment Description:</h3><p>In this assignment you will write and submit the labprep6.py program. Complete and submit the file by 11:59<br>pm on the night before your lab to receive full credit.</p><h3 id="Python-Graphics-Library"><a href="#Python-Graphics-Library" class="headerlink" title="Python Graphics Library:"></a>Python Graphics Library:</h3><p>Carefully review the Graphics chapter in the Zelle text (Ch 4) covering this topic and the Python Graphics<br>library documentation found at: <a href="http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf" target="_blank" rel="noopener">http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf</a> before starting Lab<br>Prep 6. If you haven’t already, download the Graphics module graphics.py from Blackboard. Remember that it<br>must be in the same folder as labprep6.py</p><h3 id="Steps-For-This-Assignment"><a href="#Steps-For-This-Assignment" class="headerlink" title="Steps For This Assignment:"></a>Steps For This Assignment:</h3><ol><li>Setup your Python file labprep6.py with an appropriate comments header</li><li>Organize labprep6.py using comments for each block of planned code</li><li>In each block, write the necessary Python code to complete the task</li><li>Save, test, then upload your completed labprep6.py Python program to Blackboard</li></ol><h4 id="TO-DO-1-Setup-Your-Python-Program-File-labprep6-py"><a href="#TO-DO-1-Setup-Your-Python-Program-File-labprep6-py" class="headerlink" title="TO DO #1: Setup Your Python Program File labprep6.py"></a>TO DO #1: Setup Your Python Program File labprep6.py</h4><p>In Python, the # sign indicates a comment, which documents and organizes your code. Python does not<br>execute these commented lines; they are used to make the program easier to understand. In the Python IDLE<br>editor, open a new program window. At the top of the file, create a program header by typing in the following<br>text:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> CS 177 – labprep6.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert your name, and Purdue ID here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Following Coding Standards and Guidelines</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert a description of the program here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br></pre></td></tr></table></figure></p><h4 id="TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments"><a href="#TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments" class="headerlink" title="TO DO #2: Organize labprep6.py with pseudo code comments"></a>TO DO #2: Organize labprep6.py with pseudo code comments</h4><p>Plan and comment your program. By now, you should have had enough<br>practice to writing good, descriptive pseudo code comments for each<br>section and function.</p><h4 id="TO-DO-3-The-main-Function"><a href="#TO-DO-3-The-main-Function" class="headerlink" title="TO DO #3: The main() Function"></a>TO DO #3: The main() Function</h4><p>Write a Python main() function that takes no arguments and returns no<br>values. This function should create a Graphics Window, of size 500x500<br>pixels. Set the background to light grey. Create a red Square (Rectangle<br>with equal sides measuring 30) in the center of the Graphics Window.<br>An example is shown in Figure 1.</p><h4 id="TO-DO-4-Animating-the-square’s-movement"><a href="#TO-DO-4-Animating-the-square’s-movement" class="headerlink" title="TO DO #4: Animating the square’s movement"></a>TO DO #4: Animating the square’s movement</h4><p>Edit your main() function, so that it now waits for the user to click anywhere within the Graphics window.<br>Once a mouse click is detected, the red square should move from its current location to the location of the<br>mouse click.</p><p>NOTE: To earn full credit, the square should not disappear and reappear to move across the screen – it must<br>appear to move smoothly across the window to the mouse click location. An example of this animation is<br>shown with the Lab Prep 6 assignment on Blackboard.</p><p>HINT: It could be helpful to write a separate function that animates the square which will be called<br>within the main() function after a mouse click.</p><p>The user will be able to click in the Window to move the square five (5) times. After the square reaches the fifth<br>mouse click location, display a Text object in the center of the Window: “Click to Exit”. One additional<br>click closes the Graphics window and ends the program without error messages.</p><h4 id="Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard"><a href="#Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard" class="headerlink" title="Save and Submit your Completed labprep6.py File on Blackboard:"></a>Save and Submit your Completed labprep6.py File on Blackboard:</h4><p>Save your program with the file name labprep6.py, and submit it by 11:59 pm on the night before lab.</p>]]></content>
+    
+    <summary type="html">
+    
+      使用Python Graphics绘图库完成作业
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Graphics" scheme="https://tk1307993.coding.me/tags/Graphics/"/>
+    
+      <category term="Fundanmental" scheme="https://tk1307993.coding.me/tags/Fundanmental/"/>
+    
+  </entry>
   
   <entry>
     <title>IFB104-Print-Your-Own-Periodical</title>
@@ -455,28 +479,6 @@
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS240-Number-Conversion-and-Bit-Manipulation</title>
-    <link href="https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html"/>
-    <id>https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html</id>
-    <published>2019-09-24T13:24:14.000Z</published>
-    <updated>2019-09-24T13:32:48.917Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Step-0-Introduction"><a href="#Step-0-Introduction" class="headerlink" title="Step 0. Introduction"></a>Step 0. Introduction</h3><p>In this lab you will write a number converter, implement memdump to display memory content, introduction to pointers, implement string functions with pointers, and bit operations.</p><h3 id="Step-1-Writing-a-number-converter"><a href="#Step-1-Writing-a-number-converter" class="headerlink" title="Step 1. Writing a number converter"></a>Step 1. Writing a number converter</h3><p>Using convert.c write a program to convert a given number from one base to another. The format is:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert <span class="tag">&lt;<span class="name">basefrom</span>&gt;</span> <span class="tag">&lt;<span class="name">baseto</span>&gt;</span> <span class="tag">&lt;<span class="name">number</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p>You now know how to access the arguments on the command line. Assume that basefrom and baseto are integers between 2 and 25 (both inclusive). Since base 16 uses the characters A, B, C, D, E, F to represent decimal numbers 10 through 15, bases 17 through 20 will involve additional characters. For example, base 20 will involve the additional characters G, H, I and J. Use defensive programming to make sure your command line arguments are what you would expect. You may assume that no number (in any base) has more than 32 digits, and all numbers are nonnegative.</p><p>To convert a number, say (123)9, from base 9 to another base such as base 8, simply convert from base 9 to decimal (i.e., base 10), to get the number, i.e.,</p><blockquote><p>(1 x 92) + (2 x 91) + (3 x 90) = (102) 10</p></blockquote><p>and then convert to base 8 by doing repeated division, just the way you convert from decimal to binary (base 2) - simple, because you understand decimal (base 10) arithmetic. In this case you should get (146)8. The following link may refresh your memory.</p><h3 id="Step-2-Implement-bit-operations"><a href="#Step-2-Implement-bit-operations" class="headerlink" title="Step 2. Implement bit operations."></a>Step 2. Implement bit operations.</h3><p>You will implement the bit operations described in the file lab4-src/bits.c . To test your implementation run testall.</p><p>Notice that the printbits() should prints the 1s and 0s in one line followed by another line with the indices (mod 10) of the bits.</p><h3 id="Step-3-Our-Tests"><a href="#Step-3-Our-Tests" class="headerlink" title="Step 3. Our Tests"></a>Step 3. Our Tests</h3><p>Also, make sure that your program passes our tests. To run the tests, compile your program and type<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./testall</span></span><br></pre></td></tr></table></figure></p><p>or run each individual test as indicated in the output.</p><p>Make sure that all tests pass and testall gives the maximum points.</p><h3 id="Step-4-Turning-In-your-Project"><a href="#Step-4-Turning-In-your-Project" class="headerlink" title="Step 4. Turning In your Project"></a>Step 4. Turning In your Project</h3><p>Follow these instructions to turn in lab4.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd cs240</span><br><span class="line">turnin -c cs240 -v -<span class="selector-tag">p</span> lab4 lab4-src</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      虽然是一个Lab作业，但由于测试特别多，导致这两个小程序编写时间长于一般的Lab作业。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
