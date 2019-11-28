@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-11-27T10:12:55.396Z</updated>
+  <updated>2019-11-28T00:42:48.427Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java-Iterator</title>
+    <link href="https://tk1307993.coding.me/Java-Iterator.html"/>
+    <id>https://tk1307993.coding.me/Java-Iterator.html</id>
+    <published>2019-11-28T00:41:33.000Z</published>
+    <updated>2019-11-28T00:42:48.427Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Assignment-6"><a href="#Assignment-6" class="headerlink" title="Assignment 6"></a>Assignment 6</h1><p>In this assignment, you will create three classes that implement the <code>Iterator&lt;&gt;</code> interface in specialized ways.</p><p>Read through the code provided. You should recognize the interfaces Position, Driver, and Vehicle and their implementations PositionImpl, DriverImpl, and VehicleImpl from Assignment 3. These classes are complete and you should not have to modify them in any way to complete this assignment.</p><h1 id="Novice-10-points"><a href="#Novice-10-points" class="headerlink" title="Novice (10 points)"></a>Novice (10 points)</h1><p>Create a class called <code>ProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for the class should be declared as:</p><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> proximity_limit)</span><br></pre></td></tr></table></figure><p>A ProximityIterator should iterate through all of the Driver objects in the collection that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to <code>proximity_limit</code>. If <code>next()</code> is called but there is no next eligible driver, throw a <code>NoSuchElementException</code>.</p><p>Tips:</p><ul><li>In your constructor, use the <code>iterator</code> method of the provided driver_pool to create an iterator for all of the Driver objects in the collection. Store this iterator in an instance field.</li><li>Use an instance field to store the next driver that matches the proximity limit. Initialize this to null in your constructor</li><li>To implement hasNext(), first see if you already found the next appropriate driver by checking your next driver field (i.e., testing to see if it is not null). If you already found the next driver, just return true. If not, retrieve drivers from your driver pool iterator until you either find the next appropriate driver or you run out of drivers. If you find an appropriate driver, store it in your next driver instance field and return true. If the pool runs out of drivers, then return false.</li><li>To implement next(), first call hasNext(). If false, throw a NoSuchElementException. If true, then you know that the next eligible driver must be in your next driver instance field. Copy this to a local variable. Reset your next driver field to be null so that you don’t keep returning the same driver. Now return the value of the local variable that you copied the next driver to.</li></ul><h1 id="Adept-5-points"><a href="#Adept-5-points" class="headerlink" title="Adept (5 points)"></a>Adept (5 points)</h1><p>Create a class called <code>ExpandingProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for ths class should be declared as:</p><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ExpandingProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> expansion_step)</span><br></pre></td></tr></table></figure><p>An ExpandingProximityIterator should first iterate through all of the Driver objects in the collect that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to 1. After all such drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater than one but less than or equal to 1+expansion_step. After all of these drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater then 1+expansion_step but less than or equal to 1+2*expansion_step. After these have been exhausted, go through drivers that are greater than 1+2*expansion_step but less than or equal to 1+3*expansion_step. And so on and so forth until there are no drivers available whatsoever.</p><p>Tips:</p><ul><li>You will need to encapsulate <code>driver_pool</code> as an instance field because you will need to create a new iterator for the pool each time you run out of drivers for a particular “ring” size. </li><li>You will need to detect when you have run out of drivers completely so that hasNext() returns false eventually. There are a couple of different ways to do this. <ul><li>One way is to maintain a boolean flag that is set whenever a driver is encountered that is outside of the current ring while looking for the next driver. Then when you have run out of drivers at the current ring size, you can check this flag to make sure that at least one driver is still outside of the current ring and so you should keep expanding. Be sure to reset the flag each time you expand.</li><li>Another way to do this is to keep a count of the number of times next() has been successfully called. When this count is equal to the size of the driver pool, you know that every driver has been found at some ring size already and that expanding the ring won’t help (i.e., there are no more drivers).</li></ul></li></ul><h1 id="Jedi-5-points"><a href="#Jedi-5-points" class="headerlink" title="Jedi (5 points)"></a>Jedi (5 points)</h1><p>Create a class called <code>SnakeOrderAcrossPoolsIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for this class should be declared as:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public SnakeOrderAcrossPoolsIterator(<span class="built_in">List</span>&lt;<span class="built_in">Iterable</span>&lt;Driver&gt;&gt; driver_pools)</span><br></pre></td></tr></table></figure><p>The constructor to this class is given a List of iterable driver collections. This version of the iterator should retrieve the next driver from each pool in turn in “snake” order. Snake order means first going from first to last and then reversing and going from last to first. For example, let’s say there are 4 iterable collections in the driver_pools list. The first driver retrieved should come from pool 0, followed by the next driver from pool 1, then pool 2, then pool 3, then pool 3 again, then pool 2, then pool 1, then pool 0, then pool 0 again, then pool 1, and so on and so forth. The pools may have a different number of drivers in them. Once a pool runs out of drivers, it is simply skipped over. This iterator will run out of drivers once all of the pools in the list have run out.</p><p>Tips:</p><ul><li>In your constructor, use the list of driver pools provided to create a corresponding list of driver iterators for each pool and store this as an instance field. Keep track of an index into this list for which pool iterator should be used next.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      练习实现Java的迭代器
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Fundanmental" scheme="https://tk1307993.coding.me/tags/Fundanmental/"/>
+    
+  </entry>
   
   <entry>
     <title>CS177-Lab-Prep-6</title>
@@ -108,9 +130,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -338,9 +360,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -455,30 +477,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSC261-AVL-Tree</title>
-    <link href="https://tk1307993.coding.me/CSC261-AVL-Tree.html"/>
-    <id>https://tk1307993.coding.me/CSC261-AVL-Tree.html</id>
-    <published>2019-09-28T08:27:32.000Z</published>
-    <updated>2019-09-28T09:09:00.586Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h3><p>In this question, you must use the insertion and deletion algorithms as described in the “Balanced Search Trees: AVL trees” handout posted on the course web site.</p><p>a. Insert keys 17, 7, 8, 14, 19, 6, 10, 21, 15, 12, 9, 11 (in this order) into an initially empty AVL tree, and show the resulting AVL tree T , including the balance factor of each node.</p><p>b. Delete key 17 from the above AVL tree T , and show the resulting AVL tree, including the balance factor of each node.<br>In each of the above questions, only the final tree should be shown: intermediate trees will be disregarded, and not given partial credit.</p><h3 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h3><p>In this question, you must use the insertion and deletion algorithms described in the “Balanced Search Trees: AVL trees” handout posted on the course web site.</p><p>a. Prove or disprove: “For any AVL tree T and any key x in T , if we let T1 = Delete(T, x) and T2 = Insert(T1, x), then T2 = T1 .” State clearly whether you are attempting to prove or disprove the statement. If proving, give a clear general argument; if disproving, give a concrete example where you show clearly each tree T, T1, T2 with the balance factors indicated beside each node.</p><p>b. Find an AVL tree T and a key x in T such that calling Delete(T, x) causes two rebalancing operations to take place. Your tree T should be as small as possible, in terms of the number of nodes, so that this takes place (you do not have to prove that it is indeed the smallest). Show your original tree T and the key x, then show the result of each rebalancing operation. Make sure to clearly indicate the balance factor next to each node.</p><h3 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h3><p>Give a simple, linear-time algorithm that determines if a Binary Search Tree (BST) satisfies the AVL balancing condition. The algorithm’s input is a pointer to the root of a BST T where each node u has the following fields: an integer key, and lchild and rchild which are pointers to the left and right children of u in T (if u has no left or right child, then u.lchild = Nil or u.rchild = Nil, respectively). There is no balance factor or height information already stored in any node. The algorithm’s output is True if T satisfies the AVL balancing condition, and False otherwise.</p><p>The worst-case running time of your algorithm must be O(n) where n is the number of nodes in T.</p><p>Describe your algorithm by giving its pseudo-code, and explain why its worst-case running time is O(n).</p><h3 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h3><p>We want an efficient algorithm for the following problem. The algorithm is given an integer m &gt; 1, and then a (possibly infinite) sequence of distinct keys are input to the algorithm, one at a time. A query operation can occur at any point between any two key inputs in the sequence.</p><p>When a query occurs, the algorithm must return, in sorted order, the m smallest keys among all the keys that were input before the query. Assume that at least m keys are input before the first query occurs.</p><p>For example, suppose m = 3, and the key inputs and query operations occur in the following order:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span>, <span class="number">15</span>, <span class="number">31</span>, <span class="number">6</span>, <span class="number">13</span>, <span class="number">24</span>, query, <span class="number">10</span>, <span class="number">17</span>, query, <span class="number">9</span>, <span class="number">16</span>, <span class="number">5</span>, <span class="number">11</span>, query, <span class="number">14</span>, ...</span><br></pre></td></tr></table></figure></p><p>Then the first query should return 6, 13, 15; the second query should return 6, 10, 13; the third query should return 5, 6, 9.</p><p>Describe a simple algorithm that, for every m &gt; 1, solves the above problem with the following worst-case time complexity:</p><ul><li>O(log m) to process each input key, and</li><li>O(m) to perform each query operation.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      关于AVL Tree的Data Structure作业，五个分析问答题。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hardware," />
+  <meta name="keywords" content="Fundanmental," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
-<meta name="keywords" content="Hardware">
+<meta name="description" content="练习实现Java的迭代器">
+<meta name="keywords" content="Fundanmental">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS341-Timing-Instructions">
-<meta property="og:url" content="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
+<meta property="og:title" content="Java-Iterator">
+<meta property="og:url" content="https://tk1307993.coding.me/Java-Iterator.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
+<meta property="og:description" content="练习实现Java的迭代器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-19T02:05:50.947Z">
+<meta property="og:updated_time" content="2019-11-28T00:42:48.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS341-Timing-Instructions">
-<meta name="twitter:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
+<meta name="twitter:title" content="Java-Iterator">
+<meta name="twitter:description" content="练习实现Java的迭代器">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/Java-Iterator.html"/>
 
 
 
 
 
-  <title>C代写：CS341-Timing-Instructions | 留学生CS编程作业代写</title>
+  <title>Java-Iterator | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/Java-Iterator.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS341-Timing-Instructions</h2>
+          <h2 class="post-title" itemprop="name headline">Java-Iterator</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T10:03:20+08:00">
-                2019-01-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-28T08:41:33+08:00">
+                2019-11-28
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。
+                  练习实现Java的迭代器
               </div>
           
 
@@ -360,17 +360,37 @@
       
 
       
-        <h3 id="I-OBJECTIVES"><a href="#I-OBJECTIVES" class="headerlink" title="I. OBJECTIVES"></a>I. OBJECTIVES</h3><p>The purpose of this assignment is to build a package of timing routines for the SAPC and use it to time code on the SAPC to determine memory access time on the SAPC with and without caching. This code does not run on UNIX. Read the Intel 8254 Programmable Interval Timer (PIT) Data Sheet. Look at $pcex/timer.c for an example of C code for accessing the timer. Copy all the files needed for this project.</p>
-<h3 id="II-The-timing-package"><a href="#II-The-timing-package" class="headerlink" title="II. The timing package"></a>II. The timing package</h3><p>A package is a set of utilities that can be called by a program that wants to use them. When designing a package we carefully consider the things in it that must be visible to the caller, specify those, and require that everything else be internal and invisible. The visible parts of the timing package you will build are in “timepack.h”. A customer for the package’s services includes that header file (using #include) in the program for compilation and links his or her object code with “timepack_sapc.opc” to build the executable. You are asked to modify “timepack_sapc.c” to provide a high resolution timer service for programs running on the SAPC.</p>
-<h3 id="Existing-Code"><a href="#Existing-Code" class="headerlink" title="Existing Code"></a>Existing Code</h3><p>Every package should have a test program showing that it works by calling it in all important ways. This test program is called a “driver” because it sits on top of the package and drives it like we test-drive a car – start up, do this, do that, stop, shut down. It is also called a “unit test” program because it tests just this one package separate from any other package in a bigger program. If you suspect something is wrong in a certain package, you’ll try to make its unit test fail, and then you debug the problem in the relatively simple environment of the unit test, rather than in the bigger program. The test program for timepack is testpack.c. You can build testpack and testpack.lnx right away and run them. Note what is printed out by testpack.lnx. Capture this in a typescript1 file. It shows that the timing package (as provided) can time things on the SAPC to 55-ms accuracy, but not to the microsecond accuracy we want. The next step is to get your timepack_sapc.c fixed up for the higher resolution and the unit test executable testpack.lnx will show it.</p>
-<p>Modifed Code<br>You’re working directly with the hardware device, the Programmable Interval Timer (PIT) with its interrupt handler. This code has been provided to you in a). The timepack_sapc.c as provided can measure time in timer “ticks” at an 18.2-Hz (55 ms/tick) standard PC tick rate.To use the PIT to measure higher precision, you make use of “downcounts” within the timer chip. What you need to do is determine how many counts have downcounted in the timer since the last tick and compute a higher accuracy time. By doing this at both the start and the end of the time interval being measured, you can compute the elapsed time accurate to a few microseconds, a very respectable timer service. You’ll need to modify the timepack_sapc.c to achieve this.</p>
-<p>Since timer downcounts count down from 64K at the tick, you need to subtract the register value from 65536 to get the number of downcounts since last tick:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">number</span> <span class="keyword">of</span> downcounts <span class="keyword">since</span> tick = <span class="number">65536</span> - observed_count (<span class="keyword">in</span> register)</span><br></pre></td></tr></table></figure></p>
-<p>Thus the accurate time between A and B is<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">= 202<span class="built_in"> clock </span>ticks + (65536 – 43000) downcounts - (200<span class="built_in"> clock </span>ticks + (65536 – 35000) downcounts)</span><br><span class="line">= 2<span class="built_in"> clock </span>ticks – 8000 downcounts</span><br></pre></td></tr></table></figure></p>
-<h3 id="III-Timing-i486-instructions-and-a-C-loop"><a href="#III-Timing-i486-instructions-and-a-C-loop" class="headerlink" title="III. Timing i486 instructions and a C loop"></a>III. Timing i486 instructions and a C loop</h3><p>In this part of the assignment you will use the timing package to time x86 instructions. Instruction execution time is measured in system clock cycles, here 2.5 nsecs for our 400Mhz Pentium systems. The PC timer 0 is accurate only in the usec (microsecond) range so you will need to loop many times and divide by the loop count to get the accuracy needed.</p>
-<p>The actual instructions to be timed appear in loops in “itests.s”, which is an x86 assembler source. These are called from itimes.c.</p>
-<p>Finish “itests.s”, so that the third instruction to be timed (immediate move of IDATA to register) is properly implemented. Add a fourth instruction of your choice “itests.s” and “itimes.c”</p>
-<p>You can use the provided makefile to build an optimized version of the SAPC executable file. The provided makefile has the following definitions:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># development build: -g provides debugging support, slows down execution</span><br><span class="line"># <span class="keyword">Use</span> -O2 optimization, no -g on <span class="keyword">final</span> timing runs<span class="comment">!</span></span><br><span class="line">PC_CFLAGS_DEV = -g -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line">PC_CFLAGS_OPT = -O2 -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line"># make <span class="keyword">default</span> PC_CFLAGS be PC_CFLAGS_DEV</span><br><span class="line">O = DEV</span><br><span class="line"># allow user to override DEV via O=OPT on the command line</span><br><span class="line">PC_CFLAGS = $(PC_CFLAGS_$(O))</span><br></pre></td></tr></table></figure></p>
-<h3 id="FINAL-NOTE"><a href="#FINAL-NOTE" class="headerlink" title="FINAL NOTE"></a>FINAL NOTE</h3><p>In the event that you are unable to correctly complete this assignment by the due date, do not remove the work you were able to accomplish – partial credit is always better than none.</p>
+        <h1 id="Assignment-6"><a href="#Assignment-6" class="headerlink" title="Assignment 6"></a>Assignment 6</h1><p>In this assignment, you will create three classes that implement the <code>Iterator&lt;&gt;</code> interface in specialized ways.</p>
+<p>Read through the code provided. You should recognize the interfaces Position, Driver, and Vehicle and their implementations PositionImpl, DriverImpl, and VehicleImpl from Assignment 3. These classes are complete and you should not have to modify them in any way to complete this assignment.</p>
+<h1 id="Novice-10-points"><a href="#Novice-10-points" class="headerlink" title="Novice (10 points)"></a>Novice (10 points)</h1><p>Create a class called <code>ProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for the class should be declared as:</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> proximity_limit)</span><br></pre></td></tr></table></figure>
+<p>A ProximityIterator should iterate through all of the Driver objects in the collection that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to <code>proximity_limit</code>. If <code>next()</code> is called but there is no next eligible driver, throw a <code>NoSuchElementException</code>.</p>
+<p>Tips:</p>
+<ul>
+<li>In your constructor, use the <code>iterator</code> method of the provided driver_pool to create an iterator for all of the Driver objects in the collection. Store this iterator in an instance field.</li>
+<li>Use an instance field to store the next driver that matches the proximity limit. Initialize this to null in your constructor</li>
+<li>To implement hasNext(), first see if you already found the next appropriate driver by checking your next driver field (i.e., testing to see if it is not null). If you already found the next driver, just return true. If not, retrieve drivers from your driver pool iterator until you either find the next appropriate driver or you run out of drivers. If you find an appropriate driver, store it in your next driver instance field and return true. If the pool runs out of drivers, then return false.</li>
+<li>To implement next(), first call hasNext(). If false, throw a NoSuchElementException. If true, then you know that the next eligible driver must be in your next driver instance field. Copy this to a local variable. Reset your next driver field to be null so that you don’t keep returning the same driver. Now return the value of the local variable that you copied the next driver to.</li>
+</ul>
+<h1 id="Adept-5-points"><a href="#Adept-5-points" class="headerlink" title="Adept (5 points)"></a>Adept (5 points)</h1><p>Create a class called <code>ExpandingProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for ths class should be declared as:</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ExpandingProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> expansion_step)</span><br></pre></td></tr></table></figure>
+<p>An ExpandingProximityIterator should first iterate through all of the Driver objects in the collect that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to 1. After all such drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater than one but less than or equal to 1+expansion_step. After all of these drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater then 1+expansion_step but less than or equal to 1+2*expansion_step. After these have been exhausted, go through drivers that are greater than 1+2*expansion_step but less than or equal to 1+3*expansion_step. And so on and so forth until there are no drivers available whatsoever.</p>
+<p>Tips:</p>
+<ul>
+<li>You will need to encapsulate <code>driver_pool</code> as an instance field because you will need to create a new iterator for the pool each time you run out of drivers for a particular “ring” size. </li>
+<li>You will need to detect when you have run out of drivers completely so that hasNext() returns false eventually. There are a couple of different ways to do this. <ul>
+<li>One way is to maintain a boolean flag that is set whenever a driver is encountered that is outside of the current ring while looking for the next driver. Then when you have run out of drivers at the current ring size, you can check this flag to make sure that at least one driver is still outside of the current ring and so you should keep expanding. Be sure to reset the flag each time you expand.</li>
+<li>Another way to do this is to keep a count of the number of times next() has been successfully called. When this count is equal to the size of the driver pool, you know that every driver has been found at some ring size already and that expanding the ring won’t help (i.e., there are no more drivers).</li>
+</ul>
+</li>
+</ul>
+<h1 id="Jedi-5-points"><a href="#Jedi-5-points" class="headerlink" title="Jedi (5 points)"></a>Jedi (5 points)</h1><p>Create a class called <code>SnakeOrderAcrossPoolsIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for this class should be declared as:</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public SnakeOrderAcrossPoolsIterator(<span class="built_in">List</span>&lt;<span class="built_in">Iterable</span>&lt;Driver&gt;&gt; driver_pools)</span><br></pre></td></tr></table></figure>
+<p>The constructor to this class is given a List of iterable driver collections. This version of the iterator should retrieve the next driver from each pool in turn in “snake” order. Snake order means first going from first to last and then reversing and going from last to first. For example, let’s say there are 4 iterable collections in the driver_pools list. The first driver retrieved should come from pool 0, followed by the next driver from pool 1, then pool 2, then pool 3, then pool 3 again, then pool 2, then pool 1, then pool 0, then pool 0 again, then pool 1, and so on and so forth. The pools may have a different number of drivers in them. Once a pool runs out of drivers, it is simply skipped over. This iterator will run out of drivers once all of the pools in the list have run out.</p>
+<p>Tips:</p>
+<ul>
+<li>In your constructor, use the list of driver pools provided to create a corresponding list of driver iterators for each pool and store this as an instance field. Keep track of an index into this list for which pool iterator should be used next.</li>
+</ul>
 
       
     </div>
@@ -388,7 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hardware/" rel="tag"># Hardware</a>
+            <a href="/tags/Fundanmental/" rel="tag"># Fundanmental</a>
           
         </div>
       
@@ -401,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CA1-Computer-Animation-and-Visualisation.html" rel="next" title="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
-                <i class="fa fa-chevron-left"></i> OpenGL代写：CA1-Computer-Animation-and-Visualisation
+              <a href="/CS177-Lab-Prep-6.html" rel="next" title="CS177-Lab-Prep-6">
+                <i class="fa fa-chevron-left"></i> CS177-Lab-Prep-6
               </a>
             
           </div>
@@ -410,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSE320-Wolfie-Chat-Part1.html" rel="prev" title="C代写：CSE320-Wolfie-Chat-Part1">
-                C代写：CSE320-Wolfie-Chat-Part1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-OBJECTIVES"><span class="nav-number">1.</span> <span class="nav-text">I. OBJECTIVES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#II-The-timing-package"><span class="nav-number">2.</span> <span class="nav-text">II. The timing package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Existing-Code"><span class="nav-number">3.</span> <span class="nav-text">Existing Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#III-Timing-i486-instructions-and-a-C-loop"><span class="nav-number">4.</span> <span class="nav-text">III. Timing i486 instructions and a C loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FINAL-NOTE"><span class="nav-number">5.</span> <span class="nav-text">FINAL NOTE</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Assignment-6"><span class="nav-number">1.</span> <span class="nav-text">Assignment 6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Novice-10-points"><span class="nav-number">2.</span> <span class="nav-text">Novice (10 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adept-5-points"><span class="nav-number">3.</span> <span class="nav-text">Adept (5 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jedi-5-points"><span class="nav-number">4.</span> <span class="nav-text">Jedi (5 points)</span></a></li></ol></div>
             
 
           </div>
