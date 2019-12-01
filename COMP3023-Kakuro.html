@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game,Artificial Intelligence," />
+  <meta name="keywords" content="Algorithm,QT,Game," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="给Battleship这款游戏做一个AI。">
-<meta name="keywords" content="Game,Artificial Intelligence">
+<meta name="description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
+<meta name="keywords" content="Algorithm,QT,Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CS3024 Battleship">
-<meta property="og:url" content="https://tk1307993.coding.me/CS3024-Battleship.html">
+<meta property="og:title" content="COMP3023-Kakuro">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3023-Kakuro.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="给Battleship这款游戏做一个AI。">
+<meta property="og:description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T12:59:05.566Z">
+<meta property="og:updated_time" content="2019-12-01T02:22:56.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CS3024 Battleship">
-<meta name="twitter:description" content="给Battleship这款游戏做一个AI。">
+<meta name="twitter:title" content="COMP3023-Kakuro">
+<meta name="twitter:description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS3024-Battleship.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3023-Kakuro.html"/>
 
 
 
 
 
-  <title>Python代写：CS3024 Battleship | 留学生CS编程作业代写</title>
+  <title>COMP3023-Kakuro | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3024-Battleship.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3023-Kakuro.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CS3024 Battleship</h2>
+          <h2 class="post-title" itemprop="name headline">COMP3023-Kakuro</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T20:34:49+08:00">
-                2018-07-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-01T10:19:11+08:00">
+                2019-12-01
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  给Battleship这款游戏做一个AI。
+                  代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。
               </div>
           
 
@@ -360,25 +360,68 @@
       
 
       
-        <h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>Create a game of Battleship.</p>
-<p>This should be a game of player vs AI.</p>
-<p>How the game is played:</p>
-<p>Each player has a 10 by 10 board on which to place their pieces.</p>
-<p>There are 5 pieces:<br>Air Craft Carrier - 5 long<br>Battleship- 4 long<br>Cruiser- 3 long<br>Submarine- 3 long<br>Destroyer- 2 long</p>
-<p>These are to be placed on the board vertically or horizontally. They CANNOT go diagonally and CANNOT over lap each other and MUST be inside the 10 by 10 board. Let the player choose where they want to place their pieces following the above rules. Then randomly assign the pieces for the computer.</p>
-<p>Once the board is set it is time to start guessing locations. Don’t let people guess spots off the board. Two boards should be displayed to the screen. One board showing the players ships and where the computer has guessed, another showing the players guesses and whether it was a hit or miss. Label each board so they know which is which. Make sure the boards are easy to read and instructions are given so the player knows how you want them to play the game. Are rows and columns 0-9 or 1-10? Are they entering column then row or row then column?</p>
-<p>If either player hits, print out which ship was hit: Example “Player 1 hit the computers Submarine”. If they hit all parts of the ship let them know it was destroyed. Example: “The computer sunk your Battleship”</p>
-<p>For the computer you should have it randomly guess. If it ends up getting a hit you should save the value of the location of the hit and on the next guess have it pick a random spot on either side of the last hit. The smarter the better.</p>
-<p>Once one player has sunk all of the other players ship the game ends and announces the winner. You should have the option to play again. Once playing is over let the user know how many wins and losses they got.</p>
-<h2 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h2><p>Place player ships: 15% (receive at most 7.5% if player does not set them)</p>
-<p>Place computer ships: 15% (receive at most 10% if not random)</p>
-<p>Guess place for ship (not going out of bounds): 10%</p>
-<p>Check properly if that guess hits a ship: 10%</p>
-<p>Print updated board of the players guesses: 10%</p>
-<p>Print updated board of the players ships (indicating if hit or not by computer): 10%</p>
-<p>Check to see if a ship is sunk and print out message: 10%</p>
-<p>Check to see if there is a winner: 10%</p>
-<p>Computer AI for guessing: 10% (will get 5% if just completely random guess)</p>
+        <h3 id="Submission-details"><a href="#Submission-details" class="headerlink" title="Submission details"></a>Submission details</h3><p>This is a small group project. While the best group size is 4, I will allow groups of 2 or 4, though a group of 4 will be expected to do more to get a high mark. You should attempt to form the groups yourself – please do so by the end of Week 9 of semester and let me know your group members. I will, over the weekend before Monday of Week 10, organise those not in a group into groups, and send emails out to the different group members.</p>
+<p>Eventual assignment submission will be by groups. Ensure only one person does the submission of the assignment per group. The organisation of the marking is difficult enough with groups without having multiple submissions per group to look out for.</p>
+<p>You should ensure all group member’s names and email addresses are part the code files and document files that you submit.</p>
+<p>You should submit:</p>
+<ol>
+<li><p>The Qt project and all associated files. This must include the .pro project file, any .ui form files, and all the .h and .cpp files. Zip these up together.</p>
+</li>
+<li><p>A document stating clearly the features that you have implemented, along with a few screen shots to illustrate these features. If a feature is partially implemented or have problems, please indicate this.</p>
+</li>
+<li><p>Any example Kakuro input files that your program can read.</p>
+</li>
+<li><p>A short document (I don’t want to use the term ‘user manual’ as some of you will interpret this as a formal document) that describes how to use the program. Don’t make this a big part of what you do – enough so that I can easily start up and know how to play with your application. The screen shots you used in the ‘features implemented’ document above can likely be re-used here.</p>
+</li>
+<li><p>For a bonus of up to 5% of the assignment marks (but can’t take your mark above 100%), a video (produced by your phone for example) where you demonstrate the features of your working assignment.</p>
+</li>
+</ol>
+<p>Your assignment will be marked primarily on what works, rather than the details of the code. This is not a User Interface class, so for the advanced features that you implement, while a nice user interface may receive a slightly higher mark (within the grade ranges), you are just starting with using Qt, and using the UI components well is something that develops with experience.</p>
+<h3 id="Overview-of-Kakuro"><a href="#Overview-of-Kakuro" class="headerlink" title="Overview of Kakuro"></a>Overview of Kakuro</h3><p>Kakuro puzzles are similar to crosswords, but instead of letters the digits (from 1 to 9) are used. Instead of clues going across and down, you are given the sum of the values across or down. There is the constraint that the digits 1 to 9 can only be used once in any ‘word’ going across or down. The board’s squares need to be filled in with these digits in order to sum up to the specified numbers. Below is an example Kakuro problem with a 13x13 grid (effectively a 12x12 problem as you need an extra row at the top, and a column at the left, in which to put ‘down’ or ‘across’ clues.</p>
+<p>At any point you can use the down or across clues to deduce some values in the puzzle, and then use these values to help deduce other values.</p>
+<p>For example, in the bottom middle there is the section shown to the right. For the column with sum of 4, the two values have to be 1 and 3 (as 2 and 2 not allowed). The 3 has to be at the top, as if it is at the bottom, then as the bottom ‘across’ adds to 8, the left value will be 5. But then the ‘down’ that sums to 16 does not have a solution, as you can’t have 5+ (value from 1 to 9) that sums to 16. This means that you have to have 3, 1 in the ‘down’ that sums to 4, and 9, 7 in the column that adds to 16: as shown on the<br>left.</p>
+<p>You can try the puzzle online at <a href="http://www.kakuros.com" target="_blank" rel="noopener">www.kakuros.com</a>, which provides an interactive web page to help you play Kakuro.</p>
+<h3 id="The-Assignment"><a href="#The-Assignment" class="headerlink" title="The Assignment"></a>The Assignment</h3><p>In this assignment I would like you to use Qt to develop a program with a graphical user interface to help the user solve Kakuro problems.</p>
+<p>A minimal program that will give you at least a P1 grade should:</p>
+<p>Display the grid for a Kakuro problem – you program should at least display a 13x13 grid, but you can allow the program to display a range of sizes – smaller and possibly larger.</p>
+<ol>
+<li>Allow the user to initialise the Kakuro puzzle. This could be done, for example, by:<ol>
+<li>Reading the information from a text file. Possible formats for the text file will be discussed in a lecture.</li>
+<li>Selecting a cell with the mouse and setting up the problem interactively.</li>
+<li>Generating a random problem (this is one of the possible extensions for a higher grade)</li>
+</ol>
+</li>
+<li>Allow the user to select a grid location and ask that the possible values be determined and displayed in the grid location. Note that if there is only one possible value, you should not make this the grid location’s final value – the user needs to do this (but see extensions below).</li>
+<li>Allow the user to select a value from the possible values displayed in a grid location as the final value. When this occurs, the other grid locations where you have asked for the possible values to be displayed should all be updated to use this additional information.<br>For particularly good implementations of 3 and 4 you can receive a small number of additional marks.</li>
+</ol>
+<p>For a higher grade you need to do more. Below are some possible extensions you can do to your ‘P1’ level program, along with some examples of sensible combinations of extensions that will get you a HD grade.</p>
+<h3 id="Possible-Extensions-to-obtain-a-higher-grade"><a href="#Possible-Extensions-to-obtain-a-higher-grade" class="headerlink" title="Possible Extensions to obtain a higher grade"></a>Possible Extensions to obtain a higher grade</h3><ol>
+<li><p>Highlight cells where there is only one possible value. How you highlight the cell is up to you.</p>
+</li>
+<li><p>Provide an option to calculate and display the possible values for every grid location where the value is not yet specified.</p>
+</li>
+<li><p>Determine if a solution can’t be found using the current values set in the grid - for example by conflicting requirements for down or across values or sums. For example, a ‘down’ clue may require a particular grid location to have a value of (say) 2, but the ‘across’ set of values already has a 2 in it. This means that a wrong choice was made by the user previously.</p>
+</li>
+<li><p>Keep track of changes to the grid values, and allow the user to ‘back-track’ if they have made an error.</p>
+</li>
+<li><p>Keep track of the operations requested by the user to the grid locations, and allow the user to ‘replay’ the way the solution was found (for example, using time delay between ‘steps’, or to use a key or button to ‘step’ forward in the replay. The way you do this is up to you. You will get additional marks for an easy to follow replay of the steps taken.</p>
+</li>
+<li><p>If you do option 5 above, try to automate the finding of a solution. This is not trivial as sometimes you need to consider the possible values of multiple grid positions to determine the correct value of a grid position. You may be able to do a partial automation - do what you can and then let the user set a grid position’s value before continuing on. You should be able to step through the automated solution. This is a hard extension - you can get a good mark for this part for a reasonable attempt.</p>
+</li>
+<li><p>Save a puzzle at any point, along with the information about the steps taken, so that can reload the puzzle and either backtrack or continue from the current set of values.</p>
+</li>
+<li><p>Generate random Kakuro puzzles - generate a random (but reasonable) puzzle ‘boards’, then generate a random ‘solution’ (fill the board consistently with digits 1 to 9), and then generate the appropriate down and across clues.</p>
+</li>
+</ol>
+<p>You can obtain a HD by implementing:</p>
+<ul>
+<li>Extensions 1, 2, 3, 4, or:</li>
+<li>Extensions 4, 5, 6, or:</li>
+<li>Extensions 4, 5, 7, or:</li>
+<li>Extension 1 and 8, or:</li>
+<li>Suggesting an alternative set of extensions to the course coordinator and obtaining approval for this being the goal for achieving a HD.</li>
+</ul>
+<p>Generally, you will need 3 or 4 extensions to get a HD, depending on how hard the extensions are. For reasonably sized extensions, each working extension takes you up a grade (C, D, HD). Some easy extensions (such as 1 and 2 above) are too small to take you up a whole grade, so in the first suggested set of extensions above, 1 and 2 together take you to a Credit grade. Some extensions are difficult, and a reasonable attempt will get you the additional grade. An example of this is extension 6.</p>
 
       
     </div>
@@ -396,9 +439,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Game/" rel="tag"># Game</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
-            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
+            <a href="/tags/QT/" rel="tag"># QT</a>
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
           
         </div>
       
@@ -411,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP30023-Hashcash-Mining.html" rel="next" title="C代写：COMP30023 Hashcash Mining">
-                <i class="fa fa-chevron-left"></i> C代写：COMP30023 Hashcash Mining
+              <a href="/Java-Iterator.html" rel="next" title="Java-Iterator">
+                <i class="fa fa-chevron-left"></i> Java-Iterator
               </a>
             
           </div>
@@ -420,10 +465,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSCI3130-Refactoring-and-Patterns.html" rel="prev" title="Java代写：CSCI3130 Refactoring and Patterns">
-                Java代写：CSCI3130 Refactoring and Patterns <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grading"><span class="nav-number">2.</span> <span class="nav-text">Grading</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-details"><span class="nav-number">1.</span> <span class="nav-text">Submission details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-of-Kakuro"><span class="nav-number">2.</span> <span class="nav-text">Overview of Kakuro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Assignment"><span class="nav-number">3.</span> <span class="nav-text">The Assignment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Possible-Extensions-to-obtain-a-higher-grade"><span class="nav-number">4.</span> <span class="nav-text">Possible Extensions to obtain a higher grade</span></a></li></ol></div>
             
 
           </div>
