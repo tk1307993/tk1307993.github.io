@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-12-05T11:31:28.665Z</updated>
+  <updated>2019-12-11T01:06:23.981Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS32555-Star-Car-Rental</title>
+    <link href="https://tk1307993.coding.me/CS32555-Star-Car-Rental.html"/>
+    <id>https://tk1307993.coding.me/CS32555-Star-Car-Rental.html</id>
+    <published>2019-12-11T01:04:23.000Z</published>
+    <updated>2019-12-11T01:06:23.981Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>Star Car Rental is an all-Australian, family business and has been since the beginning. It is owned and managed by two generations of the same family. For 50 years it has maintained the low cost formula to provide the clients cheap, but reliable, new hire cars. It has a fleet of around 2,500 new cars available from different offices in different cities. The offices are conveniently located but are set up to keep costs low so it can pass the savings on to the customers. A management group was appointed to develop an up-to-date car rental system and customer service billing system. Your group has won the tender to provide the software component of a computerised car rental and customer service billing system.</p><h3 id="System-Description"><a href="#System-Description" class="headerlink" title="System Description"></a>System Description</h3><p>The customer can get car hire details and request the quotation for a car though phone or internet. After obtaining the quote, the user can proceed with the car booking by supplying credit card details. These details will then be validated and the application will be mailed or emailed after the confirmation of the car rental arrangement to the customer’s chosen mail or email address accordingly. Customers should be able to request a quote for renting a car. To facilitate this they should be able to enter the pick-up and drop-off locations they require, the pick-up and drop-off dates and their age in order to obtain a list of available car types based on those search criteria.</p><p>The search results include details of vehicle types, prices for telephone booking, and prices for online booking. From the displayed search results, the customer should be able to request more detailed information about a particular vehicle type, including vehicle makes and models in the chosen type, the seating capacity, and the luggage capacity. From the displayed search results, the customer should also be able to request the quote for renting a chosen vehicle type. Also from the displayed search results, the customer should also be able to proceed with booking a car. After selecting this option, the customer will be able to check that the details for the rental transaction are correct. Prior to making the booking, the customer will be able to select from a few options including a request for an excess reduction for an additional fee, a protection waiver against cancellation, entry of a promotional code as well as avail special offers.</p><p>The customer will need to be given other important information such as age restrictions, fuel conditions and any other general restrictions, as well as any information on insurance details and pick-up instructions. Still prior to making the booking, the customer will need to enter personal information (such as name, address, telephone number and e-mail address) as well as payment information (credit card details). When processing the booking request, the system will check the completeness and correctness of the customer’s data entry (in particular, the credit card information). After successful validation of entered data, the system will confirm the booking with a rental confirmation number. As an additional confirmation of the booking, an e-mail will be sent to the customer’s e-mail address. To view, change or cancel a car booking, the customer will need the rental number and last name on the booking.</p><p>The company rents cars on basis of car model and standard rate (daily, weekly, weekend, additional kilometre charge). The first 200 km are included in charges for every vehicle. All the cars are four door models with air conditioning and automatic transmission. The categories are:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>  Economy (E)       Toyota Yaris <span class="literal">or</span> similar</span><br><span class="line"><span class="number">2.</span>  Star (B)          Toyota Corolla <span class="literal">or</span> similar</span><br><span class="line"><span class="number">3.</span>  Midsize (M)       Holden Cruze <span class="literal">or</span> similar</span><br><span class="line"><span class="number">4.</span>  <span class="literal">Full</span> Size (F)     Toyota Aurion <span class="literal">or</span> similar</span><br><span class="line"><span class="number">5.</span>  Passenger Van(V)  Hyundai iMax <span class="literal">or</span> similar</span><br><span class="line"><span class="number">6.</span>  SUV(S)            Toyota RAV4 <span class="literal">or</span> similar</span><br></pre></td></tr></table></figure></p><p>A weekend is defined from 6:00 PM Friday to 9:00 AM Monday. Any time over one week is computed by prorating the weekly rate.</p><p>Whenever a customer comes to pick up car, he/she has to sign the rental agreement. A rental agreement consists of an agreement number, the customer’s name, type of rate (daily, weekend or weekly), car identification (license number), car price category. It also includes the date, time, and mileage when car leaves and the expected date and time of return. The customer renting the car may not be the driver, and there could be many drivers. For each driver, the following information needs to be captured: full name, birth date, driver’s license number, and state of issue of driver’s license. Information about the third party who may be paying the bill also needs to be captured.</p><p>Returning a car consists of dropping it off. Also the vehicle is rented with a full tank of petrol, and the customer is responsible for refuelling the vehicle. When a vehicle is returned, an amount for petrol is added if the tank is not full. The date, time and mileage when the car is returned are recorded. The car must be inspected for damage. If the collision damage waiver is not accepted at the time of rental, the cost of repair is added to the bill. The car is also inspected to determine the need of minor maintenance. If maintenance is needed, the car is not cleaned up and returned to the rental lot. Instead, it is sent to the shop for needed repairs and maintenance. If the car passes inspection, it is sent to a car wash and then placed on the lot, ready to be rented again.</p><p>A bill is given to the customer if the customer is present. Otherwise, it is mailed to the customer. Often this customer is a third-party payer, such as an insurance company. Payment is made by either cash or credit card. The damage waiver is $8.99 per day. If the customer accepts this, there is no charge for physical damage to the vehicle. If the customer declines this, an insurance policy with a $1000.00 deductible applies to body damage. The deposit is either paid in cash or charged to the credit card. A $1000.00 deposit is collected at time of rental. It is either cash or a charged to the credit card. Late returns incur a penalty. There is a two-hour grace period on a daily and weekend rental. There is a four-hour grace period on a weekly rental. After that another day is charged. A weekly rental turned in early will be computed as a daily rental unless the weekly rate is still cheaper. Star Car Rental also has special offers every week in terms of free vehicle upgrade, great one way deals as well as $50 off on rentals of three weekend days.</p><h3 id="Deadlines-and-deliverables"><a href="#Deadlines-and-deliverables" class="headerlink" title="Deadlines and deliverables"></a>Deadlines and deliverables</h3><p>The items to hand in, the date to hand them in, and the marks for each part, are shown below. The estimated workload for all parts, for each person on the team, is about 36-50 hours. The actual workload may vary by a factor of three due to individual variation.</p><h3 id="Use-Case-Diagram"><a href="#Use-Case-Diagram" class="headerlink" title="Use Case Diagram"></a>Use Case Diagram</h3><p>Identify all the use cases mentioned in the system description and draw a use case diagram, with all use case relationships. It has an expected workload of 8 hours for each group member. There can be approximately 15-20 use cases selected from this system description.</p><h3 id="Use-Case-Descriptions"><a href="#Use-Case-Descriptions" class="headerlink" title="Use Case Descriptions"></a>Use Case Descriptions</h3><p>Describe 3 use cases using the format described in the lecture notes, showing all details for each use case; describe any included or extended tasks that are required by the stated use cases. It has an expected workload of 3 hours for each group member. Each use case should require at most 3 pages of text, and some may take less than one page.</p><h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>Design a design class diagram which shows, for each class in the system, the class name and attributes, plus the class associations, multiplicities and operations. Include any inheritance relations. It has an expected workload of 10 hours for each group member.</p><h3 id="Sequence-Diagram"><a href="#Sequence-Diagram" class="headerlink" title="Sequence Diagram"></a>Sequence Diagram</h3><p>Draw 3 sequence diagram which show all messages (method calls) between classes, including any parameters, and any value returned from a method call. It shows all selection, iteration, and object creation and / or destruction. It has an expected workload of 5 hours for each group member.</p><h3 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h3><p>Write Java code for 3 methods (getters, setters and constructors will not be considered as methods for Assignment marking) of any one class or different classes in the class diagram. It has an expected workload of 10 hours for each group member.</p><h3 id="Dialog-Design"><a href="#Dialog-Design" class="headerlink" title="Dialog Design"></a>Dialog Design</h3><p>Each group has to design dialog for only three use cases. The dialog design consists of two parts:</p><ul><li>A set of screen layouts, that define the data input to and displayed on each screen.</li><li>The transitions between the screens. The diagram shows a set of screen icons, the transitions between them, and the user action that creates each transition.</li></ul><h3 id="Entity-Relationship-Diagram"><a href="#Entity-Relationship-Diagram" class="headerlink" title="Entity Relationship Diagram"></a>Entity Relationship Diagram</h3><p>Draw an Entity-Relationship diagram, which shows appropriate entities, relationships and cardinalities. It has an expected workload of 5 hour for each group member.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写一个Java的租车应用程序大作业，最终程序需要带GUI界面，工作量不小。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="MVC" scheme="https://tk1307993.coding.me/tags/MVC/"/>
+    
+      <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
+    
+  </entry>
   
   <entry>
     <title>INFO1105-Prefix-Map</title>
@@ -34,9 +58,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -58,11 +82,11 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
@@ -180,9 +204,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -272,9 +296,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
       <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
     
@@ -410,9 +434,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -457,32 +481,6 @@
     
     
       <category term="OpenGL" scheme="https://tk1307993.coding.me/tags/OpenGL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS812-Safari-Rush-Hour</title>
-    <link href="https://tk1307993.coding.me/CS812-Safari-Rush-Hour.html"/>
-    <id>https://tk1307993.coding.me/CS812-Safari-Rush-Hour.html</id>
-    <published>2019-10-06T08:49:29.000Z</published>
-    <updated>2019-10-06T08:51:39.730Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>Safari Rush Hour is a variation on the popular Rush Hour game from Binary Arts. The object is to move your car through a tangle of obstacles to reach the exit. Your job is to write a program to find the best way out of the traffic.</p><h3 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h3><p>Safari Rush Hour is played on a 7 x 7 game grid with up to 19 playing pieces (safari rover and animals). The object is to slide the safari rover through the exit gate in the playing grid frame. Each puzzle gives a configuration of animals and the safari rover. To play, you shift the animals and safari rover up, down, left, and right until the path is clear to make your escape. Note: lions, lionesses, impalas, zebras, rhinos, and elephants move only forward and reverse. The large square safari rover and the wild dogs (termite mound) may move up, down, right, and left. No lifting of playing pieces off of the gameboard grid surface once play has begun.</p><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>The predecessor game of Safari Rush Hour is Rush Hour. It is played on a smaller board, with a different number and different shaped pieces. Try playing the applet here. You can practice on this applet to get an idea of how to solve Safari Rush Hour puzzles.</p><h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>A sample problem input looks as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">P J1</span><br><span class="line">.......</span><br><span class="line"><span class="selector-class">.rrrf</span>..</span><br><span class="line">hh.<span class="selector-class">.fq</span>.!</span><br><span class="line">o<span class="selector-class">.xx</span><span class="selector-class">.q</span>.!</span><br><span class="line">o<span class="selector-class">.xx</span><span class="selector-class">.q</span>.</span><br><span class="line">ob.<span class="selector-class">.ee</span>.</span><br><span class="line"><span class="selector-class">.bppp</span>..</span><br></pre></td></tr></table></figure></p><p>The first line indicates a problem (“P”) and the name of the problem (“J1”). The problems are all numbered, and the first letter indicates the difficulty of the problem: “J” is junior, “B” is beginner, “I” is intermediate, “A” is advanced, and “E” is expert. In the puzzle specification, the letters stand for the playing pieces: 2x2 pieces: termite mounds (u,v) and safari rover (x); 3x1 pieces: elephant (o, q, s) and rhino (p, r); 2x1 pieces: lion (a, f), lioness (d, g, j), impala (b, h, i, k) and zebra (c, e). The actual names do not matter; all that is important is the shape of each of the pieces and the way that they move. The “!” indicates the exit (the exit position is fixed and does not change from puzzle to puzzle).</p><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Using A<em> or IDA</em>, your assignment is to solve a given puzzle in the minimum number of moves with the smallest search tree possible. The latter implies enhancing A<em>/IDA</em> to eliminate as much of the search tree as possible using some of the standard techniques in the literature (or possibly some of your own application-dependent enhancements). Files a2-orig.data, a2-deep.data, a2-vast.data, a2-fiendish.data contain test sets of problems for evaluating your solutions.</p><p>Report solution using the following format:<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">solution <span class="string">[id]</span> <span class="string">[t]</span> <span class="string">[n]</span> <span class="string">[move_1]</span> ... <span class="string">[move_n]</span></span><br></pre></td></tr></table></figure></p><p>where [id] is the problem id, [t] is the wallclock time in seconds your program required to find the solution (or “timeout” if your program timed out - see -t options below) [n] is the number of moves and [move_i] is a move encoded by specifying the name of the piece, its move direction (“l”eft, “r”ight, “u”p, or “d”own) followed by the number of squares that the piece moves. For example, a solution line for the puzzle above is:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">solution J1 <span class="number">0.15</span> <span class="number">5</span> el1 qd2 fu1 xu1 xr5</span><br></pre></td></tr></table></figure></p><p>The length of a solution is the number of move strings. Note that the rover must be moved off the board completely. Test your program on the junior/beginner problems. Then work your way up to the more difficult ones.</p><p>Your program should output the following. For each input problem, I want to see statistics on the number of nodes searched, execution time, average h-value for all nodes where an evaluation occurred in the tree, and min/average/max depth of nodes where a cutoff occurred. When the program successfully terminates, print out the solution.</p><h3 id="Specifications"><a href="#Specifications" class="headerlink" title="Specifications"></a>Specifications</h3><p>Your program should take input from stdin and output to stdout. The input is in the format given above possibly containing multiple positions which need to be solved by your program in turn.</p><p>You program must be single-threaded and use no more than 200 MB of RAM. You must implement command-line option -t n, where n is an integer. This option sets the program to stop searching a position after n seconds of real time. If a timeout occurs your program must report “timeout” as time and proceed with the next problem.</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>A tar file that contains your source code, a makefile, and a report in pdf format. Your executable must be named safari. Late assignments will not be accepted!</p><p>In the report, give me a description of your program. Skip the basics (such as A<em>/IDA</em>). I want to know any search enhancements that you tried. Describe your heuristic function. Tell me what you did that was interesting. What problems did you encounter? How can your solution be improved? This document must be no longer than five pages. Include a table of experimental results that shows the (positive?) impact of your enhancements.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写程序解决类似华容道的问题，用A*算法实现，很有意思的一个作业。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
     
   </entry>
   

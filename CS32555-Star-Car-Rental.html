@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MVC,Swing," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写一个Java的租车应用程序大作业，最终程序需要带GUI界面，工作量不小。">
+<meta name="keywords" content="MVC,Swing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS32555-Star-Car-Rental">
+<meta property="og:url" content="https://tk1307993.coding.me/CS32555-Star-Car-Rental.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写一个Java的租车应用程序大作业，最终程序需要带GUI界面，工作量不小。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-11T01:06:23.981Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS32555-Star-Car-Rental">
+<meta name="twitter:description" content="代写一个Java的租车应用程序大作业，最终程序需要带GUI界面，工作量不小。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS32555-Star-Car-Rental.html"/>
+
+
+
+
+
+  <title>CS32555-Star-Car-Rental | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS32555-Star-Car-Rental.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS32555-Star-Car-Rental</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-11T09:04:23+08:00">
+                2019-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写一个Java的租车应用程序大作业，最终程序需要带GUI界面，工作量不小。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>Star Car Rental is an all-Australian, family business and has been since the beginning. It is owned and managed by two generations of the same family. For 50 years it has maintained the low cost formula to provide the clients cheap, but reliable, new hire cars. It has a fleet of around 2,500 new cars available from different offices in different cities. The offices are conveniently located but are set up to keep costs low so it can pass the savings on to the customers. A management group was appointed to develop an up-to-date car rental system and customer service billing system. Your group has won the tender to provide the software component of a computerised car rental and customer service billing system.</p>
+<h3 id="System-Description"><a href="#System-Description" class="headerlink" title="System Description"></a>System Description</h3><p>The customer can get car hire details and request the quotation for a car though phone or internet. After obtaining the quote, the user can proceed with the car booking by supplying credit card details. These details will then be validated and the application will be mailed or emailed after the confirmation of the car rental arrangement to the customer’s chosen mail or email address accordingly. Customers should be able to request a quote for renting a car. To facilitate this they should be able to enter the pick-up and drop-off locations they require, the pick-up and drop-off dates and their age in order to obtain a list of available car types based on those search criteria.</p>
+<p>The search results include details of vehicle types, prices for telephone booking, and prices for online booking. From the displayed search results, the customer should be able to request more detailed information about a particular vehicle type, including vehicle makes and models in the chosen type, the seating capacity, and the luggage capacity. From the displayed search results, the customer should also be able to request the quote for renting a chosen vehicle type. Also from the displayed search results, the customer should also be able to proceed with booking a car. After selecting this option, the customer will be able to check that the details for the rental transaction are correct. Prior to making the booking, the customer will be able to select from a few options including a request for an excess reduction for an additional fee, a protection waiver against cancellation, entry of a promotional code as well as avail special offers.</p>
+<p>The customer will need to be given other important information such as age restrictions, fuel conditions and any other general restrictions, as well as any information on insurance details and pick-up instructions. Still prior to making the booking, the customer will need to enter personal information (such as name, address, telephone number and e-mail address) as well as payment information (credit card details). When processing the booking request, the system will check the completeness and correctness of the customer’s data entry (in particular, the credit card information). After successful validation of entered data, the system will confirm the booking with a rental confirmation number. As an additional confirmation of the booking, an e-mail will be sent to the customer’s e-mail address. To view, change or cancel a car booking, the customer will need the rental number and last name on the booking.</p>
+<p>The company rents cars on basis of car model and standard rate (daily, weekly, weekend, additional kilometre charge). The first 200 km are included in charges for every vehicle. All the cars are four door models with air conditioning and automatic transmission. The categories are:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>  Economy (E)       Toyota Yaris <span class="literal">or</span> similar</span><br><span class="line"><span class="number">2.</span>  Star (B)          Toyota Corolla <span class="literal">or</span> similar</span><br><span class="line"><span class="number">3.</span>  Midsize (M)       Holden Cruze <span class="literal">or</span> similar</span><br><span class="line"><span class="number">4.</span>  <span class="literal">Full</span> Size (F)     Toyota Aurion <span class="literal">or</span> similar</span><br><span class="line"><span class="number">5.</span>  Passenger Van(V)  Hyundai iMax <span class="literal">or</span> similar</span><br><span class="line"><span class="number">6.</span>  SUV(S)            Toyota RAV4 <span class="literal">or</span> similar</span><br></pre></td></tr></table></figure></p>
+<p>A weekend is defined from 6:00 PM Friday to 9:00 AM Monday. Any time over one week is computed by prorating the weekly rate.</p>
+<p>Whenever a customer comes to pick up car, he/she has to sign the rental agreement. A rental agreement consists of an agreement number, the customer’s name, type of rate (daily, weekend or weekly), car identification (license number), car price category. It also includes the date, time, and mileage when car leaves and the expected date and time of return. The customer renting the car may not be the driver, and there could be many drivers. For each driver, the following information needs to be captured: full name, birth date, driver’s license number, and state of issue of driver’s license. Information about the third party who may be paying the bill also needs to be captured.</p>
+<p>Returning a car consists of dropping it off. Also the vehicle is rented with a full tank of petrol, and the customer is responsible for refuelling the vehicle. When a vehicle is returned, an amount for petrol is added if the tank is not full. The date, time and mileage when the car is returned are recorded. The car must be inspected for damage. If the collision damage waiver is not accepted at the time of rental, the cost of repair is added to the bill. The car is also inspected to determine the need of minor maintenance. If maintenance is needed, the car is not cleaned up and returned to the rental lot. Instead, it is sent to the shop for needed repairs and maintenance. If the car passes inspection, it is sent to a car wash and then placed on the lot, ready to be rented again.</p>
+<p>A bill is given to the customer if the customer is present. Otherwise, it is mailed to the customer. Often this customer is a third-party payer, such as an insurance company. Payment is made by either cash or credit card. The damage waiver is $8.99 per day. If the customer accepts this, there is no charge for physical damage to the vehicle. If the customer declines this, an insurance policy with a $1000.00 deductible applies to body damage. The deposit is either paid in cash or charged to the credit card. A $1000.00 deposit is collected at time of rental. It is either cash or a charged to the credit card. Late returns incur a penalty. There is a two-hour grace period on a daily and weekend rental. There is a four-hour grace period on a weekly rental. After that another day is charged. A weekly rental turned in early will be computed as a daily rental unless the weekly rate is still cheaper. Star Car Rental also has special offers every week in terms of free vehicle upgrade, great one way deals as well as $50 off on rentals of three weekend days.</p>
+<h3 id="Deadlines-and-deliverables"><a href="#Deadlines-and-deliverables" class="headerlink" title="Deadlines and deliverables"></a>Deadlines and deliverables</h3><p>The items to hand in, the date to hand them in, and the marks for each part, are shown below. The estimated workload for all parts, for each person on the team, is about 36-50 hours. The actual workload may vary by a factor of three due to individual variation.</p>
+<h3 id="Use-Case-Diagram"><a href="#Use-Case-Diagram" class="headerlink" title="Use Case Diagram"></a>Use Case Diagram</h3><p>Identify all the use cases mentioned in the system description and draw a use case diagram, with all use case relationships. It has an expected workload of 8 hours for each group member. There can be approximately 15-20 use cases selected from this system description.</p>
+<h3 id="Use-Case-Descriptions"><a href="#Use-Case-Descriptions" class="headerlink" title="Use Case Descriptions"></a>Use Case Descriptions</h3><p>Describe 3 use cases using the format described in the lecture notes, showing all details for each use case; describe any included or extended tasks that are required by the stated use cases. It has an expected workload of 3 hours for each group member. Each use case should require at most 3 pages of text, and some may take less than one page.</p>
+<h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>Design a design class diagram which shows, for each class in the system, the class name and attributes, plus the class associations, multiplicities and operations. Include any inheritance relations. It has an expected workload of 10 hours for each group member.</p>
+<h3 id="Sequence-Diagram"><a href="#Sequence-Diagram" class="headerlink" title="Sequence Diagram"></a>Sequence Diagram</h3><p>Draw 3 sequence diagram which show all messages (method calls) between classes, including any parameters, and any value returned from a method call. It shows all selection, iteration, and object creation and / or destruction. It has an expected workload of 5 hours for each group member.</p>
+<h3 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h3><p>Write Java code for 3 methods (getters, setters and constructors will not be considered as methods for Assignment marking) of any one class or different classes in the class diagram. It has an expected workload of 10 hours for each group member.</p>
+<h3 id="Dialog-Design"><a href="#Dialog-Design" class="headerlink" title="Dialog Design"></a>Dialog Design</h3><p>Each group has to design dialog for only three use cases. The dialog design consists of two parts:</p>
+<ul>
+<li>A set of screen layouts, that define the data input to and displayed on each screen.</li>
+<li>The transitions between the screens. The diagram shows a set of screen icons, the transitions between them, and the user action that creates each transition.</li>
+</ul>
+<h3 id="Entity-Relationship-Diagram"><a href="#Entity-Relationship-Diagram" class="headerlink" title="Entity Relationship Diagram"></a>Entity Relationship Diagram</h3><p>Draw an Entity-Relationship diagram, which shows appropriate entities, relationships and cardinalities. It has an expected workload of 5 hour for each group member.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MVC/" rel="tag"># MVC</a>
+          
+            <a href="/tags/Swing/" rel="tag"># Swing</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/INFO1105-Prefix-Map.html" rel="next" title="INFO1105-Prefix-Map">
+                <i class="fa fa-chevron-left"></i> INFO1105-Prefix-Map
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">177</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Description"><span class="nav-number">2.</span> <span class="nav-text">System Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deadlines-and-deliverables"><span class="nav-number">3.</span> <span class="nav-text">Deadlines and deliverables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Case-Diagram"><span class="nav-number">4.</span> <span class="nav-text">Use Case Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Case-Descriptions"><span class="nav-number">5.</span> <span class="nav-text">Use Case Descriptions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Diagram"><span class="nav-number">6.</span> <span class="nav-text">Class Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sequence-Diagram"><span class="nav-number">7.</span> <span class="nav-text">Sequence Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Code"><span class="nav-number">8.</span> <span class="nav-text">Java Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dialog-Design"><span class="nav-number">9.</span> <span class="nav-text">Dialog Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entity-Relationship-Diagram"><span class="nav-number">10.</span> <span class="nav-text">Entity Relationship Diagram</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
