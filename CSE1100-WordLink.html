@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,Game," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+<meta name="keywords" content="Data Structure,Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSE1100-WordLink">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE1100-WordLink.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-13T01:33:22.620Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSE1100-WordLink">
+<meta name="twitter:description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE1100-WordLink.html"/>
+
+
+
+
+
+  <title>CSE1100-WordLink | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE1100-WordLink.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSE1100-WordLink</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T09:30:28+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The aim of this assignment is to practise analysing a problem in an object-oriented manner, and designing and implementing an object-oriented solution.</p>
+<p>Problem Description<br>WordLink is an English vocabulary game for two players. Players are required to present English words in turns, and the first character of the word must be the same as the last character of the previous word. For example, while player A and player B are playing the game, if A presents the word “grass”, then B has to give a word starting with ‘s’ which is the last character of “grass”. If B presents “sunny”, then A needs to supply a word starting with ‘y’. A word cannot be used twice in one game. The game can continue until one of the players loses. There are four scenarios in which a player loses the game.</p>
+<ol>
+<li>the player cannot find a word to continue the game.</li>
+<li>the player has presented a word which starts with a different character.</li>
+<li>the player has supplied a repeated word.</li>
+<li>the spelling of the word is incorrect<br>In any case, if one player is lost, then the other player wins the game. A number of examples of the game are listed as below.</li>
+</ol>
+<p>Example 1:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"dog"</span> – (<span class="keyword">B) </span><span class="string">"grass"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player A wins.</span><br></pre></td></tr></table></figure></p>
+<p>Example 2:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"dog"</span> – (<span class="keyword">B) </span><span class="string">"out"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player A wins.</span><br></pre></td></tr></table></figure></p>
+<p>Example 3:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"doog"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player <span class="keyword">B </span>wins.</span><br></pre></td></tr></table></figure></p>
+<p>In this assignment, you are required to build a program that plays WordLink with a kindergarten pupil. The pupil is player A and your program acts as player B.</p>
+<p>A text file ( dictionary.txt ) containing a set of English words will be provided. You can assume that dictionary.txt contains all English words that a kindergarten pupil may know. Words to be used in playing the game must be selected from the set.</p>
+<p>Each game should start by letting player A enter a word. Your program then needs to validate the word (ie. if the word is included in dictionary.txt ). If the word is invalid, then the game is terminated and your program (player B) wins; otherwise your program needs to search the dictionary to find and enter a proper word. Your program will then let player A to type a word to continue the game. This can go back and forth a number of times till either your program or player A wins.</p>
+<h3 id="Functional-and-Non-functional-Requirements"><a href="#Functional-and-Non-functional-Requirements" class="headerlink" title="Functional and Non-functional Requirements"></a>Functional and Non-functional Requirements</h3><p>Your program must satisfy the following functional and non-functional requirements.</p>
+<h3 id="Menu-Driven"><a href="#Menu-Driven" class="headerlink" title="Menu Driven"></a>Menu Driven</h3><p>The program should be menu driven. It displays the menu displayed as Figure 1 at the start, and waits for the player to choose a function.<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">WordLink</span><br><span class="line">A. set the difficulty level</span><br><span class="line">B. display the dictionary</span><br><span class="line">C. insert a word to the dictionary</span><br><span class="line">D. play the game</span><br><span class="line">E. <span class="keyword">exit</span></span><br><span class="line">Select a <span class="keyword">function</span> from the menu :</span><br></pre></td></tr></table></figure></p>
+<p>If A is selected, it allows the player to set a difficulty level.<br>If B is selected, it displays all words in the dictionary.<br>If C is selected, it inserts a new word into the dictionary.<br>If D is selected, it starts playing the game.<br>If E is selected, it saves all changes to dictionary.txt, and terminates the program execution.</p>
+<h3 id="Set-the-difficulty-level"><a href="#Set-the-difficulty-level" class="headerlink" title="Set the difficulty level"></a>Set the difficulty level</h3><p>Your program should provide two difficulty levels for the games - level 1 and level 2. For the player, level 2 is more difficult than level 1. This is because all words in dictionary.txt can be selected for playing at level 2, while level 1 games only use those level 1 words in the text file. At the start of your program execution, the difficulty level is 1 by default.</p>
+<p>If the player chooses to set the difficulty level, your program should prompt the player and wait for an integer (1 or 2) input. The difficulty level is then set up.</p>
+<h3 id="Display-the-dictionary"><a href="#Display-the-dictionary" class="headerlink" title="Display the dictionary"></a>Display the dictionary</h3><p>If this function is selected, your program displays on the monitor all words in the dictionary (including those being added). It displays words level by level with lower level at the front. Within each level, words are displayed alphabetically in an ascending order. They should be displayed 7 words in a line and 5 lines for a screen. The player can press any key to display the next screen.</p>
+<h3 id="Insert-a-word-to-the-dictionary"><a href="#Insert-a-word-to-the-dictionary" class="headerlink" title="Insert a word to the dictionary"></a>Insert a word to the dictionary</h3><p>The player can insert a new word into the dictionary. To insert a new word, the player needs to provide the word and the difficulty level. Your program must check to ensure the absence of the word before adding. If the word is existing, then insertion cannot be done and the player should be informed.</p>
+<h3 id="Play-the-game"><a href="#Play-the-game" class="headerlink" title="Play the game"></a>Play the game</h3><p>A game starts by your program prompting the player to enter a word. After a word is entered, your program checks if the word exists in the dictionary. If it isn’t, then the player loses and the game is over. If it is, then your program searches the dictionary and selects the first proper word to continue the game. For instance, if “sad”, “sat”, “saw”, “say”, “sea”, “see”, “she”, “shy”, “sun” are all available for selection, your program chooses the first word which is “sad”.</p>
+<h3 id="The-dictionary"><a href="#The-dictionary" class="headerlink" title="The dictionary"></a>The dictionary</h3><p>After your program is started, it should read from dictionary.txt to create the dictionary. The dictionary in your program must be an array of linked lists shown in Figure 3. Each node represents a word and its level. Words must be sorted alphabetically in an ascending order on the linked list. If a new word is added, then the word with its level must be inserted to the linked list at a proper position.</p>
+<h3 id="Bonus-Task"><a href="#Bonus-Task" class="headerlink" title="Bonus Task"></a>Bonus Task</h3><p>Instead of only being able to play against the computer, add a menu option for a two-player game and implement its functionality.</p>
+<h3 id="Code-Segments"><a href="#Code-Segments" class="headerlink" title="Code Segments"></a>Code Segments</h3><p>Below are code segments that must be included in your program.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DictionaryNode</span> &#123;</span><br><span class="line"><span class="comment">//object of the class represents a single word</span></span><br><span class="line">  <span class="keyword">protected</span> String word; <span class="comment">// word to be stored</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> level; <span class="comment">// level of the word</span></span><br><span class="line">  <span class="keyword">private</span> DictionaryNode next;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">DictionaryNode</span>(<span class="params">String _word, <span class="keyword">int</span> _level</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//add your implementation for the constructor</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ListOfNodes</span> &#123;</span><br><span class="line"><span class="comment">//object of the class represents a linked list of words starting</span></span><br><span class="line"><span class="comment">//with a specific character.</span></span><br><span class="line">  <span class="keyword">private</span> DictionaryNode head = <span class="literal">null</span>; <span class="comment">//head of the linked list</span></span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Dictionary</span> &#123;</span><br><span class="line"><span class="comment">//object of the class represents the whole dictionery</span></span><br><span class="line">  <span class="keyword">private</span> ListOfNodes[] data;</span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Program-Development"><a href="#Program-Development" class="headerlink" title="Program Development"></a>Program Development</h3><p>The following is a suggested breakdown for completing this assignment:</p>
+<h4 id="Task-1-Creating-the-Menu"><a href="#Task-1-Creating-the-Menu" class="headerlink" title="Task 1 Creating the Menu"></a>Task 1 Creating the Menu</h4><p>Create the menu display, collect user’s input and write a method stub for each menu option. Ensure that the correct function is called.</p>
+<h4 id="Task-2-File-Handling"><a href="#Task-2-File-Handling" class="headerlink" title="Task 2 File Handling"></a>Task 2 File Handling</h4><p>In Task 2, you need to consider all issues related to reading the text file (dictionary.txt) to obtain words and their levels. You can simply display contents read from the text file to ensure file reading is correctly conducted.</p>
+<h4 id="Task-3-Defining-Classes"><a href="#Task-3-Defining-Classes" class="headerlink" title="Task 3 Defining Classes"></a>Task 3 Defining Classes</h4><p>In this task, implement major classes for the assignment. This includes the necessary menu and interactions with the player for choosing options etc.</p>
+<h4 id="Task-4-Linked-Lists"><a href="#Task-4-Linked-Lists" class="headerlink" title="Task 4 Linked Lists"></a>Task 4 Linked Lists</h4><p>Implement classes required for linked lists and dictionary. Implement methods (such as insertInOrder, search etc) which are operations associated with the list and any other methods. Thoroughly test your linked list before integrating it into your program.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS32555-Star-Car-Rental.html" rel="next" title="CS32555-Star-Car-Rental">
+                <i class="fa fa-chevron-left"></i> CS32555-Star-Car-Rental
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">178</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">1.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Functional-and-Non-functional-Requirements"><span class="nav-number">2.</span> <span class="nav-text">Functional and Non-functional Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Menu-Driven"><span class="nav-number">3.</span> <span class="nav-text">Menu Driven</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-the-difficulty-level"><span class="nav-number">4.</span> <span class="nav-text">Set the difficulty level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Display-the-dictionary"><span class="nav-number">5.</span> <span class="nav-text">Display the dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Insert-a-word-to-the-dictionary"><span class="nav-number">6.</span> <span class="nav-text">Insert a word to the dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Play-the-game"><span class="nav-number">7.</span> <span class="nav-text">Play the game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-dictionary"><span class="nav-number">8.</span> <span class="nav-text">The dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bonus-Task"><span class="nav-number">9.</span> <span class="nav-text">Bonus Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Segments"><span class="nav-number">10.</span> <span class="nav-text">Code Segments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Development"><span class="nav-number">11.</span> <span class="nav-text">Program Development</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-1-Creating-the-Menu"><span class="nav-number">11.1.</span> <span class="nav-text">Task 1 Creating the Menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-2-File-Handling"><span class="nav-number">11.2.</span> <span class="nav-text">Task 2 File Handling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-3-Defining-Classes"><span class="nav-number">11.3.</span> <span class="nav-text">Task 3 Defining Classes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-4-Linked-Lists"><span class="nav-number">11.4.</span> <span class="nav-text">Task 4 Linked Lists</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
