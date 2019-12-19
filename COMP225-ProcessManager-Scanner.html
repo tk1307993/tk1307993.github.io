@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Web," />
+  <meta name="keywords" content="Fundamentals,Third-party," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Web的裸写大作业，做一个Cinemas，包括Image Gallery，Movies Selection，Movies Reservation，Shopping Cart等等功能">
-<meta name="keywords" content="Web">
+<meta name="description" content="接着之前的管理进程的library继续实现功能，这次需要实现拉起进程的功能。此外这门课其实考察的不是代码，而是熟悉整个软件开发流程。">
+<meta name="keywords" content="Fundamentals,Third-party">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP代写：CPT270-Cinemas">
-<meta property="og:url" content="https://tk1307993.coding.me/CPT270-Cinemas.html">
+<meta property="og:title" content="COMP225-ProcessManager-Scanner">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Web的裸写大作业，做一个Cinemas，包括Image Gallery，Movies Selection，Movies Reservation，Shopping Cart等等功能">
+<meta property="og:description" content="接着之前的管理进程的library继续实现功能，这次需要实现拉起进程的功能。此外这门课其实考察的不是代码，而是熟悉整个软件开发流程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-14T12:54:29.053Z">
+<meta property="og:updated_time" content="2019-12-18T02:36:15.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP代写：CPT270-Cinemas">
-<meta name="twitter:description" content="Web的裸写大作业，做一个Cinemas，包括Image Gallery，Movies Selection，Movies Reservation，Shopping Cart等等功能">
+<meta name="twitter:title" content="COMP225-ProcessManager-Scanner">
+<meta name="twitter:description" content="接着之前的管理进程的library继续实现功能，这次需要实现拉起进程的功能。此外这门课其实考察的不是代码，而是熟悉整个软件开发流程。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CPT270-Cinemas.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html"/>
 
 
 
 
 
-  <title>PHP代写：CPT270-Cinemas | 留学生CS编程作业代写</title>
+  <title>COMP225-ProcessManager-Scanner | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CPT270-Cinemas.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">PHP代写：CPT270-Cinemas</h2>
+          <h2 class="post-title" itemprop="name headline">COMP225-ProcessManager-Scanner</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T20:51:44+08:00">
-                2018-09-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-18T10:33:45+08:00">
+                2019-12-18
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PHP/" itemprop="url" rel="index">
-                    <span itemprop="name">PHP</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Web的裸写大作业，做一个Cinemas，包括Image Gallery，Movies Selection，Movies Reservation，Shopping Cart等等功能
+                  接着之前的管理进程的library继续实现功能，这次需要实现拉起进程的功能。此外这门课其实考察的不是代码，而是熟悉整个软件开发流程。
               </div>
           
 
@@ -360,12 +360,48 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><h4 id="1-PHP-Conversion-Modularisation-and-SESSION"><a href="#1-PHP-Conversion-Modularisation-and-SESSION" class="headerlink" title="1. PHP Conversion, Modularisation and SESSION"></a>1. PHP Conversion, Modularisation and SESSION</h4><p>You were recommended to use fragments for Assignment 1, but this is now compulsory. Please make sure you have implemented fragments for Assignment 2.<br>All of your main pages must be converted to PHP and each page must be broken up into modules using functions such as include_once() ( or include() , require() , require_once() ).<br>You may elect to move common (ie repeated) sections of the website, such as the header, navigation, footer and even sidebar into a separate file.<br>The session must be running (ie available) on every page, ie session_start() should be near the top.</p>
-<h4 id="2-jQuery-Image-Gallery-on-Home-Page"><a href="#2-jQuery-Image-Gallery-on-Home-Page" class="headerlink" title="2. jQuery Image Gallery on Home Page"></a>2. jQuery Image Gallery on Home Page</h4><p>Add an animated image gallery on the home page (index.php). The image gallery must be implemented using jQuery. The images featured in the image gallery should be contextual. Several implementations ( in terms of code and style ) exist on the Internet, please read about these and then implement one on the home page. An example will be covered during week 7’s collaborate chat.</p>
-<h4 id="3-Movies-Selection-Page"><a href="#3-Movies-Selection-Page" class="headerlink" title="3. Movies Selection Page"></a>3. Movies Selection Page</h4><p>The client has selected set movies for the website. Your page should include content using jQuery OR Ajax to get the title, movie poster, movie trailer, plot summary, description, ratings information and times playing. Ideally, there should be Read More button next to each movie. When the user clicks on this button , a movie trailer and showtimes should be displayed.</p>
-<h4 id="4-Movies-Reservation-Page-or-Facility"><a href="#4-Movies-Reservation-Page-or-Facility" class="headerlink" title="4. Movies Reservation Page or Facility"></a>4. Movies Reservation Page or Facility</h4><p>Some of you may wish to build this facility into a modal window or another page. It is up to you how you implement this part. You will not lose marks if this is not a separate page.<br>It is recommended that you design this page or facility to process the MovieID, day and time of the movie from the movie service page (ie do not allow customers to pick the movie, day and time here a it will lead to logical complications).</p>
-<h4 id="5-Shopping-Cart-Page-or-Facility"><a href="#5-Shopping-Cart-Page-or-Facility" class="headerlink" title="5. Shopping Cart Page or Facility"></a>5. Shopping Cart Page or Facility</h4><p>Some of you may wish to build this facility into a modal window or another page. It is up to you how you implement this part. You will not lose marks if this is not a separate page.<br>The cart page must display a list of all the tickets that have been reserved, along with the quantity, pricing information, and with subtotals and total prices. Ideally, the client should be able to add seats and/or delete their reservations before finalising their bookings.<br>The total price for the cart must be calculated on the server side (ie using PHP) and the total price must be displayed on the cart page. This will ensure that the client can’t hack the price and give themselves cheap tickets or free tickets if the ticket price is calculated clientside.<br>At this stage, online purchasing is not required. The customers are only reserving the tickets, they must pay for them over the counter when they come to the cinema. There is also no need to check whether there are seats available in each session.</p>
-<h3 id="Reservation-System"><a href="#Reservation-System" class="headerlink" title="Reservation System"></a>Reservation System</h3><p>The concept of the seating reservation system is that a customer can reserve / allocate seats of their choosing (based upon the type of seats they have purchased). Once that seat for that allocated movie has been reserved, no one else can book it.<br>You can use a database (or something similar if you like).<br>You will also get extra mark for the design and another extra mark if the system remembers previously booked seats. Please refer to the marking allocation guide for further information.</p>
+        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The main objectives of this assignment are:</p>
+<ul>
+<li>to practise software project management (Agile);</li>
+<li>to gain experience in using version control systems (git);</li>
+<li>to gain experience in reading code documentation;</li>
+<li>to gain experience in writing code documentation;</li>
+<li>to gain experience in designing unit and integration tests.</li>
+</ul>
+<p>Note This assignment specification aims to provide as complete a description of this assessment task as possible. However, as with any specification, there will always be things we should have said that we have left out and areas in which we could have done a better job of explanation. As a result, you are strongly encouraged to ask any questions of clarification you might have, either by raising them during a lecture or by posting them on the iLearn discussion forum devoted to this assignment.</p>
+<h3 id="The-Specification"><a href="#The-Specification" class="headerlink" title="The Specification"></a>The Specification</h3><p>In Assignment 1, You have developed a small library, in Java. This library contains a class, ProcessManager, that provides an interface to perform simple interactions 1 other programs, typically shell scripts, not necessarily written in Java. The objective of Assignment 2 is to extend the functionalities of the ProcessManager class to more complex interactions.</p>
+<p>For this assignment, you may have to look some concepts up (e.g. regular expressions, prompt) as part of a self learning practice. The emphasis in this task is on:</p>
+<ul>
+<li>understanding the problem to be solved and writing a formal specification;</li>
+<li>understanding what Java libraries offer and how to use them;</li>
+<li>documenting your code so that other developers can use it;</li>
+<li>writing tests for your code;</li>
+<li>developing the software as a Agile project;</li>
+</ul>
+<h3 id="Sprint-4"><a href="#Sprint-4" class="headerlink" title="Sprint 4"></a>Sprint 4</h3><p>Useful Concept for this sprint: Scanner (Java)</p>
+<p>In this sprint, you have to implement a send and an expect method in the</p>
+<p>ProcessManager class (the interfaces of the methods are provided in Program 1).</p>
+<h3 id="Program-1-Expect-method"><a href="#Program-1-Expect-method" class="headerlink" title="Program 1: Expect method"></a>Program 1: Expect method</h3><p>The send method specification is simple:</p>
+<ul>
+<li>the argument is a String s,</li>
+<li>the send method should send s to the process managed by the instance of the ProcessManager.</li>
+<li>it should return true if the string could be sent, or false if a problem occurred while sending s. The expect method specification is as follows:</li>
+<li>the arguments are a timeout (duration) and a prompt which is given as a regular expression (Pattern in Java);</li>
+<li>the method returns:</li>
+<li>the string w if the process managed by the instance of the ProcessManager produces w followed by the prompt on its output channel before the timeout;</li>
+<li>throw a timeout exception otherwise.</li>
+</ul>
+<p>A simple use case of expect in a Java program on a Unix system is:</p>
+<ul>
+<li>you spawn a process that is going to ‘ssh’ to a remote machine.</li>
+<li>the process should return a prompt which is the string “password” (a simple regular expression);</li>
+<li>when you have seen the prompt on the output channel, you can send your password (string) and the next prompt you should expect is the terminal prompt on the target machine.</li>
+<li>if the prompt does not appear on the output channel, an error occured.</li>
+<li>In this sprint, you have to implement the expect and send methods and write some tests to ensure that the methods do what they are supposed to do. In this sprint you may assume that expect is called only once and then the process terminates. You will need to import the following package in the ProcessManager.java file.</li>
+</ul>
+<p>After that you have to make sure that the expect method can be used many times in an instance of a ProcessManager. The previous use case can be extended.</p>
+<p>You have to modify, if needed, your implementations of expect and send to be able to interact with a managed process in a way similar to the scenario described above.</p>
+<p>You also have to write some tests to ensure that your implementation does what it is supposed to do. We strongly encourage you to split the work as follows: one group member is in charge of writing the tests and if needed refine the specification; the other member adapts the implementations of expect and send to make sure the tests pass.</p>
 
       
     </div>
@@ -383,7 +419,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+            <a href="/tags/Third-party/" rel="tag"># Third-party</a>
           
         </div>
       
@@ -396,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS308-Pipes.html" rel="next" title="C代写：CS308-Pipes">
-                <i class="fa fa-chevron-left"></i> C代写：CS308-Pipes
+              <a href="/CMPT310-Artificial-Intelligence-Survey.html" rel="next" title="CMPT310-Artificial-Intelligence-Survey">
+                <i class="fa fa-chevron-left"></i> CMPT310-Artificial-Intelligence-Survey
               </a>
             
           </div>
@@ -405,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSC120-EuclideanMinimumWeightMatching.html" rel="prev" title="R代写：CSC120-EuclideanMinimumWeightMatching">
-                R代写：CSC120-EuclideanMinimumWeightMatching <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -561,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-PHP-Conversion-Modularisation-and-SESSION"><span class="nav-number">1.1.</span> <span class="nav-text">1. PHP Conversion, Modularisation and SESSION</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-jQuery-Image-Gallery-on-Home-Page"><span class="nav-number">1.2.</span> <span class="nav-text">2. jQuery Image Gallery on Home Page</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Movies-Selection-Page"><span class="nav-number">1.3.</span> <span class="nav-text">3. Movies Selection Page</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Movies-Reservation-Page-or-Facility"><span class="nav-number">1.4.</span> <span class="nav-text">4. Movies Reservation Page or Facility</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Shopping-Cart-Page-or-Facility"><span class="nav-number">1.5.</span> <span class="nav-text">5. Shopping Cart Page or Facility</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reservation-System"><span class="nav-number">2.</span> <span class="nav-text">Reservation System</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">1.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Specification"><span class="nav-number">2.</span> <span class="nav-text">The Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sprint-4"><span class="nav-number">3.</span> <span class="nav-text">Sprint 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-1-Expect-method"><span class="nav-number">4.</span> <span class="nav-text">Program 1: Expect method</span></a></li></ol></div>
             
 
           </div>
