@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写一个类似大鱼吃小鱼的游戏，小鱼不停的吃比他体积小的鱼，最终成长成大鱼后，和鲨鱼一战。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS218-Shark">
+<meta property="og:url" content="https://tk1307993.coding.me/CS218-Shark.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写一个类似大鱼吃小鱼的游戏，小鱼不停的吃比他体积小的鱼，最终成长成大鱼后，和鲨鱼一战。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-23T08:29:10.420Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS218-Shark">
+<meta name="twitter:description" content="代写一个类似大鱼吃小鱼的游戏，小鱼不停的吃比他体积小的鱼，最终成长成大鱼后，和鲨鱼一战。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS218-Shark.html"/>
+
+
+
+
+
+  <title>CS218-Shark | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS218-Shark.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS218-Shark</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-23T16:17:18+08:00">
+                2019-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写一个类似大鱼吃小鱼的游戏，小鱼不停的吃比他体积小的鱼，最终成长成大鱼后，和鲨鱼一战。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Overview-of-the-Assignment"><a href="#Overview-of-the-Assignment" class="headerlink" title="Overview of the Assignment"></a>Overview of the Assignment</h3><p>Fish Game: Create a fish game along the line of a classic game Shark! Shark!(<a href="http://www.youtube.com/watch?v=HiHTZ8wZ_Hc&amp;feature=related)" target="_blank" rel="noopener">http://www.youtube.com/watch?v=HiHTZ8wZ_Hc&amp;feature=related)</a>.</p>
+<p>In the classic game above, you start as a baby fish, growing by eating smaller fishes, and staying alive by dodging larger fishes.</p>
+<p>In this assignment, we will create a fish game that is similar to but not exactly the same as this classic game – please always follow our requirements as specified below when they are different. You may use as much of your code from Assignment 2 as you need. Before you start, take some time to plan your design.</p>
+<p>This assignment is different from the last two and will require you think through things in advance. Use Inheritance, polymorphism, key-based interactions, ArrayList, and your knowledge of objects to write the code.</p>
+<h3 id="General-Requirements-amp-Learning-Objectives"><a href="#General-Requirements-amp-Learning-Objectives" class="headerlink" title="General Requirements&amp; Learning Objectives"></a>General Requirements&amp; Learning Objectives</h3><h4 id="Learning-objectives"><a href="#Learning-objectives" class="headerlink" title="Learning objectives"></a>Learning objectives</h4><ul>
+<li>Create application using inheritance and polymorphism;</li>
+<li>Create key-based interactions;</li>
+<li>Use ArrayList to store and remove objects;</li>
+<li>Create dynamic text messages;</li>
+<li>Create simple Graphical User Interface (GUI) using GUI library</li>
+</ul>
+<h4 id="Programming-Requirements"><a href="#Programming-Requirements" class="headerlink" title="Programming Requirements"></a>Programming Requirements</h4><p>First of all, this assignment must be done using Java System Library (e.g. using Graphics2D for drawing). You will get 0 if you use Processing library (e.g. using PApplet for drawing) or any other 3rd party libraries.</p>
+<p>This assignment has two iterative steps: Milestone: initial UML design and code for drawing the fishes and Pond, and Final Deliverable: updated UML design and code for fishing For the UML design document, you are graded on completeness and correctness, and for the code on completeness and visual style.</p>
+<p>For the UML design document, you are graded on completeness and correctness, and for the code on completeness and visual style.</p>
+<h3 id="MilestoneCode-Design-Inheritance-and-Drawing-Fishes-and-Sea"><a href="#MilestoneCode-Design-Inheritance-and-Drawing-Fishes-and-Sea" class="headerlink" title="MilestoneCode: Design Inheritance and Drawing Fishes and Sea"></a>MilestoneCode: Design Inheritance and Drawing Fishes and Sea</h3><h4 id="UML-Design"><a href="#UML-Design" class="headerlink" title="UML Design"></a>UML Design</h4><p>Draw the initial UML that should include at least three classes to represent a general fish and two types of enemy fish: shark and herbivore fish (i.e. weed eating only). The enemy fishes must extend (i.e. be the subclasses of) the general fish, and meet the following requirements:</p>
+<p>First of all, you need to design your classes by following strict Encapsulation for fields (except for constants), and provide public methods only when it’s absolutely necessary. When working with inheritance, you are allowed to relax access control of superclass’ fields from private to protected so as to facilitate subclasses to access some of these fields directly. As with public methods, you should relax access as such only when it is absolutely necessary.</p>
+<h3 id="About-the-general-fish"><a href="#About-the-general-fish" class="headerlink" title="About the general fish"></a>About the general fish</h3><p>a) The general fish class should hold properties common to both player fish and enemy fish, such as position (along x &amp; y), velocity (along x and y), angle for rotation, etc.</p>
+<p>b) The general fish should also have some methods that could be either used directly or overridden by its subclasses, such as drawFish(Graphics2D g2), detectCollision(), detectOffScreen(), etc.</p>
+<p>c) Please note the whole purpose to have the general fish class is to use it as the superclass for player fish and enemy fish, you shouldn’t instantiate any object of it.</p>
+<h3 id="About-the-enemy-fishes"><a href="#About-the-enemy-fishes" class="headerlink" title="About the enemy fishes"></a>About the enemy fishes</h3><p>d) For the herbivore fish, you can basically use the fish that you have created in Assignment 2 with modifications. For instance, you need to redesign the code structure to accommodate inheritance, so that it will make use of the fields and methods of the general fish while declaring its own fields such as field for body color.</p>
+<p>e) It must override at least drawFish(Graphics2D g2) method of the general fish, to allow it to draw enemy fish using the color held in the field of body color f) For the shark, you need to redesign a new fish that is visually in the form of shark, which must has tail that is visually obvious. Beyond inheriting the common properties of the general fish, the fish must have the capability to eat other types of fish, including the herbivore fish and player fish (included in the final deliverable)</p>
+<p>g) A shark can eat other fishes only when it is facing them and close to their mouth (i.e. in head-on position), so you need to have a method to check on this.</p>
+<p>h) Design FishPanel class and aggregate an ArrayList of general fish. Then add as field a Timer object.</p>
+<p>i) Create FishApp class as a subclass of JFrame, and associate it with the FishPanel class.</p>
+<p>j) The UML diagram must follow the UML notations for class and encapsulation. Also the names of the class, fields and methods must follow the naming convention with appropriate upper- or lower case for the initial and CamelCase thereafter.</p>
+<p>(Please note the structure of your code must match your UML design. Otherwise you will lose credit for the UML design)</p>
+<h3 id="Coding-per-the-design"><a href="#Coding-per-the-design" class="headerlink" title="Coding per the design:"></a>Coding per the design:</h3><p>a) you should use the whole display window to represent the sea, leaving no margins for any of the sides.</p>
+<p>b) You must use an ArrayList of general fish to hold the enemy fishes, among which two of them should be sharks and the rest herbivore fish.</p>
+<p>c) The sharks initially should be in uniform color and size (it should be equal to or slightly larger than the upper bound of herbivore fishes’ sizes), while the herbivore fishes must be in randomized colors and sizes.</p>
+<p>d) An herbivore fish is eaten by a shark when they go head-on (i.e. face to face with mouths being close) and grow itself proportionally to the size of the fish eaten. Otherwise they bounce off from each other.</p>
+<p>e) Herbivore fishes must bounce off each other when they collide and NO eating happen among themselves.</p>
+<p>f) The enemy fishes must move left and right in the sea, with wavy (up and down) movement based on the sin or cos function.</p>
+<p>g) When an enemy fish fully goes off the screen or when it is killed, it must be destroyed (i.e. removed from the ArrayList).</p>
+<p>h) Enemy fishes should be respawned at a steady interval for up to a maximum of 10 including no more than 8 herbivore fishes and no more than 2 sharks on the screen (you should spawn one fish for each interval, and use a random function call to give 80% of chance to herbivore fishes and 20% chance to shark). Respawned fishes should move in randomly from either left or right side of the window.</p>
+<h3 id="Final-deliverable-Fish-Game"><a href="#Final-deliverable-Fish-Game" class="headerlink" title="Final deliverable: Fish Game"></a>Final deliverable: Fish Game</h3><h4 id="Update-the-UML-design-to-include"><a href="#Update-the-UML-design-to-include" class="headerlink" title="Update the UML design to include"></a>Update the UML design to include</h4><p>a) Class for player fish (avatar), which is a subclass of general fish as well, and must include at least two unique visual features (e.g. dots, stripes etc.) as represented by geom objects so that it will be easy to distinguish it from those herbivore fishes.</p>
+<p>b) The player fish must override at least the drawFish(Graphics2D g2) method of general fish to draw it differently.</p>
+<p>c) An inner class (you can download the membership notation from Canvas|Resource and used it in the UML to indicate the nested relationship), which extends KeyAdaptor class for key interaction per the features for gameplay below.</p>
+<p>d) GUI features as outlined below.</p>
+<p>(Please note the structure of your code must match your UML design. Otherwise you will lose credit for the UML design)</p>
+<h4 id="Coding-per-the-design-1"><a href="#Coding-per-the-design-1" class="headerlink" title="Coding per the design"></a>Coding per the design</h4><p>About the player fish.</p>
+<p>a) The movement of the player fish must be controlled by key inputs.</p>
+<p>b) The player fish would grow by eating an herbivore fish smaller than itself, and the growth must be proportional to the size of the fish eaten.</p>
+<p>c) If it however tries to eat an herbivore fish that is greater than itself, it will be killed, and before it runs out of its lives it respawns at a location within the screen, which meets the digit-based requirements as specified.</p>
+<p>d) Eating can happen ONLY when the player fish and an enemy fish go in head-on position as outline in the milestone part.</p>
+<p>e) Whenever eating happens (no matter player fish eats enemy fish or vice verse), certain bubbles or traces should be displayed as per the digit-based requirements as specified.</p>
+<p>f) Player fish can kill a shark by touching its tail 4 times before it moves out of the screen. If however it touches on the shark any part other than the tail, it will be killed instantly.</p>
+<p>g) When a shark is touched by its tail it must flash with a different color to demonstrate the effect, and when it is killed, it must change its shape in certain way to show that it is dead while sinking to the bottom of the sea (refer to Shark! Shark! for example but you can have your own appropriate form)</p>
+<h3 id="About-Style"><a href="#About-Style" class="headerlink" title="About Style"></a>About Style</h3><p>As always, visual Design Matters! Grades will partially depend on how the game looks, including sea design with appropriate, animated decoration objects, animated fish features for enemy fishes and player fish, the HUD (e.g. using fish images rather number to show number of lives, and nicely designed score board). Beyond this, there are some specific requirements as follows based on your student number.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS1921-Text-Editor.html" rel="next" title="CS1921-Text-Editor">
+                <i class="fa fa-chevron-left"></i> CS1921-Text-Editor
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">182</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-of-the-Assignment"><span class="nav-number">1.</span> <span class="nav-text">Overview of the Assignment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#General-Requirements-amp-Learning-Objectives"><span class="nav-number">2.</span> <span class="nav-text">General Requirements&amp; Learning Objectives</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learning-objectives"><span class="nav-number">2.1.</span> <span class="nav-text">Learning objectives</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Requirements"><span class="nav-number">2.2.</span> <span class="nav-text">Programming Requirements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MilestoneCode-Design-Inheritance-and-Drawing-Fishes-and-Sea"><span class="nav-number">3.</span> <span class="nav-text">MilestoneCode: Design Inheritance and Drawing Fishes and Sea</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UML-Design"><span class="nav-number">3.1.</span> <span class="nav-text">UML Design</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#About-the-general-fish"><span class="nav-number">4.</span> <span class="nav-text">About the general fish</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#About-the-enemy-fishes"><span class="nav-number">5.</span> <span class="nav-text">About the enemy fishes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-per-the-design"><span class="nav-number">6.</span> <span class="nav-text">Coding per the design:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Final-deliverable-Fish-Game"><span class="nav-number">7.</span> <span class="nav-text">Final deliverable: Fish Game</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Update-the-UML-design-to-include"><span class="nav-number">7.1.</span> <span class="nav-text">Update the UML design to include</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding-per-the-design-1"><span class="nav-number">7.2.</span> <span class="nav-text">Coding per the design</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#About-Style"><span class="nav-number">8.</span> <span class="nav-text">About Style</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
