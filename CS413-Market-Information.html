@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="实现Bitcoin中的Hashcash Mining算法。">
-<meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security">
+<meta name="description" content="这次需要代写的作业分为两个部分，第一部分是关于读写一份Market Information的程序，第二部分是关于Order book的程序。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：COMP30023 Hashcash Mining">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+<meta property="og:title" content="CS413-Market-Information">
+<meta property="og:url" content="https://tk1307993.coding.me/CS413-Market-Information.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta property="og:description" content="这次需要代写的作业分为两个部分，第一部分是关于读写一份Market Information的程序，第二部分是关于Order book的程序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T10:51:23.076Z">
+<meta property="og:updated_time" content="2019-12-26T02:11:57.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：COMP30023 Hashcash Mining">
-<meta name="twitter:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta name="twitter:title" content="CS413-Market-Information">
+<meta name="twitter:description" content="这次需要代写的作业分为两个部分，第一部分是关于读写一份Market Information的程序，第二部分是关于Order book的程序。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS413-Market-Information.html"/>
 
 
 
 
 
-  <title>C代写：COMP30023 Hashcash Mining | 留学生CS编程作业代写</title>
+  <title>CS413-Market-Information | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS413-Market-Information.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：COMP30023 Hashcash Mining</h2>
+          <h2 class="post-title" itemprop="name headline">CS413-Market-Information</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:37:55+08:00">
-                2018-07-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-26T10:07:10+08:00">
+                2019-12-26
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  实现Bitcoin中的Hashcash Mining算法。
+                  这次需要代写的作业分为两个部分，第一部分是关于读写一份Market Information的程序，第二部分是关于Order book的程序。
               </div>
           
 
@@ -360,10 +360,46 @@
       
 
       
-        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The aim of this project is to provide you with experience in writing (a) a program that interacts with other programs over a network (socket programming), and (b) multi-threaded applications. Specifically, you will write a server-based proof-of-work solver for the Hashcash mining algorithm used in Bitcoin.</p>
-<p>This requires you to implement the functions in the Simple Stratum Text Protocol (SSTP), which is used to format messages between clients and your server program. The SSTP is described in Section 3. Background information related to the the Bitcoin mining process is described in Section 2. Detailed requirements and implementation guidelines are listed in Section 4.</p>
-<p>Your program must be written in standard C. Use the POSIX pthread library for multi-threaded tasks. Other dynamic and static libraries are prohibited.</p>
-<p>Your program must run on the School of Engineering Linux server digitalis or digitalis2.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Goal of this project: reading/writing csv files, plotting a chart, creating some calculations (daily return, monthly return) from the data, using data structure</p>
+<ul>
+<li>Unzip the file markedata.zip</li>
+<li>You will find 19 csv files with information about stocks (for the Part I)</li>
+<li>You will find 3 csv files with information about exchange (BARX, EDGX, NYSE) (for the Part 2)</li>
+</ul>
+<h3 id="Part-I-Reading-a-CSV-file-containing-Market-Information"><a href="#Part-I-Reading-a-CSV-file-containing-Market-Information" class="headerlink" title="Part I: Reading a CSV file containing Market Information"></a>Part I: Reading a CSV file containing Market Information</h3><p>Load the content of these files into the following data structure:</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">market_data[<span class="string">'Symbol'</span>] = &#123;<span class="string">'Open'</span>:[], <span class="string">'High'</span>:[], <span class="string">'Low'</span>:[], <span class="string">'Close'</span>:[], <span class="string">'Volume'</span>:[], <span class="string">'Adjusted'</span>:[], <span class="string">'Date'</span>:[]&#125;</span><br></pre></td></tr></table></figure>
+<p>Since you have to handle many symbols, market_data should be a dictionary of dictionary.</p>
+<p>Every values of this dictionary of dictionary will be a list of number or float or date.</p>
+<h4 id="Task-1"><a href="#Task-1" class="headerlink" title="Task 1"></a>Task 1</h4><p>Create this dictionary</p>
+<h4 id="Task-2"><a href="#Task-2" class="headerlink" title="Task 2"></a>Task 2</h4><p>Create a new key in this dictionary being a list of values representing the moving average for 10 days.<br>It means that market_data will be:</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">market_data[<span class="string">'Symbol'</span>] = &#123;<span class="string">'Open'</span>:[], <span class="string">'High'</span>:[], <span class="string">'Low'</span>:[], <span class="string">'Close'</span>:[], <span class="string">'Volume'</span>:[], <span class="string">'Adjusted'</span>:[], <span class="string">'Date'</span>:[], <span class="string">'MA_10'</span>:[]&#125;</span><br></pre></td></tr></table></figure>
+<p>Since it is a moving average, there are some parts without values; you will just use None as a value. All the different lists should have the same length.</p>
+<h4 id="Task-3"><a href="#Task-3" class="headerlink" title="Task 3"></a>Task 3</h4><p>You will create another key in this dictionary containing the daily return for every day (the first day shouldn’t have any return)</p>
+<p>You will calculate the return using the adjusted price (the adjusted price taking into account split and dividends)</p>
+<h4 id="Task-4"><a href="#Task-4" class="headerlink" title="Task 4"></a>Task 4</h4><p>You will create:</p>
+<ul>
+<li>A function ‘maximum_return’, which will return the best return across all the symbols. The return should contain the return and the date associated</li>
+<li>A function ‘minimum_return’, which will return the best return across all the symbols. The return should contain the return and the date associated</li>
+<li>A function ‘best_return_for_one_month’, which will return the best return across all the symbols for a 1-month period. The return should contain the return and the month/year</li>
+</ul>
+<h4 id="Task-5"><a href="#Task-5" class="headerlink" title="Task 5"></a>Task 5</h4><p>Plot a chart for MSFT, NVDA, GOOGL representing the daily market price.<br>You will use the library the library matplot.<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">matplotlib</span></span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">matplotlib</span><span class="selector-class">.pyplot</span> <span class="selector-tag">as</span> <span class="selector-tag">plt</span></span><br><span class="line"><span class="selector-tag">plt</span><span class="selector-class">.plot</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="selector-tag">plt</span><span class="selector-class">.ylabel</span>(<span class="string">'some numbers'</span>)</span><br><span class="line"><span class="selector-tag">plt</span><span class="selector-class">.show</span>()</span><br></pre></td></tr></table></figure></p>
+<h3 id="Creating-an-order-book"><a href="#Creating-an-order-book" class="headerlink" title="Creating an order book"></a>Creating an order book</h3><p>You are creating an order book builder for your trading system. The book builder will have as an input a list of files with the same format. Each exchange will have a given file. During this exercise, you will take 3 venues (3 files) as input: ARCA, EDGX, NYSE.</p>
+<p>You will need to read the three files at the same time (to make it deterministic, you will always read ARCA first then EDGX second).</p>
+<p>An order book is defined as the following on wiki:</p>
+<p>A book builder is a component of a trading system sorting the orders from different exchanges by price and by side. It is a critical component: Primary source of market information for trading models.</p>
+<p>In this assignment, you will read the files and get the orders coming from the different exchanges.</p>
+<p>You will create a class capable to handle the market data coming one by one and build a book for each side. In this part I, you will just need to handle one symbol for 3 different exchanges. But in the following part, you will have a book for different symbols, therefore it is important to have your book handling many symbols.</p>
+<h4 id="Task-1-1"><a href="#Task-1-1" class="headerlink" title="Task 1"></a>Task 1</h4><p>You will create the class book_builder having for functions: process_tick (tick), this function will update the book ‘bid’ ‘offer’ with the input tick top_of_book(), this function will return the top of the book for bid and offer</p>
+<h4 id="Task-2-1"><a href="#Task-2-1" class="headerlink" title="Task 2"></a>Task 2</h4><p>You will create the functions:</p>
+<ul>
+<li>getBestBid returning the best bid (price, volume, venue)</li>
+<li>getBestOffer returning the best bid (price, volume, venue)</li>
+</ul>
+<h4 id="Task-3-1"><a href="#Task-3-1" class="headerlink" title="Task 3"></a>Task 3</h4><p>You will create the function:</p>
+<ul>
+<li>getBidVolumeBetween(price1, price2) returning the total volume between price1 and price2 for bids.</li>
+<li>getOfferVolumeBetween(price1, price2) returning the total volume between price1 and price2 for offers</li>
+</ul>
 
       
     </div>
@@ -381,13 +417,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Linux-Network/" rel="tag"># Linux Network</a>
-          
-            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
-          
-            <a href="/tags/Security/" rel="tag"># Security</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -400,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hello-world.html" rel="next" title="留学生Computer Science编程作业代写">
-                <i class="fa fa-chevron-left"></i> 留学生Computer Science编程作业代写
+              <a href="/CS218-Shark.html" rel="next" title="CS218-Shark">
+                <i class="fa fa-chevron-left"></i> CS218-Shark
               </a>
             
           </div>
@@ -409,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS3024-Battleship.html" rel="prev" title="Python代写：CS3024 Battleship">
-                Python代写：CS3024 Battleship <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-I-Reading-a-CSV-file-containing-Market-Information"><span class="nav-number">2.</span> <span class="nav-text">Part I: Reading a CSV file containing Market Information</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-1"><span class="nav-number">2.1.</span> <span class="nav-text">Task 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-2"><span class="nav-number">2.2.</span> <span class="nav-text">Task 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-3"><span class="nav-number">2.3.</span> <span class="nav-text">Task 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-4"><span class="nav-number">2.4.</span> <span class="nav-text">Task 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-5"><span class="nav-number">2.5.</span> <span class="nav-text">Task 5</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-an-order-book"><span class="nav-number">3.</span> <span class="nav-text">Creating an order book</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-1-1"><span class="nav-number">3.1.</span> <span class="nav-text">Task 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-2-1"><span class="nav-number">3.2.</span> <span class="nav-text">Task 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-3-1"><span class="nav-number">3.3.</span> <span class="nav-text">Task 3</span></a></li></ol></li></ol></div>
             
 
           </div>
