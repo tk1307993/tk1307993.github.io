@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2019-12-30T02:21:09.895Z</updated>
+  <updated>2020-01-03T02:04:57.726Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS120-Art-Show</title>
+    <link href="https://tk1307993.coding.me/CS120-Art-Show.html"/>
+    <id>https://tk1307993.coding.me/CS120-Art-Show.html</id>
+    <published>2020-01-03T02:02:04.000Z</published>
+    <updated>2020-01-03T02:04:57.726Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a Python program that creates a photo collage of modified images. The entire collage must be created entirely using only Python – no Photoshop, etc. allowed. (The only allowable use of Photoshop, etc. is to reduce the original resolution of a high resolution image to start with.) You should have a single function make all of this happen–all of the effects and compositing must occur from a single function named collage(). IT IS COMPLETELY ACCEPTABLE AND EXPECTED FOR collage() TO USE OTHER FUNCTIONS! I will setMediaPath() to your folder, execute collage(), and expect to see your collage get generated. For full credit, your completed collage must satisfy the following requirements:</p><ol><li>Start with a blank canvas that is 700 pixels wide by 515 pixels tall or 515 pixels wide by 700 pixels tall.</li><li>Any number of different images may be placed on the blank starting canvas, but you must include the same image at least five times: once in its original form, and at least four more times modified in any way you want using at least four different modifications.</li><li>Each of the four image modifications required above must alter the original image’s appearance in some noticeable way. At least one of the modification algorithms must be created or significantly modified by you, and not copied from another resource. Possible image modifications include, but are not limited to:<ul><li>Grayscale</li><li>Crop</li><li>Lighten/darken</li><li>Negative</li><li>Scale</li><li>Sepia tone/cyanotype</li><li>Blend</li><li>Rotate/mirror</li><li>Line drawing/edge detection</li><li>Shift colors</li><li>Posterize</li><li>Added lines or shapes</li></ul></li><li>Develop a chromakey-like function to “sign” your collage by using a file containing your signature on a white background. Change corresponding pixels in your collage to a contrasting color when it detects the non-white pixels of your signature.</li><li>The program should not prompt for any input, but rather have all files specified in your code. You should make use of the getMediaPath() function.</li><li>The final collage that your program creates should be appropriate for all ages to view.</li><li>All beginning images used in your collage must satisfy at least one of the following:<ul><li>The image is owned by you, or you have documented permission from the copyright holder to use it.</li><li>The image is included in the “JPG Images.zip” file provided in the CS 120 area of Blackboard.</li><li>The image is available royalty-free in the public domain.</li></ul></li></ol><p>Your code should be hierarchically decomposed and use descriptive function and variable names. Additionally, make sure to include reasonable documentation comments throughout your code as you feel appropriate. At a minimum, include comments at the start of the code that includes your name and date. Additional comments should be included in your code similar to those used by the authors in the text book. Your code should be formatted similar to the text book authors’ examples. Include a reflection paper along with your submitted files. See Blackboard for a description of its content.</p><p>Completed projects may be posted online by the instructor (with attribution to you, unless you wish to remain anonymous) so that others can view your creations. Additionally, your completed project will be entered into a CS 120 Art Show. Details about the art show will be provided separately.</p><h3 id="TO-SUBMIT-YOUR-WORK-FOR-GRADING"><a href="#TO-SUBMIT-YOUR-WORK-FOR-GRADING" class="headerlink" title="TO SUBMIT YOUR WORK FOR GRADING"></a>TO SUBMIT YOUR WORK FOR GRADING</h3><p>Even if you feel your project is incomplete, turn in something before the due date and time. Whatever you turn in will be worth a few points! To submit your project, do the following.</p><ol><li>Place ALL of your files for the project into a single folder named project2. Don’t forget the image files and reflection paper, etc. Compress (zip) this folder, creating project2.zip.</li><li>Log into Blackboard and enter the CS 120 part of the site. Go to the Projects area by using the “Projects” navigation button on the left side of the screen. Inside the Projects area, click on the “Project 2” link.</li><li>Find the “Assignment Submission” section. Click on the “Browse my Computer” button and locate your project2.zip compressed (zipped) file you created in step 1 above.</li><li>Once you have attached your file, click on the “Submit” button in section 4 “Submit”, at the bottom right of the submission page. You should then receive a confirmation of your submission on your screen.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      用Python的图形库，画出要求的图形即可，其余部分可自由发挥。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>COS30018-Electric-Car-Charge-Scheduling-System</title>
@@ -218,9 +240,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -244,9 +266,9 @@
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
@@ -364,9 +386,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -459,30 +481,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS812-Inventory-Management-System</title>
-    <link href="https://tk1307993.coding.me/CS812-Inventory-Management-System.html"/>
-    <id>https://tk1307993.coding.me/CS812-Inventory-Management-System.html</id>
-    <published>2019-11-03T11:06:24.000Z</published>
-    <updated>2019-11-03T11:08:59.391Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Key to any retail shop, from Amazon to K-Mart to Coles, is its inventory management system - that is a system to decide what items to stock and how many should the stock be. In this assignment, we will see an application of Markov Decision Processes (MDPs) in such a system.</p><h3 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h3><p>You have been hired to setup the inventory management system for Retail (R). R sells various types of electronics goods, designed and developed by staffs and students. R has multiple retail stores of various sizes, at different locations. Your task is to create a system that uses historical customer behaviour data from a store, to decide what type of items to order/return and how many, so that the store makes the most profit. The rest of this document describes the detail of the problem.</p><p>Each retail store of R can be classified into one of five different classes of store, based on their capacities. The 5 types of stores, along with their stocking capacities and maximum ordering capabilities are:</p><ul><li><p>Tiny store. This store sells up to 2 types of items and can stock at most 3 items. It can order at most 2 items per week and can return at most 1 item per week.</p></li><li><p>Small store. This store sells up to 2 types of items and can stock up to 8 items. It can order at most 3 items per week and can return at most 2 items per week.</p></li><li><p>Medium store. This store sells up to 3 types of items and can stock up to 8 items. It can order at most 3 items per week and can return at most 2 items per week.</p></li><li><p>Large store. This store sells up to 5 types of items and can stock up to 10 items. It can order at most 4 items per week and can return at most 2 items per week.</p></li><li><p>Mega store. This store sells up to 7 types of items and can stock up to 20 items. It can order at most 5 items per week and can return at most 3 items per week.</p></li></ul><p>Each store can order items at no cost. Whenever an item is sold, the store keeps 75% of the payment and passes the rest to R headquarter. For each miss opportunity (i.e., failing to provide an item requested by a customer), the store is fined 25% of the price of the requested item by R headquarter. When a store returns an item, it must pay half of the price of the item to R headquarter.</p><p>To simplify the problem, R assumes:</p><ul><li><p>Stocking is done while the store is closed (Saturday-Sunday). Each store can only order the stocks once per week, which is on Saturday morning. The stock will be delivered and arrange on the shelves during the weekend, before it opens again for next week’s operation.</p></li><li><p>All items ordered will be delivered in good condition, on time. Also, the quality of the goods will not degrade over time.<br>When the order/return operation causes the store to have more items than its capacity, R will automatically cut the store’s order prior to delivery, so that there will be no excess items in the store. Assuming the types of items are indexed from 1, the items will be cut ascendingly, from items with the lowest index first. This cut will cost the store a penalty fee of $F per item cut.</p></li><li><p>The buying habit of the customers are independent between one another. Also, the buying habit of the customers of one store is independent from those of other stores. However, for each type of items in the store, the amount of items the customer buys do depend on the amount that is available in the store right after the most recent replenishment.</p></li><li><p>Within the week, the total number of items per type of goods that the customers of a store want to buy is at most equivalent to the total number of items that the store can stock.</p></li><li><p>The performance of the store is measured weekly, right after the store is closed for the week.</p></li><li><p>The inventory system should assume that the store will remain open forever.<br>Although for simplicity in computing the actual profit gained, the system will be tested on a finite number of weeks.</p></li></ul><p>Given the stochastic model of the customers’ behavior, the type of store, and information about the available items in the store immediately before the shopping order is made, the inventory management system should decide which types of items and how many should be ordered and returned, so that the store gains the maximum profit possible. Profit is defined as the income the store gets (i.e., 75% of the total payment received from customer) minus the sum of the cost of returning the items, the fines for miss opportunities, and the penalty fees for having items being cut from the order list by R headquarter.</p><h3 id="What-you-need-to-do"><a href="#What-you-need-to-do" class="headerlink" title="What you need to do"></a>What you need to do</h3><p>Your tasks in this assignment can be classified into 4 parts:</p><ol><li><p>Design the solution. This task contains two main components, i.e., framing the problem as an MDP problem and deciding how to solve the problem. Note that you should design the MDP components, i.e., what are the states, actions, etc., manually. However, the exact parameters of your MDP problem will depend on the given input file. Please be aware that how you define your MDP problem might help or hurt your ability to solve the problem.</p></li><li><p>Implement your design. Your program is allowed a maximum of 3 minutes computation prior to each simulation run. If you use an online method for solving MDP, at each step during run-time, your program is allowed a maximum of 30 seconds computation time for a tiny/small/medium store and a maximum of 1 minute computation time for a large/mega store. Your program will be run on a PC with the same specification as those in the tutorial rooms. The time requirement is for a program that runs as a single-threaded process. If you use multi-threading, then we will divide the aforementioned time limit with the number of threads you use. Note: You are not allowed to use any library for linear algebra, optimization, and MDP solver.</p></li><li><p>Implement the basic value iteration to compare your design with the baseline (at least for the tiny and small stores).</p></li><li><p>Write a report. you only need to answer the questions we post for the Report (see the last part of this document). However, to answer these questions well, you do need to do #3.</p></li></ol><h3 id="Input-and-Output-format"><a href="#Input-and-Output-format" class="headerlink" title="Input and Output format"></a>Input and Output format</h3><p>Input format. The input is a single .txt file, containing all the information about the store, the types and price of the items that can be sold at the store, and the store’s customers’ behaviour.</p><h3 id="Output-format"><a href="#Output-format" class="headerlink" title="Output format"></a>Output format</h3><p>Your program should output the state, the order list, and the return list at each week.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写人工智能课程的作业，不用全部实现，但是需要有基础功能，比如读写的support code，马卡洛夫决策过程相关。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
     
