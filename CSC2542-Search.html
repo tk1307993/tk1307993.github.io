@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,CUDA," />
+  <meta name="keywords" content="Algorithm,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
-<meta name="keywords" content="Algorithm,CUDA">
+<meta name="description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
+<meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CUDA代写：CME213-Heat-Diffusion-Equation">
-<meta property="og:url" content="https://tk1307993.coding.me/CME213-Heat-Diffusion-Equation.html">
+<meta property="og:title" content="CSC2542-Search">
+<meta property="og:url" content="https://tk1307993.coding.me/CSC2542-Search.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
+<meta property="og:description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-09T02:57:13.524Z">
+<meta property="og:updated_time" content="2020-01-07T01:28:29.028Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CUDA代写：CME213-Heat-Diffusion-Equation">
-<meta name="twitter:description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
+<meta name="twitter:title" content="CSC2542-Search">
+<meta name="twitter:description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CME213-Heat-Diffusion-Equation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSC2542-Search.html"/>
 
 
 
 
 
-  <title>CUDA代写：CME213-Heat-Diffusion-Equation | 留学生CS编程作业代写</title>
+  <title>CSC2542-Search | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CME213-Heat-Diffusion-Equation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC2542-Search.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CUDA代写：CME213-Heat-Diffusion-Equation</h2>
+          <h2 class="post-title" itemprop="name headline">CSC2542-Search</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-06T09:50:50+08:00">
-                2019-06-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-07T09:25:24+08:00">
+                2020-01-07
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。
+                  用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.
               </div>
           
 
@@ -360,48 +360,57 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment builds on the previous assignment’s theme of examining memory access patterns. You will implement a finite difference solver for the 2D heat diffusion equation in different ways to examine the performance characteristics of the different implementations.</p>
-<h3 id="Background-on-the-heat-diffusion-PDE"><a href="#Background-on-the-heat-diffusion-PDE" class="headerlink" title="Background on the heat diffusion PDE"></a>Background on the heat diffusion PDE</h3><p>To solve this PDE, we are going to discretize both the temporal and the spatial derivatives. To do this, we define a two-dimensional grid G(i, j), 1 ≤ i ≤ n(x), 1 ≤ j ≤ n(y), where we denote by n(x) (resp. n(y) ) the number of points on the x-axis (resp. y-axis). At each time-step, we will evaluate the temperature and its derivatives at these gridpoints.</p>
-<p>While we will consistently use a first order discretization scheme for the temporal derivative, we will use 2nd, 4th or 8th order discretization of the spatial derivative.</p>
-<p>If we denote by T(i, j) the temperature at time t at point (i, j) of the grid, the 2nd order spatial discretization scheme can be written.</p>
-<p>The C(x) (xfcl in the code) and C(y) (yfcl in the code) constants are called Courant numbers. They depend on the temporal discretization step, as well as the spatial discretization step. To ensure the stability of the discretization scheme, they have to be less than a maximum value given by the Courant-Friedrichs-Lewy condition. You do not have to worry about this, because the starter code already takes care of picking the temporal discretization step as to maximize the Courant numbers while ensuring stability.</p>
-<p>The starter code also contains host and device functions named stencil which contain the coefficients that go into the update equation. Therefore, you do not need to figure out how to implement the different order updates. You only need to understand how this function works and pass in the arguments correctly.</p>
-<h3 id="Boundary-conditions"><a href="#Boundary-conditions" class="headerlink" title="Boundary conditions"></a>Boundary conditions</h3><p>The starter code contains the functions that will update the boundary conditions for you (see file BC.h, in particular the function gpuUpdateBCsOnly) and the points that are in the border (which has a size of order / 2). This way, you do not have to worry about the size of the stencil as you approach the wall.</p>
-<h3 id="Various-implementations"><a href="#Various-implementations" class="headerlink" title="Various implementations"></a>Various implementations</h3><p>In this programming assignment, we are going to implement 2 different kernels (and you can do a third one for extra credit):</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The goal of this assignment is to give you experience running and experimenting with heuristic search code. There are three main components. The first is on tiebreaking in A<em> , the second is on tiebreaking in WA</em> and GBFS, and the third is on re-expansions in WA* and GBFS.</p>
+<p>For this assignment, you are provided with C++ code for generic best-first search and A*, as well as for code for working with the map pathfinding and the 3 × 4 sliding tile puzzle domains. You are strongly encourage to use this code, though you are free to complete the experiments in whatever language you so choose. If you choose to use your own code, you will need to use the following input files, which have been provided (see the framework documentation for information on the format of these files):</p>
 <ul>
-<li><p>Global (function gpuStencil): this kernel will use global memory and each thread will update exactly one point of the mesh. You should use a 2D grid with n(x) × n(y) threads total.</p>
-</li>
-<li><p>Block (function gpuStencilLoop): this kernel will also use global memory. Each thread will update numYPerStep points of the mesh (these points form a vertical line). You should also use a 2D grid with n(x) × n(y) / numYPerStep threads total.</p>
-</li>
-<li><p>(Extra Credit) Shared (function gpuShared): this kernel will use shared memory. A group of threads must load a piece of the mesh in shared memory and then compute the new values of the temperatures on the mesh. Each thread will load and update several elements.<br>Parameter file</p>
-</li>
+<li>“starcraft bgh.map” is a file representation of a map to run experiments on.</li>
+<li>“starcraft bgh.probs” is a file containing a list of pathfinding problems for the map given by “starcraft bgh.map.”</li>
+<li>“3x4 puzzle.probs” is a list of start states for experiments on the 3 × 4 sliding tile puzzle domain.</li>
 </ul>
-<p>The parameters used in the computation are read from the file params.in. You will need to modify some parameters (see description of the starter code) in this file to answer some of the questions. But this file will be not be submitted through the submission script.</p>
-<p>Here is a list of parameters that are used in the order they appear in the file:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> nx_, ny_;    // <span class="keyword">number</span> of grid points <span class="keyword">in</span> each <span class="keyword">dimension</span></span><br><span class="line"><span class="keyword">double</span> lx_, ly_; // extent of physical domain <span class="keyword">in</span> each <span class="keyword">dimension</span></span><br><span class="line"><span class="built_in">int</span> iters_;      // <span class="keyword">number</span> of iterations to <span class="keyword">do</span></span><br><span class="line"><span class="built_in">int</span> order_;      // order of discretization</span><br></pre></td></tr></table></figure></p>
-<h3 id="Start-code"><a href="#Start-code" class="headerlink" title="Start code"></a>Start code</h3><p>The starter code is composed of the following files:</p>
+<p>All sections have both an experimental and theoretical component. For the theoretical component, feel free to use any of the theorems or lemmas we have already discussed in class.</p>
+<p>Finally, note that different authors sometimes define a count of the number of node expansions slightly differently. For this assignment, we will count the number of node expansions as the number of times a node is taken off the open list, or equivalently, the number of calls to the goal test function that are performed.</p>
+<h3 id="Tiebreaking-in-A"><a href="#Tiebreaking-in-A" class="headerlink" title="Tiebreaking in A*"></a>Tiebreaking in A*</h3><p>The first part of this assignment is on the importance of tiebreaking in A<em>. By default, A</em> compares nodes according to the evaluation f(n) = g(n) + h(n), called the f-value, and no other criteria. Ties are then dealt with arbitrarily (usually just by their ordering in the comparison). In the rest of this document, we refer to this as the Default tiebreaking rule. For the following experiments, we also define the following two different methods, each of which you will have to implement:</p>
 <ul>
-<li>main.cu — This is the CUDA driver file. Do not modify this file.</li>
-<li>gpuStencil.cu — This is the file containing the kernels. You will need to modify this file.</li>
-<li>Makefile — make will build the binary. make clean will remove build files as well as debug output. Do not modify this file.</li>
-<li>params.in — This file contains a basic set of parameters. For debugging, performance testing, and to answer the questions, you will need to modify this file. The only parameters you should modify are nx, ny (line 1) and order (line 4). This file however will not get submitted through the script.</li>
-<li>simParams.h and simParams.cpp — These files contain the data structure necessary to handle the parameters of the problem. Do not modify these files.</li>
-<li>Grid.h and Grid.cu — These files contain the data structure that models the grid used to solve the PDE. Do not modify this file.</li>
-<li>BC.h — This file contains the class boundary_conditions that will allow us to update the boundary conditions during the simulation. Do not modify this file.</li>
-<li>hw3.sh — This script is used to submit jobs to the queue</li>
+<li>If there is a tie in the f-value between two nodes, the node with the lower value of g(n) (i.e. the g-cost) is considered “best. We call this tiebreaking rule, Low-G tiebreaking.</li>
+<li>If there is a tie in the f-cost between two nodes, the node with the higher g-cost is considered best. We call this tiebreaking rule, High-G tiebreaking.</li>
 </ul>
-<blockquote>
-<p>Note The files in the starter code contain some additional information about the implementation in the form of comments. Additionally, the CPU implementation should provide a clearer picture of the method and should aid your GPU work.</p>
-</blockquote>
-<h5 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h5><p>(30 points) Implement the function gpuStencil that runs the solver using global memory. You must also fill in the function gpuComputation. The difference (in terms of the norms) between your implementation and the reference to should be in the expected range.</p>
-<h5 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h5><p>(35 points) Implement the function gpuStencilLoop that runs the solver using global memory but where each thread computes several points on the grid. You must also fill in the function gpuComputationLoop.<br>The difference (in terms of the norms) between your implementation and the reference to should be in the expected range.</p>
-<h5 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h5><p>(15 points) Plot the bandwidth (GB/s) as a function of the grid size (in units of MegaPoints) for the following grid sizes: 256×256; 512×512; 1024×1024; 2048×2048; 4096×4096.<br>You must have 2 plots (or 3 plots if you choose to do the extra credit) as follows:</p>
+<p>You are now required to complete the following tasks:</p>
 <ol>
-<li>For order = 4, plot the bandwidth for the 2 (or 3) different algorithms.</li>
-<li>For the block implementation, plot the bandwidth for the 3 different orders.</li>
-<li>If you implemented the shared algorithm, plot the bandwidth for the 3 different orders.</li>
+<li><p>Create an empty grid map of size 20 × 20. This means there are no obstacles. Set the map to be 4-connected, which means that in any location, the agent can only move in the 4 cardinal directions (i.e., north, east, south, and west) provided there is no obstacle in the way or they are prevented from moving in a given direction because they are at the boundary of the map. Consider the task of finding a path from location (1,10) and to location (11, 10). Run A* with each of the three different tiebreaking rules on this problem (Default, Low-G, and High-G). In at most two sentences, describe how the different tiebreaking rules compare in terms of nodes expanded.</p>
+</li>
+<li><p>Run the same experiment as in 1(a), except this time set the goal state to location (6, 15). In at most three sentences, describe how the results compare to those seen in the experiment in 1(a).</p>
+</li>
+<li><p>Notice that because there are no obstacles the Manhattan distance heuristic provides perfect estimates on the empty 20 × 20 grid map that you constructed. Also notice that the optimal solution cost to the tasks in questions 1(a) and 1(b) are the same. In no more than four sentences, explain why the relative performance of Low-G and High-G tiebreaking differs between these two problems, and what these experiments suggest about the best way to do tiebreaking when using A*.</p>
+</li>
+<li><p>Run A* with each of the three different tiebreaking rules on the 100 pathfinding problems given in file “starcraft bgh.probs” on the map given in file “starcraft bgh.map”. Make a table that shows the average number of nodes expanded when using each rule, the median number of nodes expanded, and the percentage of problems for which each tiebreaking rule is the best. In at most two sentences, describe if the results are consistent with the conclusions you made in question 1(c).</p>
+</li>
+<li><p>Let α and β be two instances of A<em> that are identical aside from their tiebreaking policy, and both use the same consistent heuristic. Prove that if some node n is expanded by α before a goal is found, while β does not expand n before a goal is found, then f(n) = C</em>.</p>
+</li>
 </ol>
-<h5 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h5><p>(20 points) Which kernel (global, block or shared) and which order gives the best performance (your answer may depend on the grid size)? Explain the performance results you got in Question 3.</p>
-<h5 id="Question-5"><a href="#Question-5" class="headerlink" title="Question 5"></a>Question 5</h5><p>(20 points Extra Credit) Implement the function gpuShared that runs the solver using shared memory. You should also fill in the function gpuComputationShared. Note that you have to answer the questions related to.<br>Total number of points: 100 (+20 Extra credit)</p>
+<h3 id="Tiebreaking-in-WA-and-GBFS"><a href="#Tiebreaking-in-WA-and-GBFS" class="headerlink" title="Tiebreaking in WA* and GBFS"></a>Tiebreaking in WA* and GBFS</h3><p>The second part of this assignment is on the importance of tiebreaking in WA<em> and GBFS. If you are using the provided code, this means you must extend the given best-first search code to create instances of WA</em> and GBFS.</p>
+<ol>
+<li><p>Repeat the experiments in questions 1(a) and 1(b) with WA<em> (use weights 2 and 5) and GBFS. In no more than 5 sentences, explain if the same trends hold as with A</em>, and why or why not.</p>
+</li>
+<li><p>Consider the set of 100 3 × 4 sliding tile puzzle problems given. Run WA<em> using weights 1, 2, 5, 10, and 100, and GBFS, each using the three different tiebreaking strategies to solve these problems. Make a table that shows the average number of node expansions, the median number of node expansions, and the percentage of problems for which each tiebreaking rule runs the fastest (per weight). Make a second table that shows the average solution cost, the median solution cost, and the percentage of problems for which each tiebreaking rule finds the best solution. In at most 4 sentences, describe what these experiments suggest is the best way to do tiebreaking in WA</em> and GBFS.</p>
+</li>
+<li><p>Even after applying the High-G and Low-G tiebreaking rules, there may still be ties. Add to your implementation the ability to break these remaining ties randomly. Take the problem from the 15-puzzle test set with the largest optimal solution cost, and solve it 100 times each with WA* with weights 1, 2, 5, 10, and GBFS. Use the best tiebreaking strategy seen in the above experiments for each algorithm. Show the average, median, and variance in terms of number of node expansions for each algorithm and weight. What is the general trend?</p>
+</li>
+<li><p>Let T(x, y) be a boolean function that returns true if node x is less than or equal to y and false otherwise (i.e., T is a tiebreaking rule). Consider any problem with a finite number of states. Let α be an instance of WA* that uses T to tiebreak, and let β be an instance of GBFS that uses the same heuristic as α, Low-G tiebreaking, and T to resolve any remaining ties. Prove that on any problem with a finite state-space, there exists a constant W such that if α uses a weight w ≥ W , then α and β will expand the exact same set of nodes in the exact same order until a solution is found.</p>
+</li>
+</ol>
+<h3 id="Re-expansions-in-WA-and-GBFS"><a href="#Re-expansions-in-WA-and-GBFS" class="headerlink" title="Re-expansions in WA* and GBFS"></a>Re-expansions in WA* and GBFS</h3><p>The third part of the assignment is on the impact of re-expansions in WA<em> and GBFS. For this part of the assignment, you will have to modify the code, so that it has the option to not reopen nodes when a lower-cost path is found to a state. For clarity, we refer to a WA</em> or GBFS that does reopen nodes as rWA<em> and rGBFS, respectively, and a WA</em> or GBFS that does not reopen nodes as nrWA* and nrGBFS, respectively.</p>
+<ol>
+<li><p>Run nrGBFS and nrWA* with weights 2, 5, and 10, on the 100 15-puzzle problems and create a table that shows the average and median number of node expansions, and the average and median solution costs. For each algorithm, use the best tiebreaking rule as seen in 2(b). In at most three sentences, describe how the results compare to those seen in question 2(b).</p>
+</li>
+<li><p>Using the results from the runs in 3(a) and 2(b), make a table that shows, for each weight, the percentage of problems for which rWA<em> expanded fewer nodes than nrWA</em> (as well as vice versa and ties), and the percentage of problems for which rWA<em> found solutions of lower cost than nrWA</em> (as well as vice versa and ties). Construct a similar table for rGBFS and nrGBFS.</p>
+</li>
+<li><p>Run rWA* with weights, 2, 5, and 10 on the 100 pathfinding problems given for map “starcraft bgh.map”. Make a table that shows the average number of nodes expanded (including reexpansions), the average number of unique state expansions (i.e., the average number of states expanded at least once), the median number of node expansions, and the median number of unique state expansions.</p>
+</li>
+<li><p>Run nrGBFS and nrWA* with weights 2, 5, and 10 on the 100 pathfinding problems given for map “starcraft bgh.map”. Make a table that shows the average number of nodes expanded and the median number of node expansions. How do the results compare with those seen in question 3(c)?</p>
+</li>
+<li><p>Prove that if the heuristic nrWA<em> using weight w &gt;= 1 is using a consistent heuristic, then any solution it finds will have a cost of no more than w·C</em>.</p>
+</li>
+</ol>
 
       
     </div>
@@ -421,7 +430,7 @@
           
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
-            <a href="/tags/CUDA/" rel="tag"># CUDA</a>
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -434,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSE2100-Cosmic-Wimpout.html" rel="next" title="JavaFX代写：CSE2100-Cosmic-Wimpout">
-                <i class="fa fa-chevron-left"></i> JavaFX代写：CSE2100-Cosmic-Wimpout
+              <a href="/CS120-Art-Show.html" rel="next" title="CS120-Art-Show">
+                <i class="fa fa-chevron-left"></i> CS120-Art-Show
               </a>
             
           </div>
@@ -443,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FIT9131-My-Library.html" rel="prev" title="Java代写：FIT9131-My-Library">
-                Java代写：FIT9131-My-Library <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -599,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-on-the-heat-diffusion-PDE"><span class="nav-number">2.</span> <span class="nav-text">Background on the heat diffusion PDE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boundary-conditions"><span class="nav-number">3.</span> <span class="nav-text">Boundary conditions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Various-implementations"><span class="nav-number">4.</span> <span class="nav-text">Various implementations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-code"><span class="nav-number">5.</span> <span class="nav-text">Start code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Question-1"><span class="nav-number">5.0.1.</span> <span class="nav-text">Question 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Question-2"><span class="nav-number">5.0.2.</span> <span class="nav-text">Question 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Question-3"><span class="nav-number">5.0.3.</span> <span class="nav-text">Question 3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Question-4"><span class="nav-number">5.0.4.</span> <span class="nav-text">Question 4</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Question-5"><span class="nav-number">5.0.5.</span> <span class="nav-text">Question 5</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiebreaking-in-A"><span class="nav-number">2.</span> <span class="nav-text">Tiebreaking in A*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiebreaking-in-WA-and-GBFS"><span class="nav-number">3.</span> <span class="nav-text">Tiebreaking in WA* and GBFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Re-expansions-in-WA-and-GBFS"><span class="nav-number">4.</span> <span class="nav-text">Re-expansions in WA* and GBFS</span></a></li></ol></div>
             
 
           </div>

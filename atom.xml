@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-01-03T02:04:57.726Z</updated>
+  <updated>2020-01-07T01:28:29.028Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSC2542-Search</title>
+    <link href="https://tk1307993.coding.me/CSC2542-Search.html"/>
+    <id>https://tk1307993.coding.me/CSC2542-Search.html</id>
+    <published>2020-01-07T01:25:24.000Z</published>
+    <updated>2020-01-07T01:28:29.028Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The goal of this assignment is to give you experience running and experimenting with heuristic search code. There are three main components. The first is on tiebreaking in A<em> , the second is on tiebreaking in WA</em> and GBFS, and the third is on re-expansions in WA* and GBFS.</p><p>For this assignment, you are provided with C++ code for generic best-first search and A*, as well as for code for working with the map pathfinding and the 3 × 4 sliding tile puzzle domains. You are strongly encourage to use this code, though you are free to complete the experiments in whatever language you so choose. If you choose to use your own code, you will need to use the following input files, which have been provided (see the framework documentation for information on the format of these files):</p><ul><li>“starcraft bgh.map” is a file representation of a map to run experiments on.</li><li>“starcraft bgh.probs” is a file containing a list of pathfinding problems for the map given by “starcraft bgh.map.”</li><li>“3x4 puzzle.probs” is a list of start states for experiments on the 3 × 4 sliding tile puzzle domain.</li></ul><p>All sections have both an experimental and theoretical component. For the theoretical component, feel free to use any of the theorems or lemmas we have already discussed in class.</p><p>Finally, note that different authors sometimes define a count of the number of node expansions slightly differently. For this assignment, we will count the number of node expansions as the number of times a node is taken off the open list, or equivalently, the number of calls to the goal test function that are performed.</p><h3 id="Tiebreaking-in-A"><a href="#Tiebreaking-in-A" class="headerlink" title="Tiebreaking in A*"></a>Tiebreaking in A*</h3><p>The first part of this assignment is on the importance of tiebreaking in A<em>. By default, A</em> compares nodes according to the evaluation f(n) = g(n) + h(n), called the f-value, and no other criteria. Ties are then dealt with arbitrarily (usually just by their ordering in the comparison). In the rest of this document, we refer to this as the Default tiebreaking rule. For the following experiments, we also define the following two different methods, each of which you will have to implement:</p><ul><li>If there is a tie in the f-value between two nodes, the node with the lower value of g(n) (i.e. the g-cost) is considered “best. We call this tiebreaking rule, Low-G tiebreaking.</li><li>If there is a tie in the f-cost between two nodes, the node with the higher g-cost is considered best. We call this tiebreaking rule, High-G tiebreaking.</li></ul><p>You are now required to complete the following tasks:</p><ol><li><p>Create an empty grid map of size 20 × 20. This means there are no obstacles. Set the map to be 4-connected, which means that in any location, the agent can only move in the 4 cardinal directions (i.e., north, east, south, and west) provided there is no obstacle in the way or they are prevented from moving in a given direction because they are at the boundary of the map. Consider the task of finding a path from location (1,10) and to location (11, 10). Run A* with each of the three different tiebreaking rules on this problem (Default, Low-G, and High-G). In at most two sentences, describe how the different tiebreaking rules compare in terms of nodes expanded.</p></li><li><p>Run the same experiment as in 1(a), except this time set the goal state to location (6, 15). In at most three sentences, describe how the results compare to those seen in the experiment in 1(a).</p></li><li><p>Notice that because there are no obstacles the Manhattan distance heuristic provides perfect estimates on the empty 20 × 20 grid map that you constructed. Also notice that the optimal solution cost to the tasks in questions 1(a) and 1(b) are the same. In no more than four sentences, explain why the relative performance of Low-G and High-G tiebreaking differs between these two problems, and what these experiments suggest about the best way to do tiebreaking when using A*.</p></li><li><p>Run A* with each of the three different tiebreaking rules on the 100 pathfinding problems given in file “starcraft bgh.probs” on the map given in file “starcraft bgh.map”. Make a table that shows the average number of nodes expanded when using each rule, the median number of nodes expanded, and the percentage of problems for which each tiebreaking rule is the best. In at most two sentences, describe if the results are consistent with the conclusions you made in question 1(c).</p></li><li><p>Let α and β be two instances of A<em> that are identical aside from their tiebreaking policy, and both use the same consistent heuristic. Prove that if some node n is expanded by α before a goal is found, while β does not expand n before a goal is found, then f(n) = C</em>.</p></li></ol><h3 id="Tiebreaking-in-WA-and-GBFS"><a href="#Tiebreaking-in-WA-and-GBFS" class="headerlink" title="Tiebreaking in WA* and GBFS"></a>Tiebreaking in WA* and GBFS</h3><p>The second part of this assignment is on the importance of tiebreaking in WA<em> and GBFS. If you are using the provided code, this means you must extend the given best-first search code to create instances of WA</em> and GBFS.</p><ol><li><p>Repeat the experiments in questions 1(a) and 1(b) with WA<em> (use weights 2 and 5) and GBFS. In no more than 5 sentences, explain if the same trends hold as with A</em>, and why or why not.</p></li><li><p>Consider the set of 100 3 × 4 sliding tile puzzle problems given. Run WA<em> using weights 1, 2, 5, 10, and 100, and GBFS, each using the three different tiebreaking strategies to solve these problems. Make a table that shows the average number of node expansions, the median number of node expansions, and the percentage of problems for which each tiebreaking rule runs the fastest (per weight). Make a second table that shows the average solution cost, the median solution cost, and the percentage of problems for which each tiebreaking rule finds the best solution. In at most 4 sentences, describe what these experiments suggest is the best way to do tiebreaking in WA</em> and GBFS.</p></li><li><p>Even after applying the High-G and Low-G tiebreaking rules, there may still be ties. Add to your implementation the ability to break these remaining ties randomly. Take the problem from the 15-puzzle test set with the largest optimal solution cost, and solve it 100 times each with WA* with weights 1, 2, 5, 10, and GBFS. Use the best tiebreaking strategy seen in the above experiments for each algorithm. Show the average, median, and variance in terms of number of node expansions for each algorithm and weight. What is the general trend?</p></li><li><p>Let T(x, y) be a boolean function that returns true if node x is less than or equal to y and false otherwise (i.e., T is a tiebreaking rule). Consider any problem with a finite number of states. Let α be an instance of WA* that uses T to tiebreak, and let β be an instance of GBFS that uses the same heuristic as α, Low-G tiebreaking, and T to resolve any remaining ties. Prove that on any problem with a finite state-space, there exists a constant W such that if α uses a weight w ≥ W , then α and β will expand the exact same set of nodes in the exact same order until a solution is found.</p></li></ol><h3 id="Re-expansions-in-WA-and-GBFS"><a href="#Re-expansions-in-WA-and-GBFS" class="headerlink" title="Re-expansions in WA* and GBFS"></a>Re-expansions in WA* and GBFS</h3><p>The third part of the assignment is on the impact of re-expansions in WA<em> and GBFS. For this part of the assignment, you will have to modify the code, so that it has the option to not reopen nodes when a lower-cost path is found to a state. For clarity, we refer to a WA</em> or GBFS that does reopen nodes as rWA<em> and rGBFS, respectively, and a WA</em> or GBFS that does not reopen nodes as nrWA* and nrGBFS, respectively.</p><ol><li><p>Run nrGBFS and nrWA* with weights 2, 5, and 10, on the 100 15-puzzle problems and create a table that shows the average and median number of node expansions, and the average and median solution costs. For each algorithm, use the best tiebreaking rule as seen in 2(b). In at most three sentences, describe how the results compare to those seen in question 2(b).</p></li><li><p>Using the results from the runs in 3(a) and 2(b), make a table that shows, for each weight, the percentage of problems for which rWA<em> expanded fewer nodes than nrWA</em> (as well as vice versa and ties), and the percentage of problems for which rWA<em> found solutions of lower cost than nrWA</em> (as well as vice versa and ties). Construct a similar table for rGBFS and nrGBFS.</p></li><li><p>Run rWA* with weights, 2, 5, and 10 on the 100 pathfinding problems given for map “starcraft bgh.map”. Make a table that shows the average number of nodes expanded (including reexpansions), the average number of unique state expansions (i.e., the average number of states expanded at least once), the median number of node expansions, and the median number of unique state expansions.</p></li><li><p>Run nrGBFS and nrWA* with weights 2, 5, and 10 on the 100 pathfinding problems given for map “starcraft bgh.map”. Make a table that shows the average number of nodes expanded and the median number of node expansions. How do the results compare with those seen in question 3(c)?</p></li><li><p>Prove that if the heuristic nrWA<em> using weight w &gt;= 1 is using a consistent heuristic, then any solution it finds will have a cost of no more than w·C</em>.</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
+    
+  </entry>
   
   <entry>
     <title>CS120-Art-Show</title>
@@ -240,9 +264,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -266,9 +290,9 @@
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
-      <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
-    
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+      <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
     
   </entry>
   
@@ -386,9 +410,9 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -457,32 +481,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMP20003-2048-Game</title>
-    <link href="https://tk1307993.coding.me/COMP20003-2048-Game.html"/>
-    <id>https://tk1307993.coding.me/COMP20003-2048-Game.html</id>
-    <published>2019-11-07T13:40:13.000Z</published>
-    <updated>2019-11-08T14:57:33.967Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Assignment-description"><a href="#Assignment-description" class="headerlink" title="Assignment description"></a>Assignment description</h3><p>In this programming assignment you’ll be expected to build a solver for the 2048 game. The game has been described by the Wall Street Journal as “almost like Candy Crush for math geeks”. You can play the game compiling the code given to you using the keyboard, or using this web implementation <a href="http://2048game.com/" target="_blank" rel="noopener">http://2048game.com/</a>.</p><h3 id="The-2048-game"><a href="#The-2048-game" class="headerlink" title="The 2048 game"></a>The 2048 game</h3><p>2048 is played on a 4x4 grid, with numbered tiles that slide smoothly when a player moves them using the four arrow keys. Every turn, a new tile will randomly appear in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.</p><p>A scoreboard on the upper-right keeps track of the user’s score. The user’s score starts at zero, and is incremented whenever two tiles combine, by the value of the new tile.</p><p>The game is won when a tile with a value of 2048 appears on the board, hence the name of the game. After reaching the 2048 tile, players can continue to play (beyond the 2048 tile) to reach higher scores. In this assignment, your solver should continue playing after reaching tile 2048. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.</p><h3 id="The-Algorithm"><a href="#The-Algorithm" class="headerlink" title="The Algorithm"></a>The Algorithm</h3><p>Each possible configuration of the 2048 4x4 grid is called a state. The 2048 Graph G = (V, E) is implicitly defined. The vertex set V is defined as all the possible 4x4 configurations (states), and the edges E connecting two vertexes are defined by the legal movements (right, left, up, down).</p><p>Your task is to find the path leading to the higest score, i.e. leading to the most rewarding vertex (state). A path is a sequence of movements. You are going to use a variant of Dijkstra to explore the most rewarding path first, up to a maximum depth D.</p><p>Every time the game asks you for a movement (action), you should explore all possible paths up to depth D. Once you finished generating all the paths, you should return the first action only of the path leading to the highest score vertex. This action will be then executed by the game engine.</p><p>You might have multiple paths with the same maximum score. If more than one action (left, right, up or down) begins paths with the same maximum score, you’ll have to break ties randomly.</p><p>Make sure you manage the memory well. Everytime you finish running the algorithm, you have to free all the nodes from the memory, otherwise you are going to run out of memory fairly fast.</p><p>When you applyAction you have to create a new node, that points to the parent, updates the board with the action chosen, updates the priority of the node with the new score, and updates any other auxiliary data in the node.</p><p>You are going to need some auxiliary data structures to update the scores of the first 4 applicable actions. The function propagateBackScoreToFirstAction takes the score of the newly generated node, and propagates back the score to the first action of the path.</p><p>This propagation can be either Maximeze or Average:</p><p>If you Maximize, you have to make sure that the first action is updated to reflect the maximum score of any of its children up to depth D.</p><p>If you Average, you have to make sure that the first action is updated to reflect the average score taking into account all its children up to depth D.</p><h3 id="Deliverables-evaluation-and-delivery-rules"><a href="#Deliverables-evaluation-and-delivery-rules" class="headerlink" title="Deliverables, evaluation and delivery rules"></a>Deliverables, evaluation and delivery rules</h3><p>Deliverable 1 – Solver source code<br>You are expected to hand in the source code for your solver, written in C. Obviously, your source code is expected to compile and execute flawlessly using the following makefile command: make generating an executable called 2048. Remember to compile using the optimization flag gcc -O3 for doing your experiments, it will run twice faster than compiling with the debugging flag gcc -g. For the submission, please submit your makefile with gcc -g option, as our scripts need this flag for testing.</p><p>Your implementation should achive scores higher than 5000 points.</p><p>Base Code<br>You are given a base code. You can compile the code and play with the keyboard. The default solver chooses an action randomly. You are going to have to program your solver in the file ai.c. Look at the file 2048.c to know which function is called to select an action to execute.</p><p>You are given the structure of a node, and also a priority queue implementation. Look into the utils.* files to know about the functions you can call to apply actions.</p><p>You are free to change any file.</p><h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>You can play the game with the keyboard by executing ./2048</p><p>In order to execute your solver use the following command:</p><p>./2048 ai &lt;max/avg&gt; <depth><br>for example:</depth></p><p>./2048 ai avg 6<br>Will run average updates up to depth 6. </p><p>If you append the option “slow” at the end, it will slow the ai so you can see it playing</p><p>./2048 ai avg 6 slow</p><h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>Your solver will print into an output.txt file the following information:</p><p>Max Depth<br>Number of generated nodes.<br>Number of expanded nodes.<br>Number of expanded nodes per second.<br>Total Search Time, in seconds.<br>Maximum value in the board.<br>Score</p><h4 id="Deliverable-2-–-Experimentation"><a href="#Deliverable-2-–-Experimentation" class="headerlink" title="Deliverable 2 – Experimentation"></a>Deliverable 2 – Experimentation</h4><p>Besides handing in the solver source code, you’re required to provide a table with the mean score and deviation, mean max tile and deviation, and total execution time for each type of propagation (max/avg) you implement and each max depth from 0,..,6.<br>In order to test your solver, you have to average over multiple runs because 2048 has a random component: tiles can appear in different locations after each move. A sample of 10 runs is enough.</p><p>For each propagation type, plot a figure where the x axis is the depth, and y is the mean score.</p><p>Explain your results using your figures and tables. Which max depth works best? Is it better to propagate max or avg?</p>]]></content>
-    
-    <summary type="html">
-    
-      代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
     
   </entry>
   
