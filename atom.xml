@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-01-07T01:28:29.028Z</updated>
+  <updated>2020-01-10T00:32:49.536Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSC401-Index-Random-and-Dictionary</title>
+    <link href="https://tk1307993.coding.me/CSC401-Index-Random-and-Dictionary.html"/>
+    <id>https://tk1307993.coding.me/CSC401-Index-Random-and-Dictionary.html</id>
+    <published>2020-01-10T00:30:46.000Z</published>
+    <updated>2020-01-10T00:32:49.536Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this assignment is to assess your understanding of</p><ol><li>Dictionary</li><li>Tuple</li><li>Set</li><li>Random Module</li></ol><p>Next week, we will discuss functions and the role of functions in programming (section 7.1) and how encapsulation is implemented (namespaces, local, global variables, section 7.2) and exceptions (section 7.3) and recursion, Chapter 10. You notice what we are skipping Chapters 8 and 9, some of that material you will see later in Java.</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul><li>Include your full name as a comment on the first line of your Python program.</li><li>As we did in class, code all the problems in one Python file (.py). Each problems will consist of 1 or 2 modules (def). Identify each problem with comment like #Problem 1, Problem 2, etc.</li><li>Submit (upload) to the dropbox one file labeled as YourName_HW6.py</li></ul><h3 id="Problam"><a href="#Problam" class="headerlink" title="Problam"></a>Problam</h3><h4 id="Indexing-problem"><a href="#Indexing-problem" class="headerlink" title="Indexing problem"></a>Indexing problem</h4><p>At the end of books, there usually is an index that lists the pages where a certain word appears. In this problem, you will create an index for a text but, instead of the page number, you will use the line numbers. You are to implement the function index (fname, letter) that takes as input the name of the text file and the first letter of the words for which you are to create the line number index. For each word that begins with ‘letter’, you are to print the corresponding line numbers. You should</p><ol><li>open and read the file only once; use readline()</li><li>Remove all punctuation from the text</li><li>For each word that begins with the specified letter, find all the line numbers in which the letter appears.</li><li>Print the total number of lines in the text and the number of words that begin with the specified letter.</li></ol><p>Use a dictionary to store results {word: list of line number(s)}. For each word, a line number should be listed only once, for example, ‘the’ appears 3 time on line 250; 250 should not be listed 3 times, only once. In the output, the line numbers should be separated by commas, but they are not printed as lists (no brackets). The words in the output should be in alphabetical order, i.e. a - z.</p><h4 id="Random-problem"><a href="#Random-problem" class="headerlink" title="Random problem"></a>Random problem</h4><p>Craps is a dice-based game played in many casinos. The game starts with the player throwing a pair of standard, six-sided dice. If the player rolls a total of 7 or 11, the player wins. If the player rolls a total of 2, 3 or 12, the player loses. For all other roll values, the player will repeatedly roll the pair of dice until either she rolls the initial value again (in which case she wins) or 7 (in which case she loses. Write a function craps() that takes no arguments, simulates one game of craps, and returns ‘I win’ if the player won and ‘I lost’ if the player lost. Consider implementing a second function if the player does not win or lose on the initial roll.</p><h4 id="Dictionary-problem"><a href="#Dictionary-problem" class="headerlink" title="Dictionary problem"></a>Dictionary problem</h4><p>Implement a function STUDENT() which allows the user to enter the 7-digit student ID. The program will keep prompting the user for a last name and first name. If the student does not have a student ID on record, the program will then ask for the student ID, and store that information. If the student already has a student ID, the program will display it, and ask for confirmation whether a new studentID should be assigned (and, if so allows the new studentID to be entered). When the user hits the return key, the program prints a report listing all students with their studentID. Your report does not have to be in alphabetical order, however, if you do want to make it alphabetical, you can use sorted on the keys() of your dictionary.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写三个基础的Python问题，一个是索引问题，另一个是随机问题，最后一个是字典问题。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CSC2542-Search</title>
@@ -290,9 +314,9 @@
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
@@ -459,28 +483,6 @@
     
     
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS112-Grade-Distribution</title>
-    <link href="https://tk1307993.coding.me/CS112-Grade-Distribution.html"/>
-    <id>https://tk1307993.coding.me/CS112-Grade-Distribution.html</id>
-    <published>2019-11-10T00:46:35.000Z</published>
-    <updated>2019-11-10T00:51:15.294Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>From now on, all assignments will involve defining classes with instance variables and methods.</p><p>Instance variables are used to describe an object of the class. For example, to describe a rectangle, we need to have height and width, so should be instance variables of the Rectangle class.</p><p>Methods are used to manipulate the instance variables, for example to retrieve, or modify, or print out the instance variables etc.</p><p>When designing a class, you should answer the following question: What information is needed in order to describe an object?</p><p>This information should be defined as instance variables. If some information is not related with object, they SHOULD NOT be defined as instance variables. For example, Scanner object is needed for input, but it is not necessary to describe a rectangle, so it should not be an instance variable.</p><p>When some information is related with the object, but can be obtained from some other instance variables, you have to decide if you want to define them as instance variables. If you do define them as instance variables, you have to make sure the consistency of these variables when you modify some instance variables. For example, the area of a rectangle is a function of height and width, if you define the area as instance variable; you have to make sure the area is updated whenever you update height and width.</p><p>This information should be defined as instance variables. If some information is not related with object, they SHOULD NOT be defined as instance variables. For example, Scanner object is needed for input, but it is not necessary to describe a rectangle, so it should not be an instance variable.</p><p>When some information is related with the object, but can be obtained from some other instance variables, you have to decide if you want to define them as instance variables. If you do define them as instance variables, you have to make sure the consistency of these variables when you modify some instance variables. For example, the area of a rectangle is a function of height and width, if you define the area as instance variable; you have to make sure the area is updated whenever you update height and width.</p><p>This homework is based on Project 3 on page 372. Create a class that represents a grade distribution for a given course.</p><ol><li>Download the attached GradeDistribution.txt, rename it to GradeDistribution.java</li><li>Complete the class definition by<ul><li>Determine the needed instance variables</li><li>Define the set methods for each of the letter grades A, B, C, D, and F.<blockquote><p>Note: a set method should (1) have return type void<br>(2) take a parameter for the new value of the instance variable.<br>(3) assign the value of the instance variable to be the given parameter.</p></blockquote></li><li>Define get method for each of the letter grades A, B, C, D, and F.<blockquote><p>Note: a get method should (1) takes no parameter (2) returns the value of an instance variable (3) the return type should be the type of the instance variable.</p></blockquote></li><li>Define the following method which returns the total number of grades.</li><li>Method that returns the percentage of each letter grade as a whole number between 0 and 100, inclusive.</li><li>Draw a bar graph of the grade distribution.</li></ul></li></ol><p>For example, if the grades are 1 A, 4 Bs, 6 Cs, 2 Ds, and 1 F, the total number of grades is 14, the percentage of As is 7, the percentage of Bs is 29, the percentage of Cs is 43, the percentage of Ds is 14, and the percentage of Fs is 7. The A row would contain 4 asterisks (7 percent of 50 rounded to the nearest integer), the B row 14, the C row 21, the D row 7, and the F row 4.</p><h3 id="Test-the-class"><a href="#Test-the-class" class="headerlink" title="Test the class"></a>Test the class</h3><p>Download the GradesGraphTest.java, compile and run compare the output with the attached sample output, debug your code if it doesn’t look right.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写Java基础课作业，做一个统计分数的小程序，打印出统计分布图即可。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
