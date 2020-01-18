@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CSE6242-HadoopSparkPigandAzure.html</loc>
+    <lastmod>2020-01-18T00:52:41.803Z</lastmod>
+    <data>
+        <display>
+        <title>CSE6242-HadoopSparkPigandAzure</title>
+        <pubTime>2020-01-18T00:49:00.000Z</pubTime>
+        
+        <tag>MapReduce</tag>
+         
+        <tag>Hadoop</tag>
+         
+        <tag>AWS</tag>
+         
+        <tag>Pig</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS104-Rational-Problem.html</loc>
     <lastmod>2020-01-14T11:00:20.878Z</lastmod>
     <data>
@@ -1620,9 +1648,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
@@ -1646,9 +1674,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>CUDA</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>MPI</tag>
          
