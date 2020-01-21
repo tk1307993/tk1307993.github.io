@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-01-18T00:52:41.803Z</updated>
+  <updated>2020-01-21T02:35:36.084Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS368-Shopping-Website</title>
+    <link href="https://tk1307993.coding.me/CS368-Shopping-Website.html"/>
+    <id>https://tk1307993.coding.me/CS368-Shopping-Website.html</id>
+    <published>2020-01-21T02:33:34.000Z</published>
+    <updated>2020-01-21T02:35:36.084Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Using a combination of HTML and JavaScript functionality, implement some specific user interaction features in the provided “Shopping Cart” and “Shipping Details” pages. Both HTML documents and some initial JavaScript are provided for you in the document.</p><ul><li>cart.html - a simple HTML shopping cart</li><li>shipping.html - a simple form for billing and shipping details.</li><li>css/ - folder containing styles used for both pages</li><li>images/ - folder containing product images</li><li>js/ - folder containing cart.js and shipping.js<br>The tasks can be completed using native JavaScript and HTML code only. However, if you wish to use jQuery code to implement some functionality, you may download jQuery and link it to the HTML documents as and external script. You are allowed to edit the HTML documents as long as the information and overall presentation of each page is not affected.</li></ul><h3 id="Marking-Criteria"><a href="#Marking-Criteria" class="headerlink" title="Marking Criteria"></a>Marking Criteria</h3><h4 id="Shopping-Cart"><a href="#Shopping-Cart" class="headerlink" title="Shopping Cart"></a>Shopping Cart</h4><ul><li>The item quantity fields should allow user-friendly entry of number values</li><li>The number in the item quantity fields should be limited to values between 1 and 10 inclusive</li><li>When an item quantity is changed, automatically recalculate the sub-total for that item</li><li>When clicking on an item’s × button, remove the item’s entire table row from the table</li><li>When a sub-total changes or an item is removed, automatically update the final cart total</li><li>When the “Go to Checkout” button is clicked, navigate to the “Shipping Details” page</li></ul><h4 id="Shipping-Details"><a href="#Shipping-Details" class="headerlink" title="Shipping Details"></a>Shipping Details</h4><ul><li>When the checkbox is selected, any information in the billing fields should be copied to the shipping fields</li><li>When the checkbox is deselected, any information in the shipping fields should be cleared.</li><li>Prevent form submission if any of the fields are left empty - except for the “Address 2” fields which are optional</li><li>Ensure that the user has entered an email and Australian postcode in the correct formats</li></ul><p>The JavaScript files provided for this task contain some comments to help you understand the partially complete functionality that is currently implemented.</p>]]></content>
+    
+    <summary type="html">
+    
+      用JavaScript和HTML代写前端页面，实现Shopping Cart页面和Shipping Details页面的交互逻辑。
+    
+    </summary>
+    
+      <category term="Javascript" scheme="https://tk1307993.coding.me/categories/Javascript/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>CSE6242-HadoopSparkPigandAzure</title>
@@ -465,30 +487,6 @@
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
       <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS3350-Postfix-Expression-Evaluator</title>
-    <link href="https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html"/>
-    <id>https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html</id>
-    <published>2019-11-21T15:11:46.000Z</published>
-    <updated>2019-11-21T15:14:37.809Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this homework, you will create and turn in your second program on BGUnix. Please see the documentation below for instructions on obtaining and configuring a BGUnix account.</p><p>Once you have an account, SSH in and join the class by issuing the command:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="class"><span class="keyword">class</span> -<span class="title">join</span> <span class="title">cs3350</span></span></span><br></pre></td></tr></table></figure></p><p>This should create a directory in your home directory named ‘cs3350’. All your work this semester must occur inside this directory (do not create a subdirectory unless the homework specifically requests one). Any required files will be automatically collected from this directory at the due date/time for the assignment!</p><h3 id="Program-Details"><a href="#Program-Details" class="headerlink" title="Program Details"></a>Program Details</h3><p>In this program, you will implement a postfix expression evaluator. See the book and slides for the concrete algorithm you need to implement. You must use stacks (I provide LinkedStack.h/LinkedStack.cpp/StackInterface.h/Node.h/Node.cpp files in the class lib folder!).</p><p>You must provide a hw3.cpp driver file that contains the implementation of the algorithm and a main method that instantiates runs the algorithm. The driver program should:</p><ul><li>Loops, asking the user to provide either a number (can be more than 1 digit!) or an operator (+ - / *)</li><li>Stops the loop when -1 is entered (do not add -1 to the expression!)</li><li>Evaluates the given postfix expression</li><li>Displays the final result of evaluating the postfix expression (on a line by itself - this should be the last line displayed by your program!)</li></ul><h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p>Your code should include proper documentation/comments where appropriate. A portion of the grade is attributed directly to documentation (see the grading rubric provided on Canvas).</p><p>Functions should be proceeded by a comment block documenting the function’s purpose.</p><p>Blocks of code should contain comments describing what that block is contributing to the overall solution.</p><h3 id="What-to-Turn-In"><a href="#What-to-Turn-In" class="headerlink" title="What to Turn In"></a>What to Turn In</h3><p>The automated turn-in collection script will save these files from your class directory:</p><ul><li>hw3.cpp</li></ul><p>The script will assume the following command line to compile your homework (your code must work with this exact command line!):<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">$</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">std=c</span><span class="literal">+</span><span class="literal">+</span><span class="comment">11</span> <span class="literal">-</span><span class="comment">Ilib</span> <span class="comment">hw3</span><span class="string">.</span><span class="comment">cpp</span></span><br></pre></td></tr></table></figure></p><p>This assumes that LinkedStack.<em>/StackInterface.h/Node.</em> are in the lib/ directory.</p>]]></content>
-    
-    <summary type="html">
-    
-      用Stack代写一个postfix expression evaluator，将数字压入stack，读到expression时弹出即可，属于比较常规的作业。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
