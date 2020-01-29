@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="实现Bitcoin中的Hashcash Mining算法。">
-<meta name="keywords" content="Algorithm,Linux Network,Network Programming,Security">
+<meta name="description" content="代写五个基础C++练习题，从Palindrome到Tic-Tac-Toe.">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：COMP30023 Hashcash Mining">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+<meta property="og:title" content="CS117-Palindrome">
+<meta property="og:url" content="https://tk1307993.coding.me/CS117-Palindrome.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta property="og:description" content="代写五个基础C++练习题，从Palindrome到Tic-Tac-Toe.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T10:51:23.076Z">
+<meta property="og:updated_time" content="2020-01-29T00:29:06.034Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：COMP30023 Hashcash Mining">
-<meta name="twitter:description" content="实现Bitcoin中的Hashcash Mining算法。">
+<meta name="twitter:title" content="CS117-Palindrome">
+<meta name="twitter:description" content="代写五个基础C++练习题，从Palindrome到Tic-Tac-Toe.">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS117-Palindrome.html"/>
 
 
 
 
 
-  <title>C代写：COMP30023 Hashcash Mining | 留学生CS编程作业代写</title>
+  <title>CS117-Palindrome | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS117-Palindrome.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：COMP30023 Hashcash Mining</h2>
+          <h2 class="post-title" itemprop="name headline">CS117-Palindrome</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:37:55+08:00">
-                2018-07-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-29T08:17:30+08:00">
+                2020-01-29
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  实现Bitcoin中的Hashcash Mining算法。
+                  代写五个基础C++练习题，从Palindrome到Tic-Tac-Toe.
               </div>
           
 
@@ -360,10 +360,24 @@
       
 
       
-        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The aim of this project is to provide you with experience in writing (a) a program that interacts with other programs over a network (socket programming), and (b) multi-threaded applications. Specifically, you will write a server-based proof-of-work solver for the Hashcash mining algorithm used in Bitcoin.</p>
-<p>This requires you to implement the functions in the Simple Stratum Text Protocol (SSTP), which is used to format messages between clients and your server program. The SSTP is described in Section 3. Background information related to the the Bitcoin mining process is described in Section 2. Detailed requirements and implementation guidelines are listed in Section 4.</p>
-<p>Your program must be written in standard C. Use the POSIX pthread library for multi-threaded tasks. Other dynamic and static libraries are prohibited.</p>
-<p>Your program must run on the School of Engineering Linux server digitalis or digitalis2.</p>
+        <h3 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise #1"></a>Exercise #1</h3><p>A palindrome is any word or phrase which reads the same backwards as it does forward. For instance the word Bob is a palindrome. Napoleon is also attributed as saying the famous palindrome Able was I ere I saw Elba. As a counter example the phrase Computer Science is fun is NOT a palindrome.</p>
+<p>For this exercise you will implement a program which asks the user for a string. The program will then output whether or not the phrase is a palindrome.</p>
+<blockquote>
+<p>Hint: use an array of characters to determine if the string is a palindrome.</p>
+</blockquote>
+<p>Sample output:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enter <span class="keyword">a</span> phrase: Rise <span class="built_in">to</span> vote sir</span><br><span class="line"></span><br><span class="line"><span class="string">"Rise to vote sir"</span> IS A PALINDROME</span><br></pre></td></tr></table></figure></p>
+<p>Save your solution in a file named palindrome.cpp.</p>
+<h3 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise #2"></a>Exercise #2</h3><p>In statistics, the standard deviation measures the amount of variation or dispersion from the average. It can be calculated using the following formula:<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">σ =√∑(x−μ)<span class="number">2</span> / <span class="built_in">n</span></span><br></pre></td></tr></table></figure></p>
+<p>Where σ is the standard deviation, x is each value in the data set, μ is the mean of all values in the data set, and n is the number of values in the data set. For your program you will ask the user for double values. Your program should stop when the user enters -99 when at this point your program will display the mean and the standard deviation from the data set.</p>
+<p>Sample output:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">3</span></span><br><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">5</span></span><br><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">11</span></span><br><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">14</span></span><br><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">11</span></span><br><span class="line">Enter <span class="keyword">a</span> <span class="built_in">value</span> (<span class="keyword">or</span> <span class="number">-99</span> <span class="built_in">to</span> quit): <span class="number">-99</span></span><br><span class="line">The <span class="built_in">average</span> is <span class="number">8.8</span> <span class="keyword">with</span> <span class="keyword">a</span> standard deviation <span class="keyword">of</span> <span class="number">4.11</span>.</span><br></pre></td></tr></table></figure></p>
+<p>Save your solution in a file named stddev.cpp.</p>
+<h3 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise #3"></a>Exercise #3</h3><p>Consider the classic number guessing game we played in class, where one person thinks of a number and the second player attempts to guess that number given a number of attempts. For this exercise, you will write a program where the user will think of a number between 1 and 100, and the computer will attempt to guess it using the binary search algorithm.</p>
+<p>Sample output:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Think of a number between 1 <span class="keyword">and</span> 100.    Ready?    (Y/N)    Y</span><br><span class="line">Is the number 50? (<span class="attribute">1</span>=Higher, <span class="attribute">2</span>=Lower, <span class="attribute">3</span>=Exact) 2</span><br><span class="line">Is the number 25? (<span class="attribute">1</span>=Higher, <span class="attribute">2</span>=Lower, <span class="attribute">3</span>=Exact) 1</span><br><span class="line">Is the number 37? (<span class="attribute">1</span>=Higher, <span class="attribute">2</span>=Lower, <span class="attribute">3</span>=Exact) 3</span><br><span class="line">Thanks <span class="keyword">for</span> playing.</span><br></pre></td></tr></table></figure></p>
+<p>Save your solution in a file named guess.cpp.</p>
+<h3 id="Exercise-4"><a href="#Exercise-4" class="headerlink" title="Exercise #4"></a>Exercise #4</h3><p>For this exercise you will read in student names and test scores into two arrays: an array of strings for the names and an array of integers for the scores. You will write a program which sorts the scores and displays the scores from highest to lowest and the student’s name who received the grade. Please use one of the sorting algorithms discussed in class. Do not use std::sort.</p>
+<p>Implement the sort using either the Quick Sort algorithm, Merge Sort algorithm or with any advanced sorting algorithm with an average case runtime of Θ(nlog2n).</p>
+<p>Sample output:<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">How many students took the exam?    <span class="number">3</span></span><br><span class="line">Student <span class="string">#1</span> <span class="keyword">Name</span>: Justin Verlander</span><br><span class="line">Student <span class="string">#1</span> Score: <span class="number">84</span></span><br><span class="line">Student <span class="string">#2</span> <span class="keyword">Name</span>: Jon Lester</span><br><span class="line">Student <span class="string">#2</span> Score: <span class="number">96</span></span><br><span class="line">Student <span class="string">#3</span> <span class="keyword">Name</span>: Clayton Kershaw</span><br><span class="line">Student <span class="string">#3</span> Score: <span class="number">51</span></span><br><span class="line">RESULTS:</span><br><span class="line">Jon Lester – <span class="number">96</span></span><br><span class="line">Justin Verlander – <span class="number">84</span></span><br><span class="line">Clayton Kershaw - <span class="number">51</span></span><br></pre></td></tr></table></figure></p>
+<p>Save your solution in a file named reversal.cpp.</p>
 
       
     </div>
@@ -381,13 +395,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Linux-Network/" rel="tag"># Linux Network</a>
-          
-            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
-          
-            <a href="/tags/Security/" rel="tag"># Security</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -400,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hello-world.html" rel="next" title="留学生Computer Science编程作业代写">
-                <i class="fa fa-chevron-left"></i> 留学生Computer Science编程作业代写
+              <a href="/CS368-Shopping-Website.html" rel="next" title="CS368-Shopping-Website">
+                <i class="fa fa-chevron-left"></i> CS368-Shopping-Website
               </a>
             
           </div>
@@ -409,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS3024-Battleship.html" rel="prev" title="Python代写：CS3024 Battleship">
-                Python代写：CS3024 Battleship <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-1"><span class="nav-number">1.</span> <span class="nav-text">Exercise #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-2"><span class="nav-number">2.</span> <span class="nav-text">Exercise #2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-3"><span class="nav-number">3.</span> <span class="nav-text">Exercise #3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-4"><span class="nav-number">4.</span> <span class="nav-text">Exercise #4</span></a></li></ol></div>
             
 
           </div>

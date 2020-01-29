@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CS117-Palindrome.html</loc>
+    <lastmod>2020-01-29T00:29:06.034Z</lastmod>
+    <data>
+        <display>
+        <title>CS117-Palindrome</title>
+        <pubTime>2020-01-29T00:17:30.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS368-Shopping-Website.html</loc>
     <lastmod>2020-01-21T02:35:36.084Z</lastmod>
     <data>
@@ -1668,9 +1688,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
@@ -1694,9 +1714,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>MPI</tag>
          
