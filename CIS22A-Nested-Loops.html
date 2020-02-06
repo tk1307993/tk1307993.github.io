@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Fundamentals," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Greedy Algorithm，也就是贪心算法，局部最优化的算法，虽然可以快速得到解，但是这个解往往不会是全局最优解。不过这个算法的思想倒是挺有趣的。">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="基础C++作业代写，练习嵌套循环的使用方法。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：Greedy Alrithm">
-<meta property="og:url" content="https://tk1307993.coding.me/CS406-GreedyAlgorithm.html">
+<meta property="og:title" content="CIS22A-Nested-Loops">
+<meta property="og:url" content="https://tk1307993.coding.me/CIS22A-Nested-Loops.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Greedy Algorithm，也就是贪心算法，局部最优化的算法，虽然可以快速得到解，但是这个解往往不会是全局最优解。不过这个算法的思想倒是挺有趣的。">
+<meta property="og:description" content="基础C++作业代写，练习嵌套循环的使用方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-28T12:32:41.529Z">
+<meta property="og:updated_time" content="2020-02-06T01:41:18.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：Greedy Alrithm">
-<meta name="twitter:description" content="Greedy Algorithm，也就是贪心算法，局部最优化的算法，虽然可以快速得到解，但是这个解往往不会是全局最优解。不过这个算法的思想倒是挺有趣的。">
+<meta name="twitter:title" content="CIS22A-Nested-Loops">
+<meta name="twitter:description" content="基础C++作业代写，练习嵌套循环的使用方法。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS406-GreedyAlgorithm.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CIS22A-Nested-Loops.html"/>
 
 
 
 
 
-  <title>Python代写：Greedy Alrithm | 留学生CS编程作业代写</title>
+  <title>CIS22A-Nested-Loops | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS406-GreedyAlgorithm.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CIS22A-Nested-Loops.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：Greedy Alrithm</h2>
+          <h2 class="post-title" itemprop="name headline">CIS22A-Nested-Loops</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T20:27:49+08:00">
-                2018-09-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T09:39:35+08:00">
+                2020-02-06
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Greedy Algorithm，也就是贪心算法，局部最优化的算法，虽然可以快速得到解，但是这个解往往不会是全局最优解。不过这个算法的思想倒是挺有趣的。
+                  基础C++作业代写，练习嵌套循环的使用方法。
               </div>
           
 
@@ -360,34 +360,26 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Consider the following solitaire game: you are given a list of moves, x1, x2…xm, and their costs, y1, y2…ym. Moves and their costs both take the form of positive integers. Such a list of moves and their costs is called an instance of the game. To play the game, you start with a positive integer n. On each turn of the game you have two choices: subtract 1 from n incurring a cost of 1 or pick some move xi such that n is divisible by xi and divide n by xi incurring a cost of yi. The goal is to get to 0 while incurring the minimum possible cost.</p>
-<ol>
-<li>Divide 20 by 4 to get 5, incurring a cost of 1</li>
-<li>Subtract 1 from 5 to get 4 incurring a cost of 1</li>
-<li>Divide 4 by 4 to get 1, incurring a cost of 1</li>
-<li>Subtract 1 from 1 to get 0, incurring a cost of 1</li>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a C++ program CIS22A-Lab6-XXXXX.cpp that implements a simple number guessing game with multiple questions / answers. For each game, the program generates a random number between 1 and 10. User enters an answer from 1 and 10. If the user input number matches the generated number, then print a message to inform users that he/she has a correct guess. If the guess is not correct, allow the user to have two more chances to guess the correct number. At any time, if users enter 0, then the program should display the session summary and exits. The program should keep track of the wins and losses and print the counts when user chooses to exit by entering 0.<br>The program should generate a new random number only after user enters the correct guess or after user has tried 3 times and did not have the right guess. Do not ask user for a yes/no confirmation after each game because the 0 input value will serve as the sentinel to stop the continuous game.</p>
+<p>Here is a sample run using command line.</p>
+<p>At the program start, it shows:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Welcome to the number guessing game.</span></span><br><span class="line">For each game, you have at most <span class="number">3</span> chances <span class="keyword">to</span> guess <span class="keyword">a</span> secret <span class="keyword">number</span> from <span class="number">1</span> <span class="keyword">to</span> <span class="number">10</span>.<span class="comment">"</span></span><br></pre></td></tr></table></figure></p>
+<p>The first time, when a new question is asked, the program displays:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Enter a number from 1 to 10. Enter 0 to exit:"</span></span><br></pre></td></tr></table></figure></p>
+<p>When users give a wrong guess, it shows:</p>
+<p>Not correct, try again:</p>
+<p>When users give a wrong answer after the third trials for the same question, the program displays:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Not correct. You have reached your third trials. The correct number is X."</span></span><br><span class="line"><span class="comment">"Lets start a new secret number"</span></span><br></pre></td></tr></table></figure></p>
+<p>When users answer with the correct number, it shows this prompt:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Congratulation, correct! Let's start a new secret number."</span></span><br></pre></td></tr></table></figure></p>
+<p>When users hit 0, the game summary is displayed:</p>
+<p>Here is your game summary:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Total <span class="string">games:</span>           <span class="number">5</span></span><br><span class="line">Total game <span class="string">wins:</span>       <span class="number">3</span></span><br><span class="line">Total game <span class="string">losses:</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ol>
+<li>Use the function rand() to generate random numbers and srand() to intialize the generator.</li>
+<li>Also use “time.h” and use the srand() to generate a random seed for the random generator. The srand() should be called only once outside the loop before the game starts.</li>
+<li>In main(), you can use a “while” or “for” loop to gets inputs.</li>
+<li>To control the number of maximum trial answer per question, you can use a nested loop inside the main “while” loop.<br>Generate a new random number only when a new game starts after users either have entered the correct answer or users have exceeded the 3 trials.</li>
+<li>For the count of losses, update the count only when users have exceeded the maximum 3 trials. Do not count as a loss if users have not finished the 3 trials.</li>
 </ol>
-<p>So the final cost is 4. One suboptimal strategy for this game is as follows:</p>
-<ol>
-<li>Divide 20 by 5 to get 4, incurring a cost of 3</li>
-<li>Divide 4 by 4 to get 1, incurring a cost of 1</li>
-<li>Subtract 1 from 1 to get 0, incurring a cost of 1</li>
-</ol>
-<p>which gives us a total cost of 5.<br>One possible greedy algorithm for this game is as follows: On each turn, simply divide the current number by the legal move x of cost y which maximizes x / y - the ratio of move to cost (and subtract 1 from the current number if it is not divisible by any move). If two legal moves have the same ratio of move to cost then the greedy algorithm will take the larger move. Unfortunately, this greedy algorithm does not always give the optimal strategy. In this problem you will find counterexamples that show the greedy algorithm is not optimal in different instances of this game.</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
-<li><p>To find instances where the greedy algorithm fails, you will probably need to be able to find the optimal strategy in all instances. What kind of algorithm can you use to do this?</p>
-</li>
-<li><p>Most of the difficulty of this assignment is in coming up with the right approach. The code you write does not need to be especially long or complex to solve the problem.</p>
-</li>
-<li><p>It may take some time for your code to find a counterexample, particularly for the last couple instances. But if it takes more than a couple of minutes, you probably need to rethink your approach.</p>
-</li>
-<li><p>When searching for instances of where the greedy algorithm fails, it is useful to avoid redoing work.</p>
-</li>
-<li><p>For reference, the optimal cost for the instance (3, 1), (2, 1) when n is 321 is 10, and the greedy algorithm gives 11. The smallest value of n for which the greedy algorithm fails on the instance (211, 2), (210, 1) is 4740960.</p>
-</li>
-<li><p>Start early. You have two weeks to do this problem, so you shouldn’t try to do it all in the last day.</p>
-</li>
-</ul>
+<p>Add Comment at the top of yor program:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/<span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br><span class="line">/* Author:</span><br><span class="line">/* Description:</span><br><span class="line">/*</span><br><span class="line">/<span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br></pre></td></tr></table></figure>
+<p>To run my game with “cheating mode”, open the Windows command console , change to folder where you save the sample game, and run with the /c option<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/MyDocuments/lab-6</span></span><br><span class="line">lab-6 <span class="string">/c</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -405,7 +397,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -418,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CA675-TF-IDF.html" rel="next" title="Hadoop代写：CA675-TF-IDF">
-                <i class="fa fa-chevron-left"></i> Hadoop代写：CA675-TF-IDF
+              <a href="/CS150-Game-of-War.html" rel="next" title="CS150-Game-of-War">
+                <i class="fa fa-chevron-left"></i> CS150-Game-of-War
               </a>
             
           </div>
@@ -427,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS2401-STLContainer.html" rel="prev" title="C++代写：CS2401 STLContainer">
-                C++代写：CS2401 STLContainer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -583,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">2.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">2.</span> <span class="nav-text">Notes</span></a></li></ol></div>
             
 
           </div>

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://tk1307993.coding.me/CIS22A-Nested-Loops.html</loc>
+    <lastmod>2020-02-06T01:41:18.903Z</lastmod>
+    <data>
+        <display>
+        <title>CIS22A-Nested-Loops</title>
+        <pubTime>2020-02-06T01:39:35.000Z</pubTime>
+        
+        <tag>Fundamentals</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://tk1307993.coding.me/CS150-Game-of-War.html</loc>
     <lastmod>2020-02-01T01:11:56.397Z</lastmod>
     <data>
@@ -119,9 +139,9 @@
         <title>CSC401-Index-Random-and-Dictionary</title>
         <pubTime>2020-01-10T00:30:46.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -307,9 +327,9 @@
         <title>CSE1100-WordLink</title>
         <pubTime>2019-12-13T01:30:28.000Z</pubTime>
         
-        <tag>Data Structure</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Data Structure</tag>
          
          
            
@@ -351,9 +371,9 @@
         <title>INFO1105-Prefix-Map</title>
         <pubTime>2019-12-05T11:28:36.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -373,11 +393,11 @@
         <title>COMP3023-Kakuro</title>
         <pubTime>2019-12-01T02:19:11.000Z</pubTime>
         
+        <tag>Game</tag>
+         
         <tag>Algorithm</tag>
          
         <tag>QT</tag>
-         
-        <tag>Game</tag>
          
          
            
@@ -485,9 +505,9 @@
         <title>CS3350-Postfix-Expression-Evaluator</title>
         <pubTime>2019-11-21T15:11:46.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -507,9 +527,9 @@
         <title>COMP9021-Solve-Logical-Puzzles</title>
         <pubTime>2019-11-16T04:41:57.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -569,9 +589,9 @@
         <title>COMP20003-2048-Game</title>
         <pubTime>2019-11-07T13:40:13.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Artificial Intelligence</tag>
          
@@ -695,9 +715,9 @@
         <title>COMP10002-Indexed-Document-Retrieval</title>
         <pubTime>2019-10-15T13:54:21.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -757,9 +777,9 @@
         <title>CS812-Safari-Rush-Hour</title>
         <pubTime>2019-10-06T08:49:29.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Artificial Intelligence</tag>
          
@@ -821,9 +841,9 @@
         <title>CSC261-AVL-Tree</title>
         <pubTime>2019-09-28T08:27:32.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -863,9 +883,9 @@
         <title>C++代写：CS1510-Data-Structures</title>
         <pubTime>2019-09-21T02:05:38.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -885,9 +905,9 @@
         <title>C++代写：CSCE310-Analytical-Problems</title>
         <pubTime>2019-09-18T13:25:30.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -1053,9 +1073,9 @@
         <title>Java代写：CS206-Very-Large-Integer</title>
         <pubTime>2019-08-15T12:43:26.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -1157,9 +1177,9 @@
         <title>Python代写：CP164-Stacks</title>
         <pubTime>2019-08-02T02:25:25.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -1179,9 +1199,9 @@
         <title>Java代写：CIS304-Bank-Account-Application</title>
         <pubTime>2019-07-27T02:34:26.000Z</pubTime>
         
-        <tag>Linux Network</tag>
-         
         <tag>Network Programming</tag>
+         
+        <tag>Linux Network</tag>
          
          
            
@@ -1201,9 +1221,9 @@
         <title>C代写：CNT5106C-Peer-to-Peer-Network</title>
         <pubTime>2019-07-23T13:16:52.000Z</pubTime>
         
-        <tag>Linux Network</tag>
-         
         <tag>Network Programming</tag>
+         
+        <tag>Linux Network</tag>
          
          
            
@@ -1378,9 +1398,9 @@
         <title>Java代写：CSCE315-5-by-5-Tic-Tac-Toe</title>
         <pubTime>2019-06-15T12:48:47.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Artificial Intelligence</tag>
          
@@ -1486,9 +1506,9 @@
         <title>C#代写：CIS501-Instant-Messaging-App</title>
         <pubTime>2019-05-25T10:43:34.000Z</pubTime>
         
-        <tag>Network Programming</tag>
-         
         <tag>MVC</tag>
+         
+        <tag>Network Programming</tag>
          
          
            
@@ -1568,9 +1588,9 @@
         <title>C代写：ICS53-Web-Proxy</title>
         <pubTime>2019-05-14T13:29:51.000Z</pubTime>
         
-        <tag>Linux Network</tag>
-         
         <tag>Network Programming</tag>
+         
+        <tag>Linux Network</tag>
          
         <tag>Web</tag>
          
@@ -1592,9 +1612,9 @@
         <title>Java代写：CS373-Hash-Tables</title>
         <pubTime>2019-05-12T12:20:28.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -1638,9 +1658,9 @@
         <title>C++代写：CS1926-Simple-Application</title>
         <pubTime>2019-05-07T00:44:34.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -1660,9 +1680,9 @@
         <title>C++代写：FIT2071-TextQuest2</title>
         <pubTime>2019-05-04T12:49:37.000Z</pubTime>
         
-        <tag>Game</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Game</tag>
          
          
            
@@ -1682,11 +1702,11 @@
         <title>C代写：COMP20005-Path-Planning</title>
         <pubTime>2019-05-02T09:10:56.000Z</pubTime>
         
-        <tag>Algorithm</tag>
+        <tag>Fundamentals</tag>
          
         <tag>Data Structure</tag>
          
-        <tag>Fundamentals</tag>
+        <tag>Algorithm</tag>
          
          
            
@@ -1758,9 +1778,9 @@
         <title>Java代写：CS125-Course-Scheduler</title>
         <pubTime>2019-04-25T13:44:18.000Z</pubTime>
         
-        <tag>Data Structure</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Data Structure</tag>
          
          
            
@@ -1780,9 +1800,9 @@
         <title>C++代写：ADDS10-Polish-Notation</title>
         <pubTime>2019-04-22T13:23:36.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -2046,9 +2066,9 @@
         <title>Python代写：COMSW3101-Introduction-To-Python</title>
         <pubTime>2019-03-15T15:31:26.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -2158,9 +2178,9 @@
         <title>Java代写：KIT101-Sentence-Cipher</title>
         <pubTime>2019-03-01T15:40:14.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Fundamentals</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -3414,9 +3434,9 @@
         <title>C++代写：CS3530 Rat In A Maze Problem</title>
         <pubTime>2018-08-07T12:19:28.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -3806,9 +3826,9 @@
         <title>C代写：ECE222 Vectors And Matrices</title>
         <pubTime>2018-07-22T04:20:56.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -3868,9 +3888,9 @@
         <title>C代写：COS10007 Developing Technical Software Assignment1</title>
         <pubTime>2018-07-18T07:37:50.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Data Structure</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -3890,9 +3910,9 @@
         <title>Python代写：CSC108H Tic-Tac-Toe</title>
         <pubTime>2018-07-17T13:55:40.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Game</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -3979,9 +3999,9 @@
         
         <tag>Algorithm</tag>
          
-        <tag>Linux Network</tag>
-         
         <tag>Network Programming</tag>
+         
+        <tag>Linux Network</tag>
          
         <tag>Security</tag>
          

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-02-01T01:11:56.397Z</updated>
+  <updated>2020-02-06T01:41:18.903Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CIS22A-Nested-Loops</title>
+    <link href="https://tk1307993.coding.me/CIS22A-Nested-Loops.html"/>
+    <id>https://tk1307993.coding.me/CIS22A-Nested-Loops.html</id>
+    <published>2020-02-06T01:39:35.000Z</published>
+    <updated>2020-02-06T01:41:18.903Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a C++ program CIS22A-Lab6-XXXXX.cpp that implements a simple number guessing game with multiple questions / answers. For each game, the program generates a random number between 1 and 10. User enters an answer from 1 and 10. If the user input number matches the generated number, then print a message to inform users that he/she has a correct guess. If the guess is not correct, allow the user to have two more chances to guess the correct number. At any time, if users enter 0, then the program should display the session summary and exits. The program should keep track of the wins and losses and print the counts when user chooses to exit by entering 0.<br>The program should generate a new random number only after user enters the correct guess or after user has tried 3 times and did not have the right guess. Do not ask user for a yes/no confirmation after each game because the 0 input value will serve as the sentinel to stop the continuous game.</p><p>Here is a sample run using command line.</p><p>At the program start, it shows:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Welcome to the number guessing game.</span></span><br><span class="line">For each game, you have at most <span class="number">3</span> chances <span class="keyword">to</span> guess <span class="keyword">a</span> secret <span class="keyword">number</span> from <span class="number">1</span> <span class="keyword">to</span> <span class="number">10</span>.<span class="comment">"</span></span><br></pre></td></tr></table></figure></p><p>The first time, when a new question is asked, the program displays:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Enter a number from 1 to 10. Enter 0 to exit:"</span></span><br></pre></td></tr></table></figure></p><p>When users give a wrong guess, it shows:</p><p>Not correct, try again:</p><p>When users give a wrong answer after the third trials for the same question, the program displays:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Not correct. You have reached your third trials. The correct number is X."</span></span><br><span class="line"><span class="comment">"Lets start a new secret number"</span></span><br></pre></td></tr></table></figure></p><p>When users answer with the correct number, it shows this prompt:<br><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"Congratulation, correct! Let's start a new secret number."</span></span><br></pre></td></tr></table></figure></p><p>When users hit 0, the game summary is displayed:</p><p>Here is your game summary:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Total <span class="string">games:</span>           <span class="number">5</span></span><br><span class="line">Total game <span class="string">wins:</span>       <span class="number">3</span></span><br><span class="line">Total game <span class="string">losses:</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure></p><h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ol><li>Use the function rand() to generate random numbers and srand() to intialize the generator.</li><li>Also use “time.h” and use the srand() to generate a random seed for the random generator. The srand() should be called only once outside the loop before the game starts.</li><li>In main(), you can use a “while” or “for” loop to gets inputs.</li><li>To control the number of maximum trial answer per question, you can use a nested loop inside the main “while” loop.<br>Generate a new random number only when a new game starts after users either have entered the correct answer or users have exceeded the 3 trials.</li><li>For the count of losses, update the count only when users have exceeded the maximum 3 trials. Do not count as a loss if users have not finished the 3 trials.</li></ol><p>Add Comment at the top of yor program:</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/<span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br><span class="line">/* Author:</span><br><span class="line">/* Description:</span><br><span class="line">/*</span><br><span class="line">/<span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span><br></pre></td></tr></table></figure><p>To run my game with “cheating mode”, open the Windows command console , change to folder where you save the sample game, and run with the /c option<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/MyDocuments/lab-6</span></span><br><span class="line">lab-6 <span class="string">/c</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      基础C++作业代写，练习嵌套循环的使用方法。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CS150-Game-of-War</title>
@@ -152,9 +174,9 @@
       <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -358,9 +380,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -406,9 +428,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -430,11 +452,11 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
@@ -455,30 +477,6 @@
     
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
-    
-      <category term="Fundanmental" scheme="https://tk1307993.coding.me/tags/Fundanmental/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS177-Lab-Prep-6</title>
-    <link href="https://tk1307993.coding.me/CS177-Lab-Prep-6.html"/>
-    <id>https://tk1307993.coding.me/CS177-Lab-Prep-6.html</id>
-    <published>2019-11-27T10:10:26.000Z</published>
-    <updated>2019-11-27T10:12:55.396Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Assignment-Description"><a href="#Assignment-Description" class="headerlink" title="Assignment Description:"></a>Assignment Description:</h3><p>In this assignment you will write and submit the labprep6.py program. Complete and submit the file by 11:59<br>pm on the night before your lab to receive full credit.</p><h3 id="Python-Graphics-Library"><a href="#Python-Graphics-Library" class="headerlink" title="Python Graphics Library:"></a>Python Graphics Library:</h3><p>Carefully review the Graphics chapter in the Zelle text (Ch 4) covering this topic and the Python Graphics<br>library documentation found at: <a href="http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf" target="_blank" rel="noopener">http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf</a> before starting Lab<br>Prep 6. If you haven’t already, download the Graphics module graphics.py from Blackboard. Remember that it<br>must be in the same folder as labprep6.py</p><h3 id="Steps-For-This-Assignment"><a href="#Steps-For-This-Assignment" class="headerlink" title="Steps For This Assignment:"></a>Steps For This Assignment:</h3><ol><li>Setup your Python file labprep6.py with an appropriate comments header</li><li>Organize labprep6.py using comments for each block of planned code</li><li>In each block, write the necessary Python code to complete the task</li><li>Save, test, then upload your completed labprep6.py Python program to Blackboard</li></ol><h4 id="TO-DO-1-Setup-Your-Python-Program-File-labprep6-py"><a href="#TO-DO-1-Setup-Your-Python-Program-File-labprep6-py" class="headerlink" title="TO DO #1: Setup Your Python Program File labprep6.py"></a>TO DO #1: Setup Your Python Program File labprep6.py</h4><p>In Python, the # sign indicates a comment, which documents and organizes your code. Python does not<br>execute these commented lines; they are used to make the program easier to understand. In the Python IDLE<br>editor, open a new program window. At the top of the file, create a program header by typing in the following<br>text:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> CS 177 – labprep6.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert your name, and Purdue ID here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Following Coding Standards and Guidelines</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#123;insert a description of the program here&#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br></pre></td></tr></table></figure></p><h4 id="TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments"><a href="#TO-DO-2-Organize-labprep6-py-with-pseudo-code-comments" class="headerlink" title="TO DO #2: Organize labprep6.py with pseudo code comments"></a>TO DO #2: Organize labprep6.py with pseudo code comments</h4><p>Plan and comment your program. By now, you should have had enough<br>practice to writing good, descriptive pseudo code comments for each<br>section and function.</p><h4 id="TO-DO-3-The-main-Function"><a href="#TO-DO-3-The-main-Function" class="headerlink" title="TO DO #3: The main() Function"></a>TO DO #3: The main() Function</h4><p>Write a Python main() function that takes no arguments and returns no<br>values. This function should create a Graphics Window, of size 500x500<br>pixels. Set the background to light grey. Create a red Square (Rectangle<br>with equal sides measuring 30) in the center of the Graphics Window.<br>An example is shown in Figure 1.</p><h4 id="TO-DO-4-Animating-the-square’s-movement"><a href="#TO-DO-4-Animating-the-square’s-movement" class="headerlink" title="TO DO #4: Animating the square’s movement"></a>TO DO #4: Animating the square’s movement</h4><p>Edit your main() function, so that it now waits for the user to click anywhere within the Graphics window.<br>Once a mouse click is detected, the red square should move from its current location to the location of the<br>mouse click.</p><p>NOTE: To earn full credit, the square should not disappear and reappear to move across the screen – it must<br>appear to move smoothly across the window to the mouse click location. An example of this animation is<br>shown with the Lab Prep 6 assignment on Blackboard.</p><p>HINT: It could be helpful to write a separate function that animates the square which will be called<br>within the main() function after a mouse click.</p><p>The user will be able to click in the Window to move the square five (5) times. After the square reaches the fifth<br>mouse click location, display a Text object in the center of the Window: “Click to Exit”. One additional<br>click closes the Graphics window and ends the program without error messages.</p><h4 id="Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard"><a href="#Save-and-Submit-your-Completed-labprep6-py-File-on-Blackboard" class="headerlink" title="Save and Submit your Completed labprep6.py File on Blackboard:"></a>Save and Submit your Completed labprep6.py File on Blackboard:</h4><p>Save your program with the file name labprep6.py, and submit it by 11:59 pm on the night before lab.</p>]]></content>
-    
-    <summary type="html">
-    
-      使用Python Graphics绘图库完成作业
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Graphics" scheme="https://tk1307993.coding.me/tags/Graphics/"/>
     
       <category term="Fundanmental" scheme="https://tk1307993.coding.me/tags/Fundanmental/"/>
     
