@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-02-06T01:41:18.903Z</updated>
+  <updated>2020-02-09T02:30:58.015Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSE143X-Backus-Naur-Form</title>
+    <link href="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html"/>
+    <id>https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html</id>
+    <published>2020-02-09T02:25:55.000Z</published>
+    <updated>2020-02-09T02:30:58.015Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment will give you practice with recursion, regular expressions, and grammars and will give you another opportunity to work with maps. You will complete a program that reads an input file with a grammar in Backus-Naur Form (BNF) and will allow the user to randomly generate elements of the grammar.</p><p>You will be given a main program that does the file processing and user interaction. It is called GrammarMain.java. You are to write a class called GrammarSolver that manipulates the grammar. A grammar will be specified as a sequence of Strings, each of which represents the rules for a nonterminal symbol. Each String will be of the form:<br><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">&lt;nonterminal symbol&gt;</span>::=&lt;rule&gt;|&lt;rule&gt;|&lt;rule&gt;|…|&lt;rule&gt;</span><br></pre></td></tr></table></figure></p><p>Notice that this is the standard BNF format of a nonterminal symbol on the left-hand-side and a series of rules separated by vertical bar characters (“|”) on the right-hand side. If there is only one rule for a particular nonterminal, then there will be no vertical bar characters. BNF productions use the characters “::=” to separate the symbol from the rules.</p><p>There will be exactly one occurrence of “::=” per String. The text appearing before the “::=” is a nonterminal symbol. You may assume that it is not empty, that it does not contain a vertical bar character, and that it does not contain any whitespace. Often we surround nonterminal symbols with the characters, but this will not always be the case. The text appearing after the “::=” will be a nonempty series of rules separated by vertical bar characters (“|”). Each of these rules will have a series of tokens (always at least one) separated and potentially surrounded by whitespace. There could be any amount of whitespace surrounding tokens. Any token that appears to the left of a “::=” in the grammar is considered a nonterminal. All other tokens are considered terminals.</p><p>The grammars you will be asked to process will be stored in text files with each line of the file being of the form described above. GrammarMain reads this file into a List and passes the list to the constructor of your GrammarSolver. Your solver has to be able to perform certain tasks, most notably generating random elements of the grammar.</p><p>To generate a random instantiation of a nonterminal, you simply pick at random one of its rules and generate whatever that rule tells you to generate. Notice that this is a recursive process. Generating a nonterminal involves picking one of its rules at random and then generating each part of that rule, which might involve more nonterminal symbols to generate for which you pick rules at random and generate each part of those rules, and so on. Depending upon the grammar, this process could continue indefinitely. Any grammar you will be asked to work with will be guaranteed to converge in a finite period of time. Most often this process doesn’t go on indefinitely because many rules involve terminals rather than nonterminals. . When you encounter a terminal, you simply include it in the String you are generating. This becomes the base case of the recursive process. Your generating method produces various String objects. Each String should be compact in the sense that there should be exactly one space between each terminal and there should be no leading or trailing spaces.</p><p>For example, the grammar on the previous page could be used to randomly generate a non-terminal for the sentence, “Fred honored the green wonderful child”, as shown in the diagram on the next page:</p><p>Your class must include the following public methods.<br>|  Method   |     Description  |<br>|  ———–  | ———–  |<br>| GrammarSolver(List grammar)  | This method will be passed a grammar as a List of Strings. Your method should store this in a convenient way so that you can later generate parts of the grammar. It should throw an IllegalArgumentException if the grammar is empty or if there are two or more entries in the grammar for the same nonterminal. Your method is not to change the List of Strings. |<br>| boolean grammarContains(String symbol)  | Returns true if the given symbol is a nonterminal of the grammar; returns false otherwise. |<br>| String[] generate(String symbol, int times)  | In this method you should use the grammar to randomly generate the given number of occurrences of the given symbol and you should return the result as an array of Strings. For any given nonterminal symbol, each of its rules should be applied with equal probability. It should throw an IllegalArgumentException if the grammar does not contain the given nonterminal symbol or if the number of times is less than 0. |<br>| String getSymbols()  | This method should return a String representation of the various nonterminal symbols from the grammar as a sorted, comma-separated list enclosed in square brackets, as in “[, , ]” |</p><p>Case matters when comparing symbols. For example, S would not be considered the same as.</p><p>The directory crawler program will serve as a good guide for how to write this program. In that program, the recursive method has a for-each loop. This is perfectly acceptable. Just because we are now learning how to use recursion, we don’t want to abandon what we know about loops. If you find that some part of this problem is easily solved with a loop, then go ahead and use one. In the directory crawler, the hard part was writing code to traverse all of the different directories and that’s where we used recursion. For your program the hard part is following the grammar to generate different parts of the grammar, so that is the place to use recursion.</p><p>You will discover that when writing recursive solutions to problems, we often find ourselves with a public/private pair of methods. You will want to use that approach here. You have been asked to write a public method called generate that will generate an array of Strings. But internally inside your object, you’re going to want to produce these values one String at a time using a recursive method. You should make this internal method private so that it is not visible to the client.</p><p>We want you to store the grammar in a particular way. We are making use of the SortedMap interface and the implementation TreeMap, both in java.util. Maps keep track of key/value pairs. Each key is associated with a particular value. In our case, we want to store something for each nonterminal symbol. So the nonterminal symbols become the keys and the rules become the values. Using this approach, you will find that the getSymbols method can be written quickly because the SortedMap interface includes a method called keySet that returns a set of keys from the map. If you ask for the “toString” of this set, you will get the desired string. It is important to use the SortedMap/TreeMap combination because it keeps the keys in sorted order (notice that getSymbols requires that the nonterminals be listed in sorted order).</p><p>Below are some specific notes about Java constructs you should be using:</p><ul><li><p>The Random class in java.util can be used to generate a random integer by calling its nextInt method or you can use the method Math.random.</p></li><li><p>The String class has a method called “trim” that will return a new version of the String minus any leading or trailing whitespace.</p></li><li><p>One problem you will have to deal with is breaking up strings into various parts. You should use the split method of the String class to do so, although you are also allowed to use a string-based Scanner if you prefer. The split method makes use of what are called “regular expressions” and this can be confusing, but you will find that learning about regular expressions is extremely helpful for computer scientists and computer programmers. Many unix tools, for example, take regular expressions as input.</p></li></ul><p>In terms of correctness, your class must provide all of the functionality described above. In terms of style, we will be grading on your use of comments, good variable names, consistent indentation and good coding style to implement these operations. Remember that you will lose points if you declare variables as data fields that can instead be declared as local variables. You should also avoid extraneous cases (e.g., don’t make something into a special case if it doesn’t have to be). And you should continue to declare variables, fields, parameters and return types using an interface when possible.</p><p>You should name your file GrammarSolver.java and you should turn it in electronically from the “assignments” link on the class web page. A collection of files needed for the assignment is included on the web page as ass5.zip. You will need to have GrammarMain.java, sentence.txt and sentence2.txt in the same directory as your GrammarSolver.java in order to run GrammarMain. The second input file contains extraneous whitespace, including tabs. This second input file sometimes generates very long expressions as output.</p>]]></content>
+    
+    <summary type="html">
+    
+      练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CIS22A-Nested-Loops</title>
@@ -174,9 +198,9 @@
       <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
     
     
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
@@ -380,9 +404,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
@@ -452,33 +476,11 @@
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="QT" scheme="https://tk1307993.coding.me/tags/QT/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Java-Iterator</title>
-    <link href="https://tk1307993.coding.me/Java-Iterator.html"/>
-    <id>https://tk1307993.coding.me/Java-Iterator.html</id>
-    <published>2019-11-28T00:41:33.000Z</published>
-    <updated>2019-11-28T00:42:48.427Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Assignment-6"><a href="#Assignment-6" class="headerlink" title="Assignment 6"></a>Assignment 6</h1><p>In this assignment, you will create three classes that implement the <code>Iterator&lt;&gt;</code> interface in specialized ways.</p><p>Read through the code provided. You should recognize the interfaces Position, Driver, and Vehicle and their implementations PositionImpl, DriverImpl, and VehicleImpl from Assignment 3. These classes are complete and you should not have to modify them in any way to complete this assignment.</p><h1 id="Novice-10-points"><a href="#Novice-10-points" class="headerlink" title="Novice (10 points)"></a>Novice (10 points)</h1><p>Create a class called <code>ProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for the class should be declared as:</p><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> proximity_limit)</span><br></pre></td></tr></table></figure><p>A ProximityIterator should iterate through all of the Driver objects in the collection that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to <code>proximity_limit</code>. If <code>next()</code> is called but there is no next eligible driver, throw a <code>NoSuchElementException</code>.</p><p>Tips:</p><ul><li>In your constructor, use the <code>iterator</code> method of the provided driver_pool to create an iterator for all of the Driver objects in the collection. Store this iterator in an instance field.</li><li>Use an instance field to store the next driver that matches the proximity limit. Initialize this to null in your constructor</li><li>To implement hasNext(), first see if you already found the next appropriate driver by checking your next driver field (i.e., testing to see if it is not null). If you already found the next driver, just return true. If not, retrieve drivers from your driver pool iterator until you either find the next appropriate driver or you run out of drivers. If you find an appropriate driver, store it in your next driver instance field and return true. If the pool runs out of drivers, then return false.</li><li>To implement next(), first call hasNext(). If false, throw a NoSuchElementException. If true, then you know that the next eligible driver must be in your next driver instance field. Copy this to a local variable. Reset your next driver field to be null so that you don’t keep returning the same driver. Now return the value of the local variable that you copied the next driver to.</li></ul><h1 id="Adept-5-points"><a href="#Adept-5-points" class="headerlink" title="Adept (5 points)"></a>Adept (5 points)</h1><p>Create a class called <code>ExpandingProximityIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for ths class should be declared as:</p><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ExpandingProximityIterator(Iterable&lt;Driver&gt; driver_pool, <span class="keyword">Position</span> client_position, <span class="built_in">int</span> expansion_step)</span><br></pre></td></tr></table></figure><p>An ExpandingProximityIterator should first iterate through all of the Driver objects in the collect that have a Manhattan distance to the provided <code>client_position</code> that is less than or equal to 1. After all such drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater than one but less than or equal to 1+expansion_step. After all of these drivers have been exhausted, the iterator should start at the beginning of the pool and iterate through drivers that have a distance that is greater then 1+expansion_step but less than or equal to 1+2*expansion_step. After these have been exhausted, go through drivers that are greater than 1+2*expansion_step but less than or equal to 1+3*expansion_step. And so on and so forth until there are no drivers available whatsoever.</p><p>Tips:</p><ul><li>You will need to encapsulate <code>driver_pool</code> as an instance field because you will need to create a new iterator for the pool each time you run out of drivers for a particular “ring” size. </li><li>You will need to detect when you have run out of drivers completely so that hasNext() returns false eventually. There are a couple of different ways to do this. <ul><li>One way is to maintain a boolean flag that is set whenever a driver is encountered that is outside of the current ring while looking for the next driver. Then when you have run out of drivers at the current ring size, you can check this flag to make sure that at least one driver is still outside of the current ring and so you should keep expanding. Be sure to reset the flag each time you expand.</li><li>Another way to do this is to keep a count of the number of times next() has been successfully called. When this count is equal to the size of the driver pool, you know that every driver has been found at some ring size already and that expanding the ring won’t help (i.e., there are no more drivers).</li></ul></li></ul><h1 id="Jedi-5-points"><a href="#Jedi-5-points" class="headerlink" title="Jedi (5 points)"></a>Jedi (5 points)</h1><p>Create a class called <code>SnakeOrderAcrossPoolsIterator</code> that implements the interface <code>Iterator&lt;Driver&gt;</code>. The constructor for this class should be declared as:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public SnakeOrderAcrossPoolsIterator(<span class="built_in">List</span>&lt;<span class="built_in">Iterable</span>&lt;Driver&gt;&gt; driver_pools)</span><br></pre></td></tr></table></figure><p>The constructor to this class is given a List of iterable driver collections. This version of the iterator should retrieve the next driver from each pool in turn in “snake” order. Snake order means first going from first to last and then reversing and going from last to first. For example, let’s say there are 4 iterable collections in the driver_pools list. The first driver retrieved should come from pool 0, followed by the next driver from pool 1, then pool 2, then pool 3, then pool 3 again, then pool 2, then pool 1, then pool 0, then pool 0 again, then pool 1, and so on and so forth. The pools may have a different number of drivers in them. Once a pool runs out of drivers, it is simply skipped over. This iterator will run out of drivers once all of the pools in the list have run out.</p><p>Tips:</p><ul><li>In your constructor, use the list of driver pools provided to create a corresponding list of driver iterators for each pool and store this as an instance field. Keep track of an index into this list for which pool iterator should be used next.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      练习实现Java的迭代器
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Fundanmental" scheme="https://tk1307993.coding.me/tags/Fundanmental/"/>
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
