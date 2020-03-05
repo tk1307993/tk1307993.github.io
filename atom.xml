@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-02-28T10:43:14.287Z</updated>
+  <updated>2020-03-05T07:40:42.847Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS211-Lexical-Analysis</title>
+    <link href="https://tk1307993.coding.me/CS211-Lexical-Analysis.html"/>
+    <id>https://tk1307993.coding.me/CS211-Lexical-Analysis.html</id>
+    <published>2020-03-05T07:37:13.000Z</published>
+    <updated>2020-03-05T07:40:42.847Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>In this problem, you should implement the lexical analysis task for a limited version (i.e., the depth of the nested loops) of a programming language. Lexical analysis is the first stage that compilers parse and detect the possible syntax errors.</p><p>Ideally, any new (programming) languages can be designed and analyzed in the similar manner. You will need to analyze a Pascal-and-C-like language in this programming assignment.</p><p>Given a segment of the source code, your C++ code should analyze the code and extract all tokens, which include:</p><ul><li>Keywords: keywords are the words reserved by the language. They are all uppercase. In the case of this simplified language, the keywords are restricted to the set { “BEGIN”, “END”, “FOR” }</li><li>Identifiers: An identifier is used to describe the variables, which are all lower-case</li><li>Constants: Numbers like 10, … .</li><li>Operators: all arithmetic operations (i.e., +, -, *, and /), “++” and “=”</li><li>Delimiters: like “,” and “;”</li></ul><p>Your C++ code should input a text file from user, which contains the expression he/she wants the compilers to analyze. Then, your code should parse the input, detect the tokens, classify them, and print out the results.</p><p>With this assignment, you will get practice with the stack implementation which is one of the most widely used data structures. Besides, you will be familiar with string processing and input parsing, which are of crucial importance in most C++ projects.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>(Data Structures) You need to implement a stack data structure to keep track of the processing and compute the depth of the nested loops. Adding elements to the stack (push) and removing objects from it (pop) are two essential methods that must be implemented. You can use any data structure to implement the stack, e.g., arrays, linked-lists, etc.</p><p>(Algorithms) Once the input expression is given, your program should decide which character should be inserted to the stack, and when the result needs to be computed. You need to detect the possible syntax errors while tracing the depth of the nested loops.</p><h3 id="Example-Run"><a href="#Example-Run" class="headerlink" title="Example Run"></a>Example Run</h3><p>Try to keep your output as close to the given format as possible:<br>In this example, the input file is “code.txt”<br>It contains the code segment below:</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FOR (i, 10, ++)</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  <span class="keyword">FOR</span> (j, <span class="number">10</span>, ++)</span><br><span class="line">  BEGAN</span><br><span class="line">    <span class="keyword">sum</span>=<span class="keyword">sum</span> + i + j;</span><br><span class="line">  <span class="keyword">END</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; ./pa3.<span class="keyword">out</span></span><br><span class="line">INPUT&gt; Please enter the name <span class="keyword">of</span> the input <span class="keyword">file</span>:</span><br><span class="line">code.txt</span><br><span class="line"></span><br><span class="line">OUTPUT&gt; The depth <span class="keyword">of</span> nested <span class="keyword">loop</span>(s) <span class="keyword">is</span> <span class="number">1</span></span><br><span class="line">Keywords: <span class="keyword">FOR</span> <span class="keyword">BEGIN</span> <span class="keyword">END</span></span><br><span class="line">Identifier: sum i j</span><br><span class="line"><span class="keyword">Constant</span>: <span class="number">10</span></span><br><span class="line">Operatros: ++ = +</span><br><span class="line">Delimiter: ; ,</span><br><span class="line">Syntax <span class="literal">Error</span>(s): BEGAN</span><br></pre></td></tr></table></figure><h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>You should get your stack data structure working well before implementing the lexical analysis task.</p><p>The string processing to parse the input is an essential part of this assignment. You should make sure that you parse the input correctly, and you take care of all edge cases, e.g., more than one spaces between characters, no spaces, etc.</p><h3 id="Grading-Criteria"><a href="#Grading-Criteria" class="headerlink" title="Grading Criteria"></a>Grading Criteria</h3><ol><li><p>Successful Compilation: Your source code should be able to compile using g++ -Wall command without any error or warning. The output should be a valid executable. Please note that we will be using g++ compiler on Linux to grade your programs. If you are using other compilers or IDE (e.g., Visual C++), it is recommended that you test the source codes with g++ before the CANVAS submission (i.e., make sure there is no warning).</p></li><li><p>Program Correctness: The executable should be able to run correctly by giving<br>out the required output.</p></li><li><p>Programming Style: Good coding style is a key to efficient programming. We<br>encourage you to write clear and readable codes. You should adopt a sensible set of coding conventions, including proper indentation, necessary comments and more. Here are some guidelines of good programming style.</p></li></ol><h3 id="Final-Notes"><a href="#Final-Notes" class="headerlink" title="Final Notes"></a>Final Notes</h3><p>Again, remember to start the programming assignments as soon as possible. Unlike the conventional assignments, programming assignments sometimes take un-predictable amount of time to finish. Thus, have the code running first, then polish it later with the extra time before the deadline.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写一个精简版的词法解析器，能够对简单语言进行解析。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Compiler" scheme="https://tk1307993.coding.me/tags/Compiler/"/>
+    
+  </entry>
   
   <entry>
     <title>CCN2042-Console-Drawing-Board</title>
@@ -451,30 +473,6 @@
     
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMP225-ProcessManager-Scanner</title>
-    <link href="https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html"/>
-    <id>https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html</id>
-    <published>2019-12-18T02:33:45.000Z</published>
-    <updated>2019-12-18T02:36:15.906Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The main objectives of this assignment are:</p><ul><li>to practise software project management (Agile);</li><li>to gain experience in using version control systems (git);</li><li>to gain experience in reading code documentation;</li><li>to gain experience in writing code documentation;</li><li>to gain experience in designing unit and integration tests.</li></ul><p>Note This assignment specification aims to provide as complete a description of this assessment task as possible. However, as with any specification, there will always be things we should have said that we have left out and areas in which we could have done a better job of explanation. As a result, you are strongly encouraged to ask any questions of clarification you might have, either by raising them during a lecture or by posting them on the iLearn discussion forum devoted to this assignment.</p><h3 id="The-Specification"><a href="#The-Specification" class="headerlink" title="The Specification"></a>The Specification</h3><p>In Assignment 1, You have developed a small library, in Java. This library contains a class, ProcessManager, that provides an interface to perform simple interactions 1 other programs, typically shell scripts, not necessarily written in Java. The objective of Assignment 2 is to extend the functionalities of the ProcessManager class to more complex interactions.</p><p>For this assignment, you may have to look some concepts up (e.g. regular expressions, prompt) as part of a self learning practice. The emphasis in this task is on:</p><ul><li>understanding the problem to be solved and writing a formal specification;</li><li>understanding what Java libraries offer and how to use them;</li><li>documenting your code so that other developers can use it;</li><li>writing tests for your code;</li><li>developing the software as a Agile project;</li></ul><h3 id="Sprint-4"><a href="#Sprint-4" class="headerlink" title="Sprint 4"></a>Sprint 4</h3><p>Useful Concept for this sprint: Scanner (Java)</p><p>In this sprint, you have to implement a send and an expect method in the</p><p>ProcessManager class (the interfaces of the methods are provided in Program 1).</p><h3 id="Program-1-Expect-method"><a href="#Program-1-Expect-method" class="headerlink" title="Program 1: Expect method"></a>Program 1: Expect method</h3><p>The send method specification is simple:</p><ul><li>the argument is a String s,</li><li>the send method should send s to the process managed by the instance of the ProcessManager.</li><li>it should return true if the string could be sent, or false if a problem occurred while sending s. The expect method specification is as follows:</li><li>the arguments are a timeout (duration) and a prompt which is given as a regular expression (Pattern in Java);</li><li>the method returns:</li><li>the string w if the process managed by the instance of the ProcessManager produces w followed by the prompt on its output channel before the timeout;</li><li>throw a timeout exception otherwise.</li></ul><p>A simple use case of expect in a Java program on a Unix system is:</p><ul><li>you spawn a process that is going to ‘ssh’ to a remote machine.</li><li>the process should return a prompt which is the string “password” (a simple regular expression);</li><li>when you have seen the prompt on the output channel, you can send your password (string) and the next prompt you should expect is the terminal prompt on the target machine.</li><li>if the prompt does not appear on the output channel, an error occured.</li><li>In this sprint, you have to implement the expect and send methods and write some tests to ensure that the methods do what they are supposed to do. In this sprint you may assume that expect is called only once and then the process terminates. You will need to import the following package in the ProcessManager.java file.</li></ul><p>After that you have to make sure that the expect method can be used many times in an instance of a ProcessManager. The previous use case can be extended.</p><p>You have to modify, if needed, your implementations of expect and send to be able to interact with a managed process in a way similar to the scenario described above.</p><p>You also have to write some tests to ensure that your implementation does what it is supposed to do. We strongly encourage you to split the work as follows: one group member is in charge of writing the tests and if needed refine the specification; the other member adapts the implementations of expect and send to make sure the tests pass.</p>]]></content>
-    
-    <summary type="html">
-    
-      接着之前的管理进程的library继续实现功能，这次需要实现拉起进程的功能。此外这门课其实考察的不是代码，而是熟悉整个软件开发流程。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
     
   </entry>
   
