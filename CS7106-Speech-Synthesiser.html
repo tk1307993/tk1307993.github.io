@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Operating System," />
+  <meta name="keywords" content="Algorithm,Artificial Intelligence,Third-party," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
-<meta name="keywords" content="Algorithm,Operating System">
+<meta name="description" content="用NLTK库，在所给的代码框架上，代写一个语言合成器的程序。">
+<meta name="keywords" content="Algorithm,Artificial Intelligence,Third-party">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OS代写：COMP3080-Memory-Allocation">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
+<meta property="og:title" content="CS7106-Speech-Synthesiser">
+<meta property="og:url" content="https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
+<meta property="og:description" content="用NLTK库，在所给的代码框架上，代写一个语言合成器的程序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T05:46:00.378Z">
+<meta property="og:updated_time" content="2020-03-11T03:28:22.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OS代写：COMP3080-Memory-Allocation">
-<meta name="twitter:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
+<meta name="twitter:title" content="CS7106-Speech-Synthesiser">
+<meta name="twitter:description" content="用NLTK库，在所给的代码框架上，代写一个语言合成器的程序。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html"/>
 
 
 
 
 
-  <title>OS代写：COMP3080-Memory-Allocation | 留学生CS编程作业代写</title>
+  <title>CS7106-Speech-Synthesiser | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OS代写：COMP3080-Memory-Allocation</h2>
+          <h2 class="post-title" itemprop="name headline">CS7106-Speech-Synthesiser</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T13:43:35+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-11T15:37:13+08:00">
+                2020-03-11
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.
+                  用NLTK库，在所给的代码框架上，代写一个语言合成器的程序。
               </div>
           
 
@@ -360,24 +360,36 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The program you will write will read a file which contains memory allocation requests and memory free operations. The allocation and free operations will be made against an initially empty fixed sized free memory pool. The program must support three allocation policies:</p>
+        <h3 id="Introduction-Speech-Synthesiser"><a href="#Introduction-Speech-Synthesiser" class="headerlink" title="Introduction - Speech Synthesiser"></a>Introduction - Speech Synthesiser</h3><p>For this assignment you will be required to create a Speech Synthesiser Python program. This will be a very basic waveform concatenation system, whereby the acoustic units are recordings of monophones. You will be provided with several files that you must use to do this:</p>
+<h4 id="SimpleAudio-py"><a href="#SimpleAudio-py" class="headerlink" title="SimpleAudio.py"></a>SimpleAudio.py</h4><p>This is a version of the SimpleAudio.py module that we have used in the lab sessions. The Audio class will allow you to save, load and play .wav files as well as perform some simple audio processing functions. You should not modify this file.</p>
+<h4 id="synth-py"><a href="#synth-py" class="headerlink" title="synth.py"></a>synth.py</h4><p>This is a skeleton structure of the program. Your task is to fill in the missing components to make it work. You are free to add any classes, methods or functions that you wish but you must not change the existing argparse arguments.</p>
+<h4 id="monophones"><a href="#monophones" class="headerlink" title="monophones/"></a>monophones/</h4><p>A folder containing .wav files of monophones.</p>
+<h4 id="examples"><a href="#examples" class="headerlink" title="examples/"></a>examples/</h4><p>A folder containing example .wav files of how the synthesiser should sound.</p>
+<h3 id="Task-1-Basic-Synthesis"><a href="#Task-1-Basic-Synthesis" class="headerlink" title="Task 1 - Basic Synthesis"></a>Task 1 - Basic Synthesis</h3><p>The primary task for this assignment is to design a program that takes an input phrase and synthesises it. The main steps in the procedure are as follows:</p>
 <ul>
-<li>First fit linked list</li>
-<li>Best fit linked list</li>
-<li>Buddy system power of 2 block allocation (using a minimum allocation of 32 bytes)</li>
+<li>normalise the text (convert to lower/upper case, remove punctuation, etc.)</li>
+<li>convert the word sequence to a phone sequence - you should make use of nltk.corpus.cmudict to do this.</li>
+<li>concatenate the monophone wav files together in the right order to produce synthesised audio.<br>Your program should work by executing the synth.py script from the command line with arguments, e.g. the following should play “hello”:-</li>
 </ul>
-<h4 id="Your-program-must"><a href="#Your-program-must" class="headerlink" title="Your program must:"></a>Your program must:</h4><ol>
-<li>Accept three command line arguments, such that argv[1] is the policy to use, argv[2] is the total memory free pool size and argv[3] is the name of the file containing the allocation and free requests. The memory size of the total free pool for the main test cases will be 1 MByte, and 512KB. You may use other sizes in any additional experiments you attempt, but make sure you describe your configuration and results in your write-up.</li>
-<li>Read each line of the input file in argv[3] and carry out one of the following actions:</li>
-<li>Make a memory allocation if enough memory is available to satisfy an allocation request.</li>
-<li>Return memory to a linked list and carry out any coalescing (buddying up) required.</li>
-<li>Refuse the allocation only if there is not enough memory to satisfy it in any available free partition. Refused requests are remembered, so that you know to take no action when you see the corresponding free operation in the input stream. (For each alloc there is a free.)</li>
-<li>Generate one line of output for each line of input, providing information about which request this is, how the request was handled, what the total amount of free space after the request is, and what the size of the largest free partition after the request is. Sample input and output files are shown below.</li>
-<li>So you should submit 6 files, each containing your output for the 1MB and 512KB cases for all three algorithms, and a final summary in your write-up that provides the results of each test in a format similar to:<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">490</span> of <span class="number">500</span></span><br><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">512</span>KB: <span class="keyword">Total</span> Allocations <span class="number">374</span> of <span class="number">500</span></span><br><span class="line">Best <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">492</span> of <span class="number">500</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="INPUT-FORMAT"><a href="#INPUT-FORMAT" class="headerlink" title="INPUT FORMAT:"></a>INPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SERIAL-NUM   REQUEST   SIZE   SERIAL-MATCH</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span></span><br><span class="line">    <span class="number">4</span>         free                  <span class="number">2</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span></span><br><span class="line">    <span class="number">6</span>         free                  <span class="number">1</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span></span><br></pre></td></tr></table></figure>
-<h3 id="OUTPUT-FORMAT"><a href="#OUTPUT-FORMAT" class="headerlink" title="OUTPUT FORMAT:"></a>OUTPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MANAGEMENT POLICY = First Fit       POOL SIZE = <span class="number">512</span> KB</span><br><span class="line">SERIAL-NUM   REQUEST   SIZE   ALLOC-ADDR   TOTAL-FREE   LARGEST-PART</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span>           <span class="number">0</span>     <span class="number">504288</span>        <span class="number">504288</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span>       <span class="number">20000</span>     <span class="number">404288</span>        <span class="number">404288</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span>      <span class="number">120000</span>     <span class="number">399238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">4</span>         free    <span class="number">100000</span>                 <span class="number">499238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span>       <span class="number">20000</span>     <span class="number">428738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">6</span>         free     <span class="number">20000</span>           <span class="number">0</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span>          <span class="number">-1</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python synth<span class="selector-class">.py</span> -<span class="selector-tag">p</span> <span class="string">"hello"</span></span><br></pre></td></tr></table></figure>
+<p>If a word is not in the cmudict then you should print a warning to the user and exit the program. You can also listen to the examples hello.wav and rose.wav which were created as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python synth<span class="selector-class">.py</span> -o hello<span class="selector-class">.wav</span> <span class="string">"hello nice to meet you"</span></span><br><span class="line">python synth<span class="selector-class">.py</span> -o rose<span class="selector-class">.wav</span> <span class="string">"A rose by any other name would smell as sweet"</span></span><br></pre></td></tr></table></figure></p>
+<p>If you execute the same commands with your program and the output sounds the same then it is likely you have a functioning basic synthesiser.</p>
+<h3 id="Task-2-Extending-the-Functionality"><a href="#Task-2-Extending-the-Functionality" class="headerlink" title="Task 2 - Extending the Functionality"></a>Task 2 - Extending the Functionality</h3><p>Implement at least two of the following extensions:-</p>
+<h4 id="Extension-A-Volume-Control"><a href="#Extension-A-Volume-Control" class="headerlink" title="Extension A - Volume Control"></a>Extension A - Volume Control</h4><p>Allow the user to set the volume argument (–volume, -v) to a value between 0.0 and 1.0.<br>You should use the rescale method from the Audio class to do this.</p>
+<h4 id="Extension-B-Punctuation"><a href="#Extension-B-Punctuation" class="headerlink" title="Extension B - Punctuation"></a>Extension B - Punctuation</h4><p>If the input phrase contains a comma - insert 250ms of silence.<br>If it contains a period, question mark or exclamation mark - insert 500ms of silence.<br>Strip all other punctuation.</p>
+<h4 id="Extension-C-Spelling"><a href="#Extension-C-Spelling" class="headerlink" title="Extension C - Spelling"></a>Extension C - Spelling</h4><p>Allow the user to set the spell argument (–spell, -s) that will synthesise spelling instead of pronunciation. Do this by converting a string into a sequence of letters, then to an appropriate phone sequence to pronounce for each letter in its alphabetic form.</p>
+<h4 id="Extension-D-Text-Normalisation-for-Numbers"><a href="#Extension-D-Text-Normalisation-for-Numbers" class="headerlink" title="Extension D - Text Normalisation for Numbers"></a>Extension D - Text Normalisation for Numbers</h4><p>If the input phrase contains numbers in numerical form, convert them to word sequences, e.g.<br><figure class="highlight mizar"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"The meaning <span class="keyword">of</span> life <span class="keyword">is</span> 42"</span><br><span class="line">-&gt; "the meaning <span class="keyword">of</span> life <span class="keyword">is</span> forty two"</span><br></pre></td></tr></table></figure></p>
+<p>You should include the ability to normalise numbers from 0 up to at least 999 (“nine hundred and ninety nine”).<br>Decimal points can be handled by reciting “point” and then reading the numbers after the point as individual digits, e.g.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Pi is about 3.14159"</span></span><br><span class="line">-&gt; <span class="string">"pi is about three point one four one five nine"</span></span><br></pre></td></tr></table></figure></p>
+<p>Take care not to treat decimal points as periods (see Punctuation).</p>
+<h4 id="Extension-E-Text-Normalisation-for-Dates"><a href="#Extension-E-Text-Normalisation-for-Dates" class="headerlink" title="Extension E - Text Normalisation for Dates"></a>Extension E - Text Normalisation for Dates</h4><p>If the string contains dates in the form DD/MM, DD/MM/YY or DD/MM/YYYY, then convert them to word sequences, e.g.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Burns Night is 25/01"</span></span><br><span class="line">-&gt; <span class="string">"burns night is the twenty fifth of january"</span></span><br><span class="line"><span class="string">"John Lennon died on 1/12/80"</span></span><br><span class="line">-&gt; <span class="string">"john lennon died on the first of december nineteen eighty"</span></span><br></pre></td></tr></table></figure></p>
+<p>You may wish to make use of the built-in datetime and/or re packages to do this.</p>
+<h3 id="Rules-and-Assessment"><a href="#Rules-and-Assessment" class="headerlink" title="Rules and Assessment"></a>Rules and Assessment</h3><p>Your submission should abide by the following rules:-</p>
+<ul>
+<li>you are encouraged to discuss the assignment together but all submissions must be written individually and be your own work.</li>
+<li>you may only use numpy, nltk, the provided files, and any packages that are built-in to Python.</li>
+<li>you may not change any of the existing arguments provided in synth.py.</li>
+</ul>
+
       
     </div>
     
@@ -396,7 +408,9 @@
           
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
-            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
+          
+            <a href="/tags/Third-party/" rel="tag"># Third-party</a>
           
         </div>
       
@@ -409,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS204-B-tree.html" rel="next" title="C++代写：CS204-B-tree">
-                <i class="fa fa-chevron-left"></i> C++代写：CS204-B-tree
+              <a href="/CS4117-Music-Artist-Lyrics-Model.html" rel="next" title="CS4117-Music-Artist-Lyrics-Model">
+                <i class="fa fa-chevron-left"></i> CS4117-Music-Artist-Lyrics-Model
               </a>
             
           </div>
@@ -418,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMS227-StringList.html" rel="prev" title="Java代写：COMS227-StringList">
-                Java代写：COMS227-StringList <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Your-program-must"><span class="nav-number">1.1.</span> <span class="nav-text">Your program must:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INPUT-FORMAT"><span class="nav-number">2.</span> <span class="nav-text">INPUT FORMAT:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OUTPUT-FORMAT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT FORMAT:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction-Speech-Synthesiser"><span class="nav-number">1.</span> <span class="nav-text">Introduction - Speech Synthesiser</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SimpleAudio-py"><span class="nav-number">1.1.</span> <span class="nav-text">SimpleAudio.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synth-py"><span class="nav-number">1.2.</span> <span class="nav-text">synth.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#monophones"><span class="nav-number">1.3.</span> <span class="nav-text">monophones/</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#examples"><span class="nav-number">1.4.</span> <span class="nav-text">examples/</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-1-Basic-Synthesis"><span class="nav-number">2.</span> <span class="nav-text">Task 1 - Basic Synthesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-2-Extending-the-Functionality"><span class="nav-number">3.</span> <span class="nav-text">Task 2 - Extending the Functionality</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Extension-A-Volume-Control"><span class="nav-number">3.1.</span> <span class="nav-text">Extension A - Volume Control</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Extension-B-Punctuation"><span class="nav-number">3.2.</span> <span class="nav-text">Extension B - Punctuation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Extension-C-Spelling"><span class="nav-number">3.3.</span> <span class="nav-text">Extension C - Spelling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Extension-D-Text-Normalisation-for-Numbers"><span class="nav-number">3.4.</span> <span class="nav-text">Extension D - Text Normalisation for Numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Extension-E-Text-Normalisation-for-Dates"><span class="nav-number">3.5.</span> <span class="nav-text">Extension E - Text Normalisation for Dates</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rules-and-Assessment"><span class="nav-number">4.</span> <span class="nav-text">Rules and Assessment</span></a></li></ol></div>
             
 
           </div>
