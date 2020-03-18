@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业全部需要使用递归，最后一个问属于烧脑型的，五重递归。">
+<meta name="description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CS116-Accumulative-Recursion">
-<meta property="og:url" content="https://tk1307993.coding.me/CS116-Accumulative-Recursion.html">
+<meta property="og:title" content="CSC401-ATM-Machine">
+<meta property="og:url" content="https://tk1307993.coding.me/CSC401-ATM-Machine.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业全部需要使用递归，最后一个问属于烧脑型的，五重递归。">
+<meta property="og:description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-18T12:36:51.081Z">
+<meta property="og:updated_time" content="2020-03-18T02:59:54.070Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CS116-Accumulative-Recursion">
-<meta name="twitter:description" content="这次需要代写的作业全部需要使用递归，最后一个问属于烧脑型的，五重递归。">
+<meta name="twitter:title" content="CSC401-ATM-Machine">
+<meta name="twitter:description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS116-Accumulative-Recursion.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSC401-ATM-Machine.html"/>
 
 
 
 
 
-  <title>Python代写：CS116-Accumulative-Recursion | 留学生CS编程作业代写</title>
+  <title>CSC401-ATM-Machine | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS116-Accumulative-Recursion.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC401-ATM-Machine.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CS116-Accumulative-Recursion</h2>
+          <h2 class="post-title" itemprop="name headline">CSC401-ATM-Machine</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T21:16:52+08:00">
-                2019-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-18T15:37:13+08:00">
+                2020-03-18
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业全部需要使用递归，最后一个问属于烧脑型的，五重递归。
+                  代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。
               </div>
           
 
@@ -360,25 +360,35 @@
       
 
       
-        <h3 id="Assignment-Guidelines"><a href="#Assignment-Guidelines" class="headerlink" title="Assignment Guidelines"></a>Assignment Guidelines</h3><p>This assignment covers material in Module 05.</p>
-<p>Questions 1 and 2 must use accumulative recursion. Questions 3 and 4 can use any form of recursion.</p>
-<h3 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h3><p>In the game Racko, players attempt to build a strictly increasing sequence of cards (in which a number is less than the number that comes after it). At the end of the game, five points are awarded for each number in the increasing sequence that starts with the first card in the list. Note that any further increasing sequences in the list do not earn any points. For example, there are 20 points awarded for the values 5,10,12,16,15,43, because it begins with the strictly increasing sequence 5,10,12,16.<br>Use accumulative recursion to complete the Python function racko_points, that consumes seq, a list of distinct integers between 1 and 60, inclusive, and produces the score for seq.<br>For example,<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">racko_points([]) =&gt; <span class="number">0</span></span><br><span class="line">racko_points([<span class="number">9</span>,<span class="number">2</span>,<span class="number">20</span>,<span class="number">40</span>,<span class="number">60</span>]) =&gt; <span class="number">5</span></span><br><span class="line">racko_points([<span class="number">5</span>,<span class="number">10</span>,<span class="number">48</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">17</span>,<span class="number">40</span>,<span class="number">60</span>]) =&gt; <span class="number">15</span></span><br></pre></td></tr></table></figure></p>
-<p>Note that you cannot reorder seq. Determine the number of earned points for the seq in the order given.</p>
-<h3 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h3><p>Consider Xtreme Racko, a variation of Racko® (as described in Question 1) that allows a player to score points for each number in their longest increasing sequence, regardless of where that sequence begins. Use accumulative recursion to complete the Python function xtreme_racko_points, that consumes seq, a list of distinct numbers between 1 and 60, inclusive, and produces the score for seq.<br>For example,<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xtreme_racko_points([]) =&gt; <span class="number">0</span></span><br><span class="line">xtreme_racko_points([<span class="number">5</span>,<span class="number">2</span>,<span class="number">22</span>,<span class="number">40</span>,<span class="number">60</span>]) =&gt; <span class="number">20</span></span><br><span class="line">xtreme_racko_points([<span class="number">5</span>,<span class="number">50</span>,<span class="number">46</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">17</span>,<span class="number">1</span>,<span class="number">60</span>]) =&gt; <span class="number">15</span></span><br><span class="line">xtreme_racko_points([<span class="number">60</span>,<span class="number">50</span>,<span class="number">40</span>,<span class="number">30</span>]) =&gt; <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>Hint: You may find it helpful to use more than one accumulator for this question.</p>
-</blockquote>
-<h3 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h3><p>Write a Python function histogram that consumes marks, a list of integer marks between 0 and 100,</p>
-<p>inclusive. The function produces None, and prints a histogram for marks. The histogram consists of one row for each distinct mark. The i th row has the form:</p>
-<p>vvv: row where vvv is the i th smallest value (right justified over 3 places) and row is a string containing k copies of the string ‘X’, where k is the number of times vvv occurs in marks. That is, the first row contains information about the smallest value in marks, the second row contains information about the second smalles distinct value in marks, and so on. The consumed list may not be mutated. If marks is empty, nothing is printed.</p>
-<p>For example, calling histogram([77,78,77,90,0,88,84,83,88,88,77,76,92,100,100]) prints<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">0</span>: X</span><br><span class="line"><span class="attribute">76</span>: X</span><br><span class="line"><span class="attribute">77</span>: XXX</span><br><span class="line"><span class="attribute">78</span>: X</span><br><span class="line"><span class="attribute">83</span>: X</span><br><span class="line"><span class="attribute">84</span>: X</span><br><span class="line"><span class="attribute">88</span>: XXX</span><br><span class="line"><span class="attribute">90</span>: X</span><br><span class="line"><span class="attribute">92</span>: X</span><br><span class="line"><span class="attribute">100</span>: XX</span><br></pre></td></tr></table></figure></p>
-<p>The mark before the ‘:’ can be right justified using the rjust string method. There must be exactly one space after the colon, and no spaces after the string of ‘X’ values. No blank lines are printed.</p>
-<h3 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h3><p>A palindrome is a string that is the same forwards and backwards. For example, “madam” and “hannah” are palindromes, but “abcc b a” and “abcdba” are not.<br>Write a Python function generate_palindromes that consumes a natural number n and produces a list (in alphabetical order) of all the palindromes of length n consisting of a combination of the characters ‘X’ and ‘Y’. For example:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">generate_palindromes</span><span class="params">(<span class="number">0</span>)</span></span> =&gt; [<span class="string">''</span>]</span><br><span class="line"><span class="function"><span class="title">generate_palindromes</span><span class="params">(<span class="number">1</span>)</span></span> =&gt; [<span class="string">'X'</span>, <span class="string">'Y'</span>]</span><br><span class="line"><span class="function"><span class="title">generate_palindromes</span><span class="params">(<span class="number">4</span>)</span></span> =&gt; [<span class="string">'XXXX'</span>, <span class="string">'XYYX'</span>, <span class="string">'YXXY'</span>, <span class="string">'YYYY'</span>]</span><br><span class="line"><span class="function"><span class="title">generate_palindromes</span><span class="params">(<span class="number">5</span>)</span></span> =&gt; [<span class="string">"XXXXX"</span>,<span class="string">"XXYXX"</span>,<span class="string">"XYXYX"</span>,<span class="string">"XYYYX"</span>,<span class="string">"YXXXY"</span>,<span class="string">"YXYXY"</span>,<span class="string">"YYXYY"</span>,<span class="string">"YYYYY"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>Notes:</p>
+        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this assignment is to assess your understanding of</p>
 <ul>
-<li>The order of the produced list is important. You may use sort or sorted, as appropropriate.</li>
-<li>Think carefully about this problem before you start coding it. There is a short, somewhat elegant solution, but you must really think about what subproblem solution would assist you with finding the set of palindromes you need. (Hint: the solution of n-1 is unlikely to be helpful when solving n.)</li>
+<li>Encapsulation in functions</li>
+<li>Namespaces: global vs local</li>
+<li>Exception handling</li>
+<li>Program modularity<br>Next week, we will continue with chapter 10 recursion.</li>
 </ul>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul>
+<li>Include your full name as a comment on the first line of your Python program.</li>
+<li>Submit (upload) to the dropbox one file labeled as YourName_HW7.py</li>
+</ul>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You are to simulate a simple ATM machine. An account holder (user) should be able to enter their pin number and select from a menu of transactions: Deposit, Withdraw, Balance or Quit. You are to assume that the user has only one account on which these transactions can be performed. This account is associated with the user’s pin number. The ATM should properly and regularly communicate with the user. The ATM should get information on current account information from a file. An accounts.txt file is posted with this assignment. Examine the structure of each line of the file which contains a 4-digit code, first and last names, and the current account balance.</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Note: whenever I use ‘Code the exception’, this means you need to include code in a ‘try’ block to catch the exception caused by a runtime error.<br>You may not use global variables; all variables must be local.</p>
+<h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>Write a function startUp(fname) that takes as input a filename that contains the account holder information and current balance. The file should be read and the data stored in a dictionary with the pin as the key and the remaining information as the value.<br>Note: the current balance is a float data type. Do an explicit conversion to float on that list item. Code an exception (‘Cannot get to the file’). The function should return two values: Boolean, dictionary; for example: if you named your dictionary, daccts, and the file was successfully read and the dictionary successfully created, then return (True, daccts); if the file was not successfully read, return (False, daccts).</p>
+<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Write a function getUser(proceed, dictionary) that takes as input a Boolean value and the dictionary you created in startUp. Prompt the user to enter a pin number. If the pin is valid, the function should return (user, proceed), where user is the dictionary key value; if the pin is invalid, print (‘Incorrect pin’) and return (None, False).</p>
+<h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>Write a function menu(name) that takes as input the user’s first name, greets the user and displays the menu options: 1. Deposit, 2: Withdraw, 3.Check Balance, 4. Quit. If the user enters an invalid value (i.e. not 1, 2, 3 or 4) display the menu option again and give the user a chance to enter a value again. Once a valid number is entered, the function should return the number of the chosen option.</p>
+<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>Write a function getAmount() that takes no input. Inside a loop, prompt the user for an amount to be either deposited or withdrawn, at this point it does not matter which it is. The amount must be converted to float. Code an exception (‘You entered an incorrect amount. Please try again’). An interruption would be caused if the user enters a string instead of a numeric value, or presses the enter key without entering anything. Stay in the loop until a valid number is entered and return amount.</p>
+<h4 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5"></a>Step 5</h4><p>Write a function deposit(balance) that takes as input the user’s account balance. The function calls getAmount(), calculates and displays the new balance. The function returns the new balance.</p>
+<h4 id="Step-6"><a href="#Step-6" class="headerlink" title="Step 6"></a>Step 6</h4><p>Write a function withdraw(balance) that takes as input the user’s account balance. The function calls getAmount(). If the amount to be withdrawn is greater than the balance display (‘Insufficient funds to complete the transaction’). The user should be prompted to enter a new amount, until the amount entered is less than the balance. The function calculates and displays the new balance. The function returns the new balance.</p>
+<h4 id="Step-7"><a href="#Step-7" class="headerlink" title="Step 7"></a>Step 7</h4><p>Write a function balance(name, balance) that takes as input the user’s name and balance and prints the message ‘Your current balance is $xxxx.xx’ where xxxx.xx is the current balance amount. This function does not return a value.</p>
+<h4 id="Step-8"><a href="#Step-8" class="headerlink" title="Step 8"></a>Step 8</h4><p>Write a function main() that will control the flow of your program. You will build this code as you continue to create functions. main() should call startup, getUser and menu. It should contain a loop that determines which transaction the user has chosen to process and allows the user to process as many transactions as desired.</p>
+<ul>
+<li>If the user chooses to make a deposit, the deposit function is called and the dictionary is updated with the returned balance.</li>
+<li>If the user chooses to make a withdrawal, the withdraw function is called and the dictionary is updated with the returned balance.</li>
+<li>If the user chooses to check the account balance, the balance function is called.</li>
+<li>If the user chooses to quit, exit the loop and print (‘Goodbye’). Once, the user quits, the program should terminate. Note: suggestion - use a Boolean data type to determine when the loop should terminate</li>
+</ul>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>The following is only one test case. You should do several test cases to evaluate all the exceptions you have coded and other possible data entry errors.</p>
+<p>Sample execution:<br><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Welcome -- Please enter your pin number 4466</span></span><br><span class="line"><span class="attribute"></span></span><br><span class="line"><span class="attribute">Kay :</span></span><br><span class="line"><span class="attribute">1</span>: Deposit</span><br><span class="line"><span class="attribute">2</span>: Withdrawal</span><br><span class="line"><span class="attribute">3</span>: Check Balance</span><br><span class="line"><span class="attribute">4</span>: Quit</span><br><span class="line"></span><br><span class="line"><span class="attribute">Enter number</span>: 3</span><br><span class="line"><span class="attribute">Your current balance is $356.00</span></span><br><span class="line"><span class="attribute"></span></span><br><span class="line"><span class="attribute">Kay :</span></span><br><span class="line"><span class="attribute">1</span>: Deposit</span><br><span class="line"><span class="attribute">2</span>: Withdrawal</span><br><span class="line"><span class="attribute">3</span>: Check Balance</span><br><span class="line"><span class="attribute">4</span>: Quit</span><br><span class="line"></span><br><span class="line"><span class="attribute">Enter number</span>: 2</span><br><span class="line"><span class="attribute">Amount</span>: 600</span><br><span class="line"><span class="attribute">Insufficient funds to complete the transaction</span></span><br><span class="line"><span class="attribute">Amount</span>: 300</span><br><span class="line"><span class="attribute">Your new balance is $56.00</span></span><br><span class="line"><span class="attribute"></span></span><br><span class="line"><span class="attribute">Kay :</span></span><br><span class="line"><span class="attribute">1</span>: Deposit</span><br><span class="line"><span class="attribute">2</span>: Withdrawal</span><br><span class="line"><span class="attribute">3</span>: Check Balance</span><br><span class="line"><span class="attribute">4</span>: Quit</span><br><span class="line"></span><br><span class="line"><span class="attribute">Enter number</span>: 1</span><br><span class="line"><span class="attribute">Amount</span>: 100</span><br><span class="line"><span class="attribute">Your new balance is $156.00</span></span><br><span class="line"><span class="attribute"></span></span><br><span class="line"><span class="attribute">Kay </span>:    </span><br><span class="line"><span class="attribute">1</span>: Deposit</span><br><span class="line"><span class="attribute">2</span>: Withdrawal</span><br><span class="line"><span class="attribute">3</span>: Check Balance</span><br><span class="line"><span class="attribute">4</span>: Quit</span><br><span class="line"></span><br><span class="line"><span class="attribute">Enter number</span>: 4</span><br><span class="line"><span class="attribute">Goodbye</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -409,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSE214-Restaurants-Menu.html" rel="next" title="Java代写：CSE214-Restaurants-Menu">
-                <i class="fa fa-chevron-left"></i> Java代写：CSE214-Restaurants-Menu
+              <a href="/CSC401-Recursive.html" rel="next" title="CSC401-Recursive">
+                <i class="fa fa-chevron-left"></i> CSC401-Recursive
               </a>
             
           </div>
@@ -418,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CT010-Students-Car-Park-Registration-System.html" rel="prev" title="Python代写：CT010-Students-Car-Park-Registration-System">
-                Python代写：CT010-Students-Car-Park-Registration-System <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Guidelines"><span class="nav-number">1.</span> <span class="nav-text">Assignment Guidelines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q1"><span class="nav-number">2.</span> <span class="nav-text">Q1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q2"><span class="nav-number">3.</span> <span class="nav-text">Q2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q3"><span class="nav-number">4.</span> <span class="nav-text">Q3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q4"><span class="nav-number">5.</span> <span class="nav-text">Q4</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purpose"><span class="nav-number">1.</span> <span class="nav-text">Purpose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">2.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem"><span class="nav-number">3.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">4.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1"><span class="nav-number">4.1.</span> <span class="nav-text">Step 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2"><span class="nav-number">4.2.</span> <span class="nav-text">Step 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3"><span class="nav-number">4.3.</span> <span class="nav-text">Step 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4"><span class="nav-number">4.4.</span> <span class="nav-text">Step 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-5"><span class="nav-number">4.5.</span> <span class="nav-text">Step 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-6"><span class="nav-number">4.6.</span> <span class="nav-text">Step 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-7"><span class="nav-number">4.7.</span> <span class="nav-text">Step 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-8"><span class="nav-number">4.8.</span> <span class="nav-text">Step 8</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">5.</span> <span class="nav-text">Example</span></a></li></ol></div>
             
 
           </div>
