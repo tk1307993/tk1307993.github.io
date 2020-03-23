@@ -61,6 +61,28 @@
   </entry>
   
   <entry>
+    <title>CSCA08-Inheritance</title>
+    <link href="https://tk1307993.coding.me/CSCA08-Inheritance.html"/>
+    <id>https://tk1307993.coding.me/CSCA08-Inheritance.html</id>
+    <published>2020-03-13T07:37:13.000Z</published>
+    <updated>2020-03-23T00:34:30.419Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this exercise, we will be working with inheritance, and thinking about how we can set up our inheritance hierarchy to make our lives easier. There is an easy way and a difficult way to complete this exercise. If you plan appropriately, you’ll find you won’t have to write very much code at all.</p><h4 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h4><p>Consider the following 4 shapes:</p><h4 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h4><p>A four sided figure with parallel pairs of sides. A Parallelogram is defined by the lengths of its two pairs of sides (labelled base and side in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h4><p>A parallelogram with four right angles. A Rectangle is defined by the lengths of its two pairs of sides (labelled base and side in the picture below).</p><h4 id="Rhombus"><a href="#Rhombus" class="headerlink" title="Rhombus"></a>Rhombus</h4><p>A parallelogram with four equal sides. A Rhombus is defined by the length of its sides (labelled base in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Square"><a href="#Square" class="headerlink" title="Square"></a>Square</h4><p>A parallelogram with four equal sides and four right angles; both a Rectangle and a Rhombus. A Square is defined by the length of its sides (labelled base in the picture below).</p><p>Your first task is to figure out the IS-A hierarchy of these shapes. Draw it out in a piece of paper. Are there any instances of multiple parents?</p><h3 id="Your-Task"><a href="#Your-Task" class="headerlink" title="Your Task"></a>Your Task</h3><p>You must write four classes: Parallelogram, Rectangle, Rhombus and Square, ensuring that the class hierarchy follows your diagram from the previous step. You may create additional classes if you wish (are there any good reasons why you might want to do this?). The parameters of init methods should always be input in the following order: (base, side, theta) (theta being given in degrees), though of course, not every class’ init will take all three. So for example, a Rectangle will only take (base, side).</p><p>Objects of these classes must have the following methods:</p><ul><li>area() - returns the area of the shape<br>Note: The area of a parallelogram is computed by base side sin(theta)<br>Warning: function math.sin in Python expects its argument to be an angle given in radians - take a look at the function math.radians to convert between degrees and radians.</li><li>bst() - returns a list of three floats: [base, side, theta]. Even if a shape doesn’t need one of the parameters for its input, it should still be able to return it. (e.g., a 10 x 10 square would return: [10.0, 10.0, 90.0]).</li><li>When printed, each shape should return a string with text in the following format “I am a shape with area area”. Four example, a 10 x 10 square would return the string: “I am a Square with area 100”.</li></ul><h3 id="Be-Lazy"><a href="#Be-Lazy" class="headerlink" title="Be Lazy"></a>Be Lazy</h3><p>One way to solve this would be to write four completely independent classes, and have each class completely implement all of their own functions. This would be a bad idea (why?). If you use inheritance correctly, you should find the exercise much simpler. Remember, you should never calculate something when you can just get another method to do the work for you. Hint: It’s possible to set more than one parent for your class. Are there any shapes here for which that would be a sensible thing to do?</p><h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>All of your code should be submitted to MarkUs in a file called ex9.py that doesn’t import anything other than math, and does not ask for input or print anything when imported.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写Interitance的小练习作业，求图形的边长和面积。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CS7106-Speech-Synthesiser</title>
     <link href="https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html"/>
     <id>https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html</id>
@@ -457,28 +479,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS120-Art-Show</title>
-    <link href="https://tk1307993.coding.me/CS120-Art-Show.html"/>
-    <id>https://tk1307993.coding.me/CS120-Art-Show.html</id>
-    <published>2020-01-03T02:02:04.000Z</published>
-    <updated>2020-01-03T02:04:57.726Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a Python program that creates a photo collage of modified images. The entire collage must be created entirely using only Python – no Photoshop, etc. allowed. (The only allowable use of Photoshop, etc. is to reduce the original resolution of a high resolution image to start with.) You should have a single function make all of this happen–all of the effects and compositing must occur from a single function named collage(). IT IS COMPLETELY ACCEPTABLE AND EXPECTED FOR collage() TO USE OTHER FUNCTIONS! I will setMediaPath() to your folder, execute collage(), and expect to see your collage get generated. For full credit, your completed collage must satisfy the following requirements:</p><ol><li>Start with a blank canvas that is 700 pixels wide by 515 pixels tall or 515 pixels wide by 700 pixels tall.</li><li>Any number of different images may be placed on the blank starting canvas, but you must include the same image at least five times: once in its original form, and at least four more times modified in any way you want using at least four different modifications.</li><li>Each of the four image modifications required above must alter the original image’s appearance in some noticeable way. At least one of the modification algorithms must be created or significantly modified by you, and not copied from another resource. Possible image modifications include, but are not limited to:<ul><li>Grayscale</li><li>Crop</li><li>Lighten/darken</li><li>Negative</li><li>Scale</li><li>Sepia tone/cyanotype</li><li>Blend</li><li>Rotate/mirror</li><li>Line drawing/edge detection</li><li>Shift colors</li><li>Posterize</li><li>Added lines or shapes</li></ul></li><li>Develop a chromakey-like function to “sign” your collage by using a file containing your signature on a white background. Change corresponding pixels in your collage to a contrasting color when it detects the non-white pixels of your signature.</li><li>The program should not prompt for any input, but rather have all files specified in your code. You should make use of the getMediaPath() function.</li><li>The final collage that your program creates should be appropriate for all ages to view.</li><li>All beginning images used in your collage must satisfy at least one of the following:<ul><li>The image is owned by you, or you have documented permission from the copyright holder to use it.</li><li>The image is included in the “JPG Images.zip” file provided in the CS 120 area of Blackboard.</li><li>The image is available royalty-free in the public domain.</li></ul></li></ol><p>Your code should be hierarchically decomposed and use descriptive function and variable names. Additionally, make sure to include reasonable documentation comments throughout your code as you feel appropriate. At a minimum, include comments at the start of the code that includes your name and date. Additional comments should be included in your code similar to those used by the authors in the text book. Your code should be formatted similar to the text book authors’ examples. Include a reflection paper along with your submitted files. See Blackboard for a description of its content.</p><p>Completed projects may be posted online by the instructor (with attribution to you, unless you wish to remain anonymous) so that others can view your creations. Additionally, your completed project will be entered into a CS 120 Art Show. Details about the art show will be provided separately.</p><h3 id="TO-SUBMIT-YOUR-WORK-FOR-GRADING"><a href="#TO-SUBMIT-YOUR-WORK-FOR-GRADING" class="headerlink" title="TO SUBMIT YOUR WORK FOR GRADING"></a>TO SUBMIT YOUR WORK FOR GRADING</h3><p>Even if you feel your project is incomplete, turn in something before the due date and time. Whatever you turn in will be worth a few points! To submit your project, do the following.</p><ol><li>Place ALL of your files for the project into a single folder named project2. Don’t forget the image files and reflection paper, etc. Compress (zip) this folder, creating project2.zip.</li><li>Log into Blackboard and enter the CS 120 part of the site. Go to the Projects area by using the “Projects” navigation button on the left side of the screen. Inside the Projects area, click on the “Project 2” link.</li><li>Find the “Assignment Submission” section. Click on the “Browse my Computer” button and locate your project2.zip compressed (zipped) file you created in step 1 above.</li><li>Once you have attached your file, click on the “Submit” button in section 4 “Submit”, at the bottom right of the submission page. You should then receive a confirmation of your submission on your screen.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      用Python的图形库，画出要求的图形即可，其余部分可自由发挥。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   

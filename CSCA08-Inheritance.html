@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写Interitance的小练习作业，求图形的边长和面积。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSCA08-Inheritance">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCA08-Inheritance.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写Interitance的小练习作业，求图形的边长和面积。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-23T00:34:30.419Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSCA08-Inheritance">
+<meta name="twitter:description" content="代写Interitance的小练习作业，求图形的边长和面积。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCA08-Inheritance.html"/>
+
+
+
+
+
+  <title>CSCA08-Inheritance | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCA08-Inheritance.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSCA08-Inheritance</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-13T15:37:13+08:00">
+                2020-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写Interitance的小练习作业，求图形的边长和面积。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this exercise, we will be working with inheritance, and thinking about how we can set up our inheritance hierarchy to make our lives easier. There is an easy way and a difficult way to complete this exercise. If you plan appropriately, you’ll find you won’t have to write very much code at all.</p>
+<h4 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h4><p>Consider the following 4 shapes:</p>
+<h4 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h4><p>A four sided figure with parallel pairs of sides. A Parallelogram is defined by the lengths of its two pairs of sides (labelled base and side in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p>
+<h4 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h4><p>A parallelogram with four right angles. A Rectangle is defined by the lengths of its two pairs of sides (labelled base and side in the picture below).</p>
+<h4 id="Rhombus"><a href="#Rhombus" class="headerlink" title="Rhombus"></a>Rhombus</h4><p>A parallelogram with four equal sides. A Rhombus is defined by the length of its sides (labelled base in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p>
+<h4 id="Square"><a href="#Square" class="headerlink" title="Square"></a>Square</h4><p>A parallelogram with four equal sides and four right angles; both a Rectangle and a Rhombus. A Square is defined by the length of its sides (labelled base in the picture below).</p>
+<p>Your first task is to figure out the IS-A hierarchy of these shapes. Draw it out in a piece of paper. Are there any instances of multiple parents?</p>
+<h3 id="Your-Task"><a href="#Your-Task" class="headerlink" title="Your Task"></a>Your Task</h3><p>You must write four classes: Parallelogram, Rectangle, Rhombus and Square, ensuring that the class hierarchy follows your diagram from the previous step. You may create additional classes if you wish (are there any good reasons why you might want to do this?). The parameters of init methods should always be input in the following order: (base, side, theta) (theta being given in degrees), though of course, not every class’ init will take all three. So for example, a Rectangle will only take (base, side).</p>
+<p>Objects of these classes must have the following methods:</p>
+<ul>
+<li>area() - returns the area of the shape<br>Note: The area of a parallelogram is computed by base side sin(theta)<br>Warning: function math.sin in Python expects its argument to be an angle given in radians - take a look at the function math.radians to convert between degrees and radians.</li>
+<li>bst() - returns a list of three floats: [base, side, theta]. Even if a shape doesn’t need one of the parameters for its input, it should still be able to return it. (e.g., a 10 x 10 square would return: [10.0, 10.0, 90.0]).</li>
+<li>When printed, each shape should return a string with text in the following format “I am a shape with area area”. Four example, a 10 x 10 square would return the string: “I am a Square with area 100”.</li>
+</ul>
+<h3 id="Be-Lazy"><a href="#Be-Lazy" class="headerlink" title="Be Lazy"></a>Be Lazy</h3><p>One way to solve this would be to write four completely independent classes, and have each class completely implement all of their own functions. This would be a bad idea (why?). If you use inheritance correctly, you should find the exercise much simpler. Remember, you should never calculate something when you can just get another method to do the work for you. Hint: It’s possible to set more than one parent for your class. Are there any shapes here for which that would be a sensible thing to do?</p>
+<h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>All of your code should be submitted to MarkUs in a file called ex9.py that doesn’t import anything other than math, and does not ask for input or print anything when imported.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS7106-Speech-Synthesiser.html" rel="next" title="CS7106-Speech-Synthesiser">
+                <i class="fa fa-chevron-left"></i> CS7106-Speech-Synthesiser
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CSC401-Recursive.html" rel="prev" title="CSC401-Recursive">
+                CSC401-Recursive <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">205</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Shapes"><span class="nav-number">1.1.</span> <span class="nav-text">Shapes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parallelogram"><span class="nav-number">1.2.</span> <span class="nav-text">Parallelogram</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rectangle"><span class="nav-number">1.3.</span> <span class="nav-text">Rectangle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rhombus"><span class="nav-number">1.4.</span> <span class="nav-text">Rhombus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Square"><span class="nav-number">1.5.</span> <span class="nav-text">Square</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Your-Task"><span class="nav-number">2.</span> <span class="nav-text">Your Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Be-Lazy"><span class="nav-number">3.</span> <span class="nav-text">Be Lazy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Submit"><span class="nav-number">4.</span> <span class="nav-text">What to Submit</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
