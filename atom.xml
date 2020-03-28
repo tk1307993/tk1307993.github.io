@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-03-25T01:40:58.857Z</updated>
+  <updated>2020-03-28T02:42:06.528Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSCI4150-File-System-Server</title>
+    <link href="https://tk1307993.coding.me/CSCI4150-File-System-Server.html"/>
+    <id>https://tk1307993.coding.me/CSCI4150-File-System-Server.html</id>
+    <published>2020-03-28T02:39:31.000Z</published>
+    <updated>2020-03-28T02:42:06.528Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="RequirementRequirement"><a href="#RequirementRequirement" class="headerlink" title="RequirementRequirement"></a>RequirementRequirement</h3><p>This project is intended to integrate many aspects of OS design and implementation, from scheduling, to synchronization, to memory management, and file systems. You are to implement this in the xv6 OS (I’ll provide a repo link via Piazza). You will implement microkernel services on top of xv6 which is a monolithic OS! This is a large and hard project and is scoped around three team members. If you choose a smaller team, you’re still responsible for the entire project, so I suggest you form your team soon. The most important thing you can do to ensure you finish on time is to ​start early. Like now. To the keyboard!</p><h3 id="Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore"><a href="#Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore" class="headerlink" title="Final goal: OS Service to do File-system Checkpoint-Restore"></a>Final goal: OS Service to do File-system Checkpoint-Restore</h3><p>The final goal of the project is to implement a File-System Server (FSS) – implemented as a normal process – that communicates with the other processes in the system (called “clients), receiving requests for file system services (e.g. similar to open, read, write, close, mkdir, unlink), and it will make those calls on behalf of the requesting process. However, it will also be smart enough to enable the “undo” of any changes made to the file system by those processes. It will do this by saving the contents of files and directories to a “checkpoint/“ subdirectory when modifications are made. To restore this checkpoint, a simple program can simply copy everything incheckpoint/into the normal file system. The communication with the FSS is through shared memory regions coordinated with mutexes and condition variables (which xv6 does not already provide).</p><h3 id="Specification-and-Implementation-Plan"><a href="#Specification-and-Implementation-Plan" class="headerlink" title="Specification and Implementation Plan"></a>Specification and Implementation Plan</h3><p>There are three main modules to this project.</p><ol><li><p>The FSS which uses the normal kernel API to provide access to the file-system, and also to perform the operations to save files/directories when they are modified for checkpointing. This requires zero kernel programming.</p></li><li><p>The shared memory support between the FSS, and the processes that are using the FSS’s checkpointing support. This shared memory region is used to pass both the request being made (i.e. which type of call is it, read, open, etc…), and the corresponding data that is required for that call (the path and flags for open, the buffer and its length for read, etc…). This will require kernel hacking to make a shared memory region between the client and the FSS.</p></li><li><p>The synchronization code necessary to provide synchronization on that shared buffer. This will include both mutexes, and the ability to block waiting for an event (i.e. a new client request) – a function normally provided by condition variables. This will require kernel hacking to implement mutexes for user-level, and to add logic for condition variables. The FSS process should always execute with high priority as it is providing a service to other processes in the system.</p></li></ol><p>There are varying levels of support for each of these three components, and you should be able to develop each relatively independently, so if one person does not meet their commitment, the others should be able to still make progress. Level 1 is intended to be very basic functionality. Leveling up from there strengthens your project. Only a project at project level 5 will receive full credit. Each level assumes the functionality from the previous levels (i.e. you can’t get level 2 without achieving level 1).</p><p>A note on group work and collaboration: I designed these modules to be independent, but that does not mean that they are of equal difficulty. Do not plan on simply assigning one to each team member, and when one of the modules is complete assume that team member is “done”. After a module is done, you must help the other members on the other modules. Each team member must stay up-to-date with each other teammate. You should use github to coordinate your code modifications. In fact, I highly​ suggest that once each of the implementations get to Level 1, that you start integrating them together. Once integrated, you can keep leveling up in each module.</p><h3 id="Module-1-File-System-Server"><a href="#Module-1-File-System-Server" class="headerlink" title="Module #1: File-System Server"></a>Module #1: File-System Server</h3><p>The FSS uses the normal kernel API and is a normal process. It uses IPC to talk to clients. Those clients make requests to it to access the file system on their behalf. This is not very useful on its own, but the FSS is smart because it provides a checkpoint and restore functionality. This means that when the FSS starts, it begins recording all files and directories that are modified by clients. It will record these files/directories in the /checkpoint/ directory. So for example, if /hw.txt exists, and you wrote a program to write to that file (via IPC with the FSS), then the FSS would copy the /hw.txt file to /checkpoint/hw.txt, and then perform the write on the client’s behalf. If you write a program to remove a directory, /foo/, then the FSS would add /checkpoint/foo/ before removing the directory for the client. A separate program called restore can be executed to restore all files and directories in the /checkpoint/ directory into their original location. This will undo all edits made in the mean-time. You do not have to track files and directories that are created and remove them upon restore. This module requires no kernel programming.</p><p>You’ll first need to understand how the client and the FSS communicate via IPC. Each of the file-system system calls need a corresponding FSS operation, prepended with fss_. The client will call these operations instead of the normal system calls. Thus, you will need to provide your implementations for fss_read, fss_write, fss_open, fss_close, fss_mkdir, fss_unlink. Note that open and mkdir are used to create files and directories, respectively, and unlink isused to remove files and directories. These functions will be used to pass through IPC to the FSS, which function is being performed (e.g. you could pass it as a string), and the arguments being passed to the function. For example, you could define a structure:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">fss_request</span> &#123;</span></span><br><span class="line"><span class="keyword">char</span> operation[<span class="number">7</span>];</span><br><span class="line"><span class="keyword">int</span> arg;</span><br><span class="line"><span class="keyword">char</span> data[<span class="number">1024</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>Where the operation field contains the operation (“mkdir”, “close”, etc…), arg contains any numerical argument passed to the function, and data contains any actual data that is meant to be passed. Once you fill out this structure, you can pass it over IPC to the FSS, and it can read the structure and convert the request into its own logic for making real file-system system calls to the kernel. It is cleaner to use an enumerated type for the operation.</p><p>A difficult part of this arrangement is that the FSS must return the return value from the kernel back to the client, and in the case of read, we must return the data that was read. So you’ll likely want a fss_response structure that holds that response as well (e.g. an couple of ints, and a array for the data). It can send this structure via IPC back to the client that made the request</p><h3 id="Module-2-Shared-Memory"><a href="#Module-2-Shared-Memory" class="headerlink" title="Module #2: Shared Memory"></a>Module #2: Shared Memory</h3><p>Shared memory is often used for IPC between processes. It is more efficient than message passing (e.g. pipes) as you can often have fewer memcpy operations (e.g. zero or one vs. two). This module will add shared memory to your project. Xv6 does not support shared memory, so this will require understanding the xv6 mechanisms for mapping memory into processes, and how that interacts with calls to sbrk (extending the amount of memory accessible by a process), and fork/exec/exit. </p><h3 id="Module-3-Synchronization-and-Scheduling"><a href="#Module-3-Synchronization-and-Scheduling" class="headerlink" title="Module #3: Synchronization and Scheduling"></a>Module #3: Synchronization and Scheduling</h3><p>Module 2 provides shared memory between processes. Now that we have shared memory, we must synchronize access to it! We want to provide a means for passing requests to the FSS, and for synchronizing the return value being passed to the client. Xv6 does not provide any memory sharing between user-level processes, so you’re job is to implement a set of mutex system calls, and to enable processes to block waiting for requests/responses, you’ll also provide condition variable system calls. </p><h3 id="Overall-Project"><a href="#Overall-Project" class="headerlink" title="Overall Project"></a>Overall Project</h3><p>The levels for the overall project are:</p><ul><li>Level 0: Level 1 in one module.</li><li>Level 1: Level 1 at least two modules.</li><li>Level 2: Level 1 in three modules, and level 2 in at least two. Two of the modules must be integrated together.</li><li>Level 3: All three modules must be integrated together.</li><li>Level 4: Highest level - 1 in each module.</li><li>Level 5: Highest level in all modules.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+      <category term="File System" scheme="https://tk1307993.coding.me/tags/File-System/"/>
+    
+  </entry>
   
   <entry>
     <title>CSCA08-UnitTests</title>
@@ -28,6 +52,28 @@
     <summary type="html">
     
       这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSCA08-Inheritance</title>
+    <link href="https://tk1307993.coding.me/CSCA08-Inheritance.html"/>
+    <id>https://tk1307993.coding.me/CSCA08-Inheritance.html</id>
+    <published>2020-03-23T07:37:13.000Z</published>
+    <updated>2020-03-25T02:34:56.014Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this exercise, we will be working with inheritance, and thinking about how we can set up our inheritance hierarchy to make our lives easier. There is an easy way and a difficult way to complete this exercise. If you plan appropriately, you’ll find you won’t have to write very much code at all.</p><h4 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h4><p>Consider the following 4 shapes:</p><h4 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h4><p>A four sided figure with parallel pairs of sides. A Parallelogram is defined by the lengths of its two pairs of sides (labelled base and side in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h4><p>A parallelogram with four right angles. A Rectangle is defined by the lengths of its two pairs of sides (labelled base and side in the picture below).</p><h4 id="Rhombus"><a href="#Rhombus" class="headerlink" title="Rhombus"></a>Rhombus</h4><p>A parallelogram with four equal sides. A Rhombus is defined by the length of its sides (labelled base in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Square"><a href="#Square" class="headerlink" title="Square"></a>Square</h4><p>A parallelogram with four equal sides and four right angles; both a Rectangle and a Rhombus. A Square is defined by the length of its sides (labelled base in the picture below).</p><p>Your first task is to figure out the IS-A hierarchy of these shapes. Draw it out in a piece of paper. Are there any instances of multiple parents?</p><h3 id="Your-Task"><a href="#Your-Task" class="headerlink" title="Your Task"></a>Your Task</h3><p>You must write four classes: Parallelogram, Rectangle, Rhombus and Square, ensuring that the class hierarchy follows your diagram from the previous step. You may create additional classes if you wish (are there any good reasons why you might want to do this?). The parameters of init methods should always be input in the following order: (base, side, theta) (theta being given in degrees), though of course, not every class’ init will take all three. So for example, a Rectangle will only take (base, side).</p><p>Objects of these classes must have the following methods:</p><ul><li>area() - returns the area of the shape<br>Note: The area of a parallelogram is computed by base side sin(theta)<br>Warning: function math.sin in Python expects its argument to be an angle given in radians - take a look at the function math.radians to convert between degrees and radians.</li><li>bst() - returns a list of three floats: [base, side, theta]. Even if a shape doesn’t need one of the parameters for its input, it should still be able to return it. (e.g., a 10 x 10 square would return: [10.0, 10.0, 90.0]).</li><li>When printed, each shape should return a string with text in the following format “I am a shape with area area”. Four example, a 10 x 10 square would return the string: “I am a Square with area 100”.</li></ul><h3 id="Be-Lazy"><a href="#Be-Lazy" class="headerlink" title="Be Lazy"></a>Be Lazy</h3><p>One way to solve this would be to write four completely independent classes, and have each class completely implement all of their own functions. This would be a bad idea (why?). If you use inheritance correctly, you should find the exercise much simpler. Remember, you should never calculate something when you can just get another method to do the work for you. Hint: It’s possible to set more than one parent for your class. Are there any shapes here for which that would be a sensible thing to do?</p><h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>All of your code should be submitted to MarkUs in a file called ex9.py that doesn’t import anything other than math, and does not ask for input or print anything when imported.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写Interitance的小练习作业，求图形的边长和面积。
     
     </summary>
     
@@ -72,28 +118,6 @@
     <summary type="html">
     
       代写四个小函数，所有的函数只能用recursion实现，练习基础的recursive的用法。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSCA08-Inheritance</title>
-    <link href="https://tk1307993.coding.me/CSCA08-Inheritance.html"/>
-    <id>https://tk1307993.coding.me/CSCA08-Inheritance.html</id>
-    <published>2020-03-13T07:37:13.000Z</published>
-    <updated>2020-03-23T01:46:23.339Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this exercise, we will be working with inheritance, and thinking about how we can set up our inheritance hierarchy to make our lives easier. There is an easy way and a difficult way to complete this exercise. If you plan appropriately, you’ll find you won’t have to write very much code at all.</p><h4 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h4><p>Consider the following 4 shapes:</p><h4 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h4><p>A four sided figure with parallel pairs of sides. A Parallelogram is defined by the lengths of its two pairs of sides (labelled base and side in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h4><p>A parallelogram with four right angles. A Rectangle is defined by the lengths of its two pairs of sides (labelled base and side in the picture below).</p><h4 id="Rhombus"><a href="#Rhombus" class="headerlink" title="Rhombus"></a>Rhombus</h4><p>A parallelogram with four equal sides. A Rhombus is defined by the length of its sides (labelled base in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Square"><a href="#Square" class="headerlink" title="Square"></a>Square</h4><p>A parallelogram with four equal sides and four right angles; both a Rectangle and a Rhombus. A Square is defined by the length of its sides (labelled base in the picture below).</p><p>Your first task is to figure out the IS-A hierarchy of these shapes. Draw it out in a piece of paper. Are there any instances of multiple parents?</p><h3 id="Your-Task"><a href="#Your-Task" class="headerlink" title="Your Task"></a>Your Task</h3><p>You must write four classes: Parallelogram, Rectangle, Rhombus and Square, ensuring that the class hierarchy follows your diagram from the previous step. You may create additional classes if you wish (are there any good reasons why you might want to do this?). The parameters of init methods should always be input in the following order: (base, side, theta) (theta being given in degrees), though of course, not every class’ init will take all three. So for example, a Rectangle will only take (base, side).</p><p>Objects of these classes must have the following methods:</p><ul><li>area() - returns the area of the shape<br>Note: The area of a parallelogram is computed by base side sin(theta)<br>Warning: function math.sin in Python expects its argument to be an angle given in radians - take a look at the function math.radians to convert between degrees and radians.</li><li>bst() - returns a list of three floats: [base, side, theta]. Even if a shape doesn’t need one of the parameters for its input, it should still be able to return it. (e.g., a 10 x 10 square would return: [10.0, 10.0, 90.0]).</li><li>When printed, each shape should return a string with text in the following format “I am a shape with area area”. Four example, a 10 x 10 square would return the string: “I am a Square with area 100”.</li></ul><h3 id="Be-Lazy"><a href="#Be-Lazy" class="headerlink" title="Be Lazy"></a>Be Lazy</h3><p>One way to solve this would be to write four completely independent classes, and have each class completely implement all of their own functions. This would be a bad idea (why?). If you use inheritance correctly, you should find the exercise much simpler. Remember, you should never calculate something when you can just get another method to do the work for you. Hint: It’s possible to set more than one parent for your class. Are there any shapes here for which that would be a sensible thing to do?</p><h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>All of your code should be submitted to MarkUs in a file called ex9.py that doesn’t import anything other than math, and does not ask for input or print anything when imported.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写Interitance的小练习作业，求图形的边长和面积。
     
     </summary>
     
@@ -310,9 +334,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -451,30 +475,6 @@
     
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
     
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSC401-Index-Random-and-Dictionary</title>
-    <link href="https://tk1307993.coding.me/CSC401-Index-Random-and-Dictionary.html"/>
-    <id>https://tk1307993.coding.me/CSC401-Index-Random-and-Dictionary.html</id>
-    <published>2020-01-10T00:30:46.000Z</published>
-    <updated>2020-01-10T00:32:49.536Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this assignment is to assess your understanding of</p><ol><li>Dictionary</li><li>Tuple</li><li>Set</li><li>Random Module</li></ol><p>Next week, we will discuss functions and the role of functions in programming (section 7.1) and how encapsulation is implemented (namespaces, local, global variables, section 7.2) and exceptions (section 7.3) and recursion, Chapter 10. You notice what we are skipping Chapters 8 and 9, some of that material you will see later in Java.</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul><li>Include your full name as a comment on the first line of your Python program.</li><li>As we did in class, code all the problems in one Python file (.py). Each problems will consist of 1 or 2 modules (def). Identify each problem with comment like #Problem 1, Problem 2, etc.</li><li>Submit (upload) to the dropbox one file labeled as YourName_HW6.py</li></ul><h3 id="Problam"><a href="#Problam" class="headerlink" title="Problam"></a>Problam</h3><h4 id="Indexing-problem"><a href="#Indexing-problem" class="headerlink" title="Indexing problem"></a>Indexing problem</h4><p>At the end of books, there usually is an index that lists the pages where a certain word appears. In this problem, you will create an index for a text but, instead of the page number, you will use the line numbers. You are to implement the function index (fname, letter) that takes as input the name of the text file and the first letter of the words for which you are to create the line number index. For each word that begins with ‘letter’, you are to print the corresponding line numbers. You should</p><ol><li>open and read the file only once; use readline()</li><li>Remove all punctuation from the text</li><li>For each word that begins with the specified letter, find all the line numbers in which the letter appears.</li><li>Print the total number of lines in the text and the number of words that begin with the specified letter.</li></ol><p>Use a dictionary to store results {word: list of line number(s)}. For each word, a line number should be listed only once, for example, ‘the’ appears 3 time on line 250; 250 should not be listed 3 times, only once. In the output, the line numbers should be separated by commas, but they are not printed as lists (no brackets). The words in the output should be in alphabetical order, i.e. a - z.</p><h4 id="Random-problem"><a href="#Random-problem" class="headerlink" title="Random problem"></a>Random problem</h4><p>Craps is a dice-based game played in many casinos. The game starts with the player throwing a pair of standard, six-sided dice. If the player rolls a total of 7 or 11, the player wins. If the player rolls a total of 2, 3 or 12, the player loses. For all other roll values, the player will repeatedly roll the pair of dice until either she rolls the initial value again (in which case she wins) or 7 (in which case she loses. Write a function craps() that takes no arguments, simulates one game of craps, and returns ‘I win’ if the player won and ‘I lost’ if the player lost. Consider implementing a second function if the player does not win or lose on the initial roll.</p><h4 id="Dictionary-problem"><a href="#Dictionary-problem" class="headerlink" title="Dictionary problem"></a>Dictionary problem</h4><p>Implement a function STUDENT() which allows the user to enter the 7-digit student ID. The program will keep prompting the user for a last name and first name. If the student does not have a student ID on record, the program will then ask for the student ID, and store that information. If the student already has a student ID, the program will display it, and ask for confirmation whether a new studentID should be assigned (and, if so allows the new studentID to be entered). When the user hits the return key, the program prints a report listing all students with their studentID. Your report does not have to be in alphabetical order, however, if you do want to make it alphabetical, you can use sorted on the keys() of your dictionary.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写三个基础的Python问题，一个是索引问题，另一个是随机问题，最后一个是字典问题。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     

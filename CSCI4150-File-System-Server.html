@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals," />
+  <meta name="keywords" content="Operating System,File System," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。">
+<meta name="keywords" content="Operating System,File System">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS207 Hotel Booking Application">
-<meta property="og:url" content="https://tk1307993.coding.me/CS207-HotelBookingApplication.html">
+<meta property="og:title" content="CSCI4150-File-System-Server">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI4150-File-System-Server.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
+<meta property="og:description" content="代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-25T04:04:18.253Z">
+<meta property="og:updated_time" content="2020-03-28T02:42:06.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS207 Hotel Booking Application">
-<meta name="twitter:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
+<meta name="twitter:title" content="CSCI4150-File-System-Server">
+<meta name="twitter:description" content="代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS207-HotelBookingApplication.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI4150-File-System-Server.html"/>
 
 
 
 
 
-  <title>Java代写：CS207 Hotel Booking Application | 留学生CS编程作业代写</title>
+  <title>CSCI4150-File-System-Server | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS207-HotelBookingApplication.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI4150-File-System-Server.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS207 Hotel Booking Application</h2>
+          <h2 class="post-title" itemprop="name headline">CSCI4150-File-System-Server</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-25T12:00:59+08:00">
-                2018-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-28T10:39:31+08:00">
+                2020-03-28
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。
+                  代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。
               </div>
           
 
@@ -360,18 +360,34 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>一个成熟的酒店管理系统，还可以接入或被接入其他系统。只要做好接口设计，给出稳定、可拓展的接口，这类系统便可以反复利用。<br>当然，对于酒店管理系统的重构，也是十分头疼的一件事。由于要逐个梳理需求，在重构中要避免需求的落下。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Below are the features of this project that you should implement in this course.</p>
+        <h3 id="RequirementRequirement"><a href="#RequirementRequirement" class="headerlink" title="RequirementRequirement"></a>RequirementRequirement</h3><p>This project is intended to integrate many aspects of OS design and implementation, from scheduling, to synchronization, to memory management, and file systems. You are to implement this in the xv6 OS (I’ll provide a repo link via Piazza). You will implement microkernel services on top of xv6 which is a monolithic OS! This is a large and hard project and is scoped around three team members. If you choose a smaller team, you’re still responsible for the entire project, so I suggest you form your team soon. The most important thing you can do to ensure you finish on time is to ​start early. Like now. To the keyboard!</p>
+<h3 id="Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore"><a href="#Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore" class="headerlink" title="Final goal: OS Service to do File-system Checkpoint-Restore"></a>Final goal: OS Service to do File-system Checkpoint-Restore</h3><p>The final goal of the project is to implement a File-System Server (FSS) – implemented as a normal process – that communicates with the other processes in the system (called “clients), receiving requests for file system services (e.g. similar to open, read, write, close, mkdir, unlink), and it will make those calls on behalf of the requesting process. However, it will also be smart enough to enable the “undo” of any changes made to the file system by those processes. It will do this by saving the contents of files and directories to a “checkpoint/“ subdirectory when modifications are made. To restore this checkpoint, a simple program can simply copy everything incheckpoint/into the normal file system. The communication with the FSS is through shared memory regions coordinated with mutexes and condition variables (which xv6 does not already provide).</p>
+<h3 id="Specification-and-Implementation-Plan"><a href="#Specification-and-Implementation-Plan" class="headerlink" title="Specification and Implementation Plan"></a>Specification and Implementation Plan</h3><p>There are three main modules to this project.</p>
 <ol>
-<li>As a user, he can login with a username and password and launch the hotel booking application.</li>
-<li>As a user, he can search available rooms in the hotel by entering a departure date, and book the standard room, big bed room or business suite room.</li>
-<li>As a user, he can display search results sorted by floor, cost and date.</li>
-<li>As a user, he can cancel the reservation room.</li>
-<li>This application will use a txt file to load the user’s information. The file should contains the following properties:<br>LastName, FirstName, Gender, Age, Email, CreditCardNumber, BillingAddress, ExpriyDate.</li>
+<li><p>The FSS which uses the normal kernel API to provide access to the file-system, and also to perform the operations to save files/directories when they are modified for checkpointing. This requires zero kernel programming.</p>
+</li>
+<li><p>The shared memory support between the FSS, and the processes that are using the FSS’s checkpointing support. This shared memory region is used to pass both the request being made (i.e. which type of call is it, read, open, etc…), and the corresponding data that is required for that call (the path and flags for open, the buffer and its length for read, etc…). This will require kernel hacking to make a shared memory region between the client and the FSS.</p>
+</li>
+<li><p>The synchronization code necessary to provide synchronization on that shared buffer. This will include both mutexes, and the ability to block waiting for an event (i.e. a new client request) – a function normally provided by condition variables. This will require kernel hacking to implement mutexes for user-level, and to add logic for condition variables. The FSS process should always execute with high priority as it is providing a service to other processes in the system.</p>
+</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本次作业需要实现酒店管理系统的一部分业务功能，即用户使用部分，包括了用户登录、预订查询、查询排序、预定房间和预订取消等功能。代码的实现需要结合所给出的框架来完成，因此熟悉框架的结构成为了一个不可缺少的过程。</p>
-<p>需要注意的是，对于此类系统，一个通用的设计模型是：先判断传入参数和合法性，再判断是否拥有执行权限，最后再做相关业务逻辑。</p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出emailAddress地址的业务逻辑代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">validateEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (emailAddress == <span class="keyword">null</span> || emailAddress.equals(<span class="string">""</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Pattern p = Pattern.compile(<span class="string">"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"</span>);</span><br><span class="line">    Matcher m = p.matcher(emailAddress);  </span><br><span class="line">    <span class="keyword">return</span> m.matches();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (validateEmailAddress(emailAddress) == <span class="keyword">false</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> EmailException(emailAddress);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// do business logic</span></span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>There are varying levels of support for each of these three components, and you should be able to develop each relatively independently, so if one person does not meet their commitment, the others should be able to still make progress. Level 1 is intended to be very basic functionality. Leveling up from there strengthens your project. Only a project at project level 5 will receive full credit. Each level assumes the functionality from the previous levels (i.e. you can’t get level 2 without achieving level 1).</p>
+<p>A note on group work and collaboration: I designed these modules to be independent, but that does not mean that they are of equal difficulty. Do not plan on simply assigning one to each team member, and when one of the modules is complete assume that team member is “done”. After a module is done, you must help the other members on the other modules. Each team member must stay up-to-date with each other teammate. You should use github to coordinate your code modifications. In fact, I highly​ suggest that once each of the implementations get to Level 1, that you start integrating them together. Once integrated, you can keep leveling up in each module.</p>
+<h3 id="Module-1-File-System-Server"><a href="#Module-1-File-System-Server" class="headerlink" title="Module #1: File-System Server"></a>Module #1: File-System Server</h3><p>The FSS uses the normal kernel API and is a normal process. It uses IPC to talk to clients. Those clients make requests to it to access the file system on their behalf. This is not very useful on its own, but the FSS is smart because it provides a checkpoint and restore functionality. This means that when the FSS starts, it begins recording all files and directories that are modified by clients. It will record these files/directories in the /checkpoint/ directory. So for example, if /hw.txt exists, and you wrote a program to write to that file (via IPC with the FSS), then the FSS would copy the /hw.txt file to /checkpoint/hw.txt, and then perform the write on the client’s behalf. If you write a program to remove a directory, /foo/, then the FSS would add /checkpoint/foo/ before removing the directory for the client. A separate program called restore can be executed to restore all files and directories in the /checkpoint/ directory into their original location. This will undo all edits made in the mean-time. You do not have to track files and directories that are created and remove them upon restore. This module requires no kernel programming.</p>
+<p>You’ll first need to understand how the client and the FSS communicate via IPC. Each of the file-system system calls need a corresponding FSS operation, prepended with fss_. The client will call these operations instead of the normal system calls. Thus, you will need to provide your implementations for fss_read, fss_write, fss_open, fss_close, fss_mkdir, fss_unlink. Note that open and mkdir are used to create files and directories, respectively, and unlink isused to remove files and directories. These functions will be used to pass through IPC to the FSS, which function is being performed (e.g. you could pass it as a string), and the arguments being passed to the function. For example, you could define a structure:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">fss_request</span> &#123;</span></span><br><span class="line"><span class="keyword">char</span> operation[<span class="number">7</span>];</span><br><span class="line"><span class="keyword">int</span> arg;</span><br><span class="line"><span class="keyword">char</span> data[<span class="number">1024</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>Where the operation field contains the operation (“mkdir”, “close”, etc…), arg contains any numerical argument passed to the function, and data contains any actual data that is meant to be passed. Once you fill out this structure, you can pass it over IPC to the FSS, and it can read the structure and convert the request into its own logic for making real file-system system calls to the kernel. It is cleaner to use an enumerated type for the operation.</p>
+<p>A difficult part of this arrangement is that the FSS must return the return value from the kernel back to the client, and in the case of read, we must return the data that was read. So you’ll likely want a fss_response structure that holds that response as well (e.g. an couple of ints, and a array for the data). It can send this structure via IPC back to the client that made the request</p>
+<h3 id="Module-2-Shared-Memory"><a href="#Module-2-Shared-Memory" class="headerlink" title="Module #2: Shared Memory"></a>Module #2: Shared Memory</h3><p>Shared memory is often used for IPC between processes. It is more efficient than message passing (e.g. pipes) as you can often have fewer memcpy operations (e.g. zero or one vs. two). This module will add shared memory to your project. Xv6 does not support shared memory, so this will require understanding the xv6 mechanisms for mapping memory into processes, and how that interacts with calls to sbrk (extending the amount of memory accessible by a process), and fork/exec/exit. </p>
+<h3 id="Module-3-Synchronization-and-Scheduling"><a href="#Module-3-Synchronization-and-Scheduling" class="headerlink" title="Module #3: Synchronization and Scheduling"></a>Module #3: Synchronization and Scheduling</h3><p>Module 2 provides shared memory between processes. Now that we have shared memory, we must synchronize access to it! We want to provide a means for passing requests to the FSS, and for synchronizing the return value being passed to the client. Xv6 does not provide any memory sharing between user-level processes, so you’re job is to implement a set of mutex system calls, and to enable processes to block waiting for requests/responses, you’ll also provide condition variable system calls. </p>
+<h3 id="Overall-Project"><a href="#Overall-Project" class="headerlink" title="Overall Project"></a>Overall Project</h3><p>The levels for the overall project are:</p>
+<ul>
+<li>Level 0: Level 1 in one module.</li>
+<li>Level 1: Level 1 at least two modules.</li>
+<li>Level 2: Level 1 in three modules, and level 2 in at least two. Two of the modules must be integrated together.</li>
+<li>Level 3: All three modules must be integrated together.</li>
+<li>Level 4: Highest level - 1 in each module.</li>
+<li>Level 5: Highest level in all modules.</li>
+</ul>
 
       
     </div>
@@ -389,7 +405,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
+          
+            <a href="/tags/File-System/" rel="tag"># File System</a>
           
         </div>
       
@@ -402,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC120H-Simulating-Canadian-Elections.html" rel="next" title="Python代写：CSC120H Simulating Canadian Elections">
-                <i class="fa fa-chevron-left"></i> Python代写：CSC120H Simulating Canadian Elections
+              <a href="/CSCA08-UnitTests.html" rel="next" title="CSCA08-UnitTests">
+                <i class="fa fa-chevron-left"></i> CSCA08-UnitTests
               </a>
             
           </div>
@@ -411,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP3007-Pathfinding.html" rel="prev" title="Java代写：COMP3007 Pathfinding">
-                Java代写：COMP3007 Pathfinding <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">2.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis"><span class="nav-number">3.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#RequirementRequirement"><span class="nav-number">1.</span> <span class="nav-text">RequirementRequirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore"><span class="nav-number">2.</span> <span class="nav-text">Final goal: OS Service to do File-system Checkpoint-Restore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification-and-Implementation-Plan"><span class="nav-number">3.</span> <span class="nav-text">Specification and Implementation Plan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Module-1-File-System-Server"><span class="nav-number">4.</span> <span class="nav-text">Module #1: File-System Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Module-2-Shared-Memory"><span class="nav-number">5.</span> <span class="nav-text">Module #2: Shared Memory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Module-3-Synchronization-and-Scheduling"><span class="nav-number">6.</span> <span class="nav-text">Module #3: Synchronization and Scheduling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overall-Project"><span class="nav-number">7.</span> <span class="nav-text">Overall Project</span></a></li></ol></div>
             
 
           </div>
