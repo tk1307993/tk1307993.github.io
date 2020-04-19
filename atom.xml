@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-04-16T03:19:24.119Z</updated>
+  <updated>2020-04-19T03:26:51.372Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy</title>
+    <link href="https://tk1307993.coding.me/CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy.html"/>
+    <id>https://tk1307993.coding.me/CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy.html</id>
+    <published>2020-04-19T09:23:31.000Z</published>
+    <updated>2020-04-19T03:26:51.372Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Part-1-Philadelphia-Bike-Share-Data-and-Jeopardy"><a href="#Part-1-Philadelphia-Bike-Share-Data-and-Jeopardy" class="headerlink" title="Part 1 - Philadelphia Bike Share Data and Jeopardy"></a>Part 1 - Philadelphia Bike Share Data and Jeopardy</h3><p>Analyzing Data from the Internet: Real-world data sets are becoming increasingly available for a large variety of domains. E.g., <a href="http://www.data.gov" target="_blank" rel="noopener">www.data.gov</a> has datasets ranging from education and agriculture to manufacturing and energy. <a href="https://www.opendataphilly.org/" target="_blank" rel="noopener">https://www.opendataphilly.org/</a> provides a lot of datasets for the Philadelphia region.</p><p>For this assignment, we will use the Indego Bike Share Data on bike rentals and trips in Philadelphia. You<br>can download the datasets and read more about what’s available here <a href="https://www.rideindego.com/about/data/" target="_blank" rel="noopener">https://www.rideindego.com/about/data/</a>. In particular, you’ll need to download and use the following two files:</p><ol><li>Trip Data for the third quarter of 2016</li><li>Station Table</li></ol><p>You’ll write a program in Java to read and analyze this information Once you have a basic program that can read in the data files, use it to answer the following questions. Describe in detail the algorithm you used for each question and the answers in your readme.txt file.</p><ol><li>How many Walk-Up trips were there in 2016?</li><li>How many stations that had a Go-Live Date in 2015 are still Active?</li><li>What percentage of trips started in Rittenhouse Square?</li><li>What percentage of trips made by Indego30 riders are round trips?</li><li>What is the ID of the bike that has traveled the most in terms of duration?</li><li>On 8/3/16 at 7:00am, how many bikes were being used?</li><li>Print all the trip information for the longest trip by distance. To make things easier (and not worry about spherical geometry), we’ll assume that the latitude and longitude are points in 2-d space and use Euclidean distance.</li><li>Print the list of trip ids of all trips that involved a station which was the only station to go live on its respective go-live date.</li><li>Wild card - come up with an interesting question. List the question and find the answer to it.</li></ol><p>Software Design: An important part of this homework is designing your classes and methods. Using the “Nouns and Verbs” approach and keeping good design principles in mind, create CRCs. This should be done before you start implementing your code in Java and you need to submit the original CRCs as part of the submission.</p><p>When you start implementing your code, it’s perfectly fine to go back and change the design, if needed.</p><p>You should explain what you changed and why in the readme.txt file.</p><p>Note: For the italicized parts in the above, your code should be able to deal with any similar input (e.g., from a user). This should not be hard coded.</p><h3 id="Part-2-Extra-Credit"><a href="#Part-2-Extra-Credit" class="headerlink" title="Part 2 - Extra Credit"></a>Part 2 - Extra Credit</h3><p>In addition to the questions above, answer the following questions:</p><ol><li>Stations can be located using the longitude and latitude coordinates provided in the dataset. We can define “closeness” as follows: Two stations are considered close to each other if the average difference between their longitudes and latitudes, i.e., (difference longitude + difference latitude) / 2, is less than 0.02 points. Find all pairs of stations that are considered close to each other.</li><li>What is the least popular end station?</li><li>Wild card - come up with an interesting question. List the question and find the answer to it.<br>As before, for the EC part, you cannot have any help from the TAs/instructor.</li></ol><h3 id="Submission-Instructions"><a href="#Submission-Instructions" class="headerlink" title="Submission Instructions"></a>Submission Instructions</h3><p>We recommend submitting the theory part electronically also. However, you can turn in a physical copy at the start of class, if you prefer. Please do not print out the Java source.</p><p>In addition to the theory writeup, you should also submit a text file titled readme.txt. That is, write in plain English and instructions for using your software. You should also include explanations/rationale for why you chose to design your code the way you did and whether you deviated from your original design and why. The readme.txt file is also an opportunity for you to get partial credit when certain requirements of the assignment are not met. Think of the readme as a combination of instructions for the user and a chance for you to get partial credit.</p><p>Please create a folder called YOUR_PENNKEY. Places all your files inside this - theory writeup, the Java files, the CRCs, the readme.txt file, the ec.txt file. Zip up this folder. It will thus be called YOUR_PENNKEY.zip. So, e.g., my homework submission would be swapneel.zip. Please submit this zip file via canvas.</p>]]></content>
+    
+    <summary type="html">
+    
+      根据作业提供的Trip data，编写程序分析数据，最后回答关于数据的十几个问题即可。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CS201-Information-Retrieval</title>
@@ -448,28 +472,6 @@
     <summary type="html">
     
       基础C++作业代写，练习嵌套循环的使用方法。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS150-Game-of-War</title>
-    <link href="https://tk1307993.coding.me/CS150-Game-of-War.html"/>
-    <id>https://tk1307993.coding.me/CS150-Game-of-War.html</id>
-    <published>2020-02-01T01:09:09.000Z</published>
-    <updated>2020-02-01T01:11:56.397Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this problem set you’ll build on the work of recent dailies to write a complete program. There is a flowchart deadline and a draft deadline as well as a final deadline.</p><h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>You will implement the game of War in a C++ program. There are no official rules, so we will follow the 2-player rules outlined below. Visit Wikipedia for more details. If you are not familiar with the standard deck of cards, there is a Wikipedia article for that too. The rules of the game are very simple, so it is really a game for young children.</p><ul><li>The game is played with a standard 52-card deck (13 ranks, Aces high, 4 suits). Suits are ignored in War.</li><li>The deck is shuffled and then dealt into 2 equal hands of 26.</li><li>Players play their hands from top to bottom. Cards are not examined or rearranged.</li><li>Each player turns over the top card from their hand. The high card wins and collects both cards, which are returned to the bottom of the winner’s hand. In the event of a tie, there is a war, described below.</li><li>In a war, the tying cards stay out and are followed by one face-down card and one face-up card per player. The face-up cards play in the same way as usual: the high card winds and the player collects all six cards out and returns them to the bottom of their hand.</li><li>If ties continue, the war continues with another two face-down cards and another two face-up cards. If a player runs out of cards during a war, the player loses immediately.</li><li>If the war ends, play continues as normal.<br>The game is over when one player collects all 52 cards, or when a war ends due to one player’s inability to continue.</li></ul><h3 id="Specifications"><a href="#Specifications" class="headerlink" title="Specifications"></a>Specifications</h3><p>Much of the program’s design is up to you, but you must write your code to follow the specifications below.</p><ul><li><p>Your code should compile using the command</p><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">std=c</span><span class="literal">+</span><span class="literal">+</span><span class="comment">11</span> <span class="literal">-</span><span class="comment">Wall</span> <span class="literal">-</span><span class="comment">Werror</span> <span class="literal">-</span><span class="comment">pedantic</span> <span class="literal">-</span><span class="comment">o</span> <span class="comment">war</span> <span class="comment">war</span><span class="string">.</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span></span><br></pre></td></tr></table></figure></li><li><p>The deck of cards and each hand, as well as other piles of cards of a temporary nature, should be implemented as vectors.</p></li><li>When a player wins a trick, the cards collected must be returned to the bottom of the hand—that is, the opposite side from where cards are played.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      代写一个叫Game of War的扑克牌游戏，能实现双人对战。
     
     </summary>
     
