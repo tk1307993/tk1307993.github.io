@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这次的作业需要使用链表结构，代写一个计算器应用程序。">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS112-Yet-Another-Calculator">
+<meta property="og:url" content="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="这次的作业需要使用链表结构，代写一个计算器应用程序。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-06T11:46:06.274Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS112-Yet-Another-Calculator">
+<meta name="twitter:description" content="这次的作业需要使用链表结构，代写一个计算器应用程序。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html"/>
+
+
+
+
+
+  <title>CS112-Yet-Another-Calculator | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS112-Yet-Another-Calculator</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-06T19:42:49+08:00">
+                2020-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这次的作业需要使用链表结构，代写一个计算器应用程序。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This consists of just one problem as a Part B. In addition to the requirements for the Java problems, you must observe the following requirements (for all homework submitted in this course):</p>
+<ul>
+<li>All programs should be literate, i.e., easily understandable by a human (say, your grader) and follow the Java Style Guidelines for CS112 posted on the class web site;</li>
+<li>All files for this homework should be submitted using WebSubmit, following the instructions on the class web site;</li>
+<li>You may not use data structure libraries such as ArrayList, since we are learning to write Java from the ground up and you must learn how these libraries are built; however, you are free to use (unless specifically directed otherwise) the basic libraries String, Character, Scanner, and Math; for this assignment, you may also use Double.parseDouble(….);</li>
+<li>You may freely use code from the class web site, the textbook, or lecture (unless specifically directed otherwise) as long as you cite the source in your comments; but you may NEVER use code from the web or other students’ programs—this will be considered plagiarism and penalized accordingly.</li>
+</ul>
+<h3 id="Problem-B-1-YAC-Yet-Another-Calculator"><a href="#Problem-B-1-YAC-Yet-Another-Calculator" class="headerlink" title="Problem B.1: YAC (Yet Another Calculator)"></a>Problem B.1: YAC (Yet Another Calculator)</h3><p>This problem will be an exercise in hierarchical linked lists and in recursive evaluation of arithmetic expressions. There is not all that much coding to do (my solution added less than 50 lines of code to the template), but you will need to understand how to represent expressions using hierarchical or nested linked lists. As I explained in lecture, this is how Python and many other interpreted languages represent programs, and it is an important way to think about representing data and algorithms.</p>
+<p>The primary data structure will be hierarchical linked lists, as described in lecture on Tuesday 10/25. As explained at that time on the board, an expression will consist of three different kinds of nodes, for operators (*, +, -, and /), positive numbers (doubles), and expressions (nested, fully-parenthesized expressions). For example, an infix expression such as<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( ( 3<span class="selector-class">.4</span> + 0<span class="selector-class">.0</span> ) * ( 1<span class="selector-class">.2</span> <span class="selector-tag">-</span> 2<span class="selector-class">.3</span> ) )</span><br></pre></td></tr></table></figure></p>
+<p>which can equivalently be represented in prefix form as<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*( +( 3<span class="selector-class">.4</span>, 0<span class="selector-class">.0</span> ), <span class="selector-tag">-</span>( 1<span class="selector-class">.2</span>, 2<span class="selector-class">.3</span> ) )</span><br></pre></td></tr></table></figure></p>
+<h3 id="Representing-Arithmetic-Expressions-by-Hierarchical-Linked-Lists"><a href="#Representing-Arithmetic-Expressions-by-Hierarchical-Linked-Lists" class="headerlink" title="Representing Arithmetic Expressions by Hierarchical Linked Lists"></a>Representing Arithmetic Expressions by Hierarchical Linked Lists</h3><p>There are three different kinds of nodes in such a hierarchical list, all represented by different configurations of Node objects:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">privatestaticclassNode&#123;</span><br><span class="line">    <span class="keyword">String</span> <span class="keyword">op</span>;</span><br><span class="line">double num;</span><br><span class="line">    <span class="keyword">Node</span> <span class="title">exp</span>;</span><br><span class="line">    <span class="keyword">Node</span> <span class="title">next</span>;</span><br><span class="line"></span><br><span class="line">      ..... constructors <span class="keyword">and</span> toString() ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Operator Nodes represent one of the four arithmetic operators *, +, -, or / and have an op field storing the operator as a String.</p>
+<p>Note that the num field, a double, has to have some value, and since it is meaningless in this kind of node, we give it the default value 0.0; similarly, the exp field is not used, and is assigned null. The next field, as we show below, will point to null when the operator is pushed on the Ops stack and point to the two operands of the operator when it is part of an expression.</p>
+<p>Expression Nodes are placeholders for expressions, and have default values for op and num, and a pointer to an operator node which starts a subexpression.</p>
+<p>Therefore, it is easy to tell which kind of node is being represented:</p>
+<ul>
+<li>Operator nodes have a non-empty String in the op field, a 0.0 in the num field, and a null pointer in the exp field;<br>Number nodes have an empty String in the op field, a double value in the num field (could, of course, be 0.0), and a null pointer in the exp field; and</li>
+<li>Expression nodes have a non-null pointer in the exp field.<br>Each of these nodes may have a next field which is null or non-null, depending on context (see below for examples).</li>
+</ul>
+<h3 id="Evaluating-Hierarchical-Lists"><a href="#Evaluating-Hierarchical-Lists" class="headerlink" title="Evaluating Hierarchical Lists"></a>Evaluating Hierarchical Lists</h3><p>You must also write a method eval( … ) which takes a pointer to a hierarchical linked list, and returns a double which is the result of the expression represented by the hierarchical list. This method must be recursive, does not use a stack, and is actually fairly simple if you understand the recursive structure of the lists:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">eval(Node e) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e <span class="keyword">is</span> a <span class="built_in">number</span></span><br><span class="line"><span class="built_in">        return</span> <span class="keyword">the</span> <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> e <span class="keyword">is</span> an expression (<span class="keyword">the</span> <span class="keyword">first</span> node <span class="keyword">is</span> an operator)</span><br><span class="line">        evaluate <span class="keyword">the</span> subexpressions recursively <span class="keyword">and</span> <span class="literal">return</span></span><br><span class="line">        <span class="keyword">the</span> <span class="literal">result</span> <span class="keyword">of</span> applying <span class="keyword">the</span> operator <span class="keyword">to</span> <span class="keyword">the</span> values <span class="keyword">of</span> <span class="keyword">the</span> subexpressions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE214-Classroom.html" rel="next" title="CSE214-Classroom">
+                <i class="fa fa-chevron-left"></i> CSE214-Classroom
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">214</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-B-1-YAC-Yet-Another-Calculator"><span class="nav-number">2.</span> <span class="nav-text">Problem B.1: YAC (Yet Another Calculator)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Representing-Arithmetic-Expressions-by-Hierarchical-Linked-Lists"><span class="nav-number">3.</span> <span class="nav-text">Representing Arithmetic Expressions by Hierarchical Linked Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Evaluating-Hierarchical-Lists"><span class="nav-number">4.</span> <span class="nav-text">Evaluating Hierarchical Lists</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
