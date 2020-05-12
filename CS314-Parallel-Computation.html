@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals,Data Structure," />
+  <meta name="keywords" content="Algorithm,Operating System," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
-<meta name="keywords" content="Fundamentals,Data Structure">
+<meta name="description" content="代写并行算法小作业，对数据进行并发处理。">
+<meta name="keywords" content="Algorithm,Operating System">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSE143X-Backus-Naur-Form">
-<meta property="og:url" content="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html">
+<meta property="og:title" content="CS314-Parallel-Computation">
+<meta property="og:url" content="https://tk1307993.coding.me/CS314-Parallel-Computation.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
+<meta property="og:description" content="代写并行算法小作业，对数据进行并发处理。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-09T02:30:58.015Z">
+<meta property="og:updated_time" content="2020-05-12T10:18:08.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSE143X-Backus-Naur-Form">
-<meta name="twitter:description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
+<meta name="twitter:title" content="CS314-Parallel-Computation">
+<meta name="twitter:description" content="代写并行算法小作业，对数据进行并发处理。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS314-Parallel-Computation.html"/>
 
 
 
 
 
-  <title>CSE143X-Backus-Naur-Form | 留学生CS编程作业代写</title>
+  <title>CS314-Parallel-Computation | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS314-Parallel-Computation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CSE143X-Backus-Naur-Form</h2>
+          <h2 class="post-title" itemprop="name headline">CS314-Parallel-Computation</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-09T10:25:55+08:00">
-                2020-02-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-12T18:16:28+08:00">
+                2020-05-12
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。
+                  代写并行算法小作业，对数据进行并发处理。
               </div>
           
 
@@ -360,29 +360,26 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment will give you practice with recursion, regular expressions, and grammars and will give you another opportunity to work with maps. You will complete a program that reads an input file with a grammar in Backus-Naur Form (BNF) and will allow the user to randomly generate elements of the grammar.</p>
-<p>You will be given a main program that does the file processing and user interaction. It is called GrammarMain.java. You are to write a class called GrammarSolver that manipulates the grammar. A grammar will be specified as a sequence of Strings, each of which represents the rules for a nonterminal symbol. Each String will be of the form:<br><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">&lt;nonterminal symbol&gt;</span>::=&lt;rule&gt;|&lt;rule&gt;|&lt;rule&gt;|…|&lt;rule&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Notice that this is the standard BNF format of a nonterminal symbol on the left-hand-side and a series of rules separated by vertical bar characters (“|”) on the right-hand side. If there is only one rule for a particular nonterminal, then there will be no vertical bar characters. BNF productions use the characters “::=” to separate the symbol from the rules.</p>
-<p>There will be exactly one occurrence of “::=” per String. The text appearing before the “::=” is a nonterminal symbol. You may assume that it is not empty, that it does not contain a vertical bar character, and that it does not contain any whitespace. Often we surround nonterminal symbols with the characters, but this will not always be the case. The text appearing after the “::=” will be a nonempty series of rules separated by vertical bar characters (“|”). Each of these rules will have a series of tokens (always at least one) separated and potentially surrounded by whitespace. There could be any amount of whitespace surrounding tokens. Any token that appears to the left of a “::=” in the grammar is considered a nonterminal. All other tokens are considered terminals.</p>
-<p>The grammars you will be asked to process will be stored in text files with each line of the file being of the form described above. GrammarMain reads this file into a List and passes the list to the constructor of your GrammarSolver. Your solver has to be able to perform certain tasks, most notably generating random elements of the grammar.</p>
-<p>To generate a random instantiation of a nonterminal, you simply pick at random one of its rules and generate whatever that rule tells you to generate. Notice that this is a recursive process. Generating a nonterminal involves picking one of its rules at random and then generating each part of that rule, which might involve more nonterminal symbols to generate for which you pick rules at random and generate each part of those rules, and so on. Depending upon the grammar, this process could continue indefinitely. Any grammar you will be asked to work with will be guaranteed to converge in a finite period of time. Most often this process doesn’t go on indefinitely because many rules involve terminals rather than nonterminals. . When you encounter a terminal, you simply include it in the String you are generating. This becomes the base case of the recursive process. Your generating method produces various String objects. Each String should be compact in the sense that there should be exactly one space between each terminal and there should be no leading or trailing spaces.</p>
-<p>For example, the grammar on the previous page could be used to randomly generate a non-terminal for the sentence, “Fred honored the green wonderful child”, as shown in the diagram on the next page:</p>
-<p>Your class must include the following public methods.<br>|  Method   |     Description  |<br>|  ———–  | ———–  |<br>| GrammarSolver(List grammar)  | This method will be passed a grammar as a List of Strings. Your method should store this in a convenient way so that you can later generate parts of the grammar. It should throw an IllegalArgumentException if the grammar is empty or if there are two or more entries in the grammar for the same nonterminal. Your method is not to change the List of Strings. |<br>| boolean grammarContains(String symbol)  | Returns true if the given symbol is a nonterminal of the grammar; returns false otherwise. |<br>| String[] generate(String symbol, int times)  | In this method you should use the grammar to randomly generate the given number of occurrences of the given symbol and you should return the result as an array of Strings. For any given nonterminal symbol, each of its rules should be applied with equal probability. It should throw an IllegalArgumentException if the grammar does not contain the given nonterminal symbol or if the number of times is less than 0. |<br>| String getSymbols()  | This method should return a String representation of the various nonterminal symbols from the grammar as a sorted, comma-separated list enclosed in square brackets, as in “[, , ]” |</p>
-<p>Case matters when comparing symbols. For example, S would not be considered the same as.</p>
-<p>The directory crawler program will serve as a good guide for how to write this program. In that program, the recursive method has a for-each loop. This is perfectly acceptable. Just because we are now learning how to use recursion, we don’t want to abandon what we know about loops. If you find that some part of this problem is easily solved with a loop, then go ahead and use one. In the directory crawler, the hard part was writing code to traverse all of the different directories and that’s where we used recursion. For your program the hard part is following the grammar to generate different parts of the grammar, so that is the place to use recursion.</p>
-<p>You will discover that when writing recursive solutions to problems, we often find ourselves with a public/private pair of methods. You will want to use that approach here. You have been asked to write a public method called generate that will generate an array of Strings. But internally inside your object, you’re going to want to produce these values one String at a time using a recursive method. You should make this internal method private so that it is not visible to the client.</p>
-<p>We want you to store the grammar in a particular way. We are making use of the SortedMap interface and the implementation TreeMap, both in java.util. Maps keep track of key/value pairs. Each key is associated with a particular value. In our case, we want to store something for each nonterminal symbol. So the nonterminal symbols become the keys and the rules become the values. Using this approach, you will find that the getSymbols method can be written quickly because the SortedMap interface includes a method called keySet that returns a set of keys from the map. If you ask for the “toString” of this set, you will get the desired string. It is important to use the SortedMap/TreeMap combination because it keeps the keys in sorted order (notice that getSymbols requires that the nonterminals be listed in sorted order).</p>
-<p>Below are some specific notes about Java constructs you should be using:</p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>In this lab we will create a multi-process program that uses a mutually exclusive shared variable to perform parallel computation. The usage of the program is<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./average <span class="tag">&lt;<span class="name">fileflame</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>where filename is the name of a 1000 line long input file, with each line containing a 9 digit number (plus a newline). There is no leading whitespace before any value. The file is therefore 10001 characters long (10 chars per line times 1000 lines plus an EOF marker). You may assume the file is correctly formatted and do not have to error check for invalid data. An example file is provided on the course web page.</p>
+<p>Your program will spawn 5 processes. Each process will (simultaneously) read a different 200 lines from the input file and compute the sum of these 200 lines. The processes then add the sum to a variable in shared memory (as well as printing it to the screen) and terminate. The parent process (of all 5 children) waits until the 5 children have completed and divides the stored value by 1000 to compute an average. The average is then printed to the screen with 2 decimal places of precision.</p>
+<p>Here is an example of use:<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tami@<span class="symbol">cs:0</span>~]./<span class="built_in">average</span> testdata.txt</span><br><span class="line">Child <span class="number">1</span> <span class="built_in">sum</span> is <span class="number">47606451980</span></span><br><span class="line">Child <span class="number">2</span> <span class="built_in">sum</span> is <span class="number">48722283695</span></span><br><span class="line">Child <span class="number">3</span> <span class="built_in">sum</span> is <span class="number">46980337615</span></span><br><span class="line">Child <span class="number">4</span> <span class="built_in">sum</span> is <span class="number">49206486425</span></span><br><span class="line">Child <span class="number">5</span> <span class="built_in">sum</span> is <span class="number">47751953548</span></span><br><span class="line"><span class="built_in">Average</span> <span class="number">381648245485.22</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Please ensure that the following requirements are met:</p>
 <ul>
-<li><p>The Random class in java.util can be used to generate a random integer by calling its nextInt method or you can use the method Math.random.</p>
+<li><p>Your code must exist in your home directory on Bash in a file named $HOME/lab7/average.c and must compile to create an executable. The compilation command will be</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc <span class="params">-Wall</span> <span class="params">-Wextra</span> <span class="params">-Werror</span> <span class="params">-o</span> <span class="keyword">average</span> <span class="keyword">average</span>.c</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>The String class has a method called “trim” that will return a new version of the String minus any leading or trailing whitespace.</p>
+<li><p>Your program must perform error checking on the file name and command line parameters.</p>
 </li>
-<li><p>One problem you will have to deal with is breaking up strings into various parts. You should use the split method of the String class to do so, although you are also allowed to use a string-based Scanner if you prefer. The split method makes use of what are called “regular expressions” and this can be confusing, but you will find that learning about regular expressions is extremely helpful for computer scientists and computer programmers. Many unix tools, for example, take regular expressions as input.</p>
-</li>
+<li>You must have a total of 6 processes (not threads). Do not use sleep() to synchronise your processes and instead, use wait(), synchronous system calls, or semaphores.</li>
+<li>You must have a single variable in shared memory to hold the five sums and you must use the 5 child processes to add to that variable.</li>
+<li>To function correctly, the shared variable must be a mutually exclusive resource and protected with a semaphore.</li>
+<li>Your code must be well formatted, attractive, readable, and maintainable. Changing the number of lines in the file or number of processes used should be trivial.</li>
+<li>The C code you write must adhere to good programming practices. It should be indented, contain suitable comments, use preprocessor directives, and have intuitive variable names. Code that merely works and does not follow good practice DOES NOT meet the requirements. Marking and help during office hours will only be performed on code that executes on Bash.</li>
 </ul>
-<p>In terms of correctness, your class must provide all of the functionality described above. In terms of style, we will be grading on your use of comments, good variable names, consistent indentation and good coding style to implement these operations. Remember that you will lose points if you declare variables as data fields that can instead be declared as local variables. You should also avoid extraneous cases (e.g., don’t make something into a special case if it doesn’t have to be). And you should continue to declare variables, fields, parameters and return types using an interface when possible.</p>
-<p>You should name your file GrammarSolver.java and you should turn it in electronically from the “assignments” link on the class web page. A collection of files needed for the assignment is included on the web page as ass5.zip. You will need to have GrammarMain.java, sentence.txt and sentence2.txt in the same directory as your GrammarSolver.java in order to run GrammarMain. The second input file contains extraneous whitespace, including tabs. This second input file sometimes generates very long expressions as output.</p>
+<h4 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h4><p>Begin by writing a program that reads the command line arguments, forks off the correct number of processes, and has each process print out its PID and exit. Then, add shared memory and a semaphore to make the shared memory a mutually exclusive resource. Have each process print a constant value into the shared memory just to ensure that it is being used correctly. Get the parent process to wait for the five child processes and then divide the value to compute an average. Finish off by adding code to the children to read the correct part of the file and add the values. As you are only storing a sum, you do not need to store the file’s contents in memory.</p>
+<p>Test your program on data other than the sample data. To do that, you may have to write a program to generate data files (and compute the average of the values).</p>
+<p>Please be aware that the values in the sample output are incorrect. The purpose of the sample output is to demonstrate the format and use of the program, not to give you values that you must duplicate. All source code must be written from scratch.</p>
 
       
     </div>
@@ -400,9 +397,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
           
         </div>
       
@@ -415,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CIS22A-Nested-Loops.html" rel="next" title="CIS22A-Nested-Loops">
-                <i class="fa fa-chevron-left"></i> CIS22A-Nested-Loops
+              <a href="/CS112-Yet-Another-Calculator.html" rel="next" title="CS112-Yet-Another-Calculator">
+                <i class="fa fa-chevron-left"></i> CS112-Yet-Another-Calculator
               </a>
             
           </div>
@@ -424,10 +421,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/PSCB57-Own-Small-Project.html" rel="prev" title="PSCB57-Own-Small-Project">
-                PSCB57-Own-Small-Project <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1"><span class="nav-number">1.1.</span> <span class="nav-text">Step 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2"><span class="nav-number">1.2.</span> <span class="nav-text">Step 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hints"><span class="nav-number">1.3.</span> <span class="nav-text">Hints</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-05-06T11:46:06.274Z</updated>
+  <updated>2020-05-12T10:18:08.819Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS314-Parallel-Computation</title>
+    <link href="https://tk1307993.coding.me/CS314-Parallel-Computation.html"/>
+    <id>https://tk1307993.coding.me/CS314-Parallel-Computation.html</id>
+    <published>2020-05-12T10:16:28.000Z</published>
+    <updated>2020-05-12T10:18:08.819Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>In this lab we will create a multi-process program that uses a mutually exclusive shared variable to perform parallel computation. The usage of the program is<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./average <span class="tag">&lt;<span class="name">fileflame</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p>where filename is the name of a 1000 line long input file, with each line containing a 9 digit number (plus a newline). There is no leading whitespace before any value. The file is therefore 10001 characters long (10 chars per line times 1000 lines plus an EOF marker). You may assume the file is correctly formatted and do not have to error check for invalid data. An example file is provided on the course web page.</p><p>Your program will spawn 5 processes. Each process will (simultaneously) read a different 200 lines from the input file and compute the sum of these 200 lines. The processes then add the sum to a variable in shared memory (as well as printing it to the screen) and terminate. The parent process (of all 5 children) waits until the 5 children have completed and divides the stored value by 1000 to compute an average. The average is then printed to the screen with 2 decimal places of precision.</p><p>Here is an example of use:<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tami@<span class="symbol">cs:0</span>~]./<span class="built_in">average</span> testdata.txt</span><br><span class="line">Child <span class="number">1</span> <span class="built_in">sum</span> is <span class="number">47606451980</span></span><br><span class="line">Child <span class="number">2</span> <span class="built_in">sum</span> is <span class="number">48722283695</span></span><br><span class="line">Child <span class="number">3</span> <span class="built_in">sum</span> is <span class="number">46980337615</span></span><br><span class="line">Child <span class="number">4</span> <span class="built_in">sum</span> is <span class="number">49206486425</span></span><br><span class="line">Child <span class="number">5</span> <span class="built_in">sum</span> is <span class="number">47751953548</span></span><br><span class="line"><span class="built_in">Average</span> <span class="number">381648245485.22</span></span><br></pre></td></tr></table></figure></p><h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Please ensure that the following requirements are met:</p><ul><li><p>Your code must exist in your home directory on Bash in a file named $HOME/lab7/average.c and must compile to create an executable. The compilation command will be</p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc <span class="params">-Wall</span> <span class="params">-Wextra</span> <span class="params">-Werror</span> <span class="params">-o</span> <span class="keyword">average</span> <span class="keyword">average</span>.c</span><br></pre></td></tr></table></figure></li><li><p>Your program must perform error checking on the file name and command line parameters.</p></li><li>You must have a total of 6 processes (not threads). Do not use sleep() to synchronise your processes and instead, use wait(), synchronous system calls, or semaphores.</li><li>You must have a single variable in shared memory to hold the five sums and you must use the 5 child processes to add to that variable.</li><li>To function correctly, the shared variable must be a mutually exclusive resource and protected with a semaphore.</li><li>Your code must be well formatted, attractive, readable, and maintainable. Changing the number of lines in the file or number of processes used should be trivial.</li><li>The C code you write must adhere to good programming practices. It should be indented, contain suitable comments, use preprocessor directives, and have intuitive variable names. Code that merely works and does not follow good practice DOES NOT meet the requirements. Marking and help during office hours will only be performed on code that executes on Bash.</li></ul><h4 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h4><p>Begin by writing a program that reads the command line arguments, forks off the correct number of processes, and has each process print out its PID and exit. Then, add shared memory and a semaphore to make the shared memory a mutually exclusive resource. Have each process print a constant value into the shared memory just to ensure that it is being used correctly. Get the parent process to wait for the five child processes and then divide the value to compute an average. Finish off by adding code to the children to read the correct part of the file and add the values. As you are only storing a sum, you do not need to store the file’s contents in memory.</p><p>Test your program on data other than the sample data. To do that, you may have to write a program to generate data files (and compute the average of the values).</p><p>Please be aware that the values in the sample output are incorrect. The purpose of the sample output is to demonstrate the format and use of the program, not to give you values that you must duplicate. All source code must be written from scratch.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写并行算法小作业，对数据进行并发处理。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>CS112-Yet-Another-Calculator</title>
@@ -102,9 +126,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -448,30 +472,6 @@
     </summary>
     
       <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-      <category term="Algorithms" scheme="https://tk1307993.coding.me/tags/Algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PSCB57-Own-Small-Project</title>
-    <link href="https://tk1307993.coding.me/PSCB57-Own-Small-Project.html"/>
-    <id>https://tk1307993.coding.me/PSCB57-Own-Small-Project.html</id>
-    <published>2020-02-14T04:13:39.000Z</published>
-    <updated>2020-02-14T04:15:37.130Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="What-to-do"><a href="#What-to-do" class="headerlink" title="What to do"></a>What to do</h3><p>This is the last assignment for PSCB57. In this assignment, you find your own small project to work on. What subject area you want to work on is entirely up to you. You can work with data that you collected in a lab for a different course. You can also use data that you find online in any field that interests you. Or you can write a simulation and create your own data.</p><p>You have to submit a short report as well as the python code that you wrote for simulating, analyzing and/or visualizing. Make sure your submission satisfies all the following criteria:</p><ol><li>Out of the following list of topics that we covered in this course, select three topics. For each topic you choose, use one of the algorithms/methods in your project. For example, use the Euler method, then perform a linear interpolation and plot the final results. Or, do a Lagrange interpolation, find the roots with Newton’s method and visualize the results on a plot.</li><li>Root finding: Bisection method, Newton’s method</li><li>Interpolation: Linear/linear interpolation, cubic splines, Lagrange interpolation</li><li>Fitting: (Linear) Least Square Fit</li><li>Solving ODEs: Euler method, mid-point method</li><li>Stochastic processes: Monte Carlo, Markov Chain Monte Carlo</li><li>Plotting: matplotlib</li><li>Your program should be written in python 3.</li><li>You can use any library that you want for this project.</li><li>Place all the code that you wrote into one file. The file should run and reproduce all the data/plots for your project. There are no restrictions on the length. Don’t include any data files.</li><li>Write a report. The report should be two pages or less. Describe which project you worked on, what you tried to find out, which methods you used. Show the results and discuss them.</li><li>The report should be a single pdf file with all tables and plots embedded in the file.</li></ol><h3 id="Grading-scheme"><a href="#Grading-scheme" class="headerlink" title="Grading scheme"></a>Grading scheme</h3><p>This assignment will count twice as much as the other assignments. Here is the grading scheme that will be used to evaluate your report and the code you wrote:</p><ul><li>Project choice</li><li>Choice of appropriate numerical methods, accurate use of numerical methods</li><li>Coding style</li><li>Report, presentation of results, plots, tables</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      任意选择六个topics中的三个，代写一个小型的Project，内容自定。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
