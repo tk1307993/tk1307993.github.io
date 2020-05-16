@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-05-12T10:18:08.819Z</updated>
+  <updated>2020-05-16T01:47:43.304Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS314-Multi-Threaded-Program</title>
+    <link href="https://tk1307993.coding.me/CS314-Multi-Threaded-Program.html"/>
+    <id>https://tk1307993.coding.me/CS314-Multi-Threaded-Program.html</id>
+    <published>2020-05-16T01:45:24.000Z</published>
+    <updated>2020-05-16T01:47:43.304Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>In this lab we will create a simple multi-threaded program that merges two files. The usage of the program is:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./merge <span class="tag">&lt;<span class="name">fi161</span>&gt;</span> <span class="tag">&lt;<span class="name">file2</span>&gt;</span> <span class="tag">&lt;<span class="name">mergedfife</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p>The program will create 2 threads, one for file1 and one for file2. Each thread will read a line from the file (use getline()) and write it to the merged file in the following format:</p><p>filename: line_number: line_of_text<br>Here is an example of what the merged file should look like:<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">tami@cs:0~]./merge roses.txt knock.txt merged.txt</span></span><br><span class="line"><span class="section">tami@cs:0~]cat merged.txt</span></span><br><span class="line"><span class="section">roses.txt: 1: Roses are red.</span></span><br><span class="line"><span class="section">knock.txt: 1: Knock, knock!</span></span><br><span class="line"><span class="section">roses.txt: 2: Violets are blue.</span></span><br><span class="line"><span class="section">knock.txt: 2: Who's there?</span></span><br><span class="line"><span class="section">roses.txt: 3: O/S is hard.</span></span><br><span class="line"><span class="section">knock.txt: 3: Art.</span></span><br><span class="line"><span class="section">roses.txt: 4: This is so true!</span></span><br><span class="line"><span class="section">knock.txt: 4: Art who?</span></span><br><span class="line"><span class="section">knock.txt: 5: R2-D2.</span></span><br></pre></td></tr></table></figure></p><p>Please notice how the threads alternate in sequence until the end of a file is reached. In the example above, roses.txt has 4 lines and knock.txt has 5 lines (merged.txt thus has 9 lines). The threads and the program will terminate when it is complete. You may not use sleep(), busy waiting, or IPC to synchronise the threads and instead, must use semaphores.</p><p>Please note that NOTHING is output to the monitor. When the program functions correctly, a merged file (as displayed above) is created and nothing is printed to stdout.</p><h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Please ensure that the following requirements are met:</p><p>Your code must exist in your home directory on Bash in a file named<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$HOME</span><span class="regexp">/lab8/m</span>erge.c</span><br></pre></td></tr></table></figure></p><p>The file specified in item 1 must compile to create an executable that properly merges two files of any length. The command to compile the program is:<br><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -Wall -Wextra -Werror -pthread -o <span class="keyword">merge</span> <span class="keyword">merge</span>.c</span><br></pre></td></tr></table></figure></p><ul><li>Your program must perform reasonable error checking. It should be as robust as possible and detect all errors.</li><li>You must use threads and semaphores to accomplish the task.</li><li>Your code must be well formatted, attractive, readable, and maintainable. Good programming practice requires that your code is properly formatted and commented at all times, not just when it is “done” and submitted for marking.</li></ul><h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Please create your own test files to thoroughly test your program on a Wide variety of different input conditions. The C code you write must adhere to good programming practices. It must be indented, contain suitable comments, use preprocessor directives, and have intuitive variable names. Code that merely works and does not follow good practice DOES NOT meet the requirements. Marking and help during office hours Will only be performed on code that executes on Bash.</p>]]></content>
+    
+    <summary type="html">
+    
+      使用threads和semaphores，代写多线程程序，进行数据处理。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>CS314-Parallel-Computation</title>
@@ -126,9 +150,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -453,30 +477,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS206-Email-Handler</title>
-    <link href="https://tk1307993.coding.me/CS206-Email-Handler.html"/>
-    <id>https://tk1307993.coding.me/CS206-Email-Handler.html</id>
-    <published>2020-02-18T01:17:13.000Z</published>
-    <updated>2020-02-18T01:20:09.893Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Practical-Work"><a href="#Practical-Work" class="headerlink" title="Practical Work"></a>Practical Work</h3><p>By using Microsoft Visual Studio 2015, develop an object-oriented console application that can handle emails. Your program is NOT expected to be able to send emails. It is for providing the environment to build a database of the emails, displaying and handling the database content. While you are responsible for the final design of the console application, your program is expected to realise a class cEmail representing an email that contains the following:</p><ul><li>Member variables including the fields To_From (that contains a name followed by an email address put inside a pair of square brackets, and a character to indicate whether it is a sent-to-receiver or received-from-sender message), Subject, Cc (that contains a name followed by an email address put inside a pair of square brackets), Message, and Date (e.g. 8 November 2015 can be represented by the integer 151108). Notice that the first 4 member variables are for storing a string, while the member variable Date is of type int.</li><li>Member functions for reading and writing the member variables in cEmail.</li></ul><p>Then, develop the class Em_Han to build up a database that keeps the emails ever sent or received. The database can be realised by an array of a finite size, which is assumed big enough and your program does not need to check this. Member functions that allow the user to build up and display the content of the database should be implemented. Then, within the class, you are required to write public member function(s) to realise one of the following five tasks (of handling the email messages). The task to do should be determined by the remainder obtained from dividing your team number by 5. For example, if your team number is SEVEN, 7%5 = 2, you should do Task 2) of this assignment.</p><h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><ol><li><p>The function performs the sorting of the received emails based on the name of the sender (within the To_From field) in ascending order, and display a sorted list of sender name, subject and date of sending.<br>Hint: To do the sorting, notice that strcmp(“Peter”, “Mary”) will return 1, meaning that “Peter” is larger than “Mary”. Similarly, strcmp(“Mary”, “Peter”) will return -1, strcmp(“Mary”,”Mary”) will return 0. Notice that you can ignore the sent-to-receiver messages.</p></li><li><p>The function performs the sorting of the sent emails based on the name of the receiver (within the To_From field) in ascending order, and display a sorted list of receiver name, subject and date of receiving. To do the sorting, read the hint in Task 0). Notice that you can ignore the received-from-sender messages.</p></li><li><p>The function performs the sorting of the emails based on the date in ascending order, and display a sorted list of date, name, and subject together with a string indicating it is a sent or received message.</p></li><li><p>The function performs the sorting of the emails based on the subject in ascending order, and display the sorted list of subject, name, and date together with a string indicating it is a sent or received message. To do the sorting, read the hint in Task 0).</p></li><li><p>The function asks the user to input a name, and display a numbered list of subject and date of the email together with a string indicating it is a sent or received email under that name. The user can then enter a number and the corresponding email will be deleted from the database.</p></li></ol><p>Hint: You can add a member variable in the cEmail class that specifies whether it is a valid email. If an email is deleted from the database, that email becomes an invalid email. On displaying the content of the database, only valid emails will be shown.</p><ul><li>It is required that the class and the implementation of its member functions should be built as a separate static library and linked into the console application.</li><li>Your program is expected to provide a text-mode user interface so that users can repeatedly handle and display the database of emails until the user chooses to end the application.</li><li>Should you want to get a credit, you should design the application such that when a user wants to start it, he needs to login the application with a username first, which will be checked with a file that stores username-password pairs. If the username is new, the application will ask for a password from the user and store it into that file. If the username can be found in that file, the application will start only when the password is correct. The application will end if the user fails to provide the correct password in three consecutive trials.</li></ul><h3 id="General-Description"><a href="#General-Description" class="headerlink" title="General Description"></a>General Description</h3><ol><li><p>Each team should comprise up to TWO students (THREE students for HD class).</p></li><li><p>Unless you get prior approval from your subject lecturer/tutor, you must observe the following:</p></li><li><p>Do NOT use any technique or C++ constructs not taught in the subject</p><ul><li>Any library not mentioned in the subject must NOT be used (e.g. the mathematics library to compute x to the power of y.)</li><li>Each team should upload the zipped file to the Blackboard (under Groups, select File Exchange after clicking your team number).</li></ul></li><li><p>The documentation for your assignment is important. The ability of writing good comments in the program will also be an important factor to the final assessment of your assignment.</p></li><li><p>It is compulsory to use a word processing tool to write your report. The font size must not be bigger than 12 or smaller than 10. Use 1.5 lines spacing on both sides of a page. Including all figures and tables, if any, the length of the report should not be shorter than 7 pages.</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      用C++代写一个Email的处理程序，本质上是字符串处理函数以及程序设计。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-      <category term="Algorithms" scheme="https://tk1307993.coding.me/tags/Algorithms/"/>
     
   </entry>
   
