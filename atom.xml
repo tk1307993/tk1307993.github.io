@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-05-29T00:49:38.361Z</updated>
+  <updated>2020-06-03T01:02:17.595Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ECE244-Binary-Search-Trees</title>
+    <link href="https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html"/>
+    <id>https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html</id>
+    <published>2020-06-03T01:01:03.000Z</published>
+    <updated>2020-06-03T01:02:17.595Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The objectives of this assignment are to provide you with more practice on the use of the various C++ concepts/constructs introduced in the lectures so far, including classes, dynamic memory allocation, pointers, I/O, and dynamic data structures. This will be done in the context of implementing a binary search tree class.</p><h3 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h3><p>In this assignment, you will implement a simple database to store and retrieve data. You are creating a simple “domain name server” - a database that can rapidly look up string names, such as <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>, and return a 32-bit integer that is the Internet Protocol (IP) address corresponding to that “domain name”. This is the function performed by the domain name servers that allow you to type in easy to remember website names and have your web browser automatically go to the correct IP address (computer) to retrieve the web data.</p><p>You will implement three classes: DBentry, TreeNode and TreeDB. The DBentry class will be used to create objects that hold an entry of the database. Each entry has a key (a string, corresponding to the name of the internet domain) and some data (a 32-bit integer that gives the IP address and a boolean flag that indicates whether the computer at that IP address is active or not). The TreeDB and TreeNode classes will be used to create a binary search tree database of DBentry objects. TreeDB represents the entire binary tree, while each TreeNode represents a single node in the tree.</p><p>In a real domain names server, we would have to rapidly search billions of domain names (strings) as we looked for the IP address corresponding to a name. The fact that a binary search tree can find entries in large datasets very efficiently, and can also add new entries efficiently, makes it a very appropriate data structure for this application.</p><h3 id="Command-and-Output-Specification"><a href="#Command-and-Output-Specification" class="headerlink" title="Command and Output Specification"></a>Command and Output Specification</h3><p>Your database will be exercised by a simple parser. Whenever the parser expects the user to enter a command, it should prompt the user for input by outputting a greater than sign followed by a space:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in"> user </span>input would appear here</span><br></pre></td></tr></table></figure></p><p>The parser reads commands from cin, calls the appropriate TreeDB and DBentry functions, and sends the appropriate output to cout. Each command consists of an operation, followed by zero or more arguments. The command and the arguments are separated by white spaces, and will always appear on the same line. You parser should process commands until the end-of-file (eof) is encountered. You may assume that all the input is syntactically correct - your program will not be tested with invalid commands, the wrong number of arguments, or misspelt arguments. The only error messages you need to generate are those listed below. The commands and their parameters are:<br>insert name IPaddress status<br>This command creates a new entry with name (a string) as the key and IPaddress (a non-negative integer) and status (active or inactive) as specified. You may assume that the name, IPaddress, and active arguments are separated by spaces and that there are no spaces within an argument. The new entry is then inserted into the database. If there already exists an entry with the same key, the error message “Error: entry already exists” is printed to cout. Otherwise “Success” is printed.</p><p>find name<br>This command finds the entry with the key name in the database, and prints its contents to cout as name : IPaddress : status. Name and IPaddress are printed as a string and an unsigned integer, respectively, while status is either active or inactive. Between values a space, colon and space should be printed.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout.</p><p>remove name<br>This command deletes the entry with the key name from the database. If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise “Success” is printed.</p><p>printall<br>This command prints all the entries in the database, sorted in ascending order of keys, one entry per line.</p><p>printprobes name<br>This command finds the entry with the key name in the database.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise, the number of probes (DBentries examined during the tree search) is printed to cout.</p><p>removeall<br>This command deletes all the entries in the database, returning it to the empty state. When done, “Success” is printed.</p><p>countactive<br>This command counts the number of entries in the database that are active and prints this count to cout.</p><p>updatestatus name status<br>This command updates the status of the entry with the given name; status must be either active or inactive. If no entry with name exists, the error message “Error: entry does not exist” is printed to cout.<br>Otherwise “Success” is printed.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+      <category term="AWS" scheme="https://tk1307993.coding.me/tags/AWS/"/>
+    
+  </entry>
   
   <entry>
     <title>EE312-Little-Toy-Programming-Language</title>
@@ -196,9 +220,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -455,28 +479,6 @@
     
     
       <category term="Compiler" scheme="https://tk1307993.coding.me/tags/Compiler/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CCN2042-Console-Drawing-Board</title>
-    <link href="https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html"/>
-    <id>https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html</id>
-    <published>2020-02-28T10:40:56.000Z</published>
-    <updated>2020-02-28T10:43:14.287Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Expected-Learning-Outcomes"><a href="#Expected-Learning-Outcomes" class="headerlink" title="Expected Learning Outcomes"></a>Expected Learning Outcomes</h3><ul><li>familiarise themselves with at least one high level language programming environment.</li><li>develop a structured and documented computer program.</li><li>understand the fundamentals of object-oriented programming and apply it in computer program development.</li><li>apply the computer programming techniques to solve practical problems.</li></ul><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this assignment, you are going to develop a Console Drawing Board that runs in the command line environment. User can input commands to generate different patterns in the drawing area.</p><p>This is a group assignment. You need to form a group with 5 to 6 students, and write a Win32 Console Application program called drawing.cpp. This is a text-based drawing board with the following requirements.</p><h3 id="System-Requirements"><a href="#System-Requirements" class="headerlink" title="System Requirements"></a>System Requirements</h3><p>When the program starts, the console should display a welcome message, and then the System Menu of the program. User can enter the options of the corresponding actions.<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Welcome Message designed by your group</span><br><span class="line">***<span class="built_in"> System </span>Menu ***</span><br><span class="line">[1] Start Drawing</span><br><span class="line">[2] Change Board Size</span><br><span class="line">[3] Instructions</span><br><span class="line">[4] Credits</span><br><span class="line">[5] Exit</span><br><span class="line">*******************</span><br><span class="line">Option (1 - 5):</span><br></pre></td></tr></table></figure></p><h3 id="Start-Drawing"><a href="#Start-Drawing" class="headerlink" title="Start Drawing"></a>Start Drawing</h3><p>When the user inputs 1 in the System Menu, an empty drawing board is displayed with a pen in the middle. Then the user controls the pen in the drawing board by inputting commands, until a “QUIT” command is entered.</p><h4 id="Drawing-Board"><a href="#Drawing-Board" class="headerlink" title="Drawing Board"></a>Drawing Board</h4><p>The drawing board consists of a square drawing area with a default size 30 x 30. The area is enclosed by a boundary with characters ‘|’ for vertical boundary, ‘-‘ for horizontal boundary, and ‘+’ for the corner.</p><h4 id="Pen"><a href="#Pen" class="headerlink" title="Pen"></a>Pen</h4><p>The initial location of the pen is in the middle of the drawing area. Then based on the user control, the pen can move within the drawing area. An arrow character is displayed in the drawing area to indicate the current location of the pen.</p><p>The pen is represented by different arrow characters according to the direction it is facing. There are 8 available directions, with 45 o each (default is 0, i.e. upward). The corresponding ASCII code in decimal of each arrow is given.</p><h4 id="User-Control"><a href="#User-Control" class="headerlink" title="User Control"></a>User Control</h4><p>User can input one or multiple commands at a time to control the action of the pen. You may assume that user always input less than 200 characters each time.</p><p>If multiple commands are input, they must be separated by at least one space. The commands are case-insensitive.</p><p>The commands are executed one by one in the sequence of user input. When all commands have been executed, the drawing board is refreshed to show the most updated drawings. Then the user can input another set of commands again.</p><p>Appropriate error checking on user input of commands is expected. Whenever an error occurs, an error message should be displayed. All remaining commands will be ignored. The drawing board is then refreshed to show the most updated status.</p><p>For example, an erroneous input may look like:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FD <span class="number">10</span> RT <span class="number">90</span> BK LT <span class="number">45</span></span><br></pre></td></tr></table></figure></p><p>Only “FD 10” and “RT 90” are executed because the argument for command “BK” is missing. The last command “LT 45” is ignored and not executed.</p><h4 id="Quit"><a href="#Quit" class="headerlink" title="Quit"></a>Quit</h4><p>When the user inputs the command “QUIT”, the system prompts for user’s confirmation. If the user inputs ‘y’ or ‘Y’, the system returns back to the System Menu. If the user inputs ‘n’ or ‘N’, the system remains at the drawing board. Other input is not acceptable and the system should ask the user to confirm again.</p><h3 id="Change-Board-Size"><a href="#Change-Board-Size" class="headerlink" title="Change Board Size"></a>Change Board Size</h3><p>When the user inputs 2 in the System Menu, the system displays the current size (length of a side, default is 30). Then the user is allowed to input the new size within the range of 20 to 50, inclusively. After the input, the system returns back to the System Menu.</p><h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>The system displays the instructions for using the console drawing board. After displaying the instruction, the system returns back to the System Menu.</p><h3 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h3><p>The system displays the personal particulars (e.g. student name, student ID, class, tutorial group, etc.) of the group members. After displaying the information, the system returns back to the System Menu.</p><h3 id="Exit"><a href="#Exit" class="headerlink" title="Exit"></a>Exit</h3><p>When the user inputs this option, the system prompts for user’s confirmation. If the user inputs ‘y’ or ‘Y’, the program terminates. If the user inputs ‘n’ or ‘N’, the system returns to the System Menu. Other input is not acceptable and the system should ask the user to confirm again.</p><h3 id="Other-General-Requirements"><a href="#Other-General-Requirements" class="headerlink" title="Other General Requirements"></a>Other General Requirements</h3><p>Meaningful guidelines should be printed to assist with user’s input. Whenever an option is selected, meaningful messages should be displayed.</p><p>Suitable checking on user’s input is expected. Appropriate error messages should be printed whenever unexpected situation happens, e.g., invalid input, input out-of-range, etc.</p><p>The use of functions (in addition to main function) and classes are expected in your program. Appropriate comments should be added in your source code file.</p><p>Creativity and Critical Thinking: other features that you find useful or can enhance the user experience can also be implemented.</p>]]></content>
-    
-    <summary type="html">
-    
-      用C++代写一个console的画图板，练习基本的object-oriented programming设计。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
