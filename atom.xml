@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-08-06T03:36:01.734Z</updated>
+  <updated>2020-08-08T01:12:11.545Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：CSC2023-Truck-Loading-Problem</title>
+    <link href="https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html"/>
+    <id>https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html</id>
+    <published>2020-08-08T03:32:12.000Z</published>
+    <updated>2020-08-08T01:12:11.545Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Aim"><a href="#Aim" class="headerlink" title="Aim"></a>Aim</h3><ul><li>To assess student ability to develop new algorithms following the principles of a chosen Algorithm Design Technique.</li><li>To strengthen student understanding of the Greedy technique for designing algorithms.</li><li>To provide experience of evaluating and comparing different algorithms.</li></ul><h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>Consider the following variation of the Bin Packing Problem, called the Truck Loading Problem (TLP).<br>We have an unlimited supply of two dimensional trucks, each truck having a width of W and a height of H. We also have n two dimensional boxes, with widths w1,w2,…,wn and heights h1,h2,…,hn. The problem is to load these boxes onto possibly smallest number of trucks under the following rules:</p><ul><li>A. A box is placed either at the bottom of a truck (starting a new pile), or on top of another box of equal or greater width.</li><li>B. At most one box is placed directly on top of any box.</li><li>C. The total height of any pile of boxes does not exceed H.</li><li>D. The number of boxes placed in a truck cannot exceed L (where L is given).<br>Moreover, it is not allowed to rotate boxes, the sides of the boxes must be parallel to the sides of the trucks, and once a box has been placed inside a truck it cannot be moved.</li></ul><h3 id="Tasks-to-be-implemented-in-the-Java-programming-language"><a href="#Tasks-to-be-implemented-in-the-Java-programming-language" class="headerlink" title="Tasks (to be implemented in the Java programming language)"></a>Tasks (to be implemented in the Java programming language)</h3><p>(1) Design and document using pseudo code the following two Greedy algorithms for solving TLP:</p><ul><li>NFTLP: based on next fit on-line strategy for solving Bin Packing Problem.</li><li>FFTLP: based on first fit on-line strategy for solving Bin Packing Problem.<br>This strategy attempts to select the first bin which currently has sufficient space to pack an item.</li></ul><p>(2) Design and implement data structures representing all the boxes and trucks, and provide output functions for displaying the contents of your data structures.</p><p>(3) Devise and implement methods for generating suitable sequences of integers which can then be used for measuring performance of the two algorithms. The test data should represent sequences of boxes (all test data for performance analysis must be generated within your program).</p><p>(4) Implement the two algorithms (NFTLP and FFTLP).</p><p>(5) Implement two ways of measuring the performance of the two algorithms, one based on timing their runs and the other on counting the number of trucks used for loading the boxes. Carry out measurements and comment on the results you obtained. For example, you might conclude that NFTLP is on average 25% faster than FFTLP, but it needs 20% more trucks.</p><h3 id="Marking-Scheme"><a href="#Marking-Scheme" class="headerlink" title="Marking Scheme"></a>Marking Scheme</h3><p>The completed assignment must be submitted to NESS in a single .zip file.<br>Your submission should include the following:</p><ul><li>A short report, giving a description of the implementation, testing and measurements made. This does not need to be a Maintenance Manual, but should explain the overall organisation of the program, the pseudo code for the proposed algorithms, and the description of data structures used.</li><li>The tabulated results with graphical summaries of the overall comparisons.</li><li>Comments on the results that you have obtained.</li><li>Source code.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      代写Greedy Algorithm，也就是贪心算法，解决货车最大装载的问题。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CSCI1200-Word-Frequency-Maps</title>
@@ -453,32 +477,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS7106-Speech-Synthesiser</title>
-    <link href="https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html"/>
-    <id>https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html</id>
-    <published>2020-03-11T07:37:13.000Z</published>
-    <updated>2020-03-11T03:28:22.412Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction-Speech-Synthesiser"><a href="#Introduction-Speech-Synthesiser" class="headerlink" title="Introduction - Speech Synthesiser"></a>Introduction - Speech Synthesiser</h3><p>For this assignment you will be required to create a Speech Synthesiser Python program. This will be a very basic waveform concatenation system, whereby the acoustic units are recordings of monophones. You will be provided with several files that you must use to do this:</p><h4 id="SimpleAudio-py"><a href="#SimpleAudio-py" class="headerlink" title="SimpleAudio.py"></a>SimpleAudio.py</h4><p>This is a version of the SimpleAudio.py module that we have used in the lab sessions. The Audio class will allow you to save, load and play .wav files as well as perform some simple audio processing functions. You should not modify this file.</p><h4 id="synth-py"><a href="#synth-py" class="headerlink" title="synth.py"></a>synth.py</h4><p>This is a skeleton structure of the program. Your task is to fill in the missing components to make it work. You are free to add any classes, methods or functions that you wish but you must not change the existing argparse arguments.</p><h4 id="monophones"><a href="#monophones" class="headerlink" title="monophones/"></a>monophones/</h4><p>A folder containing .wav files of monophones.</p><h4 id="examples"><a href="#examples" class="headerlink" title="examples/"></a>examples/</h4><p>A folder containing example .wav files of how the synthesiser should sound.</p><h3 id="Task-1-Basic-Synthesis"><a href="#Task-1-Basic-Synthesis" class="headerlink" title="Task 1 - Basic Synthesis"></a>Task 1 - Basic Synthesis</h3><p>The primary task for this assignment is to design a program that takes an input phrase and synthesises it. The main steps in the procedure are as follows:</p><ul><li>normalise the text (convert to lower/upper case, remove punctuation, etc.)</li><li>convert the word sequence to a phone sequence - you should make use of nltk.corpus.cmudict to do this.</li><li>concatenate the monophone wav files together in the right order to produce synthesised audio.<br>Your program should work by executing the synth.py script from the command line with arguments, e.g. the following should play “hello”:-</li></ul><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python synth<span class="selector-class">.py</span> -<span class="selector-tag">p</span> <span class="string">"hello"</span></span><br></pre></td></tr></table></figure><p>If a word is not in the cmudict then you should print a warning to the user and exit the program. You can also listen to the examples hello.wav and rose.wav which were created as follows:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python synth<span class="selector-class">.py</span> -o hello<span class="selector-class">.wav</span> <span class="string">"hello nice to meet you"</span></span><br><span class="line">python synth<span class="selector-class">.py</span> -o rose<span class="selector-class">.wav</span> <span class="string">"A rose by any other name would smell as sweet"</span></span><br></pre></td></tr></table></figure></p><p>If you execute the same commands with your program and the output sounds the same then it is likely you have a functioning basic synthesiser.</p><h3 id="Task-2-Extending-the-Functionality"><a href="#Task-2-Extending-the-Functionality" class="headerlink" title="Task 2 - Extending the Functionality"></a>Task 2 - Extending the Functionality</h3><p>Implement at least two of the following extensions:-</p><h4 id="Extension-A-Volume-Control"><a href="#Extension-A-Volume-Control" class="headerlink" title="Extension A - Volume Control"></a>Extension A - Volume Control</h4><p>Allow the user to set the volume argument (–volume, -v) to a value between 0.0 and 1.0.<br>You should use the rescale method from the Audio class to do this.</p><h4 id="Extension-B-Punctuation"><a href="#Extension-B-Punctuation" class="headerlink" title="Extension B - Punctuation"></a>Extension B - Punctuation</h4><p>If the input phrase contains a comma - insert 250ms of silence.<br>If it contains a period, question mark or exclamation mark - insert 500ms of silence.<br>Strip all other punctuation.</p><h4 id="Extension-C-Spelling"><a href="#Extension-C-Spelling" class="headerlink" title="Extension C - Spelling"></a>Extension C - Spelling</h4><p>Allow the user to set the spell argument (–spell, -s) that will synthesise spelling instead of pronunciation. Do this by converting a string into a sequence of letters, then to an appropriate phone sequence to pronounce for each letter in its alphabetic form.</p><h4 id="Extension-D-Text-Normalisation-for-Numbers"><a href="#Extension-D-Text-Normalisation-for-Numbers" class="headerlink" title="Extension D - Text Normalisation for Numbers"></a>Extension D - Text Normalisation for Numbers</h4><p>If the input phrase contains numbers in numerical form, convert them to word sequences, e.g.<br><figure class="highlight mizar"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"The meaning <span class="keyword">of</span> life <span class="keyword">is</span> 42"</span><br><span class="line">-&gt; "the meaning <span class="keyword">of</span> life <span class="keyword">is</span> forty two"</span><br></pre></td></tr></table></figure></p><p>You should include the ability to normalise numbers from 0 up to at least 999 (“nine hundred and ninety nine”).<br>Decimal points can be handled by reciting “point” and then reading the numbers after the point as individual digits, e.g.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Pi is about 3.14159"</span></span><br><span class="line">-&gt; <span class="string">"pi is about three point one four one five nine"</span></span><br></pre></td></tr></table></figure></p><p>Take care not to treat decimal points as periods (see Punctuation).</p><h4 id="Extension-E-Text-Normalisation-for-Dates"><a href="#Extension-E-Text-Normalisation-for-Dates" class="headerlink" title="Extension E - Text Normalisation for Dates"></a>Extension E - Text Normalisation for Dates</h4><p>If the string contains dates in the form DD/MM, DD/MM/YY or DD/MM/YYYY, then convert them to word sequences, e.g.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Burns Night is 25/01"</span></span><br><span class="line">-&gt; <span class="string">"burns night is the twenty fifth of january"</span></span><br><span class="line"><span class="string">"John Lennon died on 1/12/80"</span></span><br><span class="line">-&gt; <span class="string">"john lennon died on the first of december nineteen eighty"</span></span><br></pre></td></tr></table></figure></p><p>You may wish to make use of the built-in datetime and/or re packages to do this.</p><h3 id="Rules-and-Assessment"><a href="#Rules-and-Assessment" class="headerlink" title="Rules and Assessment"></a>Rules and Assessment</h3><p>Your submission should abide by the following rules:-</p><ul><li>you are encouraged to discuss the assignment together but all submissions must be written individually and be your own work.</li><li>you may only use numpy, nltk, the provided files, and any packages that are built-in to Python.</li><li>you may not change any of the existing arguments provided in synth.py.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      用NLTK库，在所给的代码框架上，代写一个语言合成器的程序。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
-      <category term="Artificial Intelligence" scheme="https://tk1307993.coding.me/tags/Artificial-Intelligence/"/>
-    
-      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
     
   </entry>
   

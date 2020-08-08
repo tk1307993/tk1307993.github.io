@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Fundamentals," />
+  <meta name="keywords" content="Data Structure,Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个小Lab作业，考察基本OOP概念，题目是比较经典的大数算法。由于Int，Long等类型总有最大上限，当一个数超过这个上限时，需要编程处理这类大数的加减乘除运算。">
-<meta name="keywords" content="Algorithm,Fundamentals">
+<meta name="description" content="代写Greedy Algorithm，也就是贪心算法，解决货车最大装载的问题。">
+<meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS206-Very-Large-Integer">
-<meta property="og:url" content="https://tk1307993.coding.me/CS206-Very-Large-Integer.html">
+<meta property="og:title" content="Java代写：CSC2023-Truck-Loading-Problem">
+<meta property="og:url" content="https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="代写一个小Lab作业，考察基本OOP概念，题目是比较经典的大数算法。由于Int，Long等类型总有最大上限，当一个数超过这个上限时，需要编程处理这类大数的加减乘除运算。">
+<meta property="og:description" content="代写Greedy Algorithm，也就是贪心算法，解决货车最大装载的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-15T12:49:46.887Z">
+<meta property="og:updated_time" content="2020-08-08T01:12:11.545Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS206-Very-Large-Integer">
-<meta name="twitter:description" content="代写一个小Lab作业，考察基本OOP概念，题目是比较经典的大数算法。由于Int，Long等类型总有最大上限，当一个数超过这个上限时，需要编程处理这类大数的加减乘除运算。">
+<meta name="twitter:title" content="Java代写：CSC2023-Truck-Loading-Problem">
+<meta name="twitter:description" content="代写Greedy Algorithm，也就是贪心算法，解决货车最大装载的问题。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS206-Very-Large-Integer.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html"/>
 
 
 
 
 
-  <title>Java代写：CS206-Very-Large-Integer | 留学生CS编程作业代写</title>
+  <title>Java代写：CSC2023-Truck-Loading-Problem | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS206-Very-Large-Integer.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS206-Very-Large-Integer</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：CSC2023-Truck-Loading-Problem</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-15T20:43:26+08:00">
-                2019-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-08T11:32:12+08:00">
+                2020-08-08
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个小Lab作业，考察基本OOP概念，题目是比较经典的大数算法。由于Int，Long等类型总有最大上限，当一个数超过这个上限时，需要编程处理这类大数的加减乘除运算。
+                  代写Greedy Algorithm，也就是贪心算法，解决货车最大装载的问题。
               </div>
           
 
@@ -360,25 +360,33 @@
       
 
       
-        <h3 id="Objectives-abstract-data-type-ADT-encapsulation"><a href="#Objectives-abstract-data-type-ADT-encapsulation" class="headerlink" title="Objectives: abstract data type (ADT), encapsulation"></a>Objectives: abstract data type (ADT), encapsulation</h3><p>Integer types are very convenient, but their limited width makes them unsuitable for some applications where precise large values are more important than speed. Develop a class VeryLargeInteger that can handle arbitrary long integer numbers (both negative and positive) and the basic arithmetic operations (addition, subtraction, multiplication, division, and remainder).</p>
-<blockquote>
-<p>Hint: The number could be represented as string, the sign could be represented either as boolean or as part of the string.</p>
-</blockquote>
-<p>Note: Implementations of addition/subtraction through repeated use of a constant increment/decrement will not be accepted. Implementations of multiplication and division that rely on stepwise addition or subtraction will not be accepted.</p>
-<figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * VeryLargeInteger (VLI) is a class for arbitrary precision integer computation.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VeryLargeInteger</span> </span>&#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Constructs a new VLI object from a long integer.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> init initial value</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger(<span class="keyword">long</span> init) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Constructs a new VLI object from a String.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> init initial value. Note, the string represents a valid VLI, but can</span></span><br><span class="line"><span class="comment">   *        be prefixed with a sign (either + or -).</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger(String init) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Computes this+other and returns the result in a new object.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> other the left-hand side operand.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> a new VLI representing this+other</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger add(VeryLargeInteger other) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Computes this-other and returns the result in a new object.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> other the left-hand side operand.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> a new VLI representing this-other</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger sub(VeryLargeInteger other) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Computes this*other and returns the result in a new object.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> other the left-hand side operand.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> a new VLI representing this*other</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger mul(VeryLargeInteger other) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Computes this/other and returns the result in a new object.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> other the left-hand side operand.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> a new VLI representing this/other</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger div(VeryLargeInteger other) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Computes this%other and returns the result in a new object.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> other the left-hand side operand.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> a new VLI representing this%other</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  VeryLargeInteger mod(VeryLargeInteger other) &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Returns the textual representation of this VLI.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@result</span> a string representing this VLI</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  String toString() &#123; <span class="comment">/* YOUR CODE */</span> &#125;</span><br><span class="line">  <span class="comment">/* YOUR CODE */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Turn in a zip file named blazerid hw1.zip. The file should contain an exported Eclipse project with the following items.</p>
-<ul>
-<li>All files needed to compile and run your solution.</li>
-<li>Your tests (test driver needs to be a separate file).</li>
-<li>A document (or text file) that describes your design decisions, your tests, any difficulties you had. If you would like to get a graded version on paper, add a note at the top of the report saying “paper copy requested”. If you received help from somebody else in class, please give credit to them.</li>
+        <h3 id="Aim"><a href="#Aim" class="headerlink" title="Aim"></a>Aim</h3><ul>
+<li>To assess student ability to develop new algorithms following the principles of a chosen Algorithm Design Technique.</li>
+<li>To strengthen student understanding of the Greedy technique for designing algorithms.</li>
+<li>To provide experience of evaluating and comparing different algorithms.</li>
 </ul>
-<h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><ul>
-<li>(10pts) Lab</li>
-<li>(10pts) Assignment report.</li>
-<li>(10pts) Turned in code compiles without error or warning and code is well documented (consider using -Xlint:all and/or checkStyle).</li>
-<li>(10pts) Quality of test design.</li>
-<li>(10pts) Constructors, addition, subtraction, multiplication, and toString work correctly.</li>
-<li>(10pts) Division and remainder methods operations correctly.</li>
+<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>Consider the following variation of the Bin Packing Problem, called the Truck Loading Problem (TLP).<br>We have an unlimited supply of two dimensional trucks, each truck having a width of W and a height of H. We also have n two dimensional boxes, with widths w1,w2,…,wn and heights h1,h2,…,hn. The problem is to load these boxes onto possibly smallest number of trucks under the following rules:</p>
+<ul>
+<li>A. A box is placed either at the bottom of a truck (starting a new pile), or on top of another box of equal or greater width.</li>
+<li>B. At most one box is placed directly on top of any box.</li>
+<li>C. The total height of any pile of boxes does not exceed H.</li>
+<li>D. The number of boxes placed in a truck cannot exceed L (where L is given).<br>Moreover, it is not allowed to rotate boxes, the sides of the boxes must be parallel to the sides of the trucks, and once a box has been placed inside a truck it cannot be moved.</li>
+</ul>
+<h3 id="Tasks-to-be-implemented-in-the-Java-programming-language"><a href="#Tasks-to-be-implemented-in-the-Java-programming-language" class="headerlink" title="Tasks (to be implemented in the Java programming language)"></a>Tasks (to be implemented in the Java programming language)</h3><p>(1) Design and document using pseudo code the following two Greedy algorithms for solving TLP:</p>
+<ul>
+<li>NFTLP: based on next fit on-line strategy for solving Bin Packing Problem.</li>
+<li>FFTLP: based on first fit on-line strategy for solving Bin Packing Problem.<br>This strategy attempts to select the first bin which currently has sufficient space to pack an item.</li>
+</ul>
+<p>(2) Design and implement data structures representing all the boxes and trucks, and provide output functions for displaying the contents of your data structures.</p>
+<p>(3) Devise and implement methods for generating suitable sequences of integers which can then be used for measuring performance of the two algorithms. The test data should represent sequences of boxes (all test data for performance analysis must be generated within your program).</p>
+<p>(4) Implement the two algorithms (NFTLP and FFTLP).</p>
+<p>(5) Implement two ways of measuring the performance of the two algorithms, one based on timing their runs and the other on counting the number of trucks used for loading the boxes. Carry out measurements and comment on the results you obtained. For example, you might conclude that NFTLP is on average 25% faster than FFTLP, but it needs 20% more trucks.</p>
+<h3 id="Marking-Scheme"><a href="#Marking-Scheme" class="headerlink" title="Marking Scheme"></a>Marking Scheme</h3><p>The completed assignment must be submitted to NESS in a single .zip file.<br>Your submission should include the following:</p>
+<ul>
+<li>A short report, giving a description of the implementation, testing and measurements made. This does not need to be a Maintenance Manual, but should explain the overall organisation of the program, the pseudo code for the proposed algorithms, and the description of data structures used.</li>
+<li>The tabulated results with graphical summaries of the overall comparisons.</li>
+<li>Comments on the results that you have obtained.</li>
+<li>Source code.</li>
 </ul>
 
       
@@ -397,9 +405,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -412,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Spell-Checker.html" rel="next" title="Java代写：Spell Checker">
-                <i class="fa fa-chevron-left"></i> Java代写：Spell Checker
+              <a href="/CSCI1200-Word-Frequency-Maps.html" rel="next" title="C++代写：CSCI1200-Word-Frequency-Maps">
+                <i class="fa fa-chevron-left"></i> C++代写：CSCI1200-Word-Frequency-Maps
               </a>
             
           </div>
@@ -421,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSSE1001-Pokemon-Finding-Game.html" rel="prev" title="Python代写：CSSE1001-Pokemon-Finding-Game">
-                Python代写：CSSE1001-Pokemon-Finding-Game <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -577,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives-abstract-data-type-ADT-encapsulation"><span class="nav-number">1.</span> <span class="nav-text">Objectives: abstract data type (ADT), encapsulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading"><span class="nav-number">2.</span> <span class="nav-text">Grading</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Aim"><span class="nav-number">1.</span> <span class="nav-text">Aim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#General"><span class="nav-number">2.</span> <span class="nav-text">General</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-to-be-implemented-in-the-Java-programming-language"><span class="nav-number">3.</span> <span class="nav-text">Tasks (to be implemented in the Java programming language)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Marking-Scheme"><span class="nav-number">4.</span> <span class="nav-text">Marking Scheme</span></a></li></ol></div>
             
 
           </div>
