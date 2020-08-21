@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-08-16T02:16:36.518Z</updated>
+  <updated>2020-08-21T01:27:20.930Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：CS112-Analytical-Problems</title>
+    <link href="https://tk1307993.coding.me/CS112-Analytical-Problems.html"/>
+    <id>https://tk1307993.coding.me/CS112-Analytical-Problems.html</id>
+    <published>2020-08-21T03:32:12.000Z</published>
+    <updated>2020-08-21T01:27:20.930Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This homework has two parts: in Part A you will write up answers to analytical problems related to the lectures in the past week, both to confirm and extend your understanding of the abstract principles discussed; in Part B you will write code to implement this understanding, and to practice your Java coding skills. I suggest you read this whole assignment carefully and for Part B, it is definitely worth thinking about your solution for a bit before launching Dr. Java and beginning to type. In addition to the requirements for the Java problems, you must observe the following requirements (for all homework submitted in this course):</p><ul><li>All programs should be literate, i.e., easily understandable by a human (say, your grader) and follow the Java Style Guidelines for CS112 posted on the class web site;</li><li>All files for this homework should be submitted using WebSubmit, following the instructions on the class web site;</li><li>You may not use data structure libraries such as ArrayList, since we are learning to write Java from the ground up and you must learn how these libraries are built; however, you are free to use (unless specifically directed otherwise) the basic libraries String, Character, Scanner, and Math;</li><li>You may freely use code from the class web site, the textbook, or lecture (unless specifically directed otherwise) as long as you cite the source in your comments; but you may NEVER use code from the web or other students’ programs—this will be considered plagiarism and penalized accordingly.</li></ul><h3 id="Part-A-Analytical-Problems"><a href="#Part-A-Analytical-Problems" class="headerlink" title="Part A: Analytical Problems"></a>Part A: Analytical Problems</h3><p>In these questions we will first explore the binary heap data structure, and then consider the general problem of hashing by considering the two basic paradigms, using a simple hash function. In the first one, involving separate chaining, we will make this realistic by stored (key, value) pairs; the hash function is applied to the key alone, but the entire pair is stored in the node. For the second, involving linear probing, we will simply store the key in the array slot.</p><p>Write your solutions in a file hw11.txt, hw11.pdf, hw11.rtf, etc. and submit by the due date and time.</p><ol><li><p>Insert the following sequence of keys into an intially empty 2-3 tree. You should write all the trees down as you do the transformations (this is what would be expected on an exam) but for the purposes of grading this exercise you can just draw the final tree that results.</p></li><li><p>Consider the following 2-3 tree:<br>Suppose we count ONLY comparisons between two keys, and NOT checks to see if the key exists, or checks to see if a pointer is null. (i) How many comparisons would necessary to find the key 10? (ii) How about 140? (iii) How about 60? (iv) Which key(s) occurring at leaf nodes would require a minimum number of comparisons? State which and how many comparisons. (v) Which key(s) would require a maximum number of comparisons? State which and how many comparisons. (vi) What is the average number of comparisons to find the keys in this tree (count for all and then divide by the size of the tree).</p></li><li><p>Insert the following keys into a binary heap, showing the structure of the tree (draw them sides as in the homeworks, or some other way) and the contents of the array A at the indicated points. At the end, give the values of the indicated variables.</p></li><li><p>Let us consider using a hash table for a symbol table storing (key, value) pairs, where the key is used as input to the hash function. Insert the following key-value pairs into a hash table implemented with the technique of separate chaining with an array H of size 7. For each insertion, use the hash function hash(x) = (3 * x % 7) on the key part and store the pair in the bucket at H[ hash(key )]. Assume nodes are defined as class Node{ int key; String value; Node next; }.</p></li></ol><ul><li>A. Show the hash table after all insertions are performed. What is the worst-case lookup time (in the number of comparisons), and what is the average-case lookup (average the number of comparisons over all keys in the table)?</li><li>B. Perform the following operations on the table from (a) and show the table that would result</li><li>C. What is the worst-case lookup and what is the average-case lookup for keys in the table that resulted from part (b)?</li><li>D. Give a sequence of keys (just the keys, not pairs) that would all hash to the same location for a table of size 7, creating a worst-case hash table (i.e., start with an empty table, and create a linked list worst-case table).</li><li>E. If we insert M keys into a hash table with N buckets, creating a worst-case table, what is the worst case time for looking up a key? Express in terms of N and M, using Theta(…) notation.</li><li>F. If we insert M keys into a hash table with N buckets, suppose the hash table arranges itself in the best possible way, what is the worst-case lookup? Express in terms of N and M, using Theta(…) notation.</li></ul><ol start="5"><li>Suppose now we have a hash table L using the strategy of linear probing, which just stores integer keys (not key-value pairs). The size of the array is N = 11 and the hash function is hash(k) = 3*k%11. Consider the following series of insertions.</li></ol><h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>We will be grading this using a grading client that builds an ArticleTable as in the main method of your MiniGoogle, and then calls phraseSearch(…) for various test cases.</p><p>You should develop your code as an interactive program which uses Minipedia as a basis to create the program MiniGoogle, and make sure that it performs as you expect.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写Java数据结构作业，作业分为两部分，上半部分的理论知识以及下半部分的编程设计。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>Python代写：COMP10001-Finding-Primes</title>
@@ -448,28 +472,6 @@
     <summary type="html">
     
       这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSCA08-Inheritance</title>
-    <link href="https://tk1307993.coding.me/CSCA08-Inheritance.html"/>
-    <id>https://tk1307993.coding.me/CSCA08-Inheritance.html</id>
-    <published>2020-03-23T07:37:13.000Z</published>
-    <updated>2020-03-25T02:34:56.014Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this exercise, we will be working with inheritance, and thinking about how we can set up our inheritance hierarchy to make our lives easier. There is an easy way and a difficult way to complete this exercise. If you plan appropriately, you’ll find you won’t have to write very much code at all.</p><h4 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h4><p>Consider the following 4 shapes:</p><h4 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h4><p>A four sided figure with parallel pairs of sides. A Parallelogram is defined by the lengths of its two pairs of sides (labelled base and side in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h4><p>A parallelogram with four right angles. A Rectangle is defined by the lengths of its two pairs of sides (labelled base and side in the picture below).</p><h4 id="Rhombus"><a href="#Rhombus" class="headerlink" title="Rhombus"></a>Rhombus</h4><p>A parallelogram with four equal sides. A Rhombus is defined by the length of its sides (labelled base in the picture below) and the interior angle (in degrees) between adjacent sides (labelled theta in the picture below).</p><h4 id="Square"><a href="#Square" class="headerlink" title="Square"></a>Square</h4><p>A parallelogram with four equal sides and four right angles; both a Rectangle and a Rhombus. A Square is defined by the length of its sides (labelled base in the picture below).</p><p>Your first task is to figure out the IS-A hierarchy of these shapes. Draw it out in a piece of paper. Are there any instances of multiple parents?</p><h3 id="Your-Task"><a href="#Your-Task" class="headerlink" title="Your Task"></a>Your Task</h3><p>You must write four classes: Parallelogram, Rectangle, Rhombus and Square, ensuring that the class hierarchy follows your diagram from the previous step. You may create additional classes if you wish (are there any good reasons why you might want to do this?). The parameters of init methods should always be input in the following order: (base, side, theta) (theta being given in degrees), though of course, not every class’ init will take all three. So for example, a Rectangle will only take (base, side).</p><p>Objects of these classes must have the following methods:</p><ul><li>area() - returns the area of the shape<br>Note: The area of a parallelogram is computed by base side sin(theta)<br>Warning: function math.sin in Python expects its argument to be an angle given in radians - take a look at the function math.radians to convert between degrees and radians.</li><li>bst() - returns a list of three floats: [base, side, theta]. Even if a shape doesn’t need one of the parameters for its input, it should still be able to return it. (e.g., a 10 x 10 square would return: [10.0, 10.0, 90.0]).</li><li>When printed, each shape should return a string with text in the following format “I am a shape with area area”. Four example, a 10 x 10 square would return the string: “I am a Square with area 100”.</li></ul><h3 id="Be-Lazy"><a href="#Be-Lazy" class="headerlink" title="Be Lazy"></a>Be Lazy</h3><p>One way to solve this would be to write four completely independent classes, and have each class completely implement all of their own functions. This would be a bad idea (why?). If you use inheritance correctly, you should find the exercise much simpler. Remember, you should never calculate something when you can just get another method to do the work for you. Hint: It’s possible to set more than one parent for your class. Are there any shapes here for which that would be a sensible thing to do?</p><h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>All of your code should be submitted to MarkUs in a file called ex9.py that doesn’t import anything other than math, and does not ask for input or print anything when imported.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写Interitance的小练习作业，求图形的边长和面积。
     
     </summary>
     
