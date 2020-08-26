@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-08-23T00:44:47.468Z</updated>
+  <updated>2020-08-26T10:04:10.231Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python代写：DE2-Software-Information-System</title>
+    <link href="https://tk1307993.coding.me/DE2-Software-Information-System.html"/>
+    <id>https://tk1307993.coding.me/DE2-Software-Information-System.html</id>
+    <published>2020-08-26T03:32:12.000Z</published>
+    <updated>2020-08-26T10:04:10.231Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Individual-assignment-brief"><a href="#Individual-assignment-brief" class="headerlink" title="Individual assignment brief"></a>Individual assignment brief</h3><h4 id="Individual-assignment-description"><a href="#Individual-assignment-description" class="headerlink" title="Individual assignment description"></a>Individual assignment description</h4><p>The individual assignment for Computing 2 is intended to test your ability to create a complete software solution from scratch based on an initial specification.</p><p>Your task is to design and implement a complete software information system, capable of storing and processing information about a particular topic (domain). The topic for each individual assignment will be chosen by each student and can be anything, such as: books in a library, movies in a cinema, products in a shop, etc. Each student must have a unique topic, i.e. there can be no duplicate topics!</p><p>Please read carefully the initial requirements specification given below for the software information system you need to build. You will need to expand and adapt these to the particular topic you have chosen. To be successful at this assignment, you need to follow the best practices in software systems design and software project management and to implement all necessary modules of the system.</p><h4 id="Requirements-specification"><a href="#Requirements-specification" class="headerlink" title="Requirements specification"></a>Requirements specification</h4><p>This is the initial requirements specification for the software information system:</p><ol><li>Provide a way to input new data in the system (e.g. register new books).</li><li>Provide a storage back-end using one or more of the data structures we studied in Computing 2 (e.g. binary search trees, hash tables, etc.).</li><li>Provide a way to save the data from memory into an external file.</li><li>Provide a way to load the data from an external file into memory.</li><li>Provide an interface for visualization of the data (could be just printed on the console).</li><li>Provide a way to search through the data by inputting a key.</li><li>Provide a way to sort the data by some key.</li><li>Provide a way to organize the data in a suitable way (e.g. group the data in categories, genres, etc.)</li><li>Provide a way to calculate statistics on the data, such as calculating mean values, finding min and max values, etc.</li><li>Provide data verification and user fool-proofing, e.g. by detecting wrong input and asking to re-enter the input, rather than crashing with an error.</li></ol><h4 id="Assessment"><a href="#Assessment" class="headerlink" title="Assessment"></a>Assessment</h4><p>This individual assignment accounts for 30% of the final grade for Computing 2.</p><p>It is due in Week 11;</p>]]></content>
+    
+    <summary type="html">
+    
+      代写一个信息系统，需要用到数据结构中的binary search tree, hash tables等等。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
+    
+      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS1070-Game-of-Life</title>
@@ -58,9 +82,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
@@ -126,9 +150,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -172,9 +196,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
       <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
+    
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
@@ -382,9 +406,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -457,30 +481,6 @@
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
       <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSCI4150-File-System-Server</title>
-    <link href="https://tk1307993.coding.me/CSCI4150-File-System-Server.html"/>
-    <id>https://tk1307993.coding.me/CSCI4150-File-System-Server.html</id>
-    <published>2020-03-28T02:39:31.000Z</published>
-    <updated>2020-03-28T02:42:06.528Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="RequirementRequirement"><a href="#RequirementRequirement" class="headerlink" title="RequirementRequirement"></a>RequirementRequirement</h3><p>This project is intended to integrate many aspects of OS design and implementation, from scheduling, to synchronization, to memory management, and file systems. You are to implement this in the xv6 OS (I’ll provide a repo link via Piazza). You will implement microkernel services on top of xv6 which is a monolithic OS! This is a large and hard project and is scoped around three team members. If you choose a smaller team, you’re still responsible for the entire project, so I suggest you form your team soon. The most important thing you can do to ensure you finish on time is to ​start early. Like now. To the keyboard!</p><h3 id="Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore"><a href="#Final-goal-OS-Service-to-do-File-system-Checkpoint-Restore" class="headerlink" title="Final goal: OS Service to do File-system Checkpoint-Restore"></a>Final goal: OS Service to do File-system Checkpoint-Restore</h3><p>The final goal of the project is to implement a File-System Server (FSS) – implemented as a normal process – that communicates with the other processes in the system (called “clients), receiving requests for file system services (e.g. similar to open, read, write, close, mkdir, unlink), and it will make those calls on behalf of the requesting process. However, it will also be smart enough to enable the “undo” of any changes made to the file system by those processes. It will do this by saving the contents of files and directories to a “checkpoint/“ subdirectory when modifications are made. To restore this checkpoint, a simple program can simply copy everything incheckpoint/into the normal file system. The communication with the FSS is through shared memory regions coordinated with mutexes and condition variables (which xv6 does not already provide).</p><h3 id="Specification-and-Implementation-Plan"><a href="#Specification-and-Implementation-Plan" class="headerlink" title="Specification and Implementation Plan"></a>Specification and Implementation Plan</h3><p>There are three main modules to this project.</p><ol><li><p>The FSS which uses the normal kernel API to provide access to the file-system, and also to perform the operations to save files/directories when they are modified for checkpointing. This requires zero kernel programming.</p></li><li><p>The shared memory support between the FSS, and the processes that are using the FSS’s checkpointing support. This shared memory region is used to pass both the request being made (i.e. which type of call is it, read, open, etc…), and the corresponding data that is required for that call (the path and flags for open, the buffer and its length for read, etc…). This will require kernel hacking to make a shared memory region between the client and the FSS.</p></li><li><p>The synchronization code necessary to provide synchronization on that shared buffer. This will include both mutexes, and the ability to block waiting for an event (i.e. a new client request) – a function normally provided by condition variables. This will require kernel hacking to implement mutexes for user-level, and to add logic for condition variables. The FSS process should always execute with high priority as it is providing a service to other processes in the system.</p></li></ol><p>There are varying levels of support for each of these three components, and you should be able to develop each relatively independently, so if one person does not meet their commitment, the others should be able to still make progress. Level 1 is intended to be very basic functionality. Leveling up from there strengthens your project. Only a project at project level 5 will receive full credit. Each level assumes the functionality from the previous levels (i.e. you can’t get level 2 without achieving level 1).</p><p>A note on group work and collaboration: I designed these modules to be independent, but that does not mean that they are of equal difficulty. Do not plan on simply assigning one to each team member, and when one of the modules is complete assume that team member is “done”. After a module is done, you must help the other members on the other modules. Each team member must stay up-to-date with each other teammate. You should use github to coordinate your code modifications. In fact, I highly​ suggest that once each of the implementations get to Level 1, that you start integrating them together. Once integrated, you can keep leveling up in each module.</p><h3 id="Module-1-File-System-Server"><a href="#Module-1-File-System-Server" class="headerlink" title="Module #1: File-System Server"></a>Module #1: File-System Server</h3><p>The FSS uses the normal kernel API and is a normal process. It uses IPC to talk to clients. Those clients make requests to it to access the file system on their behalf. This is not very useful on its own, but the FSS is smart because it provides a checkpoint and restore functionality. This means that when the FSS starts, it begins recording all files and directories that are modified by clients. It will record these files/directories in the /checkpoint/ directory. So for example, if /hw.txt exists, and you wrote a program to write to that file (via IPC with the FSS), then the FSS would copy the /hw.txt file to /checkpoint/hw.txt, and then perform the write on the client’s behalf. If you write a program to remove a directory, /foo/, then the FSS would add /checkpoint/foo/ before removing the directory for the client. A separate program called restore can be executed to restore all files and directories in the /checkpoint/ directory into their original location. This will undo all edits made in the mean-time. You do not have to track files and directories that are created and remove them upon restore. This module requires no kernel programming.</p><p>You’ll first need to understand how the client and the FSS communicate via IPC. Each of the file-system system calls need a corresponding FSS operation, prepended with fss_. The client will call these operations instead of the normal system calls. Thus, you will need to provide your implementations for fss_read, fss_write, fss_open, fss_close, fss_mkdir, fss_unlink. Note that open and mkdir are used to create files and directories, respectively, and unlink isused to remove files and directories. These functions will be used to pass through IPC to the FSS, which function is being performed (e.g. you could pass it as a string), and the arguments being passed to the function. For example, you could define a structure:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">fss_request</span> &#123;</span></span><br><span class="line"><span class="keyword">char</span> operation[<span class="number">7</span>];</span><br><span class="line"><span class="keyword">int</span> arg;</span><br><span class="line"><span class="keyword">char</span> data[<span class="number">1024</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>Where the operation field contains the operation (“mkdir”, “close”, etc…), arg contains any numerical argument passed to the function, and data contains any actual data that is meant to be passed. Once you fill out this structure, you can pass it over IPC to the FSS, and it can read the structure and convert the request into its own logic for making real file-system system calls to the kernel. It is cleaner to use an enumerated type for the operation.</p><p>A difficult part of this arrangement is that the FSS must return the return value from the kernel back to the client, and in the case of read, we must return the data that was read. So you’ll likely want a fss_response structure that holds that response as well (e.g. an couple of ints, and a array for the data). It can send this structure via IPC back to the client that made the request</p><h3 id="Module-2-Shared-Memory"><a href="#Module-2-Shared-Memory" class="headerlink" title="Module #2: Shared Memory"></a>Module #2: Shared Memory</h3><p>Shared memory is often used for IPC between processes. It is more efficient than message passing (e.g. pipes) as you can often have fewer memcpy operations (e.g. zero or one vs. two). This module will add shared memory to your project. Xv6 does not support shared memory, so this will require understanding the xv6 mechanisms for mapping memory into processes, and how that interacts with calls to sbrk (extending the amount of memory accessible by a process), and fork/exec/exit. </p><h3 id="Module-3-Synchronization-and-Scheduling"><a href="#Module-3-Synchronization-and-Scheduling" class="headerlink" title="Module #3: Synchronization and Scheduling"></a>Module #3: Synchronization and Scheduling</h3><p>Module 2 provides shared memory between processes. Now that we have shared memory, we must synchronize access to it! We want to provide a means for passing requests to the FSS, and for synchronizing the return value being passed to the client. Xv6 does not provide any memory sharing between user-level processes, so you’re job is to implement a set of mutex system calls, and to enable processes to block waiting for requests/responses, you’ll also provide condition variable system calls. </p><h3 id="Overall-Project"><a href="#Overall-Project" class="headerlink" title="Overall Project"></a>Overall Project</h3><p>The levels for the overall project are:</p><ul><li>Level 0: Level 1 in one module.</li><li>Level 1: Level 1 at least two modules.</li><li>Level 2: Level 1 in three modules, and level 2 in at least two. Two of the modules must be integrated together.</li><li>Level 3: All three modules must be integrated together.</li><li>Level 4: Highest level - 1 in each module.</li><li>Level 5: Highest level in all modules.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      代写大型的OS作业，实现一个文件系统服务。全方面考察调度、同步、内存管理以及文件系统方面的知识。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
-    
-      <category term="File System" scheme="https://tk1307993.coding.me/tags/File-System/"/>
     
   </entry>
   
