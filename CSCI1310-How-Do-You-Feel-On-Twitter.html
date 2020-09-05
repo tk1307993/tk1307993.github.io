@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写一个美国大选的小程序，根据Twitter数据绘制热力图。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：CSCI1310-How-Do-You-Feel-On-Twitter">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI1310-How-Do-You-Feel-On-Twitter.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写一个美国大选的小程序，根据Twitter数据绘制热力图。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-09-05T00:43:50.138Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：CSCI1310-How-Do-You-Feel-On-Twitter">
+<meta name="twitter:description" content="代写一个美国大选的小程序，根据Twitter数据绘制热力图。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI1310-How-Do-You-Feel-On-Twitter.html"/>
+
+
+
+
+
+  <title>Python代写：CSCI1310-How-Do-You-Feel-On-Twitter | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI1310-How-Do-You-Feel-On-Twitter.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：CSCI1310-How-Do-You-Feel-On-Twitter</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-05T11:32:12+08:00">
+                2020-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写一个美国大选的小程序，根据Twitter数据绘制热力图。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Sentiment analysis is the process of computationally identifying a writer’s attitude towards a topic expressed in a piece of text. Some companies apply sentiment analysis to opinions expressed in social media about their products.</p>
+<p>In this assignment, we are providing you with all tweets generated in the second week of November and you are going to use that data to generate a geographic visualization of the sentiment expressed about particular topics. As an example, consider the following map that shows how people feel about Justin Bieber using the sentiments expressed in their tweets. States that are red have the most positive view, while states that are dark blue have the most negative view; yellow represents a more neutral view, while states in gray have insufficient data.</p>
+<p>To generate this image, thousands of tweets that included the word “bieber” were collected. Each tweet contained the latitude and longitude of the tweet’s location, which could be used to associate the tweet with a state. To determine if the tweet was overall positive or negative, the individual words in the tweet were analyzed.<br>Words were assigned a score between -1 and +1 using a pre-defined dictionary of word sentiments. For example, a few of the words in the dictionary and their scores include,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">'DEPLORABLE' = -<span class="number">1.0</span></span><br><span class="line">'BAD' = -<span class="number">0.625</span></span><br><span class="line">'GOOD' = <span class="number">0.875</span></span><br><span class="line">'EXCELLENT' = <span class="number">1.0</span></span><br></pre></td></tr></table></figure></p>
+<p>If a word of the tweet is not found in the sentiment dictionary, it is ignored. The overall sentiment of the tweet is the average of the sentiment scores that are found. If no sentiment scores are found for any of the words of the tweet, this tweet is ignored. The overall sentiment of a state is computed as the average sentiment score for all tweets that are associated with that state (ignoring those tweets that did not have a sentiment score). The state’s sentiment score is then mapped to a color between blue (negative) and red (positive) using a prescribed color gradient.</p>
+<h3 id="Data-provided"><a href="#Data-provided" class="headerlink" title="Data provided"></a>Data provided</h3><p>There is a file on Moodle called tweets.zip that includes nine json files of tweets collected using the Twitter API. Some of the files have a timestamp, while others do not have a timestamp. All of the files contain the text in the tweet and the latitude and longitude of the tweeter.</p>
+<h3 id="Code-provided"><a href="#Code-provided" class="headerlink" title="Code provided"></a>Code provided</h3><p>There are several files provided in finalProjectFiles.zip that provide the functionality for calculating the sentiment from the tweet text and graphically rendering the sentiment for each state. The files include,</p>
+<ul>
+<li>geo.py contains a GeoPosition class to represent a geographic location in terms of latitude and longitude. Each tweet will have a latitude and longitude that can be used to get its location relative to the states. State descriptions also have a latitude and longitude. Also included in GeoPosition is a distance method that computes that properly computes the shortest distance between two geographic locations (based on the distance traveled on the great circle that connects them).</li>
+<li>tweet.py contains the Tweet class. An instance of that class represents a single twitter message.</li>
+<li>state.py defines a State class used to represent information about a state. Each state has a standard two-letter abbreviation (e.g., MO for Missouri), that is returned by the abbrev() method. The boundaries of each state are defined with a series of geographic positions. The relevant information about State for you is that the State class supports a method, centroid(), that returns a single GeoPosition for the centroid of the state. Informally, the centroid is an “average” of all positions in the state, which can be used as an approximation for the entire state for determining the closest state for a tweet.</li>
+<li>us_states.py module contains the actual data needed for representing the United States. You will not need to examine this file; it will be used by other parts of the project.</li>
+<li>country.py defines a Country class that handles the actual rendering of the states.</li>
+<li>colors.py provides support for translating the numeric “sentiment” values into an appropriate color based on a fixed gradient suggested by Cynthia Brewer of Penn State University. In particular, the module defines a method: get_sentiment_color(sentimentValue) that returns an RGB triple of an appropriate color for the given numeric sentiment value. If None is sent as a parameter, it returns the color gray (which is different than the color indicated by a neutral sentiment of 0.0).</li>
+<li>parse.py includes load_sentiments to load the sentiments dictionary.</li>
+<li>The data folder contains the raw data for sentiment scores and tweets.</li>
+<li>The samples folder contains four examples of complete images for the respective terms: bacon, bieber, cat, and dog. The bieber image is the one shown at the beginning of this page; others can be viewed for bacon, cat, and dog.</li>
+</ul>
+<h3 id="What-you-need-to-do"><a href="#What-you-need-to-do" class="headerlink" title="What you need to do"></a>What you need to do</h3><p>You need to use the data and code provided to generate a sentiment analysis on some topic. All of your code should go in the file trends.py. The file currently has a very basic class definition for a SentimentAnalysis class that loads the sentiments dictionary, the states list, and the Country instance.</p>
+<p>Your code needs to read in the data files you are using: there are nine files provided, you can use either the files with the created date or the ones without the created date. You only want to include tweets that have a specified search term, hashtag, or keyword. For example, if you are analyzing the sentiment towards the recent election, you might want to include tweets only if they include Hillary or Trump in the text. You need to write the code to filter the data.</p>
+<p>Your primary tasks in this assignment are to loop through the provided data, and for each tweet that you include, compute the average sentiment for that tweet. You can do that by breaking the tweet into a sequence of words and looking up each word in the sentiment dictionary. The sentiment for the tweet is the average of all word sentiments for the tweet.</p>
+<p>Assuming the tweet has a sentiment score (that is, at least one word of the tweet was identified in the sentiments dictionary), assign this tweet’s sentiment score to the “closest” state. The rule that you should use is to assign the tweet to whichever state has its centroid closest to the location of the tweet. This is an imperfect rule (for example, because tweets from New York City will actually be closer to the centroid of Connecticut and New Jersey then to the centroid of New York state); but it is an easy rule to implement, and it will do for now.</p>
+<p>Once you have scored all tweets and assigned those scores to the appropriate state, compute the cumulative sentiment for each state as the average of all sentiments that were assigned. Then use that sentiment to pick an appropriate color (using the get_sentiment_color function from our colors module), and set the state’s color in the visualization.<br>You should feel free to define any additional functions within the trends.py file that help you organize your code in a more clear and modular fashion.</p>
+<h3 id="Report"><a href="#Report" class="headerlink" title="Report"></a>Report</h3><p>Write a short, 1-2 page report describing what you did and any interesting results you generated. Your report should include the following three sections:</p>
+<p>Purpose: What is the purpose of the assignment</p>
+<p>Procedure: What did you do? What code did you write? What functionality did you implement? What analysis did you do on the data?</p>
+<p>Results: What were the results of the project? How did sentiments in different states compare to each other?</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CMPSC101-Rock-Paper-Scissors-Game.html" rel="next" title="C代写：CMPSC101-Rock-Paper-Scissors-Game">
+                <i class="fa fa-chevron-left"></i> C代写：CMPSC101-Rock-Paper-Scissors-Game
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">229</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-provided"><span class="nav-number">2.</span> <span class="nav-text">Data provided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-provided"><span class="nav-number">3.</span> <span class="nav-text">Code provided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-you-need-to-do"><span class="nav-number">4.</span> <span class="nav-text">What you need to do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Report"><span class="nav-number">5.</span> <span class="nav-text">Report</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
