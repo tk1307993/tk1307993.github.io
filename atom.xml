@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2020-09-23T11:14:50.569Z</updated>
+  <updated>2020-09-28T02:29:16.365Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CIS3490-Convex-Hull</title>
+    <link href="https://tk1307993.coding.me/CIS3490-Convex-Hull.html"/>
+    <id>https://tk1307993.coding.me/CIS3490-Convex-Hull.html</id>
+    <published>2020-09-28T02:26:23.000Z</published>
+    <updated>2020-09-28T02:29:16.365Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In the following questions, express the algorithms in the pseudocode we use in lectures (in the textbook), and implement your algorithms in the C programming language.</p><h3 id="Algorithm-1"><a href="#Algorithm-1" class="headerlink" title="Algorithm 1"></a>Algorithm 1</h3><p>A[0..n 1] is an array of n distinct numbers. A pair of array members (A[i], A[j]) is called an inversion if A[i] &gt; A[j] for i &lt; j.</p><ul><li>Design a brute force algorithm to count the number of inversions in an array, analyze the number of executions of the basic operation, and determine the efficiency class.</li><li>Design a divide-and-conquer algorithm of Θ(n log n) to count the number of inversions in an array, create a recurrence to analyze the number of executions of the basic operation, and determine the efficiency class. Use the Master Theorem to verify the efficiency class in your analysis result.</li><li>Implement the two algorithms, and test them by using data_1.txt, which includes 50,000 integers. Your programs are required to display execution time. Please compare the differences in execution time and theoretical analysis.</li></ul><h3 id="Algorithm-2"><a href="#Algorithm-2" class="headerlink" title="Algorithm 2"></a>Algorithm 2</h3><p>The convex hull of a set of S is the smallest convex set containing S. (You can find more about the convex hull problem on pages 109-113 in the textbook.) It is assumed that not all the points in S are on a straight line.</p><ul><li>Design a brute force algorithm to solve the convex-hull problem and analyze its efficiency.</li><li>Design a divide-and-conquer algorithm of Θ(n log n) to solve the convex-hull problem, create a recurrence to analyze the number of executions of the basic operation, and determine the efficiency class. Use the Master Theorem to verify the efficiency class in your analysis result.</li><li>Implement the two algorithms and test them using data_2.txt, which includes 30,000 points (pairs of x-y coordinates). Your programs are required to display execution time. Please compare the differences in execution time and theoretical analysis.</li></ul><h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p>Please submit your design and analysis (i.e. 1.1, 1.2, 2.1, 2.2) in hard-copies to the instructor after the Monday class, and submit your code to Moodle.</p>]]></content>
+    
+    <summary type="html">
+    
+      用C语言实现下述的算法，并且需要提供对应的pseudocode.
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>C++代写：CS246-Streaming-and-Memory-Management</title>
@@ -330,9 +352,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
       <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
+    
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
@@ -451,28 +473,6 @@
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
       <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS112-Yet-Another-Calculator</title>
-    <link href="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html"/>
-    <id>https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html</id>
-    <published>2020-05-06T11:42:49.000Z</published>
-    <updated>2020-05-06T11:46:06.274Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This consists of just one problem as a Part B. In addition to the requirements for the Java problems, you must observe the following requirements (for all homework submitted in this course):</p><ul><li>All programs should be literate, i.e., easily understandable by a human (say, your grader) and follow the Java Style Guidelines for CS112 posted on the class web site;</li><li>All files for this homework should be submitted using WebSubmit, following the instructions on the class web site;</li><li>You may not use data structure libraries such as ArrayList, since we are learning to write Java from the ground up and you must learn how these libraries are built; however, you are free to use (unless specifically directed otherwise) the basic libraries String, Character, Scanner, and Math; for this assignment, you may also use Double.parseDouble(….);</li><li>You may freely use code from the class web site, the textbook, or lecture (unless specifically directed otherwise) as long as you cite the source in your comments; but you may NEVER use code from the web or other students’ programs—this will be considered plagiarism and penalized accordingly.</li></ul><h3 id="Problem-B-1-YAC-Yet-Another-Calculator"><a href="#Problem-B-1-YAC-Yet-Another-Calculator" class="headerlink" title="Problem B.1: YAC (Yet Another Calculator)"></a>Problem B.1: YAC (Yet Another Calculator)</h3><p>This problem will be an exercise in hierarchical linked lists and in recursive evaluation of arithmetic expressions. There is not all that much coding to do (my solution added less than 50 lines of code to the template), but you will need to understand how to represent expressions using hierarchical or nested linked lists. As I explained in lecture, this is how Python and many other interpreted languages represent programs, and it is an important way to think about representing data and algorithms.</p><p>The primary data structure will be hierarchical linked lists, as described in lecture on Tuesday 10/25. As explained at that time on the board, an expression will consist of three different kinds of nodes, for operators (*, +, -, and /), positive numbers (doubles), and expressions (nested, fully-parenthesized expressions). For example, an infix expression such as<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( ( 3<span class="selector-class">.4</span> + 0<span class="selector-class">.0</span> ) * ( 1<span class="selector-class">.2</span> <span class="selector-tag">-</span> 2<span class="selector-class">.3</span> ) )</span><br></pre></td></tr></table></figure></p><p>which can equivalently be represented in prefix form as<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*( +( 3<span class="selector-class">.4</span>, 0<span class="selector-class">.0</span> ), <span class="selector-tag">-</span>( 1<span class="selector-class">.2</span>, 2<span class="selector-class">.3</span> ) )</span><br></pre></td></tr></table></figure></p><h3 id="Representing-Arithmetic-Expressions-by-Hierarchical-Linked-Lists"><a href="#Representing-Arithmetic-Expressions-by-Hierarchical-Linked-Lists" class="headerlink" title="Representing Arithmetic Expressions by Hierarchical Linked Lists"></a>Representing Arithmetic Expressions by Hierarchical Linked Lists</h3><p>There are three different kinds of nodes in such a hierarchical list, all represented by different configurations of Node objects:</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">privatestaticclassNode&#123;</span><br><span class="line">    <span class="keyword">String</span> <span class="keyword">op</span>;</span><br><span class="line">double num;</span><br><span class="line">    <span class="keyword">Node</span> <span class="title">exp</span>;</span><br><span class="line">    <span class="keyword">Node</span> <span class="title">next</span>;</span><br><span class="line"></span><br><span class="line">      ..... constructors <span class="keyword">and</span> toString() ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Operator Nodes represent one of the four arithmetic operators *, +, -, or / and have an op field storing the operator as a String.</p><p>Note that the num field, a double, has to have some value, and since it is meaningless in this kind of node, we give it the default value 0.0; similarly, the exp field is not used, and is assigned null. The next field, as we show below, will point to null when the operator is pushed on the Ops stack and point to the two operands of the operator when it is part of an expression.</p><p>Expression Nodes are placeholders for expressions, and have default values for op and num, and a pointer to an operator node which starts a subexpression.</p><p>Therefore, it is easy to tell which kind of node is being represented:</p><ul><li>Operator nodes have a non-empty String in the op field, a 0.0 in the num field, and a null pointer in the exp field;<br>Number nodes have an empty String in the op field, a double value in the num field (could, of course, be 0.0), and a null pointer in the exp field; and</li><li>Expression nodes have a non-null pointer in the exp field.<br>Each of these nodes may have a next field which is null or non-null, depending on context (see below for examples).</li></ul><h3 id="Evaluating-Hierarchical-Lists"><a href="#Evaluating-Hierarchical-Lists" class="headerlink" title="Evaluating Hierarchical Lists"></a>Evaluating Hierarchical Lists</h3><p>You must also write a method eval( … ) which takes a pointer to a hierarchical linked list, and returns a double which is the result of the expression represented by the hierarchical list. This method must be recursive, does not use a stack, and is actually fairly simple if you understand the recursive structure of the lists:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">eval(Node e) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e <span class="keyword">is</span> a <span class="built_in">number</span></span><br><span class="line"><span class="built_in">        return</span> <span class="keyword">the</span> <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> e <span class="keyword">is</span> an expression (<span class="keyword">the</span> <span class="keyword">first</span> node <span class="keyword">is</span> an operator)</span><br><span class="line">        evaluate <span class="keyword">the</span> subexpressions recursively <span class="keyword">and</span> <span class="literal">return</span></span><br><span class="line">        <span class="keyword">the</span> <span class="literal">result</span> <span class="keyword">of</span> applying <span class="keyword">the</span> operator <span class="keyword">to</span> <span class="keyword">the</span> values <span class="keyword">of</span> <span class="keyword">the</span> subexpressions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      这次的作业需要使用链表结构，代写一个计算器应用程序。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
