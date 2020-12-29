@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Web,AWS," />
+  <meta name="keywords" content="Data Structure,Artificial Intelligence," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。">
-<meta name="keywords" content="Web,AWS">
+<meta name="description" content="代写AI作业，完成五个关于决策的子问题。">
+<meta name="keywords" content="Data Structure,Artificial Intelligence">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECE244-Binary-Search-Trees">
-<meta property="og:url" content="https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html">
+<meta property="og:title" content="Python代写：CS440-Decision-Making-Under-Uncertainty-and-Learning">
+<meta property="og:url" content="https://tk1307993.coding.me/CS440-Decision-Making-Under-Uncertainty-and-Learning.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。">
+<meta property="og:description" content="代写AI作业，完成五个关于决策的子问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-03T01:02:17.595Z">
+<meta property="og:updated_time" content="2020-12-29T00:46:45.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECE244-Binary-Search-Trees">
-<meta name="twitter:description" content="代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。">
+<meta name="twitter:title" content="Python代写：CS440-Decision-Making-Under-Uncertainty-and-Learning">
+<meta name="twitter:description" content="代写AI作业，完成五个关于决策的子问题。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS440-Decision-Making-Under-Uncertainty-and-Learning.html"/>
 
 
 
 
 
-  <title>ECE244-Binary-Search-Trees | 留学生CS编程作业代写</title>
+  <title>Python代写：CS440-Decision-Making-Under-Uncertainty-and-Learning | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS440-Decision-Making-Under-Uncertainty-and-Learning.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">ECE244-Binary-Search-Trees</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：CS440-Decision-Making-Under-Uncertainty-and-Learning</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-03T09:01:03+08:00">
-                2020-06-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-29T09:23:21+08:00">
+                2020-12-29
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。
+                  代写AI作业，完成五个关于决策的子问题。
               </div>
           
 
@@ -360,19 +360,31 @@
       
 
       
-        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The objectives of this assignment are to provide you with more practice on the use of the various C++ concepts/constructs introduced in the lectures so far, including classes, dynamic memory allocation, pointers, I/O, and dynamic data structures. This will be done in the context of implementing a binary search tree class.</p>
-<h3 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h3><p>In this assignment, you will implement a simple database to store and retrieve data. You are creating a simple “domain name server” - a database that can rapidly look up string names, such as <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>, and return a 32-bit integer that is the Internet Protocol (IP) address corresponding to that “domain name”. This is the function performed by the domain name servers that allow you to type in easy to remember website names and have your web browser automatically go to the correct IP address (computer) to retrieve the web data.</p>
-<p>You will implement three classes: DBentry, TreeNode and TreeDB. The DBentry class will be used to create objects that hold an entry of the database. Each entry has a key (a string, corresponding to the name of the internet domain) and some data (a 32-bit integer that gives the IP address and a boolean flag that indicates whether the computer at that IP address is active or not). The TreeDB and TreeNode classes will be used to create a binary search tree database of DBentry objects. TreeDB represents the entire binary tree, while each TreeNode represents a single node in the tree.</p>
-<p>In a real domain names server, we would have to rapidly search billions of domain names (strings) as we looked for the IP address corresponding to a name. The fact that a binary search tree can find entries in large datasets very efficiently, and can also add new entries efficiently, makes it a very appropriate data structure for this application.</p>
-<h3 id="Command-and-Output-Specification"><a href="#Command-and-Output-Specification" class="headerlink" title="Command and Output Specification"></a>Command and Output Specification</h3><p>Your database will be exercised by a simple parser. Whenever the parser expects the user to enter a command, it should prompt the user for input by outputting a greater than sign followed by a space:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in"> user </span>input would appear here</span><br></pre></td></tr></table></figure></p>
-<p>The parser reads commands from cin, calls the appropriate TreeDB and DBentry functions, and sends the appropriate output to cout. Each command consists of an operation, followed by zero or more arguments. The command and the arguments are separated by white spaces, and will always appear on the same line. You parser should process commands until the end-of-file (eof) is encountered. You may assume that all the input is syntactically correct - your program will not be tested with invalid commands, the wrong number of arguments, or misspelt arguments. The only error messages you need to generate are those listed below. The commands and their parameters are:<br>insert name IPaddress status<br>This command creates a new entry with name (a string) as the key and IPaddress (a non-negative integer) and status (active or inactive) as specified. You may assume that the name, IPaddress, and active arguments are separated by spaces and that there are no spaces within an argument. The new entry is then inserted into the database. If there already exists an entry with the same key, the error message “Error: entry already exists” is printed to cout. Otherwise “Success” is printed.</p>
-<p>find name<br>This command finds the entry with the key name in the database, and prints its contents to cout as name : IPaddress : status. Name and IPaddress are printed as a string and an unsigned integer, respectively, while status is either active or inactive. Between values a space, colon and space should be printed.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout.</p>
-<p>remove name<br>This command deletes the entry with the key name from the database. If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise “Success” is printed.</p>
-<p>printall<br>This command prints all the entries in the database, sorted in ascending order of keys, one entry per line.</p>
-<p>printprobes name<br>This command finds the entry with the key name in the database.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise, the number of probes (DBentries examined during the tree search) is printed to cout.</p>
-<p>removeall<br>This command deletes all the entries in the database, returning it to the empty state. When done, “Success” is printed.</p>
-<p>countactive<br>This command counts the number of entries in the database that are active and prints this count to cout.</p>
-<p>updatestatus name status<br>This command updates the status of the entry with the given name; status must be either active or inactive. If no entry with name exists, the error message “Error: entry does not exist” is printed to cout.<br>Otherwise “Success” is printed.</p>
+        <h3 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h3><p>Consider the specification of a Markov Decision Process according to the following figure. Code your own implementation of Value Iteration and compute the optimal policy as well as the optimum utilities for this challenge.</p>
+<p>Indicate the original utilities you used in order to start the process. Provide at least 5 intermediate results (in terms of optimum utilities and policies) depending on the number of iterations needed for convergence as well as the final results. Describe your implementation and your convergence criterion. Report computation time and number of iterations.</p>
+<h3 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h3><p>Consider the criteria for accepting graduate students at the hypothetical Univ. of Excellence. Each candidate is evaluated according to four attributes:</p>
+<ol>
+<li>the grade point average (GPA)</li>
+<li>the quality of the undergraduate degree</li>
+<li>the publication record</li>
+<li>the strength of the recommendation letters</li>
+</ol>
+<p>To simplify our example, let us discretize and limit the possible values of each attribute: Possible GPA scores are 4.0, 3.6, and 3.3; universities are categorized as rank_1, rank_2, and rank_3; publication record is a binary attribute - either the applicant has published previously or not; and recommendation letters are similarly binary, they are either good or normal. Finally, the candidates are classified into two classes: accepted, or P (for ‘positive’) and rejected, or N (for ‘negative’). Figure 2 provides an example of one possible decision tree determining acceptance.</p>
+<p>An applicant doesn’t know this decision tree, but does have the data regarding twelve of last year’s applicants as in Table 1.</p>
+<ul>
+<li>a) Does the provided tree correctly categorize the provided examples?</li>
+<li>b) The applicant uses the decision tree algorithm shown in class (with the information gain computations for selecting split variables) to induce the decision tree employed by U. of E. officials. What tree will the algorithm come up with? Show the computations involved, in addition to the decision tree itself. [Hint: The information content of the examples before choosing any split variable is.<br>You have to find the attribute that has the highest information gain, where attribute A divides the examples into subsets, and p and n represent the number of positive and negative examples in subset.</li>
+<li>c) Is the tree that you got in part b) equivalent to the tree provided here (i.e., do the two trees classify every application in the same way)? If the answer is yes, explain whether this is a coincidence or not. If the answer is no, give an example of a data case that will be classified differently by the two trees.</li>
+</ul>
+<h3 id="Question-3-Consider-building-an-SVM-for-the-following-two-class-training-data"><a href="#Question-3-Consider-building-an-SVM-for-the-following-two-class-training-data" class="headerlink" title="Question 3: Consider building an SVM for the following two-class training data:"></a>Question 3: Consider building an SVM for the following two-class training data:</h3><p>Positive class:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span> <span class="number">3</span>]^T , [<span class="number">0</span> <span class="number">2</span>]^T , [<span class="number">0</span> <span class="number">1</span>]^T , [<span class="number">0</span> <span class="number">0</span>]^T</span><br></pre></td></tr></table></figure></p>
+<p>Negative class:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span> <span class="number">5</span>]^T , [<span class="number">1</span> <span class="number">6</span>]^T , [<span class="number">3</span> <span class="number">3</span>]^T</span><br></pre></td></tr></table></figure></p>
+<h3 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h3><p>Consider the chart below:</p>
+<p>(a) Notice that for the above graph there is a perfect linear separator for the two input classes.<br>Therefore, a single perceptron should be able to learn this classification task perfectly. Your task is to replicate the learning process, starting with a random perceptron with weights, where the weight 0 corresponds to the constant offset. For the inputs, just estimate their coordinates from the chart.<br>Start by adding the perceptron’s initial line of separation to the chart. Compute then how many samples are misclassified? Then, select an arbitrary misclassified sample and describe the computation of the weight update (you can choose = 1 or any other value; if you like you can experiment a bit to find a value that leads to efficient learning).<br>Illustrate the perceptron’s new line of division in the same chart or a different one, and give the number of misclassified samples. Repeat this process four more times so that you have a total of six lines (or fewer if your perceptron achieves perfect classification earlier).<br>You can generate the computations and/or graphs either by hand or by writing a simple computer program. If you write a program, please attach a printout, and let the program run until the perceptron achieves perfect classification (after how many steps?).</p>
+<p>(b) If your perceptron did not reach perfect classification, determine a set of weights that would achieve perfect classification, and draw the separating line for those weights.</p>
+<p>(c) Now assume that less information were available about the samples. For instance, consider we only know the value for 1 for each sample, which means that our perceptron has only two weights to classify the input as best as possible, i.e., it has weights 0 and 1 , where 0 is once again the weight for the constant offset 0 = 1. Draw a diagram that visualizes this one-dimensional classification task, and determine weights for a perceptron that does the task as best as possible (minimum error, i.e., minimum proportion of misclassified samples). Where does it separate the input space, and what is its error?</p>
+<h3 id="Question-5"><a href="#Question-5" class="headerlink" title="Question 5"></a>Question 5</h3><p>Consider the more difficult classification problem shown in the chart below:</p>
+<p>(a) As you certainly noticed, a single perceptron cannot do this classification task perfectly. Determine the minimum error that a single perceptron can reach, and show the dividing line in the input space for such a perceptron.</p>
+<p>(b) Clearly, we need a multi-layer perceptron to do this task perfectly. Develop such a system of connected perceptrons and write it down, together with the required weights for each unit. Illustrate the dividing lines for these perceptrons in a copy of the chart above.</p>
 
       
     </div>
@@ -390,9 +402,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
-            <a href="/tags/AWS/" rel="tag"># AWS</a>
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
           
         </div>
       
@@ -405,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/EE312-Little-Toy-Programming-Language.html" rel="next" title="EE312-Little-Toy-Programming-Language">
-                <i class="fa fa-chevron-left"></i> EE312-Little-Toy-Programming-Language
+              <a href="/COMP20005-Path-Planning-1.html" rel="next" title="C代写：COMP20005-Path-Planning-1">
+                <i class="fa fa-chevron-left"></i> C代写：COMP20005-Path-Planning-1
               </a>
             
           </div>
@@ -414,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CIT325-Authentification-Server.html" rel="prev" title="CIT325-Authentification-Server">
-                CIT325-Authentification-Server <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -570,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">1.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Statement"><span class="nav-number">2.</span> <span class="nav-text">Problem Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command-and-Output-Specification"><span class="nav-number">3.</span> <span class="nav-text">Command and Output Specification</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-1"><span class="nav-number">1.</span> <span class="nav-text">Question 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-2"><span class="nav-number">2.</span> <span class="nav-text">Question 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-3-Consider-building-an-SVM-for-the-following-two-class-training-data"><span class="nav-number">3.</span> <span class="nav-text">Question 3: Consider building an SVM for the following two-class training data:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-4"><span class="nav-number">4.</span> <span class="nav-text">Question 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-5"><span class="nav-number">5.</span> <span class="nav-text">Question 5</span></a></li></ol></div>
             
 
           </div>
