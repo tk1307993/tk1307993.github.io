@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-02-18T03:12:12.226Z</updated>
+  <updated>2021-02-25T08:26:01.699Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代写：CS134-Tutor-Scheduling</title>
+    <link href="https://tk1307993.coding.me/CS134-Tutor-Scheduling.html"/>
+    <id>https://tk1307993.coding.me/CS134-Tutor-Scheduling.html</id>
+    <published>2021-02-25T06:41:14.000Z</published>
+    <updated>2021-02-25T08:26:01.699Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>In this project you will help determine the best of times for tutoring services for a class based upon student availability. The input to the program will be the information provided by the student, including the student ID, days of the week, and hours the student can attend tutoring. The output is a list days and time periods that will maximize the numbers of students who can attend at least 1 hour of tutoring. Make sure you look at the examples to understand the goal. The goal is not to pick the days and times noted by the most students, but rather dates and times that serve the maximum number of different students.</p><h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The goal of this programming project is for you to master (or at least get practice on) the following tasks:</p><ul><li>working with balanced expressions</li><li>reading data from input files</li><li>using the provided Stack class</li><li>writing classes</li><li>working with existing code</li></ul><h3 id="Input-Dataset"><a href="#Input-Dataset" class="headerlink" title="Input Dataset"></a>Input Dataset</h3><p>( ) are the symbols surrounding student data</p><p>&lt; &gt; are the symbols surrounding day of the week data</p><p>[ ] are the symbols surrounding the time period.</p><p>For example:</p><p>(A Smith <m [0900][1000][1100]=""> <h [1400]=""> ) ( S Jones <t [2100][1800]="">) means A Smith can go to tutoring on Mondays from 9-11, and Thursday 2-3, and S Jones can go on Tuesday from 6-7 and 9-10. Note the period order is not significant. There are no implied ranges.</t></h></m></p><p>Assume the only tutoring days are M,T,W,H,F and the hours are from 0900 to 2100, hence the last hour is 2100 (9PM – 10 PM). Also assume there are no spaces or line breaks in the input, and that every student will have a unique name.</p><h3 id="Program-Logic"><a href="#Program-Logic" class="headerlink" title="Program Logic"></a>Program Logic</h3><p>This two-dimensional array can be used to store the various students who can come for tutoring in that time period.</p><p>The first part of your program should read the input ,data validate its format, and populate the array. You must use a Stack as to interpret the Expression. Your program should prompt the user for which test dataset to run. The user should enter 1 for test dataset 1, ..up to n (depending on the number you provide.</p><p>The second part should analyze the array to pick 3 time slots that covers the most different students.</p><p>For example, in the abbreviated schedule below,Thursday at 1200, Wednesday at 0900 and Friday at 1000 would cover the most (in this case all) students. Each cell represents the students who can attend tutoring at that time period.</p><h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>The zipped java project file, which contains all your source code, input files and Eclipse related projects, is to be submitted You may include more than one test file to indicate your program is working.</p><p>You are responsible for making sample test cases (at least 3) as well as running the sets provided.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写日程表应用，练习Stack的用法。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS142-Name-Sorter</title>
@@ -446,33 +468,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
-    
       <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
     
-  </entry>
-  
-  <entry>
-    <title>ECE244-Binary-Search-Trees</title>
-    <link href="https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html"/>
-    <id>https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html</id>
-    <published>2020-06-03T01:01:03.000Z</published>
-    <updated>2020-06-03T01:02:17.595Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The objectives of this assignment are to provide you with more practice on the use of the various C++ concepts/constructs introduced in the lectures so far, including classes, dynamic memory allocation, pointers, I/O, and dynamic data structures. This will be done in the context of implementing a binary search tree class.</p><h3 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h3><p>In this assignment, you will implement a simple database to store and retrieve data. You are creating a simple “domain name server” - a database that can rapidly look up string names, such as <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>, and return a 32-bit integer that is the Internet Protocol (IP) address corresponding to that “domain name”. This is the function performed by the domain name servers that allow you to type in easy to remember website names and have your web browser automatically go to the correct IP address (computer) to retrieve the web data.</p><p>You will implement three classes: DBentry, TreeNode and TreeDB. The DBentry class will be used to create objects that hold an entry of the database. Each entry has a key (a string, corresponding to the name of the internet domain) and some data (a 32-bit integer that gives the IP address and a boolean flag that indicates whether the computer at that IP address is active or not). The TreeDB and TreeNode classes will be used to create a binary search tree database of DBentry objects. TreeDB represents the entire binary tree, while each TreeNode represents a single node in the tree.</p><p>In a real domain names server, we would have to rapidly search billions of domain names (strings) as we looked for the IP address corresponding to a name. The fact that a binary search tree can find entries in large datasets very efficiently, and can also add new entries efficiently, makes it a very appropriate data structure for this application.</p><h3 id="Command-and-Output-Specification"><a href="#Command-and-Output-Specification" class="headerlink" title="Command and Output Specification"></a>Command and Output Specification</h3><p>Your database will be exercised by a simple parser. Whenever the parser expects the user to enter a command, it should prompt the user for input by outputting a greater than sign followed by a space:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in"> user </span>input would appear here</span><br></pre></td></tr></table></figure></p><p>The parser reads commands from cin, calls the appropriate TreeDB and DBentry functions, and sends the appropriate output to cout. Each command consists of an operation, followed by zero or more arguments. The command and the arguments are separated by white spaces, and will always appear on the same line. You parser should process commands until the end-of-file (eof) is encountered. You may assume that all the input is syntactically correct - your program will not be tested with invalid commands, the wrong number of arguments, or misspelt arguments. The only error messages you need to generate are those listed below. The commands and their parameters are:<br>insert name IPaddress status<br>This command creates a new entry with name (a string) as the key and IPaddress (a non-negative integer) and status (active or inactive) as specified. You may assume that the name, IPaddress, and active arguments are separated by spaces and that there are no spaces within an argument. The new entry is then inserted into the database. If there already exists an entry with the same key, the error message “Error: entry already exists” is printed to cout. Otherwise “Success” is printed.</p><p>find name<br>This command finds the entry with the key name in the database, and prints its contents to cout as name : IPaddress : status. Name and IPaddress are printed as a string and an unsigned integer, respectively, while status is either active or inactive. Between values a space, colon and space should be printed.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout.</p><p>remove name<br>This command deletes the entry with the key name from the database. If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise “Success” is printed.</p><p>printall<br>This command prints all the entries in the database, sorted in ascending order of keys, one entry per line.</p><p>printprobes name<br>This command finds the entry with the key name in the database.<br>If no such entry exists, the error message “Error: entry does not exist” is printed to cout. Otherwise, the number of probes (DBentries examined during the tree search) is printed to cout.</p><p>removeall<br>This command deletes all the entries in the database, returning it to the empty state. When done, “Success” is printed.</p><p>countactive<br>This command counts the number of entries in the database that are active and prints this count to cout.</p><p>updatestatus name status<br>This command updates the status of the entry with the given name; status must be either active or inactive. If no entry with name exists, the error message “Error: entry does not exist” is printed to cout.<br>Otherwise “Success” is printed.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写数据结构中的Binary Search Tree，很常见的一类作业，补充实现class中的方法即可。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
-    
-      <category term="AWS" scheme="https://tk1307993.coding.me/tags/AWS/"/>
+      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
