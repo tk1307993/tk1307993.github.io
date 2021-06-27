@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-02-25T08:26:01.699Z</updated>
+  <updated>2021-06-27T04:13:25.804Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C代写：CS217-Union-Find</title>
+    <link href="https://tk1307993.coding.me/CS217-Union-Find.html"/>
+    <id>https://tk1307993.coding.me/CS217-Union-Find.html</id>
+    <published>2021-06-27T04:11:07.000Z</published>
+    <updated>2021-06-27T04:13:25.804Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Read-the-instructions-carefully-before-writing-any-code"><a href="#Read-the-instructions-carefully-before-writing-any-code" class="headerlink" title="Read the instructions carefully before writing any code!!"></a>Read the instructions carefully before writing any code!!</h3><p>In this phase of the assignment, you will:</p><ul><li>Implement your proposed solution to the problem</li><li>Implement a data structure designed specifically for this application (called a “union find” or “disjoint set”)</li><li>Show that both solutions solve this problem</li><li>Compare the running times of the two data structures on a pathological case</li></ul><h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>Create an interface for the ADT described in phase 1. We’re not going to include listMembers, so don’t include it in your interface!</p><h3 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h3><p>Write a class that implements that interface using the strategy you came up with in phase 1. It should be generic because we’ll be testing with Strings (the stated problem in phase 1), and Integers (for testing timings in the pathological case)</p><h3 id="Part-3"><a href="#Part-3" class="headerlink" title="Part 3"></a>Part 3</h3><p>Write a “union find” data structure that implements the same interface as your solution. The Union find works as follows:</p><p>The union find data structure is a “forest” data structure (a bunch of trees). A node stores a value, its “rank,” and its parent. The rank is essentially the height of the subtree rooted at that node.</p><p>Each element in your data structure (in our example problem, an element is a student’s name), will have an associated node. You’ll need to be able to efficiently retrieve an element’s node; think about how you might achieve this.</p><p>The ADT operations can be implemented via the following pseudocode:</p><p>MakeSet(T data): create a node containing data. It will be its own parent and will have rank 0.</p><p>CombineGroup(T a, T b): Compute repA = find(a), repB = find(b). If repA and repB are the same, then a and b are already in the same set and you don’t need to do anything. Otherwise, assume repA lower rank than repB. set repA’s parent to be repB (if repB has lower rank, do the opposite). If the ranks are equal, increase the rank of whichever node is the new parent. For example, if repA and repB both have rank 2, you could set repA’s parent to be repB, and repB’s new rank would be 3 (repA’s rank doesn’t change).</p><p>Find(T data): You probably want to implement this using a helper method that takes and returns a node:<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="keyword">Node</span><span class="title">&lt;T</span>&gt; findNode(<span class="keyword">Node</span><span class="title">&lt;T</span>&gt; n):</span><br></pre></td></tr></table></figure></p><p>if n.parent == n, then n is the representative of its group, so return it<br>otherwise: set n.parent to findNode(n.parent) and then return n’s new parent.</p><p>This method “flattens” all the nodes in the tree on the path from n to the root (its representative), and make any subsequent find operations super fast. After calling find, n and all of its ancestors will be connected directly to the root!</p><p>GetGroup(T data): this method can be implemented using a traversal</p><h3 id="Part-3-1"><a href="#Part-3-1" class="headerlink" title="Part 3"></a>Part 3</h3><p>Write a function called groupStudents that takes the interface you defined as a parameter. This will allow you to call the function with either YOUR implementation OR the UnionFind data structure. This function should load the input file, use the data structure to compute and then print the list of students in each group. Note: there is no operation in the ADT that gives you the list of groups, so you’ll have to figure out how you can use the supported operations to do so.</p><p>Here is a sample input file: sampleInput.txt</p><h3 id="Part-4"><a href="#Part-4" class="headerlink" title="Part 4"></a>Part 4</h3><p>Compare the two implementations for the pathological case described below. In this example, all of the elements will be combined into a single group as slowly as possible.</p><p>The elements will be the integers from 0 to n.</p><p>Combine the groups as follows until there is a single group</p><p>First combine 0 and 1, 2 and 3, 4 and 5, etc, so you have n/2 groups with 2 elements each</p><p>Then combine 0 and 2, 4 and 6, 8 and 10, etc. You’ll have n/4 groups with 4 elements each repeat this process until everything is in a single group.</p><p>This test case will require lots and lots of unions with groups of equal size, which will be the worst case for either implementation for the ADT.</p><p>Time this testcase for various values of n, for both implementations and report your results.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写数据结构作业，按要求实现各类ADT.
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代写：CS134-Tutor-Scheduling</title>
@@ -447,30 +469,6 @@
     
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CIT325-Authentification-Server</title>
-    <link href="https://tk1307993.coding.me/CIT325-Authentification-Server.html"/>
-    <id>https://tk1307993.coding.me/CIT325-Authentification-Server.html</id>
-    <published>2020-06-11T00:51:12.000Z</published>
-    <updated>2020-06-11T00:52:58.357Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><p>The goal of this lab is to develop a deeper understanding of how objects can be moved around the Internet by developing a useful, but small, system to store data on multiple computers. You will develop a graphical client that will allow you create, edit and delete student data. The data will be stored on a Student Server and login data will be stored on the Authentication Server.</p><h3 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h3><p>You will begin with the GUI and code used to complete the previous lab. You will add a JButton to the toolbar and a menu item under the File menu called Login. When selected or pressed:</p><ol><li>Show a dialog with userid and password fields</li><li>When the fields are populated and the dialog OK button is clicked, connects to the Authentification Server.</li><li>If the userid/password combination is valid user is allowed to login to the Student Server.</li><li>if the userid/password combination is invalid, another dialog is shown, informing the user the userid/password is invalid.<br>Once connected, the user will be able to do all functions they could do with the previous lab. Now, the system will connect to the Student Server to get the data instead of storing it locally.</li></ol><h3 id="Authentification-Server"><a href="#Authentification-Server" class="headerlink" title="Authentification Server"></a>Authentification Server</h3><p>The Authentification Server will receive a request which has a userid/password combination. It will compare these 2 fields to its own data to see if this is a valid user login. If it is valid, it will send a login OK message to the Student Server, allowing the user to begin adding, editing and changing student data.<br>The data is kept in a text file, that will need to be loaded when the server is started. The data can be read in and stored in any structure that the designer deems worthy.<br>This server is located at:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCP<span class="built_in">/IP </span>Address: 127.0.0.1</span><br><span class="line">Port: 8189</span><br></pre></td></tr></table></figure></p><h3 id="Student-Server"><a href="#Student-Server" class="headerlink" title="Student Server"></a>Student Server</h3><p>The Student Server is similar as to what was used in Lab 7 to store student data. It is basically an ArrayList of objects wrapped in a server. The 4 classes are: Student, Undergrad, Graduate, NonDegree and are the same design as they were in Lab 7.<br>In Lab 7, the arraylist was part of the GUI object. Now, the arraylist is wrapped in a server and the object must be passed back and forth each time the user, via the GUI, wants to compete a transaction.<br>This server is located at:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCP<span class="built_in">/IP </span>Address: 127.0.0.1</span><br><span class="line">Port: 8190</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      用Java代写一个Authentification Server，包含GUI与交互。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Swing" scheme="https://tk1307993.coding.me/tags/Swing/"/>
-    
-      <category term="Network Programming" scheme="https://tk1307993.coding.me/tags/Network-Programming/"/>
     
   </entry>
   
