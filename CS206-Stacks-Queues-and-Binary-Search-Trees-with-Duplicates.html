@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,Fundamentals," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
-<meta name="keywords" content="Data Structure,Fundamentals">
+<meta name="description" content="代写数据结构，包括Stacks，Queues，以及Binary Search Trees.">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSE143X-Backus-Naur-Form">
-<meta property="og:url" content="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html">
+<meta property="og:title" content="CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates">
+<meta property="og:url" content="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
+<meta property="og:description" content="代写数据结构，包括Stacks，Queues，以及Binary Search Trees.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-09T02:30:58.015Z">
+<meta property="og:updated_time" content="2021-08-20T01:19:49.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSE143X-Backus-Naur-Form">
-<meta name="twitter:description" content="练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。">
+<meta name="twitter:title" content="CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates">
+<meta name="twitter:description" content="代写数据结构，包括Stacks，Queues，以及Binary Search Trees.">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html"/>
 
 
 
 
 
-  <title>CSE143X-Backus-Naur-Form | 留学生CS编程作业代写</title>
+  <title>CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CSE143X-Backus-Naur-Form</h2>
+          <h2 class="post-title" itemprop="name headline">CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-09T10:25:55+08:00">
-                2020-02-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-08-20T09:17:15+08:00">
+                2021-08-20
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  练习Recursion和Regular expressions的用法，代写一个语法解析器，比较烧脑的一个作业。
+                  代写数据结构，包括Stacks，Queues，以及Binary Search Trees.
               </div>
           
 
@@ -360,29 +360,30 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment will give you practice with recursion, regular expressions, and grammars and will give you another opportunity to work with maps. You will complete a program that reads an input file with a grammar in Backus-Naur Form (BNF) and will allow the user to randomly generate elements of the grammar.</p>
-<p>You will be given a main program that does the file processing and user interaction. It is called GrammarMain.java. You are to write a class called GrammarSolver that manipulates the grammar. A grammar will be specified as a sequence of Strings, each of which represents the rules for a nonterminal symbol. Each String will be of the form:<br><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">&lt;nonterminal symbol&gt;</span>::=&lt;rule&gt;|&lt;rule&gt;|&lt;rule&gt;|…|&lt;rule&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Notice that this is the standard BNF format of a nonterminal symbol on the left-hand-side and a series of rules separated by vertical bar characters (“|”) on the right-hand side. If there is only one rule for a particular nonterminal, then there will be no vertical bar characters. BNF productions use the characters “::=” to separate the symbol from the rules.</p>
-<p>There will be exactly one occurrence of “::=” per String. The text appearing before the “::=” is a nonterminal symbol. You may assume that it is not empty, that it does not contain a vertical bar character, and that it does not contain any whitespace. Often we surround nonterminal symbols with the characters, but this will not always be the case. The text appearing after the “::=” will be a nonempty series of rules separated by vertical bar characters (“|”). Each of these rules will have a series of tokens (always at least one) separated and potentially surrounded by whitespace. There could be any amount of whitespace surrounding tokens. Any token that appears to the left of a “::=” in the grammar is considered a nonterminal. All other tokens are considered terminals.</p>
-<p>The grammars you will be asked to process will be stored in text files with each line of the file being of the form described above. GrammarMain reads this file into a List and passes the list to the constructor of your GrammarSolver. Your solver has to be able to perform certain tasks, most notably generating random elements of the grammar.</p>
-<p>To generate a random instantiation of a nonterminal, you simply pick at random one of its rules and generate whatever that rule tells you to generate. Notice that this is a recursive process. Generating a nonterminal involves picking one of its rules at random and then generating each part of that rule, which might involve more nonterminal symbols to generate for which you pick rules at random and generate each part of those rules, and so on. Depending upon the grammar, this process could continue indefinitely. Any grammar you will be asked to work with will be guaranteed to converge in a finite period of time. Most often this process doesn’t go on indefinitely because many rules involve terminals rather than nonterminals. . When you encounter a terminal, you simply include it in the String you are generating. This becomes the base case of the recursive process. Your generating method produces various String objects. Each String should be compact in the sense that there should be exactly one space between each terminal and there should be no leading or trailing spaces.</p>
-<p>For example, the grammar on the previous page could be used to randomly generate a non-terminal for the sentence, “Fred honored the green wonderful child”, as shown in the diagram on the next page:</p>
-<p>Your class must include the following public methods.<br>|  Method   |     Description  |<br>|  ———–  | ———–  |<br>| GrammarSolver(List grammar)  | This method will be passed a grammar as a List of Strings. Your method should store this in a convenient way so that you can later generate parts of the grammar. It should throw an IllegalArgumentException if the grammar is empty or if there are two or more entries in the grammar for the same nonterminal. Your method is not to change the List of Strings. |<br>| boolean grammarContains(String symbol)  | Returns true if the given symbol is a nonterminal of the grammar; returns false otherwise. |<br>| String[] generate(String symbol, int times)  | In this method you should use the grammar to randomly generate the given number of occurrences of the given symbol and you should return the result as an array of Strings. For any given nonterminal symbol, each of its rules should be applied with equal probability. It should throw an IllegalArgumentException if the grammar does not contain the given nonterminal symbol or if the number of times is less than 0. |<br>| String getSymbols()  | This method should return a String representation of the various nonterminal symbols from the grammar as a sorted, comma-separated list enclosed in square brackets, as in “[, , ]” |</p>
-<p>Case matters when comparing symbols. For example, S would not be considered the same as.</p>
-<p>The directory crawler program will serve as a good guide for how to write this program. In that program, the recursive method has a for-each loop. This is perfectly acceptable. Just because we are now learning how to use recursion, we don’t want to abandon what we know about loops. If you find that some part of this problem is easily solved with a loop, then go ahead and use one. In the directory crawler, the hard part was writing code to traverse all of the different directories and that’s where we used recursion. For your program the hard part is following the grammar to generate different parts of the grammar, so that is the place to use recursion.</p>
-<p>You will discover that when writing recursive solutions to problems, we often find ourselves with a public/private pair of methods. You will want to use that approach here. You have been asked to write a public method called generate that will generate an array of Strings. But internally inside your object, you’re going to want to produce these values one String at a time using a recursive method. You should make this internal method private so that it is not visible to the client.</p>
-<p>We want you to store the grammar in a particular way. We are making use of the SortedMap interface and the implementation TreeMap, both in java.util. Maps keep track of key/value pairs. Each key is associated with a particular value. In our case, we want to store something for each nonterminal symbol. So the nonterminal symbols become the keys and the rules become the values. Using this approach, you will find that the getSymbols method can be written quickly because the SortedMap interface includes a method called keySet that returns a set of keys from the map. If you ask for the “toString” of this set, you will get the desired string. It is important to use the SortedMap/TreeMap combination because it keeps the keys in sorted order (notice that getSymbols requires that the nonterminals be listed in sorted order).</p>
-<p>Below are some specific notes about Java constructs you should be using:</p>
-<ul>
-<li><p>The Random class in java.util can be used to generate a random integer by calling its nextInt method or you can use the method Math.random.</p>
-</li>
-<li><p>The String class has a method called “trim” that will return a new version of the String minus any leading or trailing whitespace.</p>
-</li>
-<li><p>One problem you will have to deal with is breaking up strings into various parts. You should use the split method of the String class to do so, although you are also allowed to use a string-based Scanner if you prefer. The split method makes use of what are called “regular expressions” and this can be confusing, but you will find that learning about regular expressions is extremely helpful for computer scientists and computer programmers. Many unix tools, for example, take regular expressions as input.</p>
-</li>
-</ul>
-<p>In terms of correctness, your class must provide all of the functionality described above. In terms of style, we will be grading on your use of comments, good variable names, consistent indentation and good coding style to implement these operations. Remember that you will lose points if you declare variables as data fields that can instead be declared as local variables. You should also avoid extraneous cases (e.g., don’t make something into a special case if it doesn’t have to be). And you should continue to declare variables, fields, parameters and return types using an interface when possible.</p>
-<p>You should name your file GrammarSolver.java and you should turn it in electronically from the “assignments” link on the class web page. A collection of files needed for the assignment is included on the web page as ass5.zip. You will need to have GrammarMain.java, sentence.txt and sentence2.txt in the same directory as your GrammarSolver.java in order to run GrammarMain. The second input file contains extraneous whitespace, including tabs. This second input file sometimes generates very long expressions as output.</p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>In this assignment you will implement data structures that provide an implementation for four abstract data types: A double-ended singly linked list, a stack, a queue, and a binary search tree that allows duplicates. Along the way you will get more experience with implementing Java interfaces, writing JUnit test cases, and using the Adapter design pattern.</p>
+<h3 id="Part-1-Double-Ended-Singly-Linked-List"><a href="#Part-1-Double-Ended-Singly-Linked-List" class="headerlink" title="Part 1 - Double Ended Singly Linked List"></a>Part 1 - Double Ended Singly Linked List</h3><h4 id="DoubleEndedLLTester"><a href="#DoubleEndedLLTester" class="headerlink" title="DoubleEndedLLTester"></a>DoubleEndedLLTester</h4><p>Create DoubleEndedLLTester.java to test all public methods in DoubleEndedLL.java class, which implements DoubleEndedLLInterface. You must have at least one test for every method, but for some methods it is better to create multiple tests for separate conditions. For example, removing from an empty list should have a separate test from removing from a non-empty one.</p>
+<p>You do not need to completely write your DoubleEndedLLTester before starting to define DoubleEndedLL. In fact, it is recommended that you use an iterative test-driven development process: write some tests in DoubleEndedLLTester, implement the functionality in DoubleEndedLL, test your implementation with DoubleEndedLLTester, write more tests, etc.</p>
+<h4 id="DoubleEndedLL"><a href="#DoubleEndedLL" class="headerlink" title="DoubleEndedLL"></a>DoubleEndedLL</h4><p>Read the documentation in the source code file for the DoubleEndedLLInterface. You will be creating DoubleEndedLL.java class to implement this interface. Think of the “implements” as a contract - it is your responsibility to ensure all of the methods in the interface are present and functional in your class. For method headers, you may simply copy over the appropriate comments from the interface file. However, you must still comment the constructor and any other methods not present in the interface.</p>
+<p>DoubleEndedLL must be a Generic class that implements a singly-linked list with a head and tail reference, using an inner class Node. You may find it helpful to copy over your Node class from PA1 and modify it for this assignment. The only public methods you may have are the no-arg constructor and the interface methods.</p>
+<p>Files to Submit</p>
+<ol>
+<li>DoubleEndedLLTester.java</li>
+<li>DoubleEndedLL.java</li>
+</ol>
+<h4 id="Part-2-Implementing-Stacks-and-Queues"><a href="#Part-2-Implementing-Stacks-and-Queues" class="headerlink" title="Part 2 - Implementing Stacks and Queues"></a>Part 2 - Implementing Stacks and Queues</h4><p>Now that DoubleEndedLL is fully built and tested, use it to implement a Stack and a Queue. Both MyStack and MyQueue are generic classes that implement Stack_QueueInterface, however their functionality will differ.</p>
+<p>In order to get full credit for this section, you must use the Adaptive Design Pattern to implement these classes. To do that, create an instance variable of type DoubleEndedLLInterface (instantiated to a DoubleEndedLL) and use it to perform all of the necessary class methods. If these classes are complicated, you are overthinking the problem.</p>
+<p>As is often the case when the Adapter pattern is used, if the adapted class (DoubleEndedLL in this case) is thoroughly tested and debugged, the adapting class shouldn’t need much testing because almost all of the work is being handled by delegation to the adapted class’s methods. We provide you with a few simple tests (MyStackTester.java and MyQueueTester.java) which should be sufficient but you are welcome to write your own tests as well.</p>
+<h4 id="MyStack"><a href="#MyStack" class="headerlink" title="MyStack"></a>MyStack</h4><p>Stacks are first-in last-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyStack class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyStack class.</p>
+<p>MyQueue<br>Queues are first-in first-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyQueue class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyQueue class.</p>
+<p>Files to Submit</p>
+<ol>
+<li>MyStack.java</li>
+<li>MyQueue.java</li>
+<li>HW3.txt</li>
+</ol>
+<h4 id="Part-3-Duplicate-Key-BST"><a href="#Part-3-Duplicate-Key-BST" class="headerlink" title="Part 3 - Duplicate Key BST"></a>Part 3 - Duplicate Key BST</h4><p>Most often it is assumed that a binary search tree does not contain duplicate keys. However, sometimes we need to deal with problems that contain duplicates. For example, a database of car services might contain one record for each service for every car; so if a car got serviced twice, there will be two records with the same key (car’s VIN) and different dates (service dates). To accomplish this, we might use a data structure called a “BST with duplicates”, or BSTDup.</p>
+<p>Your node class might look something like this:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> class BSTDupNode &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">key</span>;</span><br><span class="line">  <span class="keyword">private</span> ArrayList&lt;T&gt; elements;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode left;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode right;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Constructor</span></span><br><span class="line">  <span class="keyword">public</span> BSTDupNode(<span class="built_in">int</span> <span class="built_in">key</span>, T elem, BSTDupNode left, BSTDupNode right) &#123;</span><br><span class="line">    <span class="keyword">this</span>.<span class="built_in">key</span> = <span class="built_in">key</span>;</span><br><span class="line">    elements = <span class="keyword">new</span> ArrayList&lt;T&gt;();</span><br><span class="line">    elements.<span class="built_in">add</span>(elem);</span><br><span class="line">    <span class="keyword">this</span>.left = left;</span><br><span class="line">    <span class="keyword">this</span>.right = right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Think about what other methods you might need...</span></span><br><span class="line"><span class="comment">   * accessors (data, key, left, right)</span></span><br><span class="line"><span class="comment">   * mutators (add/remove data, updates children)</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>The image on the left is an example of just the tree structure, and each node displays only the key. The image on the right is an example of how your BST would actually be used, in this case to store the names of sweets. For your implementation, nodes will contain an ArrayList of elements, rather than a single one. That allows the BST structure to be preserved, while still allowing duplicate keys.</p>
 
       
     </div>
@@ -402,8 +403,6 @@
           
             <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
-          
         </div>
       
 
@@ -415,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CIS22A-Nested-Loops.html" rel="next" title="CIS22A-Nested-Loops">
-                <i class="fa fa-chevron-left"></i> CIS22A-Nested-Loops
+              <a href="/CSCI112-Connect4.html" rel="next" title="Java代写CSCI112-Connect4">
+                <i class="fa fa-chevron-left"></i> Java代写CSCI112-Connect4
               </a>
             
           </div>
@@ -424,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/PSCB57-Own-Small-Project.html" rel="prev" title="PSCB57-Own-Small-Project">
-                PSCB57-Own-Small-Project <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-Double-Ended-Singly-Linked-List"><span class="nav-number">2.</span> <span class="nav-text">Part 1 - Double Ended Singly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DoubleEndedLLTester"><span class="nav-number">2.1.</span> <span class="nav-text">DoubleEndedLLTester</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DoubleEndedLL"><span class="nav-number">2.2.</span> <span class="nav-text">DoubleEndedLL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-2-Implementing-Stacks-and-Queues"><span class="nav-number">2.3.</span> <span class="nav-text">Part 2 - Implementing Stacks and Queues</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyStack"><span class="nav-number">2.4.</span> <span class="nav-text">MyStack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-3-Duplicate-Key-BST"><span class="nav-number">2.5.</span> <span class="nav-text">Part 3 - Duplicate Key BST</span></a></li></ol></li></ol></div>
             
 
           </div>
