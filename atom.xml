@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-08-31T00:47:13.178Z</updated>
+  <updated>2021-08-31T00:52:06.554Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS9223-Programming-for-Big-Data</title>
+    <link href="https://tk1307993.coding.me/CS9223-Programming-for-Big-Data.html"/>
+    <id>https://tk1307993.coding.me/CS9223-Programming-for-Big-Data.html</id>
+    <published>2021-09-01T01:17:15.000Z</published>
+    <updated>2021-08-31T00:52:06.554Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>You must use Hadoop (Map/Reduce Java or Python, or Pig, with Spark as extra credit) to analyze the Yelp data challenge: <a href="https://www.yelp.com/dataset_challenge" target="_blank" rel="noopener">https://www.yelp.com/dataset_challenge</a>.</p><p>Specifically, you must provide the answers (and code) to the 5 following questions:</p><ol><li><p>Summarize the number of reviews by US city, by business category.</p></li><li><p>Rank all cities by # of stars descending, for each category</p></li><li><p>is the average rank (# stars) for businesses within 20 miles of the University of Wisconsin Madison, by type of business?<br>Center: University of Wisconsin - Madison<br>Latitude: 43 04’ 30” N, Longitude: 89 25’ 2” W<br>Decimal Degrees: Latitude: 43.0766, Longitude: -89.4125<br>The bounding box for this problem is ~20 miles, which we will loosely define as 20 minutes. So the bounding box is a square box, 40 minutes long each side (of longitude and latitude), with UWM at the center.</p></li><li><p>Rank reviewers by number of reviews. For the top 10 reviewers, show their average number of stars, by category.</p></li><li><p>For the top 10 and bottom 10 food business near UWM (in terms of stars), summarize star rating for reviews in June through December.</p></li></ol><h3 id="Grading-total-150-points"><a href="#Grading-total-150-points" class="headerlink" title="Grading (total 150 points)"></a>Grading (total 150 points)</h3><p>This assignment MUST be completed on your own. Duplicate assignments will be flagged and failed.</p><ul><li>25 points each question (1-5) = 125 points</li><li>15 points for the submission report and presentation quality</li><li>10 points for code quality</li></ul><h3 id="Extra-Points-50-extra-points"><a href="#Extra-Points-50-extra-points" class="headerlink" title="Extra Points (50 extra points)"></a>Extra Points (50 extra points)</h3><ol><li>20 points: complete the assignment in Apache Spark and review the difference in approaches (you must still complete the original exercise).</li><li>10 points: provide suitable statistical analysis of your results with R.</li><li>20 points: provide visualizations for results (distributions, graphs, maps, in R).</li></ol><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>In a single zip package, submit:</p><ul><li>report, max 10 pages.</li><li>runnable code for all questions, clearly labeled (no dataset).</li><li>results data for each question.</li></ul><h3 id="Hints-References"><a href="#Hints-References" class="headerlink" title="Hints/References"></a>Hints/References</h3><ul><li>Apache Spark: <a href="http://spark.apache.org/" target="_blank" rel="noopener">http://spark.apache.org/</a></li><li>Pig JSON loader: <a href="https://pig.apache.org/docs/r0.10.0/func.html#jsonloadstore" target="_blank" rel="noopener">https://pig.apache.org/docs/r0.10.0/func.html#jsonloadstore</a></li><li>Pig Latin: <a href="http://infolab.stanford.edu/~olston/publications/sigmod08.pdf" target="_blank" rel="noopener">http://infolab.stanford.edu/~olston/publications/sigmod08.pdf</a></li><li>R maps - leaflet: <a href="https://rstudio.github.io/leaflet/" target="_blank" rel="noopener">https://rstudio.github.io/leaflet/</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      用Hadoop代写大数据作业，对给定的Dataset进行分析。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Hadoop Mapreduce Spark" scheme="https://tk1307993.coding.me/tags/Hadoop-Mapreduce-Spark/"/>
+    
+  </entry>
   
   <entry>
     <title>FIT1043-Visualising-Airport-Traffic</title>
@@ -439,30 +461,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python代写：DE2-Software-Information-System</title>
-    <link href="https://tk1307993.coding.me/DE2-Software-Information-System.html"/>
-    <id>https://tk1307993.coding.me/DE2-Software-Information-System.html</id>
-    <published>2020-08-26T03:32:12.000Z</published>
-    <updated>2020-08-26T10:04:10.231Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Individual-assignment-brief"><a href="#Individual-assignment-brief" class="headerlink" title="Individual assignment brief"></a>Individual assignment brief</h3><h4 id="Individual-assignment-description"><a href="#Individual-assignment-description" class="headerlink" title="Individual assignment description"></a>Individual assignment description</h4><p>The individual assignment for Computing 2 is intended to test your ability to create a complete software solution from scratch based on an initial specification.</p><p>Your task is to design and implement a complete software information system, capable of storing and processing information about a particular topic (domain). The topic for each individual assignment will be chosen by each student and can be anything, such as: books in a library, movies in a cinema, products in a shop, etc. Each student must have a unique topic, i.e. there can be no duplicate topics!</p><p>Please read carefully the initial requirements specification given below for the software information system you need to build. You will need to expand and adapt these to the particular topic you have chosen. To be successful at this assignment, you need to follow the best practices in software systems design and software project management and to implement all necessary modules of the system.</p><h4 id="Requirements-specification"><a href="#Requirements-specification" class="headerlink" title="Requirements specification"></a>Requirements specification</h4><p>This is the initial requirements specification for the software information system:</p><ol><li>Provide a way to input new data in the system (e.g. register new books).</li><li>Provide a storage back-end using one or more of the data structures we studied in Computing 2 (e.g. binary search trees, hash tables, etc.).</li><li>Provide a way to save the data from memory into an external file.</li><li>Provide a way to load the data from an external file into memory.</li><li>Provide an interface for visualization of the data (could be just printed on the console).</li><li>Provide a way to search through the data by inputting a key.</li><li>Provide a way to sort the data by some key.</li><li>Provide a way to organize the data in a suitable way (e.g. group the data in categories, genres, etc.)</li><li>Provide a way to calculate statistics on the data, such as calculating mean values, finding min and max values, etc.</li><li>Provide data verification and user fool-proofing, e.g. by detecting wrong input and asking to re-enter the input, rather than crashing with an error.</li></ol><h4 id="Assessment"><a href="#Assessment" class="headerlink" title="Assessment"></a>Assessment</h4><p>This individual assignment accounts for 30% of the final grade for Computing 2.</p><p>It is due in Week 11;</p>]]></content>
-    
-    <summary type="html">
-    
-      代写一个信息系统，需要用到数据结构中的binary search tree, hash tables等等。
-    
-    </summary>
-    
-      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
     
   </entry>
   
