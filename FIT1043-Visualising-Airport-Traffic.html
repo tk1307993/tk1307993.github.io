@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta name="description" content="代写Python作业，使用Motion Chart将数据可视化。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSCA08-UnitTests">
-<meta property="og:url" content="https://tk1307993.coding.me/CSCA08-UnitTests.html">
+<meta property="og:title" content="FIT1043-Visualising-Airport-Traffic">
+<meta property="og:url" content="https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta property="og:description" content="代写Python作业，使用Motion Chart将数据可视化。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-25T01:40:58.857Z">
+<meta property="og:updated_time" content="2021-08-31T00:47:13.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSCA08-UnitTests">
-<meta name="twitter:description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta name="twitter:title" content="FIT1043-Visualising-Airport-Traffic">
+<meta name="twitter:description" content="代写Python作业，使用Motion Chart将数据可视化。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSCA08-UnitTests.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html"/>
 
 
 
 
 
-  <title>CSCA08-UnitTests | 留学生CS编程作业代写</title>
+  <title>FIT1043-Visualising-Airport-Traffic | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCA08-UnitTests.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CSCA08-UnitTests</h2>
+          <h2 class="post-title" itemprop="name headline">FIT1043-Visualising-Airport-Traffic</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-25T09:39:39+08:00">
-                2020-03-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-08-31T09:17:15+08:00">
+                2021-08-31
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。
+                  代写Python作业，使用Motion Chart将数据可视化。
               </div>
           
 
@@ -360,13 +360,46 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In our final exercise of the term, we’re going to be practicing writing UnitTests. The structure of the tests isn’t really as important as the testing plan, but we get to test both.</p>
-<h3 id="What-to-Test"><a href="#What-to-Test" class="headerlink" title="What to Test"></a>What to Test</h3><p>We wanted to come up with a function for you to test that had a bit of everything: loops, selection, lists, strings, dictionaries, objects, etc. But we had a bit of a conundrum. We wanted something complicated enough to be interesting, but knew you were busy with your assignment, and didn’t want everyone to have to spend lots of time writing a new function in order to test it.</p>
-<p>That’s when it hit us. You’re already writing a function that you’ll probably want to test anyway… cartesian product! It’s got everything we need, you already have to write it, and now it can help you test your own code for A2. (A pretty smart move if I do say so myself).</p>
-<h3 id="How-to-Start"><a href="#How-to-Start" class="headerlink" title="How to Start"></a>How to Start</h3><p>Before you start writing any code, you should think about coverage testing, and how we came up with a test plan in lecture. Figure out all of the parameters, and the important ranges they fall into. Then write one test for each possible combination of ranges. The goal here is to find one example test case for all possible regions of your testing space.</p>
-<p>Most of your actual tests will probably involve code that looks like this (now do you see why we made you write set dict and get dict?<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">d1 = <span class="meta">&#123;...&#125;</span></span><br><span class="line">d2 = <span class="meta">&#123;...&#125;</span></span><br><span class="line">t1 = <span class="type">Table</span>()</span><br><span class="line">t2 = <span class="type">Table</span>()</span><br><span class="line">t1.set_dict(d1)</span><br><span class="line">t2.set_dict(d2)</span><br><span class="line">result_table = squeal.cartesian_product(t1, t2)</span><br><span class="line">result_dict = result_table.get_dict()</span><br><span class="line">expected_dict = <span class="meta">&#123;...&#125;</span></span><br><span class="line">self.assertEqual(result_dict, expected_dict)</span><br></pre></td></tr></table></figure></p>
-<h3 id="What-to-Do"><a href="#What-to-Do" class="headerlink" title="What to Do"></a>What to Do</h3><p>In a file called ex10.py, you should write a UnitTest to thoroughly test cartesian product. Your tests will actually be run on a version of the code that I have written. Therefore, you will be doing black box testing (you don’t know if I implemented the cartesian product or the Table class in the same way you will… in fact, you can bet that I probably won’t). My cartesian product function will be in a file called squeal.py, and my Table class will be in a file called database.py. Both will be placed into the same directory as your UnitTest. We’ve provided you with some starter code, just to make sure you can access everything correctly.</p>
-<h3 id="What-to-Submit"><a href="#What-to-Submit" class="headerlink" title="What to Submit"></a>What to Submit</h3><p>Submit your ex10.py file to MarkUs as usual. Your UnitTest methods do not need any DocStrings, and unless you’re doing something particularly unusual, you probably don’t need any internal comments either. However, your method names and error messages should be descriptive enough to properly explain what each test case does and why it’s useful. Remember that writing frivolous test cases is no better than missing useful ones.</p>
+        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The aim of this assignment is to investigate and visualize data. In particular, we will identify trends, gain insights from how those trends change over time.</p>
+<p>The data we will use contains Airport traffic data and comes from the Australian Bureau of Infrastructure, Transport and Regional Economics.</p>
+<ul>
+<li><p>The CSV file contains 30 years worth of monthly data listing international air traffic volumes in terms of passengers, freight and mail, to and from Australian airports.</p>
+</li>
+<li><p>The file is available on Moodle and publicly available from data.gov.au</p>
+</li>
+</ul>
+<h3 id="Hand-in-Requirements"><a href="#Hand-in-Requirements" class="headerlink" title="Hand-in Requirements"></a>Hand-in Requirements</h3><p>Please hand in a PDF file containing your answers to all the questions.</p>
+<ul>
+<li><p>You can use Word or other word processing software to format your submission. Just save the final copy to a PDF before submitting.</p>
+</li>
+<li><p>Make sure to include screenshots/images of the graphs you generate in order to justify your answers to all the questions. (You will need to use screen-capture functionality to create appropriate images.)</p>
+</li>
+<li><p>We would like to see the Python code you write to format the data. Please include a copy your Python code in your submission, (either submitting scripts / Jupiter notebooks, or copying the code into your report).</p>
+</li>
+</ul>
+<h3 id="Python-Availability"><a href="#Python-Availability" class="headerlink" title="Python Availability"></a>Python Availability</h3><p>You will need to use Python to complete the assignment. You can do this by either:</p>
+<p>1) running a Jupyter Notebook on a computer in the labs; or<br>2) installing Python (we recommend Anaconda) on your own machine.</p>
+<h3 id="Assignment-Tasks"><a href="#Assignment-Tasks" class="headerlink" title="Assignment Tasks"></a>Assignment Tasks</h3><p>This assignment involves building a visualisation using Motion Chart and then answering a series of questions about the data.</p>
+<h3 id="Visualising-Airport-Traffic"><a href="#Visualising-Airport-Traffic" class="headerlink" title="Visualising Airport Traffic"></a>Visualising Airport Traffic</h3><p>The aim of the first part of the assignment is to build a Motion Chart showing passenger, freight and mail quantities over time for four different airports in Australia (Melbourne, Sydney, Brisbane and Perth). More specifically, you should:</p>
+<ul>
+<li><p>Generate a Motion chart with Passengers_Total on the x-axis, Freight_Total_(tonnes) on the y-axis and where the color and size of the bubbles is given by the Mail_Total_(tonnes).</p>
+</li>
+<li><p>Note that the CSV file is both too big and not in the right format to visualise directly, so you will first need to aggregate the data using Python at both the ‘Year’ and ‘AustralianPort’ level. (Code to help you do this was discussed during the lectures.) You need to select only four Australian airports before the aggregation.</p>
+</li>
+<li><p>You can then output the data as a CSV file, which you can use in order to create the appropriate visualisation (see Activity: Motion Chart - Motion Chart in Python in Alexandria).</p>
+</li>
+</ul>
+<p>Having graphed the data as a Motion Chart, answer the following questions:</p>
+<ol>
+<li><p>Why are the values lower in 2016 than they were in 2015?</p>
+</li>
+<li><p>Which city has the largest number of international air passengers traveling through it in 2015?</p>
+</li>
+<li><p>In which year did Brisbane have almost the same number of passenger numbers as Melbourne?</p>
+</li>
+<li><p>(Bonus question) Has the number of passengers travelling through Sydney airport ever decreased from one year to the next? If so, when did it happen? Any idea why that might have occurred?</p>
+</li>
+</ol>
 
       
     </div>
@@ -397,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSCA08-Inheritance.html" rel="next" title="CSCA08-Inheritance">
-                <i class="fa fa-chevron-left"></i> CSCA08-Inheritance
+              <a href="/CS313-Zombiquarium.html" rel="next" title="CS313-Zombiquarium">
+                <i class="fa fa-chevron-left"></i> CS313-Zombiquarium
               </a>
             
           </div>
@@ -406,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSCI4150-File-System-Server.html" rel="prev" title="CSCI4150-File-System-Server">
-                CSCI4150-File-System-Server <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Test"><span class="nav-number">2.</span> <span class="nav-text">What to Test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Start"><span class="nav-number">3.</span> <span class="nav-text">How to Start</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Do"><span class="nav-number">4.</span> <span class="nav-text">What to Do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Submit"><span class="nav-number">5.</span> <span class="nav-text">What to Submit</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purpose"><span class="nav-number">1.</span> <span class="nav-text">Purpose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hand-in-Requirements"><span class="nav-number">2.</span> <span class="nav-text">Hand-in Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Availability"><span class="nav-number">3.</span> <span class="nav-text">Python Availability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Tasks"><span class="nav-number">4.</span> <span class="nav-text">Assignment Tasks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visualising-Airport-Traffic"><span class="nav-number">5.</span> <span class="nav-text">Visualising Airport Traffic</span></a></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-08-26T07:45:19.561Z</updated>
+  <updated>2021-08-31T00:47:13.178Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FIT1043-Visualising-Airport-Traffic</title>
+    <link href="https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html"/>
+    <id>https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html</id>
+    <published>2021-08-31T01:17:15.000Z</published>
+    <updated>2021-08-31T00:47:13.178Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The aim of this assignment is to investigate and visualize data. In particular, we will identify trends, gain insights from how those trends change over time.</p><p>The data we will use contains Airport traffic data and comes from the Australian Bureau of Infrastructure, Transport and Regional Economics.</p><ul><li><p>The CSV file contains 30 years worth of monthly data listing international air traffic volumes in terms of passengers, freight and mail, to and from Australian airports.</p></li><li><p>The file is available on Moodle and publicly available from data.gov.au</p></li></ul><h3 id="Hand-in-Requirements"><a href="#Hand-in-Requirements" class="headerlink" title="Hand-in Requirements"></a>Hand-in Requirements</h3><p>Please hand in a PDF file containing your answers to all the questions.</p><ul><li><p>You can use Word or other word processing software to format your submission. Just save the final copy to a PDF before submitting.</p></li><li><p>Make sure to include screenshots/images of the graphs you generate in order to justify your answers to all the questions. (You will need to use screen-capture functionality to create appropriate images.)</p></li><li><p>We would like to see the Python code you write to format the data. Please include a copy your Python code in your submission, (either submitting scripts / Jupiter notebooks, or copying the code into your report).</p></li></ul><h3 id="Python-Availability"><a href="#Python-Availability" class="headerlink" title="Python Availability"></a>Python Availability</h3><p>You will need to use Python to complete the assignment. You can do this by either:</p><p>1) running a Jupyter Notebook on a computer in the labs; or<br>2) installing Python (we recommend Anaconda) on your own machine.</p><h3 id="Assignment-Tasks"><a href="#Assignment-Tasks" class="headerlink" title="Assignment Tasks"></a>Assignment Tasks</h3><p>This assignment involves building a visualisation using Motion Chart and then answering a series of questions about the data.</p><h3 id="Visualising-Airport-Traffic"><a href="#Visualising-Airport-Traffic" class="headerlink" title="Visualising Airport Traffic"></a>Visualising Airport Traffic</h3><p>The aim of the first part of the assignment is to build a Motion Chart showing passenger, freight and mail quantities over time for four different airports in Australia (Melbourne, Sydney, Brisbane and Perth). More specifically, you should:</p><ul><li><p>Generate a Motion chart with Passengers_Total on the x-axis, Freight_Total_(tonnes) on the y-axis and where the color and size of the bubbles is given by the Mail_Total_(tonnes).</p></li><li><p>Note that the CSV file is both too big and not in the right format to visualise directly, so you will first need to aggregate the data using Python at both the ‘Year’ and ‘AustralianPort’ level. (Code to help you do this was discussed during the lectures.) You need to select only four Australian airports before the aggregation.</p></li><li><p>You can then output the data as a CSV file, which you can use in order to create the appropriate visualisation (see Activity: Motion Chart - Motion Chart in Python in Alexandria).</p></li></ul><p>Having graphed the data as a Motion Chart, answer the following questions:</p><ol><li><p>Why are the values lower in 2016 than they were in 2015?</p></li><li><p>Which city has the largest number of international air passengers traveling through it in 2015?</p></li><li><p>In which year did Brisbane have almost the same number of passenger numbers as Melbourne?</p></li><li><p>(Bonus question) Has the number of passengers travelling through Sydney airport ever decreased from one year to the next? If so, when did it happen? Any idea why that might have occurred?</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      代写Python作业，使用Motion Chart将数据可视化。
+    
+    </summary>
+    
+      <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CS313-Zombiquarium</title>
@@ -436,30 +458,6 @@
     </summary>
     
       <category term="Python" scheme="https://tk1307993.coding.me/categories/Python/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-      <category term="Third-party" scheme="https://tk1307993.coding.me/tags/Third-party/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS1070-Game-of-Life</title>
-    <link href="https://tk1307993.coding.me/CS1070-Game-of-Life.html"/>
-    <id>https://tk1307993.coding.me/CS1070-Game-of-Life.html</id>
-    <published>2020-08-23T03:32:12.000Z</published>
-    <updated>2020-08-23T00:44:47.468Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Design the Game of Life (Chapter 7, Programming Project13) using classes. You will look up the rules of the game from the textbook, but ALL implementation detail listed here MUST be followed.</p><p>Use SFML for your Graphical User Interface. const int MAX = 80; This is the size of the grid.</p><p>You will need a Grid class:</p><p>private member variable: A two dimensional array (MAX byMAX) of integers that will be used to store the live cells.</p><p>You will need at least the following functions:</p><ul><li>Grid() Constructor that will initialize your private member variable.</li><li>SetAlive(i, j) and Kill(i, j) that will be used as mutators for the class.</li><li>IsAlive(i, j) is a boolean function that will tell you if a cell is alive or dead.</li><li>CountNeighbors(i, j) is an integer function that will tell you the number of alive cells for a given cell.</li><li>PopulateRandom(r) is a function that will add r live cells to your grid in random locations.</li><li>Clear() Will clear the grid.</li><li>Save(char leName[]) will save the current conguration of the grid into a text le.</li><li>Load(char leName[]) will load the saved conguration from a text le.</li><li>Step() is a function that will generate the next generation on the grid.</li><li>Show() will print the grid on the screen.</li></ul><p>The user will be given the following options to control the program:</p><ul><li>Clear: To clear the grid</li><li>Random: to place 50 random live cells on the grid</li><li>Step: To generate the next generation.</li><li>Go: To generate generation after generation without stopping for input.</li><li>Save: To Save current conguration.</li><li>Load: To load a saved conguration.</li></ul><p>A text panel on the right side of the grid will give information about the number of live cells, the number of generations since the start of the program, name of the e the conguration is being saved, etc.</p><p>Once you have implemented these features, you might want to start working on giving the user the ability to turn individual cells on and off and other features like speed, user selectable le names, etc.</p><h3 id="You-will-submit"><a href="#You-will-submit" class="headerlink" title="You will submit"></a>You will submit</h3><ul><li>FULLY COMMENTED code.</li><li>a header le named notes.h that explains in detail the features of your program and how they were implemented. What things you had to consider. What math, physics you had to use. Everything a reviewer should know when they are looking at your program. This is not an easy task and is very time consuming. Do not rush this!</li><li>a video (screen capture) where you play your project. Talk about what it does. Once again, go over the challenges you had to overcome and how you did that. After a person listens to your video, they should have a feeling they understand your program.</li></ul><p>Upload the link to Youtube and paste the link in the assignment page. You can try to upload a copy to Canvas, but I don’t promise this will work.</p>]]></content>
-    
-    <summary type="html">
-    
-      使用三方库SFML作为GUI，代写Game of Life这个游戏。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
