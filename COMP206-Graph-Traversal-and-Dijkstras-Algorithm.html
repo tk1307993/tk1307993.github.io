@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Operating System," />
+  <meta name="keywords" content="Data Structure,Algorithm," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
-<meta name="keywords" content="Algorithm,Operating System">
+<meta name="description" content="代写Dijkstra算法，对地图上的任意两点，求最短路径。">
+<meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OS代写：COMP3080-Memory-Allocation">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
+<meta property="og:title" content="COMP206-Graph-Traversal-and-Dijkstras-Algorithm">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
+<meta property="og:description" content="代写Dijkstra算法，对地图上的任意两点，求最短路径。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T05:46:00.378Z">
+<meta property="og:updated_time" content="2021-09-17T01:48:12.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OS代写：COMP3080-Memory-Allocation">
-<meta name="twitter:description" content="本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.">
+<meta name="twitter:title" content="COMP206-Graph-Traversal-and-Dijkstras-Algorithm">
+<meta name="twitter:description" content="代写Dijkstra算法，对地图上的任意两点，求最短路径。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html"/>
 
 
 
 
 
-  <title>OS代写：COMP3080-Memory-Allocation | 留学生CS编程作业代写</title>
+  <title>COMP206-Graph-Traversal-and-Dijkstras-Algorithm | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3080-Memory-Allocation.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OS代写：COMP3080-Memory-Allocation</h2>
+          <h2 class="post-title" itemprop="name headline">COMP206-Graph-Traversal-and-Dijkstras-Algorithm</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T13:43:35+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-17T09:45:50+08:00">
+                2021-09-17
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  本次作业要求实现内存分配(Memory Allocation)的三种算法：First fit, Best fit和Buddy memory allocation.
+                  代写Dijkstra算法，对地图上的任意两点，求最短路径。
               </div>
           
 
@@ -360,24 +360,27 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>The program you will write will read a file which contains memory allocation requests and memory free operations. The allocation and free operations will be made against an initially empty fixed sized free memory pool. The program must support three allocation policies:</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this project you will use the Graph ADT and Dijkstra’s algorithm to compute the length of the shortest path (number of nodes visited), and for extra credit the path with the fewest turns. The input graphs are actual street map of Manhattan NY and Manhattan Kansas</p>
+<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The goal of this programming project is for you to master (or at least get practice on) the following tasks:</p>
 <ul>
-<li>First fit linked list</li>
-<li>Best fit linked list</li>
-<li>Buddy system power of 2 block allocation (using a minimum allocation of 32 bytes)</li>
+<li>Establishing a Graph ADT from a real life application</li>
+<li>Using Dijkstra’s algorithm to find length of a path.</li>
+<li>Inputting user origination and destination information</li>
+<li>working with existing code</li>
 </ul>
-<h4 id="Your-program-must"><a href="#Your-program-must" class="headerlink" title="Your program must:"></a>Your program must:</h4><ol>
-<li>Accept three command line arguments, such that argv[1] is the policy to use, argv[2] is the total memory free pool size and argv[3] is the name of the file containing the allocation and free requests. The memory size of the total free pool for the main test cases will be 1 MByte, and 512KB. You may use other sizes in any additional experiments you attempt, but make sure you describe your configuration and results in your write-up.</li>
-<li>Read each line of the input file in argv[3] and carry out one of the following actions:</li>
-<li>Make a memory allocation if enough memory is available to satisfy an allocation request.</li>
-<li>Return memory to a linked list and carry out any coalescing (buddying up) required.</li>
-<li>Refuse the allocation only if there is not enough memory to satisfy it in any available free partition. Refused requests are remembered, so that you know to take no action when you see the corresponding free operation in the input stream. (For each alloc there is a free.)</li>
-<li>Generate one line of output for each line of input, providing information about which request this is, how the request was handled, what the total amount of free space after the request is, and what the size of the largest free partition after the request is. Sample input and output files are shown below.</li>
-<li>So you should submit 6 files, each containing your output for the 1MB and 512KB cases for all three algorithms, and a final summary in your write-up that provides the results of each test in a format similar to:<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">490</span> of <span class="number">500</span></span><br><span class="line"><span class="keyword">First</span> <span class="keyword">Fit</span> <span class="number">512</span>KB: <span class="keyword">Total</span> Allocations <span class="number">374</span> of <span class="number">500</span></span><br><span class="line">Best <span class="keyword">Fit</span> <span class="number">1</span>MB: <span class="keyword">Total</span> Allocations <span class="number">492</span> of <span class="number">500</span></span><br></pre></td></tr></table></figure>
-</li>
+<h3 id="Helpful-code"><a href="#Helpful-code" class="headerlink" title="Helpful code"></a>Helpful code</h3><p>The main class that will call methods the Graph ADT in chapter 10 which are also provided attached to the assignment. This java project ProgProject4 provides and application that creates a graph using the books graph ADT classes. There is also a package that contains a class to execute Dijkstra’s algorithm.</p>
+<h3 id="Project-Steps"><a href="#Project-Steps" class="headerlink" title="Project Steps"></a>Project Steps</h3><ol>
+<li>Create a graph based upon the given street map. Each expected vertex in your graph is represented by a blue dot. The blue dots represent a traffic intersection. Your vertex should be an instance of an Intersection Class, not a String as used in most class examples. Your program should read an input file containing all information about the intersection including all streets that meet at that intersection.</li>
+<li>Traverse through the graph and find the length, or the number of nodes , of the shortest paths for the origination to destination path.</li>
+<li>For 5 points extra credit, find the path with the shortest number of turns. A turn is defined as a path of 3 vertices where the edge street names are not the same.<br>Hint - for fewest number of turns, store the name of the street of the edge. A turn is when a vertex on the path is reached by 2 edges with different names.</li>
 </ol>
-<h3 id="INPUT-FORMAT"><a href="#INPUT-FORMAT" class="headerlink" title="INPUT FORMAT:"></a>INPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SERIAL-NUM   REQUEST   SIZE   SERIAL-MATCH</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span></span><br><span class="line">    <span class="number">4</span>         free                  <span class="number">2</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span></span><br><span class="line">    <span class="number">6</span>         free                  <span class="number">1</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span></span><br></pre></td></tr></table></figure>
-<h3 id="OUTPUT-FORMAT"><a href="#OUTPUT-FORMAT" class="headerlink" title="OUTPUT FORMAT:"></a>OUTPUT FORMAT:</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MANAGEMENT POLICY = First Fit       POOL SIZE = <span class="number">512</span> KB</span><br><span class="line">SERIAL-NUM   REQUEST   SIZE   ALLOC-ADDR   TOTAL-FREE   LARGEST-PART</span><br><span class="line">    <span class="number">1</span>         alloc    <span class="number">20000</span>           <span class="number">0</span>     <span class="number">504288</span>        <span class="number">504288</span></span><br><span class="line">    <span class="number">2</span>         alloc   <span class="number">100000</span>       <span class="number">20000</span>     <span class="number">404288</span>        <span class="number">404288</span></span><br><span class="line">    <span class="number">3</span>         alloc     <span class="number">5050</span>      <span class="number">120000</span>     <span class="number">399238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">4</span>         free    <span class="number">100000</span>                 <span class="number">499238</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">5</span>         alloc    <span class="number">70500</span>       <span class="number">20000</span>     <span class="number">428738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">6</span>         free     <span class="number">20000</span>           <span class="number">0</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br><span class="line">    <span class="number">7</span>         alloc   <span class="number">400000</span>          <span class="number">-1</span>     <span class="number">448738</span>        <span class="number">399238</span></span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>When inputting an intersection, always assume street names are sorted, and only the street name (not ave or road) is provided.</p>
+<p>Ignore One Way arrows on maps</p>
+<p>Expected Results:</p>
+<p>Map 1: Manhattan Kansas<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Input</span>:</span><br><span class="line"><span class="attribute">Origination</span>:   Hudson,Kimball     <span class="attribute">Destination</span>:  Claflin,Denison </span><br><span class="line"><span class="attribute">Output</span>:</span><br><span class="line">Minimum Path <span class="attribute">Length</span>: <span class="number">6</span>    Minimum <span class="attribute">Turns</span>: <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">Input</span>:</span><br><span class="line"><span class="attribute">Origination</span>:   College     <span class="attribute">Destination</span>:  Claflin,NManhattan</span><br><span class="line"><span class="attribute">Output</span>:</span><br><span class="line">Minimum Path <span class="attribute">Length</span>: <span class="number">4</span>    Minimum <span class="attribute">Turns</span>: <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>Map 2: Manhattan New York<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span></span><br><span class="line"><span class="string">Origination:</span> Canal, Spring     <span class="string">Destination:</span>  Spring, Thomson </span><br><span class="line"><span class="string">Output:</span></span><br><span class="line">Minimum Path <span class="string">Length:</span> <span class="number">5</span>    Minimum <span class="string">Turns:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>Since you will be using the ProgProject4 class provided, running your program should be produce a series of input prompts for the origination and destination locations.</p>
+
       
     </div>
     
@@ -394,9 +397,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
-            <a href="/tags/Operating-System/" rel="tag"># Operating System</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -409,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS204-B-tree.html" rel="next" title="C++代写：CS204-B-tree">
-                <i class="fa fa-chevron-left"></i> C++代写：CS204-B-tree
+              <a href="/CS322-Maze-Game.html" rel="next" title="CS322-Maze-Game">
+                <i class="fa fa-chevron-left"></i> CS322-Maze-Game
               </a>
             
           </div>
@@ -418,10 +421,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMS227-StringList.html" rel="prev" title="Java代写：COMS227-StringList">
-                Java代写：COMS227-StringList <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Your-program-must"><span class="nav-number">1.1.</span> <span class="nav-text">Your program must:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INPUT-FORMAT"><span class="nav-number">2.</span> <span class="nav-text">INPUT FORMAT:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OUTPUT-FORMAT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT FORMAT:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Helpful-code"><span class="nav-number">3.</span> <span class="nav-text">Helpful code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Steps"><span class="nav-number">4.</span> <span class="nav-text">Project Steps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">5.</span> <span class="nav-text">Notes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-the-program"><span class="nav-number">6.</span> <span class="nav-text">Running the program</span></a></li></ol></div>
             
 
           </div>
