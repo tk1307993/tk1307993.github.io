@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,Fundamentals," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="代写工程领域中的数值编程，解决实际的工程问题。">
+<meta name="keywords" content="Data Structure,Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ENGR30003-Numerical-Programming-for-Engineers">
+<meta property="og:url" content="https://tk1307993.coding.me/ENGR30003-Numerical-Programming-for-Engineers.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="代写工程领域中的数值编程，解决实际的工程问题。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-09-27T12:54:43.171Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ENGR30003-Numerical-Programming-for-Engineers">
+<meta name="twitter:description" content="代写工程领域中的数值编程，解决实际的工程问题。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/ENGR30003-Numerical-Programming-for-Engineers.html"/>
+
+
+
+
+
+  <title>ENGR30003-Numerical-Programming-for-Engineers | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ENGR30003-Numerical-Programming-for-Engineers.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">ENGR30003-Numerical-Programming-for-Engineers</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-27T20:51:43+08:00">
+                2021-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  代写工程领域中的数值编程，解决实际的工程问题。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h3><p>This project requires you to demonstrate your understanding of dynamic memory, linked lists and basic numerical computation. The key objective of this assignment is to solve a set of tasks which involve processing of flow around a flat plate.</p>
+<h3 id="Flow-Around-a-Flat-Plate"><a href="#Flow-Around-a-Flat-Plate" class="headerlink" title="Flow Around a Flat Plate"></a>Flow Around a Flat Plate</h3><p>In the field of Fluid Mechanics, flow around a flat plate perpendicular to the flow direction is still an active area of research. With advent of high performance computing and supercomputers, it has now become possible to look at this simple case with a greater deal of accuracy. The problem consists of a flat plate that is perpendicular to the main flow direction as shown in Figure 1 (left). The blue arrows indicate the direction of the flow while the shaded object is the flat plate. This generates a wake behind the flat plate and exerts a pressure force on the plate, similar to the force you feel when you hold your hand out in a moving car. At a given instant the flow behind the flat plate is extremely complex and a snapshot of the flow domain is shown in Figure 1 (right).</p>
+<h3 id="Working-with-the-Data"><a href="#Working-with-the-Data" class="headerlink" title="Working with the Data"></a>Working with the Data</h3><p>For this assignment, you will process the wake data from a flat plate case. The data has been provided to you in a CSV format file (flow data.csv) with the following form:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x, y, u, v</span><br><span class="line"><span class="number">10.028</span>, <span class="number">-20</span>, <span class="number">1.0079</span>, <span class="number">-0.0054866</span></span><br><span class="line"><span class="number">10.077</span>, <span class="number">-20</span>, <span class="number">1.0079</span>, <span class="number">-0.0054739</span></span><br><span class="line"><span class="number">10.126</span>, <span class="number">-20</span>, <span class="number">1.0079</span>, <span class="number">-0.0054612</span></span><br><span class="line"><span class="number">10.175</span>, <span class="number">-20</span>, <span class="number">1.0079</span>, <span class="number">-0.0054484</span></span><br><span class="line"><span class="number">10.224</span>, <span class="number">-20</span>, <span class="number">1.0079</span>, <span class="number">-0.0054357</span></span><br></pre></td></tr></table></figure></p>
+<p>Each line corresponds to a point in the flow domain with coordinates (x,y). The velocities at that given point in x and y are given by u and v respectively.</p>
+<h3 id="Processing-Tasks"><a href="#Processing-Tasks" class="headerlink" title="Processing Tasks"></a>Processing Tasks</h3><p>This assignment consists of four processing tasks which will be assessed independently. For each task you are to measure the run time it takes to complete the described task using your program (see program output below). Each of the four tasks must not require more than 60 seconds to run on dimefox. This means, in order to complete the task within this time limit, you may need to focus on the efficiency of your solution for each problem. Overall you have to write a single program, performing each of the four tasks sequentially. For each task you have to write your results to a file on the disk.</p>
+<h3 id="Task-1-Maximum-Velocity-Difference"><a href="#Task-1-Maximum-Velocity-Difference" class="headerlink" title="Task 1: Maximum Velocity Difference"></a>Task 1: Maximum Velocity Difference</h3><p>It is sometimes helpful to understand what’s the range of velocities in the flow. For the first task, you must compute the maximum velocity difference in u and v after coordinate x = 20. Specifically, you must output first the two points in the domain where the magnitude of the u velocity difference is maximum followed by the two points in the grid where the magnitude of the v velocity difference is maximum. For each set of points, the point with the maximum of the given velocity must be first followed by the point with the minimum velocity. The output should be to the file called task1.csv and should be formatted as below. There must be no blank spaces between the values and around the commas. Each value must be written to 6 decimal places.</p>
+<p>It is imperative that you write it out the way described above and shown below otherwise comparing your output to the solution would result in an error and you would lose marks.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">x</span>, <span class="selector-tag">y</span>, <span class="selector-tag">u</span>, <span class="selector-tag">v</span></span><br><span class="line">40<span class="selector-class">.512346</span>, <span class="selector-tag">-19</span><span class="selector-class">.595387</span>, 1<span class="selector-class">.007986</span>, <span class="selector-tag">-0</span><span class="selector-class">.001002</span></span><br><span class="line">66<span class="selector-class">.899192</span>, <span class="selector-tag">-0</span><span class="selector-class">.729056</span>, 0<span class="selector-class">.850117</span>, 0<span class="selector-class">.0005807</span></span><br><span class="line">69<span class="selector-class">.552467</span>, <span class="selector-tag">-0</span><span class="selector-class">.729056</span>, 0<span class="selector-class">.852483</span>, 0<span class="selector-class">.0004275</span></span><br><span class="line">60<span class="selector-class">.961891</span>, 0<span class="selector-class">.442134</span>, 0<span class="selector-class">.838355</span>, <span class="selector-tag">-0</span><span class="selector-class">.0006330</span></span><br></pre></td></tr></table></figure></p>
+<p>The above is an example of what the file should look like and is not the actual solution. Also note that the data provided in flow data.csv is not in any chronological order and you must efficiently look only at points where the value of x is greater than 20. You can use file io.c to understand how to output data to a file.</p>
+<h3 id="Task-2-Mean-Velocities-on-a-Coarser-Grid"><a href="#Task-2-Mean-Velocities-on-a-Coarser-Grid" class="headerlink" title="Task 2: Mean Velocities on a Coarser Grid"></a>Task 2: Mean Velocities on a Coarser Grid</h3><p>Each line in the file flow data.csv is a point location in the domain. These points when joined together will create a mesh (also called a grid). For this task, you will map these points onto a coarser grid, computing the new average coordinates (x,y) and the corresponding velocities (u,v). The flow domain can be thought as divided into a two dimensional grid such that each cell of the grid would contain multiple points, the number of which would depend on the cell upper and lower dimensions and the coordinates of the points. You would compute the average coordinates and velocities for each cell using the formula below for all points k within a given cell (this is for the x coordinate; same formula to be used for y, u, v).</p>
+<p>Finally, you must output the results of the averaged values and the score to task2.csv in descending order based on the score for each cell. An example of what the output should look like is shown below. There must be no blank spaces between the values and around the commas. Any float value must be written to 6 decimal places as shown:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">x</span>, <span class="selector-tag">y</span>, <span class="selector-tag">u</span>, <span class="selector-tag">v</span>, <span class="selector-tag">S</span></span><br><span class="line">20<span class="selector-class">.464390</span>, 19<span class="selector-class">.001188</span>, 1<span class="selector-class">.009472</span>, 0<span class="selector-class">.003123</span>, 3<span class="selector-class">.614885</span></span><br><span class="line">26<span class="selector-class">.493395</span>, <span class="selector-tag">-2</span><span class="selector-class">.917140</span>, 0<span class="selector-class">.950080</span>, 0<span class="selector-class">.003106</span>, 3<span class="selector-class">.564577</span></span><br><span class="line">26<span class="selector-class">.493395</span>, 2<span class="selector-class">.922365</span>, 0<span class="selector-class">.949606</span>, <span class="selector-tag">-0</span><span class="selector-class">.002937</span>, 3<span class="selector-class">.562721</span></span><br><span class="line">26<span class="selector-class">.493443</span>, 10<span class="selector-class">.961477</span>, 1<span class="selector-class">.016337</span>, 0<span class="selector-class">.001415</span>, 3<span class="selector-class">.544763</span></span><br><span class="line">26<span class="selector-class">.493443</span>, <span class="selector-tag">-11</span><span class="selector-class">.009443</span>, 1<span class="selector-class">.016268</span>, <span class="selector-tag">-0</span><span class="selector-class">.001393</span>, 3<span class="selector-class">.542255</span></span><br><span class="line">23<span class="selector-class">.490141</span>, <span class="selector-tag">-16</span><span class="selector-class">.954090</span>, 1<span class="selector-class">.010923</span>, <span class="selector-tag">-0</span><span class="selector-class">.002471</span>, 3<span class="selector-class">.489632</span></span><br><span class="line">23<span class="selector-class">.490141</span>, 16<span class="selector-class">.966158</span>, 1<span class="selector-class">.010908</span>, 0<span class="selector-class">.002496</span>, 3<span class="selector-class">.488729</span></span><br></pre></td></tr></table></figure></p>
+<p>The size of the grid (number of cells in each direction) must be an input parameter, allowing the code to run different grid sizes. Your implementation would be checked for the grid resolution of 24 i.e. 24 cells in x and 24 cells in y. The domain extent for this coarse grid in x and y is 10 to 70 units and -20 to 20 units respectively. An example of the coarse grid is shown in Figure 2 (left). The 24 cells in x direction would span from -10 to 70 units while the 24 cells in y direction would span -20 to 20 units. Also shown is an example of a cell within this grid. As can be seen, the cell is of width x and height y and the black dots show the points in the original grid. Once you do the averaging for all these points, you will end up with one average point (shown in red).</p>
+<h3 id="Task-3-Velocity-and-It’s-Statistics"><a href="#Task-3-Velocity-and-It’s-Statistics" class="headerlink" title="Task 3: Velocity and It’s Statistics"></a>Task 3: Velocity and It’s Statistics</h3><p>For this task, you have to compute the threshold statistics of u velocity magnitudes i.e. how many points in the domain have the magnitude of u under 0.5, under 0.6 and so on. Then you must compute the % of points under each band. An example of this is given below.<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">threshold, points, percentage</span><br><span class="line"><span class="number">0.500000</span>, <span class="number">126</span>, <span class="number">11.012561</span></span><br><span class="line"><span class="number">0.600000</span>, <span class="number">256</span>, <span class="number">22.536942</span></span><br><span class="line"><span class="number">0.700000</span>, <span class="number">348</span>, <span class="number">30.613564</span></span><br><span class="line"><span class="number">0.800000</span>, <span class="number">582</span>, <span class="number">51.300236</span></span><br><span class="line"><span class="number">0.900000</span>, <span class="number">810</span>, <span class="number">71.352145</span></span><br><span class="line"><span class="number">1.000000</span>, <span class="number">902</span>, <span class="number">79.496213</span></span><br><span class="line"><span class="number">1.100000</span>, <span class="number">1136</span>, <span class="number">100.000000</span></span><br></pre></td></tr></table></figure></p>
+<p>This example shows that there are 582 points in the domain where the magnitude of u is under 0.8. You must output the results in the same format as above to task3.csv. There must be no blank spaces between the values and around the commas. Any float value must be written to 6 decimal places as shown above.</p>
+<h3 id="Task-4-Wake-Profile-Visualization"><a href="#Task-4-Wake-Profile-Visualization" class="headerlink" title="Task 4: Wake Profile Visualization"></a>Task 4: Wake Profile Visualization</h3><p>For this task, you will visualise the wake profile generated by writing the wake boundaries to a text file. To do this, you will first calculate the y coordinate of maximum u velocity. This is to be done for locations x = 10,15,20,25,30,35,40,45,50,55,60,65, i.e. you will look through all the relevant points for each specified x location to choose the maximum of u and pick the corresponding y coordinate. Since the data doesn’t contain exact x coordinates as described here, you will take the x coordinate which are closest to these these numbers. For instance, the closest number to x = 50 in the data file is x = 49.999. To pick the relevant x coordinate, you can use a bound of 0.05 about the specified location (Note that there is exactly one x coordinate that will fall inside the bound so you don’t have to worry about a tie). Output the chosen x location and the magnitude of the corresponding y coordinate in the following format to task4 1.csv. There must be no blank spaces between the values and around the commas. Any float value must be written to 6 decimal places as shown:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">x</span>, <span class="selector-tag">y_h</span></span><br><span class="line">29<span class="selector-class">.980000</span>, 5<span class="selector-class">.921400</span></span><br><span class="line">49<span class="selector-class">.999001</span>, 6<span class="selector-class">.739500</span></span><br><span class="line">54<span class="selector-class">.983002</span>, 6<span class="selector-class">.956200</span></span><br></pre></td></tr></table></figure></p>
+<p>Now that you’ve obtained the y coordinates, calculate the spacing for each location using the following formula:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spacing = ceil(10 |<span class="string">y</span>|<span class="string">)</span></span><br></pre></td></tr></table></figure></p>
+<p>A skeleton version has been provided to you, complete with the print statements to print out the wake boundary. All you need to to do is to obtain the spacings for these 12 x locations into the array yheight where yheight[0] corresponds to the spacing for x=10. The output should be written to the file task4_2.txt.</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>You need to submit your program for assessment. Submissions will not be done via the LMS; instead you will need to log in to the server dimefox and submit your files using the command submit . You can (and should) use submit both early and often to get used to the way it works, and also to check that your program compiles correctly on our test system, which has some different characteristics to the lab machines. Only the last submission will be marked. The submission server may be very slow towards the deadline as many students are submitting. Therefore, please do not wait until the last few minutes to make the first attempt of submission. If you make a submission attempt a few minutes before the deadline but the submission was completed after the deadline, your submission will be treated as a submission AFTER the deadline.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP10002-Text-Search.html" rel="next" title="COMP10002-Text-Search">
+                <i class="fa fa-chevron-left"></i> COMP10002-Text-Search
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="CPlusPlus小砖家" />
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">251</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-Outcomes"><span class="nav-number">1.</span> <span class="nav-text">Learning Outcomes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flow-Around-a-Flat-Plate"><span class="nav-number">2.</span> <span class="nav-text">Flow Around a Flat Plate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-the-Data"><span class="nav-number">3.</span> <span class="nav-text">Working with the Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Processing-Tasks"><span class="nav-number">4.</span> <span class="nav-text">Processing Tasks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-1-Maximum-Velocity-Difference"><span class="nav-number">5.</span> <span class="nav-text">Task 1: Maximum Velocity Difference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-2-Mean-Velocities-on-a-Coarser-Grid"><span class="nav-number">6.</span> <span class="nav-text">Task 2: Mean Velocities on a Coarser Grid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-3-Velocity-and-It’s-Statistics"><span class="nav-number">7.</span> <span class="nav-text">Task 3: Velocity and It’s Statistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-4-Wake-Profile-Visualization"><span class="nav-number">8.</span> <span class="nav-text">Task 4: Wake Profile Visualization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">9.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
