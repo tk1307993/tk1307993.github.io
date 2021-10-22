@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-10-22T11:08:18.763Z</updated>
+  <updated>2021-10-22T11:11:16.963Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -17,26 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>CS103-Car-Rental</title>
     <link href="https://tk1307993.coding.me/CS103-Car-Rental.html"/>
     <id>https://tk1307993.coding.me/CS103-Car-Rental.html</id>
-    <published>2021-10-22T11:06:40.558Z</published>
-    <updated>2021-10-22T11:08:18.763Z</updated>
+    <published>2021-10-22T11:06:40.000Z</published>
+    <updated>2021-10-22T11:11:16.963Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: CS103-Car-Rental<br>date: 2021-10-22 19:06:40<br>categories: “Java”<br>tags:     </p><pre><code>- Fundamentals</code></pre><p>description: 代写汽车租赁的小程序。</p><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You are tasked with creating a car-rental app.</p><p>There can be multiple cars with the same model and manufacturer.<br>The status of a car in the system may have one of the three values :<br>“reserved”<br>“checked out”<br>“available”</p><p>A user can reserve a car or rent a car without a previous reservation. A user is not allowed to have more than one car rented at a time. Only after canceling a reservation or returning a rented car, can a user can reserve or rent another car.</p><p>The reservation process is automatic, and does not require an admin to approve requests. If the status of a car is “available” and a user rents it, the status of that car immediately transitions to “reserved”. But an admin can edit the reservation later.</p><p>When a reservation is made, it must specify the time that the car is to be picked up (“checked out”) and returned. In order to simulate checkout and returns actions in the real world, there should be buttons that a user can manually click to indicate that a car has been checked out or returned.</p><p>The minimum rental period is 1 hour and the maximum is 10 hours. The system should cancel a reservation if a user doesn’t check out a car in time. The time elasticity is 30 minutes after the pickup time. For example, if a user reserved a car to pick up at 3:00pm, if the car was not checked out by 3:31pm, then the car should become “available” again.</p><p>If a user doesn’t return a car on the date promised when it was checked out, the system will sent a notification (e.g. system message) to the user and automatically change the car status to “available”.</p><p>A user can only reserve a car 7 days in the future.</p><p>A user can return a car before the specified return time by clicking the “return” button. If a user does this, then the car should become “available”.</p><p>There’s no elasticity in the return time. If the user doesn’t return the car in time (at the specified return time), the car will automatically become “available” and other users can check out this car. For example, user A reserves a car from 2pm to 4pm, user B reserves the same car from 4pm to 6pm. If A doesn’t return the car at 4pm, the system should automatically change the car status to “reserved” and user B can click “check out” button to pick up the car. If no user has reserved this car at 4pm, then the car should automatically become “available”.</p><p>There’s no penalty when a user doesn’t return a car. This app just has a simple payment system. A penalty would only make the calculation more complex.</p><p>The rental charge in user profile is not a deposit. It’s the total fee for the previous successful rental. The system doesn’t need to check if a user has enough on deposit to check out a car because there’s no deposit in this app.<br>A Car will have the following attributes</p><p>License-plate number (a 7-digit string unique for each Car)<br>Manufacturer<br>Model (String …this app doesn’t need to validate that the model is actually produced by the indicated manufacturer.)<br>Hourly Rental rate<br>Style (Coupe, Sedan or SUV)<br>Location (office where the car can be picked up)<br>Status to indicate availability:<br>Checked out - when a customer checks out the car or an admin checks out the car on behalf of a customer<br>Available - otherwise</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You are tasked with creating a car-rental app.</p><p>There can be multiple cars with the same model and manufacturer.<br>The status of a car in the system may have one of the three values :<br>“reserved”<br>“checked out”<br>“available”</p><p>A user can reserve a car or rent a car without a previous reservation. A user is not allowed to have more than one car rented at a time. Only after canceling a reservation or returning a rented car, can a user can reserve or rent another car.</p><p>The reservation process is automatic, and does not require an admin to approve requests. If the status of a car is “available” and a user rents it, the status of that car immediately transitions to “reserved”. But an admin can edit the reservation later.</p><p>When a reservation is made, it must specify the time that the car is to be picked up (“checked out”) and returned. In order to simulate checkout and returns actions in the real world, there should be buttons that a user can manually click to indicate that a car has been checked out or returned.</p><p>The minimum rental period is 1 hour and the maximum is 10 hours. The system should cancel a reservation if a user doesn’t check out a car in time. The time elasticity is 30 minutes after the pickup time. For example, if a user reserved a car to pick up at 3:00pm, if the car was not checked out by 3:31pm, then the car should become “available” again.</p><p>If a user doesn’t return a car on the date promised when it was checked out, the system will sent a notification (e.g. system message) to the user and automatically change the car status to “available”.</p><p>A user can only reserve a car 7 days in the future.</p><p>A user can return a car before the specified return time by clicking the “return” button. If a user does this, then the car should become “available”.</p><p>There’s no elasticity in the return time. If the user doesn’t return the car in time (at the specified return time), the car will automatically become “available” and other users can check out this car. For example, user A reserves a car from 2pm to 4pm, user B reserves the same car from 4pm to 6pm. If A doesn’t return the car at 4pm, the system should automatically change the car status to “reserved” and user B can click “check out” button to pick up the car. If no user has reserved this car at 4pm, then the car should automatically become “available”.</p><p>There’s no penalty when a user doesn’t return a car. This app just has a simple payment system. A penalty would only make the calculation more complex.</p><p>The rental charge in user profile is not a deposit. It’s the total fee for the previous successful rental. The system doesn’t need to check if a user has enough on deposit to check out a car because there’s no deposit in this app.<br>A Car will have the following attributes</p><p>License-plate number (a 7-digit string unique for each Car)<br>Manufacturer<br>Model (String …this app doesn’t need to validate that the model is actually produced by the indicated manufacturer.)<br>Hourly Rental rate<br>Style (Coupe, Sedan or SUV)<br>Location (office where the car can be picked up)<br>Status to indicate availability:<br>Checked out - when a customer checks out the car or an admin checks out the car on behalf of a customer<br>Available - otherwise</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: CS103-Car-Rental&lt;br&gt;date: 2021-10-22 19:06:40&lt;br&gt;categories: “Java”&lt;br&gt;tags:     &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Fundamentals
-&lt;/code&gt;&lt;/pre&gt;
-      
+      代写汽车租赁的小程序。
     
     </summary>
     
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
