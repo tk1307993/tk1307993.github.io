@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2021-10-22T11:11:16.963Z</updated>
+  <updated>2021-12-31T01:55:37.290Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CITS2002-Wifistats</title>
+    <link href="https://tk1307993.coding.me/CITS2002-Wifistats.html"/>
+    <id>https://tk1307993.coding.me/CITS2002-Wifistats.html</id>
+    <published>2021-12-31T01:53:22.000Z</published>
+    <updated>2021-12-31T01:55:37.290Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>This project will assess your understanding of introductory C99 programming language features, including its control­structures, simple data­ structures, and its standard library support for handling strings and text files. The project can be successfully completed using the information presented in CITS2002’s lectures, laboratories, and workshops, to the end of week­6.</p><p>Nearly all devices that connect to the Internet use networking hardware that conforms to IEEE­802 standards, commonly termed the Ethernet standards. It is common for desktop and laptop computers to have two Ethernet interfaces, one wired (the IEEE­802.3 standard) and one wireless (the IEEE­802.11 standard), while mobile devices and smartphones will typically have a single wireless Ethernet interface and a Bluetooth interface (the IEEE­802.15.1 standard).</p><p>To simplify communication between devices, each Ethernet interface has a unique networking address, termed its Media Access Control (MAC) address. Each MAC address is 6­bytes long but, to make them easier for humans to read and compare, they’re usually written as a sequence of hexadecimal characters separated by colons or hyphens, as in the example 74:e2:f5:20:f9:8b. When written this way, MAC addresses are case­ insensitive ­ that is to say that 74­E2­F5­20­F9­8B is the same address.</p><p>When devices communicate using WiFi (the IEEE­802.11 standard) they break their communication into many small packets of data. Each packet contains MAC addresses to identify the device which transmitted the packet (the transmitter’s address), and the device for which the packet is intended (the receiver’s address). The special MAC address, ff:ff:ff:ff:ff:ff, is termed the broadcast MAC address, and is used when all devices within range should receive the packet.</p><p>Each 6­byte MAC address comprises two 3­byte parts. The first 3­bytes are termed the Organizationally Unique Identifier (OUI), and they identify the vendor of the Ethernet interface. From the address 74:e2:f5:20:f9:8b, the 74:e2:f5 indicates that the interface was made by Apple (see <a href="http://www.macvendorlookup.com)" target="_blank" rel="noopener">www.macvendorlookup.com)</a>.</p><p>The goal of this project is to write a C99 program, named wifistats, that reports the number of bytes either transmitted or received by devices using WiFi. The program may be requested to generate reports sorted by either the device MACs or by the vendors’ names, from the largest transmitter (most bytes transmitted) to the smallest.</p><h3 id="Program-requirements"><a href="#Program-requirements" class="headerlink" title="Program requirements"></a>Program requirements</h3><p>Your program’s single C99 source file must be named wifistats.c</p><p>Your program will be invoked in one of two ways:</p><p>prompt&gt; ./wifistats what packets<br>where what is either the single character ‘t’ or ‘r’ to request statistics about WiFi transmitters, or receivers, respectively. For example, if the program is invoked as ./wifistats t packets then the program should produce statistics about the data transmissions of each transmitting device present in the packets file.</p><p>packets is the name of a text­file providing information about each WiFi packet, one packet per line. Here is a sample­packet file. Each line consists of 4 fields, providing the time that each packet was captured (in seconds and microseconds), the transmitter’s and receiver’s MAC addresses, and the length (in bytes) of the packet. Each of the fields will be separated by a single TAB (‘\t’) character.</p><p>If we ran:</p><p>prompt&gt; ./wifistats t sample-packets<br>this would be the required output.If we ran:</p><p>prompt&gt; ./wifistats r sample-packets<br>this would be the required output.</p><p>prompt&gt; ./wifistats what packets OUIfile<br>where OUIfile is the name of a text­file providing the OUIs and names of Ethernet hardware vendors. If an OUIfile is provided, the program should report its statistics not on individual device MAC addresses but on the vendor that produced each device. Here are two sample OUIfiles: sample­OUIfile­small (40 entries) and sample­OUIfile­large (23,000 entries). The 2 fields will be separated by a single TAB (‘\t’) character, and the vendors’ names may contain spaces.</p><p>For example, if we ran:</p><p>prompt&gt; ./wifistats t sample-packets sample-OUIfile-small<br>this would be the required output.<br>If we ran:</p><p>prompt&gt; ./wifistats r sample-packets sample-OUIfile-small<br>this would be the required output.</p><p>You may assume that all input data is in the correct format.<br>If your program encounters a broadcast MAC address, your program should ignore that input line.<br>If your program encounters an OUI not found in a provided OUI file, it should use/report the vendor’s name as UNKNOWN­VENDOR.</p><p>Your program must support these limits (you may assume that the input data never exceeds these limits):</p><p>maximum number of distinct MAC addresses -­ 500.<br>maximum number of distinct OUIs ­- 25000.<br>maximum length of any vendor name ­ 90 characters.<br>Your program must invoke the standard utility program /usr/bin/sort to sort the final results. Your program must use the system­calls fork() and execv() (and possibly others) to invoke /usr/bin/sort. Your program must not just call the C function system(). Note that the command­line options supported by /usr/bin/sort on OS­X, Linux, and cygwin(Windows) are often different.</p><p>If the data totals of two or more MAC addresses, or two or more vendors (via their OUIs), are identical, then the MAC addresses or vendors with identical totals should be printed in ascending alphabetical order.</p><p>Your program must employ sound programming practices, including the use of meaningful comments, well chosen identifier names, appropriate choice of basic data­structures and data­types, and appropriate choice of control­flow constructs.</p><h3 id="Assessment"><a href="#Assessment" class="headerlink" title="Assessment"></a>Assessment</h3><p>Projects will be marked using an automatic marking program (for correctness) and by visual inspection (for good programming practices). It is thus important that your program produces its output in the correct format. This project is worth 15% of your final mark for CITS2002. It will be marked out of 40. The project may be completed individually or in teams of two (working as a team is STRONGLY encouraged).</p><p>During the marking, attention will obviously be given to the correctness of your solution. However, a correct and efficient solution should not be considered as the perfect, nor necessarily desirable, form of solution. Preference will be given to well presented, well documented solutions that use the appropriate features of the language to complete tasks in an easy to understand and easy to follow manner. Your program must employ sound programming practices, including the use of meaningful comments, well chosen identifier names, appropriate choice of basic data­structures and data­types, and appropriate choice of control­flow constructs. Do not expect to receive full marks for your program simply because it works correctly. Remember, a computer program should not only convey a message to the computer, but also to other human programmers.</p><p>Your project will be marked on the computers in CSSE Lab 2.03, using the macOS environment. No allowance will be made for a program that “works at home” but not on CSSE Lab 2.03 under macOS, so be sure that your code compiles and executes correctly on these machines before you submit it.</p>]]></content>
+    
+    <summary type="html">
+    
+      代写一个网络嗅探器，可以获取网络数据包。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Network" scheme="https://tk1307993.coding.me/tags/Network/"/>
+    
+  </entry>
   
   <entry>
     <title>CS103-Car-Rental</title>
@@ -126,9 +148,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -443,28 +465,6 @@
     
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C代写：CIS3490-Convex-Hull</title>
-    <link href="https://tk1307993.coding.me/CIS3490-Convex-Hull.html"/>
-    <id>https://tk1307993.coding.me/CIS3490-Convex-Hull.html</id>
-    <published>2020-09-28T02:26:23.000Z</published>
-    <updated>2020-09-28T02:29:16.365Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In the following questions, express the algorithms in the pseudocode we use in lectures (in the textbook), and implement your algorithms in the C programming language.</p><h3 id="Algorithm-1"><a href="#Algorithm-1" class="headerlink" title="Algorithm 1"></a>Algorithm 1</h3><p>A[0..n 1] is an array of n distinct numbers. A pair of array members (A[i], A[j]) is called an inversion if A[i] &gt; A[j] for i &lt; j.</p><ul><li>Design a brute force algorithm to count the number of inversions in an array, analyze the number of executions of the basic operation, and determine the efficiency class.</li><li>Design a divide-and-conquer algorithm of Θ(n log n) to count the number of inversions in an array, create a recurrence to analyze the number of executions of the basic operation, and determine the efficiency class. Use the Master Theorem to verify the efficiency class in your analysis result.</li><li>Implement the two algorithms, and test them by using data_1.txt, which includes 50,000 integers. Your programs are required to display execution time. Please compare the differences in execution time and theoretical analysis.</li></ul><h3 id="Algorithm-2"><a href="#Algorithm-2" class="headerlink" title="Algorithm 2"></a>Algorithm 2</h3><p>The convex hull of a set of S is the smallest convex set containing S. (You can find more about the convex hull problem on pages 109-113 in the textbook.) It is assumed that not all the points in S are on a straight line.</p><ul><li>Design a brute force algorithm to solve the convex-hull problem and analyze its efficiency.</li><li>Design a divide-and-conquer algorithm of Θ(n log n) to solve the convex-hull problem, create a recurrence to analyze the number of executions of the basic operation, and determine the efficiency class. Use the Master Theorem to verify the efficiency class in your analysis result.</li><li>Implement the two algorithms and test them using data_2.txt, which includes 30,000 points (pairs of x-y coordinates). Your programs are required to display execution time. Please compare the differences in execution time and theoretical analysis.</li></ul><h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p>Please submit your design and analysis (i.e. 1.1, 1.2, 2.1, 2.2) in hard-copies to the instructor after the Monday class, and submit your code to Moodle.</p>]]></content>
-    
-    <summary type="html">
-    
-      用C语言实现下述的算法，并且需要提供对应的pseudocode.
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Programming Fundamentals" scheme="https://tk1307993.coding.me/tags/Programming-Fundamentals/"/>
     
   </entry>
   
