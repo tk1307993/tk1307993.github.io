@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
 
 
 
@@ -42,7 +42,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -50,9 +50,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -70,13 +70,13 @@
 
 
 
-  <meta name="keywords" content="Data Structure," />
+  <meta name="keywords" content="Data Structure,">
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
 
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html">
 
 
 
@@ -158,7 +158,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">留学生CS编程作业代写</span>
         <span class="logo-line-after"><i></i></span>
@@ -188,7 +188,7 @@
         <li class="menu-item menu-item-首页">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -198,7 +198,7 @@
         <li class="menu-item menu-item-分类">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -208,7 +208,7 @@
         <li class="menu-item menu-item-标签">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -218,7 +218,7 @@
         <li class="menu-item menu-item-归档">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -228,7 +228,7 @@
         <li class="menu-item menu-item-关于我">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于我
           </a>
@@ -271,7 +271,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -307,7 +307,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -380,7 +380,7 @@
 <li>Operator nodes have a non-empty String in the op field, a 0.0 in the num field, and a null pointer in the exp field;<br>Number nodes have an empty String in the op field, a double value in the num field (could, of course, be 0.0), and a null pointer in the exp field; and</li>
 <li>Expression nodes have a non-null pointer in the exp field.<br>Each of these nodes may have a next field which is null or non-null, depending on context (see below for examples).</li>
 </ul>
-<h3 id="Evaluating-Hierarchical-Lists"><a href="#Evaluating-Hierarchical-Lists" class="headerlink" title="Evaluating Hierarchical Lists"></a>Evaluating Hierarchical Lists</h3><p>You must also write a method eval( … ) which takes a pointer to a hierarchical linked list, and returns a double which is the result of the expression represented by the hierarchical list. This method must be recursive, does not use a stack, and is actually fairly simple if you understand the recursive structure of the lists:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">eval(Node e) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e <span class="keyword">is</span> a <span class="built_in">number</span></span><br><span class="line"><span class="built_in">        return</span> <span class="keyword">the</span> <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> e <span class="keyword">is</span> an expression (<span class="keyword">the</span> <span class="keyword">first</span> node <span class="keyword">is</span> an operator)</span><br><span class="line">        evaluate <span class="keyword">the</span> subexpressions recursively <span class="keyword">and</span> <span class="literal">return</span></span><br><span class="line">        <span class="keyword">the</span> <span class="literal">result</span> <span class="keyword">of</span> applying <span class="keyword">the</span> operator <span class="keyword">to</span> <span class="keyword">the</span> values <span class="keyword">of</span> <span class="keyword">the</span> subexpressions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Evaluating-Hierarchical-Lists"><a href="#Evaluating-Hierarchical-Lists" class="headerlink" title="Evaluating Hierarchical Lists"></a>Evaluating Hierarchical Lists</h3><p>You must also write a method eval( … ) which takes a pointer to a hierarchical linked list, and returns a double which is the result of the expression represented by the hierarchical list. This method must be recursive, does not use a stack, and is actually fairly simple if you understand the recursive structure of the lists:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(Node <span class="keyword">e</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">e</span> <span class="keyword">is</span> <span class="keyword">a</span> <span class="keyword">number</span></span><br><span class="line">        <span class="keyword">return</span> the <span class="keyword">number</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> <span class="keyword">e</span> <span class="keyword">is</span> <span class="keyword">an</span> expression (the <span class="keyword">first</span> node <span class="keyword">is</span> <span class="keyword">an</span> operator)</span><br><span class="line">        evaluate the subexpressions recursively <span class="built_in">and</span> <span class="keyword">return</span></span><br><span class="line">        the result of applying the operator <span class="keyword">to</span> the <span class="built_in">values</span> of the subexpressions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -489,9 +489,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.gif"
-                alt="CPlusPlus小砖家" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
             
               <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -504,7 +502,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">257</span>
+                  <span class="site-state-item-count">258</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

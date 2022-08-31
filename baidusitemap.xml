@@ -1,5403 +1,1035 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
+  <url>
+    <loc>https://tk1307993.coding.me/CS12B-Edit-Distance.html</loc>
+    <lastmod>2022-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI2110-Huffman-Coding.html</loc>
-    <lastmod>2022-08-31T08:21:02.809Z</lastmod>
-    <data>
-        <display>
-        <title>CSCI2110-Huffman-Coding</title>
-        <pubTime>2022-08-31T08:17:49.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2022-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP1521-Virtual-Memory-Simulator.html</loc>
-    <lastmod>2022-07-11T01:35:11.720Z</lastmod>
-    <data>
-        <display>
-        <title>COMP1521-Virtual-Memory-Simulator</title>
-        <pubTime>2022-07-11T01:28:35.000Z</pubTime>
-        
-        <tag>OS</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2022-07-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CPSC231-Chasing-Alice.html</loc>
-    <lastmod>2022-07-11T01:30:33.158Z</lastmod>
-    <data>
-        <display>
-        <title>CPSC231-Chasing-Alice</title>
-        <pubTime>2022-06-11T01:28:35.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2022-07-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CITS2002-Wifistats.html</loc>
-    <lastmod>2021-12-31T01:55:37.290Z</lastmod>
-    <data>
-        <display>
-        <title>CITS2002-Wifistats</title>
-        <pubTime>2021-12-31T01:53:22.000Z</pubTime>
-        
-        <tag>Network</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-12-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS103-Car-Rental.html</loc>
-    <lastmod>2021-10-22T11:11:16.963Z</lastmod>
-    <data>
-        <display>
-        <title>CS103-Car-Rental</title>
-        <pubTime>2021-10-22T11:06:40.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-10-22</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS2750-LinkedList.html</loc>
-    <lastmod>2021-10-04T11:20:49.009Z</lastmod>
-    <data>
-        <display>
-        <title>CIS2750-LinkedList</title>
-        <pubTime>2021-10-04T11:19:51.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-10-04</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ENGR30003-Numerical-Programming-for-Engineers.html</loc>
-    <lastmod>2021-09-27T12:54:43.171Z</lastmod>
-    <data>
-        <display>
-        <title>ENGR30003-Numerical-Programming-for-Engineers</title>
-        <pubTime>2021-09-27T12:51:43.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-09-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP10002-Text-Search.html</loc>
-    <lastmod>2021-09-24T00:12:51.808Z</lastmod>
-    <data>
-        <display>
-        <title>COMP10002-Text-Search</title>
-        <pubTime>2021-09-24T00:09:55.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-09-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html</loc>
-    <lastmod>2021-09-17T01:48:12.793Z</lastmod>
-    <data>
-        <display>
-        <title>COMP206-Graph-Traversal-and-Dijkstras-Algorithm</title>
-        <pubTime>2021-09-17T01:45:50.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-09-17</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS322-Maze-Game.html</loc>
-    <lastmod>2021-09-05T03:26:12.411Z</lastmod>
-    <data>
-        <display>
-        <title>CS322-Maze-Game</title>
-        <pubTime>2021-09-05T03:23:31.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-09-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS9223-Programming-for-Big-Data.html</loc>
-    <lastmod>2021-08-31T00:52:06.554Z</lastmod>
-    <data>
-        <display>
-        <title>CS9223-Programming-for-Big-Data</title>
-        <pubTime>2021-09-01T01:17:15.000Z</pubTime>
-        
-        <tag>Hadoop Mapreduce Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/FIT1043-Visualising-Airport-Traffic.html</loc>
-    <lastmod>2021-08-31T00:47:13.178Z</lastmod>
-    <data>
-        <display>
-        <title>FIT1043-Visualising-Airport-Traffic</title>
-        <pubTime>2021-08-31T01:17:15.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS313-Zombiquarium.html</loc>
-    <lastmod>2021-08-26T07:45:19.561Z</lastmod>
-    <data>
-        <display>
-        <title>CS313-Zombiquarium</title>
-        <pubTime>2021-08-26T01:17:15.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html</loc>
-    <lastmod>2021-08-20T01:19:49.075Z</lastmod>
-    <data>
-        <display>
-        <title>CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates</title>
-        <pubTime>2021-08-20T01:17:15.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI112-Connect4.html</loc>
-    <lastmod>2021-08-03T03:09:47.339Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写CSCI112-Connect4</title>
-        <pubTime>2021-08-04T02:56:11.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/INFO1156-Text-To-Html.html</loc>
-    <lastmod>2021-08-03T02:59:07.218Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：INFO1156-Text-To-Html</title>
-        <pubTime>2021-08-03T02:56:11.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-08-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html</loc>
-    <lastmod>2021-07-07T00:01:04.374Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS134-Tutor-Scheduling</title>
-        <pubTime>2021-07-06T23:58:59.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-07-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS217-Union-Find.html</loc>
-    <lastmod>2021-06-27T04:13:25.804Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS217-Union-Find</title>
-        <pubTime>2021-06-27T04:11:07.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-06-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS134-Tutor-Scheduling.html</loc>
-    <lastmod>2021-02-25T08:26:01.699Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS134-Tutor-Scheduling</title>
-        <pubTime>2021-02-25T06:41:14.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-02-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS142-Name-Sorter.html</loc>
-    <lastmod>2021-02-18T03:12:12.226Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS142-Name-Sorter</title>
-        <pubTime>2021-02-18T06:41:14.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-02-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP9021-Polygons.html</loc>
-    <lastmod>2021-01-21T06:44:59.425Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMP9021-Polygons</title>
-        <pubTime>2021-01-21T06:41:14.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-01-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS440-Decision-Making-Under-Uncertainty-and-Learning.html</loc>
-    <lastmod>2020-12-29T00:46:45.632Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS440-Decision-Making-Under-Uncertainty-and-Learning</title>
-        <pubTime>2020-12-29T01:23:21.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-12-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP20005-Path-Planning-1.html</loc>
-    <lastmod>2020-12-24T01:26:08.513Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP20005-Path-Planning-1</title>
-        <pubTime>2020-12-24T01:23:21.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-12-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS3490-Convex-Hull.html</loc>
-    <lastmod>2020-09-28T02:29:16.365Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CIS3490-Convex-Hull</title>
-        <pubTime>2020-09-28T02:26:23.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS246-Streaming-and-Memory-Management.html</loc>
-    <lastmod>2020-09-23T11:14:50.569Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS246-Streaming-and-Memory-Management</title>
-        <pubTime>2020-09-23T03:03:37.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS350-System-Calls.html</loc>
-    <lastmod>2020-09-20T00:48:49.600Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS350-System-Calls</title>
-        <pubTime>2020-09-20T00:06:52.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3160-Set.html</loc>
-    <lastmod>2020-09-16T00:47:54.805Z</lastmod>
-    <data>
-        <display>
-        <title>C#代写：CS3160-Set</title>
-        <pubTime>2020-09-16T00:06:52.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS162-Hashtag.html</loc>
-    <lastmod>2020-09-10T00:11:34.200Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS162-Hashtag</title>
-        <pubTime>2020-09-10T00:06:52.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C代写" url="https://tk1307993.coding.me/categories/C%E4%BB%A3%E5%86%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI1310-How-Do-You-Feel-On-Twitter.html</loc>
-    <lastmod>2020-09-05T00:43:50.138Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSCI1310-How-Do-You-Feel-On-Twitter</title>
-        <pubTime>2020-09-05T03:32:12.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPSC101-Rock-Paper-Scissors-Game.html</loc>
-    <lastmod>2020-08-31T03:50:19.894Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CMPSC101-Rock-Paper-Scissors-Game</title>
-        <pubTime>2020-08-31T03:32:12.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/DE2-Software-Information-System.html</loc>
-    <lastmod>2020-08-26T10:04:10.231Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：DE2-Software-Information-System</title>
-        <pubTime>2020-08-26T03:32:12.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1070-Game-of-Life.html</loc>
-    <lastmod>2020-08-23T00:44:47.468Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS1070-Game-of-Life</title>
-        <pubTime>2020-08-23T03:32:12.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS112-Analytical-Problems.html</loc>
-    <lastmod>2020-08-21T01:27:20.930Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS112-Analytical-Problems</title>
-        <pubTime>2020-08-21T03:32:12.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP10001-Finding-Primes.html</loc>
-    <lastmod>2020-08-16T02:16:36.518Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMP10001-Finding-Primes</title>
-        <pubTime>2020-08-16T03:32:12.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CEGEG082-Point-in-Polygon.html</loc>
-    <lastmod>2020-08-10T02:42:17.429Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CEGEG082-Point-in-Polygon</title>
-        <pubTime>2020-08-10T03:32:12.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC2023-Truck-Loading-Problem.html</loc>
-    <lastmod>2020-08-08T01:12:11.545Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSC2023-Truck-Loading-Problem</title>
-        <pubTime>2020-08-08T03:32:12.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI1200-Word-Frequency-Maps.html</loc>
-    <lastmod>2020-08-06T03:36:01.734Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CSCI1200-Word-Frequency-Maps</title>
-        <pubTime>2020-08-06T03:32:12.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIT325-Authentification-Server.html</loc>
-    <lastmod>2020-06-11T00:52:58.357Z</lastmod>
-    <data>
-        <display>
-        <title>CIT325-Authentification-Server</title>
-        <pubTime>2020-06-11T00:51:12.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>Swing</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-06-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ECE244-Binary-Search-Trees.html</loc>
-    <lastmod>2020-06-03T01:02:17.595Z</lastmod>
-    <data>
-        <display>
-        <title>ECE244-Binary-Search-Trees</title>
-        <pubTime>2020-06-03T01:01:03.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>AWS</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-06-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/EE312-Little-Toy-Programming-Language.html</loc>
-    <lastmod>2020-05-29T00:49:38.361Z</lastmod>
-    <data>
-        <display>
-        <title>EE312-Little-Toy-Programming-Language</title>
-        <pubTime>2020-05-29T02:44:46.000Z</pubTime>
-        
-        <tag>Compiler</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-05-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3014-Responsive-Web-Design.html</loc>
-    <lastmod>2020-05-23T02:48:09.697Z</lastmod>
-    <data>
-        <display>
-        <title>CS3014-Responsive-Web-Design</title>
-        <pubTime>2020-05-23T02:44:46.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>AWS</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://tk1307993.coding.me/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-05-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS314-Multi-Threaded-Program.html</loc>
-    <lastmod>2020-05-16T01:47:43.304Z</lastmod>
-    <data>
-        <display>
-        <title>CS314-Multi-Threaded-Program</title>
-        <pubTime>2020-05-16T01:45:24.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-05-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS314-Parallel-Computation.html</loc>
-    <lastmod>2020-05-12T10:18:08.819Z</lastmod>
-    <data>
-        <display>
-        <title>CS314-Parallel-Computation</title>
-        <pubTime>2020-05-12T10:16:28.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-05-12</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS112-Yet-Another-Calculator.html</loc>
-    <lastmod>2020-05-06T11:46:06.274Z</lastmod>
-    <data>
-        <display>
-        <title>CS112-Yet-Another-Calculator</title>
-        <pubTime>2020-05-06T11:42:49.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-05-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE214-Classroom.html</loc>
-    <lastmod>2020-04-27T07:14:46.693Z</lastmod>
-    <data>
-        <display>
-        <title>CSE214-Classroom</title>
-        <pubTime>2020-04-27T07:12:26.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy.html</loc>
-    <lastmod>2020-04-19T03:26:51.372Z</lastmod>
-    <data>
-        <display>
-        <title>CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy</title>
-        <pubTime>2020-04-19T09:23:31.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS201-Information-Retrieval.html</loc>
-    <lastmod>2020-04-16T03:19:24.119Z</lastmod>
-    <data>
-        <display>
-        <title>CS201-Information-Retrieval</title>
-        <pubTime>2020-04-16T09:23:31.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE214-Decision-Tree-Classifier.html</loc>
-    <lastmod>2020-04-10T09:51:43.988Z</lastmod>
-    <data>
-        <display>
-        <title>CSE214-Decision-Tree-Classifier</title>
-        <pubTime>2020-04-10T09:23:31.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP2370-Midpoint-Pivot-Quicksort.html</loc>
-    <lastmod>2020-04-06T00:27:43.833Z</lastmod>
-    <data>
-        <display>
-        <title>COMP2370-Midpoint-Pivot-Quicksort</title>
-        <pubTime>2020-04-06T05:22:17.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1210-Educational-Data.html</loc>
-    <lastmod>2020-04-03T05:25:10.625Z</lastmod>
-    <data>
-        <display>
-        <title>CS1210-Educational-Data</title>
-        <pubTime>2020-04-03T05:22:17.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-04-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI4150-File-System-Server.html</loc>
-    <lastmod>2020-03-28T02:42:06.528Z</lastmod>
-    <data>
-        <display>
-        <title>CSCI4150-File-System-Server</title>
-        <pubTime>2020-03-28T02:39:31.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCA08-Inheritance.html</loc>
-    <lastmod>2020-03-25T02:34:56.014Z</lastmod>
-    <data>
-        <display>
-        <title>CSCA08-Inheritance</title>
-        <pubTime>2020-03-23T07:37:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCA08-UnitTests.html</loc>
-    <lastmod>2020-03-25T01:40:58.857Z</lastmod>
-    <data>
-        <display>
-        <title>CSCA08-UnitTests</title>
-        <pubTime>2020-03-25T01:39:39.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC401-ATM-Machine.html</loc>
-    <lastmod>2020-03-18T02:59:54.070Z</lastmod>
-    <data>
-        <display>
-        <title>CSC401-ATM-Machine</title>
-        <pubTime>2020-03-18T07:37:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC401-Recursive.html</loc>
-    <lastmod>2020-03-15T06:45:42.680Z</lastmod>
-    <data>
-        <display>
-        <title>CSC401-Recursive</title>
-        <pubTime>2020-03-15T07:37:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS7106-Speech-Synthesiser.html</loc>
-    <lastmod>2020-03-11T03:28:22.412Z</lastmod>
-    <data>
-        <display>
-        <title>CS7106-Speech-Synthesiser</title>
-        <pubTime>2020-03-11T07:37:13.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS4117-Music-Artist-Lyrics-Model.html</loc>
-    <lastmod>2020-03-08T01:12:44.024Z</lastmod>
-    <data>
-        <display>
-        <title>CS4117-Music-Artist-Lyrics-Model</title>
-        <pubTime>2020-03-08T07:37:13.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS211-Lexical-Analysis.html</loc>
-    <lastmod>2020-03-05T07:40:42.847Z</lastmod>
-    <data>
-        <display>
-        <title>CS211-Lexical-Analysis</title>
-        <pubTime>2020-03-05T07:37:13.000Z</pubTime>
-        
-        <tag>Compiler</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-03-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html</loc>
-    <lastmod>2020-02-28T10:43:14.287Z</lastmod>
-    <data>
-        <display>
-        <title>CCN2042-Console-Drawing-Board</title>
-        <pubTime>2020-02-28T10:40:56.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CST8284-QuizMaster.html</loc>
-    <lastmod>2020-02-24T09:10:08.962Z</lastmod>
-    <data>
-        <display>
-        <title>CST8284-QuizMaster</title>
-        <pubTime>2020-02-24T01:17:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Swing</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS148-Car-Configuration-Application.html</loc>
-    <lastmod>2020-02-21T12:09:01.530Z</lastmod>
-    <data>
-        <display>
-        <title>CS148-Car-Configuration-Application</title>
-        <pubTime>2020-02-21T01:17:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS206-Email-Handler.html</loc>
-    <lastmod>2020-02-18T01:20:09.893Z</lastmod>
-    <data>
-        <display>
-        <title>CS206-Email-Handler</title>
-        <pubTime>2020-02-18T01:17:13.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Algorithms</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/PSCB57-Own-Small-Project.html</loc>
-    <lastmod>2020-02-14T04:15:37.130Z</lastmod>
-    <data>
-        <display>
-        <title>PSCB57-Own-Small-Project</title>
-        <pubTime>2020-02-14T04:13:39.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Algorithms</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE143X-Backus-Naur-Form.html</loc>
-    <lastmod>2020-02-09T02:30:58.015Z</lastmod>
-    <data>
-        <display>
-        <title>CSE143X-Backus-Naur-Form</title>
-        <pubTime>2020-02-09T02:25:55.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS22A-Nested-Loops.html</loc>
-    <lastmod>2020-02-06T01:41:18.903Z</lastmod>
-    <data>
-        <display>
-        <title>CIS22A-Nested-Loops</title>
-        <pubTime>2020-02-06T01:39:35.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS150-Game-of-War.html</loc>
-    <lastmod>2020-02-01T01:11:56.397Z</lastmod>
-    <data>
-        <display>
-        <title>CS150-Game-of-War</title>
-        <pubTime>2020-02-01T01:09:09.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-02-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS117-Palindrome.html</loc>
-    <lastmod>2020-01-29T00:29:06.034Z</lastmod>
-    <data>
-        <display>
-        <title>CS117-Palindrome</title>
-        <pubTime>2020-01-29T00:17:30.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS368-Shopping-Website.html</loc>
-    <lastmod>2020-01-21T02:35:36.084Z</lastmod>
-    <data>
-        <display>
-        <title>CS368-Shopping-Website</title>
-        <pubTime>2020-01-21T02:33:34.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="Javascript" url="https://tk1307993.coding.me/categories/Javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE6242-HadoopSparkPigandAzure.html</loc>
-    <lastmod>2020-01-18T00:52:41.803Z</lastmod>
-    <data>
-        <display>
-        <title>CSE6242-HadoopSparkPigandAzure</title>
-        <pubTime>2020-01-18T00:49:00.000Z</pubTime>
-        
-        <tag>MapReduce</tag>
-         
-        <tag>Hadoop</tag>
-         
-        <tag>AWS</tag>
-         
-        <tag>Pig</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS104-Rational-Problem.html</loc>
-    <lastmod>2020-01-14T11:00:20.878Z</lastmod>
-    <data>
-        <display>
-        <title>CS104-Rational-Problem</title>
-        <pubTime>2020-01-14T10:58:08.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC401-Index-Random-and-Dictionary.html</loc>
-    <lastmod>2020-01-10T00:32:49.536Z</lastmod>
-    <data>
-        <display>
-        <title>CSC401-Index-Random-and-Dictionary</title>
-        <pubTime>2020-01-10T00:30:46.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC2542-Search.html</loc>
-    <lastmod>2020-01-07T01:28:29.028Z</lastmod>
-    <data>
-        <display>
-        <title>CSC2542-Search</title>
-        <pubTime>2020-01-07T01:25:24.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS120-Art-Show.html</loc>
-    <lastmod>2020-01-03T02:04:57.726Z</lastmod>
-    <data>
-        <display>
-        <title>CS120-Art-Show</title>
-        <pubTime>2020-01-03T02:02:04.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-01-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COS30018-Electric-Car-Charge-Scheduling-System.html</loc>
-    <lastmod>2019-12-30T02:21:09.895Z</lastmod>
-    <data>
-        <display>
-        <title>COS30018-Electric-Car-Charge-Scheduling-System</title>
-        <pubTime>2019-12-30T02:18:57.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-30</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS413-Market-Information.html</loc>
-    <lastmod>2019-12-26T02:11:57.218Z</lastmod>
-    <data>
-        <display>
-        <title>CS413-Market-Information</title>
-        <pubTime>2019-12-26T02:07:10.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS218-Shark.html</loc>
-    <lastmod>2019-12-23T08:29:10.420Z</lastmod>
-    <data>
-        <display>
-        <title>CS218-Shark</title>
-        <pubTime>2019-12-23T08:17:18.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1921-Text-Editor.html</loc>
-    <lastmod>2019-12-21T01:26:25.734Z</lastmod>
-    <data>
-        <display>
-        <title>CS1921-Text-Editor</title>
-        <pubTime>2019-12-21T01:23:00.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP225-ProcessManager-Scanner.html</loc>
-    <lastmod>2019-12-18T02:36:15.906Z</lastmod>
-    <data>
-        <display>
-        <title>COMP225-ProcessManager-Scanner</title>
-        <pubTime>2019-12-18T02:33:45.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT310-Artificial-Intelligence-Survey.html</loc>
-    <lastmod>2019-12-15T04:30:30.447Z</lastmod>
-    <data>
-        <display>
-        <title>CMPT310-Artificial-Intelligence-Survey</title>
-        <pubTime>2019-12-15T04:28:40.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE1100-WordLink.html</loc>
-    <lastmod>2019-12-13T01:33:22.620Z</lastmod>
-    <data>
-        <display>
-        <title>CSE1100-WordLink</title>
-        <pubTime>2019-12-13T01:30:28.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-13</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS32555-Star-Car-Rental.html</loc>
-    <lastmod>2019-12-11T01:06:23.981Z</lastmod>
-    <data>
-        <display>
-        <title>CS32555-Star-Car-Rental</title>
-        <pubTime>2019-12-11T01:04:23.000Z</pubTime>
-        
-        <tag>MVC</tag>
-         
-        <tag>Swing</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/INFO1105-Prefix-Map.html</loc>
-    <lastmod>2019-12-05T11:31:28.665Z</lastmod>
-    <data>
-        <display>
-        <title>INFO1105-Prefix-Map</title>
-        <pubTime>2019-12-05T11:28:36.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP3023-Kakuro.html</loc>
-    <lastmod>2019-12-01T02:22:56.150Z</lastmod>
-    <data>
-        <display>
-        <title>COMP3023-Kakuro</title>
-        <pubTime>2019-12-01T02:19:11.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>QT</tag>
-         
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-12-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-Iterator.html</loc>
-    <lastmod>2019-11-28T00:42:48.427Z</lastmod>
-    <data>
-        <display>
-        <title>Java-Iterator</title>
-        <pubTime>2019-11-28T00:41:33.000Z</pubTime>
-        
-        <tag>Fundanmental</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS177-Lab-Prep-6.html</loc>
-    <lastmod>2019-11-27T10:12:55.396Z</lastmod>
-    <data>
-        <display>
-        <title>CS177-Lab-Prep-6</title>
-        <pubTime>2019-11-27T10:10:26.000Z</pubTime>
-        
-        <tag>Graphics</tag>
-         
-        <tag>Fundanmental</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html</loc>
-    <lastmod>2019-11-26T03:36:28.318Z</lastmod>
-    <data>
-        <display>
-        <title>IFB104-Print-Your-Own-Periodical</title>
-        <pubTime>2019-11-26T03:33:32.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Third-party</tag>
-         
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CPSC217-Climograph.html</loc>
-    <lastmod>2019-11-24T09:10:01.100Z</lastmod>
-    <data>
-        <display>
-        <title>CPSC217-Climograph</title>
-        <pubTime>2019-11-24T09:07:22.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Third-party</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3350-Postfix-Expression-Evaluator.html</loc>
-    <lastmod>2019-11-21T15:14:37.809Z</lastmod>
-    <data>
-        <display>
-        <title>CS3350-Postfix-Expression-Evaluator</title>
-        <pubTime>2019-11-21T15:11:46.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP9021-Solve-Logical-Puzzles.html</loc>
-    <lastmod>2019-11-16T04:45:02.950Z</lastmod>
-    <data>
-        <display>
-        <title>COMP9021-Solve-Logical-Puzzles</title>
-        <pubTime>2019-11-16T04:41:57.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS316-Large-Data-Sorting.html</loc>
-    <lastmod>2019-11-13T13:45:29.504Z</lastmod>
-    <data>
-        <display>
-        <title>CS316-Large-Data-Sorting</title>
-        <pubTime>2019-11-13T13:41:26.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-13</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS112-Grade-Distribution.html</loc>
-    <lastmod>2019-11-10T00:51:15.294Z</lastmod>
-    <data>
-        <display>
-        <title>CS112-Grade-Distribution</title>
-        <pubTime>2019-11-10T00:46:35.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP20003-2048-Game.html</loc>
-    <lastmod>2019-11-08T14:57:33.967Z</lastmod>
-    <data>
-        <display>
-        <title>COMP20003-2048-Game</title>
-        <pubTime>2019-11-07T13:40:13.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Game</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS812-Inventory-Management-System.html</loc>
-    <lastmod>2019-11-03T11:08:59.391Z</lastmod>
-    <data>
-        <display>
-        <title>CS812-Inventory-Management-System</title>
-        <pubTime>2019-11-03T11:06:24.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-11-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMPSCI101-Python-Lists.html</loc>
-    <lastmod>2019-10-30T14:09:34.014Z</lastmod>
-    <data>
-        <display>
-        <title>COMPSCI101-Python-Lists</title>
-        <pubTime>2019-10-30T14:05:03.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-30</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS180-Repetition.html</loc>
-    <lastmod>2019-10-26T04:18:59.310Z</lastmod>
-    <data>
-        <display>
-        <title>CS180-Repetition</title>
-        <pubTime>2019-10-26T04:15:53.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3014-Shell.html</loc>
-    <lastmod>2019-10-22T14:49:26.324Z</lastmod>
-    <data>
-        <display>
-        <title>CS3014-Shell</title>
-        <pubTime>2019-10-22T14:47:01.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-22</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS246-Position-and-Matrix.html</loc>
-    <lastmod>2019-10-20T04:23:06.692Z</lastmod>
-    <data>
-        <display>
-        <title>CS246-Position-and-Matrix</title>
-        <pubTime>2019-10-20T04:17:31.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP10002-Indexed-Document-Retrieval.html</loc>
-    <lastmod>2019-10-15T13:57:42.833Z</lastmod>
-    <data>
-        <display>
-        <title>COMP10002-Indexed-Document-Retrieval</title>
-        <pubTime>2019-10-15T13:54:21.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CITS2002-cfind.html</loc>
-    <lastmod>2019-10-13T04:09:23.635Z</lastmod>
-    <data>
-        <display>
-        <title>CITS2002-cfind</title>
-        <pubTime>2019-10-13T03:59:58.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-13</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CPSE3710-Cube.html</loc>
-    <lastmod>2019-10-11T14:09:14.393Z</lastmod>
-    <data>
-        <display>
-        <title>CPSE3710-Cube</title>
-        <pubTime>2019-10-11T14:07:52.000Z</pubTime>
-        
-        <tag>OpenGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS812-Safari-Rush-Hour.html</loc>
-    <lastmod>2019-10-06T08:51:39.730Z</lastmod>
-    <data>
-        <display>
-        <title>CS812-Safari-Rush-Hour</title>
-        <pubTime>2019-10-06T08:49:29.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Game</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS110-Higher-Order-Functions.html</loc>
-    <lastmod>2019-10-04T00:59:45.528Z</lastmod>
-    <data>
-        <display>
-        <title>CS110-Higher-Order-Functions</title>
-        <pubTime>2019-10-04T00:57:10.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-04</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS5201-Quaternion.html</loc>
-    <lastmod>2019-10-01T00:52:11.094Z</lastmod>
-    <data>
-        <display>
-        <title>CS5201-Quaternion</title>
-        <pubTime>2019-10-01T00:50:21.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-10-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC261-AVL-Tree.html</loc>
-    <lastmod>2019-09-28T09:09:00.586Z</lastmod>
-    <data>
-        <display>
-        <title>CSC261-AVL-Tree</title>
-        <pubTime>2019-09-28T08:27:32.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS240-Number-Conversion-and-Bit-Manipulation.html</loc>
-    <lastmod>2019-09-24T13:32:48.917Z</lastmod>
-    <data>
-        <display>
-        <title>CS240-Number-Conversion-and-Bit-Manipulation</title>
-        <pubTime>2019-09-24T13:24:14.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1510-Data-Structures.html</loc>
-    <lastmod>2019-09-21T02:49:51.825Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS1510-Data-Structures</title>
-        <pubTime>2019-09-21T02:05:38.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCE310-Analytical-Problems.html</loc>
-    <lastmod>2019-09-18T13:27:18.990Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CSCE310-Analytical-Problems</title>
-        <pubTime>2019-09-18T13:25:30.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS4750-Minimax-Tic-Tac-Toe.html</loc>
-    <lastmod>2019-09-15T12:27:52.863Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS4750-Minimax-Tic-Tac-Toe</title>
-        <pubTime>2019-09-15T12:25:06.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMPSCI340-TinyDOS.html</loc>
-    <lastmod>2019-09-03T14:33:06.809Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMPSCI340-TinyDOS</title>
-        <pubTime>2019-08-31T12:52:46.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-09-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1591-Computational-Thinking.html</loc>
-    <lastmod>2019-08-31T01:35:21.262Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS1591-Computational-Thinking</title>
-        <pubTime>2019-08-31T12:52:46.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMPSCI105-HTML-Tag-Checker.html</loc>
-    <lastmod>2019-08-27T15:22:51.137Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMPSCI105-HTML-Tag-Checker</title>
-        <pubTime>2019-08-27T12:52:46.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMPSCI105-A-Phone-Book-Management-Program.html</loc>
-    <lastmod>2019-08-25T01:40:09.454Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMPSCI105-A-Phone-Book-Management-Program</title>
-        <pubTime>2019-08-25T12:52:46.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS101-Five-Questions.html</loc>
-    <lastmod>2019-08-21T12:55:49.485Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS101-Five-Questions</title>
-        <pubTime>2019-08-21T12:52:46.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSSE1001-Pokemon-Finding-Game.html</loc>
-    <lastmod>2019-08-17T01:10:27.959Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSSE1001-Pokemon-Finding-Game</title>
-        <pubTime>2019-08-17T01:02:45.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>MVC</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-17</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS206-Very-Large-Integer.html</loc>
-    <lastmod>2019-08-15T12:49:46.887Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS206-Very-Large-Integer</title>
-        <pubTime>2019-08-15T12:43:26.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Spell-Checker.html</loc>
-    <lastmod>2019-08-13T16:06:19.939Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：Spell Checker</title>
-        <pubTime>2019-08-13T16:04:52.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-13</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS204-Hashing.html</loc>
-    <lastmod>2019-08-10T02:38:24.070Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS204-Hashing</title>
-        <pubTime>2019-08-10T01:35:23.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CPSC4660-Database-Management-Systems.html</loc>
-    <lastmod>2019-08-05T13:23:31.837Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CPSC4660-Database-Management-Systems</title>
-        <pubTime>2019-08-03T01:35:23.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS168-Chat.html</loc>
-    <lastmod>2019-08-03T01:39:24.254Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS168-Chat</title>
-        <pubTime>2019-08-03T01:35:23.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CP164-Stacks.html</loc>
-    <lastmod>2019-08-02T02:28:52.822Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CP164-Stacks</title>
-        <pubTime>2019-08-02T02:25:25.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-08-02</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS304-Bank-Account-Application.html</loc>
-    <lastmod>2019-07-27T02:37:58.216Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CIS304-Bank-Account-Application</title>
-        <pubTime>2019-07-27T02:34:26.000Z</pubTime>
-        
-        <tag>Linux Network</tag>
-         
-        <tag>Network Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CNT5106C-Peer-to-Peer-Network.html</loc>
-    <lastmod>2019-07-23T13:52:16.194Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CNT5106C-Peer-to-Peer-Network</title>
-        <pubTime>2019-07-23T13:16:52.000Z</pubTime>
-        
-        <tag>Linux Network</tag>
-         
-        <tag>Network Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/hello-world.html</loc>
-    <lastmod>2019-07-23T13:50:00.595Z</lastmod>
-    <data>
-        <display>
-        <title>留学生Computer Science编程作业代写</title>
-        <pubTime>2018-07-12T13:03:25.285Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CT010-Students-Car-Park-Registration-System.html</loc>
-    <lastmod>2019-07-21T00:53:09.735Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CT010-Students-Car-Park-Registration-System</title>
-        <pubTime>2019-07-21T13:16:52.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS116-Accumulative-Recursion.html</loc>
-    <lastmod>2019-07-18T12:36:51.081Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS116-Accumulative-Recursion</title>
-        <pubTime>2019-07-15T13:16:52.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE214-Restaurants-Menu.html</loc>
-    <lastmod>2019-07-15T13:20:00.739Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSE214-Restaurants-Menu</title>
-        <pubTime>2019-07-15T13:16:52.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC110-Cellular-Automaton.html</loc>
-    <lastmod>2019-07-11T11:45:28.967Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSC110-Cellular-Automaton</title>
-        <pubTime>2019-07-11T01:19:35.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part2.html</loc>
-    <lastmod>2019-07-08T01:22:19.989Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：SENG201-Traffic-Engineering-Application-Part2</title>
-        <pubTime>2019-07-08T01:19:35.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-07-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/SENG201-Traffic-Engineering-Application-Part1.html</loc>
-    <lastmod>2019-06-29T00:07:29.443Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：SENG201-Traffic-Engineering-Application-Part1</title>
-        <pubTime>2019-06-29T00:04:03.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS141-Task-Manager.html</loc>
-    <lastmod>2019-06-23T03:06:01.390Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS141-Task-Manager</title>
-        <pubTime>2019-06-23T03:03:51.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCE315-5-by-5-Tic-Tac-Toe.html</loc>
-    <lastmod>2019-06-15T12:53:03.156Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSCE315-5-by-5-Tic-Tac-Toe</title>
-        <pubTime>2019-06-15T12:48:47.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Game</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CME213-Heat-Diffusion-Equation.html</loc>
-    <lastmod>2019-06-09T02:57:13.524Z</lastmod>
-    <data>
-        <display>
-        <title>CUDA代写：CME213-Heat-Diffusion-Equation</title>
-        <pubTime>2019-06-06T01:50:50.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>CUDA</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/FIT9131-My-Library.html</loc>
-    <lastmod>2019-06-06T01:53:27.224Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：FIT9131-My-Library</title>
-        <pubTime>2019-06-06T01:50:50.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE2100-Cosmic-Wimpout.html</loc>
-    <lastmod>2019-06-01T01:21:38.208Z</lastmod>
-    <data>
-        <display>
-        <title>JavaFX代写：CSE2100-Cosmic-Wimpout</title>
-        <pubTime>2019-06-01T01:19:30.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-06-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP5348-Video-Store.html</loc>
-    <lastmod>2019-05-28T12:36:15.935Z</lastmod>
-    <data>
-        <display>
-        <title>C#代写：COMP5348-Video-Store</title>
-        <pubTime>2019-05-28T12:33:41.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS501-Instant-Messaging-App.html</loc>
-    <lastmod>2019-05-25T10:46:26.816Z</lastmod>
-    <data>
-        <display>
-        <title>C#代写：CIS501-Instant-Messaging-App</title>
-        <pubTime>2019-05-25T10:43:34.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>MVC</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html</loc>
-    <lastmod>2019-05-23T15:25:56.248Z</lastmod>
-    <data>
-        <display>
-        <title>AI代写：CS3049-Likelihood-Weighted-Sampling</title>
-        <pubTime>2019-05-23T15:23:36.000Z</pubTime>
-        
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSSE7023-Train-Management-System-GUI.html</loc>
-    <lastmod>2019-05-19T03:07:27.253Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSSE7023-Train-Management-System-GUI</title>
-        <pubTime>2019-05-19T03:04:26.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSSE7023-Train-Management-System.html</loc>
-    <lastmod>2019-05-18T11:43:35.213Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSSE7023-Train-Management-System</title>
-        <pubTime>2019-05-18T11:40:02.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ICS53-Web-Proxy.html</loc>
-    <lastmod>2019-05-14T13:31:51.952Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：ICS53-Web-Proxy</title>
-        <pubTime>2019-05-14T13:29:51.000Z</pubTime>
-        
-        <tag>Linux Network</tag>
-         
-        <tag>Network Programming</tag>
-         
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS373-Hash-Tables.html</loc>
-    <lastmod>2019-05-12T12:26:49.555Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS373-Hash-Tables</title>
-        <pubTime>2019-05-12T12:20:28.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-12</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/INFO2120-Database-Application-Programming.html</loc>
-    <lastmod>2019-05-10T12:10:55.716Z</lastmod>
-    <data>
-        <display>
-        <title>PostgreSQL代写：INFO2120-Database-Application-Programming</title>
-        <pubTime>2019-05-10T09:10:56.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Database</tag>
-         
-        <tag>PostgreSQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-10</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1926-Simple-Application.html</loc>
-    <lastmod>2019-05-07T00:46:52.547Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS1926-Simple-Application</title>
-        <pubTime>2019-05-07T00:44:34.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/FIT2071-TextQuest2.html</loc>
-    <lastmod>2019-05-04T12:52:29.681Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：FIT2071-TextQuest2</title>
-        <pubTime>2019-05-04T12:49:37.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-04</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP20005-Path-Planning.html</loc>
-    <lastmod>2019-05-02T09:13:47.031Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP20005-Path-Planning</title>
-        <pubTime>2019-05-02T09:10:56.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-05-02</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CME213-Neural-Networks-on-CUDA-Part2.html</loc>
-    <lastmod>2019-04-29T12:24:39.081Z</lastmod>
-    <data>
-        <display>
-        <title>CUDA代写：CME213-Neural-Networks-on-CUDA-Part2</title>
-        <pubTime>2019-04-29T12:21:24.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>CUDA</tag>
-         
-        <tag>MPI</tag>
-         
-         
-           
-             
-              <breadCrumb title="CUDA" url="https://tk1307993.coding.me/categories/CUDA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CME213-Neural-Networks-on-CUDA-Part1.html</loc>
-    <lastmod>2019-04-27T03:32:16.946Z</lastmod>
-    <data>
-        <display>
-        <title>CUDA代写：CME213-Neural-Networks-on-CUDA-Part1</title>
-        <pubTime>2019-04-27T03:29:05.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>CUDA</tag>
-         
-        <tag>MPI</tag>
-         
-         
-           
-             
-              <breadCrumb title="CUDA" url="https://tk1307993.coding.me/categories/CUDA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS125-Course-Scheduler.html</loc>
-    <lastmod>2019-04-25T13:46:45.029Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS125-Course-Scheduler</title>
-        <pubTime>2019-04-25T13:44:18.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ADDS10-Polish-Notation.html</loc>
-    <lastmod>2019-04-22T13:26:04.545Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：ADDS10-Polish-Notation</title>
-        <pubTime>2019-04-22T13:23:36.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-22</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/FIT2071-TextQuest.html</loc>
-    <lastmod>2019-04-20T00:47:15.198Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：FIT2071-TextQuest</title>
-        <pubTime>2019-04-20T00:43:54.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS6024-Dynamic-SQL.html</loc>
-    <lastmod>2019-04-18T13:00:44.731Z</lastmod>
-    <data>
-        <display>
-        <title>Oracle代写：CS6024-Dynamic-SQL</title>
-        <pubTime>2019-04-18T12:58:08.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1101-Hard-Manager.html</loc>
-    <lastmod>2019-04-14T01:59:24.170Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS1101-Hard-Manager</title>
-        <pubTime>2019-04-14T01:56:30.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMS227-Yahtzee-Part2.html</loc>
-    <lastmod>2019-04-11T12:43:00.288Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMS227-Yahtzee-Part2</title>
-        <pubTime>2019-04-11T12:40:24.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html</loc>
-    <lastmod>2019-04-09T12:59:08.194Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMS227-Yahtzee-Part1</title>
-        <pubTime>2019-04-09T12:52:28.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS340-Campus-Cafeteria.html</loc>
-    <lastmod>2019-04-07T10:35:13.144Z</lastmod>
-    <data>
-        <display>
-        <title>C#代写：CIS340-Campus-Cafeteria</title>
-        <pubTime>2019-04-07T11:48:38.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI1300-Working-with-real-data.html</loc>
-    <lastmod>2019-04-04T09:21:20.690Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSCI1300-Working-with-real-data</title>
-        <pubTime>2019-04-04T11:48:38.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-04-04</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI141-Blackout-Math.html</loc>
-    <lastmod>2019-03-29T10:38:13.602Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSCI141-Blackout-Math</title>
-        <pubTime>2019-03-29T13:37:17.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMPSCI230-Bouncing-Program.html</loc>
-    <lastmod>2019-03-26T13:41:16.970Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMPSCI230-Bouncing-Program</title>
-        <pubTime>2019-03-26T13:37:17.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3410-Game-Design.html</loc>
-    <lastmod>2019-03-23T07:22:32.667Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS3410-Game-Design</title>
-        <pubTime>2019-03-23T07:20:29.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1003-Data-Processing-with-MapReduce.html</loc>
-    <lastmod>2019-03-20T13:54:06.603Z</lastmod>
-    <data>
-        <display>
-        <title>Hadoop代写：CS1003-Data-Processing-with-MapReduce</title>
-        <pubTime>2019-03-20T13:49:54.000Z</pubTime>
-        
-        <tag>MapReduce</tag>
-         
-        <tag>Hadoop</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hadoop" url="https://tk1307993.coding.me/categories/Hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP3080-File-Description.html</loc>
-    <lastmod>2019-03-17T11:51:26.154Z</lastmod>
-    <data>
-        <display>
-        <title>Operating System代写：COMP3080-File-Description</title>
-        <pubTime>2019-03-17T11:48:38.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-17</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMSW3101-Introduction-To-Python.html</loc>
-    <lastmod>2019-03-15T15:34:31.756Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMSW3101-Introduction-To-Python</title>
-        <pubTime>2019-03-15T15:31:26.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS698-Flight-Data-Analysis.html</loc>
-    <lastmod>2019-03-12T12:59:13.272Z</lastmod>
-    <data>
-        <display>
-        <title>Hadoop代写：CS698-Flight-Data-Analysis</title>
-        <pubTime>2019-03-12T12:56:09.000Z</pubTime>
-        
-        <tag>MapReduce</tag>
-         
-        <tag>Hadoop</tag>
-         
-        <tag>AWS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hadoop" url="https://tk1307993.coding.me/categories/Hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-12</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS108-Web-Based-Application.html</loc>
-    <lastmod>2019-03-09T09:35:14.387Z</lastmod>
-    <data>
-        <display>
-        <title>Database代写：CS108-Web-Based-Application</title>
-        <pubTime>2019-03-09T01:51:08.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Database</tag>
-         
-        <tag>MySQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="Database" url="https://tk1307993.coding.me/categories/Database/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS159-Socket-Programming-FTP-Server.html</loc>
-    <lastmod>2019-03-09T09:34:46.731Z</lastmod>
-    <data>
-        <display>
-        <title>FTP代写：CS159-Socket-Programming-FTP-Server</title>
-        <pubTime>2019-03-09T09:31:12.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="FTP" url="https://tk1307993.coding.me/categories/FTP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS952-Database-And-Web-Systems-Development.html</loc>
-    <lastmod>2019-03-05T02:28:55.391Z</lastmod>
-    <data>
-        <display>
-        <title>PHP代写：CS952-Database-And-Web-Systems-Development</title>
-        <pubTime>2019-03-05T02:25:34.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://tk1307993.coding.me/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/KIT101-Sentence-Cipher.html</loc>
-    <lastmod>2019-03-01T15:43:39.363Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：KIT101-Sentence-Cipher</title>
-        <pubTime>2019-03-01T15:40:14.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMS227-StringList.html</loc>
-    <lastmod>2019-02-26T13:03:49.631Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMS227-StringList</title>
-        <pubTime>2019-02-26T13:01:10.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP3080-Memory-Allocation.html</loc>
-    <lastmod>2019-02-23T05:46:00.378Z</lastmod>
-    <data>
-        <display>
-        <title>OS代写：COMP3080-Memory-Allocation</title>
-        <pubTime>2019-02-23T05:43:35.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="OS" url="https://tk1307993.coding.me/categories/OS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS204-B-tree.html</loc>
-    <lastmod>2019-02-20T13:48:20.314Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS204-B-tree</title>
-        <pubTime>2019-02-20T13:46:00.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS306-Hotel-Reservation-System.html</loc>
-    <lastmod>2019-02-16T01:16:11.869Z</lastmod>
-    <data>
-        <display>
-        <title>PHP代写：CS306-Hotel-Reservation-System</title>
-        <pubTime>2019-02-16T10:18:37.000Z</pubTime>
-        
-        <tag>MVC</tag>
-         
-        <tag>Web</tag>
-         
-        <tag>Mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://tk1307993.coding.me/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part5.html</loc>
-    <lastmod>2019-02-13T10:21:42.672Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CSE320-Wolfie-Chat-Part5</title>
-        <pubTime>2019-02-13T10:18:37.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>SQLite</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-13</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html</loc>
-    <lastmod>2019-01-30T13:41:46.146Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CSE320-Wolfie-Chat-Part4</title>
-        <pubTime>2019-01-30T13:38:23.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>SQLite</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-30</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part3.html</loc>
-    <lastmod>2019-01-27T11:47:51.553Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CSE320-Wolfie-Chat-Part3</title>
-        <pubTime>2019-01-27T11:44:44.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>SQLite</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part2.html</loc>
-    <lastmod>2019-01-26T05:06:04.765Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CSE320-Wolfie-Chat-Part2</title>
-        <pubTime>2019-01-26T05:03:58.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>SQLite</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part1.html</loc>
-    <lastmod>2019-01-23T11:58:12.764Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CSE320-Wolfie-Chat-Part1</title>
-        <pubTime>2019-01-23T11:55:39.000Z</pubTime>
-        
-        <tag>Network Programming</tag>
-         
-        <tag>SQLite</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS341-Timing-Instructions.html</loc>
-    <lastmod>2019-01-19T02:05:50.947Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS341-Timing-Instructions</title>
-        <pubTime>2019-01-19T02:03:20.000Z</pubTime>
-        
-        <tag>Hardware</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CA1-Computer-Animation-and-Visualisation.html</loc>
-    <lastmod>2019-01-09T11:27:11.031Z</lastmod>
-    <data>
-        <display>
-        <title>OpenGL代写：CA1-Computer-Animation-and-Visualisation</title>
-        <pubTime>2019-01-09T11:25:02.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>QT</tag>
-         
-        <tag>OpenGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="OpenGL" url="https://tk1307993.coding.me/categories/OpenGL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part4.html</loc>
-    <lastmod>2019-01-05T04:00:19.059Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CMPT115-Huffman-Tree-Part4</title>
-        <pubTime>2019-01-05T03:55:54.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part3.html</loc>
-    <lastmod>2019-01-02T03:06:34.405Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CMPT115-Huffman-Tree-Part3</title>
-        <pubTime>2019-01-02T03:03:37.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-01-02</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part2.html</loc>
-    <lastmod>2018-12-29T01:27:05.805Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CMPT115-Huffman-Tree-Part2</title>
-        <pubTime>2018-12-29T01:23:12.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part1.html</loc>
-    <lastmod>2018-12-25T11:51:15.317Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CMPT115-Huffman-Tree-Part1</title>
-        <pubTime>2018-12-25T11:48:01.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP2129-Minesweeper.html</loc>
-    <lastmod>2018-12-22T13:38:53.830Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP2129-Minesweeper</title>
-        <pubTime>2018-12-22T13:34:47.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-22</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS1101-Gate.html</loc>
-    <lastmod>2018-12-18T13:56:14.140Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS1101-Gate</title>
-        <pubTime>2018-12-18T13:52:32.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CMPT120-Mario.html</loc>
-    <lastmod>2018-12-14T02:12:59.136Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CMPT120-Mario</title>
-        <pubTime>2018-12-14T02:10:48.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/INM378-Digital-Signal-Processing.html</loc>
-    <lastmod>2018-12-11T12:24:45.461Z</lastmod>
-    <data>
-        <display>
-        <title>C#代写：INM378-Digital-Signal-Processing</title>
-        <pubTime>2018-12-11T12:22:46.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C#" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS2500-Rogue-like-Part2.html</loc>
-    <lastmod>2018-12-08T06:10:25.457Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CIS2500-Rogue-like-Part2</title>
-        <pubTime>2018-12-08T06:07:11.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CIS2500-Rogue-like.html</loc>
-    <lastmod>2018-12-06T12:46:38.812Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CIS2500-Rogue-like</title>
-        <pubTime>2018-12-06T12:42:53.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC521-MonteCarloSimulate.html</loc>
-    <lastmod>2018-12-02T04:15:56.393Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSC521-MonteCarloSimulate</title>
-        <pubTime>2018-12-02T04:13:36.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-12-02</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS141-LangtonsAntColony.html</loc>
-    <lastmod>2018-11-29T12:38:21.330Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS141-LangtonsAntColony</title>
-        <pubTime>2018-11-29T12:19:28.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-        <tag>JavaFX</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-ImageProcessing5.html</loc>
-    <lastmod>2018-11-28T11:32:35.883Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：ImageProcessing5</title>
-        <pubTime>2018-11-21T04:51:16.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS422-DevelopingUserInterfaces.html</loc>
-    <lastmod>2018-11-27T12:43:25.504Z</lastmod>
-    <data>
-        <display>
-        <title>UI代写：CS422-DevelopingUserInterfaces</title>
-        <pubTime>2018-11-27T12:39:44.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://tk1307993.coding.me/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS104-Minesweeper.html</loc>
-    <lastmod>2018-11-24T01:49:31.499Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS104-Minesweeper</title>
-        <pubTime>2018-11-24T01:44:35.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP2129-PageRank.html</loc>
-    <lastmod>2018-11-21T12:03:34.555Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP2129-PageRank</title>
-        <pubTime>2018-11-21T04:51:16.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE11-Tetris.html</loc>
-    <lastmod>2018-11-17T04:57:35.160Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSE11-Tetris</title>
-        <pubTime>2018-11-17T04:51:16.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-17</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS104-WordCount.html</loc>
-    <lastmod>2018-11-15T14:25:51.625Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS104-WordCount</title>
-        <pubTime>2018-11-14T12:19:34.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-ImageProcessing4.html</loc>
-    <lastmod>2018-11-14T12:21:21.543Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：ImageProcessing4</title>
-        <pubTime>2018-11-14T12:19:34.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS104-Matrix.html</loc>
-    <lastmod>2018-11-11T04:18:41.411Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS104-Matrix</title>
-        <pubTime>2018-11-11T02:58:30.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CITS1001-2048.html</loc>
-    <lastmod>2018-11-09T03:02:10.546Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CITS1001-2048</title>
-        <pubTime>2018-11-09T02:58:30.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI336-3DArtGallery.html</loc>
-    <lastmod>2018-11-07T14:57:36.810Z</lastmod>
-    <data>
-        <display>
-        <title>OpenGL代写：CSCI336-3DArtGallery</title>
-        <pubTime>2018-11-07T14:54:49.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="OpenGL" url="https://tk1307993.coding.me/categories/OpenGL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-ImageProcessing3.html</loc>
-    <lastmod>2018-11-03T07:19:41.812Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：ImageProcessing3</title>
-        <pubTime>2018-11-03T07:18:59.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-ImageProcessing2.html</loc>
-    <lastmod>2018-11-03T00:02:49.178Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：ImageProcessing2</title>
-        <pubTime>2018-11-03T00:01:43.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS221-Shell.html</loc>
-    <lastmod>2018-10-28T15:44:47.142Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS221-Shell</title>
-        <pubTime>2018-10-28T01:37:48.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE231-RenderingColors.html</loc>
-    <lastmod>2018-10-26T01:41:03.725Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSE231-RenderingColors</title>
-        <pubTime>2018-10-26T01:37:48.000Z</pubTime>
-        
-        <tag>Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP9021-Tangram.html</loc>
-    <lastmod>2018-10-24T14:11:08.573Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMP9021-Tangram</title>
-        <pubTime>2018-10-24T14:08:04.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/FIT2071-VisualTextQuest.html</loc>
-    <lastmod>2018-10-20T03:03:45.984Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：FIT2071-VisualTextQuest</title>
-        <pubTime>2018-10-20T02:59:11.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS214-SinglyLinkedList.html</loc>
-    <lastmod>2018-10-19T13:06:52.192Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS214-SinglyLinkedList</title>
-        <pubTime>2018-10-19T13:04:54.000Z</pubTime>
-        
-        <tag>MangoDB</tag>
-         
-        <tag>NodeJS</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC309-SharingEconomy.html</loc>
-    <lastmod>2018-10-14T10:29:23.889Z</lastmod>
-    <data>
-        <display>
-        <title>NodeJS代写：CSC309-SharingEconomy</title>
-        <pubTime>2018-10-14T10:18:14.000Z</pubTime>
-        
-        <tag>MangoDB</tag>
-         
-        <tag>NodeJS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NodeJS" url="https://tk1307993.coding.me/categories/NodeJS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Java-ImageProcessing.html</loc>
-    <lastmod>2018-10-14T10:26:34.761Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：Image Process</title>
-        <pubTime>2018-10-13T10:18:14.000Z</pubTime>
-        
-        <tag>Image Process</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC370-Database.html</loc>
-    <lastmod>2018-10-05T10:20:43.894Z</lastmod>
-    <data>
-        <display>
-        <title>Database代写：CSC370-Database</title>
-        <pubTime>2018-10-05T10:18:14.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="Database" url="https://tk1307993.coding.me/categories/Database/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS2401-STLContainer.html</loc>
-    <lastmod>2018-09-30T10:33:47.406Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS2401 STLContainer</title>
-        <pubTime>2018-09-30T10:31:26.000Z</pubTime>
-        
-        <tag>STL</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-30</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS406-GreedyAlgorithm.html</loc>
-    <lastmod>2018-09-28T12:32:41.529Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：Greedy Alrithm</title>
-        <pubTime>2018-09-28T12:27:49.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CA675-TF-IDF.html</loc>
-    <lastmod>2018-09-28T12:32:39.969Z</lastmod>
-    <data>
-        <display>
-        <title>Hadoop代写：CA675-TF-IDF</title>
-        <pubTime>2018-09-25T02:41:52.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Hive</tag>
-         
-        <tag>MapReduce</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hadoop" url="https://tk1307993.coding.me/categories/Hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS415-Blackjack.html</loc>
-    <lastmod>2018-09-24T02:44:55.815Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS415-Blackjack</title>
-        <pubTime>2018-09-24T02:41:52.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSE6242-D3GraphsAndVisualization.html</loc>
-    <lastmod>2018-09-19T13:27:53.122Z</lastmod>
-    <data>
-        <display>
-        <title>JS代写：CSE6242-D3GraphsAndVisualization</title>
-        <pubTime>2018-09-19T13:25:34.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="JS" url="https://tk1307993.coding.me/categories/JS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC120-EuclideanMinimumWeightMatching.html</loc>
-    <lastmod>2018-09-16T07:46:41.532Z</lastmod>
-    <data>
-        <display>
-        <title>R代写：CSC120-EuclideanMinimumWeightMatching</title>
-        <pubTime>2018-09-16T07:43:03.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="https://tk1307993.coding.me/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CPT270-Cinemas.html</loc>
-    <lastmod>2018-09-14T12:54:29.053Z</lastmod>
-    <data>
-        <display>
-        <title>PHP代写：CPT270-Cinemas</title>
-        <pubTime>2018-09-14T12:51:44.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://tk1307993.coding.me/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS308-Pipes.html</loc>
-    <lastmod>2018-09-09T07:20:29.715Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS308-Pipes</title>
-        <pubTime>2018-09-09T03:51:48.000Z</pubTime>
-        
-        <tag>Operating System</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-09</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ECS165A-NormalForm.html</loc>
-    <lastmod>2018-09-08T03:54:20.974Z</lastmod>
-    <data>
-        <display>
-        <title>Database代写：ECS165A-NormalForm</title>
-        <pubTime>2018-09-08T03:51:48.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="Other" url="https://tk1307993.coding.me/categories/Other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP3007-Pathfinding.html</loc>
-    <lastmod>2018-09-01T02:57:44.518Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMP3007 Pathfinding</title>
-        <pubTime>2018-09-01T02:53:10.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-01</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS207-HotelBookingApplication.html</loc>
-    <lastmod>2018-08-25T04:04:18.253Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS207 Hotel Booking Application</title>
-        <pubTime>2018-08-25T04:00:59.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC120H-Simulating-Canadian-Elections.html</loc>
-    <lastmod>2018-08-20T12:58:23.102Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSC120H Simulating Canadian Elections</title>
-        <pubTime>2018-08-20T12:53:30.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-20</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS4410-GamesTechnologyAssignment.html</loc>
-    <lastmod>2018-08-15T12:19:47.466Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS4410 GamesTechnologyAssignment</title>
-        <pubTime>2018-08-15T12:17:47.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS635-DigitalImageProcessing.html</loc>
-    <lastmod>2018-08-14T13:34:08.031Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS635-DigitalImageProcessing</title>
-        <pubTime>2018-08-14T13:29:17.000Z</pubTime>
-        
-        <tag>Image Processing</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-14</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS251-Sorting.html</loc>
-    <lastmod>2018-08-12T03:23:52.687Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS251 Sorting</title>
-        <pubTime>2018-08-12T03:22:06.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-12</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS251-AVLTree.html</loc>
-    <lastmod>2018-08-11T02:31:40.006Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS251 AVLTree</title>
-        <pubTime>2018-08-11T02:29:31.000Z</pubTime>
-        
-        <tag>STL</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-11</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP1001-MoreTextProcessing.html</loc>
-    <lastmod>2018-08-08T15:35:51.914Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：COMP1001-MoreTextProcessing</title>
-        <pubTime>2018-08-08T15:33:20.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-08</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3530-RatInAMazeProblem.html</loc>
-    <lastmod>2018-08-07T12:23:13.292Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CS3530 Rat In A Maze Problem</title>
-        <pubTime>2018-08-07T12:19:28.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Writing" url="https://tk1307993.coding.me/categories/Writing/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-07</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME5.html</loc>
-    <lastmod>2018-08-06T13:16:19.160Z</lastmod>
-    <data>
-        <display>
-        <title>Written代写：COMP435 Multimedia Technologies TME5</title>
-        <pubTime>2018-08-06T13:14:25.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Writing" url="https://tk1307993.coding.me/categories/Writing/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-06</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME4.html</loc>
-    <lastmod>2018-08-05T02:18:46.883Z</lastmod>
-    <data>
-        <display>
-        <title>Written代写：COMP435 Multimedia Technologies TME4</title>
-        <pubTime>2018-08-05T02:15:49.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Writing" url="https://tk1307993.coding.me/categories/Writing/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-05</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME3.html</loc>
-    <lastmod>2018-08-04T02:21:30.159Z</lastmod>
-    <data>
-        <display>
-        <title>Written代写：COMP435 Multimedia Technologies TME3</title>
-        <pubTime>2018-08-04T02:16:30.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Writing" url="https://tk1307993.coding.me/categories/Writing/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-04</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME2.html</loc>
-    <lastmod>2018-08-03T13:10:20.190Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMP435 Multimedia Technologies TME2</title>
-        <pubTime>2018-08-03T13:06:55.000Z</pubTime>
-        
-        <tag>BMP</tag>
-         
-        <tag>JPEG</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-03</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP435-Multimedia-Technologies-TME1.html</loc>
-    <lastmod>2018-08-02T13:58:42.890Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：COMP435 Multimedia Technologies TME1</title>
-        <pubTime>2018-08-02T13:53:29.000Z</pubTime>
-        
-        <tag>Swing</tag>
-         
-        <tag>JAI</tag>
-         
-        <tag>JMF</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-02</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html</loc>
-    <lastmod>2018-07-31T12:45:08.529Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS140 Matrix-Vector Multiplication</title>
-        <pubTime>2018-07-31T12:44:24.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS413-DataSecurity.html</loc>
-    <lastmod>2018-07-31T12:38:34.394Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS413 Data Security</title>
-        <pubTime>2018-07-30T13:18:59.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Security</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-31</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS50-C-Programming-Assignment-6.html</loc>
-    <lastmod>2018-07-29T01:43:35.556Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS50 C Programming Assignment6</title>
-        <pubTime>2018-07-29T01:37:57.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-29</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC411-DigitClassification.html</loc>
-    <lastmod>2018-07-28T01:50:43.312Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSC411 Digit Classification</title>
-        <pubTime>2018-07-28T01:47:59.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-28</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS353-DatabaseSystem.html</loc>
-    <lastmod>2018-07-27T12:30:38.928Z</lastmod>
-    <data>
-        <display>
-        <title>PHP代写：CS353 Database System</title>
-        <pubTime>2018-07-27T13:41:38.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Database</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://tk1307993.coding.me/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-27</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ECE222-Directory-Listing.html</loc>
-    <lastmod>2018-07-26T13:43:20.163Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：ECE222 Directory Listing</title>
-        <pubTime>2018-07-26T13:41:38.000Z</pubTime>
-        
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-26</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS335-SpaceRacingSimulator.html</loc>
-    <lastmod>2018-07-25T13:00:14.897Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS335 Space Racing Simulator</title>
-        <pubTime>2018-07-25T12:57:34.000Z</pubTime>
-        
-        <tag>OpenGL</tag>
-         
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS110-Circle.html</loc>
-    <lastmod>2018-07-25T12:56:54.111Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS110 Circle</title>
-        <pubTime>2018-07-25T12:54:13.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-25</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS50-C-Programming-Assignment-5.html</loc>
-    <lastmod>2018-07-24T14:48:11.653Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS50 C Programming Assignment5</title>
-        <pubTime>2018-07-24T14:33:29.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html</loc>
-    <lastmod>2018-07-24T14:48:09.198Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS50 C Programming Assignment1</title>
-        <pubTime>2018-07-24T14:26:39.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS101-BinaryArithmetic.html</loc>
-    <lastmod>2018-07-24T13:39:02.481Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：CS101 Binary Arithmetic</title>
-        <pubTime>2018-07-24T13:33:04.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI104-Stack-Implementation.html</loc>
-    <lastmod>2018-07-24T13:33:49.838Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：CSCI104 Stack Implementation</title>
-        <pubTime>2018-07-23T12:35:51.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>STL</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-24</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/%E6%9C%AC%E5%9C%B0%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%89%88%E6%9C%AC%E5%8F%B7%E6%AF%94%E8%BE%83.html</loc>
-    <lastmod>2018-07-23T12:36:10.909Z</lastmod>
-    <data>
-        <display>
-        <title>C++代写：实现本地和服务器版本号比较</title>
-        <pubTime>2018-07-20T11:37:50.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-23</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/ECE222-Vectors-And-Matrices.html</loc>
-    <lastmod>2018-07-22T04:26:00.932Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：ECE222 Vectors And Matrices</title>
-        <pubTime>2018-07-22T04:20:56.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-22</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS455-RandomWalk.html</loc>
-    <lastmod>2018-07-21T04:11:55.902Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CS455 RandomWalk</title>
-        <pubTime>2018-07-21T04:07:22.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-21</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/Advanced-Math-Analysis-with-Matlab-Course-Project.html</loc>
-    <lastmod>2018-07-19T13:08:19.169Z</lastmod>
-    <data>
-        <display>
-        <title>Matlab代写：Advanced Math Analysis with Matlab Course Project</title>
-        <pubTime>2018-07-19T07:37:50.000Z</pubTime>
-        
-        <tag>Quadprog</tag>
-         
-         
-           
-             
-              <breadCrumb title="Matlab" url="https://tk1307993.coding.me/categories/Matlab/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-19</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COS10007-Developing-Technical-Software-Assignment-1.html</loc>
-    <lastmod>2018-07-18T07:37:24.442Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COS10007 Developing Technical Software Assignment1</title>
-        <pubTime>2018-07-18T07:37:50.000Z</pubTime>
-        
-        <tag>Data Structure</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-18</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSC108H-Tic-Tac-Toe.html</loc>
-    <lastmod>2018-07-17T14:06:26.362Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CSC108H Tic-Tac-Toe</title>
-        <pubTime>2018-07-17T13:55:40.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Game</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
+    <lastmod>2018-07-17</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS177-Lab-1.html</loc>
-    <lastmod>2018-07-16T13:04:23.773Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS177 Lab 1 Summer2018</title>
-        <pubTime>2018-07-16T12:58:24.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS3024-Battleship.html</loc>
-    <lastmod>2018-07-16T12:59:05.566Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS3024 Battleship</title>
-        <pubTime>2018-07-13T12:34:49.000Z</pubTime>
-        
-        <tag>Game</tag>
-         
-        <tag>Artificial Intelligence</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2018-07-16</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CS177-Lab-Summer2018-Prep1.html</loc>
-    <lastmod>2018-07-15T10:52:57.060Z</lastmod>
-    <data>
-        <display>
-        <title>Python代写：CS177 Lab Prep1 Summer2018</title>
-        <pubTime>2018-07-15T10:36:59.000Z</pubTime>
-        
-        <tag>Programming Fundamentals</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://tk1307993.coding.me/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/COMP30023-Hashcash-Mining.html</loc>
-    <lastmod>2018-07-15T10:51:23.076Z</lastmod>
-    <data>
-        <display>
-        <title>C代写：COMP30023 Hashcash Mining</title>
-        <pubTime>2018-07-13T03:37:55.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Linux Network</tag>
-         
-        <tag>Network Programming</tag>
-         
-        <tag>Security</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="https://tk1307993.coding.me/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-07-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/INF20015-Requirements-Analysis-Modelling.html</loc>
-    <lastmod>2018-07-15T10:35:48.199Z</lastmod>
-    <data>
-        <display>
-        <title>UML代写：INF20015 Requirements Analysis and Modelling</title>
-        <pubTime>2018-07-15T01:34:49.000Z</pubTime>
-        
-        <tag>Activity Diagram</tag>
-         
-         
-           
-             
-              <breadCrumb title="UML" url="https://tk1307993.coding.me/categories/UML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
+    <lastmod>2018-07-15</lastmod>
+  </url>
   <url>
     <loc>https://tk1307993.coding.me/CSCI3130-Refactoring-and-Patterns.html</loc>
-    <lastmod>2018-07-14T12:56:33.036Z</lastmod>
-    <data>
-        <display>
-        <title>Java代写：CSCI3130 Refactoring and Patterns</title>
-        <pubTime>2018-07-14T12:34:49.000Z</pubTime>
-        
-        <tag>Design Pattern</tag>
-         
-        <tag>Refactor Code</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="https://tk1307993.coding.me/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-</urlset>
+    <lastmod>2018-07-14</lastmod>
+  </url>
+</urlset> 

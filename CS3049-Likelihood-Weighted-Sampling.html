@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-  <meta name="baidu-site-verification" content="YFxkzhwIVx" />
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
 
 
 
@@ -42,7 +42,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -50,9 +50,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -70,13 +70,13 @@
 
 
 
-  <meta name="keywords" content="Artificial Intelligence," />
+  <meta name="keywords" content="Artificial Intelligence,">
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
 
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html"/>
+  <link rel="canonical" href="https://tk1307993.coding.me/CS3049-Likelihood-Weighted-Sampling.html">
 
 
 
@@ -158,7 +158,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">留学生CS编程作业代写</span>
         <span class="logo-line-after"><i></i></span>
@@ -188,7 +188,7 @@
         <li class="menu-item menu-item-首页">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -198,7 +198,7 @@
         <li class="menu-item menu-item-分类">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -208,7 +208,7 @@
         <li class="menu-item menu-item-标签">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -218,7 +218,7 @@
         <li class="menu-item menu-item-归档">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -228,7 +228,7 @@
         <li class="menu-item menu-item-关于我">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于我
           </a>
@@ -271,7 +271,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -307,7 +307,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -372,8 +372,8 @@
 <li>The matrix of zeros and ones specifes the directed arcs in the graph; a one (1) in the i,j entry indicates there is an edge from i to j (so the ith variable is a parent of the jth variable.</li>
 </ul>
 <p>The format of the Conditional Probability Table (CPT) matrices is a bit subtle. If a node has m parents, then the matrix needs to specify the probability of each outcome (true, false) conditioned on 2^m different combinations of parent values, so the matrix will be 2^m × 2 (rows × columns). Treating true as 1, and false as 0, concatenate the values of the parents in their numerical order from most significant bit to least significant bit (left to right) to create a row index r. The entry in the first column, rth row is then the probability that the variable is true given the values of the other variables (the entry in the corresponding 2nd column is the probability that the variable is false). Thus, the first row of the matrix corresponds to all conditioning variables taken the value false (r = 000 … 0), and the last row has all conditioning variables true (r = 111 … 1).</p>
-<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>Write your program in Java or C/C++. In the case of Java, name your program inference.java. Your program must be able to be compiled and run as follows:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> javac inference.java</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> java inference graphfile.txt</span></span><br></pre></td></tr></table></figure></p>
-<p>In the case of C/C++, you must supply a makefile Makefile with a rule called inference to compile your program into a Linux executable binary named inference.bin. Your program must be able to be compiled and run as follows:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make inference</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./inference.bin graphfile.txt</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>Write your program in Java or C/C++. In the case of Java, name your program inference.java. Your program must be able to be compiled and run as follows:<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">javac </span>inference.<span class="keyword">java</span></span><br><span class="line"><span class="keyword">$ </span><span class="keyword">java </span>inference graphfile.txt</span><br></pre></td></tr></table></figure></p>
+<p>In the case of C/C++, you must supply a makefile Makefile with a rule called inference to compile your program into a Linux executable binary named inference.bin. Your program must be able to be compiled and run as follows:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>make inference</span><br><span class="line"><span class="variable">$ </span>./inference.bin graphfile.txt</span><br></pre></td></tr></table></figure></p>
 <p>NOTE1: If a makefile exists, the marking script will assume that the program is written in C/C++, otherwise Java will be assumed.<br>NOTE2: graphfile.txt is of course a placeholder for the name of the file containing the PGM structure.</p>
 <h3 id="Submission-and-assessment"><a href="#Submission-and-assessment" class="headerlink" title="Submission and assessment"></a>Submission and assessment</h3><p>You must submit your program on the Computer Science Web Submission System. This means you must create the assignment under your own SVN repository to store the submission files.</p>
 <p>Your code will be compiled and run, testing its outputs for the two networks with two queries each that have been provided to you, and an additional three networks with two queries each. None of the networks will contain more than 16 variables. Since the results are stochastic, the query answers will not be exact and will vary from run to run. The asnwers will therefore be tested against a tolerance of ±0.01 (i.e. your answers must be within 1% of the true values), so you must ensure convergence to this level of precision. If it passes all tests you will get 15% of the overall course mark. The objective of the tests is to check for the correct operation of your implementation. Hence, the basis of the assessment is to compare your results against the expected results. You must also ensure that you have an efficient implementation.</p>
@@ -486,9 +486,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.gif"
-                alt="CPlusPlus小砖家" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
             
               <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -501,7 +499,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">257</span>
+                  <span class="site-state-item-count">258</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

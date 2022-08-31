@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,">
+  <meta name="keywords" content="Data Structure,Algorithm,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写日程表应用，练习Stack的用法。">
-<meta name="keywords" content="Data Structure">
+<meta name="description" content="根据题目所给的算法，计算单词之间的编辑距离。">
+<meta name="keywords" content="Data Structure,Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS134-Tutor-Scheduling">
-<meta property="og:url" content="https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html">
+<meta property="og:title" content="CS12B-Edit-Distance">
+<meta property="og:url" content="https://tk1307993.coding.me/CS12B-Edit-Distance.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="代写日程表应用，练习Stack的用法。">
+<meta property="og:description" content="根据题目所给的算法，计算单词之间的编辑距离。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-07-07T00:01:04.374Z">
+<meta property="og:updated_time" content="2022-08-31T08:43:13.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS134-Tutor-Scheduling">
-<meta name="twitter:description" content="代写日程表应用，练习Stack的用法。">
+<meta name="twitter:title" content="CS12B-Edit-Distance">
+<meta name="twitter:description" content="根据题目所给的算法，计算单词之间的编辑距离。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CS12B-Edit-Distance.html">
 
 
 
 
 
-  <title>Java代写：CS134-Tutor-Scheduling | 留学生CS编程作业代写</title>
+  <title>CS12B-Edit-Distance | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS12B-Edit-Distance.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS134-Tutor-Scheduling</h2>
+          <h2 class="post-title" itemprop="name headline">CS12B-Edit-Distance</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-07T07:58:59+08:00">
-                2021-07-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-08-31T16:40:40+08:00">
+                2022-08-31
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写日程表应用，练习Stack的用法。
+                  根据题目所给的算法，计算单词之间的编辑距离。
               </div>
           
 
@@ -360,37 +360,23 @@
       
 
       
-        <h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>In this project you will help determine the best of times for tutoring services for a class based upon student availability. The input to the program will be the information provided by the student, including the student ID, days of the week, and hours the student can attend tutoring. The output is a list days and time periods that will maximize the numbers of students who can attend at least 1 hour of tutoring. Make sure you look at the examples to understand the goal. The goal is not to pick the days and times noted by the most students, but rather dates and times that serve the maximum number of different students.</p>
-<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The goal of this programming project is for you to master (or at least get practice on) the following tasks:</p>
-<ul>
-<li>working with balanced expressions</li>
-<li>reading data from input files</li>
-<li>using the provided Stack class</li>
-<li>writing classes</li>
-<li>working with existing code</li>
-</ul>
-<h3 id="Input-Dataset"><a href="#Input-Dataset" class="headerlink" title="Input Dataset"></a>Input Dataset</h3><ul>
-<li>( ) are the symbols surrounding student data</li>
-<li>&lt; &gt; are the symbols surrounding day of the week data</li>
-<li style="list-style: none"><input type="checkbox"> are the symbols surrounding the time period.</li>
-</ul>
-<p>For example:</p>
-<p>(A Smith <m [0900][1000][1100]> <h [1400]> ) ( S Jones <t [2100][1800]>) means A Smith can go to tutoring on Mondays from 9-11, and Thursday 2-3, and S Jones can go on Tuesday from 6-7 and 9-10. Note the period order is not significant. There are no implied ranges.</t></h></m></p>
-<p>Assume the only tutoring days are M,T,W,H,F and the hours are from 0900 to 2100, hence the last hour is 2100 (9PM – 10 PM). Also assume there are no spaces or line breaks in the input, and that every student will have a unique name.</p>
-<h3 id="Program-Logic"><a href="#Program-Logic" class="headerlink" title="Program Logic"></a>Program Logic</h3><p>This two-dimensional array can be used to store the various students who can come for tutoring in that time period.</p>
-<p>The first part of your program should read the input ,data validate its format, and populate the array. You must use a Stack as to interpret the Expression. Your program should prompt the user for which test dataset to run. The user should enter 1 for test dataset 1, ..up to n (depending on the number you provide.</p>
-<p>The second part should analyze the array to pick 3 time slots that covers the most different students.</p>
-<p>For example, in the abbreviated schedule below,Thursday at 1200, Wednesday at 0900 and Friday at 1000 would cover the most (in this case all) students. Each cell represents the students who can attend tutoring at that time period.</p>
-<p>Your program should do the following:</p>
-<ol>
-<li>Read the student data from one input file. There will be many records, each giving information about one or more students.</li>
-<li>Throw Exceptions for ill formed expressions. However after reading an ill-formed expression, read the next record from the file.</li>
-<li>Use a stack to interpret the data input</li>
-<li>Store the student information in the 2 dimensional array</li>
-<li>Interpret the array to find the best 3 slots to cover the most students.</li>
-</ol>
-<h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>The zipped java project file, which contains all your source code, input files and Eclipse related projects, is to be submitted You may include more than one test file to indicate your program is working.</p>
-<p>You are responsible for making sample test cases (at least 3) as well as running the sets provided.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You are to write a client program that computes the edit distance between two words, i.e., the minimum number of operations needed to transform one string into the other.</p>
+<p>For this program, an operation is a substitution of as single character, such as from “brisk” to “brick”. The edit distance between the words “dog” and “cat” is 3, because the chain of “dot”, “cot” and “cat” transforms “dog” to “cat”.</p>
+<p>When computing the edit distance between two words, each intermediate word must be an actual valid word. Edit distances are useful in applications that need to determine how similar two strings are, such as spelling checkers.</p>
+<p>Your program should ask the user for the name of a dictionary text file (we will provide this). From this file, you should compute a map from every word to its intermediate neighbors; that is, the words that have an edit distance of 1 from it. Once this map is built, you can ask the user to enter two words to compare and you “walk” the map to find paths from one word to another. This process should be done in a loop: once you compute the edit distance of two words, you prompt again the user for the next two words.</p>
+<p>A good way to process paths to walk the map is to use a linked list of words to visit, starting from the beginning word, such as “dog” in the above example. Your algorithm should repeatedly remove the front word of the list and add all of its neighbors to the end of the list, until the ending word (such as “cat”) is found or until the list becomes empty, which indicates that no path exists between the two words.</p>
+<p>Special cases: (1) If a word is not included in the dictionary your program should print out the message “Word does not exist”, (2) The edit distance of two words with different length is not defined. Therefore, if the two words given as an input by the user do not have the same length then your program should print the message “No solution”, (3) if both cases (1) and (2) occur, you may print either error message.</p>
+<h3 id="General-Guidelines"><a href="#General-Guidelines" class="headerlink" title="General Guidelines"></a>General Guidelines</h3><p>You should download from LATTE two dictionary files. File text.txt has a dictionary of 8 words. You can use it to the your program with the “dog”/“cat” example (among others). File dict.txt is a larger file and you should use it to test your program with more complex examples. We will be using this file for testing your programs.</p>
+<p>You don’t need to create any classes for this part. You only need to write one client program and you should name it EditDistance.java. You should however break your program into methods (e.g., one that builds the map, show transformation paths, calculates edit distance, etc)</p>
+<p>You will be graded on correctness and programming style including the use of good variable names, comments on each class and each method, using local variables when possible, correct use of generics and the other standard style guidelines.</p>
+<h3 id="User-Interaction"><a href="#User-Interaction" class="headerlink" title="User Interaction:"></a>User Interaction:</h3><p>While you choose how you want to break your code up into methods, we choose how your program needs to behave externally. You must follow the template we outline for you below.</p>
+<p>Your program should first ask the user for the name of a dictionary file on one line. Your program should then loop through the following interactions, each of which should be on a separate line.</p>
+<p>Ask the user for two words separated by a single space for which to compute the edit distance.<br>Print “Path = “ followed by each word in the edit path (starting with the first word the user entered), a comma, a space, then the next word. A comma or a space should not follow the last word.<br>Print “Edit distance = x”, where x is the edit distance.<br>Here is an example user interaction where everything in bold is input by the user, and everything not in bold is output by your program.</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Enter name <span class="keyword">of</span> dictionary <span class="built_in">file</span>: dict.txt</span><br><span class="line">Enter <span class="literal">two</span> <span class="keyword">words</span> separated <span class="keyword">by</span> <span class="keyword">a</span> <span class="literal">space</span>: dog cat</span><br><span class="line">Path = dog, dot, cot, cat</span><br><span class="line">Edit distance = <span class="number">3</span></span><br><span class="line">Enter <span class="literal">two</span> <span class="keyword">words</span> separated <span class="keyword">by</span> <span class="keyword">a</span> <span class="literal">space</span>: brisk brick</span><br><span class="line">Path = brisk, brick</span><br><span class="line">Edit distance = <span class="number">1</span></span><br><span class="line">Enter <span class="literal">two</span> <span class="keyword">words</span> separated <span class="keyword">by</span> <span class="keyword">a</span> <span class="literal">space</span>: transportation cat</span><br><span class="line">No Solution</span><br><span class="line">Enter <span class="literal">two</span> <span class="keyword">words</span> separated <span class="keyword">by</span> <span class="keyword">a</span> <span class="literal">space</span>: foobar whobar</span><br><span class="line">Word does <span class="keyword">not</span> exist</span><br></pre></td></tr></table></figure>
+<p>You may choose to implement a quit operating by listening for a single word from the user, such as “quit”, if you would like, but you do not have to.</p>
+<h3 id="Design-Hints"><a href="#Design-Hints" class="headerlink" title="Design Hints"></a>Design Hints</h3><p>There are better algorithms for computing edit distance, but this approach runs reasonably quickly even for a large dictionary like dict.txt. The slow part is computing the neighbors, but that could be pre-computed and stored in a separate file. The program uses a LinkedList as a queue to keep track of candidate words to explore. A set is used to keep track of previously explored words. The algorithm keeps a count of how many words are at each distance from the original word so that it can report the edit distance. It also constructs a map each time it explores that keeps track of how it got to each word. That allows the program to report the path between the two words. All in all, this involves a LOT of data structure manipulation using the standard Java collections classes.</p>
+<p>You DON’T need to follow this design. You are free to design your own program as you wish.</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Your Java source code should be submitted via Latte the day it is due.</p>
 
       
     </div>
@@ -410,6 +396,8 @@
           
             <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
         </div>
       
 
@@ -421,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS217-Union-Find.html" rel="next" title="C代写：CS217-Union-Find">
-                <i class="fa fa-chevron-left"></i> C代写：CS217-Union-Find
+              <a href="/CSCI2110-Huffman-Coding.html" rel="next" title="CSCI2110-Huffman-Coding">
+                <i class="fa fa-chevron-left"></i> CSCI2110-Huffman-Coding
               </a>
             
           </div>
@@ -430,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/INFO1156-Text-To-Html.html" rel="prev" title="C++代写：INFO1156-Text-To-Html">
-                C++代写：INFO1156-Text-To-Html <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Goal"><span class="nav-number">1.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Dataset"><span class="nav-number">3.</span> <span class="nav-text">Input Dataset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-Logic"><span class="nav-number">4.</span> <span class="nav-text">Program Logic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-the-program"><span class="nav-number">5.</span> <span class="nav-text">Running the program</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#General-Guidelines"><span class="nav-number">2.</span> <span class="nav-text">General Guidelines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Interaction"><span class="nav-number">3.</span> <span class="nav-text">User Interaction:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Design-Hints"><span class="nav-number">4.</span> <span class="nav-text">Design Hints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">5.</span> <span class="nav-text">Submission</span></a></li></ol></div>
             
 
           </div>
