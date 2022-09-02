@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-09-01T09:28:23.908Z</updated>
+  <updated>2022-09-02T03:11:48.023Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>COMPS311-Android-App</title>
+    <link href="https://tk1307993.coding.me/COMPS311-Android-App.html"/>
+    <id>https://tk1307993.coding.me/COMPS311-Android-App.html</id>
+    <published>2022-09-02T03:09:53.000Z</published>
+    <updated>2022-09-02T03:11:48.023Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-1-Basics-and-resources"><a href="#Question-1-Basics-and-resources" class="headerlink" title="Question 1 - Basics and resources"></a>Question 1 - Basics and resources</h3><p>In this question, you create an Android app that displays your information according to the following requirements.</p><ul><li>The name of the app is “My Name”, and the package name of the app (i.e. app id)</li><li>By default, the app displays your name in English and your student ID.</li><li>If the locale of the device is traditional Chinese - Hong Kong, the app displays your name in Chinese and your student ID.<br>The following are sample outputs when the app is executed in locales of English (left) and traditional Chinese - Hong Kong (right), respectively.</li></ul><p>Submit one whole Android project that contains all your work for this question.</p><h3 id="Question-2-Layout-and-UI"><a href="#Question-2-Layout-and-UI" class="headerlink" title="Question 2 - Layout and UI"></a>Question 2 - Layout and UI</h3><p>Unit 6 contains an example app of a tip calculator. Enhance the app according to the following screenshots and requirements.</p><ul><li>a. Modify the portrait layout (existing in the project) to add 12 buttons under the “Bill Amount” input field, as shown in the left screenshot above.</li><li>b. Create a new landscape layout that contains the same components in the portrait layout (with the same IDs). Design the layout so that the components work properly in the landscape device orientation.</li><li>c. Implement the event handlers of the 12 new buttons as follows.</li><li>d. Create an “About” options menu item and show it as an action item. You may use a built-in Android drawable resource as its icon. When the item is selected, an “About” dialog box appears to show your name and your student ID, as in the middle screenshot above.</li><li>e. Create three options menu items “No fractional digits”, “One fractional digit”, and<br>“Two fractional digits”. These menu items are checkable, mutually exclusive, and in a group. They control the number of digits displayed after the decimal point for the output fields of “Total Bill Amount” and “Total Per Person”. The right screenshot above shows the output fields with one fractional digit.</li></ul><p>For simplicity, you may hard-code new strings in the programs, and don’t need to use primary or alternative string resources for them. Submit one whole Android project that contains all your work for this question.</p><h3 id="Question-3-Fragments-networking-and-concurrency"><a href="#Question-3-Fragments-networking-and-concurrency" class="headerlink" title="Question 3 - Fragments, networking and concurrency"></a>Question 3 - Fragments, networking and concurrency</h3><p>In this question, you develop an Android that checks the status of Web pages. A skeleton project, called WebChecker, is provided to you. Complete the project by working through the following tasks.</p><p>The following screenshots show the main screen (left) and log message screen (right) of the app. Submit one whole Android project that contains all your work for this question.</p>]]></content>
+    
+    <summary type="html">
+    
+      完成一个Android应用程序，做一个小费计算器。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CS5005-Sorting-Algorithms</title>
@@ -441,28 +463,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写：CS134-Tutor-Scheduling</title>
-    <link href="https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html"/>
-    <id>https://tk1307993.coding.me/CS134-Tutor-Scheduling-1.html</id>
-    <published>2021-07-06T23:58:59.000Z</published>
-    <updated>2021-07-07T00:01:04.374Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>In this project you will help determine the best of times for tutoring services for a class based upon student availability. The input to the program will be the information provided by the student, including the student ID, days of the week, and hours the student can attend tutoring. The output is a list days and time periods that will maximize the numbers of students who can attend at least 1 hour of tutoring. Make sure you look at the examples to understand the goal. The goal is not to pick the days and times noted by the most students, but rather dates and times that serve the maximum number of different students.</p><h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The goal of this programming project is for you to master (or at least get practice on) the following tasks:</p><ul><li>working with balanced expressions</li><li>reading data from input files</li><li>using the provided Stack class</li><li>writing classes</li><li>working with existing code</li></ul><h3 id="Input-Dataset"><a href="#Input-Dataset" class="headerlink" title="Input Dataset"></a>Input Dataset</h3><ul><li>( ) are the symbols surrounding student data</li><li>&lt; &gt; are the symbols surrounding day of the week data</li><li style="list-style: none"><input type="checkbox"> are the symbols surrounding the time period.</li></ul><p>For example:</p><p>(A Smith <m [0900][1000][1100]> <h [1400]> ) ( S Jones <t [2100][1800]>) means A Smith can go to tutoring on Mondays from 9-11, and Thursday 2-3, and S Jones can go on Tuesday from 6-7 and 9-10. Note the period order is not significant. There are no implied ranges.</t></h></m></p><p>Assume the only tutoring days are M,T,W,H,F and the hours are from 0900 to 2100, hence the last hour is 2100 (9PM – 10 PM). Also assume there are no spaces or line breaks in the input, and that every student will have a unique name.</p><h3 id="Program-Logic"><a href="#Program-Logic" class="headerlink" title="Program Logic"></a>Program Logic</h3><p>This two-dimensional array can be used to store the various students who can come for tutoring in that time period.</p><p>The first part of your program should read the input ,data validate its format, and populate the array. You must use a Stack as to interpret the Expression. Your program should prompt the user for which test dataset to run. The user should enter 1 for test dataset 1, ..up to n (depending on the number you provide.</p><p>The second part should analyze the array to pick 3 time slots that covers the most different students.</p><p>For example, in the abbreviated schedule below,Thursday at 1200, Wednesday at 0900 and Friday at 1000 would cover the most (in this case all) students. Each cell represents the students who can attend tutoring at that time period.</p><p>Your program should do the following:</p><ol><li>Read the student data from one input file. There will be many records, each giving information about one or more students.</li><li>Throw Exceptions for ill formed expressions. However after reading an ill-formed expression, read the next record from the file.</li><li>Use a stack to interpret the data input</li><li>Store the student information in the 2 dimensional array</li><li>Interpret the array to find the best 3 slots to cover the most students.</li></ol><h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>The zipped java project file, which contains all your source code, input files and Eclipse related projects, is to be submitted You may include more than one test file to indicate your program is working.</p><p>You are responsible for making sample test cases (at least 3) as well as running the sets provided.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写日程表应用，练习Stack的用法。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
