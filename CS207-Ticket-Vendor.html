@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Database,">
+  <meta name="keywords" content="Web,Database,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="Pathfinding是在平面上两点之间找出路径的问题。">
-<meta name="keywords" content="Database">
+<meta name="description" content="使用CRC的方式，设计一款售票系统。">
+<meta name="keywords" content="Web,Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database代写：ECS165A-NormalForm">
-<meta property="og:url" content="https://tk1307993.coding.me/ECS165A-NormalForm.html">
+<meta property="og:title" content="CS207-Ticket-Vendor">
+<meta property="og:url" content="https://tk1307993.coding.me/CS207-Ticket-Vendor.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta property="og:description" content="使用CRC的方式，设计一款售票系统。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-08T03:54:20.974Z">
+<meta property="og:updated_time" content="2022-09-04T01:30:35.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Database代写：ECS165A-NormalForm">
-<meta name="twitter:description" content="Pathfinding是在平面上两点之间找出路径的问题。">
+<meta name="twitter:title" content="CS207-Ticket-Vendor">
+<meta name="twitter:description" content="使用CRC的方式，设计一款售票系统。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/ECS165A-NormalForm.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CS207-Ticket-Vendor.html">
 
 
 
 
 
-  <title>Database代写：ECS165A-NormalForm | 留学生CS编程作业代写</title>
+  <title>CS207-Ticket-Vendor | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ECS165A-NormalForm.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS207-Ticket-Vendor.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Database代写：ECS165A-NormalForm</h2>
+          <h2 class="post-title" itemprop="name headline">CS207-Ticket-Vendor</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T11:51:48+08:00">
-                2018-09-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-04T09:28:44+08:00">
+                2022-09-04
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Other/" itemprop="url" rel="index">
-                    <span itemprop="name">Other</span>
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  Pathfinding是在平面上两点之间找出路径的问题。
+                  使用CRC的方式，设计一款售票系统。
               </div>
           
 
@@ -360,25 +360,24 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Normal From是数据库理论里面最恶心的问题，从1NF到6NF，加上BCNF，DKNF以及UF。不像编程作业，有运行结果作参考，做这种理论题简直是受罪，每一题都得反复推理。</p>
-<p>像下面给出的这个作业，除了题量大以外，每个问题都是多解问题，拿满分几乎是不可能的事情。</p>
-<p>1) For this problem you will consider following relation and set of FDs:<br>R(A,B,C,D,E)</p>
-<p>AB → E</p>
-<p>B → C</p>
-<p>CE → A</p>
-<p>AE → D</p>
-<p>a) What are the keys of R?</p>
-<p>b) Show that the set of FDs is a minimal basis; if it is not a minimal basis, find a minimal basis for the FDs.</p>
-<p>c) What are all of the BCNF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
-<p>d) Decompose R into BCNF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
-<p>e) What are all of the 3NF violations that follow from the FDs? (Don’t just consider the listed FDs, but all that follow).</p>
-<p>f) Decompose R into 3NF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.</p>
-<p>g) What are all of the 4NF MVD violations that follow from the FDs?</p>
-<p>h) Decompose R into 4NF. For each relation, list the keys, FDs and MVD.</p>
-<p>i) If you project the relation R onto S(A,B,C) what nontrivial FDs and MVDs hold in S?</p>
-<p>2) For this problem you will consider the following relations and FDs:<br>Courses(C,T,H,R,S,G)<br>C → T<br>HR → C<br>HT → R<br>HS → R<br>CS → G<br>Where C, T, H, R, S, and G are the course, teacher, hour, room, student, and grade respectively. With a proposed decomposition of:<br>R1(C, T, H)<br>R2(C, H, R, G)<br>R3(C, R, S)<br>a) Use the chase test to prove/disprove that holds HS → G in Courses.<br>b) Use the chase test to prove/disprove that holds THR → S in Courses.<br>c) Use the chase test to prove/disprove the proposed decomposition has a lossless join.<br>d) Decompose Courses into 3NF.<br>e) Which of your relations in 3NF are not in BCNF?<br>f) Which of your relations in 3NF are not in 4NF?</p>
-<p>3) Design an academic genealogy database with one entity set: Academics.<br>Consider academics with doctoral degrees only. The information to record about academics includes their name, discipline, year of graduation, institution, dissertation title, dissertation chair, dissertation committee members (assume two others distinct from chair), and academic progeny.</p>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>最后还是想说一下，这样的多个解的作业真的相当恶心，做的时候需要反复推导，查阅各种资料来证明，而且第二个问的chase test完全就是slides里面的方法，学习理解也花了不少时间。</p>
+        <h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Create a program that keeps track of ticket sales for an auditorium that has 32 rows of seats with a varied number of seats in each row. Each ticket is associated with a seat (row letter and seat number such as A12), a price (low $10, medium $30, or high $50), whether or not the seat is for sale or complementary (for example, sold to the public or given to friends of a performer), name of occupant (who bought the ticket), their e-mail address, and the date, time, and name of the performance so that tickets for each seat can be sold to different people at different times.</p>
+<p>It should be possible to get a list of names of all people who bought tickets for a particular date. For a given performance, it should also be possible to print a grid of x’s and o’s where an x represents a seat that is occupied (that is, it’s associated ticket has been sold) and an o represents seats for which no ticket has yet been sold.</p>
+<p>Anyone who buys a high-priced ticket automatically joins the Gold Members Club which is an e-mail list. It should be possible to generate an e-mail list of all people in the Gold Members Club, and to delete someone from that e-mail list upon request.</p>
+<p>A ticket holder should be able to create and access an account that stores the seats, dates, and names of performances attached to all of the tickets which they have purchased.</p>
+<h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><p>This is where major design decisions are made. Can we store all of the information in the UserAccounts?</p>
+<p>No, because we do not want to accidentally sell the same seat to the same show to two different people. So information about each show should be stored separately from the user accounts.</p>
+<p>Could we have a ShowManager which keeps instances of class Show in which we store in- formation associated with each seat and ticket?</p>
+<p>Alternatively, could we let seats be entries in a collection or multi-dimensional array that exists within the Show class, generating tickets for each by accessing a TicketManager?</p>
+<p>There are many good designs that can fulfill this specification. When creating CRC cards, you need to choose one design, work with it, and adjust it as problems arise.</p>
+<h3 id="Responsibilities"><a href="#Responsibilities" class="headerlink" title="Responsibilities"></a>Responsibilities</h3><p>More than one class needs access to the seat number and row number of a given ticket. Where should we store that information?</p>
+<p>For the purposes of this handout, we decide to have a Ticket class. But where do we instantiate Ticket? In the TicketManager and pass it to the UserAccount, or should we instantiate the ticket class in the UserAccount and pass that information to the Show and its associated TicketManager?</p>
+<p>Likewise, should we store the e-mail list in the TicketVendorSystem, or create a method that generates that list whenever we need it? If the latter, how do we store the information about whether or not a user is on that list?</p>
+<h3 id="Collaborations"><a href="#Collaborations" class="headerlink" title="Collaborations"></a>Collaborations</h3><p>Collaborators can be classes that are adjacent on the inheritance hierarchy (that is, one is the parent of the other), or instantiate one inside the other, or one gets passed as an argument into a method in the other.</p>
+<p>Collaboration is symmetric. So, if class A collaborates with class B, then class B collaborates with class A. For example, the TicketManager will collaborate with Ticket objects (through instantiation), so the TicketManager collaborates with class Ticket (through creating and storing instances of Ticket).</p>
+<p>On the next page is one possible set of CRC cards that describes one piece of software that fulfills the given specification. Class names are at the top of each card. The responsibilities (variables and methods) of that class are written on the left, while collaborating classes are listed on the right.</p>
+<h3 id="Warm-Up-Questions"><a href="#Warm-Up-Questions" class="headerlink" title="Warm-Up Questions"></a>Warm-Up Questions</h3><p>According to the CRC cards, where is the user’s name stored?<br>How does the system generate a list of users names for a given show?<br>How does the system generate the map of seats with x’s and o’s showing which seats are available? Can you think of another way to accomplish this?</p>
+<h3 id="Questions-About-The-Current-Design"><a href="#Questions-About-The-Current-Design" class="headerlink" title="Questions About The Current Design"></a>Questions About The Current Design</h3><p>In which class does execution start?<br>Where does class Show get instantiated?<br>Where are instances of class Ticket stored?<br>How does a UserAccount get information about available seats for a particular show?<br>How does a user buy a ticket (represented by a Ticket)?<br>Once a Ticket is generated, where does it go? How many classes have direct or in- direct access to the information contained in that Ticket?<br>Should UserAccount collaborate with class Show? Why or why not?</p>
+<h3 id="Questions-About-Changing-the-Design"><a href="#Questions-About-Changing-the-Design" class="headerlink" title="Questions About Changing the Design:"></a>Questions About Changing the Design:</h3><p>Do we need a separate class for Show or can we reorganize the ShowManager so we no longer need instances of Show? If so, should we?<br>How can we change the design so that the same TicketVendorSystem sells tickets to multiple venues (different rooms with different numbers of rows and columns of seats)?</p>
 
       
     </div>
@@ -396,6 +395,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
             <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
@@ -409,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP3007-Pathfinding.html" rel="next" title="Java代写：COMP3007 Pathfinding">
-                <i class="fa fa-chevron-left"></i> Java代写：COMP3007 Pathfinding
+              <a href="/COMP3005-Online-Bookstore.html" rel="next" title="COMP3005-Online-Bookstore">
+                <i class="fa fa-chevron-left"></i> COMP3005-Online-Bookstore
               </a>
             
           </div>
@@ -418,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS308-Pipes.html" rel="prev" title="C代写：CS308-Pipes">
-                C代写：CS308-Pipes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -572,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">2.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">1.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Classes"><span class="nav-number">2.</span> <span class="nav-text">Classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Responsibilities"><span class="nav-number">3.</span> <span class="nav-text">Responsibilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collaborations"><span class="nav-number">4.</span> <span class="nav-text">Collaborations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Warm-Up-Questions"><span class="nav-number">5.</span> <span class="nav-text">Warm-Up Questions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Questions-About-The-Current-Design"><span class="nav-number">6.</span> <span class="nav-text">Questions About The Current Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Questions-About-Changing-the-Design"><span class="nav-number">7.</span> <span class="nav-text">Questions About Changing the Design:</span></a></li></ol></div>
             
 
           </div>

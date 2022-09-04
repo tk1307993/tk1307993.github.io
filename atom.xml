@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-09-03T08:05:51.152Z</updated>
+  <updated>2022-09-04T01:30:35.243Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS207-Ticket-Vendor</title>
+    <link href="https://tk1307993.coding.me/CS207-Ticket-Vendor.html"/>
+    <id>https://tk1307993.coding.me/CS207-Ticket-Vendor.html</id>
+    <published>2022-09-04T01:28:44.000Z</published>
+    <updated>2022-09-04T01:30:35.243Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>Create a program that keeps track of ticket sales for an auditorium that has 32 rows of seats with a varied number of seats in each row. Each ticket is associated with a seat (row letter and seat number such as A12), a price (low $10, medium $30, or high $50), whether or not the seat is for sale or complementary (for example, sold to the public or given to friends of a performer), name of occupant (who bought the ticket), their e-mail address, and the date, time, and name of the performance so that tickets for each seat can be sold to different people at different times.</p><p>It should be possible to get a list of names of all people who bought tickets for a particular date. For a given performance, it should also be possible to print a grid of x’s and o’s where an x represents a seat that is occupied (that is, it’s associated ticket has been sold) and an o represents seats for which no ticket has yet been sold.</p><p>Anyone who buys a high-priced ticket automatically joins the Gold Members Club which is an e-mail list. It should be possible to generate an e-mail list of all people in the Gold Members Club, and to delete someone from that e-mail list upon request.</p><p>A ticket holder should be able to create and access an account that stores the seats, dates, and names of performances attached to all of the tickets which they have purchased.</p><h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><p>This is where major design decisions are made. Can we store all of the information in the UserAccounts?</p><p>No, because we do not want to accidentally sell the same seat to the same show to two different people. So information about each show should be stored separately from the user accounts.</p><p>Could we have a ShowManager which keeps instances of class Show in which we store in- formation associated with each seat and ticket?</p><p>Alternatively, could we let seats be entries in a collection or multi-dimensional array that exists within the Show class, generating tickets for each by accessing a TicketManager?</p><p>There are many good designs that can fulfill this specification. When creating CRC cards, you need to choose one design, work with it, and adjust it as problems arise.</p><h3 id="Responsibilities"><a href="#Responsibilities" class="headerlink" title="Responsibilities"></a>Responsibilities</h3><p>More than one class needs access to the seat number and row number of a given ticket. Where should we store that information?</p><p>For the purposes of this handout, we decide to have a Ticket class. But where do we instantiate Ticket? In the TicketManager and pass it to the UserAccount, or should we instantiate the ticket class in the UserAccount and pass that information to the Show and its associated TicketManager?</p><p>Likewise, should we store the e-mail list in the TicketVendorSystem, or create a method that generates that list whenever we need it? If the latter, how do we store the information about whether or not a user is on that list?</p><h3 id="Collaborations"><a href="#Collaborations" class="headerlink" title="Collaborations"></a>Collaborations</h3><p>Collaborators can be classes that are adjacent on the inheritance hierarchy (that is, one is the parent of the other), or instantiate one inside the other, or one gets passed as an argument into a method in the other.</p><p>Collaboration is symmetric. So, if class A collaborates with class B, then class B collaborates with class A. For example, the TicketManager will collaborate with Ticket objects (through instantiation), so the TicketManager collaborates with class Ticket (through creating and storing instances of Ticket).</p><p>On the next page is one possible set of CRC cards that describes one piece of software that fulfills the given specification. Class names are at the top of each card. The responsibilities (variables and methods) of that class are written on the left, while collaborating classes are listed on the right.</p><h3 id="Warm-Up-Questions"><a href="#Warm-Up-Questions" class="headerlink" title="Warm-Up Questions"></a>Warm-Up Questions</h3><p>According to the CRC cards, where is the user’s name stored?<br>How does the system generate a list of users names for a given show?<br>How does the system generate the map of seats with x’s and o’s showing which seats are available? Can you think of another way to accomplish this?</p><h3 id="Questions-About-The-Current-Design"><a href="#Questions-About-The-Current-Design" class="headerlink" title="Questions About The Current Design"></a>Questions About The Current Design</h3><p>In which class does execution start?<br>Where does class Show get instantiated?<br>Where are instances of class Ticket stored?<br>How does a UserAccount get information about available seats for a particular show?<br>How does a user buy a ticket (represented by a Ticket)?<br>Once a Ticket is generated, where does it go? How many classes have direct or in- direct access to the information contained in that Ticket?<br>Should UserAccount collaborate with class Show? Why or why not?</p><h3 id="Questions-About-Changing-the-Design"><a href="#Questions-About-Changing-the-Design" class="headerlink" title="Questions About Changing the Design:"></a>Questions About Changing the Design:</h3><p>Do we need a separate class for Show or can we reorganize the ShowManager so we no longer need instances of Show? If so, should we?<br>How can we change the design so that the same TicketVendorSystem sells tickets to multiple venues (different rooms with different numbers of rows and columns of seats)?</p>]]></content>
+    
+    <summary type="html">
+    
+      使用CRC的方式，设计一款售票系统。
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://tk1307993.coding.me/categories/PHP/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>COMP3005-Online-Bookstore</title>
@@ -443,28 +467,6 @@
     
     
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java代写CSCI112-Connect4</title>
-    <link href="https://tk1307993.coding.me/CSCI112-Connect4.html"/>
-    <id>https://tk1307993.coding.me/CSCI112-Connect4.html</id>
-    <published>2021-08-04T02:56:11.000Z</published>
-    <updated>2021-08-03T03:09:47.339Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this project you will help determine the best moves for an abbreviated game of Connect4. The program will analyze the best starting position to make a move. Due to processing times our Connect4 board will be 4 x 4, versus the actual 7x7 board of the game.</p><p>The program will explore making its first move in each of the four columns. The first action will be to make a move in one of the four columns. The program will then pass the Board, and the next player to a Play method. The Play method will analyze the board and call itself up to 4 times, representing the possible number of next moves. At times the Play method may call itself less than four times due to the condition that a column is full. The Play method will return a 1 if the game is won by the first player, -1 if won by the second player, and zero, if that moves leads to a tie. Hence Play (board, clr) gives you the Net wins for first player, given the board position represented by board, and the next move is to be taken by clr.</p><p>A game is won if 4 discs of the same color appear in a column, row or diagonal.</p><h3 id="Helpful-code"><a href="#Helpful-code" class="headerlink" title="Helpful code"></a>Helpful code</h3><p>Code is provided to do the same type of logic as this problem, except with a Tic Tac Toe Board. In the Tic Tac Toe game, after the first move, there are 8 possible moves by the second player. In Connect4, with our abridged board, there are always a maximum of 4 next moves. Also in the Tic Tac Toe game the next move can be anywhere on the Board, while in Connect4, only the bottom of an open column can be chosen for the next move.</p><h3 id="Tic-Tac-Toe-Program-Logic"><a href="#Tic-Tac-Toe-Program-Logic" class="headerlink" title="Tic Tac Toe Program Logic"></a>Tic Tac Toe Program Logic</h3><p>The logic of the program provided prints out information for X making the first move in one of the three spaces of a diagonal. In the Main method, within a loop iterating through the 3 diagonal spaces, the program makes a first move and then calls Play , passing the current board state, and next player.</p><p>Within Play, the method first checks to see if the current board has a winning position for either player. If so, 1(X) or -1(O) is returned. Also a non-winning full board is checked. If the board is full, with no winner, then zero is returned. The CheckBoard method does this analysis of the board.</p><p>If the board is not a complete game, CheckBoard returns 3. This result prompts Play to recursively call itself with all possible moves for the current player. The current board array is copied to another array. to ensure future executions of the method do not alter the current board.</p><h3 id="Expected-Results"><a href="#Expected-Results" class="headerlink" title="Expected Results"></a>Expected Results</h3><p>It is advised to make your Connect4 program also work on a 3 by 3 matrix. This is easier to test with, since the 4x4 does take more processing. If you run a 3x3 Connect4 game , these are the results you should achieve:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">NetWins for column 0:</span>  <span class="number">112</span></span><br><span class="line"><span class="attr">Number of recursion calls:</span> <span class="number">1087</span></span><br><span class="line"><span class="attr">Red Wins:224   Blue Wins:</span> <span class="number">112</span></span><br><span class="line"><span class="string">******************</span></span><br><span class="line"><span class="attr">NetWins for column 1:</span>  <span class="number">6</span></span><br><span class="line"><span class="attr">Number of recursion calls:</span> <span class="number">1103</span></span><br><span class="line"><span class="attr">Red Wins:168   Blue Wins:</span> <span class="number">162</span></span><br><span class="line"><span class="string">******************</span></span><br><span class="line"><span class="attr">NetWins for column 2:</span>  <span class="number">112</span></span><br><span class="line"><span class="attr">Number of recursion calls:</span> <span class="number">1087</span></span><br><span class="line"><span class="attr">Red Wins:224   Blue Wins:</span> <span class="number">112</span></span><br><span class="line"><span class="string">******************</span></span><br></pre></td></tr></table></figure></p><h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>The zipped java project file, which contains all your source code, input files and Eclipse related projects, is to be submitted You may include more than one test file to indicate your program is working.</p><h3 id="Working-on-This-Assignment"><a href="#Working-on-This-Assignment" class="headerlink" title="Working on This Assignment"></a>Working on This Assignment</h3><p>You should modularize your design so that you can test it regularly. Make sure that at all times you have a working program. You can implement methods that perform one task at a time. This way, if you run out of time, at least parts of your program will be functioning properly.</p><h3 id="Final-step-optional"><a href="#Final-step-optional" class="headerlink" title="Final step (optional)"></a>Final step (optional)</h3><p>When considering the next possible moves, if the player can win, have that player only make that move. For example, if all four columns have an opening, but moving in column 3 wins the game, only recursively call moving in column 3.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写游戏Connect4，一款消除类游戏。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
