@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Network,">
+  <meta name="keywords" content="Web,Database,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个网络嗅探器，可以获取网络数据包。">
-<meta name="keywords" content="Network">
+<meta name="description" content="实现一个考拉(Koala)救援小组模拟器。">
+<meta name="keywords" content="Web,Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CITS2002-Wifistats">
-<meta property="og:url" content="https://tk1307993.coding.me/CITS2002-Wifistats.html">
+<meta property="og:title" content="FIT9131-Koala-Rescue">
+<meta property="og:url" content="https://tk1307993.coding.me/FIT9131-Koala-Rescue.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="代写一个网络嗅探器，可以获取网络数据包。">
+<meta property="og:description" content="实现一个考拉(Koala)救援小组模拟器。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-31T01:55:37.290Z">
+<meta property="og:updated_time" content="2022-09-05T02:21:34.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CITS2002-Wifistats">
-<meta name="twitter:description" content="代写一个网络嗅探器，可以获取网络数据包。">
+<meta name="twitter:title" content="FIT9131-Koala-Rescue">
+<meta name="twitter:description" content="实现一个考拉(Koala)救援小组模拟器。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CITS2002-Wifistats.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/FIT9131-Koala-Rescue.html">
 
 
 
 
 
-  <title>CITS2002-Wifistats | 留学生CS编程作业代写</title>
+  <title>FIT9131-Koala-Rescue | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CITS2002-Wifistats.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT9131-Koala-Rescue.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CITS2002-Wifistats</h2>
+          <h2 class="post-title" itemprop="name headline">FIT9131-Koala-Rescue</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-12-31T09:53:22+08:00">
-                2021-12-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-05T10:19:39+08:00">
+                2022-09-05
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个网络嗅探器，可以获取网络数据包。
+                  实现一个考拉(Koala)救援小组模拟器。
               </div>
           
 
@@ -360,31 +360,29 @@
       
 
       
-        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>This project will assess your understanding of introductory C99 programming language features, including its control­structures, simple data­ structures, and its standard library support for handling strings and text files. The project can be successfully completed using the information presented in CITS2002’s lectures, laboratories, and workshops, to the end of week­6.</p>
-<p>Nearly all devices that connect to the Internet use networking hardware that conforms to IEEE­802 standards, commonly termed the Ethernet standards. It is common for desktop and laptop computers to have two Ethernet interfaces, one wired (the IEEE­802.3 standard) and one wireless (the IEEE­802.11 standard), while mobile devices and smartphones will typically have a single wireless Ethernet interface and a Bluetooth interface (the IEEE­802.15.1 standard).</p>
-<p>To simplify communication between devices, each Ethernet interface has a unique networking address, termed its Media Access Control (MAC) address. Each MAC address is 6­bytes long but, to make them easier for humans to read and compare, they’re usually written as a sequence of hexadecimal characters separated by colons or hyphens, as in the example 74:e2:f5:20:f9:8b. When written this way, MAC addresses are case­ insensitive ­ that is to say that 74­E2­F5­20­F9­8B is the same address.</p>
-<p>When devices communicate using WiFi (the IEEE­802.11 standard) they break their communication into many small packets of data. Each packet contains MAC addresses to identify the device which transmitted the packet (the transmitter’s address), and the device for which the packet is intended (the receiver’s address). The special MAC address, ff:ff:ff:ff:ff:ff, is termed the broadcast MAC address, and is used when all devices within range should receive the packet.</p>
-<p>Each 6­byte MAC address comprises two 3­byte parts. The first 3­bytes are termed the Organizationally Unique Identifier (OUI), and they identify the vendor of the Ethernet interface. From the address 74:e2:f5:20:f9:8b, the 74:e2:f5 indicates that the interface was made by Apple (see <a href="http://www.macvendorlookup.com)" target="_blank" rel="noopener">www.macvendorlookup.com)</a>.</p>
-<p>The goal of this project is to write a C99 program, named wifistats, that reports the number of bytes either transmitted or received by devices using WiFi. The program may be requested to generate reports sorted by either the device MACs or by the vendors’ names, from the largest transmitter (most bytes transmitted) to the smallest.</p>
-<h3 id="Program-requirements"><a href="#Program-requirements" class="headerlink" title="Program requirements"></a>Program requirements</h3><p>Your program’s single C99 source file must be named wifistats.c</p>
-<p>Your program will be invoked in one of two ways:</p>
-<p>prompt&gt; ./wifistats what packets<br>where what is either the single character ‘t’ or ‘r’ to request statistics about WiFi transmitters, or receivers, respectively. For example, if the program is invoked as ./wifistats t packets then the program should produce statistics about the data transmissions of each transmitting device present in the packets file.</p>
-<p>packets is the name of a text­file providing information about each WiFi packet, one packet per line. Here is a sample­packet file. Each line consists of 4 fields, providing the time that each packet was captured (in seconds and microseconds), the transmitter’s and receiver’s MAC addresses, and the length (in bytes) of the packet. Each of the fields will be separated by a single TAB (‘\t’) character.</p>
-<p>If we ran:</p>
-<p>prompt&gt; ./wifistats t sample-packets<br>this would be the required output.If we ran:</p>
-<p>prompt&gt; ./wifistats r sample-packets<br>this would be the required output.</p>
-<p>prompt&gt; ./wifistats what packets OUIfile<br>where OUIfile is the name of a text­file providing the OUIs and names of Ethernet hardware vendors. If an OUIfile is provided, the program should report its statistics not on individual device MAC addresses but on the vendor that produced each device. Here are two sample OUIfiles: sample­OUIfile­small (40 entries) and sample­OUIfile­large (23,000 entries). The 2 fields will be separated by a single TAB (‘\t’) character, and the vendors’ names may contain spaces.</p>
-<p>For example, if we ran:</p>
-<p>prompt&gt; ./wifistats t sample-packets sample-OUIfile-small<br>this would be the required output.<br>If we ran:</p>
-<p>prompt&gt; ./wifistats r sample-packets sample-OUIfile-small<br>this would be the required output.</p>
-<p>You may assume that all input data is in the correct format.<br>If your program encounters a broadcast MAC address, your program should ignore that input line.<br>If your program encounters an OUI not found in a provided OUI file, it should use/report the vendor’s name as UNKNOWN­VENDOR.</p>
-<p>Your program must support these limits (you may assume that the input data never exceeds these limits):</p>
-<p>maximum number of distinct MAC addresses -­ 500.<br>maximum number of distinct OUIs ­- 25000.<br>maximum length of any vendor name ­ 90 characters.<br>Your program must invoke the standard utility program /usr/bin/sort to sort the final results. Your program must use the system­calls fork() and execv() (and possibly others) to invoke /usr/bin/sort. Your program must not just call the C function system(). Note that the command­line options supported by /usr/bin/sort on OS­X, Linux, and cygwin(Windows) are often different.</p>
-<p>If the data totals of two or more MAC addresses, or two or more vendors (via their OUIs), are identical, then the MAC addresses or vendors with identical totals should be printed in ascending alphabetical order.</p>
-<p>Your program must employ sound programming practices, including the use of meaningful comments, well chosen identifier names, appropriate choice of basic data­structures and data­types, and appropriate choice of control­flow constructs.</p>
-<h3 id="Assessment"><a href="#Assessment" class="headerlink" title="Assessment"></a>Assessment</h3><p>Projects will be marked using an automatic marking program (for correctness) and by visual inspection (for good programming practices). It is thus important that your program produces its output in the correct format. This project is worth 15% of your final mark for CITS2002. It will be marked out of 40. The project may be completed individually or in teams of two (working as a team is STRONGLY encouraged).</p>
-<p>During the marking, attention will obviously be given to the correctness of your solution. However, a correct and efficient solution should not be considered as the perfect, nor necessarily desirable, form of solution. Preference will be given to well presented, well documented solutions that use the appropriate features of the language to complete tasks in an easy to understand and easy to follow manner. Your program must employ sound programming practices, including the use of meaningful comments, well chosen identifier names, appropriate choice of basic data­structures and data­types, and appropriate choice of control­flow constructs. Do not expect to receive full marks for your program simply because it works correctly. Remember, a computer program should not only convey a message to the computer, but also to other human programmers.</p>
-<p>Your project will be marked on the computers in CSSE Lab 2.03, using the macOS environment. No allowance will be made for a program that “works at home” but not on CSSE Lab 2.03 under macOS, so be sure that your code compiles and executes correctly on these machines before you submit it.</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Please note the section on plagiarism in this document.</p>
+<p>In preparing your assignment please note the following:</p>
+<p>The assignment must be done using the BlueJ environment.<br>The Java source code for the assignment must be implemented according to the FIT9131 Java Coding Standards.<br>You must acknowledge all code in your assignment that you have taken from other sources.<br>Only a text interface is to be used for this program, there is to be no GUI. More marks will be gained for a game that is easy to follow with clear information/error messages.<br>Any points needing clarification may be discussed with your tutor in the lab classes. You should not make any assumptions about the program without consulting your tutor.</p>
+<p>Completion of this assignment contributes towards the following FIT9131 learning outcomes:</p>
+<p>design, construct, test and document small computer programs using Java;<br>interpret and demonstrate software engineering principles of maintainability, readability, and modularisation;<br>explain and apply the concepts of the “object-oriented” style of programming.</p>
+<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>For this assignment you will simulate the work of a koala rescue team. This section specifies the required functionality of the program.</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>The koala is a marsupial and is native to Australia. Koalas typically live in open eucalyptus (gum tree) forests. Koalas live mainly in trees and eat up to 1 kg of leaves per day. Their diet is restricted to a few varieties of gum trees (e.g., Manna Gum, Swamp Gum, Blue Gum, and River Red Gum). Koalas use some other varieties of trees (e.g. Wattle) for shelter on hot days. Only one koala at a time will occupy a shelter tree. Whilst moving on the ground between trees, koalas are exposed to attacks from predators.</p>
+<p>After bushfires in January 2020, several koala reserves were left devastated when forest habitat burnt leaving many koalas dead or injured and without sufficient food. The koala rescue team’s work is to inspect the reserves and provide help to the koalas. Unfortunately, the team operates within a restricted budget and sometimes has to make difficult decisions. The aim of the rescue team is to save as many koalas as possible within a limited budget.</p>
+<p>The koala reserve consists of a series of observation points where the rescue team pauses, observes the koala population, the trees, and the predators, and decides how the koalas can be helped. The help may be to move a koala to a safe haven if it is injured or there is not enough food or shelter.</p>
+<h3 id="Koala-Rescue-Team-simulation"><a href="#Koala-Rescue-Team-simulation" class="headerlink" title="Koala Rescue Team simulation"></a>Koala Rescue Team simulation</h3><p>The Koala Rescue Team simulation begins with a welcome message and an invitation to the rescue team leader to enter his/her name. The name cannot be blank but must be less than 16 alphabetic characters. The leader is then asked to enter the budget for the rescue. This is an amount from $100 to $200, inclusive.</p>
+<p>The program then sets up the numbers of trees, koalas and predators in each of the 10 observation points as follows:</p>
+<p>The numbers of trees in the reserve are read from a text file trees.txt. The numbers of each type of tree (Manna Gum, Swamp Gum, Blue Gum, River Red Gum, Wattle) at each observation point are read in from the file. The file has 10 lines, with 5 comma separated numbers on each line. Each line represents the tree numbers at each observation point. There is no other reading from the file during the actual running of the program.</p>
+<p>Each tree is either used for shelter or food. Each shelter tree can hold a maximum of one koala. The food trees can produce a certain weight of leaves per day that can be eaten by the koalas (see Table 1 ). The weight is used to calculate the total food available for the koalas at any observation point. The food available is calculated by multiplying the number of each tree type by the weight of leaves it produces and summing these to get the total food available. Each koala, whether healthy or injured, can eat 1 kg of leaves per day.</p>
+<p>Each koala will have a randomly allocated age of 1-18 years.</p>
+<p>There is a random number of 0-4 predators at each observation point.</p>
+<p>There are no koalas in safe haven at the start of the rescue.</p>
+<p>The rescue team visits each of 10 observation points in turn. At each observation point the rescue team considers the number of trees, the number and condition of the koalas (some of which may be injured) and the number of predators. The team takes actions to help the koalas at each point. If the budget runs out at any point then the rescue mission continues but no actions can be taken that involve cost. The rescue mission is considered successful when all areas have been observed and all koalas have survived.</p>
+<h3 id="Class-Design"><a href="#Class-Design" class="headerlink" title="Class Design"></a>Class Design</h3><p>Your program must consist of at least seven classes. A suggested class design is shown in</p>
+<h4 id="Important-Notes"><a href="#Important-Notes" class="headerlink" title="Important Notes"></a>Important Notes</h4><p>Your program must demonstrate your understanding of the object-oriented concepts and general programming constructs presented in FIT9131. Consider carefully your choice of classes, how they interact and the fields and methods of each class. You must use appropriate data structures to store the various objects (observation points, koalas, trees, etc.) in the program. You must make use of both Arrays and ArrayLists in your program. Make sure that you discuss your design with your tutor. You must document any additional assumptions you made.<br>You will be required to justify your design and the choice of any data structures used at the interview.<br>Validation of values for fields and local variables should be implemented where appropriate. You should not allow an object of a class to be set to an invalid state (i.e. put some simple validations in your mutator methods).<br>Your program should handle incorrect or invalid input and present the user with relevant error messages. No invalid input should crash the program.<br>Exception handling should be used where appropriate.</p>
+<h3 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h3><p>You will be asked to demonstrate your program at an “interview” following the submission date.</p>
+<p>At the interview, you will be asked to explain your code/design, modify your code, and discuss your design decisions and alternatives. Marks will not be awarded for any section of code/design/functionality that you cannot explain satisfactorily (the marker may also delete excessive in-code comments before you are asked to explain that code).</p>
+<p>In other words, you will be assessed on your understanding of the code, and not on the actual code itself.</p>
+<p>The interviews will be organised during week 12 and will take place online via Zoom or other video facility after that time. You must have audio and video available and operating during the interview. It is your responsibility to make yourself available for an interview time and ensure that you have the audio and video capabilities. Any student who does not attend an interview will receive a mark of 0 for the assignment.</p>
 
       
     </div>
@@ -402,7 +400,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Network/" rel="tag"># Network</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
       
@@ -415,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS103-Car-Rental.html" rel="next" title="CS103-Car-Rental">
-                <i class="fa fa-chevron-left"></i> CS103-Car-Rental
+              <a href="/CS207-Ticket-Vendor.html" rel="next" title="CS207-Ticket-Vendor">
+                <i class="fa fa-chevron-left"></i> CS207-Ticket-Vendor
               </a>
             
           </div>
@@ -424,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CPSC231-Chasing-Alice.html" rel="prev" title="CPSC231-Chasing-Alice">
-                CPSC231-Chasing-Alice <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purpose"><span class="nav-number">1.</span> <span class="nav-text">Purpose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-requirements"><span class="nav-number">2.</span> <span class="nav-text">Program requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assessment"><span class="nav-number">3.</span> <span class="nav-text">Assessment</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">3.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Koala-Rescue-Team-simulation"><span class="nav-number">4.</span> <span class="nav-text">Koala Rescue Team simulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Design"><span class="nav-number">5.</span> <span class="nav-text">Class Design</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Important-Notes"><span class="nav-number">5.1.</span> <span class="nav-text">Important Notes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interview"><span class="nav-number">6.</span> <span class="nav-text">Interview</span></a></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-09-04T01:30:35.243Z</updated>
+  <updated>2022-09-05T02:21:34.921Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FIT9131-Koala-Rescue</title>
+    <link href="https://tk1307993.coding.me/FIT9131-Koala-Rescue.html"/>
+    <id>https://tk1307993.coding.me/FIT9131-Koala-Rescue.html</id>
+    <published>2022-09-05T02:19:39.000Z</published>
+    <updated>2022-09-05T02:21:34.921Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Please note the section on plagiarism in this document.</p><p>In preparing your assignment please note the following:</p><p>The assignment must be done using the BlueJ environment.<br>The Java source code for the assignment must be implemented according to the FIT9131 Java Coding Standards.<br>You must acknowledge all code in your assignment that you have taken from other sources.<br>Only a text interface is to be used for this program, there is to be no GUI. More marks will be gained for a game that is easy to follow with clear information/error messages.<br>Any points needing clarification may be discussed with your tutor in the lab classes. You should not make any assumptions about the program without consulting your tutor.</p><p>Completion of this assignment contributes towards the following FIT9131 learning outcomes:</p><p>design, construct, test and document small computer programs using Java;<br>interpret and demonstrate software engineering principles of maintainability, readability, and modularisation;<br>explain and apply the concepts of the “object-oriented” style of programming.</p><h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>For this assignment you will simulate the work of a koala rescue team. This section specifies the required functionality of the program.</p><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>The koala is a marsupial and is native to Australia. Koalas typically live in open eucalyptus (gum tree) forests. Koalas live mainly in trees and eat up to 1 kg of leaves per day. Their diet is restricted to a few varieties of gum trees (e.g., Manna Gum, Swamp Gum, Blue Gum, and River Red Gum). Koalas use some other varieties of trees (e.g. Wattle) for shelter on hot days. Only one koala at a time will occupy a shelter tree. Whilst moving on the ground between trees, koalas are exposed to attacks from predators.</p><p>After bushfires in January 2020, several koala reserves were left devastated when forest habitat burnt leaving many koalas dead or injured and without sufficient food. The koala rescue team’s work is to inspect the reserves and provide help to the koalas. Unfortunately, the team operates within a restricted budget and sometimes has to make difficult decisions. The aim of the rescue team is to save as many koalas as possible within a limited budget.</p><p>The koala reserve consists of a series of observation points where the rescue team pauses, observes the koala population, the trees, and the predators, and decides how the koalas can be helped. The help may be to move a koala to a safe haven if it is injured or there is not enough food or shelter.</p><h3 id="Koala-Rescue-Team-simulation"><a href="#Koala-Rescue-Team-simulation" class="headerlink" title="Koala Rescue Team simulation"></a>Koala Rescue Team simulation</h3><p>The Koala Rescue Team simulation begins with a welcome message and an invitation to the rescue team leader to enter his/her name. The name cannot be blank but must be less than 16 alphabetic characters. The leader is then asked to enter the budget for the rescue. This is an amount from $100 to $200, inclusive.</p><p>The program then sets up the numbers of trees, koalas and predators in each of the 10 observation points as follows:</p><p>The numbers of trees in the reserve are read from a text file trees.txt. The numbers of each type of tree (Manna Gum, Swamp Gum, Blue Gum, River Red Gum, Wattle) at each observation point are read in from the file. The file has 10 lines, with 5 comma separated numbers on each line. Each line represents the tree numbers at each observation point. There is no other reading from the file during the actual running of the program.</p><p>Each tree is either used for shelter or food. Each shelter tree can hold a maximum of one koala. The food trees can produce a certain weight of leaves per day that can be eaten by the koalas (see Table 1 ). The weight is used to calculate the total food available for the koalas at any observation point. The food available is calculated by multiplying the number of each tree type by the weight of leaves it produces and summing these to get the total food available. Each koala, whether healthy or injured, can eat 1 kg of leaves per day.</p><p>Each koala will have a randomly allocated age of 1-18 years.</p><p>There is a random number of 0-4 predators at each observation point.</p><p>There are no koalas in safe haven at the start of the rescue.</p><p>The rescue team visits each of 10 observation points in turn. At each observation point the rescue team considers the number of trees, the number and condition of the koalas (some of which may be injured) and the number of predators. The team takes actions to help the koalas at each point. If the budget runs out at any point then the rescue mission continues but no actions can be taken that involve cost. The rescue mission is considered successful when all areas have been observed and all koalas have survived.</p><h3 id="Class-Design"><a href="#Class-Design" class="headerlink" title="Class Design"></a>Class Design</h3><p>Your program must consist of at least seven classes. A suggested class design is shown in</p><h4 id="Important-Notes"><a href="#Important-Notes" class="headerlink" title="Important Notes"></a>Important Notes</h4><p>Your program must demonstrate your understanding of the object-oriented concepts and general programming constructs presented in FIT9131. Consider carefully your choice of classes, how they interact and the fields and methods of each class. You must use appropriate data structures to store the various objects (observation points, koalas, trees, etc.) in the program. You must make use of both Arrays and ArrayLists in your program. Make sure that you discuss your design with your tutor. You must document any additional assumptions you made.<br>You will be required to justify your design and the choice of any data structures used at the interview.<br>Validation of values for fields and local variables should be implemented where appropriate. You should not allow an object of a class to be set to an invalid state (i.e. put some simple validations in your mutator methods).<br>Your program should handle incorrect or invalid input and present the user with relevant error messages. No invalid input should crash the program.<br>Exception handling should be used where appropriate.</p><h3 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h3><p>You will be asked to demonstrate your program at an “interview” following the submission date.</p><p>At the interview, you will be asked to explain your code/design, modify your code, and discuss your design decisions and alternatives. Marks will not be awarded for any section of code/design/functionality that you cannot explain satisfactorily (the marker may also delete excessive in-code comments before you are asked to explain that code).</p><p>In other words, you will be assessed on your understanding of the code, and not on the actual code itself.</p><p>The interviews will be organised during week 12 and will take place online via Zoom or other video facility after that time. You must have audio and video available and operating during the interview. It is your responsibility to make yourself available for an interview time and ensure that you have the audio and video capabilities. Any student who does not attend an interview will receive a mark of 0 for the assignment.</p>]]></content>
+    
+    <summary type="html">
+    
+      实现一个考拉(Koala)救援小组模拟器。
+    
+    </summary>
+    
+      <category term="JAVA" scheme="https://tk1307993.coding.me/categories/JAVA/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+      <category term="Database" scheme="https://tk1307993.coding.me/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>CS207-Ticket-Vendor</title>
@@ -148,9 +172,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -172,9 +196,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -284,9 +308,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -308,9 +332,9 @@
       <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -354,9 +378,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -445,28 +469,6 @@
     
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates</title>
-    <link href="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html"/>
-    <id>https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html</id>
-    <published>2021-08-20T01:17:15.000Z</published>
-    <updated>2021-08-20T01:19:49.075Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>In this assignment you will implement data structures that provide an implementation for four abstract data types: A double-ended singly linked list, a stack, a queue, and a binary search tree that allows duplicates. Along the way you will get more experience with implementing Java interfaces, writing JUnit test cases, and using the Adapter design pattern.</p><h3 id="Part-1-Double-Ended-Singly-Linked-List"><a href="#Part-1-Double-Ended-Singly-Linked-List" class="headerlink" title="Part 1 - Double Ended Singly Linked List"></a>Part 1 - Double Ended Singly Linked List</h3><h4 id="DoubleEndedLLTester"><a href="#DoubleEndedLLTester" class="headerlink" title="DoubleEndedLLTester"></a>DoubleEndedLLTester</h4><p>Create DoubleEndedLLTester.java to test all public methods in DoubleEndedLL.java class, which implements DoubleEndedLLInterface. You must have at least one test for every method, but for some methods it is better to create multiple tests for separate conditions. For example, removing from an empty list should have a separate test from removing from a non-empty one.</p><p>You do not need to completely write your DoubleEndedLLTester before starting to define DoubleEndedLL. In fact, it is recommended that you use an iterative test-driven development process: write some tests in DoubleEndedLLTester, implement the functionality in DoubleEndedLL, test your implementation with DoubleEndedLLTester, write more tests, etc.</p><h4 id="DoubleEndedLL"><a href="#DoubleEndedLL" class="headerlink" title="DoubleEndedLL"></a>DoubleEndedLL</h4><p>Read the documentation in the source code file for the DoubleEndedLLInterface. You will be creating DoubleEndedLL.java class to implement this interface. Think of the “implements” as a contract - it is your responsibility to ensure all of the methods in the interface are present and functional in your class. For method headers, you may simply copy over the appropriate comments from the interface file. However, you must still comment the constructor and any other methods not present in the interface.</p><p>DoubleEndedLL must be a Generic class that implements a singly-linked list with a head and tail reference, using an inner class Node. You may find it helpful to copy over your Node class from PA1 and modify it for this assignment. The only public methods you may have are the no-arg constructor and the interface methods.</p><p>Files to Submit</p><ol><li>DoubleEndedLLTester.java</li><li>DoubleEndedLL.java</li></ol><h4 id="Part-2-Implementing-Stacks-and-Queues"><a href="#Part-2-Implementing-Stacks-and-Queues" class="headerlink" title="Part 2 - Implementing Stacks and Queues"></a>Part 2 - Implementing Stacks and Queues</h4><p>Now that DoubleEndedLL is fully built and tested, use it to implement a Stack and a Queue. Both MyStack and MyQueue are generic classes that implement Stack_QueueInterface, however their functionality will differ.</p><p>In order to get full credit for this section, you must use the Adaptive Design Pattern to implement these classes. To do that, create an instance variable of type DoubleEndedLLInterface (instantiated to a DoubleEndedLL) and use it to perform all of the necessary class methods. If these classes are complicated, you are overthinking the problem.</p><p>As is often the case when the Adapter pattern is used, if the adapted class (DoubleEndedLL in this case) is thoroughly tested and debugged, the adapting class shouldn’t need much testing because almost all of the work is being handled by delegation to the adapted class’s methods. We provide you with a few simple tests (MyStackTester.java and MyQueueTester.java) which should be sufficient but you are welcome to write your own tests as well.</p><h4 id="MyStack"><a href="#MyStack" class="headerlink" title="MyStack"></a>MyStack</h4><p>Stacks are first-in last-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyStack class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyStack class.</p><p>MyQueue<br>Queues are first-in first-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyQueue class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyQueue class.</p><p>Files to Submit</p><ol><li>MyStack.java</li><li>MyQueue.java</li><li>HW3.txt</li></ol><h4 id="Part-3-Duplicate-Key-BST"><a href="#Part-3-Duplicate-Key-BST" class="headerlink" title="Part 3 - Duplicate Key BST"></a>Part 3 - Duplicate Key BST</h4><p>Most often it is assumed that a binary search tree does not contain duplicate keys. However, sometimes we need to deal with problems that contain duplicates. For example, a database of car services might contain one record for each service for every car; so if a car got serviced twice, there will be two records with the same key (car’s VIN) and different dates (service dates). To accomplish this, we might use a data structure called a “BST with duplicates”, or BSTDup.</p><p>Your node class might look something like this:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> class BSTDupNode &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">key</span>;</span><br><span class="line">  <span class="keyword">private</span> ArrayList&lt;T&gt; elements;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode left;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode right;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Constructor</span></span><br><span class="line">  <span class="keyword">public</span> BSTDupNode(<span class="built_in">int</span> <span class="built_in">key</span>, T elem, BSTDupNode left, BSTDupNode right) &#123;</span><br><span class="line">    <span class="keyword">this</span>.<span class="built_in">key</span> = <span class="built_in">key</span>;</span><br><span class="line">    elements = <span class="keyword">new</span> ArrayList&lt;T&gt;();</span><br><span class="line">    elements.<span class="built_in">add</span>(elem);</span><br><span class="line">    <span class="keyword">this</span>.left = left;</span><br><span class="line">    <span class="keyword">this</span>.right = right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Think about what other methods you might need...</span></span><br><span class="line"><span class="comment">   * accessors (data, key, left, right)</span></span><br><span class="line"><span class="comment">   * mutators (add/remove data, updates children)</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>The image on the left is an example of just the tree structure, and each node displays only the key. The image on the right is an example of how your BST would actually be used, in this case to store the names of sweets. For your implementation, nodes will contain an ArrayList of elements, rather than a single one. That allows the BST structure to be preserved, while still allowing duplicate keys.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写数据结构，包括Stacks，Queues，以及Binary Search Trees.
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
