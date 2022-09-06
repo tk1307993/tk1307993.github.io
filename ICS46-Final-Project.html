@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Web,Database,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使VM环境，完成7个C++编程问题。包括shared_ptr, linked list, AVL tree, graph, sort等问题。">
+<meta name="keywords" content="Web,Database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICS46-Final-Project">
+<meta property="og:url" content="https://tk1307993.coding.me/ICS46-Final-Project.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="使VM环境，完成7个C++编程问题。包括shared_ptr, linked list, AVL tree, graph, sort等问题。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-09-06T01:27:43.338Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ICS46-Final-Project">
+<meta name="twitter:description" content="使VM环境，完成7个C++编程问题。包括shared_ptr, linked list, AVL tree, graph, sort等问题。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/ICS46-Final-Project.html">
+
+
+
+
+
+  <title>ICS46-Final-Project | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/ICS46-Final-Project.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">ICS46-Final-Project</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-06T09:24:48+08:00">
+                2022-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使VM环境，完成7个C++编程问题。包括shared_ptr, linked list, AVL tree, graph, sort等问题。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Some-ground-rules-READ-THESE-FIRST"><a href="#Some-ground-rules-READ-THESE-FIRST" class="headerlink" title="Some ground rules READ THESE FIRST"></a>Some ground rules READ THESE FIRST</h3><p>This final project asks you to work on a number of separate problems. You’ll begin with a project template in the ICS 46 VM, as you would in any other project, and will need to submit files that meet certain naming and format requirements, similar to the Reinforcement Exercises; as with those exercises, you’ll submit as PDF files (which must be typed, rather than scans of written text). You must follow specifically these requirements or we will not be grading your work.</p>
+<p>You are required to work on these tasks entirely individually. Piazza has been deactivated for question-asking for precisely this reason, though the course staff will still field questions via email, as usual, though we can only help you to understand what a question is asking; we won’t be willing or able to help you figure out how to answer it.</p>
+<p>The late policy does not apply to this project. It is due on Monday, June 8, 11:59pm, after which (beyond the usual ten-minute grace period) no submissions will be accepted and the submission area on Checkmate will disappear.</p>
+<p>We’ll be grading these on the basis of correctness, as well as whether you stay on topic. For problems where you’re asked to explain an answer, we reserve the right to deduct for large amounts of irrelevant information in which a relevant answer is buried; stick with what needs to be said to make your point, rather than just dumping everything you know in hopes that some of it is correct. Also, unlike the Reinforcement Exercises, there will be no points for honest attempts that are incorrect.</p>
+<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Before you begin work on these problems, there’s a chore that you’ll need to complete on your ICS 46 VM to get it set up to proceed.</p>
+<h3 id="Refreshing-your-ICS-46-VM-environment"><a href="#Refreshing-your-ICS-46-VM-environment" class="headerlink" title="Refreshing your ICS 46 VM environment"></a>Refreshing your ICS 46 VM environment</h3><p>Even if you previously downloaded your ICS 46 VM, you may need to refresh its environment before proceeding with this project, so that you have a copy of the final project template that you’ll need for this project.</p>
+<p>Log into your VM and issue the command ics46 version to see what version of the ICS 46 environment you currently have stored on your VM. Note, in particular, the timestamp; if you see a version with a timestamp older than the one listed below, you’ll want to refresh your environment by running the command ics46 refresh to download the latest one before you proceed with this project.</p>
+<p>Note that you can instead use the ics46 refresh_local technique described in the Project #1 write-up, if you’re unable to make your outgoing Internet connection work from within the ICS 46 VM.</p>
+<h3 id="Creating-your-project-directory-on-your-ICS-46-VM"><a href="#Creating-your-project-directory-on-your-ICS-46-VM" class="headerlink" title="Creating your project directory on your ICS 46 VM"></a>Creating your project directory on your ICS 46 VM</h3><p>A project template has been created specifically for this project. It includes a gather script for preparing your files for submission when you’re finished, as well as the usual array of scripts for running the program with and without the Memcheck tool, and a directory in which you can (optionally) write unit tests to assist in your testing.</p>
+<p>Decide on a name for your project directory, then issue the command ics46 start PROJECT_NAME final to create your new project using the final template.</p>
+<p>Do not use other project templates, like basic or project4, for this project!</p>
+<p>Problem 1<br>Suppose that you’ve decided to write this function, which takes an unsigned int parameter and generates a std::string containing that number of randomly-chosen uppercase letters.<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">generateRandomLetters</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="built_in">size</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="built_in">size</span>, <span class="string">' '</span>)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">unsigned</span> <span class="keyword">int</span> i = <span class="number">0</span>; i [ <span class="built_in">size</span>; ++i)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">std</span>::random_device device;</span><br><span class="line">    <span class="built_in">std</span>::default_random_engine engine&#123;device()&#125;;</span><br><span class="line">    <span class="built_in">std</span>::uniform_int_distribution distribution&#123;<span class="string">'A'</span>, <span class="string">'Z'</span>&#125;;</span><br><span class="line"></span><br><span class="line">    s[i] = distribution(engine);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>Are there any circumstances in which you wouldn’t expect this function to do what’s specified (i.e., to generate a string of random uppercase letters)? Briefly explain why or why not.</li>
+<li>What adjustments, if any, would you make to the design of this function to improve it? You don’t need to rewrite the function, as long as you explain briefly what you would change about it and why.</li>
+</ol>
+<h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem 2"></a>Problem 2</h3><p>Suppose that you wrote a C++ class template that implemented singly-linked list with head and tail pointers, and that you used std::shared_ptrs to link the nodes (i.e., the head pointer in the list would be a std::shared_ptr to the first node, the last pointer in the list would be a std::shared_ptr to the last node, and each node would contain a std::shared_ptr to the subsequent node).</p>
+<p>It would seem undoubtedly true that the use of smart pointers would result in you having to write less code, given that smart pointers automate some things that you might otherwise have to write yourself. Suppose, for example, that you implemented the destructor and realized that you could use the ownership characteristics of smart pointers to write this.</p>
+<p>Assuming that all class invariants were intact before calling this destructor (i.e., the pointers are pointing to reasonable places beforehand), are there any circumstances in which you wouldn’t expect all of the nodes to be destroyed properly? If so, briefly explain each circumstance where it would fail to destroy all of the nodes. If not, briefly explain what happens after setting head to nullptr to cause all of the nodes to be destroyed.</p>
+<h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem 3"></a>Problem 3</h3><p>Suppose you started with an empty AVL tree, then added a sequence of n ascending, consecutive keys to it, starting with 1, then 2, then 3, and so on, until you had added all n of them. (How do you know what n is? See below.)</p>
+<p>List your n value, then list all of the rotations that occurred, one per line, in the order that they occurred. Each rotation should be written using its name and the key in the node where the rotation is rooted (just before the rotation is done) listed in parentheses. For example, if your n value was 27 and you thought that there were three rotations, an LL rotation rooted at 4, an RR rotation rooted at 1, and an LR rotation rooted at 19, you would write this.</p>
+<h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem 4"></a>Problem 4</h3><p>Let’s imagine that you’re storing information about the current location of a large number of objects in discrete three-dimensional space, which is to say that each location is made up of three unsigned integers x, y, and z, indicating a distance east, a distance north, and a height from some origin point. You can assume that the distances are measured in small amounts, such as millimeters, so that the numbers themselves might be quite large and that they might be distributed quite sparsely. It’s not particularly important what the application is, but let’s imagine that the most common operations are to add a new location to the set and to check whether a location is already in the set.</p>
+<p>You’ve decided that a hash table would be an appropriate way to solve this problem, because you know that a well-chosen hash function can lead to something akin to (1) lookups and amortized (1) insertions, which sounds pretty good to you. Let’s suppose that you’ve chosen this hash function: x + y + z.</p>
+<p>Is x + y + z a good hash function? If so, briefly explain why it’s sufficient; if not, briefly explain what’s wrong with it, though you need not propose a new hash function to replace it.</p>
+<h3 id="Problem-5"><a href="#Problem-5" class="headerlink" title="Problem 5"></a>Problem 5</h3><p>Let’s assume that a bipartite graph is an undirected graph in which there are two distinct sets of vertices, such that all of the edges in the graph connect a vertex in one set to a vertex in the other, but no edges connect vertices in the same set. That sounds esoteric, but there are plenty of real-world problems that collapse nicely into a graph that has these characteristics.</p>
+<p>Now let’s assume that you’d like to implement a bipartite graph, so you consider using either an adjacency matrix or adjacency lists, but wonder if they can be modified if you know ahead of time that the graph will be bipartite.</p>
+<h3 id="Problem-6"><a href="#Problem-6" class="headerlink" title="Problem 6"></a>Problem 6</h3><p>We say that a circle is a directed graph in which the vertices could be given a numbering from 1 through n (i.e., each vertex could be given a unique number), where vertex 1 has one outgoing edge leading to vertex 2, vertex 2 has one outgoing edge leading to vertex 3, and so on. Vertex n has one outgoing edge leading back to vertex 1.</p>
+<h3 id="Problem-7"><a href="#Problem-7" class="headerlink" title="Problem 7"></a>Problem 7</h3><p>In this course, we saw no fewer than nine different ways to sort a sequence of values, but computer science has much to say about this topic, so there’s plenty more to it than we’ve had a chance to discuss.</p>
+<p>For example, we saw that we could use randomness to our advantage in a few places in this course. Skip lists decide randomly on a number of copies of each node, yet leads to logarithmic time lookups, insertions, and removals. Quicksort performs admirably when pivots are chosen randomly. So it’s certainly true that injecting randomness into an algorithm can be a benefit. But let’s take that idea to its logical conclusion. Can you solve problems completely at random?<br>One way we could apply that idea is to the problem of sorting. One way to sort values might be as simple as this.</p>
+<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>After using the gather script in your project directory to gather up the .cpp, .hpp, and/or .pdf files from your problems directory into a single final.tar.gz file, then submit that file (and only that file!) to Checkmate. Be sure, too, that it contains properly-named files (and files in the proper format) so that they will be graded; we’re not asking for a lot, just some attention to detail.</p>
+<p>Follow this link for a discussion of how to submit your project via Checkmate. Be aware that I’ll be holding you to all of the rules specified in that document, including the one that says that you’re responsible for submitting the version of the project that you want graded. We won’t regrade your work simply because you submitted the wrong version accidentally. (It’s not a bad idea to look at the contents of your tarball on your host operating system before submitting it.)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Database/" rel="tag"># Database</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/FIT9131-Koala-Rescue.html" rel="next" title="FIT9131-Koala-Rescue">
+                <i class="fa fa-chevron-left"></i> FIT9131-Koala-Rescue
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">265</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-ground-rules-READ-THESE-FIRST"><span class="nav-number">1.</span> <span class="nav-text">Some ground rules READ THESE FIRST</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">2.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Refreshing-your-ICS-46-VM-environment"><span class="nav-number">3.</span> <span class="nav-text">Refreshing your ICS 46 VM environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-your-project-directory-on-your-ICS-46-VM"><span class="nav-number">4.</span> <span class="nav-text">Creating your project directory on your ICS 46 VM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2"><span class="nav-number">5.</span> <span class="nav-text">Problem 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-3"><span class="nav-number">6.</span> <span class="nav-text">Problem 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-4"><span class="nav-number">7.</span> <span class="nav-text">Problem 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-5"><span class="nav-number">8.</span> <span class="nav-text">Problem 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-6"><span class="nav-number">9.</span> <span class="nav-text">Problem 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-7"><span class="nav-number">10.</span> <span class="nav-text">Problem 7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables"><span class="nav-number">11.</span> <span class="nav-text">Deliverables</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
