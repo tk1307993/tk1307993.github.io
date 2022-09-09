@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Game,">
+  <meta name="keywords" content="Web,Database,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
-<meta name="keywords" content="Game">
+<meta name="description" content="实现游戏Tetris，也就是俄罗斯方块，GUI部分已经提供，只需要编写逻辑部分即可。">
+<meta name="keywords" content="Web,Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：FIT2071-VisualTextQuest">
-<meta property="og:url" content="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html">
+<meta property="og:title" content="CMSC132-Tetris-Game">
+<meta property="og:url" content="https://tk1307993.coding.me/CMSC132-Tetris-Game.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
+<meta property="og:description" content="实现游戏Tetris，也就是俄罗斯方块，GUI部分已经提供，只需要编写逻辑部分即可。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T03:03:45.984Z">
+<meta property="og:updated_time" content="2022-09-09T02:15:51.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：FIT2071-VisualTextQuest">
-<meta name="twitter:description" content="做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。">
+<meta name="twitter:title" content="CMSC132-Tetris-Game">
+<meta name="twitter:description" content="实现游戏Tetris，也就是俄罗斯方块，GUI部分已经提供，只需要编写逻辑部分即可。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CMSC132-Tetris-Game.html">
 
 
 
 
 
-  <title>C++代写：FIT2071-VisualTextQuest | 留学生CS编程作业代写</title>
+  <title>CMSC132-Tetris-Game | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT2071-VisualTextQuest.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CMSC132-Tetris-Game.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：FIT2071-VisualTextQuest</h2>
+          <h2 class="post-title" itemprop="name headline">CMSC132-Tetris-Game</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-20T10:59:11+08:00">
-                2018-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-09T10:13:49+08:00">
+                2022-09-09
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  做一个文本界面的RPG游戏，包含一个2D地图，地图上有陷阱，有武器等等，随意发挥。由于直接是第三次作业，虽然给了前面的答案，不过信息量还是略大。
+                  实现游戏Tetris，也就是俄罗斯方块，GUI部分已经提供，只需要编写逻辑部分即可。
               </div>
           
 
@@ -360,22 +360,20 @@
       
 
       
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Unlike previous assignments where we revealed the required functionality lab-by-lab in “portfolio tasks” as you were taught the required concepts, for this assignment we are giving you the full specification up front. This is because we have now covered all the language features you need.</p>
-<p>Recap (the story so far!):<br>In Assignment 1 you created a very simple turn based adventure game where the player created a character, choosing a name and a vocation for the character in order to set some default statistics. The main game loop simply applied events from a file that affected the player’s health. The game ended when the player died. You could also save the current state of the character at any time.</p>
-<p>In Assignment 2 you used what you had learned about OO and classes to better structure the code. You modelled Events and Vocations with simple classes. You added a Character class, and Player and Enemy subclasses of Character. Possibly you added further subclasses of Enemy. Then you added the notion of turn-based Fights involving a collection of Character subclasses.<br>For Assignment 3 (the final instalment of the TextQuest trilogy) you will start to add some visual elements to the game. It will still be text-based but we will introduce the notion of a 2D map.</p>
-<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>You can start with your code from Assignment 2 – or if you are unhappy with it (or it is non-existant) you are welcome to start with our sample solution for Assignment 2 (available on Moodle).</p>
-<p>If you haven’t already, then introduce a Game class to hold all the data, state and functions not already associated with other classes. Introduce a Room class.</p>
-<p>Introduce a Room class. A room contains a collection of 0 or more Events that occur in that room and also a collection of 0 or more Enemies that attack the player. Also, a room will have four nullable pointers to other Rooms (e.g. north, east, south and west).</p>
-<p>Create a 10x10 grid (e.g. a 2D array) of Rooms. Then you will need to create “doors” between adjacent rooms. You can do this randomly to create a maze. Remember to connect the rooms in both directions. For example: if the east pointer of the Room at array position 1,5 points to the Room at array position 1,6 then room 1,6 should have a west pointer back to 1,5.</p>
-<p>So the player can see where they are, you will need to display the map. You can be as fancy with this as you like, but here’s an example of a basic ASCII representation that you might use (this one is 4x4, yours will be bigger):<br>Now, the player starts the game in a particular room (could be random) and at the beginning of each turn in the game they can choose an open door (N,S,E or W) to pass through. If there are enemies in the room then there will be a fight (as in Assignment 2). If there are events (e.g. a health potion, a trap, a magic sword) then these can happen after the fight.</p>
-<p>The game will be more fun if the player has to explore. Implement a “fog of war” feature. That is, the map starts off obscured (e.g. covered in *) with only the exits to the current room visible, and is gradually revealed as the player moves around.<br>REQUIREMENT: Please allow the player to choose a “cheat” mode on startup where the full map is shown all the time. This will make your life easier in debugging but will also make it easier for us to mark!</p>
-<p>Save and load should be extended to store the full state of the map and rooms</p>
-<h3 id="Further-Functionality"><a href="#Further-Functionality" class="headerlink" title="Further Functionality"></a>Further Functionality</h3><p>The above is a bare minimum we will expect to see. Implementing it perfectly will get you CR (~60%). To get D or above, you will need to add some more interesting elements. Here are some suggestions – but feel free to go further:</p>
-<p>Add navigation within a room: when you enter a room, pop up a small (e.g. 5x5) map showing the location of enemies and events within the room. The player can move around inside the room to see what the events are and attack enemies in adjacent squares.<br>Have the enemies move around! From room to room or just within a room. They could move randomly or you could give them some simple AI (e.g. always move towards the player).</p>
-<p>We have already suggested events can involve items. Make this a more formal notion (e.g. with an Item class) and give the character an inventory.</p>
-<p>We will reward creativity but ultimately you will be marked based on clean, functional, working code that demonstrates a good understanding of the C++ language features and OO design as covered in the course.</p>
-<p>This is reflected in the sample marking guide that is provided.</p>
-<h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>For this assignment, you are also required to submit a diagram showing your overall Object-Oriented approach to solving this assignment. Your diagram does not have to be completed with any formal tools (it can be hand drawn as long as it is legible) but you must submit a PNG/JPG or PDF file that shows what classes you have and how they are related (inheritance for example). NO OTHER FILE FORMAT MAY BE SUBMITTED. This is important for us to look at as we grade your assignment so we can have a basic understanding of how your program has been designed.</p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>For this project, you will implement code for the Tetris game. The graphical user interface has been provided to you in a package called gui. No part of the assignment involves you making any changes to code in this package. You will be implementing some of the functionality for the Tetris game by modifying classes provided to you in the model package.</p>
+<h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>This project will allow you to practice two-dimensional arrays, abstract classes, inheritance, and test development.</p>
+<h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>Public Tests (50%)<br>Release Tests (40%)<br>Style (10%)</p>
+<h3 id="Code-Distribution"><a href="#Code-Distribution" class="headerlink" title="Code Distribution"></a>Code Distribution</h3><p>You are provided with the following packages:</p>
+<p>gui - Represents the graphical user interface for the game. Executing the main method of the GameGUI class in this package will launch the user interface (assuming your code compiles successfully).<br>model - Includes the classes you need to implement.<br>tests - Includes the public tests. You should add your student test class to this package.</p>
+<h3 id="Layout-and-Rotation"><a href="#Layout-and-Rotation" class="headerlink" title="Layout and Rotation"></a>Layout and Rotation</h3><p>The layout of a tetromino represents its shape. When a tetromino rotates, its layout changes. Each tetromino has 4 layouts: up, left, down and right. When originally created, a tetromino is in the up layout. After one left rotation, it shifts to the left layout. After a second left rotation, it shifts to the down layout. After a third left rotation, it shifts to the right layout. Finally, after a fourth left rotation, it returns to a up layout. This sequence can be repeated by pressing z during game play. After going from the up layout to the up layout again, i.e in one full rotation through each 90 degree phase, all tetromino’s except from the I tetromino should occupy the same column coordinate as they did initially (If they have been moved down in during the rotation, their row coordinate may have changed). The I tetromino, however, should move left by one position after one complete counter-clockwise rotation. Therefore, the “rotation” of a I tetromino is really a translation, with each full rotation moving it one column closer to the left of the game board.</p>
+<p>The diagram below shows the progression of each tetromino as you rotate counter-clockwise by 90 degrees.</p>
+<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><p>Although the layout of a tetromino is set (because its shape is set) for each of the 4 possible orientations, the location of a layed out tetromino will change due to rotation and moving the tetromino left/right. The diagram below illustrates this for the I tetromino.</p>
+<h3 id="Game-Play"><a href="#Game-Play" class="headerlink" title="Game Play"></a>Game Play</h3><p>A random sequence of Tetrominos will fall down the playing field from the centre. The goal of the game is to fill the gaps horizontally. When an entire row is filled, the rows above it will collapse down by one row. A player can move a tetromino left/right using the corresponding arrow keys. They can also rotate the tetromino left (counter-clockwise) 90 degrees at a time by pressing the z key.</p>
+<h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>You are expected to implement methods for the Tetromino, I, J, L, O, S, T and Z classes. The other classes have been provided and you should not modify them. You should familiarize yourself with the Tetris Class.</p>
+<h3 id="Requirements-Project-Policies"><a href="#Requirements-Project-Policies" class="headerlink" title="Requirements/Project Policies"></a>Requirements/Project Policies</h3><p>You may not add any classes, but feel free to add any instance variables and private methods you understand are necessary.<br>See Style Guidelines for information regarding style.<br>We cannot provide any information regarding release and secret tests. Once your project has been graded, you can see a TA if you would like to find out why you failed a release or secret test.</p>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><p>We encourage you to run the game GUI and interact with the game. However, such an interaction is not guaranteed to test the full range of your code. As such, we also encourage you to write student tests. Student tests demonstrating a particular issue you are encountering with your code will be requested upon seeking help during office hours.</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>To submit your project, zip the project folder and upload the zipped file to gradescope.</p>
+<h3 id="Tips-on-Getting-Started"><a href="#Tips-on-Getting-Started" class="headerlink" title="Tips on Getting Started"></a>Tips on Getting Started</h3><p>You have been provided with a class to represent each possible Tetris piece (a tetromino). We suggest that you start with the simplest tetromino (like O or I).</p>
 
       
     </div>
@@ -393,7 +391,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Game/" rel="tag"># Game</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
       
@@ -406,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS214-SinglyLinkedList.html" rel="next" title="C++代写：CS214-SinglyLinkedList">
-                <i class="fa fa-chevron-left"></i> C++代写：CS214-SinglyLinkedList
+              <a href="/ICS46-Final-Project.html" rel="next" title="ICS46-Final-Project">
+                <i class="fa fa-chevron-left"></i> ICS46-Final-Project
               </a>
             
           </div>
@@ -415,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/COMP9021-Tangram.html" rel="prev" title="Python代写：COMP9021-Tangram">
-                Python代写：COMP9021-Tangram <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">2.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Further-Functionality"><span class="nav-number">3.</span> <span class="nav-text">Further Functionality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Diagram"><span class="nav-number">4.</span> <span class="nav-text">Class Diagram</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading"><span class="nav-number">3.</span> <span class="nav-text">Grading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Distribution"><span class="nav-number">4.</span> <span class="nav-text">Code Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Layout-and-Rotation"><span class="nav-number">5.</span> <span class="nav-text">Layout and Rotation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Location"><span class="nav-number">6.</span> <span class="nav-text">Location</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Game-Play"><span class="nav-number">7.</span> <span class="nav-text">Game Play</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specification"><span class="nav-number">8.</span> <span class="nav-text">Specification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements-Project-Policies"><span class="nav-number">9.</span> <span class="nav-text">Requirements/Project Policies</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing"><span class="nav-number">10.</span> <span class="nav-text">Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">11.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-on-Getting-Started"><span class="nav-number">12.</span> <span class="nav-text">Tips on Getting Started</span></a></li></ol></div>
             
 
           </div>
