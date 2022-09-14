@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Programming Fundamentals,">
+  <meta name="keywords" content="Fundamentals,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="C语言基础练习题。">
-<meta name="keywords" content="Programming Fundamentals">
+<meta name="description" content="练习C++中基础I/O处理，读写文件。">
+<meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS50 C Programming Assignment1">
-<meta property="og:url" content="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html">
+<meta property="og:title" content="CS162-File-IO">
+<meta property="og:url" content="https://tk1307993.coding.me/CS162-File-IO.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="C语言基础练习题。">
+<meta property="og:description" content="练习C++中基础I/O处理，读写文件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-24T14:48:09.198Z">
+<meta property="og:updated_time" content="2022-09-14T23:45:19.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS50 C Programming Assignment1">
-<meta name="twitter:description" content="C语言基础练习题。">
+<meta name="twitter:title" content="CS162-File-IO">
+<meta name="twitter:description" content="练习C++中基础I/O处理，读写文件。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CS162-File-IO.html">
 
 
 
 
 
-  <title>C代写：CS50 C Programming Assignment1 | 留学生CS编程作业代写</title>
+  <title>CS162-File-IO | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS50-C-Programming-Assignment-1.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS162-File-IO.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS50 C Programming Assignment1</h2>
+          <h2 class="post-title" itemprop="name headline">CS162-File-IO</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T22:26:39+08:00">
-                2018-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-15T07:43:57+08:00">
+                2022-09-15
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  C语言基础练习题。
+                  练习C++中基础I/O处理，读写文件。
               </div>
           
 
@@ -360,16 +360,22 @@
       
 
       
-        <h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
-<li>Work on an assignment by yourself without sharing the answer to a classmate. (It is great that students study together but an assignment is an individual task. It is not a group project.)</li>
-<li>Start to do an assignment early and ask the teacher if you have a question.</li>
-<li>Add a comment with your name at the top of your source code</li>
-<li>Put all your files that you want to submit into one zip file</li>
-</ul>
-<h6 id="1-Please-save-the-program-with-the-name-‘cal-c’"><a href="#1-Please-save-the-program-with-the-name-‘cal-c’" class="headerlink" title="1. Please save the program with the name ‘cal.c’"></a>1. Please save the program with the name ‘cal.c’</h6><p>Write a program to input two integer values and out their sum and their difference. A sample run off the program follows. The user input is represented in boldface in the sample run. (page. 56, C by Discovery 4th edition, by Foster &amp; Foster)</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Example:</span></span><br><span class="line"><span class="attr">Enter an integer:</span> <span class="number">45</span></span><br><span class="line"><span class="attr">Enter another integer:</span> <span class="number">83</span></span><br><span class="line"><span class="number">45</span> <span class="string">+</span> <span class="number">83</span> <span class="string">=</span> <span class="number">128</span></span><br><span class="line"><span class="number">45</span> <span class="string">–</span> <span class="number">83</span> <span class="string">=</span> <span class="number">-38</span></span><br></pre></td></tr></table></figure>
-<h6 id="2-Please-save-the-program-with-the-name-‘guess-c’"><a href="#2-Please-save-the-program-with-the-name-‘guess-c’" class="headerlink" title="2. Please save the program with the name ‘guess.c’"></a>2. Please save the program with the name ‘guess.c’</h6><p>Write a C program that plays a number guessing game with the user. A sample run for the game follows. User input is shown in boldface in the sample run. (C by discovery)<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Welcome <span class="built_in">to</span> <span class="keyword">the</span> game <span class="keyword">of</span> Guess It!</span><br><span class="line">I will choose <span class="keyword">a</span> <span class="built_in">number</span> between <span class="number">1</span> <span class="keyword">and</span> <span class="number">200.</span></span><br><span class="line">You will <span class="keyword">try</span> <span class="built_in">to</span> guess that <span class="built_in">number</span>. If you guess wrong, I will tell you <span class="keyword">if</span> you guessed too high <span class="keyword">or</span> too low.</span><br><span class="line">You have <span class="number">5</span> tries <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">the</span> <span class="built_in">number</span>.</span><br><span class="line">OK, I am thinking <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">number</span>. Try <span class="built_in">to</span> guess <span class="keyword">it</span>.</span><br><span class="line">Your guess? <span class="number">50</span></span><br><span class="line">Too high!</span><br><span class="line">Your guess? <span class="number">12</span></span><br><span class="line">Too low!</span><br><span class="line">Your guess? <span class="number">112</span></span><br><span class="line">Too high!</span><br><span class="line">Your guess? <span class="number">250</span></span><br><span class="line">Illegal guess. Your guess must be between <span class="number">1</span> <span class="keyword">and</span> <span class="number">200.</span></span><br><span class="line">Try again. Your guess? <span class="number">30</span></span><br><span class="line">**** CORRECT ****</span><br><span class="line">Want <span class="built_in">to</span> play again? y</span><br><span class="line">Ok, I am thinking <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">number</span>. Try <span class="built_in">to</span> guess <span class="keyword">it</span>.</span><br><span class="line">Your guess? <span class="number">58</span></span><br><span class="line">**** CORRECT ****</span><br><span class="line">Want <span class="built_in">to</span> play again? n</span><br><span class="line">Goodbye, It was fun. Play again soon.</span><br></pre></td></tr></table></figure></p>
-<p>The following code will print out a random generator between 1-100 ten times.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c, n;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Ten random numbers in [1,100]\n"</span>);</span><br><span class="line">    <span class="keyword">for</span> (c = <span class="number">1</span>; c &lt;= <span class="number">10</span>; c++)</span><br><span class="line">    &#123;</span><br><span class="line">    n = rand() % <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In order to get credit for the lab, you need to be checked off by the end of lab. You can earn a maximum of 5 points for lab work completed outside of lab time, but you must finish the lab before the next lab. For extenuating circumstances, contact your lab TAs and the instructor.</p>
+<p>This lab is worth 10 points total. Here’s the breakdown:</p>
+<p>4 point: Design for the problem<br>6 points: Implement your design</p>
+<h3 id="Step-1-Design"><a href="#Step-1-Design" class="headerlink" title="Step 1: Design"></a>Step 1: Design</h3><p>In this lab, you will practice reading and writing to a file, a.k.a. File I/O. You can copy and paste or download this example file.</p>
+<p>The input file provides details for a student database in the following format:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Number_of_students</span><br><span class="line">ID_Number Student_First_Name Student_Last_Name Major</span><br><span class="line">...&lt;Repeats n <span class="built_in">number</span> <span class="keyword">of</span> <span class="keyword">times</span>&gt;...</span><br><span class="line">ID_Number Student_First_Name Student_Last_Name Major</span><br></pre></td></tr></table></figure></p>
+<p>Your program will read specific information from the file and continue reading the contents of the body from the file until the EOF (end of file) character. You will write the following information to an output file:</p>
+<p>Sort students by ID number<br>Sort students by last name<br>The number of unique majors</p>
+<p>Each section of information should be labeled in the output file in all capital letters. A struct should be used to store and manipulate the file information between reading and writing the file. You must include the follow three functions with the exact prototypes:</p>
+<p>student <em> create_student_db(int);<br>This function will create the array of student based on the number of students in the file<br>void populate_student_db_info(student </em>, int, ifstream &amp;);<br>This function should do the work of actually reading through the ifstream that represents your opened file and storing the information in a pre-allocated array of student that’s passed in<br>void delete_student_db_info(student **, int);<br>This function will delete all dynamic memory created in your program<br>Your main function needs to check to make sure the file you open exists before moving forward. If the file doesn’t exist, then you need to provide an error message and get a file name that does exist.</p>
+<p>Write a design for the main function in the driver file, driver.cpp.<br>Write a design for the create_student_db(), populate_student_db_info(), and delete_student_db_info() as well as the functions needed to satisfy the above bulleted output functions in the implementation file, student_db.cpp<br>Here’s some documentation that will help you get going with File I/O:</p>
+<p>C++ Basic file I/O: <a href="http://www.learncpp.com/cpp-tutorial/186-basic-file-io/" target="_blank" rel="noopener">http://www.learncpp.com/cpp-tutorial/186-basic-file-io/</a><br>ifstream: <a href="http://www.cplusplus.com/reference/fstream/ifstream/" target="_blank" rel="noopener">http://www.cplusplus.com/reference/fstream/ifstream/</a><br>ofstream: <a href="http://www.cplusplus.com/reference/fstream/ofstream/" target="_blank" rel="noopener">http://www.cplusplus.com/reference/fstream/ofstream/</a><br>fstream: <a href="http://www.cplusplus.com/reference/fstream/fstream/" target="_blank" rel="noopener">http://www.cplusplus.com/reference/fstream/fstream/</a></p>
+<h3 id="Step-2-Implementation"><a href="#Step-2-Implementation" class="headerlink" title="Step 2: Implementation"></a>Step 2: Implementation</h3><p>Now, implement the driver.cpp, student_db.cpp, and student_db.h files. Create a Makefile to manage the compilation of all these files. You can adapt the Makefile that was posted on the Calendar page in Canvas.</p>
+<p>Remember, you will not receive lab credit if you do not get checked off before leaving each lab. Once you have a zero on a lab, then it cannot be changed because we have no way of knowing if you were there or no t.</p>
+<p>Show your completed work and answers to the TAs for credit. You will not get points if you do not get checked off!</p>
+<p>Submit your work to TEACH for our records (Note: you will not get points if you don’t get checked off with a TA!!!)</p>
+<p>Create a tar archive that contains all files you’ve created in this lab: tar -cvf lab2.tar student_db.h student_db.cpp driver.cpp makefile<br>Transfer the tar file from the ENGR server to your local laptop.<br>Go to TEACH.<br>In the menu on the right side, go to Class Tools Submit Assignment.<br>Select CS162 Lab2 from the list of assignments and click “SUBMIT NOW”<br>Select your files and click the Submit button</p>
 
       
     </div>
@@ -387,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Programming-Fundamentals/" rel="tag"># Programming Fundamentals</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
       
@@ -400,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS101-BinaryArithmetic.html" rel="next" title="C代写：CS101 Binary Arithmetic">
-                <i class="fa fa-chevron-left"></i> C代写：CS101 Binary Arithmetic
+              <a href="/CMPT130-Binary-Arithmetic.html" rel="next" title="CMPT130-Binary-Arithmetic">
+                <i class="fa fa-chevron-left"></i> CMPT130-Binary-Arithmetic
               </a>
             
           </div>
@@ -409,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS50-C-Programming-Assignment-5.html" rel="prev" title="C代写：CS50 C Programming Assignment5">
-                C代写：CS50 C Programming Assignment5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">1.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-Please-save-the-program-with-the-name-‘cal-c’"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1. Please save the program with the name ‘cal.c’</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-Please-save-the-program-with-the-name-‘guess-c’"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2. Please save the program with the name ‘guess.c’</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-Design"><span class="nav-number">2.</span> <span class="nav-text">Step 1: Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-Implementation"><span class="nav-number">3.</span> <span class="nav-text">Step 2: Implementation</span></a></li></ol></div>
             
 
           </div>
