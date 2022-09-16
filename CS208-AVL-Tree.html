@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Web,">
+  <meta name="keywords" content="Data Structure,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="需求是一堆User Story加上几张软件UML图，业务逻辑得靠现有的代码去推敲。">
-<meta name="keywords" content="Web">
+<meta name="description" content="实现AVL树，以及改进后的2-5树。">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#代写：COMP5348-Video-Store">
-<meta property="og:url" content="https://tk1307993.coding.me/COMP5348-Video-Store.html">
+<meta property="og:title" content="CS208-AVL-Tree">
+<meta property="og:url" content="https://tk1307993.coding.me/CS208-AVL-Tree.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="需求是一堆User Story加上几张软件UML图，业务逻辑得靠现有的代码去推敲。">
+<meta property="og:description" content="实现AVL树，以及改进后的2-5树。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-28T12:36:15.935Z">
+<meta property="og:updated_time" content="2022-09-16T23:51:12.826Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#代写：COMP5348-Video-Store">
-<meta name="twitter:description" content="需求是一堆User Story加上几张软件UML图，业务逻辑得靠现有的代码去推敲。">
+<meta name="twitter:title" content="CS208-AVL-Tree">
+<meta name="twitter:description" content="实现AVL树，以及改进后的2-5树。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/COMP5348-Video-Store.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CS208-AVL-Tree.html">
 
 
 
 
 
-  <title>C#代写：COMP5348-Video-Store | 留学生CS编程作业代写</title>
+  <title>CS208-AVL-Tree | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP5348-Video-Store.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS208-AVL-Tree.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C#代写：COMP5348-Video-Store</h2>
+          <h2 class="post-title" itemprop="name headline">CS208-AVL-Tree</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T20:33:41+08:00">
-                2019-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-17T07:49:30+08:00">
+                2022-09-17
               </time>
             
 
@@ -320,7 +320,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  需求是一堆User Story加上几张软件UML图，业务逻辑得靠现有的代码去推敲。
+                  实现AVL树，以及改进后的2-5树。
               </div>
           
 
@@ -360,38 +360,27 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Enterprise applications usually need to integrate with a number of legacy or third party systems to fulfill business requirements. In this assignment, your task is to provide a suitable integration solution to integrate the VideoStore application with the 3 other applications shown in Figure 1. Integration with these 3 applications is required in order to support the following workflow for submitting orders:</p>
-<p>When an order is placed, the video store application should:</p>
-<ul>
-<li>Request a transfer of funds from the customer’s account to VideoStore’s account using the services provided by the Bank Application.</li>
-<li>If the transfer is successful, the video store requests delivery for the purchased items from DeliverCo. DeliveryCo notifies the video store when delivery is complete. Further:</li>
-<li>The customer is notified via email (using the EmailService) when a delivery is submitted to DeliveryCo, AND when DeliveryCo claims that the delivery is complete.</li>
-<li>The stock levels for an ordered media item should also be updated if an order is successfully submitted.</li>
-</ul>
-<p>If the transfer fails, the customer is notified via email (using the EmailService) that there is a problem with their credit, and that the purchase order cannot proceed.</p>
-<p>The four applications are currently integrated through synchronous point to point calls, and most of the workflow described above can be seen in VideoStore.Business.Components/OrderProvider::SubmitOrder().The solution is setup with a customer account username: “Customer” and password: “Customer”. We suggest you use this account for your testing. The current integration solution is functional, but isn’t ideal in addressing quality attributes like availability and reliability. In lectures and tutorials you looked at technologies including asynchronous messaging, message oriented middleware and web services. You will need to modify the integration solution provided and improve its availability and fault-tolerance. You need to take the following into account:</p>
-<ol>
-<li>How are the availability and reliability quality attributes improved? You need to show message diagrams for various cases of subsystem failure (eg What happens if the VideoStore is up and the Bank component is down?).</li>
-<li>Apart from availability and reliability, how are the other quality attributes mentioned in the first lecture affected by your design? System architects need to make trade-offs between different quality attributes (eg: tolerating more failures vs improved performance when there are no failures), and this is acceptable as long as the architect can correctly justify their choices.</li>
-</ol>
-<p>You will need to consider how your solution handles failure conditions (not just the one above but also any other failure conditions you can identify). You can assume that the delivery company will eventually be successful in delivering any orders they receive but that their system may go down. In your submission you will need to include a report which describes your integration solution and answers questions 1, and 2, giving specific scenarios that illustrate how your integration solution improves availability and fault tolerance, and how your solution affects other quality attributes.</p>
-<h3 id="Group-Formation"><a href="#Group-Formation" class="headerlink" title="Group Formation"></a>Group Formation</h3><p>Each group should contain 3 students. In exceptional cases (with lecturer’s permission in advance) a group may have 4 students, but such a group may be required to take on additional work.</p>
-<p>A group is formed when the students involved each join it through the sign-up sheet on the eLearning site for comp5348. Once someone joins a group, they can see the Assignment itself.</p>
-<h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>A zipped file containing source code for your application and a readme file explaining how to run your application.</p>
-<p>A description of how your code works focusing on message exchanges between your components and showing how you will handle the unavailability of various systems. You should justify trade-offs that you made. That is, your report must include answers to questions 1 and 2 from the assignment description.</p>
-<p>A copy of the Academic Honesty cover sheet (group work version) signed by all members of the group Submit deliverables 1 and 2 through eLearning, and hand in deliverable 3 in person at the lab.</p>
-<h3 id="Some-Q-amp-A"><a href="#Some-Q-amp-A" class="headerlink" title="Some Q &amp; A"></a>Some Q &amp; A</h3><blockquote>
-<p>Q1) How do I run the 4 applications and the VideoStore web-client?</p>
-</blockquote>
-<p>A1) a) Create the Videos, Bank, and Deliveries databases along with their associated tables.<br>b) Start each of the applications by right clicking on the following projects, and then clicking on Debug &gt; Start New Instance : Bank.Process; DeliveryCo.Process; EmailService.Process; VideoStore.Process. You can then also start the VideoStore web client by right clicking on VideoStore.WebClient and then clicking on Debug &gt; Start New Instance. Remember to login with the username “Customer” and the password “Customer” (both without the quotes).</p>
-<blockquote>
-<p> Q2) Do I need to modify the EmailService so that it actually sends emails?</p>
-</blockquote>
-<p>A2) No, the EmailProvider simply needs to print out that a message was sent to a certain address for this assignment (which is the current implementation).</p>
-<blockquote>
-<p>Q3) The debugger stops when I try to place an order when the Customer has insufficient funds; or when I place an order for a media item with insufficient stock. How can I observe the application functionality without the debugger stopping in these situations?</p>
-</blockquote>
-<p>A3) Before placing your order you can “Detach” the debugger (Debugger &gt; Detach All) to observe the overall functionality in the question’s scenarios without being interrupted by the debugger.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>For this project, you will be implementing both a modified AVL tree and a 2-5 tree (this is a 2-4 tree but you are allowed to have up to 5 children as apposed to 4). The code is to be uploaded to gradescope under Programming Assignment 3, where you may test your code against the autograder. Gradescope should be able to run your program using the command “make” followed by “./prog1.out”. Be sure to include all .cpp/.h files that make up your program, the dataset provided a Makefile, and name the executable prog1.out Gradescope has clang++ (clang 10) and a g++ compiler available. Please note that it is possible that your program could have some unexpected behavior on gradescope’s auto grader compared to whatever machine you wrote the code on, so submit your program early and make sure it is bug free on gradescope. You are to implement your own AVL/2-5 trees, so you may not use any libraries that automatically do this for you.</p>
+<h3 id="Implement-AVL-Tree-and-2-5-Tree-classes"><a href="#Implement-AVL-Tree-and-2-5-Tree-classes" class="headerlink" title="Implement AVL Tree and 2-5 Tree classes."></a>Implement AVL Tree and 2-5 Tree classes.</h3><p>Each node in the AVL or 2-5 trees is a pair of (word,counter) where counter shows the number of occurrence of the word in the dataset.</p>
+<p>The AVL trees we will be implementing in this assignment are identical to the AVL trees you learned in class, except that here the height constraint will allow for a height dierence of the subtrees of a given node to be at most 2 (as apposed to 1, which is the version you learned in class. The tree should NOT balance itself if the height dierence is only 2), So your code should only perform rotations if the height dierence is over 2.</p>
+<p>Each class should have at least the following functions:</p>
+<p>A constructor and a destructor.<br>A function for searching a word (the word may or may not exist).<br>A function for inserting a new word or incrementing the counter if the word is already inserted.<br>A function for doing a range search. The function takes as input two words. Given two words, the function should find all the words in between. The resulting words should be sorted.<br>Additionally, in order to verify your data structures, you will need to implement the following methods for both classes:</p>
+<p>A print function that prints out a pre-order traversal of the tree.<br>A function that prints out the height of the tree.</p>
+<p>These last two functions will not be apart of gradescope’s autograder test, but will be used by us to ensure that you have properly implemented the data structures using a modified AVL tree and a 2-5 tree. Please comment your code so it is clear how to use your print and height functions.</p>
+<p>For this project, you should use PA3 dataset.txt available on piazza and gauchospace to initially build your data structures. You are expected to parse the dataset and insert the words contained in it. Insert each word using the insert method you implemented for both trees.</p>
+<p>There should be no output when inserting words from PA3 dataset.txt. For your gradescope submission to be able to access the data set you must upload it and use the path:</p>
+<p>/autograder/submission/PA3 dataset.txt</p>
+<h3 id="Implementation-Details"><a href="#Implementation-Details" class="headerlink" title="Implementation Details"></a>Implementation Details</h3><p>Your code should build a modified AVL tree as described before and a 2-5 tree out of the dataset provided. Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands: search, insert, range search from [word 1] to [word 2]. Your output should follow this structure EXACTLY to ensure full credit.</p>
+<p>Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands:</p>
+<p>(a) Search a given word. Both the AVL tree and the 2-5 tree should be searched to find the word. The program should print out “[word] found”, along with the count of the word, once for each data structure. If the word is not found the program should output “[word] not found”, once for each data structure.</p>
+<p>Ex:<br>search hello<br>hello found, count = 2<br>hello found, count = 2</p>
+<p>or if hello is not in the data structure<br>hello not found<br>hello not found<br>(b) Insert a word. If the word is already present then its counter should be increased by one. The program should output “[word] inserted, new count = [count]”, once for each data structure.</p>
+<p>Ex:<br>insert goodbye<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>(c) Do a range search. The program should print out all words alphabetically in between (an including) the two words provided in the range search that are in the data structures. Note that the two words given to perform the range search may or may not be in your data structures. The program should do this once for both data structures.</p>
+<p>(d) Print out a traversal of the tree. The program should print out the values of the tree using a pre-order traversal. For each node, you must do the following: print an open parenthesis, the node’s data, print the nodes’ children from left to right, followed by a close-parenthesis.<br>For each datum, you must print the key and value separated by a colon. If a node has multiple data elements, you should delimit them using commas. For any children that are null, you should print empty parentheses.</p>
+<p>(e) Print the height of the tree. The code should simply output: “Height = [height of tree]”</p>
+<h3 id="Full-Test-example"><a href="#Full-Test-example" class="headerlink" title="Full Test example"></a>Full Test example</h3><p>Your program receives the commands through argv1. In the following example we have that that the starting count of hello is 2, of yesterday is 3, and goodbye is not present in the data structure. We also have that the only words in between band and cat in the data structure are band, bankers, bat, and cab. gradescope passes the following commands through argv1:</p>
+<p>search hello, insert goodbye, insert hello, range search band to cat<br>We expect the following output:</p>
+<p>hello found, count = 2<br>hello found, count = 2<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>hello inserted, new count = 3<br>hello inserted, new count = 3<br>band<br>bankers<br>bat<br>cab<br>band<br>bankers<br>bat<br>cab</p>
 
       
     </div>
@@ -409,7 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -422,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CIS501-Instant-Messaging-App.html" rel="next" title="C#代写：CIS501-Instant-Messaging-App">
-                <i class="fa fa-chevron-left"></i> C#代写：CIS501-Instant-Messaging-App
+              <a href="/CS162-File-IO.html" rel="next" title="CS162-File-IO">
+                <i class="fa fa-chevron-left"></i> CS162-File-IO
               </a>
             
           </div>
@@ -431,10 +420,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSE2100-Cosmic-Wimpout.html" rel="prev" title="JavaFX代写：CSE2100-Cosmic-Wimpout">
-                JavaFX代写：CSE2100-Cosmic-Wimpout <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -585,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group-Formation"><span class="nav-number">2.</span> <span class="nav-text">Group Formation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables"><span class="nav-number">3.</span> <span class="nav-text">Deliverables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-Q-amp-A"><span class="nav-number">4.</span> <span class="nav-text">Some Q &amp; A</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implement-AVL-Tree-and-2-5-Tree-classes"><span class="nav-number">2.</span> <span class="nav-text">Implement AVL Tree and 2-5 Tree classes.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Details"><span class="nav-number">3.</span> <span class="nav-text">Implementation Details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Full-Test-example"><span class="nav-number">4.</span> <span class="nav-text">Full Test example</span></a></li></ol></div>
             
 
           </div>

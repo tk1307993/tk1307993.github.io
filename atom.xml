@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-09-14T23:45:19.087Z</updated>
+  <updated>2022-09-16T23:51:12.826Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS208-AVL-Tree</title>
+    <link href="https://tk1307993.coding.me/CS208-AVL-Tree.html"/>
+    <id>https://tk1307993.coding.me/CS208-AVL-Tree.html</id>
+    <published>2022-09-16T23:49:30.000Z</published>
+    <updated>2022-09-16T23:51:12.826Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>For this project, you will be implementing both a modified AVL tree and a 2-5 tree (this is a 2-4 tree but you are allowed to have up to 5 children as apposed to 4). The code is to be uploaded to gradescope under Programming Assignment 3, where you may test your code against the autograder. Gradescope should be able to run your program using the command “make” followed by “./prog1.out”. Be sure to include all .cpp/.h files that make up your program, the dataset provided a Makefile, and name the executable prog1.out Gradescope has clang++ (clang 10) and a g++ compiler available. Please note that it is possible that your program could have some unexpected behavior on gradescope’s auto grader compared to whatever machine you wrote the code on, so submit your program early and make sure it is bug free on gradescope. You are to implement your own AVL/2-5 trees, so you may not use any libraries that automatically do this for you.</p><h3 id="Implement-AVL-Tree-and-2-5-Tree-classes"><a href="#Implement-AVL-Tree-and-2-5-Tree-classes" class="headerlink" title="Implement AVL Tree and 2-5 Tree classes."></a>Implement AVL Tree and 2-5 Tree classes.</h3><p>Each node in the AVL or 2-5 trees is a pair of (word,counter) where counter shows the number of occurrence of the word in the dataset.</p><p>The AVL trees we will be implementing in this assignment are identical to the AVL trees you learned in class, except that here the height constraint will allow for a height dierence of the subtrees of a given node to be at most 2 (as apposed to 1, which is the version you learned in class. The tree should NOT balance itself if the height dierence is only 2), So your code should only perform rotations if the height dierence is over 2.</p><p>Each class should have at least the following functions:</p><p>A constructor and a destructor.<br>A function for searching a word (the word may or may not exist).<br>A function for inserting a new word or incrementing the counter if the word is already inserted.<br>A function for doing a range search. The function takes as input two words. Given two words, the function should find all the words in between. The resulting words should be sorted.<br>Additionally, in order to verify your data structures, you will need to implement the following methods for both classes:</p><p>A print function that prints out a pre-order traversal of the tree.<br>A function that prints out the height of the tree.</p><p>These last two functions will not be apart of gradescope’s autograder test, but will be used by us to ensure that you have properly implemented the data structures using a modified AVL tree and a 2-5 tree. Please comment your code so it is clear how to use your print and height functions.</p><p>For this project, you should use PA3 dataset.txt available on piazza and gauchospace to initially build your data structures. You are expected to parse the dataset and insert the words contained in it. Insert each word using the insert method you implemented for both trees.</p><p>There should be no output when inserting words from PA3 dataset.txt. For your gradescope submission to be able to access the data set you must upload it and use the path:</p><p>/autograder/submission/PA3 dataset.txt</p><h3 id="Implementation-Details"><a href="#Implementation-Details" class="headerlink" title="Implementation Details"></a>Implementation Details</h3><p>Your code should build a modified AVL tree as described before and a 2-5 tree out of the dataset provided. Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands: search, insert, range search from [word 1] to [word 2]. Your output should follow this structure EXACTLY to ensure full credit.</p><p>Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands:</p><p>(a) Search a given word. Both the AVL tree and the 2-5 tree should be searched to find the word. The program should print out “[word] found”, along with the count of the word, once for each data structure. If the word is not found the program should output “[word] not found”, once for each data structure.</p><p>Ex:<br>search hello<br>hello found, count = 2<br>hello found, count = 2</p><p>or if hello is not in the data structure<br>hello not found<br>hello not found<br>(b) Insert a word. If the word is already present then its counter should be increased by one. The program should output “[word] inserted, new count = [count]”, once for each data structure.</p><p>Ex:<br>insert goodbye<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>(c) Do a range search. The program should print out all words alphabetically in between (an including) the two words provided in the range search that are in the data structures. Note that the two words given to perform the range search may or may not be in your data structures. The program should do this once for both data structures.</p><p>(d) Print out a traversal of the tree. The program should print out the values of the tree using a pre-order traversal. For each node, you must do the following: print an open parenthesis, the node’s data, print the nodes’ children from left to right, followed by a close-parenthesis.<br>For each datum, you must print the key and value separated by a colon. If a node has multiple data elements, you should delimit them using commas. For any children that are null, you should print empty parentheses.</p><p>(e) Print the height of the tree. The code should simply output: “Height = [height of tree]”</p><h3 id="Full-Test-example"><a href="#Full-Test-example" class="headerlink" title="Full Test example"></a>Full Test example</h3><p>Your program receives the commands through argv1. In the following example we have that that the starting count of hello is 2, of yesterday is 3, and goodbye is not present in the data structure. We also have that the only words in between band and cat in the data structure are band, bankers, bat, and cab. gradescope passes the following commands through argv1:</p><p>search hello, insert goodbye, insert hello, range search band to cat<br>We expect the following output:</p><p>hello found, count = 2<br>hello found, count = 2<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>hello inserted, new count = 3<br>hello inserted, new count = 3<br>band<br>bankers<br>bat<br>cab<br>band<br>bankers<br>bat<br>cab</p>]]></content>
+    
+    <summary type="html">
+    
+      实现AVL树，以及改进后的2-5树。
+    
+    </summary>
+    
+      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>CS162-File-IO</title>
@@ -451,30 +473,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMP206-Graph-Traversal-and-Dijkstras-Algorithm</title>
-    <link href="https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html"/>
-    <id>https://tk1307993.coding.me/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html</id>
-    <published>2021-09-17T01:45:50.000Z</published>
-    <updated>2021-09-17T01:48:12.793Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this project you will use the Graph ADT and Dijkstra’s algorithm to compute the length of the shortest path (number of nodes visited), and for extra credit the path with the fewest turns. The input graphs are actual street map of Manhattan NY and Manhattan Kansas</p><h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The goal of this programming project is for you to master (or at least get practice on) the following tasks:</p><ul><li>Establishing a Graph ADT from a real life application</li><li>Using Dijkstra’s algorithm to find length of a path.</li><li>Inputting user origination and destination information</li><li>working with existing code</li></ul><h3 id="Helpful-code"><a href="#Helpful-code" class="headerlink" title="Helpful code"></a>Helpful code</h3><p>The main class that will call methods the Graph ADT in chapter 10 which are also provided attached to the assignment. This java project ProgProject4 provides and application that creates a graph using the books graph ADT classes. There is also a package that contains a class to execute Dijkstra’s algorithm.</p><h3 id="Project-Steps"><a href="#Project-Steps" class="headerlink" title="Project Steps"></a>Project Steps</h3><ol><li>Create a graph based upon the given street map. Each expected vertex in your graph is represented by a blue dot. The blue dots represent a traffic intersection. Your vertex should be an instance of an Intersection Class, not a String as used in most class examples. Your program should read an input file containing all information about the intersection including all streets that meet at that intersection.</li><li>Traverse through the graph and find the length, or the number of nodes , of the shortest paths for the origination to destination path.</li><li>For 5 points extra credit, find the path with the shortest number of turns. A turn is defined as a path of 3 vertices where the edge street names are not the same.<br>Hint - for fewest number of turns, store the name of the street of the edge. A turn is when a vertex on the path is reached by 2 edges with different names.</li></ol><h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>When inputting an intersection, always assume street names are sorted, and only the street name (not ave or road) is provided.</p><p>Ignore One Way arrows on maps</p><p>Expected Results:</p><p>Map 1: Manhattan Kansas<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Input</span>:</span><br><span class="line"><span class="attribute">Origination</span>:   Hudson,Kimball     <span class="attribute">Destination</span>:  Claflin,Denison </span><br><span class="line"><span class="attribute">Output</span>:</span><br><span class="line">Minimum Path <span class="attribute">Length</span>: <span class="number">6</span>    Minimum <span class="attribute">Turns</span>: <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">Input</span>:</span><br><span class="line"><span class="attribute">Origination</span>:   College     <span class="attribute">Destination</span>:  Claflin,NManhattan</span><br><span class="line"><span class="attribute">Output</span>:</span><br><span class="line">Minimum Path <span class="attribute">Length</span>: <span class="number">4</span>    Minimum <span class="attribute">Turns</span>: <span class="number">1</span></span><br></pre></td></tr></table></figure></p><p>Map 2: Manhattan New York<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Input:</span></span><br><span class="line"><span class="string">Origination:</span> Canal, Spring     <span class="string">Destination:</span>  Spring, Thomson </span><br><span class="line"><span class="string">Output:</span></span><br><span class="line">Minimum Path <span class="string">Length:</span> <span class="number">5</span>    Minimum <span class="string">Turns:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></p><h3 id="Running-the-program"><a href="#Running-the-program" class="headerlink" title="Running the program"></a>Running the program</h3><p>Since you will be using the ProgProject4 class provided, running your program should be produce a series of input prompts for the origination and destination locations.</p>]]></content>
-    
-    <summary type="html">
-    
-      代写Dijkstra算法，对地图上的任意两点，求最短路径。
-    
-    </summary>
-    
-      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
