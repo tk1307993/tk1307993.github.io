@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="完成游戏Crossword中的Checker逻辑部分的实现。">
+<meta name="keywords" content="Fundamentals,Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSCI1200-Crossword-Checker">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI1200-Crossword-Checker.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="完成游戏Crossword中的Checker逻辑部分的实现。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-09-22T14:37:06.213Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSCI1200-Crossword-Checker">
+<meta name="twitter:description" content="完成游戏Crossword中的Checker逻辑部分的实现。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI1200-Crossword-Checker.html">
+
+
+
+
+
+  <title>CSCI1200-Crossword-Checker | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI1200-Crossword-Checker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSCI1200-Crossword-Checker</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-22T22:34:51+08:00">
+                2022-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  完成游戏Crossword中的Checker逻辑部分的实现。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this homework you will work with command line arguments, file input and output, and the C++ STL string and vector classes to check the words in a class crossword puzzle board. Please read the entire handout for the assignment before starting to program. In addition to the lecture notes, you will also want to refer to the “Helpful C++ Programming Information” and “Good Programming Practices” sections of the course webpage.</p>
+<p>Here’s a very small example of a classic crossword puzzle. The board consists of a grid of squares with some of the squares blacked out. The remaining white squares need to be filled with 1 letter per square forming words of 2 or more letters that run in the horizontal (left to right) and vertical (top to bottom) directions. The traditional crossword puzzle provides clues/definitions for each of these words. Each white square that is the first letter of one or more words is numbered. White squares that are the middle or end of words are not numbered. Can you solve this crossword puzzle by hand?</p>
+<p>Your task for this assignment is to write a tool to help confirm that a filled in crossword puzzle contains real English words by picking out the letters from the board and checking them against a list of allowed words. This tool could be useful both to crossword puzzle solvers and also to crossword puzzle designers.</p>
+<p>NOTE: We will not be tackling the much harder problem of matching words to clues or generating clues for words, which would requires a large vocabulary, clever use of puns, knowledge of pop culture, etc. and is an active area of Artificial Intelligence (AI) and Natural Language Processing (NLP) research.</p>
+<h3 id="Command-Line-Arguments"><a href="#Command-Line-Arguments" class="headerlink" title="Command Line Arguments"></a>Command Line Arguments</h3><p>To check the validity of a filled-in crossword puzzle board, your program will expect two required arguments and one optional argument. The first argument is the puzzle filename containing the grid of characters in the proposed board. The second argument is the dictionary filename containing all of the allowed words. If provided, the third argument will specify how to display the puzzle using ASCII art. Here are a few example command lines:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words.txt</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print_coordinates</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print_numbered</span><br></pre></td></tr></table></figure></p>
+<p>You must exactly follow the specifications for the command line and output to ensure you receive full credit for your work. We provide sample input and output files on the course website, and the automated testing and autograding on Submitty will also help you check your work. We recommend starting with the lower numbered puzzles first, and working to higher numbered puzzles as you debug your work.</p>
+<p>The file puzzle6.txt contains the filled-in crossword puzzle for the example above. The black squares of the board are represented with the number character, ‘#’.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a##b</span><br><span class="line">pale</span><br><span class="line">e#ad</span><br></pre></td></tr></table></figure></p>
+<p>The file of allowed words used in the example command lines is the contents of the Ubuntu Linux American English dictionary - a version of this file may already be on your computer in /usr/share/dict/words. This file is simple plaintext with one word per line. You are encouraged to copy and add or remove words from this file or create a new file with alternate words as you test your program. Note that the allowed words file may contain words with lowercase and uppercase letters. Crossword puzzles are usually case insensitive, so your program should ignore capitalization when checking if a word is on the accepted list. The allowed words file may include words containing punctuation characters - you should ignore those words.</p>
+<h3 id="Note-on-Error-Checking"><a href="#Note-on-Error-Checking" class="headerlink" title="Note on Error Checking"></a>Note on Error Checking</h3><p>You should implement simple error checking to ensure that the arguments provided are appropriate. You should also check to make sure that the files exist and your program can successfully open and read the contents. Your program should exit gracefully with a useful error message sent to std::cerr, Standard Error (STDERR), if there is a problem with the arguments or the filenames.</p>
+<h3 id="Note-on-Viewing-ASCII-Art-amp-Plaintext-Files"><a href="#Note-on-Viewing-ASCII-Art-amp-Plaintext-Files" class="headerlink" title="Note on Viewing ASCII Art &amp; Plaintext Files"></a>Note on Viewing ASCII Art &amp; Plaintext Files</h3><p>Make sure you’re using a good file viewer/editor to look at these files. It should correctly display the UNIX/GNU Linux ‘\n’ line ending. Use one of the “Plaintext &amp; Code Viewers/Editors” listed on the “C++ Development” page. Don’t attempt use the Windows line ending character ‘\m’ or ‘\r’ because this will fail validation tests on Submitty</p>
+<h3 id="Basic-Output"><a href="#Basic-Output" class="headerlink" title="Basic Output"></a>Basic Output</h3><p>If all of the horizontal or vertical sequences of 2 or more contiguous white box letters are present in the acceptable words file and the optional third argument is not provided, then your program should print this simple success message to std::cout, Standard Output (STDOUT):<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">valid crossword puzzle</span></span><br></pre></td></tr></table></figure></p>
+<p>If one or more of the letter sequences is not present in the acceptable words file, then your program should print all of those non-words to std::cout, Standard Output (STDOUT). The lines of your output may be in a different order, but the output otherwise must match exactly. Here is the expected output for the provided input file puzzle2.txt:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abcd'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'aei'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'bfj'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'cgk'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'dhl'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'efgh'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'ijkl'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="ASCII-Art-Output"><a href="#ASCII-Art-Output" class="headerlink" title="ASCII Art Output"></a>ASCII Art Output</h3><p>If a third argument is specified, you will print an ASCII art representation of the empty puzzle board. The output for the –print option is shown on the right. For full credit, your output must match this sample output exactly.</p>
+<p>The next step is to prepare a template for the list of word clues. When the –print_coordinates option is specified each clue is listed with the position (row and column) of the starting letter of the word and the word direction. This output is shown to the left. Note that the upper left corner of the puzzle grid is position (0,0). It’s ok if your words appear in a different order than this sample output, but the output must otherwise match exactly.</p>
+<p>This output can be used by a crossword puzzle designer, who would take this output and replace the words with clever clues (something probably still best done by humans).</p>
+<h3 id="Submission-Details"><a href="#Submission-Details" class="headerlink" title="Submission Details"></a>Submission Details</h3><p>Do all of your work in a new folder inside of your Data Structures homeworks directory. You should use the C++ STL string and vector classes in your implementation. Use good coding style when you design and implement your program. Review the “Good Programming Practices” section on the course webpage to be sure that the TAs will be able give you credit for your hard work. Organize your program into functions: don’t put all the code in main! Use good variable and function names. Be sure to make up new test cases and don’t forget to comment your code!</p>
+<p>Download and fill out the provided template README.txt file, adding any notes you want the grader to read. You must do this assignment on your own, as described in the “Collaboration Policy &amp; Academic Integrity” handout. If you discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA if you need help preparing your assignment for submission or if you have difficulty writing portable code.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP1201-Base-Convertor.html" rel="next" title="COMP1201-Base-Convertor">
+                <i class="fa fa-chevron-left"></i> COMP1201-Base-Convertor
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">272</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command-Line-Arguments"><span class="nav-number">2.</span> <span class="nav-text">Command Line Arguments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note-on-Error-Checking"><span class="nav-number">3.</span> <span class="nav-text">Note on Error Checking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note-on-Viewing-ASCII-Art-amp-Plaintext-Files"><span class="nav-number">4.</span> <span class="nav-text">Note on Viewing ASCII Art &amp; Plaintext Files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Output"><span class="nav-number">5.</span> <span class="nav-text">Basic Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ASCII-Art-Output"><span class="nav-number">6.</span> <span class="nav-text">ASCII Art Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-Details"><span class="nav-number">7.</span> <span class="nav-text">Submission Details</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
