@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="完成数据结构作业，包括Zombie Simulator, Skip List Set, Deque以及Redix Sort, 量比较大。">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DSA2020-Zombie-Simulator">
+<meta property="og:url" content="https://tk1307993.coding.me/DSA2020-Zombie-Simulator.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="完成数据结构作业，包括Zombie Simulator, Skip List Set, Deque以及Redix Sort, 量比较大。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-10-01T11:35:34.075Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DSA2020-Zombie-Simulator">
+<meta name="twitter:description" content="完成数据结构作业，包括Zombie Simulator, Skip List Set, Deque以及Redix Sort, 量比较大。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/DSA2020-Zombie-Simulator.html">
+
+
+
+
+
+  <title>DSA2020-Zombie-Simulator | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/DSA2020-Zombie-Simulator.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">DSA2020-Zombie-Simulator</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-01T19:34:07+08:00">
+                2022-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  完成数据结构作业，包括Zombie Simulator, Skip List Set, Deque以及Redix Sort, 量比较大。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Question-1-Zombie-Simulator-recommended-readings-1-3-1-4"><a href="#Question-1-Zombie-Simulator-recommended-readings-1-3-1-4" class="headerlink" title="Question 1 - Zombie Simulator (recommended readings 1.3, 1.4)"></a>Question 1 - Zombie Simulator (recommended readings 1.3, 1.4)</h3><p>Using the UML below, create a class called Human which represents a human being whom can walk around a simulated world.<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Human</span><br><span class="line"><span class="meta"># x,y : double</span></span><br><span class="line"><span class="meta"># dx,dy : double</span></span><br><span class="line"><span class="meta"># size : double</span></span><br><span class="line"><span class="meta"># isAlive : boolean</span></span><br><span class="line">+ world_width, world_height : <span class="keyword">int</span></span><br><span class="line">---------------------------------</span><br><span class="line"><span class="meta"># max_speed : double</span></span><br><span class="line"><span class="meta"># sightDistance : int</span></span><br><span class="line"><span class="meta"># generator : Random</span></span><br><span class="line"><span class="meta"># others : List&lt;Human&gt;</span></span><br><span class="line">---------------------------------</span><br><span class="line">+ Human(others:List&lt;Human&gt;, x:<span class="keyword">double</span>, y:<span class="keyword">double</span>)</span><br><span class="line">+ run(): <span class="keyword">void</span></span><br><span class="line">+ getX(): <span class="keyword">double</span></span><br><span class="line">+ getY(): <span class="keyword">double</span></span><br><span class="line">+ getSize() : <span class="keyword">double</span></span><br><span class="line">+ kill() : <span class="keyword">void</span></span><br><span class="line">+ draw(g : Graphics) : <span class="keyword">void</span></span><br></pre></td></tr></table></figure></p>
+<p>Each Human can run as a separate thread and maintains an x,y position with periodic movements using dx, dy which change slightly after a number of iterations. A Human can be instantiated using an initial position and a list of all other humans in the world. A Human can be drawn using the draw method and passing a Graphics object around its x,y position and size. There are also a static public fields which can be set to determine the size of the world in which humans roam.</p>
+<p>Create a Zombie class which extends a Human. Try to work out what Human fields/methods should be overridden. A Zombie has a sight distance of the entire panel and will actively seek and search out the nearest human, it will then alter its dx,dy movements towards the closest human for a fixed period of time before checking if there is any other targets it could possibly chase. A Zombie can only move half of the max speed as a human. If a Zombie manages to catch a human it will bite and kill the human.</p>
+<p>Modify the human class so that it tries to move away from the closest zombie within its sight distance by modifying its dx,dy speed. A Human sight distance is only of the world size.</p>
+<p>Create a GUI called ZombieSimulator with two buttons, starting either a zombie or a human as a thread. The GUI should periodically redraw all Human and Zombie objects moving within the world. It should maintain a single thread safe data structure for all Zombie and Human objects. It should also periodically check if a human has been killed by a zombie, in which case it re-instantiates the object as a new Zombie thread. See below for an example screenshot, where zombies are red squares and humans’ blue circles.</p>
+<p>Feel free to add any private/protected helper methods across any of the classes which you feel would improve the design of your program and play with any of the formula constants (eg sight distance, max speed, sleep time) to improve the feel of the simulator.</p>
+<h3 id="Question-2-Skip-List-Set-recommended-readings-2-2"><a href="#Question-2-Skip-List-Set-recommended-readings-2-2" class="headerlink" title="Question 2 - Skip List Set (recommended readings 2.2)"></a>Question 2 - Skip List Set (recommended readings 2.2)</h3><p>A skip list data structure is a modification of a singly linked list so that the add, contains, and remove methods are O(log2 n). Essentially it consists of a series of singly-linked lists L0, L1, …, Lk, usually visualized one on top of another with L0 at the bottom. The list L0 holds all the (nonnull) elements of the collection in order with null at the start and end of the list. Each list Li+1 holds a subset of the previous list Li and has links from each element down to the same element in the previous list. These links enable elements in the collection to be found more efficiently than by just traversing the list L0. The illustrated skip list holds three elements e0, e1, e2 in comparable order:</p>
+<p>When an element is added to the skip list it is first randomly decided in how many of the lists it will appear (it is always placed in the list L0, and if in a list Li it has a 50-50 chance of also being in Li+1 and so on). Then the correct insertion place is found in the topmost list to which it will be added (which might result in a new top list being created), and then working downward it is added to each of the lists below. An element is found by starting at the top list (referenced by firstNode), following the next links until either the element is found, the end of the list would be reached, or else the element would be passed. If not yet found, a down link is followed to continue the process with the list below. To remove an element the element should be removed from each list in which it appears (starting with the topmost list).</p>
+<p>Using the UML below as a guide, prepare a class called SkipListSet that extends AbstractSet (and so implements the Set interface) using a skip list data structure and the following UML diagram as a guide. Include a suitable main method which effectively tests your skip list implementation.</p>
+<p>A screenshot of an example test is shown below, note that for convenience and debugging purposes the skip list toString prints all node elements on each level.</p>
+<h3 id="Question-3-Deque-implementations-recommended-readings-3-3"><a href="#Question-3-Deque-implementations-recommended-readings-3-3" class="headerlink" title="Question 3 - Deque implementations (recommended readings: 3.3)"></a>Question 3 - Deque implementations (recommended readings: 3.3)</h3><p>A deque (pronounced deck) or double-ended queue, is a linear collection that allows insertion and removal at both ends. The interface above called DequeADT, available from Blackboard, is an abstract data type which can hold any generic element E, it also describes operations for a deque.</p>
+<p>Create two data structure implementations of the Deque, one which uses an underlying array called ArrayDeque and one which uses an underlying dynamic doubly-linked structure called DoublyLinkedDeque. Implement the deque data structures yourself, do not use extra Java Collection classes!</p>
+<p>For efficiency first, last, enqueueRear, enqueueFront, dequeueRear, dequeueFront, clear, size, and isEmpty should all be O(1) operations. Feel free to add any necessary private helper methods and a suitable toString which returns a string representation for your deque implementation.</p>
+<p>Further enhance your classes to make sure all methods are safe from unexpected events using appropriate exception handling (example, if user code tries to remove something from the deque when empty, it should throw an appropriate exception). Create a test class with a suitable main method which effectively tests all operations on one or both deque implementations.</p>
+<p>See the screenshot below for an example of testing one of the deque implementations.</p>
+<h3 id="Question-4-Bitwise-Radix-Sort-recommended-readings-3-5-3-6"><a href="#Question-4-Bitwise-Radix-Sort-recommended-readings-3-5-3-6" class="headerlink" title="Question 4 - Bitwise Radix Sort (recommended readings 3.5, 3.6)"></a>Question 4 - Bitwise Radix Sort (recommended readings 3.5, 3.6)</h3><p>Radix sort is a sorting algorithm that focuses on sorting parts that comprise the number rather than the whole number directly. Usually it can only be used on fixed digit or character inputs such as post codes or county codes. Radix sort focusses on each digit/char at a time and placing it in a desired queue shared with other parts of the same value. After all elements are queued, it polls all elements back into an original list. It repeats this process k times where k is the amount of digits/chars that comprise the element. However, if we had to sort a single digit element across a larger range of possibilities (eg Ascii or Unicode values) then a different strategy for radix sort can be utilised at a bit level, instead focussing on the bits which make up the data type.</p>
+<p>Create a simple static method called bitwiseRadixSort which takes a char[] of Unicode values and sorts them looking at the individual bits which form each char data type. Include a main method to test using randomly generated char values as demonstrated with the screenshot below. Note it may be beneficial to print out the Unicode number as well as the printed char so that you know your sort is working.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP20003-K-D-Trees.html" rel="next" title="COMP20003-K-D-Trees">
+                <i class="fa fa-chevron-left"></i> COMP20003-K-D-Trees
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">275</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-1-Zombie-Simulator-recommended-readings-1-3-1-4"><span class="nav-number">1.</span> <span class="nav-text">Question 1 - Zombie Simulator (recommended readings 1.3, 1.4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-2-Skip-List-Set-recommended-readings-2-2"><span class="nav-number">2.</span> <span class="nav-text">Question 2 - Skip List Set (recommended readings 2.2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-3-Deque-implementations-recommended-readings-3-3"><span class="nav-number">3.</span> <span class="nav-text">Question 3 - Deque implementations (recommended readings: 3.3)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-4-Bitwise-Radix-Sort-recommended-readings-3-5-3-6"><span class="nav-number">4.</span> <span class="nav-text">Question 4 - Bitwise Radix Sort (recommended readings 3.5, 3.6)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
