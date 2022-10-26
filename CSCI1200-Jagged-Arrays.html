@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals,">
+  <meta name="keywords" content="Data Structure,Fundamentals,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
-<meta name="keywords" content="Fundamentals">
+<meta name="description" content="实现Jagged Array, 一种不定长数组。">
+<meta name="keywords" content="Data Structure,Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CSSE7023-Train-Management-System-GUI">
-<meta property="og:url" content="https://tk1307993.coding.me/CSSE7023-Train-Management-System-GUI.html">
+<meta property="og:title" content="CSCI1200-Jagged-Arrays">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI1200-Jagged-Arrays.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
+<meta property="og:description" content="实现Jagged Array, 一种不定长数组。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-19T03:07:27.253Z">
+<meta property="og:updated_time" content="2022-10-26T03:29:33.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CSSE7023-Train-Management-System-GUI">
-<meta name="twitter:description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
+<meta name="twitter:title" content="CSCI1200-Jagged-Arrays">
+<meta name="twitter:description" content="实现Jagged Array, 一种不定长数组。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CSSE7023-Train-Management-System-GUI.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI1200-Jagged-Arrays.html">
 
 
 
 
 
-  <title>Java代写：CSSE7023-Train-Management-System-GUI | 留学生CS编程作业代写</title>
+  <title>CSCI1200-Jagged-Arrays | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSSE7023-Train-Management-System-GUI.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI1200-Jagged-Arrays.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CSSE7023-Train-Management-System-GUI</h2>
+          <h2 class="post-title" itemprop="name headline">CSCI1200-Jagged-Arrays</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-19T11:04:26+08:00">
-                2019-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-26T11:27:29+08:00">
+                2022-10-26
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。
+                  实现Jagged Array, 一种不定长数组。
               </div>
           
 
@@ -360,55 +360,27 @@
       
 
       
-        <h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>The goal of this assignment is to gain practical experience with implementing GUIs using the Model-View-Controller design pattern.</p>
-<h3 id="Problem-description"><a href="#Problem-description" class="headerlink" title="Problem description"></a>Problem description</h3><p>In this assignment you will develop a GUI for simulating the behaviour of a train management system using the Model-View-Controller design pattern. This extends the work you have done in Assignments 1 and 2.</p>
-<p>The train management system in question is quite simplistic. It manages the allocation of trains to sub-routes 1 for a particular track in a way that is guaranteed to prevent train collisions. The idea is that a train is only allowed to move along the sub-route it has been allocated to, but it can move freely along that sub-route without fear of colliding with another train.</p>
-<p>There may be zero or more trains on the track. Each train on the track has a unique identifier (an integer), a route that it is following, and a sub-route of that route that it has currently been allocated to. The route a train is following must be on the track, and the sub-route that the train is allocated to must be a sub-route of the route that the train is following. The sub-routes that trains have been allocated to may not intersect.</p>
-<p>Exactly what the GUI looks like is up to you, but in order to meet testing requirements, it must be capable of performing the following tasks:</p>
-<ul>
-<li>When the train management program is executed (by running the main method in RailwayManager.java), the program should</li>
-<li>load the track defined in the file track.txt using the read method from TrackReader.</li>
-<li>initialise itself so that it has no trains to begin with, and so that its track is set to be the track that was read in from the file.</li>
-</ul>
-<p>An appropriate error message should be clearly displayed (in the graphical user interface) if there is an error reading from the input file or there is an error with the input format (i.e. if TrackReader.read throws an IOException or a FormatException).</p>
-<p>The error message displayed to the user should clearly identify the reason for the error. That is, it should identify that the file track.txt could not be loaded, and why. The reason should include whether or not the load error was due to an input/output error reading from the file, or because of an error with the input format of the file, and it should include the detail message of the exception thrown to help the user track down the exact reason for the problem.</p>
-<p>If the track could not be loaded then the program, after informing the user of the problem, is not obliged to perform the remainder of the tasks specified here. It should either exit gracefully or allow the user to close the program without being able to perform any other functions. If the track could be loaded, then the track of the program should be set to be the track that was read, and it should be evident to the user that there are currently no trains on the track.</p>
-<p>Note that a sample file called track.txt has been included in the assignment zip file, but that your code should not be hard-coded to only handle the current content of that input file - the content of the file should be able to be updated to represent any track.<br>Assuming that the track for the train management program can be loaded, the user should be able to use the program to perform the following tasks.</p>
-<p>At any point, the user should be able to request that a new train is added to the track. In particular the user should be able to input:</p>
-<ul>
-<li>the name of a file (e.g. route.txt) from which the route of that train can be read</li>
-<li>a start and end-offset (startOffset and endOffset) on that route that specifies the sub-route of the train’s route that the train initially wants to be allocated to.</li>
-<li>In response to such a request the program should:</li>
-<li>load the route defined in the file specified using the read method from RouteReader.</li>
-<li>check that the route read from the file is on the train management system’s track (i.e. use the onTrack method of the Route class),</li>
-<li>check that the offsets define a valid sub-route of the route, route, that was read, i.e. 0 &lt;= startOffset &lt; endOffset &lt;= route.getLength().</li>
-<li>check that the sub-route route.getSubroute(startOffset, endOffset) does not intersect with any of the sub-routes currently allocated to other trains. (Note: you can check whether or not a route intersects with another one using the intersects method of the Route class.)</li>
-</ul>
-<p>If either (i) the route could not be loaded, or (ii) the route could be loaded, but it is not on the train management system’s track, or (iii) the route could be loaded and is on the track, but the offsets do not define a valid sub-route of the route that was read, or (iv) the route could be loaded, it is on the track, and the sub-route is valid w.r.t. the train’s route, but the sub-route route.getSubroute(startOffset, endOffset) intersects with at least one of the sub-routes currently allocated to another train, then an appropriate error message should be clearly displayed (in the graphical user interface) to the user, and the train should not be loaded, and the existing trains and their allocations should not be modified in any way. The error message displayed to the user should clearly identify the reason for the error.</p>
-<p>Otherwise the train, with its route, is added to the system and allocated to the sub-route that it requested. It should be given a unique integer identifier that corresponds to the order in which the train was loaded (i.e. the first train loaded has identifier 0, the second train loaded has identifier 1, the third train loaded has identifier 2, etc.)</p>
-<p>If either (i) the offsets do not define a valid sub-route of the route that was read, or (ii) the sub-route route.getSubroute(startOffset, endOffset) intersects with any of the sub-routes currently allocated to other trains, then an appropriate error message be clearly displayed (in the graphical user interface) to the user, and the existing trains and allocations should not be modified in any way. The error message displayed to the user should clearly identify the reason for the error. Otherwise, the allocation of the train should be updated to the requested allocation.</p>
-<p>Your program should be robust in the sense that incorrect user inputs should not cause the system to fail. Appropriate error messages should be displayed to the user if they enter incorrect inputs.</p>
-<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>Using the MVC architecture, you must implement RailwayManager.java in the railway.gui package by completing the skeletons of the three classes: RailwayModel.java, RailwayView.java and RailwayController.java that are available in the zip files that accompanies this assignment. (Don’t change any classes other than RailwayModel.java, RailwayView.java and RailwayController.java since we will test your code with the original versions of those other files.)</p>
-<p>You should design your interface so that it is legible and intuitive to use. The purpose of the task that the interface is designed to perform should be clear and appropriate. It must be able to be used to perform the tasks as described above.</p>
-<p>As in Assignment 1 and 2, you must implement RailwayModel.java, RailwayView.java and RailwayController.java as if other programmers were, at the same time, implementing the classes that instantiate them and call their methods. Hence:</p>
-<ul>
-<li>Don’t change the class names, specifications, or alter the method names, parameter types, return types, exceptions thrown or the packages to which the files belong.</li>
-<li>You are encouraged to use Java 8 SE classes, but no third party libraries should be used. (It is not necessary, and makes marking hard.)</li>
-<li>Don’t write any code that is operating-system specific (e.g. by hard-coding in newline characters etc.), since we will batch test your code on a Unix machine.</li>
-<li>Your source file should be written using ASCII characters only.</li>
-<li>You may define your own private or public variables or methods in the classes RailwayModel.java, RailwayView.java and RailwayController.java (these should be documented, of course).</li>
-</ul>
-<p>Implement the classes as if other programmers are going to be using and maintaining them. Hence:</p>
-<ul>
-<li>Your code should follow accepted Java naming conventions, be consistently indented, readable, and use embedded whitespace consistently. Line length should not be over 80 characters. (Hint: if you are using Eclipse you might want to consider getting it to automatically format your code.)</li>
-<li>Your code should use private methods and private instance variables and other means to hide implementation details and protect invariants where appropriate.</li>
-<li>Methods, fields and local variables (except for-loop variables) should have appropriate comments. Comments should also be used to describe any particularly tricky sections of code. However, you should also strive to make your code understandable without reference to comments; e.g. by choosing sensible method and variable names, and by coding in a straightforward way.</li>
-<li>Allowable values of instance variables must be specified using a class invariant when appropriate.</li>
-<li>You should break the program up into logical components using MVC architecture.</li>
-<li>The methods that you have to write must be decomposed into a clear and not overly complicated solution, using private methods to prevent any individual method from doing too much.</li>
-</ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hints: You should watch the piazza forum <span class="keyword">and</span> the announcements<span class="built_in"> page </span>on the Blackboard closely - these sites have lots of useful clarifications, updates <span class="keyword">to</span> materials, <span class="keyword">and</span> often hints, <span class="keyword">from</span> the course coordinator, the tutors, <span class="keyword">and</span> other students.</span><br></pre></td></tr></table></figure>
-<p>The assignment requires the use of a number of components from the Swing library. You should consult the documentation for these classes in order to find out how they work, as well as asking questions on piazza and asking tutors and the course coordinator.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment you will build a custom data structure named JaggedArray. A JaggedArray is a 1D array of n bins, and each bin stores a collection of elements of templated type T. Building this data structure will give you practice with pointers, dynamic array allocation and deallocation, and writing templated classes. The implementation of this data structure will involve writing one new class. You are not allowed to use any of the STL container classes in your implementation or use any additional classes or structs. Please read the entire handout before beginning your implementation. Also, be sure to review the Lecture 8 notes.</p>
+<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>The JaggedArray class is found in many real-world applications where a variable number of elements are stored in a collection of bins. This data structure is helpful to ensure high performance for applications needing frequent read and write access to this organizational information.</p>
+<p>For example, let’s consider a physical simulation with hundreds of ping pong balls bouncing around inside a box. We will need to calculate the collisions of the balls with the sides of the box, but also the collisions of the balls with each other. A naive, brute-force implementation will require consideration of all pairwise collisions - for n balls, this is n^2 !</p>
+<p>A relatively straightforward optimization will instead consider the interaction of each ball with only its nearest k neighbors = k n total potential collisions (a great improvement for large n!). How do we efficiently find each ball’s nearest neighbors? If we divide space into a large grid of bins and sort all the balls into the bins, we can find the nearest neighbors of a particular ball by collecting the balls in the same bin (and the adjacent bins). How many balls are in each bin? Some bins are empty. Some bins have several or many balls. As the simulation progresses and the balls move around, balls move in and out of bins and the number of balls in each bin changes. A JaggedArray is an obvious choice for storing this data for efficient collision detection.</p>
+<h3 id="The-Data-Structure"><a href="#The-Data-Structure" class="headerlink" title="The Data Structure"></a>The Data Structure</h3><p>The JaggedArray class you will implement has two fundamental representation modes: unpacked and packed. In the unpacked representation, the JaggedArray stores an array of integers containing the counts of how many elements are in each bin and an array of pointers to arrays that hold these elements. In the packed representation, the JaggedArray stores an array of offsets for the start of each bin. These offsets refer to a single large array that stores all of the elements grouped by bin but all packed into the same large array. We can convert a JaggedArray from unpacked to packed mode by calling the pack member function and similarly convert from packed to unpacked by calling unpack. Below is an illustration of both representations for a small example with 7 bins storing 6 total elements (unpacked on the left, packed on the right)</p>
+<p>The JaggedArray stores elements of template type T. In the examples in this handout, T is type char. The representation consists of the six member variables presented in these diagrams and you should exactly follow this representation (variable names, types, and data). Depending on the mode (unpacked or packed) of the JaggedArray, two of the variables are set to NULL. The JaggedArray contains the expected accessor functions numElements, numBins, numElementsInBin, getElement, and isPacked and modifiers addElement, removeElement, and clear. See the provided main.cpp code for example usage and details on the arguments and return values for these functions.</p>
+<p>In the packed version of the data structure, the first element in bin i is stored at the index stored in offsets[i]. The number of elements in the bin is equal to offsets[i+1] - offsets[i]. Except the last bin, which contains num_elements - offsets[i] elements.</p>
+<h3 id="Modifying-the-Data-Structure"><a href="#Modifying-the-Data-Structure" class="headerlink" title="Modifying the Data Structure"></a>Modifying the Data Structure</h3><p>The JaggedArray can only be edited while in unpacked mode. The left diagram illustrates the necessary changes to the representation for the call addElement(3,’g’), which adds the element ‘g’ to bin 3 (the bins are indexed starting with 0). And the diagram on the right illustrates the changes to the representation for the subsequent call to removeElement(1,1) which removes the element in slot 1 (element ‘b’) from bin 1.</p>
+<p>Note how the variables holding the total number of elements in the JaggedArray and the count of the elements for the specific bin are updated appropriately.</p>
+<p>For our implementation we will always size each of the arrays to exactly contain the required information. This will ensure you get plenty of practice with proper allocation and de-allocation. When the new array is allocated, the necessary data from the old array is copied and then the old array is de-allocated.</p>
+<p>Attempting to access the non-existent bins or elements (out-of-bounds indices) is an error. Similarly, attempting to edit a JaggedArray while the array is in packed mode is an error. Your program should check for these situations, and if a problem is detected, your program should print an appropriate warning message to std::cerr and call exit(1).</p>
+<h3 id="Testing-Debugging-and-Printing"><a href="#Testing-Debugging-and-Printing" class="headerlink" title="Testing, Debugging, and Printing"></a>Testing, Debugging, and Printing</h3><p>We provide a main.cpp file with a wide variety of tests of your data structure. Some of these tests are initially commented out. We recommend you get your class working on the basic tests, and then uncomment the additional tests as you implement and debug the key functionality of the JaggedArray class. Study the provided test cases to understand what code triggers calls to your JaggedArray copy constructor, assignment operator, and destructor and verify that these functions are working correctly.</p>
+<p>It is your responsibility to add additional test cases, including examples where the template class type T is something other than char. You must also implement a simple print function to help as you debug your class. Include examples of the use of this function in your new test cases. Your function should work for JaggedArrays containing char, int, and reasonably short strings. The print function does not need to work for more complex types. Please use the example output as a guide (we will grade this output by hand).</p>
+<h3 id="Performance-Analysis"><a href="#Performance-Analysis" class="headerlink" title="Performance Analysis"></a>Performance Analysis</h3><p>The data structure for this assignment (intentionally) involves a lot of memory allocation &amp; deallocation. Certainly it is possible to revise this design for improved performance and efficiency or adapt the data structure to specific applications. For this assignment, please implement the data structure exactly as described.</p>
+<p>In your README.txt file include the order notation for each of the JaggedArray member functions described above: numElements, numBins, numElementsInBin, getElement, isPacked, clear, addElement, removeElement, pack, unpack, and print and don’t forget the constructors, destructor, and assignment operator. For each function determine the performance for each of the representation modes (packed and unpacked), as appropriate. You will be graded on the order notation efficiency of your implementation, so carefully consider any significant implementation choices.</p>
+<p>You should assume that calling new [] or delete [] on an array will take time proportional to the number of elements in the array. In your answers use the variables b = the number of bins, e = the number of elements, and k = the number of elements in the largest bin.</p>
+<h3 id="Looking-for-Memory-Leaks"><a href="#Looking-for-Memory-Leaks" class="headerlink" title="Looking for Memory Leaks"></a>Looking for Memory Leaks</h3><p>To help verify that your data structure does not contain any memory leaks and that your destructor is correctly deleting everything, we include a batch test function that repeatedly allocates a JaggedArray, performs many operations, and then deallocates the data structure. To run the batch test case, specify 2 command line arguments, a file name (small.txt, medium.txt, or large.txt) and the number of times to process that file. If you don’t have any bugs or memory leaks, this code can be repeated indefinitely with no problems.</p>
+<p>On Unix/Linux/OSX, open another shell and run the top command. While your program is running, watch the value of “RES” or “RPRVT” (resident memory) for your program. If your program is leaking memory, that number will continuously increase and your program will eventually crash. Alternately, on Windows, open the Task Manager (Ctrl-Shift-Esc). Select “View” “Select Columns” and check the box next to “Memory Usage”. View the “Processes” tab. Now when your program is running, watch the value of “Mem Usage” for your program (it may help to sort the programs alphabetically by clicking on the “Image Name” column). If your program is leaking memory, that number will continuously increase.</p>
+<h3 id="Memory-Debuggers"><a href="#Memory-Debuggers" class="headerlink" title="Memory Debuggers"></a>Memory Debuggers</h3><p>We also recommend using a memory debugging tool to find errors. Information on installation and use of the memory debuggers “Dr. Memory” (available for Linux/MacOSX/Windows) and “Valgrind” (available for Linux/OSX) is presented on the course webpage.</p>
+<p>The homework submission server is configured to run your code with Dr. Memory to search for memory problems. Your program must be memory error free to receive full credit.</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Do all of your work in a new folder named hw3 inside of your Data Structures homeworks directory. Use good coding style when you design and implement your program. Be sure to make up new test cases and don’t forget to comment your code! Please use the provided template README.txt file for any notes you want the grader to read.</p>
 
       
     </div>
@@ -426,6 +398,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
             <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
         </div>
@@ -439,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSSE7023-Train-Management-System.html" rel="next" title="Java代写：CSSE7023-Train-Management-System">
-                <i class="fa fa-chevron-left"></i> Java代写：CSSE7023-Train-Management-System
+              <a href="/CSE510-Database-Management-System.html" rel="next" title="CSE510-Database-Management-System">
+                <i class="fa fa-chevron-left"></i> CSE510-Database-Management-System
               </a>
             
           </div>
@@ -448,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CS3049-Likelihood-Weighted-Sampling.html" rel="prev" title="AI代写：CS3049-Likelihood-Weighted-Sampling">
-                AI代写：CS3049-Likelihood-Weighted-Sampling <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Goal"><span class="nav-number">1.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-description"><span class="nav-number">2.</span> <span class="nav-text">Problem description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task"><span class="nav-number">3.</span> <span class="nav-text">Task</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivation"><span class="nav-number">2.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Data-Structure"><span class="nav-number">3.</span> <span class="nav-text">The Data Structure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modifying-the-Data-Structure"><span class="nav-number">4.</span> <span class="nav-text">Modifying the Data Structure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing-Debugging-and-Printing"><span class="nav-number">5.</span> <span class="nav-text">Testing, Debugging, and Printing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance-Analysis"><span class="nav-number">6.</span> <span class="nav-text">Performance Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Looking-for-Memory-Leaks"><span class="nav-number">7.</span> <span class="nav-text">Looking for Memory Leaks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory-Debuggers"><span class="nav-number">8.</span> <span class="nav-text">Memory Debuggers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">9.</span> <span class="nav-text">Submission</span></a></li></ol></div>
             
 
           </div>
