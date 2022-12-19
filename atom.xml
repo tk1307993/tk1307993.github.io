@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-12-13T03:05:46.776Z</updated>
+  <updated>2022-12-19T02:29:00.393Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSE383-PHP</title>
+    <link href="https://tk1307993.coding.me/CSE383-PHP.html"/>
+    <id>https://tk1307993.coding.me/CSE383-PHP.html</id>
+    <published>2022-12-19T02:27:18.000Z</published>
+    <updated>2022-12-19T02:29:00.393Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>The objective of this exercise is to:</p><ol><li>Understand database queries</li><li>Understand the php programming construct</li><li>Write php rest interface</li></ol><h3 id="Part-1-Update-the-lookup-table"><a href="#Part-1-Update-the-lookup-table" class="headerlink" title="Part #1: Update the lookup table"></a>Part #1: Update the lookup table</h3><p>Exercise<br>Using phpliteadmin as in the previous lab.<br>Update the table so that the value field is now a text (string) field<br>Copy the “Query used to create this table” from the phpliteadmin</p><h3 id="Part-2-Update-the-setLookup-rest-method"><a href="#Part-2-Update-the-setLookup-rest-method" class="headerlink" title="Part #2: Update the setLookup rest method"></a>Part #2: Update the setLookup rest method</h3><p>Exercise<br>Edit the file final.class.php in /var/www/html.<br>Remove the check for value to be a numeric field Test.<br>Verify the data was entered correctly by looking in phpliteadmin</p><h3 id="Part-3-Create-the-getLookup-rest-method"><a href="#Part-3-Create-the-getLookup-rest-method" class="headerlink" title="Part #3: Create the getLookup rest method"></a>Part #3: Create the getLookup rest method</h3><p>Exercise<br>Edit the file final.class.php in /var/www/html.</p><p>Create the getLookup rest interface<br>You only need to create the function<br>I suggest copying and pasting the setLookup routine as a starting point<br>Arguments (update the function arguments)<br>date = date field<br>Returned value<br>All elements of file that match the requested date<br>SQL<br>Call GET_SQL (same calling sequence as EXEC_SQL, but it returns an array of results, keyed by field names)<br>Query<br>Reminder. Do NOT copy/paste from word with smartquotes into php (will not work out well)<br>Make sure you build up the command using the exact same concept as EXEC_SQL in setTemp (but using GET_SQL instead), same argument concept. (every ? needs an appropriate variable to fill it in)<br>Update the return message with appropriate words for both good and error situations</p><h3 id="Reminder"><a href="#Reminder" class="headerlink" title="Reminder"></a>Reminder</h3><p>You can look for php errors in the following<br>If your call to the php doesn’t work or shows a 500 server error, you have a php error.</p><p>Check the piece of code you just edited: final.class.php<br>a. php final.class.php<br>b. if good - should give NO response<br>c. if a response - it’s an error<br>Check the web server output<br>a. sudo tail /var/log/httpd/error.log</p>]]></content>
+    
+    <summary type="html">
+    
+      使用PHP, 练习Database的调用方法
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://tk1307993.coding.me/categories/PHP/"/>
+    
+    
+      <category term="Web" scheme="https://tk1307993.coding.me/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>COMP4173-Randomized-Response</title>
@@ -234,9 +256,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -443,28 +465,6 @@
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS208-AVL-Tree</title>
-    <link href="https://tk1307993.coding.me/CS208-AVL-Tree.html"/>
-    <id>https://tk1307993.coding.me/CS208-AVL-Tree.html</id>
-    <published>2022-09-16T23:49:30.000Z</published>
-    <updated>2022-09-16T23:51:12.826Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>For this project, you will be implementing both a modified AVL tree and a 2-5 tree (this is a 2-4 tree but you are allowed to have up to 5 children as apposed to 4). The code is to be uploaded to gradescope under Programming Assignment 3, where you may test your code against the autograder. Gradescope should be able to run your program using the command “make” followed by “./prog1.out”. Be sure to include all .cpp/.h files that make up your program, the dataset provided a Makefile, and name the executable prog1.out Gradescope has clang++ (clang 10) and a g++ compiler available. Please note that it is possible that your program could have some unexpected behavior on gradescope’s auto grader compared to whatever machine you wrote the code on, so submit your program early and make sure it is bug free on gradescope. You are to implement your own AVL/2-5 trees, so you may not use any libraries that automatically do this for you.</p><h3 id="Implement-AVL-Tree-and-2-5-Tree-classes"><a href="#Implement-AVL-Tree-and-2-5-Tree-classes" class="headerlink" title="Implement AVL Tree and 2-5 Tree classes."></a>Implement AVL Tree and 2-5 Tree classes.</h3><p>Each node in the AVL or 2-5 trees is a pair of (word,counter) where counter shows the number of occurrence of the word in the dataset.</p><p>The AVL trees we will be implementing in this assignment are identical to the AVL trees you learned in class, except that here the height constraint will allow for a height dierence of the subtrees of a given node to be at most 2 (as apposed to 1, which is the version you learned in class. The tree should NOT balance itself if the height dierence is only 2), So your code should only perform rotations if the height dierence is over 2.</p><p>Each class should have at least the following functions:</p><p>A constructor and a destructor.<br>A function for searching a word (the word may or may not exist).<br>A function for inserting a new word or incrementing the counter if the word is already inserted.<br>A function for doing a range search. The function takes as input two words. Given two words, the function should find all the words in between. The resulting words should be sorted.<br>Additionally, in order to verify your data structures, you will need to implement the following methods for both classes:</p><p>A print function that prints out a pre-order traversal of the tree.<br>A function that prints out the height of the tree.</p><p>These last two functions will not be apart of gradescope’s autograder test, but will be used by us to ensure that you have properly implemented the data structures using a modified AVL tree and a 2-5 tree. Please comment your code so it is clear how to use your print and height functions.</p><p>For this project, you should use PA3 dataset.txt available on piazza and gauchospace to initially build your data structures. You are expected to parse the dataset and insert the words contained in it. Insert each word using the insert method you implemented for both trees.</p><p>There should be no output when inserting words from PA3 dataset.txt. For your gradescope submission to be able to access the data set you must upload it and use the path:</p><p>/autograder/submission/PA3 dataset.txt</p><h3 id="Implementation-Details"><a href="#Implementation-Details" class="headerlink" title="Implementation Details"></a>Implementation Details</h3><p>Your code should build a modified AVL tree as described before and a 2-5 tree out of the dataset provided. Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands: search, insert, range search from [word 1] to [word 2]. Your output should follow this structure EXACTLY to ensure full credit.</p><p>Gradescope will pass a string of commands via argv1. Each command will be separated by a comma. Your code may receive the following commands:</p><p>(a) Search a given word. Both the AVL tree and the 2-5 tree should be searched to find the word. The program should print out “[word] found”, along with the count of the word, once for each data structure. If the word is not found the program should output “[word] not found”, once for each data structure.</p><p>Ex:<br>search hello<br>hello found, count = 2<br>hello found, count = 2</p><p>or if hello is not in the data structure<br>hello not found<br>hello not found<br>(b) Insert a word. If the word is already present then its counter should be increased by one. The program should output “[word] inserted, new count = [count]”, once for each data structure.</p><p>Ex:<br>insert goodbye<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>(c) Do a range search. The program should print out all words alphabetically in between (an including) the two words provided in the range search that are in the data structures. Note that the two words given to perform the range search may or may not be in your data structures. The program should do this once for both data structures.</p><p>(d) Print out a traversal of the tree. The program should print out the values of the tree using a pre-order traversal. For each node, you must do the following: print an open parenthesis, the node’s data, print the nodes’ children from left to right, followed by a close-parenthesis.<br>For each datum, you must print the key and value separated by a colon. If a node has multiple data elements, you should delimit them using commas. For any children that are null, you should print empty parentheses.</p><p>(e) Print the height of the tree. The code should simply output: “Height = [height of tree]”</p><h3 id="Full-Test-example"><a href="#Full-Test-example" class="headerlink" title="Full Test example"></a>Full Test example</h3><p>Your program receives the commands through argv1. In the following example we have that that the starting count of hello is 2, of yesterday is 3, and goodbye is not present in the data structure. We also have that the only words in between band and cat in the data structure are band, bankers, bat, and cab. gradescope passes the following commands through argv1:</p><p>search hello, insert goodbye, insert hello, range search band to cat<br>We expect the following output:</p><p>hello found, count = 2<br>hello found, count = 2<br>goodbye inserted, new count = 1<br>goodbye inserted, new count = 1<br>hello inserted, new count = 3<br>hello inserted, new count = 3<br>band<br>bankers<br>bat<br>cab<br>band<br>bankers<br>bat<br>cab</p>]]></content>
-    
-    <summary type="html">
-    
-      实现AVL树，以及改进后的2-5树。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
