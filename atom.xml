@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-12-22T02:21:35.470Z</updated>
+  <updated>2022-12-27T01:05:37.123Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS427-Shared-Memory</title>
+    <link href="https://tk1307993.coding.me/CS427-Shared-Memory.html"/>
+    <id>https://tk1307993.coding.me/CS427-Shared-Memory.html</id>
+    <published>2022-12-27T01:04:25.000Z</published>
+    <updated>2022-12-27T01:05:37.123Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a program whose main routine obtains one parameter n from the user, i.e. passed to your program when it was invoked from the shell. Your program shall then create a shared memory and a child process. The shared memory shall have a size of BUF_SZ*sizeof(long int), where BUF_SZ is defined as 6 using a macro, e.g. “#define BUF_SZ 6“.</p><p>The child process should obtain the value of n (you actually have multiple options for doing that) and create a sequence of length n, whose elements are of type long int, and implements the equation z = y! (i.e. the factorial) where y is the index of the element, for example, the fourth element (index 3) shall have a value of 3! = 3x2x1 = 6, whereas the first element (index 0) shall have a value of 0!=1 . If n=4, then the sequence shall be 1, 1, 2 and 6.</p><p>The child process shall create the elements, one at a time, and wait for a random interval of time (0 to 2.999 seconds) between generating elements of the sequence. As soon as an element is generated, the child places the element in the shared memory by organizing it as described below.</p><p>The parent process shall NOT wait for the child to exit but instead shall print an element as soon as it arrives into the shared buffer (again, in a manner similar to slides 25-28 of lecture 5)</p><p>Hint: Use fflush() to ensure printf’s are printed immediately into the screen.</p><ul><li>Repeat this, except that now you do not create a shared memory, but rather use an ordinary pipe to pass the sequence instead.</li><li>Repeat this, except that now you do not create a shared memory or a child process, but use a child thread instead. By definition, The parent and child threads already share their memory spaces.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      分别使用Shared Memory, Pipe以及Thread解决同样的问题。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
+    
+  </entry>
   
   <entry>
     <title>COMP2560-Devices-as-Files</title>
@@ -278,9 +300,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -441,28 +463,6 @@
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
       <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COMP1201-Base-Convertor</title>
-    <link href="https://tk1307993.coding.me/COMP1201-Base-Convertor.html"/>
-    <id>https://tk1307993.coding.me/COMP1201-Base-Convertor.html</id>
-    <published>2022-09-21T03:30:33.000Z</published>
-    <updated>2022-09-21T03:32:11.940Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>A grade school teacher wants to develop a program to generate values to a series of numbers in different base systems. The teacher is limiting the bases to be between 2 and 9, inclusive. Each line of input will have a base value and a sequence of characters representing a nonnegative number in that base. However, each number (sequence of characters) has been placed “backwards”. That is the rightmost digit is first in the sequence, the second digit from the right is encountered next, and so on.</p><p>The program reads the digits one a time. As each digit is read, the program should translate that digit into its corresponding decimal value, and then multiply it by the appropriate power of the base. There is an arbitrary number of blanks between the base and the first digit in the sequence.</p><p>Suppose that the teacher wants the students to convert the binary number 1011.</p><p>The first number, 2, represents the base. Base 2 is designated as binary. The 1101 represents a character sequence of binary digits of the number to convert. IT IS BACKWARDS! This means that the first 1 is in the one’s position or 2 to the 0 power. The second 1 is in the two’s position or 2 to the 1 power. The 0 is in the four’s position or 2 to the second power. And lastly, the rightmost 1 is in the eight’s position or 2 to the third power. Remember the number that was to be converted was 1011.</p><p>The value of this number is 1 1 + 1 2 + 0 4 + 1 8 which equals 11. Please see the sample output on how values are to be displayed.</p><p>Ask your instructor to give another example in a different base.</p><p>However, the teacher’s grade school students have entered the data values. This data CANNOT be trusted as being valid data.</p><p>Your program needs to check for valid bases and if the base is invalid write out a message that says,</p><p>Invalid base given, throwing away the rest of the line.<br>To throw away a line of input use cin.ignore( ). Your instructor will talk about this in class. In addition, your program needs to check for valid digits in the given base. For example, if the base is 2, any digit equal to 2 or higher is NOT legitimate. Your error message should say (i.e. input line is : 2 234510)</p><p>For the given base 2, the number is NOT valid!<br>You will need to throw away the rest of the line here as well.</p><p>Lastly, your program is supposed to add up the values of all valid numbers given and print this value as the final part of the output. If there are NO valid inputted numbers given, then the sum is zero (0).</p><p>Again, please see the sample output on how values are to be displayed.</p><p>The following additional requirements must be followed:</p><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>Your main function should adhere to the following pseudocode:</p><h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>The above pseudocode suggests some functions. Keep these functions single-minded, performing a focused task that can be well-named. You should design pseudocode for each of these functions. All function bodies, including the body of main, should be NO more than 30 lines long, including braces, blank lines and comments.</p><h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><p>You must NOT use arrays. You will lose ALL points if you do.</p><h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><p>You must follow the programming standards.</p><h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><p>You must follow the formatting of the sample I/O below.</p><h3 id="F"><a href="#F" class="headerlink" title="F"></a>F</h3><p>You must thoroughly test your program.</p><h3 id="G"><a href="#G" class="headerlink" title="G"></a>G</h3><p>You must use the following functions and you MUST add the documentation for the parameters for functions that have parameters.</p><h3 id="H"><a href="#H" class="headerlink" title="H"></a>H</h3><p>To get credit for the assignment, your solution must minimally work on Test Case # 1 below.</p><p>Sample I/O<br>Below are two sample runs.<br>They do NOT cover all cases.</p>]]></content>
-    
-    <summary type="html">
-    
-      完成任意进制数字Base转换器。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
     
   </entry>
   
