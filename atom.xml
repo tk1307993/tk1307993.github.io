@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-12-27T01:05:37.123Z</updated>
+  <updated>2022-12-31T01:10:48.986Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSE565-Analyzing-Code-Coverage</title>
+    <link href="https://tk1307993.coding.me/CSE565-Analyzing-Code-Coverage.html"/>
+    <id>https://tk1307993.coding.me/CSE565-Analyzing-Code-Coverage.html</id>
+    <published>2022-12-31T01:09:25.000Z</published>
+    <updated>2022-12-31T01:10:48.986Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>Select any tool that provides statement and decision code coverage. Utilizing the VendingMachine.java code given to you, develop a set of test cases for your code based on the following requirements:</p><p>Takes in an integer input<br>Allows users to select between three products: Candy (20 cents), Coke (25 cents), Coffee (45 cents)<br>Returns the selected product and any remaining change<br>If there is not enough money to buy the product, displays the amount necessary to buy the product and other products to purchase.<br>Execute the program with your test cases and observe the code coverage of your test cases.<br>The goal is to reach 100% in statement and 90% in decision coverage.</p><h3 id="Please-submit-the-following"><a href="#Please-submit-the-following" class="headerlink" title="Please submit the following:"></a>Please submit the following:</h3><p>Description of the tool used and the types of coverage it provides<br>Set of test cases<br>Screenshot showing the coverage achieved for the test cases developed<br>Your evaluation of the tool’s usefulness</p><h3 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h3><p>Select any static source code analysis tool. The StaticAnalysis.java code given to you contains two different data flow anomalies. Execute the tool on StaticAnalysis.java and identify what the two data flow anomalies are. The inputs are:</p><p>the weight of the package as an integer<br>the length of the package as an integer<br>the type of product as a String</p><h3 id="Please-submit-the-following-1"><a href="#Please-submit-the-following-1" class="headerlink" title="Please submit the following"></a>Please submit the following</h3><p>Description of the tool used and the types of analysis it provides<br>Description of the two data flow anomalies<br>Screenshot showing the analysis performed<br>Your evaluation of the tool’s usefulness</p><h3 id="Assessment"><a href="#Assessment" class="headerlink" title="Assessment"></a>Assessment</h3><p>Your assignment will be scored based on the following criterion:</p><h4 id="Part-1-1"><a href="#Part-1-1" class="headerlink" title="Part 1"></a>Part 1</h4><p>Description of the tool used and the types of coverage it provides<br>Set of test cases<br>Screenshot showing the coverage achieved for the test cases developed<br>Evaluation of the tool’s usefulness</p><h4 id="Part-2-1"><a href="#Part-2-1" class="headerlink" title="Part 2"></a>Part 2</h4><p>Description of the tool used and the types of analysis it provides<br>Description of the two date flow anomalies<br>Screenshot showing the analysis performed<br>Evaluation of the tool’s usefulness</p>]]></content>
+    
+    <summary type="html">
+    
+      任意选择一款包含覆盖率测试的测试工具，对提供的文件编写测试用例进行测试，满足Code coverage要求。
+    
+    </summary>
+    
+      <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
+    
+    
+      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
+    
+  </entry>
   
   <entry>
     <title>CS427-Shared-Memory</title>
@@ -300,9 +322,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
     
   </entry>
   
@@ -430,30 +452,6 @@
     <summary type="html">
     
       完成游戏Word Search的实现。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSCI1200-Crossword-Checker</title>
-    <link href="https://tk1307993.coding.me/CSCI1200-Crossword-Checker.html"/>
-    <id>https://tk1307993.coding.me/CSCI1200-Crossword-Checker.html</id>
-    <published>2022-09-22T14:34:51.000Z</published>
-    <updated>2022-09-22T14:37:06.213Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this homework you will work with command line arguments, file input and output, and the C++ STL string and vector classes to check the words in a class crossword puzzle board. Please read the entire handout for the assignment before starting to program. In addition to the lecture notes, you will also want to refer to the “Helpful C++ Programming Information” and “Good Programming Practices” sections of the course webpage.</p><p>Here’s a very small example of a classic crossword puzzle. The board consists of a grid of squares with some of the squares blacked out. The remaining white squares need to be filled with 1 letter per square forming words of 2 or more letters that run in the horizontal (left to right) and vertical (top to bottom) directions. The traditional crossword puzzle provides clues/definitions for each of these words. Each white square that is the first letter of one or more words is numbered. White squares that are the middle or end of words are not numbered. Can you solve this crossword puzzle by hand?</p><p>Your task for this assignment is to write a tool to help confirm that a filled in crossword puzzle contains real English words by picking out the letters from the board and checking them against a list of allowed words. This tool could be useful both to crossword puzzle solvers and also to crossword puzzle designers.</p><p>NOTE: We will not be tackling the much harder problem of matching words to clues or generating clues for words, which would requires a large vocabulary, clever use of puns, knowledge of pop culture, etc. and is an active area of Artificial Intelligence (AI) and Natural Language Processing (NLP) research.</p><h3 id="Command-Line-Arguments"><a href="#Command-Line-Arguments" class="headerlink" title="Command Line Arguments"></a>Command Line Arguments</h3><p>To check the validity of a filled-in crossword puzzle board, your program will expect two required arguments and one optional argument. The first argument is the puzzle filename containing the grid of characters in the proposed board. The second argument is the dictionary filename containing all of the allowed words. If provided, the third argument will specify how to display the puzzle using ASCII art. Here are a few example command lines:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words.txt</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print_coordinates</span><br><span class="line">./crossword_checker<span class="selector-class">.out</span> puzzle6<span class="selector-class">.txt</span> linux_dict_words<span class="selector-class">.txt</span> --print_numbered</span><br></pre></td></tr></table></figure></p><p>You must exactly follow the specifications for the command line and output to ensure you receive full credit for your work. We provide sample input and output files on the course website, and the automated testing and autograding on Submitty will also help you check your work. We recommend starting with the lower numbered puzzles first, and working to higher numbered puzzles as you debug your work.</p><p>The file puzzle6.txt contains the filled-in crossword puzzle for the example above. The black squares of the board are represented with the number character, ‘#’.<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a##b</span><br><span class="line">pale</span><br><span class="line">e#ad</span><br></pre></td></tr></table></figure></p><p>The file of allowed words used in the example command lines is the contents of the Ubuntu Linux American English dictionary - a version of this file may already be on your computer in /usr/share/dict/words. This file is simple plaintext with one word per line. You are encouraged to copy and add or remove words from this file or create a new file with alternate words as you test your program. Note that the allowed words file may contain words with lowercase and uppercase letters. Crossword puzzles are usually case insensitive, so your program should ignore capitalization when checking if a word is on the accepted list. The allowed words file may include words containing punctuation characters - you should ignore those words.</p><h3 id="Note-on-Error-Checking"><a href="#Note-on-Error-Checking" class="headerlink" title="Note on Error Checking"></a>Note on Error Checking</h3><p>You should implement simple error checking to ensure that the arguments provided are appropriate. You should also check to make sure that the files exist and your program can successfully open and read the contents. Your program should exit gracefully with a useful error message sent to std::cerr, Standard Error (STDERR), if there is a problem with the arguments or the filenames.</p><h3 id="Note-on-Viewing-ASCII-Art-amp-Plaintext-Files"><a href="#Note-on-Viewing-ASCII-Art-amp-Plaintext-Files" class="headerlink" title="Note on Viewing ASCII Art &amp; Plaintext Files"></a>Note on Viewing ASCII Art &amp; Plaintext Files</h3><p>Make sure you’re using a good file viewer/editor to look at these files. It should correctly display the UNIX/GNU Linux ‘\n’ line ending. Use one of the “Plaintext &amp; Code Viewers/Editors” listed on the “C++ Development” page. Don’t attempt use the Windows line ending character ‘\m’ or ‘\r’ because this will fail validation tests on Submitty</p><h3 id="Basic-Output"><a href="#Basic-Output" class="headerlink" title="Basic Output"></a>Basic Output</h3><p>If all of the horizontal or vertical sequences of 2 or more contiguous white box letters are present in the acceptable words file and the optional third argument is not provided, then your program should print this simple success message to std::cout, Standard Output (STDOUT):<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">valid crossword puzzle</span></span><br></pre></td></tr></table></figure></p><p>If one or more of the letter sequences is not present in the acceptable words file, then your program should print all of those non-words to std::cout, Standard Output (STDOUT). The lines of your output may be in a different order, but the output otherwise must match exactly. Here is the expected output for the provided input file puzzle2.txt:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abcd'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'aei'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'bfj'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'cgk'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'dhl'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'efgh'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br><span class="line"><span class="string">'ijkl'</span> is <span class="keyword">not</span> <span class="keyword">a</span> <span class="built_in">word</span></span><br></pre></td></tr></table></figure></p><h3 id="ASCII-Art-Output"><a href="#ASCII-Art-Output" class="headerlink" title="ASCII Art Output"></a>ASCII Art Output</h3><p>If a third argument is specified, you will print an ASCII art representation of the empty puzzle board. The output for the –print option is shown on the right. For full credit, your output must match this sample output exactly.</p><p>The next step is to prepare a template for the list of word clues. When the –print_coordinates option is specified each clue is listed with the position (row and column) of the starting letter of the word and the word direction. This output is shown to the left. Note that the upper left corner of the puzzle grid is position (0,0). It’s ok if your words appear in a different order than this sample output, but the output must otherwise match exactly.</p><p>This output can be used by a crossword puzzle designer, who would take this output and replace the words with clever clues (something probably still best done by humans).</p><h3 id="Submission-Details"><a href="#Submission-Details" class="headerlink" title="Submission Details"></a>Submission Details</h3><p>Do all of your work in a new folder inside of your Data Structures homeworks directory. You should use the C++ STL string and vector classes in your implementation. Use good coding style when you design and implement your program. Review the “Good Programming Practices” section on the course webpage to be sure that the TAs will be able give you credit for your hard work. Organize your program into functions: don’t put all the code in main! Use good variable and function names. Be sure to make up new test cases and don’t forget to comment your code!</p><p>Download and fill out the provided template README.txt file, adding any notes you want the grader to read. You must do this assignment on your own, as described in the “Collaboration Policy &amp; Academic Integrity” handout. If you discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA if you need help preparing your assignment for submission or if you have difficulty writing portable code.</p>]]></content>
-    
-    <summary type="html">
-    
-      完成游戏Crossword中的Checker逻辑部分的实现。
     
     </summary>
     
