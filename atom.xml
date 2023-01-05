@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2022-12-31T01:10:48.986Z</updated>
+  <updated>2023-01-05T03:34:03.444Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CPT204-Union-Find</title>
+    <link href="https://tk1307993.coding.me/CPT204-Union-Find.html"/>
+    <id>https://tk1307993.coding.me/CPT204-Union-Find.html</id>
+    <published>2023-01-05T03:34:03.000Z</published>
+    <updated>2023-01-05T03:34:03.444Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CSE565-Analyzing-Code-Coverage</title>
@@ -322,9 +336,9 @@
       <category term="Java" scheme="https://tk1307993.coding.me/categories/Java/"/>
     
     
-      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://tk1307993.coding.me/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://tk1307993.coding.me/tags/Data-Structure/"/>
     
   </entry>
   
@@ -437,30 +451,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS210-Word-Search</title>
-    <link href="https://tk1307993.coding.me/CS210-Word-Search.html"/>
-    <id>https://tk1307993.coding.me/CS210-Word-Search.html</id>
-    <published>2022-09-25T03:19:59.000Z</published>
-    <updated>2022-09-25T03:22:16.649Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Since words were etched in stone, people have loved to do word searches. The game is to search for words in a grid of letters. As you may know, it can be difficult to find every single word in the grid though. So let’s write a program to do just that!</p><p>Your task is to read in a file representing a grid of characters and a file representing a dictionary of valid words. You will then search through the grid of letters to find all the valid words in the grid.</p><p>Important details to note:</p><p>Our program will only search in the vertical and horizontal directions. Do not search for words in the diagonal direction.<br>Our grids can be any size. The file specifying the grid will have a number as its first line which represents the number of rows, and another number as the second line representing the number of columns. See the example file below. You are guaranteed that both the number of rows and the number of columns will always to 4.<br>If a word exists in a grid multiple times, print it out each time you find it.<br>A word is a valid word if</p><p>It is at least three letters long.<br>It can be formed from letters in the grid that are adjacent along a row (left-to-right or right-to-left) or along a column (top-to-bottom or bottom-to-top). Note we are not worrying about diagonal words in this assignment.<br>It can be found in the dictionary file.</p><h3 id="Expected-Behavior"><a href="#Expected-Behavior" class="headerlink" title="Expected Behavior"></a>Expected Behavior</h3><p>Read in the dictionary file and the file specifying the grid of letters. The names of these files will be in command-line arguments 0 and 1 respectively. The dictionary file name will be in args[0] and the filename specifying the grid will be in args1. For examples discussing command-line arguments see the class examples on github here.<br>Read the dictionary file into a Java collection. You will use this collection to check if a word found in the grid is a valid word or not. What data structure makes sense here?<br>Read the grid file to create a grid of strings. You know exactly how many rows and columns your grid has before creating it. What data structure makes sense here? Remember that Java collections can store other collections. So you can have a list of lists or a set of sets or an array of arrays for instance.<br>Search your grid to find valid words. Matching words from the grid to the dictionary file should be done case-insensitive. i.e. if there exists a word Abe in the dictionary, a sequence of letters in the grid “a”, “b”, “e” should match that word.<br>Collect the legal words found into a list and print them out as indicated below. The order in which you print them matters.</p><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>The following is an example of the grid of letters file:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line">y h l l w p</span><br><span class="line">c s <span class="selector-tag">p</span> o o l</span><br><span class="line">o e h <span class="selector-tag">b</span> <span class="selector-tag">b</span> y</span><br><span class="line">d y <span class="selector-tag">b</span> w <span class="selector-tag">a</span> y</span><br><span class="line">e <span class="selector-tag">p</span> w x <span class="selector-tag">a</span> c</span><br><span class="line">j k <span class="selector-tag">a</span> z <span class="selector-tag">i</span> g</span><br></pre></td></tr></table></figure></p><p>In this example, you know you have 6 rows (from the first line) and 6 columns (from the second line). You would then read in the grid. Note that in general the input grid could have a mix of uppercase or lowercase letters. For this grid, and the dictionary.txt included in the starter code, your program would find the below words:<br>cod, code, ode, ply (horizontal, L-to-R)<br>jed, doc, yes, abo, bow (horizontal, R-to-L)<br>spool, pool, way (vertical, top-to-bottom)<br>loop, loops (vertical, bottom-to-top)</p><p>View the dictionary.txt file in the starter code to see an example of this type of file. Note your program should not print the ‘(horizontal, L-to-R)’ part. It should only print the words one per line in the same order as above though. So the expected output for the above example would be:</p><h3 id="Input-Files"><a href="#Input-Files" class="headerlink" title="Input Files"></a>Input Files</h3><p>We have provided sample input files for you to test your program in the starter code. It is important to note though that you should test your program on lots of other files. We certainly will.</p><h3 id="Tips-and-Hints"><a href="#Tips-and-Hints" class="headerlink" title="Tips and Hints"></a>Tips and Hints</h3><p>You will certainly need to think carefully about the strategy for checking for words in a row or column of the grid. And this strategy must output words in the same order that we expect them. Start by thinking about searching from left to right. Consider the first row:</p><p>Notice that this row contains the words cod, code, and ode. Suppose that the row is represented as the array [“y”, “c”, “o”, “d”, “e”, “j”]. A simple way to explore all the possible words (going L to R) in this list would be as follows (the process for the other rows is similar).</p><p>Starting at the first element (i.e., “y”), check whether the sequence of length 3 starting at that position is a legal word (we start with length 3 because a legal word has to be at least three letters long). Then check for length 4, then for length 5, etc., until you reach the end of the list.<br>Now repeat this step, but starting at the second element (i.e., “c”). Notice that this time you will come to the end of the list one step sooner. Then repeat for the third element, and so on.</p><p>Note that the above process can be made easier by first converting the array of individual letters into one concatenated string. This could also lead to some great reuse of code. Then for all different types of searches you would produce a string representing that sequence of characters that you want to search and you can use one function to check a sequence for any valid words.</p><p>Everyone solves problems differently, but I thought it would be helpful to highlight a few functions I used in case you find them helpful as well.</p><p>str.toLowerCase()<br>Integer.valueOf(…). When reading in the number of rows and columns, I recommend using Integer.valueOf(scanner.nextLine()) instead of trying to use scanner.nextInt().<br>str.split(…)<br>str.charAt(…)<br>str.substring(…, …)</p>]]></content>
-    
-    <summary type="html">
-    
-      完成游戏Word Search的实现。
-    
-    </summary>
-    
-      <category term="C++" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-      <category term="Game" scheme="https://tk1307993.coding.me/tags/Game/"/>
     
   </entry>
   
