@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hardware,">
+  <meta name="keywords" content="OS,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
-<meta name="keywords" content="Hardware">
+<meta name="description" content="编写Heap allocator, 实现malloc和free函数">
+<meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS341-Timing-Instructions">
-<meta property="og:url" content="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
+<meta property="og:title" content="COMP3032-Heap-Allocator">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
 <meta property="og:site_name" content="留学生CS编程作业代写">
-<meta property="og:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
+<meta property="og:description" content="编写Heap allocator, 实现malloc和free函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-19T02:05:50.947Z">
+<meta property="og:updated_time" content="2023-01-16T04:20:12.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS341-Timing-Instructions">
-<meta name="twitter:description" content="这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。">
+<meta name="twitter:title" content="COMP3032-Heap-Allocator">
+<meta name="twitter:description" content="编写Heap allocator, 实现malloc和free函数">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
 
 
 
 
 
-  <title>C代写：CS341-Timing-Instructions | 留学生CS编程作业代写</title>
+  <title>COMP3032-Heap-Allocator | 留学生CS编程作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS341-Timing-Instructions.html">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS341-Timing-Instructions</h2>
+          <h2 class="post-title" itemprop="name headline">COMP3032-Heap-Allocator</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T10:03:20+08:00">
-                2019-01-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-16T12:18:30+08:00">
+                2023-01-16
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这个作业属于硬件作业了，要求阅读芯片手册，然后写一个时钟驱动。难度的话其实比不过同期的软件作业难度，已经提供了大部分的代码，不过硬件调试需要一定的功底。
+                  编写Heap allocator, 实现malloc和free函数
               </div>
           
 
@@ -360,17 +360,22 @@
       
 
       
-        <h3 id="I-OBJECTIVES"><a href="#I-OBJECTIVES" class="headerlink" title="I. OBJECTIVES"></a>I. OBJECTIVES</h3><p>The purpose of this assignment is to build a package of timing routines for the SAPC and use it to time code on the SAPC to determine memory access time on the SAPC with and without caching. This code does not run on UNIX. Read the Intel 8254 Programmable Interval Timer (PIT) Data Sheet. Look at $pcex/timer.c for an example of C code for accessing the timer. Copy all the files needed for this project.</p>
-<h3 id="II-The-timing-package"><a href="#II-The-timing-package" class="headerlink" title="II. The timing package"></a>II. The timing package</h3><p>A package is a set of utilities that can be called by a program that wants to use them. When designing a package we carefully consider the things in it that must be visible to the caller, specify those, and require that everything else be internal and invisible. The visible parts of the timing package you will build are in “timepack.h”. A customer for the package’s services includes that header file (using #include) in the program for compilation and links his or her object code with “timepack_sapc.opc” to build the executable. You are asked to modify “timepack_sapc.c” to provide a high resolution timer service for programs running on the SAPC.</p>
-<h3 id="Existing-Code"><a href="#Existing-Code" class="headerlink" title="Existing Code"></a>Existing Code</h3><p>Every package should have a test program showing that it works by calling it in all important ways. This test program is called a “driver” because it sits on top of the package and drives it like we test-drive a car – start up, do this, do that, stop, shut down. It is also called a “unit test” program because it tests just this one package separate from any other package in a bigger program. If you suspect something is wrong in a certain package, you’ll try to make its unit test fail, and then you debug the problem in the relatively simple environment of the unit test, rather than in the bigger program. The test program for timepack is testpack.c. You can build testpack and testpack.lnx right away and run them. Note what is printed out by testpack.lnx. Capture this in a typescript1 file. It shows that the timing package (as provided) can time things on the SAPC to 55-ms accuracy, but not to the microsecond accuracy we want. The next step is to get your timepack_sapc.c fixed up for the higher resolution and the unit test executable testpack.lnx will show it.</p>
-<p>Modifed Code<br>You’re working directly with the hardware device, the Programmable Interval Timer (PIT) with its interrupt handler. This code has been provided to you in a). The timepack_sapc.c as provided can measure time in timer “ticks” at an 18.2-Hz (55 ms/tick) standard PC tick rate.To use the PIT to measure higher precision, you make use of “downcounts” within the timer chip. What you need to do is determine how many counts have downcounted in the timer since the last tick and compute a higher accuracy time. By doing this at both the start and the end of the time interval being measured, you can compute the elapsed time accurate to a few microseconds, a very respectable timer service. You’ll need to modify the timepack_sapc.c to achieve this.</p>
-<p>Since timer downcounts count down from 64K at the tick, you need to subtract the register value from 65536 to get the number of downcounts since last tick:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">number</span> <span class="keyword">of</span> downcounts <span class="keyword">since</span> tick = <span class="number">65536</span> - observed_count (<span class="keyword">in</span> register)</span><br></pre></td></tr></table></figure></p>
-<p>Thus the accurate time between A and B is<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">= 202<span class="built_in"> clock </span>ticks + (65536 – 43000) downcounts - (200<span class="built_in"> clock </span>ticks + (65536 – 35000) downcounts)</span><br><span class="line">= 2<span class="built_in"> clock </span>ticks – 8000 downcounts</span><br></pre></td></tr></table></figure></p>
-<h3 id="III-Timing-i486-instructions-and-a-C-loop"><a href="#III-Timing-i486-instructions-and-a-C-loop" class="headerlink" title="III. Timing i486 instructions and a C loop"></a>III. Timing i486 instructions and a C loop</h3><p>In this part of the assignment you will use the timing package to time x86 instructions. Instruction execution time is measured in system clock cycles, here 2.5 nsecs for our 400Mhz Pentium systems. The PC timer 0 is accurate only in the usec (microsecond) range so you will need to loop many times and divide by the loop count to get the accuracy needed.</p>
-<p>The actual instructions to be timed appear in loops in “itests.s”, which is an x86 assembler source. These are called from itimes.c.</p>
-<p>Finish “itests.s”, so that the third instruction to be timed (immediate move of IDATA to register) is properly implemented. Add a fourth instruction of your choice “itests.s” and “itimes.c”</p>
-<p>You can use the provided makefile to build an optimized version of the SAPC executable file. The provided makefile has the following definitions:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># development build: -g provides debugging support, slows down execution</span><br><span class="line"># <span class="keyword">Use</span> -O2 optimization, no -g on <span class="keyword">final</span> timing runs<span class="comment">!</span></span><br><span class="line">PC_CFLAGS_DEV = -g -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line">PC_CFLAGS_OPT = -O2 -Wall -Wno-<span class="keyword">implicit</span> -Wshadow -I$(PC_INC) -I$(TIMING)</span><br><span class="line"># make <span class="keyword">default</span> PC_CFLAGS be PC_CFLAGS_DEV</span><br><span class="line">O = DEV</span><br><span class="line"># allow user to override DEV via O=OPT on the command line</span><br><span class="line">PC_CFLAGS = $(PC_CFLAGS_$(O))</span><br></pre></td></tr></table></figure></p>
-<h3 id="FINAL-NOTE"><a href="#FINAL-NOTE" class="headerlink" title="FINAL NOTE"></a>FINAL NOTE</h3><p>In the event that you are unable to correctly complete this assignment by the due date, do not remove the work you were able to accomplish – partial credit is always better than none.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this assignment, you will write a heap allocator - implement a version of malloc and free. This assignment is standalone and does not require you to work with any of the SOS code. However, you must work in the XUbuntu virtual machine for some of the provided code to run.</p>
+<p>Download the mymalloc.c file to get started. It has some helper functions and placeholders for the two functions you will implement in this assignment. You can (and should) write other helper functions as necessary.</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The my_malloc function will be used to request memory from the heap. It is a user level function (not part of the kernel). The function returns a logical (virtual) address. The my_free function is used to return a block of memory to the allocator. The function takes as argument an address (one returned by my_malloc). To understand how each function is required to behave, keep reading.</p>
+<p>Note that this program runs in your virtual machine’s Linux environment, which is a 64-bit operating system. As such, addresses in this assignment are 64-bit. In the images below, only the lower 32 bits of an address are shown.</p>
+<h3 id="Buddy-allocator"><a href="#Buddy-allocator" class="headerlink" title="Buddy allocator"></a>Buddy allocator</h3><p>The memory allocator you will implement is based on the Buddy algorithm. In this algorithm, the allocator keeps track of memory blocks of size 2^0, 2^1, 2^2, , 2^MAX_ORDER bytes inside the heap (the part of memory area in the logical address space of a process right after the program code and data). It does this using MAX_ORDER+1 different linked lists. A memory block of size 2n bytes is called an order n block, and the corresponding linked list is called the order n free list. The free_list_start pointers array holds the address of the first memory block of various sizes.</p>
+<p>For example, consider the free_list_start[3] pointer. This pointer will point to an address where a memory block of 23 bytes (8 bytes) is available. The first four bytes of that memory block will have information on whether another order 3 block is present. If yes, then the start address of that block will be stored here; otherwise NULL (the C macro) will be stored. This process will repeat as long as there are order 3 blocks present, thereby resulting in a linked list. The blocks must always be arranged in ascending order of their start addresses. See picture below for an illustration.</p>
+<p>When a program begins, all free_list_start pointers are set to NULL, since the heap begins at size zero. During memory allocation, my_malloc can use the grow_heap function to request the operating system to allocate some space (4096 bytes for each call) in the heap. More details on when this should be done is given later.</p>
+<p>Another rule that the Buddy allocator enforces: the start address of an order k block of memory will always have to be a multiple of 2k. For example, in the picture, the order 3 memory blocks starting at 0x82541008 and the one at 0x82541010 together form a contiguous memory area of 16 bytes; however, they together do not form an order 4 memory block since 0x82541008 is not a multiple of 24.</p>
+<h3 id="Implementing-my-malloc"><a href="#Implementing-my-malloc" class="headerlink" title="Implementing my_malloc"></a>Implementing my_malloc</h3><p>The first step in my_malloc is to increase the amount of needed memory by 4 bytes (reason coming up). Therefore, the amount of memory bytes allocated to serve a request is always at least (size+4). The Buddy allocator always allocates memory in size of powers of 2. Therefore, we need to determine the smallest n such that an order n block can serve the request. This can be calculated as<br>The allocation algorithm for the Buddy allocator then proceeds as follows.</p>
+<p>If free_list_start[n] is not NULL, delete the first order n memory block from the list.<br>Store n in the first 4 bytes of that block, and return (4 + start address of the block).<br>Otherwise, move to the free list of the next higher order and check if it is NULL. Keep doing this until you find one that is not NULL. In case you reach the maximum order (MAX_ORDER) and the free list there is still empty, then you can call grow_heap to receive a 4KB (212 bytes, order 12) memory block. Add this block to the order 12 free list and continue.<br>Lets say free_list_start[p] is not NULL. Of course, p&gt;n.<br>a. delete the first order p memory block from the list; say the start address of that block is s.<br>b. add two order (p-1) memory blocks to the order (p-1) free list. The first of the two blocks will begin at address s and the second one will begin at address (s + 2^p-1). Remember, the list must be kept in ascending order of the start addresses.<br>Essentially, you have split a larger chunk of memory into two smaller ones of equal sizes.</p>
+<p>Repeat from step 1.<br>As an example, the following figures show the before and after versions of few of the free lists (order 3, 4, 5) when my_malloc(4) is called. Note that the way the implementation is sought here implies that each my_malloc call should not be for more than 4092 bytes. There are ways to handle this, but is not needed in this assignment.</p>
+<h3 id="Implementing-my-free"><a href="#Implementing-my-free" class="headerlink" title="Implementing my_free"></a>Implementing my_free</h3><p>The first step in my_free is to determine how much memory is to be freed. The function takes as input a memory address returned by my_malloc in an earlier call. Since my_malloc stores the order of the memory block allocated, we can use it to determine how much memory is being returned. If p is the start address of the returned area of memory, then the 4 bytes beginning at f=(p-4) has the order (say n). Therefore, we need to insert back an order n memory block beginning at address f into the order n free list. The deallocation algorithm is as follows.</p>
+<p>Add the order n block starting at f to the order n free list. Remember, the list must be kept in ascending order of the start addresses.<br>If n &lt; MAX_ORDER, check whether<br>a. the added block and the next (or previous) block in the list together represent a contiguous memory region, and<br>b. the smaller of the two start addresses of the two blocks is a multiple of 2n+1.<br>If any of the above two conditions is not true, return; otherwise, continue.<br>The two blocks can be merged and entered into a higher order list.<br>a. let f = the smaller of the start addresses of the two blocks.<br>b. remove the two blocks from the order n free list.<br>c. let n = n + 1.<br>d. Repeat from step 1 with the updated n and f values.<br>Therefore, the my_free function returns memory blocks to the free lists, and coalesces contiguous blocks to higher order blocks whenever possible. Note that my_free does not return memory back to the operating system (decrement the heap top). As a program calls my_malloc and my_free, the same heap region gets allocated in different sizes over the life of the program. Since the two functions are running in user space, this reduces the number of system calls that user programs will have to make to request heap memory. The following figure shows an example of my_free.</p>
+<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>Download the mymalloc.c file from the assignment page. The file has the grow_heap function and some helper functions to print the free lists and return values. Your objective is to complete the implementation of the my_malloc and my_free functions as per the specifications. The main function is for testing purposes only; what you write in this function will be discarded before grading. The output generated by the provided main function is given in the last page. Some interesting cases that you should test:</p>
+<p>malloc such that no splitting is necessary<br>malloc such that splitting will be necessary; check the case when splitting initiates multiple levels down<br>free such that merging happens with the next block in the list<br>free such that merging happens with the previous block in the list<br>malloc and free such that merging does not happen<br>malloc and free such that merging propagates down more than one level<br>other interesting pointer related errors!!</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Submit in Canvas the modified mymalloc.c file, and a README file containing any information you feel the GTA should know before grading your program. Comment your program well (include your name).</p>
 
       
     </div>
@@ -388,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hardware/" rel="tag"># Hardware</a>
+            <a href="/tags/OS/" rel="tag"># OS</a>
           
         </div>
       
@@ -401,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CA1-Computer-Animation-and-Visualisation.html" rel="next" title="OpenGL代写：CA1-Computer-Animation-and-Visualisation">
-                <i class="fa fa-chevron-left"></i> OpenGL代写：CA1-Computer-Animation-and-Visualisation
+              <a href="/COMP20003-Python-Libraries.html" rel="next" title="COMP20003-Python-Libraries">
+                <i class="fa fa-chevron-left"></i> COMP20003-Python-Libraries
               </a>
             
           </div>
@@ -410,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSE320-Wolfie-Chat-Part1.html" rel="prev" title="C代写：CSE320-Wolfie-Chat-Part1">
-                C代写：CSE320-Wolfie-Chat-Part1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-OBJECTIVES"><span class="nav-number">1.</span> <span class="nav-text">I. OBJECTIVES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#II-The-timing-package"><span class="nav-number">2.</span> <span class="nav-text">II. The timing package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Existing-Code"><span class="nav-number">3.</span> <span class="nav-text">Existing Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#III-Timing-i486-instructions-and-a-C-loop"><span class="nav-number">4.</span> <span class="nav-text">III. Timing i486 instructions and a C loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FINAL-NOTE"><span class="nav-number">5.</span> <span class="nav-text">FINAL NOTE</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Buddy-allocator"><span class="nav-number">3.</span> <span class="nav-text">Buddy allocator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-my-malloc"><span class="nav-number">4.</span> <span class="nav-text">Implementing my_malloc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-my-free"><span class="nav-number">5.</span> <span class="nav-text">Implementing my_free</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective"><span class="nav-number">6.</span> <span class="nav-text">Objective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">7.</span> <span class="nav-text">Submission</span></a></li></ol></div>
             
 
           </div>
