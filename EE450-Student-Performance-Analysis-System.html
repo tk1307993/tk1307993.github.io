@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Network Programming,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生CS编程作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="和往年一样，使用Socket编程，完成多个Server/Client, 实现一个Student Performance Analysis System.">
+<meta name="keywords" content="Network Programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EE450-Student-Performance-Analysis-System">
+<meta property="og:url" content="https://tk1307993.coding.me/EE450-Student-Performance-Analysis-System.html">
+<meta property="og:site_name" content="留学生CS编程作业代写">
+<meta property="og:description" content="和往年一样，使用Socket编程，完成多个Server/Client, 实现一个Student Performance Analysis System.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-03-23T02:57:55.912Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EE450-Student-Performance-Analysis-System">
+<meta name="twitter:description" content="和往年一样，使用Socket编程，完成多个Server/Client, 实现一个Student Performance Analysis System.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/EE450-Student-Performance-Analysis-System.html">
+
+
+
+
+
+  <title>EE450-Student-Performance-Analysis-System | 留学生CS编程作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生CS编程作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/EE450-Student-Performance-Analysis-System.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生CS编程作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">EE450-Student-Performance-Analysis-System</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-23T10:55:50+08:00">
+                2023-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  和往年一样，使用Socket编程，完成多个Server/Client, 实现一个Student Performance Analysis System.
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>The objective of project is to familiarize you with UNIX socket programming. It is an individual assignment and no collaborations are allowed. If you have any doubts/questions email the TA your questions, come by TA’s office hours, or ask during the weekly discussion session. You can ask TAs any question about the content of the project, but TAs have the right to reject your request for debugging.</p>
+<p>Problem Statement<br>In this part of the project, you will implement client-server socket programming using TCP. In a Student Performance Analysis system of a university, a client (student) would like to ask the Main server which Backend server that a department is associated with. A client sends a department name to the Main server and the Main server will search in its database and reply to the client with a Backend server ID.</p>
+<p>The detailed operations to be performed by all the parties are described with the help of Figure 1. There are in total 3 communication endpoints, which are run in 3 individual terminal windows:</p>
+<p>Client 1 and Client 2: represent two different users, send queries to main server<br>Main server: store information, search, send responses to clients<br>You are highly encouraged to use Beej’s Guide to Network Programming to complete this assignment. You can use code from Beej’s Guide as a starting point (remember to mention any code you take directly from other sources like Beej’s Guide in the README and your comments).</p>
+<p>The full process can be roughly divided into three phases, and their communication and computation steps are as follows:</p>
+<p>Bootup<br>[Computation]: Main server read the file list.txt and store the information.<br>[Communication]: Main server process wait for client processes to connect.<br>[Computation]: Two clients run and ask the user to input a department name.<br>Query<br>[Communication]: Each client then establishes a TCP connection to the Main server and sends their queries (the department name) to the Main server.<br>A client can terminate itself only after it receives a reply from the server (in the Reply phase).<br>Main server may be connected to both clients at the same time.<br>[Computation]: Once the Main server receives the queries, it decodes the queries and searches in the list with the received department name, obtaining the corresponding Backend server ID.<br>Reply<br>[Communication]: Main server prepares a reply message and sends the result to the appropriate client.<br>[Communication]: Clients receive the reply message from Main server and display it. Clients should keep active for further inputted queries, until the program is manually killed (Ctrl-C).<br>The format of list.txt is as follows.</p>
+<p><backend server id></backend></p>
+<p><department name>,<department name>,<department name></department></department></department></p>
+<p><backend server id></backend></p>
+<p><department name>,<department name><br>…<br>Example list.txt:</department></department></p>
+<p>1<br>ECE,CS,Physics<br>2<br>Art,Cinema<br>3<br>Accounting,Business<br>…<br>Assumptions on the list.txt file:</p>
+<p>Department names are letters. The length of a department name can vary from 1 letter to at most 20 letters. It may contain both capital and lowercase letters but does not contain any white spaces.<br>Backend server IDs are non-negative integer numbers.<br>There are at most 10 Backend server IDs in total.<br>There is no additional empty line(s) at the beginning or the end of the file. That is, the whole list.txt do not contain any empty lines.<br>For simplicity, there is no overlap of department names among different Backend servers.<br>For a given Backend server, there may be repeated department names.<br>list.txt will not be empty.<br>A Backend server will store at least one department names, and at most 100 department names.<br>An example list.txt is provided for you as a reference. Other list.txt will be used for grading, so you are advised to prepare your own files for testing purposes.</p>
+<p>Source Code Files<br>Your implementation should include the source code files described below:</p>
+<p>servermain: You must name your code file: servermain.c or servermain.cc or servermain.cpp (all small letters). Also, you must name the corresponding header file (if you have one; it is not mandatory) servermain.h (all small letters).<br>client: The name for this piece of code must be client.c or client.cc or client.cpp (all small letters) and the header file (if you have one; it is not mandatory) must be called client.h (all small letters). There should be only one client file!!!<br>Note: Your compilation should generate separate executable files for each of the components listed above.</p>
+<p>Detailed Explanation<br>Phase 1 – Bootup<br>Main server program first boots up in this phase.</p>
+<p>./servermain<br>While booting up, the servers must display a boot up message on the terminal. The format of the boot up message for Main server is given in the on-screen message table at the end of the document. As the boot up message indicates, Main server must listen on the appropriate port for incoming packets/connections.</p>
+<p>As described in the previous section, the main server needs to read the text file and store the information. There are many ways to store the information, such as dictionary, array, vector, etc. You need to decide which format to use based on the requirement of the problem. You can use any format if it can give you correct results.</p>
+<p>Once the main server programs have booted up, two client programs run. Each client displays a boot up message as indicated in the onscreen messages table. Note that the client code takes no input argument from the command line. The format for running the client code is:</p>
+<p>./client<br>After running it, it should display messages to ask the user to enter a query department name (e.g., implement using std::cin):</p>
+<p>./client<br>Client is up and running.<br>Enter Department Name:<br>For example, if the client 1 is booted up and asks for Backend server ID for department ECE, then the terminal displays like this:</p>
+<p>./client<br>Client is up and running.<br>Enter Department Name: ECE<br>Main server has its unique port number specified in “PORT NUMBER ALLOCATION” section with the source and destination IP address as localhost/127.0.0.1. Clients use dynamic ports.</p>
+<p>Clients and Main server are required to print out on-screen messages after executing each action as described in the “ON SCREEN MESSAGES” section. These messages will help with grading if the process did not execute successfully. Missing some of the on-screen messages might result in misinterpretation that your process failed to complete. Please follow the exact format when printing the on-screen messages.</p>
+<p>Phase 2 – Query<br>After booting up, Clients establish TCP connections with Main server. After successfully establishing the connection, Clients send the input department name to Main server. Once this is sent, Clients should print a message in a specific format. Repeat the same steps for Client 2.</p>
+<p>Main server then receives requests from two Clients. If the department name is not found, the Main server will print out a message (see the “On Screen Messages” section) and return to standby.</p>
+<p>For a server to receive requests from several clients at the same time, the function fork() should be used for the creation of a new process. fork() function is used for creating a new process, which is called child process, which runs concurrently with the process that makes the fork() call (parent process).</p>
+<p>For a TCP server, when an application is listening for stream-oriented connections from other hosts, it is notified of such events and must initialize the connection using accept(). After the connection with the client is successfully established, the accept() function returns a non-zero descriptor for a socket called the child socket. The server can then fork off a process using fork() function to handle connection on the new socket and go back to wait on the original socket. Note that the socket that was originally created, that is the parent socket, is going to be used only to listen to the client requests, and it is not going to be used for computation or communication between client and Main server. Child sockets that are created for a parent socket have the identical well-known port number and IP address at the server side, but each child socket is created for a specific client. Through using the child socket with the help of fork(), the server can handle the two clients without closing any one of the connections.</p>
+<p>Once the Main server receives the queries, it decodes the queries and searches in the list with the received department name, finding the corresponding backend server ID.</p>
+<p>Phase 3 – Reply<br>At the end of Phase 2, the Main server should have the result ready. The result is the Backend server ID that the department is associated with. The result should be sent back to the corresponding client using TCP. The client will print out the backend server ID and then print out the messages for a new request as follows:</p>
+<p>…<br>Department ECE is associated with backend server 1.<br>—–Start a new query—-Enter Department Name:<br>See the ON SCREEN MESSAGES table for an example output table.</p>
+<p>Port Number Allocation<br>The ports to be used by the client and the servers are specified in the following table:</p>
+<p>Process    Dynamic Ports    Static Ports<br>Main Server        TCP(with client): 33xxx<br>Client 1    TCP<br>Client 2    TCP<br>NOTE: xxx is the last 3 digits of your USC ID. For example, if the last 3 digits of your USC ID are “319”, you should use the port: 33319 for the Main Server, etc. Port number of all processes print port number of their own.</p>
+<p>Assumptions<br>You must start the processes in this order: Main-server, Client 1, and Client 2.<br>list.txt is created before your program starts.<br>If you need to have more code files than the ones that are mentioned here, please use meaningful names and all small letters and mention them all in your README file.<br>You can use code snippets from Beej’s guide to network programming in your project. However, you need to mark the copied part in your code and mention in README.<br>When you run your code, if you get the message “port already in use” or “address already in use”, please first check to see if you have a zombie process (see following). If you do not have such zombie processes or if you still get this message after terminating all zombie processes, try changing the static TCP port number corresponding to this error message (all port numbers below 1024 are reserved and must not be used). If you must change the port number, please do mention it in your README file and provide reasons for it.<br>You may create zombie processes while testing your codes, please make sure you kill them every time you want to run your code. To see a list of all zombie processes, try this command:<br>ps -aux | grep developer<br>Identify the zombie processes and their process number and kill them by typing at the command-line:</p>
+<p>kill -9 <process number><br>Requirements<br>Do not hardcode the TCP port numbers that are to be obtained dynamically. Refer to Table 1 to see which ports are statically defined and which ones are dynamically assigned. Use getsockname() function to retrieve the locally bound port number wherever ports are assigned dynamically as shown below.<br>The host name must be hard coded as localhost (127.0.0.1) in all codes.<br>Your client should keep running and ask to enter a new request after displaying the previous result, until the TAs manually terminate it by Ctrl+C. The backend servers and the Main server should keep running and be waiting for another request until the TAs terminate them by Ctrl+C. If they terminate before that, you will lose some points for it.<br>All the naming conventions and the on-screen messages must conform to the previously mentioned rules.<br>You are not allowed to pass any parameter or value or string or character as a commandline argument.<br>All the on-screen messages must conform exactly to the project description. You should not add anymore on-screen messages. If you need to do so for the debugging purposes, you must comment out all the extra messages before you submit your project.<br>Using fork() to create a child process when a new TCP connection is accepted is mandatory and everyone should support it. This is useful when different clients are trying to connect to the same server simultaneously.<br>Please do remember to close the socket and tear down the connection once you are done using that socket.<br>Programming Platform and Environment<br>All your submitted code MUST work well on the provided virtual machine Ubuntu.<br>All submissions will only be graded on the provided Ubuntu. TA won’t make any updates or changes to the virtual machine. It’s your responsibility to make sure your code works well on the provided Ubuntu. “It works well on my machine” is not an excuse and we don’t care.<br>Your submission MUST have a Makefile. Please follow the requirements in the following “Submission Rules” section.<br>Programming Languages and Compilers<br>You must use only C/C++ on UNIX as well as UNIX Socket programming commands and functions. Here are the pointers for Beej’s Guide to C Programming and Network Programming (socket programming): <a href="http://www.beej.us/guide/bgnet/" target="_blank" rel="noopener">http://www.beej.us/guide/bgnet/</a> (If you are new to socket programming please do study this tutorial carefully as soon as possible and before starting the project) <a href="http://www.beej.us/guide/bgc/" target="_blank" rel="noopener">http://www.beej.us/guide/bgc/</a></process></p>
+<p>You can use a Unix text editor like emacs or gedit to type your code and then use compilers such as g++ (for C++) and gcc (for C) that are already installed on Ubuntu to compile your code. You must use the following commands and switches to compile yourfile.c or yourfile.cpp. It will make an executable by the name of “yourfileoutput”.</p>
+<p>gcc -o yourfileoutput yourfile.c<br>g++ -o yourfileoutput yourfile.cpp<br>Do NOT forget the mandatory naming conventions mentioned before!<br>Also, inside your code you may need to include these header files in addition to any other header file you used:</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>#include &lt;unistd.h&gt;</p>
+<p>#include &lt;errno.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>#include &lt;netdb.h&gt;</p>
+<p>#include &lt;sys/types.h&gt;</p>
+<p>#include &lt;netinet/in.h&gt;</p>
+<p>#include &lt;sys/socket.h&gt;</p>
+<p>#include &lt;arpa/inet.h&gt;</p>
+<p>#include &lt;sys/wait.h&gt;<br>Submission Rules<br>Along with your code files, include a README file and a Makefile. Submissions without README and Makefile will be subject to a serious penalty.</p>
+<p>In the README file write:</p>
+<p>Your Full Name as given in the class list.<br>Your Student ID.<br>Your platform (Ubuntu version).<br>What you have done in the assignment.<br>What your code files are and what each one of them does. (Please do not repeat the project description, just name your code files, and briefly mention what they do).<br>The format of all the messages exchanged.<br>Any idiosyncrasy of your project. It should say under what conditions the project fails, if any.<br>Reused Code: Did you use code from anywhere for your project? If not, say so. If so, say what functions and where they’re from. (Also identify this with a comment in the source code.)<br>About the Makefile<br>Makefile Tutorial:<br><a href="https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html" target="_blank" rel="noopener">https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html</a></p>
+<p>TA will first compile all codes using make all. TA will then open 3 different terminal windows. On one terminal, start Main Server using commands ./servermain. Remember that main server should always be on once started. On the other two terminals, start the client as ./client. TA will check the outputs for multiple queries. The terminals should display the messages specified above.</p>
+<p>Please follow these rules to submit your assignment:</p>
+<p>Compress all your files including the README file into a single “tar ball” and call it: ee450_yourUSCusername.tar.gz (all small letters) e.g. your filename may be ee450_nanantha.tar.gz. Please make sure that your name matches the one in the class list.<br>Do NOT include anything not required in your tar.gz file, for example data file list.txt. Do NOT use subfolders. Any compressed format other than .tar.gz will NOT be graded!<br>Upload “ee450_yourUSCusername.tar.gz” to Blackboard -&gt; Assignments. After the file is submitted, you must click on the “submit” button to actually submit it. If you do not click on “submit”, the file will not be submitted.<br>Blackboard will keep a history of all your submissions. If you make multiple submissions, we will grade your latest valid submission. Submission after the deadline is considered as invalid.<br>Please consider all kinds of possible technical issues and do expect a huge traffic on the Blackboard website very close to the deadline which may render your submission or even access to Blackboard unsuccessful.<br>Please DO NOT wait till the last 5 minutes to upload and submit because some technical issues might happen, and you will miss the deadline. And a kind suggestion, if you still get some bugs one hour before the deadline, please make a submission first to make sure you will get some points for your hard work!<br>After submitting, please confirm your submission by downloading and compiling it on your machine. If the outcome is not what you expected, try to resubmit, and confirm again. We will only grade what you submitted even though it’s corrupted.<br>You have sufficient time to work on this project and submit it in time hence there is absolutely zero tolerance for late submissions! Do NOT assume that there will be a late submission penalty or a grace period. If you submit your project late (no matter for what reason or excuse or even technical issues), you simply receive a zero for the project.<br>Grading Criteria<br>Notice: We will only grade what is already done by the program instead of what will be done. For example, the TCP connection is established, and data is sent to the Main Server. But the result is not received by the Main server (no on-screen message) because Main server got some errors. Then you will lose some points for phase 1 even though it might work well.</p>
+<p>Your project grade will depend on the following:</p>
+<p>Correct functionality, i.e. how well your programs fulfill the requirements of the assignment, especially the communications through TCP sockets.<br>Inline comments in your code. This is important as this will help in understanding what you have done.<br>Whether your programs work as you say they would in the README file.<br>Whether your programs print out the appropriate error messages and results.<br>If your submitted codes do not even compile, you will receive 10 out of 100 for the project.<br>If your submitted codes compile using make but when executed, produce runtime errors without performing any tasks of the project, you will receive 15 out of 100.<br>If you forget to include the README file or Makefile in the project tar-ball that you submitted, you will lose 15 points for each missing file (plus you need to send the file to the TA in order for your project to be graded.)<br>If you add subfolders or compress files in the wrong way, you will lose 2 points each.<br>If your data file path is not the same as the code files, you will lose 5 points.<br>Do not submit datafile (three .txt files) used for test, otherwise, you will lose 10 points.<br>If your code does not correctly assign the TCP port numbers (in any phase), you will lose 10 points each.<br>Detailed points assignments for each functionality will be posted after finishing grading.<br>The minimum grade for an on-time submitted project is 10 out of 100, the submission includes a working Makefile and a README.<br>There are no points for the effort or the time you spend working on the project or reading the tutorial. If you spend plenty of time on this project and it doesn’t even compile, you will receive only 10 out of 100.<br>Your code will not be altered in any way for grading purposes and however it will be tested with different inputs. Your designated TA runs your project as is, according to the project description and your README file and then checks whether it works correctly or not. If your README is not consistent with the project description, we will follow the project description.<br>Final Words<br>Start on this project early. Hard deadline is strictly enforced. No grace periods. No grace days. No exceptions.<br>In view of what is a recurring complaint near the end of a project, we want to make it clear that the target platform on which the project is supposed to run is the provided Ubuntu (16.04/22.04). It is strongly recommended that students develop their code on this virtual machine. In case students wish to develop their programs on their personal machines, possibly running other operating systems, they are expected to deal with technical and incompatibility issues (on their own) to ensure that the final project compiles and runs on the requested virtual machine. If you do development on your own machine, please leave at least three days to make it work on Ubuntu. It might take much longer than you expect because of some incompatibility issues.<br>Check Blackboard (Discussion Board &amp; Announcement) regularly for additional requirements and latest updates about the project guidelines. Any project changes announced on Blackboard are final and overwrites the respective description mentioned in this document.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSCI561-Path-Planning-For-Skier.html" rel="next" title="CSCI561-Path-Planning-For-Skier">
+                <i class="fa fa-chevron-left"></i> CSCI561-Path-Planning-For-Skier
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective"><span class="nav-number">1.</span> <span class="nav-text">Objective</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
