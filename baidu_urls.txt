@@ -1,5 +1,5 @@
+https://tk1307993.coding.me/CS714-Parallel-Design-Patterns.html
 https://tk1307993.coding.me/CSCI561-Pente.html
 https://tk1307993.coding.me/CSC108H-Bobs-Compatibility-Calculator.html
 https://tk1307993.coding.me/EE450-Student-Performance-Analysis-System.html
 https://tk1307993.coding.me/CSCI561-Path-Planning-For-Skier.html
-https://tk1307993.coding.me/COMP420-Fork.html
