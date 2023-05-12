@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tk1307993.coding.me/"/>
-  <updated>2023-05-05T09:40:05.682Z</updated>
+  <updated>2023-05-12T22:10:03.346Z</updated>
   <id>https://tk1307993.coding.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSE536-User-Level-Thread-Management</title>
+    <link href="https://tk1307993.coding.me/CSE536-User-Level-Thread-Management.html"/>
+    <id>https://tk1307993.coding.me/CSE536-User-Level-Thread-Management.html</id>
+    <published>2023-05-12T22:07:58.000Z</published>
+    <updated>2023-05-12T22:10:03.346Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Brief-Description"><a href="#Brief-Description" class="headerlink" title="Brief Description"></a>Brief Description</h3><p>In this assignment, you will implement user-level threads (also called self-threads) for xv6 processes and make scheduling decisions inside the process based on different policies.</p><p>An xv6 process starts with only one kernel-supported thread. Within the process, we will divide this thread into several user-level threads. We will maintain one of these user-level threads as a user-level scheduler thread. This thread will make decisions regarding which user-level thread should execute at a certain time, based on different scheduling algorithms that we will choose.</p><p>Important note<br>If your assignment does not compile or your upload is corrupted, you will get a zero. Always double-check your submission.<br>Submit a zip file titled by your ASU username. For instance, if your username is adil, your file should be adil.zip.</p><h3 id="User-Level-Threading-Library-ULTLib"><a href="#User-Level-Threading-Library-ULTLib" class="headerlink" title="User-Level Threading Library (ULTLib)"></a>User-Level Threading Library (ULTLib)</h3><p>This library will create user-level threads for a process, schedule the threads to be executed, yield the CPU from a certain thread after a period of time, and destroy user-level threads when their task is completed. You must write the code for this library in the files: ulthread.c, ulthread_swtch.S, and ulthread.h.</p><p>Please follow the steps below to complete this task:<br>Library initialization<br>Important housekeeping must be done whenever a library is initialized. For this task, you must create a data structure (similar to proc kept by the kernel) to keep track of each user-level thread. You must decide on the contents of this data structure based on the information provided in this document. During initialization, also assign the first kernel-provided thread to be the user-level scheduler thread. Write the code for this part in the ulthread_init() function.</p><p>Thread creation<br>To create a thread, we need the following: (a) the starting function address where the thread begins execution, (b) initial arguments for the starting function, (c) the location of a stack that the thread will use during its execution, (d) the thread’s priority, and (e) a context save location (context) where the registers of the thread will be saved and restored on context switches. (a)-(d) will be provided by the user process when it calls the function ulthread_create(). However, the context save location must be created and maintained by the ULTLib. Hint: check how the xv6 kernel maintains context save locations for kernel self-threads. Once the thread is created, ULTLib should also track that the thread is now RUNNABLE for scheduling decisions.</p><p>Thread switch<br>The user-level scheduler thread must be called to schedule threads after creation and each time a user-level thread yields its CPU to a different thread. At these times, the user-level scheduler thread must (a) save its registers in it’s context and (b) restore registers from the next scheduled thread’s context. The thread whose registers are restored is chosen based on the scheduling policy.</p><p>Write an assembly function (ulthread_context_switch() in ulthread.S) that takes two pointersprevious context and next contextas arguments. The function must save the current thread’s registers at the location of previous context, then load the registers from the next context’s location. It must also set-up registers in such a way that function arguments are provided correctly when a thread starts.</p><p>Suggested reading(s)<br>RISC-V Function Argument Calling Conventions.</p><p>Thread yield and destroy<br>A user-level thread can give up its execution (using ulthread_yield()) and ask the user-level scheduler thread to schedule a different thread. Additionally, at the end of it’s execution, a thread will explicitly call ulthread_destroy() to signal that it has completed its task. At these points, ULTLib should track that the thread’s state has changed either to YIELD or FREE. Then, it should perform housekeeping tasks to maintain data structures, and finally switch back to the execution of the scheduler.</p><p>A user-level thread will decide when to yield based on clock timing information that it receives from the xv6 OS. To achieve this, you must write a new xv6 system call (ctime) that traps to the xv6 OS and returns the time from the RISC-V register r_time.</p><p>Thread scheduling decisions<br>The user-level scheduler thread decides which thread to schedule based on three algorithms: (a) round-robin, (b) first-come-first-serve, and (c) priority scheduling. The specific algorithm to use is provided during library initialization. Your goal is to write a scheduler that is aware of all these algorithms and decides the correct thread to execute whenever it is called based on the policy.</p><p>Testcases<br>You are only provided a single testcase for this assignment (namely test1). Please rigorously test your code using your own testcases for corner situations.</p><h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><p>GIT Diff of Changes Required<br>Provided below is a sample of how many changes would be required to complete this assignment. Note that this would vary based on code styles</p><ul><li>kernel/syscall.c</li><li>kernel/syscall.h</li><li>kernel/sysproc.c</li><li>user/ulthread.c</li><li>user/ulthread.h</li><li>user/ulthread_swtch.S</li><li>user/usys.pl</li></ul><h3 id="Submitting-your-Assignment"><a href="#Submitting-your-Assignment" class="headerlink" title="Submitting your Assignment"></a>Submitting your Assignment</h3><p>Please zip the entire provided code directory and submit it to the Canvas under “Assignment 3: CODE”.</p>]]></content>
+    
+    <summary type="html">
+    
+      为xv6进程实现用户级线程(User Level Thread)，并根据不同的策略，在进程内做出调度策略。
+    
+    </summary>
+    
+      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
+    
+    
+      <category term="OS" scheme="https://tk1307993.coding.me/tags/OS/"/>
+    
+  </entry>
   
   <entry>
     <title>CSCI561-First-Order-Logic-Resolution</title>
@@ -447,28 +469,6 @@
     
     
       <category term="Fundamentals" scheme="https://tk1307993.coding.me/tags/Fundamentals/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS427-Shared-Memory</title>
-    <link href="https://tk1307993.coding.me/CS427-Shared-Memory.html"/>
-    <id>https://tk1307993.coding.me/CS427-Shared-Memory.html</id>
-    <published>2022-12-27T01:04:25.000Z</published>
-    <updated>2022-12-27T01:05:37.123Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a program whose main routine obtains one parameter n from the user, i.e. passed to your program when it was invoked from the shell. Your program shall then create a shared memory and a child process. The shared memory shall have a size of BUF_SZ*sizeof(long int), where BUF_SZ is defined as 6 using a macro, e.g. “#define BUF_SZ 6“.</p><p>The child process should obtain the value of n (you actually have multiple options for doing that) and create a sequence of length n, whose elements are of type long int, and implements the equation z = y! (i.e. the factorial) where y is the index of the element, for example, the fourth element (index 3) shall have a value of 3! = 3x2x1 = 6, whereas the first element (index 0) shall have a value of 0!=1 . If n=4, then the sequence shall be 1, 1, 2 and 6.</p><p>The child process shall create the elements, one at a time, and wait for a random interval of time (0 to 2.999 seconds) between generating elements of the sequence. As soon as an element is generated, the child places the element in the shared memory by organizing it as described below.</p><p>The parent process shall NOT wait for the child to exit but instead shall print an element as soon as it arrives into the shared buffer (again, in a manner similar to slides 25-28 of lecture 5)</p><p>Hint: Use fflush() to ensure printf’s are printed immediately into the screen.</p><ul><li>Repeat this, except that now you do not create a shared memory, but rather use an ordinary pipe to pass the sequence instead.</li><li>Repeat this, except that now you do not create a shared memory or a child process, but use a child thread instead. By definition, The parent and child threads already share their memory spaces.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      分别使用Shared Memory, Pipe以及Thread解决同样的问题。
-    
-    </summary>
-    
-      <category term="C" scheme="https://tk1307993.coding.me/categories/C/"/>
-    
-    
-      <category term="Operating System" scheme="https://tk1307993.coding.me/tags/Operating-System/"/>
     
   </entry>
   
