@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
+<meta name="description" content="这次辅导的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CSSE7023-Train-Management-System-GUI">
+<meta property="og:title" content="Java辅导：CSSE7023-Train-Management-System-GUI">
 <meta property="og:url" content="https://tk1307993.coding.me/CSSE7023-Train-Management-System-GUI.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
+<meta property="og:description" content="这次辅导的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-19T03:07:27.253Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:55.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CSSE7023-Train-Management-System-GUI">
-<meta name="twitter:description" content="这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
+<meta name="twitter:title" content="Java辅导：CSSE7023-Train-Management-System-GUI">
+<meta name="twitter:description" content="这次辅导的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Java代写：CSSE7023-Train-Management-System-GUI | 留学生CS编程辅导</title>
+  <title>Java辅导：CSSE7023-Train-Management-System-GUI | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CSSE7023-Train-Management-System-GUI</h2>
+          <h2 class="post-title" itemprop="name headline">Java辅导：CSSE7023-Train-Management-System-GUI</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次代写的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。
+                  这次辅导的程序，需要采用提供的gui package给前次的铁路管理系统写一个界面，并用上MVC框架。
               </div>
           
 
@@ -360,8 +360,8 @@
       
 
       
-        <h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>The goal of this assignment is to gain practical experience with implementing GUIs using the Model-View-Controller design pattern.</p>
-<h3 id="Problem-description"><a href="#Problem-description" class="headerlink" title="Problem description"></a>Problem description</h3><p>In this assignment you will develop a GUI for simulating the behaviour of a train management system using the Model-View-Controller design pattern. This extends the work you have done in Assignments 1 and 2.</p>
+        <h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>The goal of this request is to gain practical experience with implementing GUIs using the Model-View-Controller design pattern.</p>
+<h3 id="Problem-description"><a href="#Problem-description" class="headerlink" title="Problem description"></a>Problem description</h3><p>In this request you will develop a GUI for simulating the behaviour of a train management system using the Model-View-Controller design pattern. This extends the work you have done in requests 1 and 2.</p>
 <p>The train management system in question is quite simplistic. It manages the allocation of trains to sub-routes 1 for a particular track in a way that is guaranteed to prevent train collisions. The idea is that a train is only allowed to move along the sub-route it has been allocated to, but it can move freely along that sub-route without fear of colliding with another train.</p>
 <p>There may be zero or more trains on the track. Each train on the track has a unique identifier (an integer), a route that it is following, and a sub-route of that route that it has currently been allocated to. The route a train is following must be on the track, and the sub-route that the train is allocated to must be a sub-route of the route that the train is following. The sub-routes that trains have been allocated to may not intersect.</p>
 <p>Exactly what the GUI looks like is up to you, but in order to meet testing requirements, it must be capable of performing the following tasks:</p>
@@ -373,7 +373,7 @@
 <p>An appropriate error message should be clearly displayed (in the graphical user interface) if there is an error reading from the input file or there is an error with the input format (i.e. if TrackReader.read throws an IOException or a FormatException).</p>
 <p>The error message displayed to the user should clearly identify the reason for the error. That is, it should identify that the file track.txt could not be loaded, and why. The reason should include whether or not the load error was due to an input/output error reading from the file, or because of an error with the input format of the file, and it should include the detail message of the exception thrown to help the user track down the exact reason for the problem.</p>
 <p>If the track could not be loaded then the program, after informing the user of the problem, is not obliged to perform the remainder of the tasks specified here. It should either exit gracefully or allow the user to close the program without being able to perform any other functions. If the track could be loaded, then the track of the program should be set to be the track that was read, and it should be evident to the user that there are currently no trains on the track.</p>
-<p>Note that a sample file called track.txt has been included in the assignment zip file, but that your code should not be hard-coded to only handle the current content of that input file - the content of the file should be able to be updated to represent any track.<br>Assuming that the track for the train management program can be loaded, the user should be able to use the program to perform the following tasks.</p>
+<p>Note that a sample file called track.txt has been included in the request zip file, but that your code should not be hard-coded to only handle the current content of that input file - the content of the file should be able to be updated to represent any track.<br>Assuming that the track for the train management program can be loaded, the user should be able to use the program to perform the following tasks.</p>
 <p>At any point, the user should be able to request that a new train is added to the track. In particular the user should be able to input:</p>
 <ul>
 <li>the name of a file (e.g. route.txt) from which the route of that train can be read</li>
@@ -388,9 +388,9 @@
 <p>Otherwise the train, with its route, is added to the system and allocated to the sub-route that it requested. It should be given a unique integer identifier that corresponds to the order in which the train was loaded (i.e. the first train loaded has identifier 0, the second train loaded has identifier 1, the third train loaded has identifier 2, etc.)</p>
 <p>If either (i) the offsets do not define a valid sub-route of the route that was read, or (ii) the sub-route route.getSubroute(startOffset, endOffset) intersects with any of the sub-routes currently allocated to other trains, then an appropriate error message be clearly displayed (in the graphical user interface) to the user, and the existing trains and allocations should not be modified in any way. The error message displayed to the user should clearly identify the reason for the error. Otherwise, the allocation of the train should be updated to the requested allocation.</p>
 <p>Your program should be robust in the sense that incorrect user inputs should not cause the system to fail. Appropriate error messages should be displayed to the user if they enter incorrect inputs.</p>
-<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>Using the MVC architecture, you must implement RailwayManager.java in the railway.gui package by completing the skeletons of the three classes: RailwayModel.java, RailwayView.java and RailwayController.java that are available in the zip files that accompanies this assignment. (Don’t change any classes other than RailwayModel.java, RailwayView.java and RailwayController.java since we will test your code with the original versions of those other files.)</p>
+<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>Using the MVC architecture, you must implement RailwayManager.java in the railway.gui package by completing the skeletons of the three classes: RailwayModel.java, RailwayView.java and RailwayController.java that are available in the zip files that accompanies this request. (Don’t change any classes other than RailwayModel.java, RailwayView.java and RailwayController.java since we will test your code with the original versions of those other files.)</p>
 <p>You should design your interface so that it is legible and intuitive to use. The purpose of the task that the interface is designed to perform should be clear and appropriate. It must be able to be used to perform the tasks as described above.</p>
-<p>As in Assignment 1 and 2, you must implement RailwayModel.java, RailwayView.java and RailwayController.java as if other programmers were, at the same time, implementing the classes that instantiate them and call their methods. Hence:</p>
+<p>As in request 1 and 2, you must implement RailwayModel.java, RailwayView.java and RailwayController.java as if other programmers were, at the same time, implementing the classes that instantiate them and call their methods. Hence:</p>
 <ul>
 <li>Don’t change the class names, specifications, or alter the method names, parameter types, return types, exceptions thrown or the packages to which the files belong.</li>
 <li>You are encouraged to use Java 8 SE classes, but no third party libraries should be used. (It is not necessary, and makes marking hard.)</li>
@@ -408,7 +408,7 @@
 <li>The methods that you have to write must be decomposed into a clear and not overly complicated solution, using private methods to prevent any individual method from doing too much.</li>
 </ul>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hints: You should watch the piazza forum <span class="keyword">and</span> the announcements<span class="built_in"> page </span>on the Blackboard closely - these sites have lots of useful clarifications, updates <span class="keyword">to</span> materials, <span class="keyword">and</span> often hints, <span class="keyword">from</span> the course coordinator, the tutors, <span class="keyword">and</span> other students.</span><br></pre></td></tr></table></figure>
-<p>The assignment requires the use of a number of components from the Swing library. You should consult the documentation for these classes in order to find out how they work, as well as asking questions on piazza and asking tutors and the course coordinator.</p>
+<p>The request requires the use of a number of components from the Swing library. You should consult the documentation for these classes in order to find out how they work, as well as asking questions on piazza and asking tutors and the course coordinator.</p>
 
       
     </div>
@@ -439,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSSE7023-Train-Management-System.html" rel="next" title="Java代写：CSSE7023-Train-Management-System">
-                <i class="fa fa-chevron-left"></i> Java代写：CSSE7023-Train-Management-System
+              <a href="/CSSE7023-Train-Management-System.html" rel="next" title="Java辅导：CSSE7023-Train-Management-System">
+                <i class="fa fa-chevron-left"></i> Java辅导：CSSE7023-Train-Management-System
               </a>
             
           </div>
@@ -449,8 +449,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS3049-Likelihood-Weighted-Sampling.html" rel="prev" title="AI代写：CS3049-Likelihood-Weighted-Sampling">
-                AI代写：CS3049-Likelihood-Weighted-Sampling <i class="fa fa-chevron-right"></i>
+              <a href="/CS3049-Likelihood-Weighted-Sampling.html" rel="prev" title="AI辅导：CS3049-Likelihood-Weighted-Sampling">
+                AI辅导：CS3049-Likelihood-Weighted-Sampling <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

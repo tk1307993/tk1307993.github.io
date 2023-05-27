@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
+<meta name="description" content="辅导一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
 <meta name="keywords" content="Algorithm,QT,Game">
 <meta property="og:type" content="article">
 <meta property="og:title" content="COMP3023-Kakuro">
 <meta property="og:url" content="https://tk1307993.coding.me/COMP3023-Kakuro.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
+<meta property="og:description" content="辅导一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-01T02:22:56.150Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:18.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="COMP3023-Kakuro">
-<meta name="twitter:description" content="代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
+<meta name="twitter:description" content="辅导一个叫Kakuro的游戏，GUI部分需要用QT来实现。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个叫Kakuro的游戏，GUI部分需要用QT来实现。
+                  辅导一个叫Kakuro的游戏，GUI部分需要用QT来实现。
               </div>
           
 
@@ -361,7 +361,7 @@
 
       
         <h3 id="Submission-details"><a href="#Submission-details" class="headerlink" title="Submission details"></a>Submission details</h3><p>This is a small group project. While the best group size is 4, I will allow groups of 2 or 4, though a group of 4 will be expected to do more to get a high mark. You should attempt to form the groups yourself – please do so by the end of Week 9 of semester and let me know your group members. I will, over the weekend before Monday of Week 10, organise those not in a group into groups, and send emails out to the different group members.</p>
-<p>Eventual assignment submission will be by groups. Ensure only one person does the submission of the assignment per group. The organisation of the marking is difficult enough with groups without having multiple submissions per group to look out for.</p>
+<p>Eventual request submission will be by groups. Ensure only one person does the submission of the request per group. The organisation of the marking is difficult enough with groups without having multiple submissions per group to look out for.</p>
 <p>You should ensure all group member’s names and email addresses are part the code files and document files that you submit.</p>
 <p>You should submit:</p>
 <ol>
@@ -373,15 +373,15 @@
 </li>
 <li><p>A short document (I don’t want to use the term ‘user manual’ as some of you will interpret this as a formal document) that describes how to use the program. Don’t make this a big part of what you do – enough so that I can easily start up and know how to play with your application. The screen shots you used in the ‘features implemented’ document above can likely be re-used here.</p>
 </li>
-<li><p>For a bonus of up to 5% of the assignment marks (but can’t take your mark above 100%), a video (produced by your phone for example) where you demonstrate the features of your working assignment.</p>
+<li><p>For a bonus of up to 5% of the request marks (but can’t take your mark above 100%), a video (produced by your phone for example) where you demonstrate the features of your working request.</p>
 </li>
 </ol>
-<p>Your assignment will be marked primarily on what works, rather than the details of the code. This is not a User Interface class, so for the advanced features that you implement, while a nice user interface may receive a slightly higher mark (within the grade ranges), you are just starting with using Qt, and using the UI components well is something that develops with experience.</p>
+<p>Your request will be marked primarily on what works, rather than the details of the code. This is not a User Interface class, so for the advanced features that you implement, while a nice user interface may receive a slightly higher mark (within the grade ranges), you are just starting with using Qt, and using the UI components well is something that develops with experience.</p>
 <h3 id="Overview-of-Kakuro"><a href="#Overview-of-Kakuro" class="headerlink" title="Overview of Kakuro"></a>Overview of Kakuro</h3><p>Kakuro puzzles are similar to crosswords, but instead of letters the digits (from 1 to 9) are used. Instead of clues going across and down, you are given the sum of the values across or down. There is the constraint that the digits 1 to 9 can only be used once in any ‘word’ going across or down. The board’s squares need to be filled in with these digits in order to sum up to the specified numbers. Below is an example Kakuro problem with a 13x13 grid (effectively a 12x12 problem as you need an extra row at the top, and a column at the left, in which to put ‘down’ or ‘across’ clues.</p>
 <p>At any point you can use the down or across clues to deduce some values in the puzzle, and then use these values to help deduce other values.</p>
 <p>For example, in the bottom middle there is the section shown to the right. For the column with sum of 4, the two values have to be 1 and 3 (as 2 and 2 not allowed). The 3 has to be at the top, as if it is at the bottom, then as the bottom ‘across’ adds to 8, the left value will be 5. But then the ‘down’ that sums to 16 does not have a solution, as you can’t have 5+ (value from 1 to 9) that sums to 16. This means that you have to have 3, 1 in the ‘down’ that sums to 4, and 9, 7 in the column that adds to 16: as shown on the<br>left.</p>
 <p>You can try the puzzle online at <a href="http://www.kakuros.com" target="_blank" rel="noopener">www.kakuros.com</a>, which provides an interactive web page to help you play Kakuro.</p>
-<h3 id="The-Assignment"><a href="#The-Assignment" class="headerlink" title="The Assignment"></a>The Assignment</h3><p>In this assignment I would like you to use Qt to develop a program with a graphical user interface to help the user solve Kakuro problems.</p>
+<h3 id="The-request"><a href="#The-request" class="headerlink" title="The request"></a>The request</h3><p>In this request I would like you to use Qt to develop a program with a graphical user interface to help the user solve Kakuro problems.</p>
 <p>A minimal program that will give you at least a P1 grade should:</p>
 <p>Display the grid for a Kakuro problem – you program should at least display a 13x13 grid, but you can allow the program to display a range of sizes – smaller and possibly larger.</p>
 <ol>
@@ -619,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-details"><span class="nav-number">1.</span> <span class="nav-text">Submission details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-of-Kakuro"><span class="nav-number">2.</span> <span class="nav-text">Overview of Kakuro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Assignment"><span class="nav-number">3.</span> <span class="nav-text">The Assignment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Possible-Extensions-to-obtain-a-higher-grade"><span class="nav-number">4.</span> <span class="nav-text">Possible Extensions to obtain a higher grade</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-details"><span class="nav-number">1.</span> <span class="nav-text">Submission details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-of-Kakuro"><span class="nav-number">2.</span> <span class="nav-text">Overview of Kakuro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-request"><span class="nav-number">3.</span> <span class="nav-text">The request</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Possible-Extensions-to-obtain-a-higher-grade"><span class="nav-number">4.</span> <span class="nav-text">Possible Extensions to obtain a higher grade</span></a></li></ol></div>
             
 
           </div>

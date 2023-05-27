@@ -86,14 +86,14 @@
 <meta name="description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
 <meta name="keywords" content="Algorithm,CUDA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CUDA代写：CME213-Heat-Diffusion-Equation">
+<meta property="og:title" content="CUDA辅导：CME213-Heat-Diffusion-Equation">
 <meta property="og:url" content="https://tk1307993.coding.me/CME213-Heat-Diffusion-Equation.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-09T02:57:13.524Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:21.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CUDA代写：CME213-Heat-Diffusion-Equation">
+<meta name="twitter:title" content="CUDA辅导：CME213-Heat-Diffusion-Equation">
 <meta name="twitter:description" content="用CUDA编写程序来计算热扩散方程，背景挺吓人的，不过工作量只是实现几个GPU的函数。">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>CUDA代写：CME213-Heat-Diffusion-Equation | 留学生CS编程辅导</title>
+  <title>CUDA辅导：CME213-Heat-Diffusion-Equation | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CUDA代写：CME213-Heat-Diffusion-Equation</h2>
+          <h2 class="post-title" itemprop="name headline">CUDA辅导：CME213-Heat-Diffusion-Equation</h2>
         
 
         <div class="post-meta">
@@ -360,14 +360,14 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment builds on the previous assignment’s theme of examining memory access patterns. You will implement a finite difference solver for the 2D heat diffusion equation in different ways to examine the performance characteristics of the different implementations.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This request builds on the previous request’s theme of examining memory access patterns. You will implement a finite difference solver for the 2D heat diffusion equation in different ways to examine the performance characteristics of the different implementations.</p>
 <h3 id="Background-on-the-heat-diffusion-PDE"><a href="#Background-on-the-heat-diffusion-PDE" class="headerlink" title="Background on the heat diffusion PDE"></a>Background on the heat diffusion PDE</h3><p>To solve this PDE, we are going to discretize both the temporal and the spatial derivatives. To do this, we define a two-dimensional grid G(i, j), 1 ≤ i ≤ n(x), 1 ≤ j ≤ n(y), where we denote by n(x) (resp. n(y) ) the number of points on the x-axis (resp. y-axis). At each time-step, we will evaluate the temperature and its derivatives at these gridpoints.</p>
 <p>While we will consistently use a first order discretization scheme for the temporal derivative, we will use 2nd, 4th or 8th order discretization of the spatial derivative.</p>
 <p>If we denote by T(i, j) the temperature at time t at point (i, j) of the grid, the 2nd order spatial discretization scheme can be written.</p>
 <p>The C(x) (xfcl in the code) and C(y) (yfcl in the code) constants are called Courant numbers. They depend on the temporal discretization step, as well as the spatial discretization step. To ensure the stability of the discretization scheme, they have to be less than a maximum value given by the Courant-Friedrichs-Lewy condition. You do not have to worry about this, because the starter code already takes care of picking the temporal discretization step as to maximize the Courant numbers while ensuring stability.</p>
 <p>The starter code also contains host and device functions named stencil which contain the coefficients that go into the update equation. Therefore, you do not need to figure out how to implement the different order updates. You only need to understand how this function works and pass in the arguments correctly.</p>
 <h3 id="Boundary-conditions"><a href="#Boundary-conditions" class="headerlink" title="Boundary conditions"></a>Boundary conditions</h3><p>The starter code contains the functions that will update the boundary conditions for you (see file BC.h, in particular the function gpuUpdateBCsOnly) and the points that are in the border (which has a size of order / 2). This way, you do not have to worry about the size of the stencil as you approach the wall.</p>
-<h3 id="Various-implementations"><a href="#Various-implementations" class="headerlink" title="Various implementations"></a>Various implementations</h3><p>In this programming assignment, we are going to implement 2 different kernels (and you can do a third one for extra credit):</p>
+<h3 id="Various-implementations"><a href="#Various-implementations" class="headerlink" title="Various implementations"></a>Various implementations</h3><p>In this programming request, we are going to implement 2 different kernels (and you can do a third one for extra credit):</p>
 <ul>
 <li><p>Global (function gpuStencil): this kernel will use global memory and each thread will update exactly one point of the mesh. You should use a 2D grid with n(x) × n(y) threads total.</p>
 </li>
@@ -434,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FIT9131-My-Library.html" rel="next" title="Java代写：FIT9131-My-Library">
-                <i class="fa fa-chevron-left"></i> Java代写：FIT9131-My-Library
+              <a href="/FIT9131-My-Library.html" rel="next" title="Java辅导：FIT9131-My-Library">
+                <i class="fa fa-chevron-left"></i> Java辅导：FIT9131-My-Library
               </a>
             
           </div>
@@ -444,8 +444,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CSCE315-5-by-5-Tic-Tac-Toe.html" rel="prev" title="Java代写：CSCE315-5-by-5-Tic-Tac-Toe">
-                Java代写：CSCE315-5-by-5-Tic-Tac-Toe <i class="fa fa-chevron-right"></i>
+              <a href="/CSCE315-5-by-5-Tic-Tac-Toe.html" rel="prev" title="Java辅导：CSCE315-5-by-5-Tic-Tac-Toe">
+                Java辅导：CSCE315-5-by-5-Tic-Tac-Toe <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

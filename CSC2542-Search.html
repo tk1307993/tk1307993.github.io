@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
+<meta name="description" content="用C++辅导几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
 <meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSC2542-Search">
 <meta property="og:url" content="https://tk1307993.coding.me/CSC2542-Search.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
+<meta property="og:description" content="用C++辅导几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-07T01:28:29.028Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:00.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSC2542-Search">
-<meta name="twitter:description" content="用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
+<meta name="twitter:description" content="用C++辅导几个经典的搜索算法，包括BFS, A*, WA*和GBFS.">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用C++代写几个经典的搜索算法，包括BFS, A*, WA*和GBFS.
+                  用C++辅导几个经典的搜索算法，包括BFS, A*, WA*和GBFS.
               </div>
           
 
@@ -360,16 +360,16 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The goal of this assignment is to give you experience running and experimenting with heuristic search code. There are three main components. The first is on tiebreaking in A<em> , the second is on tiebreaking in WA</em> and GBFS, and the third is on re-expansions in WA* and GBFS.</p>
-<p>For this assignment, you are provided with C++ code for generic best-first search and A*, as well as for code for working with the map pathfinding and the 3 × 4 sliding tile puzzle domains. You are strongly encourage to use this code, though you are free to complete the experiments in whatever language you so choose. If you choose to use your own code, you will need to use the following input files, which have been provided (see the framework documentation for information on the format of these files):</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The goal of this request is to give you experience running and experimenting with heuristic search code. There are three main components. The first is on tiebreaking in A<em> , the second is on tiebreaking in WA</em> and GBFS, and the third is on re-expansions in WA* and GBFS.</p>
+<p>For this request, you are provided with C++ code for generic best-first search and A*, as well as for code for working with the map pathfinding and the 3 × 4 sliding tile puzzle domains. You are strongly encourage to use this code, though you are free to complete the experiments in whatever language you so choose. If you choose to use your own code, you will need to use the following input files, which have been provided (see the framework documentation for information on the format of these files):</p>
 <ul>
 <li>“starcraft bgh.map” is a file representation of a map to run experiments on.</li>
 <li>“starcraft bgh.probs” is a file containing a list of pathfinding problems for the map given by “starcraft bgh.map.”</li>
 <li>“3x4 puzzle.probs” is a list of start states for experiments on the 3 × 4 sliding tile puzzle domain.</li>
 </ul>
 <p>All sections have both an experimental and theoretical component. For the theoretical component, feel free to use any of the theorems or lemmas we have already discussed in class.</p>
-<p>Finally, note that different authors sometimes define a count of the number of node expansions slightly differently. For this assignment, we will count the number of node expansions as the number of times a node is taken off the open list, or equivalently, the number of calls to the goal test function that are performed.</p>
-<h3 id="Tiebreaking-in-A"><a href="#Tiebreaking-in-A" class="headerlink" title="Tiebreaking in A*"></a>Tiebreaking in A*</h3><p>The first part of this assignment is on the importance of tiebreaking in A<em>. By default, A</em> compares nodes according to the evaluation f(n) = g(n) + h(n), called the f-value, and no other criteria. Ties are then dealt with arbitrarily (usually just by their ordering in the comparison). In the rest of this document, we refer to this as the Default tiebreaking rule. For the following experiments, we also define the following two different methods, each of which you will have to implement:</p>
+<p>Finally, note that different authors sometimes define a count of the number of node expansions slightly differently. For this request, we will count the number of node expansions as the number of times a node is taken off the open list, or equivalently, the number of calls to the goal test function that are performed.</p>
+<h3 id="Tiebreaking-in-A"><a href="#Tiebreaking-in-A" class="headerlink" title="Tiebreaking in A*"></a>Tiebreaking in A*</h3><p>The first part of this request is on the importance of tiebreaking in A<em>. By default, A</em> compares nodes according to the evaluation f(n) = g(n) + h(n), called the f-value, and no other criteria. Ties are then dealt with arbitrarily (usually just by their ordering in the comparison). In the rest of this document, we refer to this as the Default tiebreaking rule. For the following experiments, we also define the following two different methods, each of which you will have to implement:</p>
 <ul>
 <li>If there is a tie in the f-value between two nodes, the node with the lower value of g(n) (i.e. the g-cost) is considered “best. We call this tiebreaking rule, Low-G tiebreaking.</li>
 <li>If there is a tie in the f-cost between two nodes, the node with the higher g-cost is considered best. We call this tiebreaking rule, High-G tiebreaking.</li>
@@ -387,7 +387,7 @@
 <li><p>Let α and β be two instances of A<em> that are identical aside from their tiebreaking policy, and both use the same consistent heuristic. Prove that if some node n is expanded by α before a goal is found, while β does not expand n before a goal is found, then f(n) = C</em>.</p>
 </li>
 </ol>
-<h3 id="Tiebreaking-in-WA-and-GBFS"><a href="#Tiebreaking-in-WA-and-GBFS" class="headerlink" title="Tiebreaking in WA* and GBFS"></a>Tiebreaking in WA* and GBFS</h3><p>The second part of this assignment is on the importance of tiebreaking in WA<em> and GBFS. If you are using the provided code, this means you must extend the given best-first search code to create instances of WA</em> and GBFS.</p>
+<h3 id="Tiebreaking-in-WA-and-GBFS"><a href="#Tiebreaking-in-WA-and-GBFS" class="headerlink" title="Tiebreaking in WA* and GBFS"></a>Tiebreaking in WA* and GBFS</h3><p>The second part of this request is on the importance of tiebreaking in WA<em> and GBFS. If you are using the provided code, this means you must extend the given best-first search code to create instances of WA</em> and GBFS.</p>
 <ol>
 <li><p>Repeat the experiments in questions 1(a) and 1(b) with WA<em> (use weights 2 and 5) and GBFS. In no more than 5 sentences, explain if the same trends hold as with A</em>, and why or why not.</p>
 </li>
@@ -398,7 +398,7 @@
 <li><p>Let T(x, y) be a boolean function that returns true if node x is less than or equal to y and false otherwise (i.e., T is a tiebreaking rule). Consider any problem with a finite number of states. Let α be an instance of WA* that uses T to tiebreak, and let β be an instance of GBFS that uses the same heuristic as α, Low-G tiebreaking, and T to resolve any remaining ties. Prove that on any problem with a finite state-space, there exists a constant W such that if α uses a weight w ≥ W , then α and β will expand the exact same set of nodes in the exact same order until a solution is found.</p>
 </li>
 </ol>
-<h3 id="Re-expansions-in-WA-and-GBFS"><a href="#Re-expansions-in-WA-and-GBFS" class="headerlink" title="Re-expansions in WA* and GBFS"></a>Re-expansions in WA* and GBFS</h3><p>The third part of the assignment is on the impact of re-expansions in WA<em> and GBFS. For this part of the assignment, you will have to modify the code, so that it has the option to not reopen nodes when a lower-cost path is found to a state. For clarity, we refer to a WA</em> or GBFS that does reopen nodes as rWA<em> and rGBFS, respectively, and a WA</em> or GBFS that does not reopen nodes as nrWA* and nrGBFS, respectively.</p>
+<h3 id="Re-expansions-in-WA-and-GBFS"><a href="#Re-expansions-in-WA-and-GBFS" class="headerlink" title="Re-expansions in WA* and GBFS"></a>Re-expansions in WA* and GBFS</h3><p>The third part of the request is on the impact of re-expansions in WA<em> and GBFS. For this part of the request, you will have to modify the code, so that it has the option to not reopen nodes when a lower-cost path is found to a state. For clarity, we refer to a WA</em> or GBFS that does reopen nodes as rWA<em> and rGBFS, respectively, and a WA</em> or GBFS that does not reopen nodes as nrWA* and nrGBFS, respectively.</p>
 <ol>
 <li><p>Run nrGBFS and nrWA* with weights 2, 5, and 10, on the 100 15-puzzle problems and create a table that shows the average and median number of node expansions, and the average and median solution costs. For each algorithm, use the best tiebreaking rule as seen in 2(b). In at most three sentences, describe how the results compare to those seen in question 2(b).</p>
 </li>

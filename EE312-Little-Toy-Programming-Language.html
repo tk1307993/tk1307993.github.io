@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
+<meta name="description" content="辅导一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
 <meta name="keywords" content="Compiler">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EE312-Little-Toy-Programming-Language">
 <meta property="og:url" content="https://tk1307993.coding.me/EE312-Little-Toy-Programming-Language.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
+<meta property="og:description" content="辅导一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-29T00:49:38.361Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:54.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EE312-Little-Toy-Programming-Language">
-<meta name="twitter:description" content="代写一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
+<meta name="twitter:description" content="辅导一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。
+                  辅导一个精简版的interpreter，可以解析functions, loops, conditional statements, arithmetic和recursion等。
               </div>
           
 
@@ -360,7 +360,7 @@
       
 
       
-        <h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>For our final project we will write our own little toy programming language. The language will have functions, loops, conditional statements, arithmetic and will even support recursion. For Phase B of the project, we’re introducing real program statements (well, I suppose “real” here is a relative term). In addition to output and assignment statements from Phase A, we’ll have conditional statements (if), loops (do) and functions (defun and call). We’ll also introduce the concept of statement blocks, since loops, functions and conditions have “bodies” consisting of a sequence of statements (i.e., a block).</p>
+        <h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>For our final project we will write our own little toy programming language. The language will have functions, loops, conditional statements, arithmetic and will even support recursion. For Phase B of the project, we’re introducing real program statements (well, I suppose “real” here is a relative term). In addition to output and request statements from Phase A, we’ll have conditional statements (if), loops (do) and functions (defun and call). We’ll also introduce the concept of statement blocks, since loops, functions and conditions have “bodies” consisting of a sequence of statements (i.e., a block).</p>
 <h3 id="The-Blip-do-statement"><a href="#The-Blip-do-statement" class="headerlink" title="The Blip do statement"></a>The Blip do statement</h3><p>While if statements are conceptually easier than loops, it’s perhaps best to start with the do construct. At the very least, the do statement is more straightforward to parse than an if.</p>
 <p>As you can see, the syntax consists of the do keyword followed by a loop condition expression, followed by a block of statements followed by the od keyword. As always in Blip, the spacing, indenting and new lines are all irrelevant. Please note that the block of statements can consist of zero or more statements. In Blip, a do loop with zero statements in the block is always silly (an infinite loop with no output). However, technically that is a legal loop.</p>
 <p>The semantics of a do statement in Blip are essentially the same as a while loop in C. First evaluate the expression. If the expression is true (i.e., any integer value other than 0), then execute the block of statements. Then re-evaluate the expression and continue repeating the block of statements until the expression evaluates to false.</p>

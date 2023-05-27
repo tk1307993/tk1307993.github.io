@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+<meta name="description" content="这次需要辅导的Python需求是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CSCI141-Blackout-Math">
+<meta property="og:title" content="Python辅导：CSCI141-Blackout-Math">
 <meta property="og:url" content="https://tk1307993.coding.me/CSCI141-Blackout-Math.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+<meta property="og:description" content="这次需要辅导的Python需求是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T10:38:13.602Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:57.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CSCI141-Blackout-Math">
-<meta name="twitter:description" content="这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
+<meta name="twitter:title" content="Python辅导：CSCI141-Blackout-Math">
+<meta name="twitter:description" content="这次需要辅导的Python需求是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：CSCI141-Blackout-Math | 留学生CS编程辅导</title>
+  <title>Python辅导：CSCI141-Blackout-Math | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CSCI141-Blackout-Math</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：CSCI141-Blackout-Math</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的Python作业是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。
+                  这次需要辅导的Python需求是解Blackout Math问题，也就是算数挖空，类似于九宫格游戏，不过多了运算符号，而且是挖数字而不是填数字。
               </div>
           
 
@@ -383,7 +383,7 @@
 <p>Your function for making the tree will be recursive in nature, as recursion is the easiest way to process a binary tree.<br>Psuedocode for making the tree:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def makeTree( equation, <span class="built_in">value</span> ):</span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> equation is <span class="literal">empty</span>, we have reached <span class="keyword">the</span> leaves <span class="keyword">of</span> this branch:</span><br><span class="line">    <span class="built_in">set</span> left <span class="keyword">and</span> <span class="literal">right</span> children <span class="built_in">to</span> None</span><br><span class="line">  otherwise:</span><br><span class="line">    we need <span class="built_in">to</span> <span class="built_in">create</span> <span class="keyword">the</span> left <span class="keyword">and</span> <span class="literal">right</span> children:</span><br><span class="line">    - left will be <span class="keyword">a</span> recursive call <span class="built_in">to</span> make tree <span class="keyword">with</span>:</span><br><span class="line">      - <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> removed <span class="built_in">from</span> <span class="keyword">the</span> equation</span><br><span class="line">      - <span class="keyword">the</span> same <span class="built_in">value</span></span><br><span class="line">    - <span class="literal">right</span> will be <span class="keyword">a</span> recursive call <span class="built_in">to</span> make tree <span class="keyword">with</span>:</span><br><span class="line">      - <span class="keyword">the</span> equation <span class="keyword">with</span> <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> removed</span><br><span class="line">      - <span class="keyword">the</span> <span class="keyword">first</span> <span class="keyword">character</span> <span class="keyword">of</span> <span class="keyword">the</span> equation appended <span class="built_in">to</span> <span class="keyword">the</span> <span class="built_in">value</span></span><br><span class="line">  make <span class="keyword">a</span> binary tree node <span class="keyword">with</span> <span class="keyword">the</span> left, <span class="literal">right</span>, <span class="keyword">and</span> current <span class="built_in">value</span></span><br><span class="line">  <span class="literal">return</span> <span class="keyword">the</span> binary tree node</span><br></pre></td></tr></table></figure></p>
 <p>In the case of the tree presented above, there are no valid solutions. These trees can get large. There are actually 2 n possible leaf nodes, where n is the length of the equation. For example, the equation 3 + 2 / 5 = 5 + 3 × 2 will have 2 11 possible leaf nodes. That’s 2048 leaf nodes!</p>
 <h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><p>As you develop your solution, make sure to thoroughly test each function as well as the overall solution. For the compute function, it probably makes sense to test simple expressions first, then more complex ones (including parentheses), and finally ones that will cause errors of various kinds.</p>
-<p>For the overall solution, you should test some different puzzles including some of your own creation (making a puzzle isn’t that hard!). Make sure that your code works for all the puzzles – but we will not test with any puzzle that does not have a solution. Note that some puzzles, such as the one given at the top of this assignment, do not rely on order of operations, so can be used for testing whether or not you have implemented that algorithm.</p>
+<p>For the overall solution, you should test some different puzzles including some of your own creation (making a puzzle isn’t that hard!). Make sure that your code works for all the puzzles – but we will not test with any puzzle that does not have a solution. Note that some puzzles, such as the one given at the top of this request, do not rely on order of operations, so can be used for testing whether or not you have implemented that algorithm.</p>
 
       
     </div>
@@ -414,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMPSCI230-Bouncing-Program.html" rel="next" title="Java代写：COMPSCI230-Bouncing-Program">
-                <i class="fa fa-chevron-left"></i> Java代写：COMPSCI230-Bouncing-Program
+              <a href="/COMPSCI230-Bouncing-Program.html" rel="next" title="Java辅导：COMPSCI230-Bouncing-Program">
+                <i class="fa fa-chevron-left"></i> Java辅导：COMPSCI230-Bouncing-Program
               </a>
             
           </div>
@@ -424,8 +424,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CSCI1300-Working-with-real-data.html" rel="prev" title="Java代写：CSCI1300-Working-with-real-data">
-                Java代写：CSCI1300-Working-with-real-data <i class="fa fa-chevron-right"></i>
+              <a href="/CSCI1300-Working-with-real-data.html" rel="prev" title="Java辅导：CSCI1300-Working-with-real-data">
+                Java辅导：CSCI1300-Working-with-real-data <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta name="description" content="这次需要辅导的需求，考察Python的Unit tests的使用方法，关注测试的code coverage。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSCA08-UnitTests">
 <meta property="og:url" content="https://tk1307993.coding.me/CSCA08-UnitTests.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta property="og:description" content="这次需要辅导的需求，考察Python的Unit tests的使用方法，关注测试的code coverage。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-25T01:40:58.857Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:00.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSCA08-UnitTests">
-<meta name="twitter:description" content="这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。">
+<meta name="twitter:description" content="这次需要辅导的需求，考察Python的Unit tests的使用方法，关注测试的code coverage。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的作业，考察Python的Unit tests的使用方法，关注测试的code coverage。
+                  这次需要辅导的需求，考察Python的Unit tests的使用方法，关注测试的code coverage。
               </div>
           
 
@@ -361,7 +361,7 @@
 
       
         <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In our final exercise of the term, we’re going to be practicing writing UnitTests. The structure of the tests isn’t really as important as the testing plan, but we get to test both.</p>
-<h3 id="What-to-Test"><a href="#What-to-Test" class="headerlink" title="What to Test"></a>What to Test</h3><p>We wanted to come up with a function for you to test that had a bit of everything: loops, selection, lists, strings, dictionaries, objects, etc. But we had a bit of a conundrum. We wanted something complicated enough to be interesting, but knew you were busy with your assignment, and didn’t want everyone to have to spend lots of time writing a new function in order to test it.</p>
+<h3 id="What-to-Test"><a href="#What-to-Test" class="headerlink" title="What to Test"></a>What to Test</h3><p>We wanted to come up with a function for you to test that had a bit of everything: loops, selection, lists, strings, dictionaries, objects, etc. But we had a bit of a conundrum. We wanted something complicated enough to be interesting, but knew you were busy with your request, and didn’t want everyone to have to spend lots of time writing a new function in order to test it.</p>
 <p>That’s when it hit us. You’re already writing a function that you’ll probably want to test anyway… cartesian product! It’s got everything we need, you already have to write it, and now it can help you test your own code for A2. (A pretty smart move if I do say so myself).</p>
 <h3 id="How-to-Start"><a href="#How-to-Start" class="headerlink" title="How to Start"></a>How to Start</h3><p>Before you start writing any code, you should think about coverage testing, and how we came up with a test plan in lecture. Figure out all of the parameters, and the important ranges they fall into. Then write one test for each possible combination of ranges. The goal here is to find one example test case for all possible regions of your testing space.</p>
 <p>Most of your actual tests will probably involve code that looks like this (now do you see why we made you write set dict and get dict?<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">d1 = <span class="meta">&#123;...&#125;</span></span><br><span class="line">d2 = <span class="meta">&#123;...&#125;</span></span><br><span class="line">t1 = <span class="type">Table</span>()</span><br><span class="line">t2 = <span class="type">Table</span>()</span><br><span class="line">t1.set_dict(d1)</span><br><span class="line">t2.set_dict(d2)</span><br><span class="line">result_table = squeal.cartesian_product(t1, t2)</span><br><span class="line">result_dict = result_table.get_dict()</span><br><span class="line">expected_dict = <span class="meta">&#123;...&#125;</span></span><br><span class="line">self.assertEqual(result_dict, expected_dict)</span><br></pre></td></tr></table></figure></p>

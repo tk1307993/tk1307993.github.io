@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++作业。">
+<meta name="description" content="辅导C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++需求。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CS246-Streaming-and-Memory-Management">
+<meta property="og:title" content="C++辅导：CS246-Streaming-and-Memory-Management">
 <meta property="og:url" content="https://tk1307993.coding.me/CS246-Streaming-and-Memory-Management.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++作业。">
+<meta property="og:description" content="辅导C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++需求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-23T11:14:50.569Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:09.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CS246-Streaming-and-Memory-Management">
-<meta name="twitter:description" content="代写C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++作业。">
+<meta name="twitter:title" content="C++辅导：CS246-Streaming-and-Memory-Management">
+<meta name="twitter:description" content="辅导C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++需求。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C++代写：CS246-Streaming-and-Memory-Management | 留学生CS编程辅导</title>
+  <title>C++辅导：CS246-Streaming-and-Memory-Management | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CS246-Streaming-and-Memory-Management</h2>
+          <h2 class="post-title" itemprop="name headline">C++辅导：CS246-Streaming-and-Memory-Management</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++作业。
+                  辅导C++基础练习题，练习内存分配、I/O处理等的使用方法，属于比较基础的C++需求。
               </div>
           
 
@@ -360,10 +360,10 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Note: You must use the C++ I/O streaming and memory management facilities on this assignment. Moreover, the only standard headers you may #include are iostream, fstream, sstream, iomanip, string, and utility. Marmoset will be programmed to reject submissions that violate these restrictions.</p>
-<p>Note: Each question on this assignment asks you to write a C++ program, and the programs you write on this assignment each span multiple files. Moreover, each question asks you to submit a Makefile for building your program. For these reasons, we strongly recommend that you develop your solution for each question in a separate directory. Just remember that, for each question, you should be in that directory when you create your zip file, so that your zip file does not contain any extra directory structure.</p>
-<p>Note: Questions on this assignment will be hand-marked to ensure that you are writing highquality code, and to ensure that your solutions employ the programming techniques mandated by each question.</p>
-<p>Note: You are not permitted to ask any public questions on Piazza about what the programs that make up the assignment are supposed to do. A major part of this assignment involves designing test cases, and questions that ask what the programs should do in one case or another will give away potential test cases to the rest of the class. Instead, we will provide compiled executables, suitable for running on linux.student.cs, that you can use to check intended behaviour. Questions found in violation of this rule will be marked private or deleted; repeat offences could be subject to discipline.</p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Note: You must use the C++ I/O streaming and memory management facilities on this request. Moreover, the only standard headers you may #include are iostream, fstream, sstream, iomanip, string, and utility. Marmoset will be programmed to reject submissions that violate these restrictions.</p>
+<p>Note: Each question on this request asks you to write a C++ program, and the programs you write on this request each span multiple files. Moreover, each question asks you to submit a Makefile for building your program. For these reasons, we strongly recommend that you develop your solution for each question in a separate directory. Just remember that, for each question, you should be in that directory when you create your zip file, so that your zip file does not contain any extra directory structure.</p>
+<p>Note: Questions on this request will be hand-marked to ensure that you are writing highquality code, and to ensure that your solutions employ the programming techniques mandated by each question.</p>
+<p>Note: You are not permitted to ask any public questions on Piazza about what the programs that make up the request are supposed to do. A major part of this request involves designing test cases, and questions that ask what the programs should do in one case or another will give away potential test cases to the rest of the class. Instead, we will provide compiled executables, suitable for running on linux.student.cs, that you can use to check intended behaviour. Questions found in violation of this rule will be marked private or deleted; repeat offences could be subject to discipline.</p>
 <h3 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h3><p>In this exercise, you will write a C++ class (implemented as a struct) to control a simple robotic drone exploring some terrain. Your drone starts at coordinates (0,0), facing north.<br>Use the following structure definition for coordinates:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Position</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> ew, ns;</span><br><span class="line">  Position( <span class="keyword">int</span> ew = <span class="number">0</span>, <span class="keyword">int</span> ns = <span class="number">0</span> );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>The east-west direction is the first component of a position, and the north-south direction is the second. Your Drone class must be properly initialized via a constructor, and must provide the following methods:<br>|  Method   | Description  |<br>|  —-  | —-  |<br>| void forward()  | Move the drone one unit forward. |<br>| void backward()  | Moves the drone one unit backward. |</p>
 <p>For simplicity, you may assume that the drone will never visit more than 50 positions before running out of fuel or otherwise breaking down.</p>
@@ -417,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS350-System-Calls.html" rel="next" title="C代写：CS350-System-Calls">
-                <i class="fa fa-chevron-left"></i> C代写：CS350-System-Calls
+              <a href="/CS350-System-Calls.html" rel="next" title="C辅导：CS350-System-Calls">
+                <i class="fa fa-chevron-left"></i> C辅导：CS350-System-Calls
               </a>
             
           </div>
@@ -427,8 +427,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CIS3490-Convex-Hull.html" rel="prev" title="C代写：CIS3490-Convex-Hull">
-                C代写：CIS3490-Convex-Hull <i class="fa fa-chevron-right"></i>
+              <a href="/CIS3490-Convex-Hull.html" rel="prev" title="C辅导：CIS3490-Convex-Hull">
+                C辅导：CIS3490-Convex-Hull <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

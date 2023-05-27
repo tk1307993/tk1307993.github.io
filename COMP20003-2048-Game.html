@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
+<meta name="description" content="辅导一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。需求中给出了2048的高分AI参考算法。">
 <meta name="keywords" content="Algorithm,Game,Artificial Intelligence">
 <meta property="og:type" content="article">
 <meta property="og:title" content="COMP20003-2048-Game">
 <meta property="og:url" content="https://tk1307993.coding.me/COMP20003-2048-Game.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
+<meta property="og:description" content="辅导一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。需求中给出了2048的高分AI参考算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-08T14:57:33.967Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:19.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="COMP20003-2048-Game">
-<meta name="twitter:description" content="代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。">
+<meta name="twitter:description" content="辅导一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。需求中给出了2048的高分AI参考算法。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。作业中给出了2048的高分AI参考算法。
+                  辅导一个带AI功能的2048游戏，要求能自动玩，并且平均能得到5000分以上的成绩。需求中给出了2048的高分AI参考算法。
               </div>
           
 
@@ -360,10 +360,10 @@
       
 
       
-        <h3 id="Assignment-description"><a href="#Assignment-description" class="headerlink" title="Assignment description"></a>Assignment description</h3><p>In this programming assignment you’ll be expected to build a solver for the 2048 game. The game has been described by the Wall Street Journal as “almost like Candy Crush for math geeks”. You can play the game compiling the code given to you using the keyboard, or using this web implementation <a href="http://2048game.com/" target="_blank" rel="noopener">http://2048game.com/</a>.</p>
+        <h3 id="request-description"><a href="#request-description" class="headerlink" title="request description"></a>request description</h3><p>In this programming request you’ll be expected to build a solver for the 2048 game. The game has been described by the Wall Street Journal as “almost like Candy Crush for math geeks”. You can play the game compiling the code given to you using the keyboard, or using this web implementation <a href="http://2048game.com/" target="_blank" rel="noopener">http://2048game.com/</a>.</p>
 <h3 id="The-2048-game"><a href="#The-2048-game" class="headerlink" title="The 2048 game"></a>The 2048 game</h3><p>2048 is played on a 4x4 grid, with numbered tiles that slide smoothly when a player moves them using the four arrow keys. Every turn, a new tile will randomly appear in an empty spot on the board with a value of either 2 or 4. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the edge of the grid. If two tiles of the same number collide while moving, they will merge into a tile with the total value of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.</p>
 <p>A scoreboard on the upper-right keeps track of the user’s score. The user’s score starts at zero, and is incremented whenever two tiles combine, by the value of the new tile.</p>
-<p>The game is won when a tile with a value of 2048 appears on the board, hence the name of the game. After reaching the 2048 tile, players can continue to play (beyond the 2048 tile) to reach higher scores. In this assignment, your solver should continue playing after reaching tile 2048. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.</p>
+<p>The game is won when a tile with a value of 2048 appears on the board, hence the name of the game. After reaching the 2048 tile, players can continue to play (beyond the 2048 tile) to reach higher scores. In this request, your solver should continue playing after reaching tile 2048. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.</p>
 <h3 id="The-Algorithm"><a href="#The-Algorithm" class="headerlink" title="The Algorithm"></a>The Algorithm</h3><p>Each possible configuration of the 2048 4x4 grid is called a state. The 2048 Graph G = (V, E) is implicitly defined. The vertex set V is defined as all the possible 4x4 configurations (states), and the edges E connecting two vertexes are defined by the legal movements (right, left, up, down).</p>
 <p>Your task is to find the path leading to the higest score, i.e. leading to the most rewarding vertex (state). A path is a sequence of movements. You are going to use a variant of Dijkstra to explore the most rewarding path first, up to a maximum depth D.</p>
 <p>Every time the game asks you for a movement (action), you should explore all possible paths up to depth D. Once you finished generating all the paths, you should return the first action only of the path leading to the highest score vertex. This action will be then executed by the game engine.</p>
@@ -587,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-description"><span class="nav-number">1.</span> <span class="nav-text">Assignment description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-2048-game"><span class="nav-number">2.</span> <span class="nav-text">The 2048 game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Algorithm"><span class="nav-number">3.</span> <span class="nav-text">The Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables-evaluation-and-delivery-rules"><span class="nav-number">4.</span> <span class="nav-text">Deliverables, evaluation and delivery rules</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">4.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">4.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deliverable-2-–-Experimentation"><span class="nav-number">4.3.</span> <span class="nav-text">Deliverable 2 – Experimentation</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#request-description"><span class="nav-number">1.</span> <span class="nav-text">request description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-2048-game"><span class="nav-number">2.</span> <span class="nav-text">The 2048 game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Algorithm"><span class="nav-number">3.</span> <span class="nav-text">The Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables-evaluation-and-delivery-rules"><span class="nav-number">4.</span> <span class="nav-text">Deliverables, evaluation and delivery rules</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">4.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">4.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deliverable-2-–-Experimentation"><span class="nav-number">4.3.</span> <span class="nav-text">Deliverable 2 – Experimentation</span></a></li></ol></li></ol></div>
             
 
           </div>

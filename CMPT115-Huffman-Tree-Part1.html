@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
+<meta name="description" content="需求分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman需求不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++代写：CMPT115-Huffman-Tree-Part1">
+<meta property="og:title" content="C++辅导：CMPT115-Huffman-Tree-Part1">
 <meta property="og:url" content="https://tk1307993.coding.me/CMPT115-Huffman-Tree-Part1.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
+<meta property="og:description" content="需求分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman需求不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-25T11:51:15.317Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:21.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++代写：CMPT115-Huffman-Tree-Part1">
-<meta name="twitter:description" content="作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
+<meta name="twitter:title" content="C++辅导：CMPT115-Huffman-Tree-Part1">
+<meta name="twitter:description" content="需求分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman需求不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C++代写：CMPT115-Huffman-Tree-Part1 | 留学生CS编程辅导</title>
+  <title>C++辅导：CMPT115-Huffman-Tree-Part1 | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C++代写：CMPT115-Huffman-Tree-Part1</h2>
+          <h2 class="post-title" itemprop="name headline">C++辅导：CMPT115-Huffman-Tree-Part1</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  作业分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman作业不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。
+                  需求分四部分，需要实现Huffman coding，当然也就是构造Huffman Tree了。 通常的Huffman需求不会这么复杂，这次这么复杂是因为增加了许多工程性的功能，数据格式也是五花八门。这次主要是搭建环境，熟悉整个项目框架结构。
               </div>
           
 
@@ -360,12 +360,12 @@
       
 
       
-        <h3 id="Task-description"><a href="#Task-description" class="headerlink" title="Task description"></a>Task description</h3><p>This is a programming assignment. Get started early! Unanticipated problems will arise in your work, and you will need time to sort them out.</p>
+        <h3 id="Task-description"><a href="#Task-description" class="headerlink" title="Task description"></a>Task description</h3><p>This is a programming request. Get started early! Unanticipated problems will arise in your work, and you will need time to sort them out.</p>
 <p>Clarifying questions can be posted on the CMPT 115 Moodle forums. Help with debugging can be obtained by working in the lab during Help Desk hours of your instructors and TAs. Expect high demand for this kind of help on Fridays.</p>
-<p>All C++ source code files must contain your name, student number, and NSID; and the course, assignment number, and question number as comments at the top of the file. All C++ programs must compile with g++ on the command line without errors or warnings, using the standard flags described in tutorial, namely -Wall -pedantic.</p>
-<p>You may, of course, work on your assignment using Eclipse, or any other C++ IDE, on your personal notebooks or desktops, or on any computer in the Spinks labs. We cannot always help you with problems arising specifically from the IDE, but C++ should have the same bahaviour on all these systems. There are good reasons to use an IDE like Eclipse or MSVS, but there are good reasons to learn to use the command-line too. Learn both!</p>
-<p>Use of String class or string or other object-oriented code (except for cin or cout and any others explicitly allowed in an assignment specification) will result in a flat deduction of 25%. (That means: don’t use advanced techniques to avoid learning the concepts we are attempting to teach you!)</p>
-<h3 id="The-Big-Picture"><a href="#The-Big-Picture" class="headerlink" title="The Big Picture"></a>The Big Picture</h3><p>For this assignment, you will be implementing the Huffman Tree encoding algorithm for file compression. We’re giving you 2 weeks for all of this work. It’s crucial that you do not leave it to the last minute. (All this talk about code is confusing; sometimes the word code refers to C++ code. Sometimes it refers to the Huffman code. And, unfortunately, we will have to refer to ASCII code as well. We’ll try to be clear.)</p>
+<p>All C++ source code files must contain your name, student number, and NSID; and the course, request number, and question number as comments at the top of the file. All C++ programs must compile with g++ on the command line without errors or warnings, using the standard flags described in tutorial, namely -Wall -pedantic.</p>
+<p>You may, of course, work on your request using Eclipse, or any other C++ IDE, on your personal notebooks or desktops, or on any computer in the Spinks labs. We cannot always help you with problems arising specifically from the IDE, but C++ should have the same bahaviour on all these systems. There are good reasons to use an IDE like Eclipse or MSVS, but there are good reasons to learn to use the command-line too. Learn both!</p>
+<p>Use of String class or string or other object-oriented code (except for cin or cout and any others explicitly allowed in an request specification) will result in a flat deduction of 25%. (That means: don’t use advanced techniques to avoid learning the concepts we are attempting to teach you!)</p>
+<h3 id="The-Big-Picture"><a href="#The-Big-Picture" class="headerlink" title="The Big Picture"></a>The Big Picture</h3><p>For this request, you will be implementing the Huffman Tree encoding algorithm for file compression. We’re giving you 2 weeks for all of this work. It’s crucial that you do not leave it to the last minute. (All this talk about code is confusing; sometimes the word code refers to C++ code. Sometimes it refers to the Huffman code. And, unfortunately, we will have to refer to ASCII code as well. We’ll try to be clear.)</p>
 <p>The main application here to read a file, say message.txt, containing some text, and then to translate (“encode”) the text using the Huffman code. Your program will write the Huffman coded text to a new file, say coded-message.txt. Your program will also be required to read the very same Huffman coded text from coded-message.txt, and decode it, resulting in an exact duplicate of original message. This will demonstrate that your application uses the Huffman code correctly.</p>
 <p>This is almost a real application. It’s artificial in the sense that your main program will encode and decode the same message. A real file-compression application will either encode a file, or decode it, but usually not both. Students who want a challenge can go beyond the requirements to write a file compression utility. Another unrealistic aspect is that we’re using a text-file as the compressed file, which actually causes the “compressed file” to be larger than the original. Don’t worry about that; the Huffman code, and the use of lists and trees is what we’re interested in.</p>
 <h3 id="Files-and-more-files"><a href="#Files-and-more-files" class="headerlink" title="Files and more files"></a>Files and more files</h3><p>We’re giving you a lot of material to start with, by providing partially implemented ADTs:</p>
@@ -377,10 +377,10 @@
 <li>Huffman.cc, Huffman.h: These files define two new ADTs: The HUffmanTree, and the HuffmanCodec. These are explained in more detail below.</li>
 </ul>
 <p>For consistency, all of the ADT implementation files have the extension “.cc” so you can recognize them.</p>
-<p>You should find List.cc and TreeNode.cc familiar, as you’ve seen variations of it in previous lectures and assignments. We have made a few simple exercises using Lists and TreeNodes to get started, but most of the List and TreeNode ADT is given. You should review the ADT definitions, to become familiar with the operation names, and to know the details of how the operations are called (i.e., parameters and return values).</p>
+<p>You should find List.cc and TreeNode.cc familiar, as you’ve seen variations of it in previous lectures and requests. We have made a few simple exercises using Lists and TreeNodes to get started, but most of the List and TreeNode ADT is given. You should review the ADT definitions, to become familiar with the operation names, and to know the details of how the operations are called (i.e., parameters and return values).</p>
 <p>There are some utility files that we provided:</p>
 <ul>
-<li>Element.h, TreeElement.h: These define the data that get stored in our Lists and Trees. You won’t have to change them for this assignment.</li>
+<li>Element.h, TreeElement.h: These define the data that get stored in our Lists and Trees. You won’t have to change them for this request.</li>
 <li>copy.cc, copy.h: These define a useful funciton for making safe copies of C-strings. We’ve used this function several times.</li>
 <li>LOCALE.h: A file with 2 symbols defined. We’ve used #include “LOCALE.h” in all of the other files.</li>
 <li>message.txt: You can use any message file you like, but we’ve provided one that is roughly at the size limit of what the application should be able to do. It’s also topical.</li>
@@ -393,7 +393,7 @@
 <h3 id="Steps-briefly"><a href="#Steps-briefly" class="headerlink" title="Steps (briefly)"></a>Steps (briefly)</h3><p>Each of the following steps is explained more carefully below!</p>
 <ol>
 <li>Download the files, and make sure everything runs right.</li>
-<li>Follow the Exercises in this assignment. The first few are warm-ups, so that you become familiar with the process you should follow. For each exercise:<br>a. Read the exercise.<br>b. Add some code to one or more of the files.<br>c. Build the testADT program, and check if the output shows that your work was successful. The testing in testADT is pretty thorough.</li>
+<li>Follow the Exercises in this request. The first few are warm-ups, so that you become familiar with the process you should follow. For each exercise:<br>a. Read the exercise.<br>b. Add some code to one or more of the files.<br>c. Build the testADT program, and check if the output shows that your work was successful. The testing in testADT is pretty thorough.</li>
 <li>The final exercise tests your work using the a9app.cc program, which should prove to you that everything is working well.</li>
 </ol>
 <h3 id="Download-all-the-files-and-build"><a href="#Download-all-the-files-and-build" class="headerlink" title="Download all the files and build"></a>Download all the files and build</h3><p>Moodle has the complete set of files. It will help a lot if do this work in a new folder. The complete list of files to download is here:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Element</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">Frequency</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">Frequency</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">FrequencyList</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">FrequencyList</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">Huffman</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">Huffman</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">LOCALE</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">List</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">List</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">TreeElement</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">TreeNode</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">TreeNode</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">a9app</span><span class="selector-class">.cpp</span></span><br><span class="line"><span class="selector-tag">copy</span><span class="selector-class">.cc</span></span><br><span class="line"><span class="selector-tag">copy</span><span class="selector-class">.h</span></span><br><span class="line"><span class="selector-tag">message</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">testADTs</span><span class="selector-class">.cpp</span></span><br></pre></td></tr></table></figure></p>
@@ -427,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMP2129-Minesweeper.html" rel="next" title="C代写：COMP2129-Minesweeper">
-                <i class="fa fa-chevron-left"></i> C代写：COMP2129-Minesweeper
+              <a href="/COMP2129-Minesweeper.html" rel="next" title="C辅导：COMP2129-Minesweeper">
+                <i class="fa fa-chevron-left"></i> C辅导：COMP2129-Minesweeper
               </a>
             
           </div>
@@ -437,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CMPT115-Huffman-Tree-Part2.html" rel="prev" title="C++代写：CMPT115-Huffman-Tree-Part2">
-                C++代写：CMPT115-Huffman-Tree-Part2 <i class="fa fa-chevron-right"></i>
+              <a href="/CMPT115-Huffman-Tree-Part2.html" rel="prev" title="C++辅导：CMPT115-Huffman-Tree-Part2">
+                C++辅导：CMPT115-Huffman-Tree-Part2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

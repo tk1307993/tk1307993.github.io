@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用Python代写一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
+<meta name="description" content="用Python辅导一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
 <meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CS204-Hashing">
+<meta property="og:title" content="Python辅导：CS204-Hashing">
 <meta property="og:url" content="https://tk1307993.coding.me/CS204-Hashing.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="用Python代写一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
+<meta property="og:description" content="用Python辅导一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-10T02:38:24.070Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:12.077Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CS204-Hashing">
-<meta name="twitter:description" content="用Python代写一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
+<meta name="twitter:title" content="Python辅导：CS204-Hashing">
+<meta name="twitter:description" content="用Python辅导一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：CS204-Hashing | 留学生CS编程辅导</title>
+  <title>Python辅导：CS204-Hashing | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CS204-Hashing</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：CS204-Hashing</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用Python代写一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。
+                  用Python辅导一个Hashing的程序，对自然语言进行统计排序，由于是自然语言，存在大量的标点符号，以及大小写的处理。
               </div>
           
 
@@ -363,7 +363,7 @@
         <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Write a program that uses hashing for the following problem. Given a natural language text, generate a table of distinct words with the number of occurrences of each word in the text. A word is defined as a series of alphanumeric characters. Note that punctuation and spaces can both (separately or together) delineate a word. There are some hyphenated words in the text; for these words there will be no space before or after the hyphen and the hyphen should be considered part of the word. Capitalized versions of a word are considered the same as the lowercase version, so feel free to change all words to either upper- or lowercase. Plural possessives and contractions should remain and be counted as a unique word (such as can’t or widows’).</p>
 <p>You must use the provided input file, which contains the first chapter of Tolkien’s “The Hobbit” found on herePreview the documentView in a new window.</p>
 <p>Your resulting program will be an interactive one allowing the user to type in a word (that may or may not appear in the table) and receive the number of occurrences of that word in the text until the user wishes to quit.</p>
-<h3 id="The-challenge"><a href="#The-challenge" class="headerlink" title="The challenge"></a>The challenge</h3><p>Find the combination of hash function and collision resolution that will minimize the collisions. A collision is defined as an attempt to store a new word in a location already occupied by another word. Consequently, it is possible for a new word to collide more than once before it is finally stored. To qualify for full credit on the assignment, you must have fewer than 625 collisions and your table size must be appropriate for the number of words (see below) and the collision resolution used. Your instructor was able to reach 514 collisions simply using a version of one of the hash functions discussed in class and linear probe. The student(s) with the least collisions and proper table size will receive 5 bonus points.</p>
+<h3 id="The-challenge"><a href="#The-challenge" class="headerlink" title="The challenge"></a>The challenge</h3><p>Find the combination of hash function and collision resolution that will minimize the collisions. A collision is defined as an attempt to store a new word in a location already occupied by another word. Consequently, it is possible for a new word to collide more than once before it is finally stored. To qualify for full credit on the request, you must have fewer than 625 collisions and your table size must be appropriate for the number of words (see below) and the collision resolution used. Your instructor was able to reach 514 collisions simply using a version of one of the hash functions discussed in class and linear probe. The student(s) with the least collisions and proper table size will receive 5 bonus points.</p>
 <h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>There are 663 unique words in the file (using the above definition of a unique word). There are 1976 words in total.</p>
 <h3 id="Program-description"><a href="#Program-description" class="headerlink" title="Program description"></a>Program description</h3><p>Your program should hash the values from the file and then print (neatly formatted) the number of collisions, number of unique words and total number of words to the standard output (screen) before allowing the user to input a word to see the number of times it appeared. The user should be able to input as many words as desired before choosing to quit.</p>
 <h3 id="Suggestions-amp-Notes"><a href="#Suggestions-amp-Notes" class="headerlink" title="Suggestions &amp; Notes"></a>Suggestions &amp; Notes</h3><p>Reading in one word at a time from the file, create a function that pre-processes a word, changing capital letters to lowercase and removing any quotation marks or other unnecessary punctuation that may have been read from the file. Then send the pre-processed string into your hash function.</p>
@@ -400,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CPSC4660-Database-Management-Systems.html" rel="next" title="C代写：CPSC4660-Database-Management-Systems">
-                <i class="fa fa-chevron-left"></i> C代写：CPSC4660-Database-Management-Systems
+              <a href="/CPSC4660-Database-Management-Systems.html" rel="next" title="C辅导：CPSC4660-Database-Management-Systems">
+                <i class="fa fa-chevron-left"></i> C辅导：CPSC4660-Database-Management-Systems
               </a>
             
           </div>
@@ -410,8 +410,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Spell-Checker.html" rel="prev" title="Java代写：Spell Checker">
-                Java代写：Spell Checker <i class="fa fa-chevron-right"></i>
+              <a href="/Spell-Checker.html" rel="prev" title="Java辅导：Spell Checker">
+                Java辅导：Spell Checker <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

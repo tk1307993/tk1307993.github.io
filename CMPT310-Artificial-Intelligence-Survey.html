@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
+<meta name="description" content="辅导AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
 <meta name="keywords" content="Algorithm,Artificial Intelligence">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CMPT310-Artificial-Intelligence-Survey">
 <meta property="og:url" content="https://tk1307993.coding.me/CMPT310-Artificial-Intelligence-Survey.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
+<meta property="og:description" content="辅导AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-15T04:30:30.447Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:21.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CMPT310-Artificial-Intelligence-Survey">
-<meta name="twitter:description" content="代写AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
+<meta name="twitter:description" content="辅导AI的经典最小路径的问题，算法用A*即可快速求出最小路径。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写AI的经典最小路径的问题，算法用A*即可快速求出最小路径。
+                  辅导AI的经典最小路径的问题，算法用A*即可快速求出最小路径。
               </div>
           
 
@@ -360,10 +360,10 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment deals with an offline navigation problem. In the general case, search would be on a directed, labelled graph. Here we make a number of simplifying assumptions. An agent is given an n × n grid, with co-ordinates in the range 0,…,n - 1. For the most part, each position (i, j) is connected to its immediate neighbours; i.e. to (i, j + 1), (i, j − 1), (i + 1, j), and (i − 1, j), provided no index goes outside the grid’s boundary. However, some connections are blocked, and a path will have to go around them. Your program is to take a pair of points, say (s(x), s(y)) and (g(x) , g(y)), and find a shortest path from the first point to the second.</p>
-<p>There are two parts to the assignment. For both parts, assume that you are give the scenario as in the figure: The grid is 18 × 18, with co-ordinates running from (0, 0) to (17, 17). There are two obstacles, and the following co-ordinate points are inaccessible:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">7</span>, <span class="number">5</span>), (<span class="number">7</span>, <span class="number">6</span>), (<span class="number">7</span>, <span class="number">7</span>), (<span class="number">7</span>, <span class="number">8</span>), (<span class="number">7</span>, <span class="number">9</span>) and</span><br><span class="line">(<span class="number">10</span>, <span class="number">13</span>), (<span class="number">11</span>, <span class="number">13</span>), (<span class="number">12</span>, <span class="number">13</span>), (<span class="number">13</span>, <span class="number">13</span>), (<span class="number">14</span>, <span class="number">13</span>), (<span class="number">15</span>, <span class="number">13</span>), (<span class="number">15</span>, <span class="number">12</span>).</span><br></pre></td></tr></table></figure></p>
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This request deals with an offline navigation problem. In the general case, search would be on a directed, labelled graph. Here we make a number of simplifying assumptions. An agent is given an n × n grid, with co-ordinates in the range 0,…,n - 1. For the most part, each position (i, j) is connected to its immediate neighbours; i.e. to (i, j + 1), (i, j − 1), (i + 1, j), and (i − 1, j), provided no index goes outside the grid’s boundary. However, some connections are blocked, and a path will have to go around them. Your program is to take a pair of points, say (s(x), s(y)) and (g(x) , g(y)), and find a shortest path from the first point to the second.</p>
+<p>There are two parts to the request. For both parts, assume that you are give the scenario as in the figure: The grid is 18 × 18, with co-ordinates running from (0, 0) to (17, 17). There are two obstacles, and the following co-ordinate points are inaccessible:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">7</span>, <span class="number">5</span>), (<span class="number">7</span>, <span class="number">6</span>), (<span class="number">7</span>, <span class="number">7</span>), (<span class="number">7</span>, <span class="number">8</span>), (<span class="number">7</span>, <span class="number">9</span>) and</span><br><span class="line">(<span class="number">10</span>, <span class="number">13</span>), (<span class="number">11</span>, <span class="number">13</span>), (<span class="number">12</span>, <span class="number">13</span>), (<span class="number">13</span>, <span class="number">13</span>), (<span class="number">14</span>, <span class="number">13</span>), (<span class="number">15</span>, <span class="number">13</span>), (<span class="number">15</span>, <span class="number">12</span>).</span><br></pre></td></tr></table></figure></p>
 <p>So, for example, a path cannot go through (7, 5). You do not need to handle arbitrary board configurations, so it’s ok to hard code the example in your program.</p>
-<h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>For this part, ignore the letters “a”-“d” in the figure. Write a program that determines the shortest path between any two points. While you can chose your language for the assignment, it must be one of the ones commonly used in the School – i.e. C/C++, Python, or Java. Justify your choice of search strategy. Make sure that you test you program with start point (0, 0) and goal (17, 17); carry out any other testing that you feel is necessary to illustrate that your program does what it’s supposed to do.</p>
+<h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>For this part, ignore the letters “a”-“d” in the figure. Write a program that determines the shortest path between any two points. While you can chose your language for the request, it must be one of the ones commonly used in the School – i.e. C/C++, Python, or Java. Justify your choice of search strategy. Make sure that you test you program with start point (0, 0) and goal (17, 17); carry out any other testing that you feel is necessary to illustrate that your program does what it’s supposed to do.</p>
 <p>Your program should output:</p>
 <ul>
 <li>The length of the shortest path.</li>

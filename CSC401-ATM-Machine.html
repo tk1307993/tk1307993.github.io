@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
+<meta name="description" content="辅导一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 <meta name="keywords" content="Fundamentals">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSC401-ATM-Machine">
 <meta property="og:url" content="https://tk1307993.coding.me/CSC401-ATM-Machine.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
+<meta property="og:description" content="辅导一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-18T02:59:54.070Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:00.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSC401-ATM-Machine">
-<meta name="twitter:description" content="代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
+<meta name="twitter:description" content="辅导一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。
+                  辅导一个ATM机的模拟器，实现ATM机基本的存钱/提现/查询等功能。
               </div>
           
 
@@ -360,7 +360,7 @@
       
 
       
-        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this assignment is to assess your understanding of</p>
+        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this request is to assess your understanding of</p>
 <ul>
 <li>Encapsulation in functions</li>
 <li>Namespaces: global vs local</li>
@@ -371,7 +371,7 @@
 <li>Include your full name as a comment on the first line of your Python program.</li>
 <li>Submit (upload) to the dropbox one file labeled as YourName_HW7.py</li>
 </ul>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You are to simulate a simple ATM machine. An account holder (user) should be able to enter their pin number and select from a menu of transactions: Deposit, Withdraw, Balance or Quit. You are to assume that the user has only one account on which these transactions can be performed. This account is associated with the user’s pin number. The ATM should properly and regularly communicate with the user. The ATM should get information on current account information from a file. An accounts.txt file is posted with this assignment. Examine the structure of each line of the file which contains a 4-digit code, first and last names, and the current account balance.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>You are to simulate a simple ATM machine. An account holder (user) should be able to enter their pin number and select from a menu of transactions: Deposit, Withdraw, Balance or Quit. You are to assume that the user has only one account on which these transactions can be performed. This account is associated with the user’s pin number. The ATM should properly and regularly communicate with the user. The ATM should get information on current account information from a file. An accounts.txt file is posted with this request. Examine the structure of each line of the file which contains a 4-digit code, first and last names, and the current account balance.</p>
 <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Note: whenever I use ‘Code the exception’, this means you need to include code in a ‘try’ block to catch the exception caused by a runtime error.<br>You may not use global variables; all variables must be local.</p>
 <h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>Write a function startUp(fname) that takes as input a filename that contains the account holder information and current balance. The file should be read and the data stored in a dictionary with the pin as the key and the remaining information as the value.<br>Note: the current balance is a float data type. Do an explicit conversion to float on that list item. Code an exception (‘Cannot get to the file’). The function should return two values: Boolean, dictionary; for example: if you named your dictionary, daccts, and the file was successfully read and the dictionary successfully created, then return (True, daccts); if the file was not successfully read, return (False, daccts).</p>
 <h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Write a function getUser(proceed, dictionary) that takes as input a Boolean value and the dictionary you created in startUp. Prompt the user to enter a pin number. If the pin is valid, the function should return (user, proceed), where user is the dictionary key value; if the pin is invalid, print (‘Incorrect pin’) and return (None, False).</p>

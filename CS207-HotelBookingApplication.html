@@ -86,14 +86,14 @@
 <meta name="description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
 <meta name="keywords" content="Programming Fundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS207 Hotel Booking Application">
+<meta property="og:title" content="Java辅导：CS207 Hotel Booking Application">
 <meta property="og:url" content="https://tk1307993.coding.me/CS207-HotelBookingApplication.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-25T04:04:18.253Z">
+<meta property="og:updated_time" content="2023-05-27T13:27:46.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS207 Hotel Booking Application">
+<meta name="twitter:title" content="Java辅导：CS207 Hotel Booking Application">
 <meta name="twitter:description" content="Hotel booking application，在软件工程中叫做Hotel reservation system，也就是酒店管理系统。这类系统的开发工作量，主要是根据需求，来实现其业务逻辑部分。">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Java代写：CS207 Hotel Booking Application | 留学生CS编程辅导</title>
+  <title>Java辅导：CS207 Hotel Booking Application | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS207 Hotel Booking Application</h2>
+          <h2 class="post-title" itemprop="name headline">Java辅导：CS207 Hotel Booking Application</h2>
         
 
         <div class="post-meta">
@@ -369,7 +369,7 @@
 <li>As a user, he can cancel the reservation room.</li>
 <li>This application will use a txt file to load the user’s information. The file should contains the following properties:<br>LastName, FirstName, Gender, Age, Email, CreditCardNumber, BillingAddress, ExpriyDate.</li>
 </ol>
-<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本次作业需要实现酒店管理系统的一部分业务功能，即用户使用部分，包括了用户登录、预订查询、查询排序、预定房间和预订取消等功能。代码的实现需要结合所给出的框架来完成，因此熟悉框架的结构成为了一个不可缺少的过程。</p>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本次需求需要实现酒店管理系统的一部分业务功能，即用户使用部分，包括了用户登录、预订查询、查询排序、预定房间和预订取消等功能。代码的实现需要结合所给出的框架来完成，因此熟悉框架的结构成为了一个不可缺少的过程。</p>
 <p>需要注意的是，对于此类系统，一个通用的设计模型是：先判断传入参数和合法性，再判断是否拥有执行权限，最后再做相关业务逻辑。</p>
 <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>下面给出emailAddress地址的业务逻辑代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">validateEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (emailAddress == <span class="keyword">null</span> || emailAddress.equals(<span class="string">""</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Pattern p = Pattern.compile(<span class="string">"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"</span>);</span><br><span class="line">    Matcher m = p.matcher(emailAddress);  </span><br><span class="line">    <span class="keyword">return</span> m.matches();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getEmailAddress</span><span class="params">(String emailAddress)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (validateEmailAddress(emailAddress) == <span class="keyword">false</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> EmailException(emailAddress);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// do business logic</span></span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
@@ -402,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC120H-Simulating-Canadian-Elections.html" rel="next" title="Python代写：CSC120H Simulating Canadian Elections">
-                <i class="fa fa-chevron-left"></i> Python代写：CSC120H Simulating Canadian Elections
+              <a href="/CSC120H-Simulating-Canadian-Elections.html" rel="next" title="Python辅导：CSC120H Simulating Canadian Elections">
+                <i class="fa fa-chevron-left"></i> Python辅导：CSC120H Simulating Canadian Elections
               </a>
             
           </div>
@@ -412,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/COMP3007-Pathfinding.html" rel="prev" title="Java代写：COMP3007 Pathfinding">
-                Java代写：COMP3007 Pathfinding <i class="fa fa-chevron-right"></i>
+              <a href="/COMP3007-Pathfinding.html" rel="prev" title="Java辅导：COMP3007 Pathfinding">
+                Java辅导：COMP3007 Pathfinding <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

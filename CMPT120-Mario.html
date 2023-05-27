@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
+<meta name="description" content="辅导一个Python的游戏需求，做一个带UI的叫Mario的游戏。这次需求只是整个游戏的第一部分。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CMPT120-Mario">
+<meta property="og:title" content="Python辅导：CMPT120-Mario">
 <meta property="og:url" content="https://tk1307993.coding.me/CMPT120-Mario.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
+<meta property="og:description" content="辅导一个Python的游戏需求，做一个带UI的叫Mario的游戏。这次需求只是整个游戏的第一部分。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-14T02:12:59.136Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:21.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CMPT120-Mario">
-<meta name="twitter:description" content="代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。">
+<meta name="twitter:title" content="Python辅导：CMPT120-Mario">
+<meta name="twitter:description" content="辅导一个Python的游戏需求，做一个带UI的叫Mario的游戏。这次需求只是整个游戏的第一部分。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：CMPT120-Mario | 留学生CS编程辅导</title>
+  <title>Python辅导：CMPT120-Mario | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CMPT120-Mario</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：CMPT120-Mario</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写一个Python的游戏作业，做一个带UI的叫Mario的游戏。这次作业只是整个游戏的第一部分。
+                  辅导一个Python的游戏需求，做一个带UI的叫Mario的游戏。这次需求只是整个游戏的第一部分。
               </div>
           
 
@@ -360,9 +360,9 @@
       
 
       
-        <h3 id="Problam-Statement"><a href="#Problam-Statement" class="headerlink" title="Problam Statement"></a>Problam Statement</h3><p>Over our next two assignments, we shall build our own version of the game Mario. Well, a simple TUI version. TUI means Text-based User Interface or Textual User Interface as opposed to GUI, which stands for Graphical User Interface.</p>
-<p>The goal of our Assignment 4 is to set up our game, i.e., set up the maze Mario is meant to travel through. This maze will contain obstacles, Mario himself and an exit gate. The goal of our Assignment 5 will be to allow the user to play our game by moving Mario around the maze.</p>
-<p>Let’s start with Assignment 4, shall we. In order to develop our Assignment 4 in an incremental fashion, I propose the following scheme: considering the algorithm below, let’s develop, test and debug each of its steps, one at a time, and move on to the next step only when the step we have been working on is completed. Here is our algorithm:</p>
+        <h3 id="Problam-Statement"><a href="#Problam-Statement" class="headerlink" title="Problam Statement"></a>Problam Statement</h3><p>Over our next two requests, we shall build our own version of the game Mario. Well, a simple TUI version. TUI means Text-based User Interface or Textual User Interface as opposed to GUI, which stands for Graphical User Interface.</p>
+<p>The goal of our request 4 is to set up our game, i.e., set up the maze Mario is meant to travel through. This maze will contain obstacles, Mario himself and an exit gate. The goal of our request 5 will be to allow the user to play our game by moving Mario around the maze.</p>
+<p>Let’s start with request 4, shall we. In order to develop our request 4 in an incremental fashion, I propose the following scheme: considering the algorithm below, let’s develop, test and debug each of its steps, one at a time, and move on to the next step only when the step we have been working on is completed. Here is our algorithm:</p>
 <ol>
 <li>Welcome the user.</li>
 <li>Create a maze with a width of mazeWidth and a height of mazeHeight.<ol>
@@ -376,11 +376,11 @@
 <li>At the top and left of the boundary, display numbers. These numbers will help the user to select a cell in our maze.<br>a. To produce the top row of numbers, we can build and print a string that will be made of blank spaces and numbers.<br>b. To produce the left-side column of numbers may be tricky! See the suggestion described in 3. b. above.<br>Add aNumOfRewardingObstacles of rewarding obstacles to our maze.<br>a. Assign the value 20 to aNumOfRewardingObstacles. Note that this number will change, so let’s make sure we develop our program such that we can easily change this number.<br>b. Originally, we must use the symbol “R” to indicate that a cell of our maze contains a rewarding obstacle. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.<br>c. All these obstacles must be randomly located in our maze.<br>d. We cannot position more than 1 obstacle (of any types) in a cell.</li>
 <li>Add aNumOfExplodingObstacles of exploding obstacles to our maze.<br>a. Assign the value 20 to aNumOfExplodingObstacles. Note that this number will change, so let’s make sure we develop our program such that we can easily change this number.<br>b. Originally, we must use the symbol “E” to indicate that a cell of our maze contains an exploding obstacle. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.<br>c. All these obstacles must be randomly located in our maze.<br>d. We cannot position more than 1 obstacle (of any types) in a cell.</li>
 <li>Ask the user for Mario’s initial location in the maze.<br>a. Let’s make sure that the user has entered a location that makes sense:<br>i. The user has entered 2 integers separated by a blank space. The user has<br>1) not simply pressed the Enter key, or<br>2) entered a string, or<br>3) entered 1 integer or 1 float, or<br>4) entered 2 numbers of which one or both are floats, or<br>5) entered more than 2 integers or floats.<br>ii. The row number entered by the user does not exceed the maximum number of rows of our maze.<br>iii. The column number entered by the user does not exceed the maximum number of columns of our maze.<br>iv. Finally, the user has entered the row number and column number of an empty cell.<br>b. Add Mario at that location. Originally, we must use the symbol “M” to indicate the location of Mario in our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
-<li>The Sample Run 1, posted on our course web site below the description of this assignment, illustrates how the program responds to the user when s/he has entered invalid data described in the step (7.) above.<br>Based on Mario’s location, our program is to place the exit gate on the top or bottom part of our boundary according to the following rule:<br>a. Imagine we divide our maze into 4 quadrants: top right, top left, bottom right, bottom left.<br>i. If the user has placed Mario in the top right quadrant, then our program positions the exit gate on the bottom section of the boundary to the left of the median (imaginary vertical line dividing our maze in two).<br>ii. If the user has placed Mario in the top left quadrant, then our program positions the exit gate on the bottom section of the boundary to the right of the median.<br>iii. If the user has placed Mario in the bottom right quadrant, then our program positions the exit gate on the top section of the boundary to the left of the median.<br>iv. If the user has placed Mario in the bottom left quadrant, then our program positions the exit gate on the top section of the boundary to the right of the median.<br>b. Originally, we must use the symbol “=” to indicate the exit gate on the top or bottom part of the boundary of our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
-<li>The code we create for Assignment 4 must produce exactly the same output as the one shown in the images included above and the Sample Runs. Of course, the position of our obstacles (both types), of Mario and of the exit gate will be different but everything else must be the same.</li>
+<li>The Sample Run 1, posted on our course web site below the description of this request, illustrates how the program responds to the user when s/he has entered invalid data described in the step (7.) above.<br>Based on Mario’s location, our program is to place the exit gate on the top or bottom part of our boundary according to the following rule:<br>a. Imagine we divide our maze into 4 quadrants: top right, top left, bottom right, bottom left.<br>i. If the user has placed Mario in the top right quadrant, then our program positions the exit gate on the bottom section of the boundary to the left of the median (imaginary vertical line dividing our maze in two).<br>ii. If the user has placed Mario in the top left quadrant, then our program positions the exit gate on the bottom section of the boundary to the right of the median.<br>iii. If the user has placed Mario in the bottom right quadrant, then our program positions the exit gate on the top section of the boundary to the left of the median.<br>iv. If the user has placed Mario in the bottom left quadrant, then our program positions the exit gate on the top section of the boundary to the right of the median.<br>b. Originally, we must use the symbol “=” to indicate the exit gate on the top or bottom part of the boundary of our maze. Note that this symbol will change, so let’s make sure we develop our program such that we can easily change this symbol.</li>
+<li>The code we create for request 4 must produce exactly the same output as the one shown in the images included above and the Sample Runs. Of course, the position of our obstacles (both types), of Mario and of the exit gate will be different but everything else must be the same.</li>
 </ol>
 <h3 id="Caution"><a href="#Caution" class="headerlink" title="Caution"></a>Caution</h3><p>Remember that indices of list elements start at 0, while the numbers displayed above and to the left of our maze start at 1. Therefore, when the user selects the cell in which Mario is to be placed on our maze, once we read these two numbers (the row and column numbers), we may have to decrement them by 1 in order to use these numbers as indices.</p>
-<h3 id="Marking"><a href="#Marking" class="headerlink" title="Marking"></a>Marking</h3><p>When marking Assignment 4, we will look at how well our solution satisfies the description and requirements of this assignment as described in the problem Statement section above as well as the criteria listed here:</p>
+<h3 id="Marking"><a href="#Marking" class="headerlink" title="Marking"></a>Marking</h3><p>When marking request 4, we will look at how well our solution satisfies the description and requirements of this request as described in the problem Statement section above as well as the criteria listed here:</p>
 
       
     </div>
@@ -411,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/INM378-Digital-Signal-Processing.html" rel="next" title="C#代写：INM378-Digital-Signal-Processing">
-                <i class="fa fa-chevron-left"></i> C#代写：INM378-Digital-Signal-Processing
+              <a href="/INM378-Digital-Signal-Processing.html" rel="next" title="C#辅导：INM378-Digital-Signal-Processing">
+                <i class="fa fa-chevron-left"></i> C#辅导：INM378-Digital-Signal-Processing
               </a>
             
           </div>
@@ -421,8 +421,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS1101-Gate.html" rel="prev" title="Java代写：CS1101-Gate">
-                Java代写：CS1101-Gate <i class="fa fa-chevron-right"></i>
+              <a href="/CS1101-Gate.html" rel="prev" title="Java辅导：CS1101-Gate">
+                Java辅导：CS1101-Gate <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

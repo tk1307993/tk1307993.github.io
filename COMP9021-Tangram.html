@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta name="description" content="用Python解一个Tangram，也就是七巧板问题，需求给基本框架，往里面填写逻辑即可。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：COMP9021-Tangram">
+<meta property="og:title" content="Python辅导：COMP9021-Tangram">
 <meta property="og:url" content="https://tk1307993.coding.me/COMP9021-Tangram.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta property="og:description" content="用Python解一个Tangram，也就是七巧板问题，需求给基本框架，往里面填写逻辑即可。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-24T14:11:08.573Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:17.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：COMP9021-Tangram">
-<meta name="twitter:description" content="用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。">
+<meta name="twitter:title" content="Python辅导：COMP9021-Tangram">
+<meta name="twitter:description" content="用Python解一个Tangram，也就是七巧板问题，需求给基本框架，往里面填写逻辑即可。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：COMP9021-Tangram | 留学生CS编程辅导</title>
+  <title>Python辅导：COMP9021-Tangram | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：COMP9021-Tangram</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：COMP9021-Tangram</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用Python解一个Tangram，也就是七巧板问题，作业给基本框架，往里面填写逻辑即可。
+                  用Python解一个Tangram，也就是七巧板问题，需求给基本框架，往里面填写逻辑即可。
               </div>
           
 
@@ -360,10 +360,10 @@
       
 
       
-        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>The assignment consists of three parts, from easiest to more difficult. Each part is worth 3 marks.<br>For each test, the automarking script will let your program run for 30 seconds.</p>
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>The request consists of three parts, from easiest to more difficult. Each part is worth 3 marks.<br>For each test, the automarking script will let your program run for 30 seconds.</p>
 <p>As all output is True or False, each test will actually consist of a number of subtests of similar difficulty, and passing one test will mean passing all associated subtests; failing at least one of the subtests of a test will result in scoring 0 to that test.<br>Up to one mark will reward good comments, good choice of names for identifiers and functions, readability of code, simplicity of statements, compactness of functions. This will be determined manually.</p>
 <p>One extra mark will be awarded for making available to the class a good test case, consisting of two similar sets of pieces and two solved tangrams built from such a set, which can then be used by everyone for testing purposes.</p>
-<p>Late assignments will be penalised: the mark for a late submission will be the minimum of the awarded mark and 10 minus the number of full and partial days that have elapsed from the due date.</p>
+<p>Late requests will be penalised: the mark for a late submission will be the minimum of the awarded mark and 10 minus the number of full and partial days that have elapsed from the due date.</p>
 <h3 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h3><p>The game of tangram consists in creating shapes out of pieces. We assume that each piece has its own colour, different to the colour of any other piece in the set we are working with. Just for reference, here is the list the colours that are available to us</p>
 <h3 id="Pieces"><a href="#Pieces" class="headerlink" title="Pieces"></a>Pieces</h3><p>Here is an example of the contents of the file pieces A.xml, typical of the contents of any file of this kind (so only the number of pieces, the colour names, and the various coordinates can differ from one such file to another - we do not bother with allowing for variations, in the use of space in particular).</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;svg</span> <span class="string">version</span> <span class="string">="1.1"</span> <span class="string">xmlns</span> <span class="string">="http://www.w3.org/2000/svg"&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">50</span> <span class="number">50</span> <span class="string">L</span> <span class="number">50</span> <span class="number">90</span> <span class="string">L</span> <span class="number">90</span> <span class="number">90</span> <span class="string">z"</span> <span class="string">fill="red"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">160</span> <span class="number">170</span> <span class="string">L</span> <span class="number">160</span> <span class="number">130</span> <span class="string">L</span> <span class="number">120</span> <span class="number">130</span> <span class="string">z"</span> <span class="string">fill="green"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">200</span> <span class="number">30</span> <span class="string">L</span> <span class="number">180</span> <span class="number">30</span> <span class="string">L</span> <span class="number">180</span> <span class="number">50</span> <span class="string">L</span> <span class="number">220</span> <span class="number">50</span> <span class="string">z"</span> <span class="string">fill="blue"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">40</span> <span class="number">100</span> <span class="string">L</span> <span class="number">40</span> <span class="number">140</span> <span class="string">L</span> <span class="number">60</span> <span class="number">140</span> <span class="string">L</span> <span class="number">60</span> <span class="number">120</span> <span class="string">z"</span> <span class="string">fill="yellow"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">210</span> <span class="number">70</span> <span class="string">L</span> <span class="number">230</span> <span class="number">90</span> <span class="string">L</span> <span class="number">270</span> <span class="number">90</span> <span class="string">L</span> <span class="number">270</span> <span class="number">50</span> <span class="string">L</span> <span class="number">230</span> <span class="number">50</span> <span class="string">z"</span> <span class="string">fill="purple"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">180</span> <span class="number">130</span> <span class="string">L</span> <span class="number">180</span> <span class="number">170</span> <span class="string">L</span> <span class="number">220</span> <span class="number">210</span> <span class="string">L</span> <span class="number">240</span> <span class="number">190</span> <span class="string">z"</span> <span class="string">fill="olive"</span> <span class="string">/&gt;</span></span><br><span class="line">  <span class="string">&lt;path</span> <span class="string">d="M</span> <span class="number">100</span> <span class="number">200</span> <span class="string">L</span> <span class="number">120</span> <span class="number">180</span> <span class="string">L</span> <span class="number">80</span> <span class="number">140</span> <span class="string">L</span> <span class="number">80</span> <span class="number">180</span> <span class="string">z"</span> <span class="string">fill="magenta"</span> <span class="string">/&gt;</span></span><br><span class="line"><span class="string">&lt;/svg&gt;</span></span><br></pre></td></tr></table></figure>
@@ -402,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FIT2071-VisualTextQuest.html" rel="next" title="C++代写：FIT2071-VisualTextQuest">
-                <i class="fa fa-chevron-left"></i> C++代写：FIT2071-VisualTextQuest
+              <a href="/FIT2071-VisualTextQuest.html" rel="next" title="C++辅导：FIT2071-VisualTextQuest">
+                <i class="fa fa-chevron-left"></i> C++辅导：FIT2071-VisualTextQuest
               </a>
             
           </div>
@@ -412,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CSE231-RenderingColors.html" rel="prev" title="Python代写：CSE231-RenderingColors">
-                Python代写：CSE231-RenderingColors <i class="fa fa-chevron-right"></i>
+              <a href="/CSE231-RenderingColors.html" rel="prev" title="Python辅导：CSE231-RenderingColors">
+                Python辅导：CSE231-RenderingColors <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

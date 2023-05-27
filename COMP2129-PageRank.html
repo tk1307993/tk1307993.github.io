@@ -86,14 +86,14 @@
 <meta name="description" content="用C实现PageRank算法，同时需要对大数据量节点的情况进行优化。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：COMP2129-PageRank">
+<meta property="og:title" content="C辅导：COMP2129-PageRank">
 <meta property="og:url" content="https://tk1307993.coding.me/COMP2129-PageRank.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="用C实现PageRank算法，同时需要对大数据量节点的情况进行优化。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-21T12:03:34.555Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:19.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：COMP2129-PageRank">
+<meta name="twitter:title" content="C辅导：COMP2129-PageRank">
 <meta name="twitter:description" content="用C实现PageRank算法，同时需要对大数据量节点的情况进行优化。">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C代写：COMP2129-PageRank | 留学生CS编程辅导</title>
+  <title>C辅导：COMP2129-PageRank | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：COMP2129-PageRank</h2>
+          <h2 class="post-title" itemprop="name headline">C辅导：COMP2129-PageRank</h2>
         
 
         <div class="post-meta">
@@ -360,16 +360,16 @@
       
 
       
-        <h2 id="Task-Description"><a href="#Task-Description" class="headerlink" title="Task Description"></a>Task Description</h2><p>n this assignment your task is to implement the PageRank algorithm in C using the power method described below and then optimise and parallelise your code to ensure peak performance is achieved.</p>
+        <h2 id="Task-Description"><a href="#Task-Description" class="headerlink" title="Task Description"></a>Task Description</h2><p>n this request your task is to implement the PageRank algorithm in C using the power method described below and then optimise and parallelise your code to ensure peak performance is achieved.</p>
 <p>The PageRank algorithm was developed in 1996 by Larry Page and Sergey Brin when they were graduate students at Stanford University. Google and other search engines compare words in search phrases to words in web pages and use ranking algorithms to determine the most relevant results.</p>
 <p>PageRank assigns a score to a set of web pages that indicates their importance. The underlying idea behind PageRank is to model a user who is clicking on web pages and following links from one page to another. In this framework, important pages are those which have incoming links from many other pages, or have incoming links from other pages with a high PageRank score, or both.</p>
-<p>You are encouraged to ask questions on Ed using the assignments category. As with any assignment, make sure that your work is your own, and you do not share your code or solutions with other students.</p>
+<p>You are encouraged to ask questions on Ed using the requests category. As with any request, make sure that your work is your own, and you do not share your code or solutions with other students.</p>
 <h2 id="The-PageRank-algorithm"><a href="#The-PageRank-algorithm" class="headerlink" title="The PageRank algorithm"></a>The PageRank algorithm</h2><p>PageRank is an iterative algorithm that is repeated until a stopping criteria is met. The last iteration gives us the result of the search, which is a score per web page. A high score indicates a very relevant web page whereas a low score indicates a not so relevant web page for a search. Sorting the web pages by their scores in descending order gives us the order for the result list of a search query.</p>
 <h2 id="Implementation-details"><a href="#Implementation-details" class="headerlink" title="Implementation details"></a>Implementation details</h2><p>Your program must implement the PageRank algorithm using the power method described above.</p>
 <p>The header file pagerank.h contains an init function that processes the list of pages and edges from standard input and stores a linked list of pages and corresponding inlinks in the following structs</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">page</span> &#123;</span></span><br><span class="line">  <span class="keyword">char</span>* name;       <span class="comment">// name of this page</span></span><br><span class="line">  <span class="keyword">size_t</span> index;     <span class="comment">// index of this page</span></span><br><span class="line">  <span class="keyword">size_t</span> noutlinks; <span class="comment">// number of outlinks from this page</span></span><br><span class="line">  node* inlinks;    <span class="comment">// linked list of pages with inlinks to this page</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">  page* page; <span class="comment">// pointer to the page data structure</span></span><br><span class="line">  node* next; <span class="comment">// pointer to the next page in the list</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>Your program must produce no errors when built on the lab machines and ed with the command:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clang -O1 <span class="attribute">-std</span>=gnu11 <span class="attribute">-march</span>=native -lm -pthread pagerank.c -o pagerank</span><br></pre></td></tr></table></figure></p>
-<p>Your program output must match the exact output format shown by the prototype and on Ed. You are encouraged to submit your assignment while you are working on it, so you can obtain some feedback.</p>
+<p>Your program output must match the exact output format shown by the prototype and on Ed. You are encouraged to submit your request while you are working on it, so you can obtain some feedback.</p>
 <h2 id="Program-input"><a href="#Program-input" class="headerlink" title="Program input"></a>Program input</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dampening</span> <span class="attr">factor</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">number</span> <span class="attr">of</span> <span class="attr">pages</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span> <span class="attr">of</span> <span class="attr">web</span> <span class="attr">page</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">number</span> <span class="attr">of</span> <span class="attr">edges</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">source</span> <span class="attr">page</span>&gt;</span> <span class="tag">&lt;<span class="name">destination</span> <span class="attr">page</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>The first line specifies the dampening factor to be used by the program. The second line defines the number of pages to be declared, followed by a list of page names with one name per line. Then, the number of edges in the graph is specified, followed by a list of edges with one edge per line.</p>
 <p>The init function reads the input and terminates outputting an error message if the input is invalid.</p>
@@ -404,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java-ImageProcessing5.html" rel="next" title="Java代写：ImageProcessing5">
-                <i class="fa fa-chevron-left"></i> Java代写：ImageProcessing5
+              <a href="/Java-ImageProcessing5.html" rel="next" title="Java辅导：ImageProcessing5">
+                <i class="fa fa-chevron-left"></i> Java辅导：ImageProcessing5
               </a>
             
           </div>
@@ -414,8 +414,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS104-Minesweeper.html" rel="prev" title="C代写：CS104-Minesweeper">
-                C代写：CS104-Minesweeper <i class="fa fa-chevron-right"></i>
+              <a href="/CS104-Minesweeper.html" rel="prev" title="C辅导：CS104-Minesweeper">
+                C辅导：CS104-Minesweeper <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

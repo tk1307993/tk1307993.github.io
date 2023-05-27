@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+<meta name="description" content="辅导WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
 <meta name="keywords" content="Data Structure,Game">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSE1100-WordLink">
 <meta property="og:url" content="https://tk1307993.coding.me/CSE1100-WordLink.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+<meta property="og:description" content="辅导WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-13T01:33:22.620Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:57.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSE1100-WordLink">
-<meta name="twitter:description" content="代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
+<meta name="twitter:description" content="辅导WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。
+                  辅导WordLink这个小游戏。游戏类似成语接龙，只不过换成了使用给定字典中的英文单词接龙。
               </div>
           
 
@@ -360,7 +360,7 @@
       
 
       
-        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The aim of this assignment is to practise analysing a problem in an object-oriented manner, and designing and implementing an object-oriented solution.</p>
+        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><p>The aim of this request is to practise analysing a problem in an object-oriented manner, and designing and implementing an object-oriented solution.</p>
 <p>Problem Description<br>WordLink is an English vocabulary game for two players. Players are required to present English words in turns, and the first character of the word must be the same as the last character of the previous word. For example, while player A and player B are playing the game, if A presents the word “grass”, then B has to give a word starting with ‘s’ which is the last character of “grass”. If B presents “sunny”, then A needs to supply a word starting with ‘y’. A word cannot be used twice in one game. The game can continue until one of the players loses. There are four scenarios in which a player loses the game.</p>
 <ol>
 <li>the player cannot find a word to continue the game.</li>
@@ -371,7 +371,7 @@
 <p>Example 1:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"dog"</span> – (<span class="keyword">B) </span><span class="string">"grass"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player A wins.</span><br></pre></td></tr></table></figure></p>
 <p>Example 2:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"dog"</span> – (<span class="keyword">B) </span><span class="string">"out"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player A wins.</span><br></pre></td></tr></table></figure></p>
 <p>Example 3:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Player A) <span class="string">"grass"</span> – (Player <span class="keyword">B) </span><span class="string">"sunny"</span> – (A) <span class="string">"yellow"</span> – (<span class="keyword">B) </span><span class="string">"world"</span> – (A) <span class="string">"doog"</span></span><br><span class="line"><span class="symbol">The</span> game is ended <span class="keyword">and </span>Player <span class="keyword">B </span>wins.</span><br></pre></td></tr></table></figure></p>
-<p>In this assignment, you are required to build a program that plays WordLink with a kindergarten pupil. The pupil is player A and your program acts as player B.</p>
+<p>In this request, you are required to build a program that plays WordLink with a kindergarten pupil. The pupil is player A and your program acts as player B.</p>
 <p>A text file ( dictionary.txt ) containing a set of English words will be provided. You can assume that dictionary.txt contains all English words that a kindergarten pupil may know. Words to be used in playing the game must be selected from the set.</p>
 <p>Each game should start by letting player A enter a word. Your program then needs to validate the word (ie. if the word is included in dictionary.txt ). If the word is invalid, then the game is terminated and your program (player B) wins; otherwise your program needs to search the dictionary to find and enter a proper word. Your program will then let player A to type a word to continue the game. This can go back and forth a number of times till either your program or player A wins.</p>
 <h3 id="Functional-and-Non-functional-Requirements"><a href="#Functional-and-Non-functional-Requirements" class="headerlink" title="Functional and Non-functional Requirements"></a>Functional and Non-functional Requirements</h3><p>Your program must satisfy the following functional and non-functional requirements.</p>
@@ -386,10 +386,10 @@
 <h3 id="Bonus-Task"><a href="#Bonus-Task" class="headerlink" title="Bonus Task"></a>Bonus Task</h3><p>Instead of only being able to play against the computer, add a menu option for a two-player game and implement its functionality.</p>
 <h3 id="Code-Segments"><a href="#Code-Segments" class="headerlink" title="Code Segments"></a>Code Segments</h3><p>Below are code segments that must be included in your program.</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DictionaryNode</span> &#123;</span></span><br><span class="line"><span class="comment">//object of the class represents a single word</span></span><br><span class="line">  <span class="keyword">protected</span> <span class="keyword">String</span> <span class="keyword">word</span>; <span class="comment">// word to be stored</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> level; <span class="comment">// level of the word</span></span><br><span class="line">  <span class="keyword">private</span> DictionaryNode next;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">DictionaryNode</span><span class="params">(<span class="keyword">String</span> _word, <span class="keyword">int</span> _level)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//add your implementation for the constructor</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListOfNodes</span> &#123;</span></span><br><span class="line"><span class="comment">//object of the class represents a linked list of words starting</span></span><br><span class="line"><span class="comment">//with a specific character.</span></span><br><span class="line">  <span class="keyword">private</span> DictionaryNode head = null; <span class="comment">//head of the linked list</span></span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dictionary</span> &#123;</span></span><br><span class="line"><span class="comment">//object of the class represents the whole dictionery</span></span><br><span class="line">  <span class="keyword">private</span> ListOfNodes[] data;</span><br><span class="line">  <span class="comment">//add any other attributes or methods if needed</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Program-Development"><a href="#Program-Development" class="headerlink" title="Program Development"></a>Program Development</h3><p>The following is a suggested breakdown for completing this assignment:</p>
+<h3 id="Program-Development"><a href="#Program-Development" class="headerlink" title="Program Development"></a>Program Development</h3><p>The following is a suggested breakdown for completing this request:</p>
 <h4 id="Task-1-Creating-the-Menu"><a href="#Task-1-Creating-the-Menu" class="headerlink" title="Task 1 Creating the Menu"></a>Task 1 Creating the Menu</h4><p>Create the menu display, collect user’s input and write a method stub for each menu option. Ensure that the correct function is called.</p>
 <h4 id="Task-2-File-Handling"><a href="#Task-2-File-Handling" class="headerlink" title="Task 2 File Handling"></a>Task 2 File Handling</h4><p>In Task 2, you need to consider all issues related to reading the text file (dictionary.txt) to obtain words and their levels. You can simply display contents read from the text file to ensure file reading is correctly conducted.</p>
-<h4 id="Task-3-Defining-Classes"><a href="#Task-3-Defining-Classes" class="headerlink" title="Task 3 Defining Classes"></a>Task 3 Defining Classes</h4><p>In this task, implement major classes for the assignment. This includes the necessary menu and interactions with the player for choosing options etc.</p>
+<h4 id="Task-3-Defining-Classes"><a href="#Task-3-Defining-Classes" class="headerlink" title="Task 3 Defining Classes"></a>Task 3 Defining Classes</h4><p>In this task, implement major classes for the request. This includes the necessary menu and interactions with the player for choosing options etc.</p>
 <h4 id="Task-4-Linked-Lists"><a href="#Task-4-Linked-Lists" class="headerlink" title="Task 4 Linked Lists"></a>Task 4 Linked Lists</h4><p>Implement classes required for linked lists and dictionary. Implement methods (such as insertInOrder, search etc) which are operations associated with the list and any other methods. Thoroughly test your linked list before integrating it into your program.</p>
 
       

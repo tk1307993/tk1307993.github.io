@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,Algorithm,">
+  <meta name="keywords" content="Algorithm,Data Structure,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这次需要代写的Java编程作业，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
-<meta name="keywords" content="Data Structure,Algorithm">
+<meta name="description" content="这次需要辅导的Java编程需求，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
+<meta name="keywords" content="Algorithm,Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS373-Hash-Tables">
+<meta property="og:title" content="Java辅导：CS373-Hash-Tables">
 <meta property="og:url" content="https://tk1307993.coding.me/CS373-Hash-Tables.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="这次需要代写的Java编程作业，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
+<meta property="og:description" content="这次需要辅导的Java编程需求，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-12T12:26:49.555Z">
+<meta property="og:updated_time" content="2023-05-27T13:30:04.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS373-Hash-Tables">
-<meta name="twitter:description" content="这次需要代写的Java编程作业，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
+<meta name="twitter:title" content="Java辅导：CS373-Hash-Tables">
+<meta name="twitter:description" content="这次需要辅导的Java编程需求，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Java代写：CS373-Hash-Tables | 留学生CS编程辅导</title>
+  <title>Java辅导：CS373-Hash-Tables | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS373-Hash-Tables</h2>
+          <h2 class="post-title" itemprop="name headline">Java辅导：CS373-Hash-Tables</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这次需要代写的Java编程作业，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。
+                  这次需要辅导的Java编程需求，是按要求实现两个不同的Hash Table, QPHash和ChainingHash，然后分别进行比较。由于没有测试集，数据量又很大，写的时候需要额外注意。
               </div>
           
 
@@ -360,8 +360,8 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Telling the difference between two different authors has many applications. This assignment will compare the relative frequency of words in works by William Shakespeare and Francis Bacon. Before the two works can be analyzed, they will need to be stored in memory. To do this, we will use two different hashing techniques, one that utilizes chaining and the other quadratic probing.</p>
-<h3 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h3><p>You are to implement two separate hash tables, one per author, and use them to store the number of times a word appears in a text file. You will also write code that iterates through the hash tables and computes the relative frequency of words stored in each of the hash tables.</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Telling the difference between two different authors has many applications. This request will compare the relative frequency of words in works by William Shakespeare and Francis Bacon. Before the two works can be analyzed, they will need to be stored in memory. To do this, we will use two different hashing techniques, one that utilizes chaining and the other quadratic probing.</p>
+<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><p>You are to implement two separate hash tables, one per author, and use them to store the number of times a word appears in a text file. You will also write code that iterates through the hash tables and computes the relative frequency of words stored in each of the hash tables.</p>
 <h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>The neccessary files are available in the archive, included in this archive are:</p>
 <ul>
 <li>Two text files: hamlet.txt and bacon-essays.txt. Code will be provided to read these works into arrays and add them to your hash tables. Note: they are very long. Do not print them.</li>
@@ -383,7 +383,7 @@
 <li>findCount(String keyToFind): This function will return the count for a particular String key. To be clear, this count variable will be the same as returning the number of times a particular key has been added to the hash table.</li>
 <li>getNextKey(): Every call of getNextKey() will return the next key in the hash table. This function should utilize an interior cursor to iterate through the hash table. This function will be essential when computing the squared error.<br>Computing the hash codes for a string can be done by using the [insert String variable name].hashCode() system call that is part of the Java library. However, for extra credit, write a separate hash code that returns a unique integer for any input String. Also make sure that the resulting hash distributes Strings evenly over a large range of numbers or your hash table performance will suffer.</li>
 </ul>
-<h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>Submission for this assignment requires three files to be submitted: QPHash.java, ChainingHash.java and Test.java should be submitted to the dropbox to complete the homework.</p>
+<h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>Submission for this request requires three files to be submitted: QPHash.java, ChainingHash.java and Test.java should be submitted to the dropbox to complete the request.</p>
 <ul>
 <li>insert, findCount and getNextKey will be worth 5 points each for both hash tables, for a total of 30 points.</li>
 <li>Correctly calculating the squared-error and most different word frequency will be worth 5 points each for a total of 10 points.</li>
@@ -407,9 +407,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
-          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -422,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/INFO2120-Database-Application-Programming.html" rel="next" title="PostgreSQL代写：INFO2120-Database-Application-Programming">
-                <i class="fa fa-chevron-left"></i> PostgreSQL代写：INFO2120-Database-Application-Programming
+              <a href="/INFO2120-Database-Application-Programming.html" rel="next" title="PostgreSQL辅导：INFO2120-Database-Application-Programming">
+                <i class="fa fa-chevron-left"></i> PostgreSQL辅导：INFO2120-Database-Application-Programming
               </a>
             
           </div>
@@ -432,8 +432,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ICS53-Web-Proxy.html" rel="prev" title="C代写：ICS53-Web-Proxy">
-                C代写：ICS53-Web-Proxy <i class="fa fa-chevron-right"></i>
+              <a href="/ICS53-Web-Proxy.html" rel="prev" title="C辅导：ICS53-Web-Proxy">
+                C辅导：ICS53-Web-Proxy <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment"><span class="nav-number">2.</span> <span class="nav-text">Assignment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">3.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading"><span class="nav-number">4.</span> <span class="nav-text">Grading</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request"><span class="nav-number">2.</span> <span class="nav-text">request</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-started"><span class="nav-number">3.</span> <span class="nav-text">Getting started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading"><span class="nav-number">4.</span> <span class="nav-text">Grading</span></a></li></ol></div>
             
 
           </div>

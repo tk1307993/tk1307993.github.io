@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
+<meta name="description" content="这是一个两周的超级大需求，用Linux Network Programming的知识写一个聊天软件。">
 <meta name="keywords" content="Network Programming,SQLite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CSE320-Wolfie-Chat-Part1">
+<meta property="og:title" content="C辅导：CSE320-Wolfie-Chat-Part1">
 <meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part1.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
+<meta property="og:description" content="这是一个两周的超级大需求，用Linux Network Programming的知识写一个聊天软件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T11:58:12.764Z">
+<meta property="og:updated_time" content="2023-05-27T13:30:01.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CSE320-Wolfie-Chat-Part1">
-<meta name="twitter:description" content="这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。">
+<meta name="twitter:title" content="C辅导：CSE320-Wolfie-Chat-Part1">
+<meta name="twitter:description" content="这是一个两周的超级大需求，用Linux Network Programming的知识写一个聊天软件。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C代写：CSE320-Wolfie-Chat-Part1 | 留学生CS编程辅导</title>
+  <title>C辅导：CSE320-Wolfie-Chat-Part1 | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CSE320-Wolfie-Chat-Part1</h2>
+          <h2 class="post-title" itemprop="name headline">C辅导：CSE320-Wolfie-Chat-Part1</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  这是一个两周的超级大作业，用Linux Network Programming的知识写一个聊天软件。
+                  这是一个两周的超级大需求，用Linux Network Programming的知识写一个聊天软件。
               </div>
           
 
@@ -360,15 +360,15 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this assignment you will be creating a chat service much like Google’s Hangouts, called Wolfie Chat. The goal is to learn about network programming in C. You will implement the service so that it adheres to the Wolfie Protocol.</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this request you will be creating a chat service much like Google’s Hangouts, called Wolfie Chat. The goal is to learn about network programming in C. You will implement the service so that it adheres to the Wolfie Protocol.</p>
 <p>The concept of a protocol is an important one to understand. When implementing the protocol you need to follow the requirements and description TO THE LETTER. The idea is to create a standard so that anyone implementing the Wolfie Protocol will be able to connect and operate with any other program implementing the same protocol. Any client and chat should work with any server if the protocol is used correctly (HINT HINT think grading).</p>
 <p>Certain public networks like wolfienet secure or starbucks will not allow you to connect your client and server together over the network. You may also want to test your client by connecting to another group’s server, and your server by having other group’s clients connect to it. This is a good way to ensure that the protocol is implemented correctly in your client/server programs. While we encourage testing this way, THIS IS NOT an open invitation to share code with other groups. You should not be showing or sharing code with anyone else. To perform these tests you should simply be telling your client programs to connect to the IP address and port number at which these servers are running at. You have been warned!</p>
-<h3 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h3><p>In this assignment you are allowed groups of two members. Unless stated otherwise, we will assume that you are in the same group as the previous assignment. If you wish to divorce your partner from the previous assignment and assemble a new group please follow the directions in hw4.</p>
-<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Make the directory hw5 in the root of your git repository. All files which you create for this assignment should be placed in this directory. You should also create a Makefile, which generates the server program called server, a client program called client, and your chat program called chat. When we navigate to the hw5 directory and type make these three programs should be generated.</p>
+<h3 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h3><p>In this request you are allowed groups of two members. Unless stated otherwise, we will assume that you are in the same group as the previous request. If you wish to divorce your partner from the previous request and assemble a new group please follow the directions in hw4.</p>
+<h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><p>Make the directory hw5 in the root of your git repository. All files which you create for this request should be placed in this directory. You should also create a Makefile, which generates the server program called server, a client program called client, and your chat program called chat. When we navigate to the hw5 directory and type make these three programs should be generated.</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cd hw5</span><br><span class="line">$ make</span><br><span class="line">gcc -Wa11 -Werror server.c -o server</span><br><span class="line">gcc -Wal1 -Werror client.c -o client</span><br><span class="line">gcc -Wa11 -Werror chat.c -o chat</span><br><span class="line">$ ls</span><br><span class="line">chat chat.c<span class="built_in"> client </span>client.c Makefile README.md<span class="built_in"> server </span>server.c</span><br></pre></td></tr></table></figure>
-<p>A good strategy for splitting up the work in this assignment should be to have one partner create the client/chat program and the other partner create the server. Test out each part as you implement it to ensure that it works (don’t just build the entire thing separately and hope it all works in the end.) It’s also okay to test both the server and client locally on your own machine, but you really should test it out over a real network as well.</p>
-<h3 id="Helpful-Resources"><a href="#Helpful-Resources" class="headerlink" title="Helpful Resources"></a>Helpful Resources</h3><p>You should make sure you understand chapter 11, 12.2, and 12.3 in your textbook. Also if you didn’t understand files, fork, execute, and pipes from the previous homework, make sure you review chapter 10.1-10.4 and 10.6-10.12.</p>
-<p>An AMAZING reference on sockets which summarizes the man pages can be found here (Don’t worry that the site is called python). Additionally you may also want to read Bee’s Guide to Network Programming. It has a good mix of tutorials, explanations, and descriptions of the functions you need to use for this assignment. You may also want to consider using wireshark or tcpdump to monitor the network packets.</p>
+<p>A good strategy for splitting up the work in this request should be to have one partner create the client/chat program and the other partner create the server. Test out each part as you implement it to ensure that it works (don’t just build the entire thing separately and hope it all works in the end.) It’s also okay to test both the server and client locally on your own machine, but you really should test it out over a real network as well.</p>
+<h3 id="Helpful-Resources"><a href="#Helpful-Resources" class="headerlink" title="Helpful Resources"></a>Helpful Resources</h3><p>You should make sure you understand chapter 11, 12.2, and 12.3 in your textbook. Also if you didn’t understand files, fork, execute, and pipes from the previous request, make sure you review chapter 10.1-10.4 and 10.6-10.12.</p>
+<p>An AMAZING reference on sockets which summarizes the man pages can be found here (Don’t worry that the site is called python). Additionally you may also want to read Bee’s Guide to Network Programming. It has a good mix of tutorials, explanations, and descriptions of the functions you need to use for this request. You may also want to consider using wireshark or tcpdump to monitor the network packets.</p>
 <h3 id="Things-to-be-aware-of"><a href="#Things-to-be-aware-of" class="headerlink" title="Things to be aware of"></a>Things to be aware of</h3><p>Aside from the issues which occur in the protocol (such as a user with duplicate names), you also need to handle other external errors such as connections getting lost, client program getting killed, server program getting killed, etc. You should look to handle:</p>
 <ul>
 <li>EINTR</li>
@@ -410,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS341-Timing-Instructions.html" rel="next" title="C代写：CS341-Timing-Instructions">
-                <i class="fa fa-chevron-left"></i> C代写：CS341-Timing-Instructions
+              <a href="/CS341-Timing-Instructions.html" rel="next" title="C辅导：CS341-Timing-Instructions">
+                <i class="fa fa-chevron-left"></i> C辅导：CS341-Timing-Instructions
               </a>
             
           </div>
@@ -420,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CSE320-Wolfie-Chat-Part2.html" rel="prev" title="C代写：CSE320-Wolfie-Chat-Part2">
-                C代写：CSE320-Wolfie-Chat-Part2 <i class="fa fa-chevron-right"></i>
+              <a href="/CSE320-Wolfie-Chat-Part2.html" rel="prev" title="C辅导：CSE320-Wolfie-Chat-Part2">
+                C辅导：CSE320-Wolfie-Chat-Part2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

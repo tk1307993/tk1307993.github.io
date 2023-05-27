@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
+<meta name="description" content="辅导Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CEGEG082-Point-in-Polygon">
+<meta property="og:title" content="Python辅导：CEGEG082-Point-in-Polygon">
 <meta property="og:url" content="https://tk1307993.coding.me/CEGEG082-Point-in-Polygon.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
+<meta property="og:description" content="辅导Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-10T02:42:17.429Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:22.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CEGEG082-Point-in-Polygon">
-<meta name="twitter:description" content="代写Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
+<meta name="twitter:title" content="Python辅导：CEGEG082-Point-in-Polygon">
+<meta name="twitter:description" content="辅导Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：CEGEG082-Point-in-Polygon | 留学生CS编程辅导</title>
+  <title>Python辅导：CEGEG082-Point-in-Polygon | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CEGEG082-Point-in-Polygon</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：CEGEG082-Point-in-Polygon</h2>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。
+                  辅导Graphics相关算法，判断二维平面上的点，是否属于某个Polygon中。
               </div>
           
 
@@ -360,12 +360,12 @@
       
 
       
-        <h3 id="Python-Coursework-Point-in-Polygon"><a href="#Python-Coursework-Point-in-Polygon" class="headerlink" title="Python Coursework: Point in Polygon"></a>Python Coursework: Point in Polygon</h3><p>In this coursework you will apply your programming knowledge to the practical problem of determining whether a point lies inside or outside a polygon, which is a fundamental operation of a GISystem. Your work will build upon the point, polygon and geometry examples that were introduced in the practical sessions and assignments. The point in polygon (PIP) problem is illustrated in figure 1. In the picture, the green area represents a polygon. The red points lie outside the polygon and the blue points lie inside. Visually, this is easy to see, however, it is not so straightforward to determine this computationally.<br>The procedure for PIP that you will use involves two steps:</p>
+        <h3 id="Python-Coursework-Point-in-Polygon"><a href="#Python-Coursework-Point-in-Polygon" class="headerlink" title="Python Coursework: Point in Polygon"></a>Python Coursework: Point in Polygon</h3><p>In this coursework you will apply your programming knowledge to the practical problem of determining whether a point lies inside or outside a polygon, which is a fundamental operation of a GISystem. Your work will build upon the point, polygon and geometry examples that were introduced in the practical sessions and requests. The point in polygon (PIP) problem is illustrated in figure 1. In the picture, the green area represents a polygon. The red points lie outside the polygon and the blue points lie inside. Visually, this is easy to see, however, it is not so straightforward to determine this computationally.<br>The procedure for PIP that you will use involves two steps:</p>
 <ol>
 <li>Test if the point is inside the minimum bounding rectangle of the polygon.</li>
 <li>If it is, use a PIP algorithm to test whether the point is inside the polygon.<br>These steps are introduced in turn in the following sections.</li>
 </ol>
-<h3 id="Minimum-bounding-rectangle"><a href="#Minimum-bounding-rectangle" class="headerlink" title="Minimum bounding rectangle"></a>Minimum bounding rectangle</h3><p>PIP is a computationally intensive operation. Therefore, it is common to first get the minimum bounding rectangle (MBR, alternatively minimum bounding box) of a polygon and test whether the point lies inside this rectangle. For the purposes of this assignment, the MBR can be found by simply taking the minimum and maximum x and y coordinates of a polygon (a smaller rectangle may be found by rotating the coordinate system). If a given point lies outside this rectangle, then it is definitely outside the polygon and there is no need to proceed to the full PIP algorithm. This is shown graphically in figure 2, where the red box is the MBR.</p>
+<h3 id="Minimum-bounding-rectangle"><a href="#Minimum-bounding-rectangle" class="headerlink" title="Minimum bounding rectangle"></a>Minimum bounding rectangle</h3><p>PIP is a computationally intensive operation. Therefore, it is common to first get the minimum bounding rectangle (MBR, alternatively minimum bounding box) of a polygon and test whether the point lies inside this rectangle. For the purposes of this request, the MBR can be found by simply taking the minimum and maximum x and y coordinates of a polygon (a smaller rectangle may be found by rotating the coordinate system). If a given point lies outside this rectangle, then it is definitely outside the polygon and there is no need to proceed to the full PIP algorithm. This is shown graphically in figure 2, where the red box is the MBR.</p>
 <p>It can be seen that the MBR correctly identifies the red point as outside the polygon, but incorrectly identifies one of the blue points as inside. Therefore, it is necessary to use a more sophisticated algorithm to determine whether the blue points do indeed lie inside the polygon.</p>
 <h3 id="The-point-in-polygon-algorithm"><a href="#The-point-in-polygon-algorithm" class="headerlink" title="The point in polygon algorithm"></a>The point in polygon algorithm</h3><p>There are two commonly used PIP algorithms; the ray casting algorithm and the winding number algorithm. The ray casting algorithm is introduced here as it is conceptually simpler, but you are free to use the winding number algorithm in your submission if you wish.</p>
 <h3 id="The-ray-casting-algorithm"><a href="#The-ray-casting-algorithm" class="headerlink" title="The ray casting algorithm"></a>The ray casting algorithm</h3><p>The ray casting algorithm involves drawing a straight line in any direction from the test point, and counting how many times it crosses the boundary of the polygon. If the line crosses the boundary an odd number of times then the point lies inside the polygon. If the line crosses the boundary an even number of times then the point lies outside the polygon. This is depicted graphically in figure 3.</p>
@@ -410,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSC2023-Truck-Loading-Problem.html" rel="next" title="Java代写：CSC2023-Truck-Loading-Problem">
-                <i class="fa fa-chevron-left"></i> Java代写：CSC2023-Truck-Loading-Problem
+              <a href="/CSC2023-Truck-Loading-Problem.html" rel="next" title="Java辅导：CSC2023-Truck-Loading-Problem">
+                <i class="fa fa-chevron-left"></i> Java辅导：CSC2023-Truck-Loading-Problem
               </a>
             
           </div>
@@ -420,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/COMP10001-Finding-Primes.html" rel="prev" title="Python代写：COMP10001-Finding-Primes">
-                Python代写：COMP10001-Finding-Primes <i class="fa fa-chevron-right"></i>
+              <a href="/COMP10001-Finding-Primes.html" rel="prev" title="Python辅导：COMP10001-Finding-Primes">
+                Python辅导：COMP10001-Finding-Primes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

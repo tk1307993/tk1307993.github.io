@@ -86,14 +86,14 @@
 <meta name="description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
 <meta name="keywords" content="Game,MVC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代写：CSSE1001-Pokemon-Finding-Game">
+<meta property="og:title" content="Python辅导：CSSE1001-Pokemon-Finding-Game">
 <meta property="og:url" content="https://tk1307993.coding.me/CSSE1001-Pokemon-Finding-Game.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-17T01:10:27.959Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:56.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代写：CSSE1001-Pokemon-Finding-Game">
+<meta name="twitter:title" content="Python辅导：CSSE1001-Pokemon-Finding-Game">
 <meta name="twitter:description" content="Pokemon系列游戏，本质上还是练习MVC和OOP的写法。Start code自带GUI，Player在地图中找到所有的Pokemon并集齐当前地图的图鉴，即可过关。">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Python代写：CSSE1001-Pokemon-Finding-Game | 留学生CS编程辅导</title>
+  <title>Python辅导：CSSE1001-Pokemon-Finding-Game | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python代写：CSSE1001-Pokemon-Finding-Game</h2>
+          <h2 class="post-title" itemprop="name headline">Python辅导：CSSE1001-Pokemon-Finding-Game</h2>
         
 
         <div class="post-meta">
@@ -360,11 +360,11 @@
       
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this assignment, you will be writing code that supports a simple Pokemon finding game. The basic idea of the application is that you explore multiple levels in search for Pokemon, which are then registered in your Dex. Rather than using functions, like assignment 1, you will be using Object-Oriented Programming (OOP). Further, you will be using the Model View Controller (MVC) design pattern. Your task is to write the Model. The View and Controller are provided, along with support code.</p>
-<p>As is typical with projects where more than one person is responsible for writing code, there needs to be a way of describing how the various components interact. This is achieved by defining an Application Programming Interface (API). For this assignment, you must implement your classes according to the API that has been specified, which will ensure that your code will interact properly with the supplied View/Controller code.</p>
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this request, you will be writing code that supports a simple Pokemon finding game. The basic idea of the application is that you explore multiple levels in search for Pokemon, which are then registered in your Dex. Rather than using functions, like request 1, you will be using Object-Oriented Programming (OOP). Further, you will be using the Model View Controller (MVC) design pattern. Your task is to write the Model. The View and Controller are provided, along with support code.</p>
+<p>As is typical with projects where more than one person is responsible for writing code, there needs to be a way of describing how the various components interact. This is achieved by defining an Application Programming Interface (API). For this request, you must implement your classes according to the API that has been specified, which will ensure that your code will interact properly with the supplied View/Controller code.</p>
 <p>One benefit to adhering to MVC is that the model can be developed and tested independently of the view or controller. It is recommended that you follow this approach. This means testing your model iteratively as you develop your code.</p>
-<h3 id="Assignment-Tasks"><a href="#Assignment-Tasks" class="headerlink" title="Assignment Tasks"></a>Assignment Tasks</h3><h4 id="Download-files"><a href="#Download-files" class="headerlink" title="Download files"></a>Download files</h4><p>The first task is to download a2.py and a2_files.zip. The file a2.py is for your assignment. Do not modify the assignment file outside the area provided for you to write your code.</p>
-<h4 id="Important-Definitions"><a href="#Important-Definitions" class="headerlink" title="Important Definitions"></a>Important Definitions</h4><p>While Pokemon is an irregular plural (meaning that its plural takes the same form as its singular, like sheep and fish), for the purposes of this assignment, multiple Pokemon are referred to as Pokemons for clarity.</p>
+<h3 id="request-Tasks"><a href="#request-Tasks" class="headerlink" title="request Tasks"></a>request Tasks</h3><h4 id="Download-files"><a href="#Download-files" class="headerlink" title="Download files"></a>Download files</h4><p>The first task is to download a2.py and a2_files.zip. The file a2.py is for your request. Do not modify the request file outside the area provided for you to write your code.</p>
+<h4 id="Important-Definitions"><a href="#Important-Definitions" class="headerlink" title="Important Definitions"></a>Important Definitions</h4><p>While Pokemon is an irregular plural (meaning that its plural takes the same form as its singular, like sheep and fish), for the purposes of this request, multiple Pokemon are referred to as Pokemons for clarity.</p>
 <h4 id="Positions-amp-Coordinates"><a href="#Positions-amp-Coordinates" class="headerlink" title="Positions &amp; Coordinates"></a>Positions &amp; Coordinates</h4><p>A position is represented by a (row, column) pair of numbers.<br>A cell position is a position where the row and column are both integers. It represents the position of where an object in the game could be located.<br>A wall position is a position where either the row or column value is a float ending in .5 and the other is an integer. The .5 represents that the wall is located at a boundary betweeen two cell positions for that row or column.</p>
 <h4 id="Expecting-Registering-amp-Catching"><a href="#Expecting-Registering-amp-Catching" class="headerlink" title="Expecting, Registering, &amp; Catching"></a>Expecting, Registering, &amp; Catching</h4><p>Catching a Pokemon refers to the player adding it to their collection. Whilst moving around the game world, the player catches a Pokemon by moving onto a cell in which that Pokemon exists. When a Pokemon is caught, it is removed from the game world.<br>A Pokedex, henceforth abbreviated as Dex, maintains a registry of Pokemon that the player is expected to catch. A Pokemon is registered in a Dex when the player catches that Pokemon. Registering a Pokemon that has already been registered has no effect.</p>
 <h4 id="Game-Data"><a href="#Game-Data" class="headerlink" title="Game Data"></a>Game Data</h4><p>Game data can be loaded using either load\game_file(file) or load_game_url(url) from the support file. These functions will raise errors if the file/url do not exist or provide invalid JSON, as specified in their docstring comments. Game data consists of the following structure, comments added for clarity:<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  levels: [               <span class="meta"># List of levels in game</span></span><br><span class="line">    &#123;</span><br><span class="line">      terrain: <span class="keyword">str</span>,       <span class="meta"># Name of the terrain type</span></span><br><span class="line">      rows: <span class="keyword">int</span>,          <span class="meta"># Number of rows</span></span><br><span class="line">      columns: <span class="keyword">int</span>,       <span class="meta"># Number of columns</span></span><br><span class="line">      player: (<span class="keyword">int</span>, <span class="keyword">int</span>), <span class="meta"># Player's starting position</span></span><br><span class="line">      pokemons: [         <span class="meta"># List of pokemon existing in level</span></span><br><span class="line">        &#123;name: <span class="keyword">str</span>, position: (<span class="keyword">int</span>, <span class="keyword">int</span>)&#125;,</span><br><span class="line">        ...</span><br><span class="line">      ],</span><br><span class="line">      walls: [            <span class="meta"># List of walls existing in level</span></span><br><span class="line">        (<span class="keyword">int</span>, <span class="keyword">int</span>),</span><br><span class="line">        ...</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -410,10 +410,10 @@
 <li>An instance of the Player class, which will be used when instantiating each Level.</li>
 <li>A list of Levels in the order in which they are loaded. This list will be empty until either the load_file or load_url method is called, but upon loading a game, this list must contain instances of the Level class, one for each level in the game data.</li>
 </ul>
-<h3 id="Assessment-and-Marking-Criteria"><a href="#Assessment-and-Marking-Criteria" class="headerlink" title="Assessment and Marking Criteria"></a>Assessment and Marking Criteria</h3><p>In addition to providing a working solution to the assignment problem, the assessment will involve discussing your code submission with a tutor. This discussion will take place in the practical session you have signed up to in week 10. You must attend that session in order to obtain marks for the assignment.</p>
+<h3 id="Assessment-and-Marking-Criteria"><a href="#Assessment-and-Marking-Criteria" class="headerlink" title="Assessment and Marking Criteria"></a>Assessment and Marking Criteria</h3><p>In addition to providing a working solution to the request problem, the assessment will involve discussing your code submission with a tutor. This discussion will take place in the practical session you have signed up to in week 10. You must attend that session in order to obtain marks for the request.</p>
 <p>In preparation for your discussion with a tutor you may wish to consider:</p>
 <ul>
-<li>any parts of the assignment that you found particularly difficult, and how you overcame them to arrive at a solution;</li>
+<li>any parts of the request that you found particularly difficult, and how you overcame them to arrive at a solution;</li>
 <li>whether you considered any alternative ways of implementing a given function;</li>
 <li>where you have known errors in your code, their cause and possible solutions (if known).</li>
 </ul>
@@ -449,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS206-Very-Large-Integer.html" rel="next" title="Java代写：CS206-Very-Large-Integer">
-                <i class="fa fa-chevron-left"></i> Java代写：CS206-Very-Large-Integer
+              <a href="/CS206-Very-Large-Integer.html" rel="next" title="Java辅导：CS206-Very-Large-Integer">
+                <i class="fa fa-chevron-left"></i> Java辅导：CS206-Very-Large-Integer
               </a>
             
           </div>
@@ -459,8 +459,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS101-Five-Questions.html" rel="prev" title="Python代写：CS101-Five-Questions">
-                Python代写：CS101-Five-Questions <i class="fa fa-chevron-right"></i>
+              <a href="/CS101-Five-Questions.html" rel="prev" title="Python辅导：CS101-Five-Questions">
+                Python辅导：CS101-Five-Questions <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -612,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Tasks"><span class="nav-number">2.</span> <span class="nav-text">Assignment Tasks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Download-files"><span class="nav-number">2.1.</span> <span class="nav-text">Download files</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Important-Definitions"><span class="nav-number">2.2.</span> <span class="nav-text">Important Definitions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Positions-amp-Coordinates"><span class="nav-number">2.3.</span> <span class="nav-text">Positions &amp; Coordinates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Expecting-Registering-amp-Catching"><span class="nav-number">2.4.</span> <span class="nav-text">Expecting, Registering, &amp; Catching</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Game-Data"><span class="nav-number">2.5.</span> <span class="nav-text">Game Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Write-the-code"><span class="nav-number">2.6.</span> <span class="nav-text">Write the code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Commenting"><span class="nav-number">2.7.</span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-GameObject-Class"><span class="nav-number">3.</span> <span class="nav-text">The GameObject Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Pokemon-Class"><span class="nav-number">4.</span> <span class="nav-text">The Pokemon Class</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Wall-Class"><span class="nav-number">4.1.</span> <span class="nav-text">The Wall Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Player-Class"><span class="nav-number">4.2.</span> <span class="nav-text">The Player Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Dex-Class"><span class="nav-number">4.3.</span> <span class="nav-text">The Dex Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Level-Class"><span class="nav-number">4.4.</span> <span class="nav-text">The Level Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Game-Class"><span class="nav-number">4.5.</span> <span class="nav-text">The Game Class</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assessment-and-Marking-Criteria"><span class="nav-number">5.</span> <span class="nav-text">Assessment and Marking Criteria</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request-Tasks"><span class="nav-number">2.</span> <span class="nav-text">request Tasks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Download-files"><span class="nav-number">2.1.</span> <span class="nav-text">Download files</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Important-Definitions"><span class="nav-number">2.2.</span> <span class="nav-text">Important Definitions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Positions-amp-Coordinates"><span class="nav-number">2.3.</span> <span class="nav-text">Positions &amp; Coordinates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Expecting-Registering-amp-Catching"><span class="nav-number">2.4.</span> <span class="nav-text">Expecting, Registering, &amp; Catching</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Game-Data"><span class="nav-number">2.5.</span> <span class="nav-text">Game Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Write-the-code"><span class="nav-number">2.6.</span> <span class="nav-text">Write the code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Commenting"><span class="nav-number">2.7.</span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-GameObject-Class"><span class="nav-number">3.</span> <span class="nav-text">The GameObject Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Pokemon-Class"><span class="nav-number">4.</span> <span class="nav-text">The Pokemon Class</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Wall-Class"><span class="nav-number">4.1.</span> <span class="nav-text">The Wall Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Player-Class"><span class="nav-number">4.2.</span> <span class="nav-text">The Player Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Dex-Class"><span class="nav-number">4.3.</span> <span class="nav-text">The Dex Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Level-Class"><span class="nav-number">4.4.</span> <span class="nav-text">The Level Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Game-Class"><span class="nav-number">4.5.</span> <span class="nav-text">The Game Class</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assessment-and-Marking-Criteria"><span class="nav-number">5.</span> <span class="nav-text">Assessment and Marking Criteria</span></a></li></ol></div>
             
 
           </div>

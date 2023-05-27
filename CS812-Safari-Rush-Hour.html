@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="代写程序解决类似华容道的问题，用A*算法实现，很有意思的一个作业。">
+<meta name="description" content="辅导程序解决类似华容道的问题，用A*算法实现，很有意思的一个需求。">
 <meta name="keywords" content="Algorithm,Game,Artificial Intelligence">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS812-Safari-Rush-Hour">
 <meta property="og:url" content="https://tk1307993.coding.me/CS812-Safari-Rush-Hour.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="代写程序解决类似华容道的问题，用A*算法实现，很有意思的一个作业。">
+<meta property="og:description" content="辅导程序解决类似华容道的问题，用A*算法实现，很有意思的一个需求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-06T08:51:39.730Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:03.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS812-Safari-Rush-Hour">
-<meta name="twitter:description" content="代写程序解决类似华容道的问题，用A*算法实现，很有意思的一个作业。">
+<meta name="twitter:description" content="辅导程序解决类似华容道的问题，用A*算法实现，很有意思的一个需求。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  代写程序解决类似华容道的问题，用A*算法实现，很有意思的一个作业。
+                  辅导程序解决类似华容道的问题，用A*算法实现，很有意思的一个需求。
               </div>
           
 
@@ -365,14 +365,14 @@
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>The predecessor game of Safari Rush Hour is Rush Hour. It is played on a smaller board, with a different number and different shaped pieces. Try playing the applet here. You can practice on this applet to get an idea of how to solve Safari Rush Hour puzzles.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>A sample problem input looks as follows:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">P</span> <span class="selector-tag">J1</span></span><br><span class="line">.......</span><br><span class="line"><span class="selector-class">.rrrf</span>..</span><br><span class="line"><span class="selector-tag">hh</span>.<span class="selector-class">.fq</span>.!</span><br><span class="line"><span class="selector-tag">o</span><span class="selector-class">.xx</span><span class="selector-class">.q</span>.!</span><br><span class="line"><span class="selector-tag">o</span><span class="selector-class">.xx</span><span class="selector-class">.q</span>.</span><br><span class="line"><span class="selector-tag">ob</span>.<span class="selector-class">.ee</span>.</span><br><span class="line"><span class="selector-class">.bppp</span>..</span><br></pre></td></tr></table></figure></p>
 <p>The first line indicates a problem (“P”) and the name of the problem (“J1”). The problems are all numbered, and the first letter indicates the difficulty of the problem: “J” is junior, “B” is beginner, “I” is intermediate, “A” is advanced, and “E” is expert. In the puzzle specification, the letters stand for the playing pieces: 2x2 pieces: termite mounds (u,v) and safari rover (x); 3x1 pieces: elephant (o, q, s) and rhino (p, r); 2x1 pieces: lion (a, f), lioness (d, g, j), impala (b, h, i, k) and zebra (c, e). The actual names do not matter; all that is important is the shape of each of the pieces and the way that they move. The “!” indicates the exit (the exit position is fixed and does not change from puzzle to puzzle).</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Using A<em> or IDA</em>, your assignment is to solve a given puzzle in the minimum number of moves with the smallest search tree possible. The latter implies enhancing A<em>/IDA</em> to eliminate as much of the search tree as possible using some of the standard techniques in the literature (or possibly some of your own application-dependent enhancements). Files a2-orig.data, a2-deep.data, a2-vast.data, a2-fiendish.data contain test sets of problems for evaluating your solutions.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Using A<em> or IDA</em>, your request is to solve a given puzzle in the minimum number of moves with the smallest search tree possible. The latter implies enhancing A<em>/IDA</em> to eliminate as much of the search tree as possible using some of the standard techniques in the literature (or possibly some of your own application-dependent enhancements). Files a2-orig.data, a2-deep.data, a2-vast.data, a2-fiendish.data contain test sets of problems for evaluating your solutions.</p>
 <p>Report solution using the following format:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">solution</span> <span class="selector-attr">[id]</span> <span class="selector-attr">[t]</span> <span class="selector-attr">[n]</span> <span class="selector-attr">[move_1]</span> ... <span class="selector-attr">[move_n]</span></span><br></pre></td></tr></table></figure></p>
 <p>where [id] is the problem id, [t] is the wallclock time in seconds your program required to find the solution (or “timeout” if your program timed out - see -t options below) [n] is the number of moves and [move_i] is a move encoded by specifying the name of the piece, its move direction (“l”eft, “r”ight, “u”p, or “d”own) followed by the number of squares that the piece moves. For example, a solution line for the puzzle above is:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">solution J1 <span class="number">0.15</span> <span class="number">5</span> el1 qd2 fu1 xu1 xr5</span><br></pre></td></tr></table></figure></p>
 <p>The length of a solution is the number of move strings. Note that the rover must be moved off the board completely. Test your program on the junior/beginner problems. Then work your way up to the more difficult ones.</p>
 <p>Your program should output the following. For each input problem, I want to see statistics on the number of nodes searched, execution time, average h-value for all nodes where an evaluation occurred in the tree, and min/average/max depth of nodes where a cutoff occurred. When the program successfully terminates, print out the solution.</p>
 <h3 id="Specifications"><a href="#Specifications" class="headerlink" title="Specifications"></a>Specifications</h3><p>Your program should take input from stdin and output to stdout. The input is in the format given above possibly containing multiple positions which need to be solved by your program in turn.</p>
 <p>You program must be single-threaded and use no more than 200 MB of RAM. You must implement command-line option -t n, where n is an integer. This option sets the program to stop searching a position after n seconds of real time. If a timeout occurs your program must report “timeout” as time and proceed with the next problem.</p>
-<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>A tar file that contains your source code, a makefile, and a report in pdf format. Your executable must be named safari. Late assignments will not be accepted!</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>A tar file that contains your source code, a makefile, and a report in pdf format. Your executable must be named safari. Late requests will not be accepted!</p>
 <p>In the report, give me a description of your program. Skip the basics (such as A<em>/IDA</em>). I want to know any search enhancements that you tried. Describe your heuristic function. Tell me what you did that was interesting. What problems did you encounter? How can your solution be improved? This document must be no longer than five pages. Include a table of experimental results that shows the (positive?) impact of your enhancements.</p>
 
       

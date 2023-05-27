@@ -86,14 +86,14 @@
 <meta name="description" content="本题需要求解矩阵的最大特征值">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS140 Matrix-Vector Multiplication">
+<meta property="og:title" content="C辅导：CS140 Matrix-Vector Multiplication">
 <meta property="og:url" content="https://tk1307993.coding.me/CS140-Matrix-VectorMultiplication.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="本题需要求解矩阵的最大特征值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T12:45:08.529Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:14.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS140 Matrix-Vector Multiplication">
+<meta name="twitter:title" content="C辅导：CS140 Matrix-Vector Multiplication">
 <meta name="twitter:description" content="本题需要求解矩阵的最大特征值">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C代写：CS140 Matrix-Vector Multiplication | 留学生CS编程辅导</title>
+  <title>C辅导：CS140 Matrix-Vector Multiplication | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS140 Matrix-Vector Multiplication</h2>
+          <h2 class="post-title" itemprop="name headline">C辅导：CS140 Matrix-Vector Multiplication</h2>
         
 
         <div class="post-meta">
@@ -362,8 +362,8 @@
       
         <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Matrix和Vector是Linear algebra中最基础的概念。而利用计算机求解数学问题，是一种常见的做法。</p>
 <p>将数学公式、定理用计算机编程实现，看起来并不是一件难事，但是对于某些算法，在不考虑时间复杂度的情况下，编写出来的代码运行效率将极其低下。尤其是I/O操作和循环结合的地方，在数据量大的情况下，往往不能快速地得到答案。因此在求解问题的过程中，对于原数学公式、定理的简化与改写，是很有必要的。</p>
-<p>而本次作业需要在给定的时间复杂度条件下，求解一些基本的线性代数的问题。</p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This assignment is to write a parallel program to multiply a matrix by a vector, and to use this routine in an implementation of the power method to find the absolute value of the largest eigenvalue of the matrix. You will write separate functions to generate the matrix and to perform the power method, and you will do some timing experiments with the power method routine.</p>
+<p>而本次需求需要在给定的时间复杂度条件下，求解一些基本的线性代数的问题。</p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>This request is to write a parallel program to multiply a matrix by a vector, and to use this routine in an implementation of the power method to find the absolute value of the largest eigenvalue of the matrix. You will write separate functions to generate the matrix and to perform the power method, and you will do some timing experiments with the power method routine.</p>
 <h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>本题需要求解absolute value of the largest eigenvalue of the matrix，也就是矩阵的最大特征值。对于矩阵特征值的理解，请参考如何理解矩阵特征值？</p>
 <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>本题需要求解的其中一个矩阵为<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5</span> <span class="number">5</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">6</span> <span class="number">6</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
 <p>通过观察，上面的矩阵是一个上三角矩阵。而三角矩阵的特征值就是对角线上的各个元素。</p>
@@ -399,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS413-DataSecurity.html" rel="next" title="Java代写：CS413 Data Security">
-                <i class="fa fa-chevron-left"></i> Java代写：CS413 Data Security
+              <a href="/CS413-DataSecurity.html" rel="next" title="Java辅导：CS413 Data Security">
+                <i class="fa fa-chevron-left"></i> Java辅导：CS413 Data Security
               </a>
             
           </div>
@@ -409,8 +409,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/COMP435-Multimedia-Technologies-TME1.html" rel="prev" title="Java代写：COMP435 Multimedia Technologies TME1">
-                Java代写：COMP435 Multimedia Technologies TME1 <i class="fa fa-chevron-right"></i>
+              <a href="/COMP435-Multimedia-Technologies-TME1.html" rel="prev" title="Java辅导：COMP435 Multimedia Technologies TME1">
+                Java辅导：COMP435 Multimedia Technologies TME1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

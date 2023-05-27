@@ -86,14 +86,14 @@
 <meta name="description" content="接上一个Part1，这部分是关于Yahtzee这个游戏规则部分以及UI部分的实现。">
 <meta name="keywords" content="Game">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：COMS227-Yahtzee-Part2">
+<meta property="og:title" content="Java辅导：COMS227-Yahtzee-Part2">
 <meta property="og:url" content="https://tk1307993.coding.me/COMS227-Yahtzee-Part2.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
 <meta property="og:description" content="接上一个Part1，这部分是关于Yahtzee这个游戏规则部分以及UI部分的实现。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T12:43:00.288Z">
+<meta property="og:updated_time" content="2023-05-27T13:30:05.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：COMS227-Yahtzee-Part2">
+<meta name="twitter:title" content="Java辅导：COMS227-Yahtzee-Part2">
 <meta name="twitter:description" content="接上一个Part1，这部分是关于Yahtzee这个游戏规则部分以及UI部分的实现。">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Java代写：COMS227-Yahtzee-Part2 | 留学生CS编程辅导</title>
+  <title>Java辅导：COMS227-Yahtzee-Part2 | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：COMS227-Yahtzee-Part2</h2>
+          <h2 class="post-title" itemprop="name headline">Java辅导：COMS227-Yahtzee-Part2</h2>
         
 
         <div class="post-meta">
@@ -365,14 +365,14 @@
 <h3 id="GameFactory"><a href="#GameFactory" class="headerlink" title="GameFactory"></a>GameFactory</h3><p>(Note that the class GameFactory is already implemented. However, you can add to it as you wish for testing and experimentation.)<br>This class has some static methods for creating various games. You can take a look to see how the game constructor is used and how the categories are added to a YahtzeeGame object. This class is used in the sample UI.</p>
 <p>Note that in the sample code, all the calls to the constructors of the Category implementations are commented out. That’s because this code won’t compile until you actually have implementations of the classes that are named there that are subtypes of Category.</p>
 <p>As you complete the implementations, you can start uncommenting the constructor calls to try them out (and uncomment the import statements too).</p>
-<h3 id="The-sample-code"><a href="#The-sample-code" class="headerlink" title="The sample code"></a>The sample code</h3><p>The sample code is an Eclipse project that you can import. See the instructions given for homework 2 if you don’t remember how to import a project.</p>
+<h3 id="The-sample-code"><a href="#The-sample-code" class="headerlink" title="The sample code"></a>The sample code</h3><p>The sample code is an Eclipse project that you can import. See the instructions given for request 2 if you don’t remember how to import a project.</p>
 <p>There are “complete” skeletons present for Hand and YahtzeeGame classes in package hw3. (The Hand class has the toString method implemented for you already.) You will also find partial skeletons for the 8 required concrete subtypes of Category. Each of these classes has a descriptive javadoc comment and a stub for the required constructor. You will need to add either an implements or extends clause to each of these class declarations to make it a subtype of Category, and add whatever implementation code is necessary for your design, as discussed in the above section “Scoring Categories”.</p>
 <h3 id="About-the-UI"><a href="#About-the-UI" class="headerlink" title="About the UI"></a>About the UI</h3><p>There is a sample user interface TextUIMain provided in the default (top-level) package of the sample code. This code will not run until you have implemented the YahtzeeGame and Hand classes, and you will not be able to play a game until you have started implementing the necessary categories. As you implement and test the categories, you can uncomment the corresponding constructors (and add appropriate import statements) in the GameFactory.</p>
 <p>This is a text-based UI using clunky console I/O. It is not as slick as a graphical UI, but has the advantage that the code is entirely comprehensible, so you can read it to see how the other classes in the application are used. A typical screenshot of a game in progress is shown below.</p>
 <p>The dashed lines in the second column indicate the categories called “Sixes” and “Three of a kind” are already filled, and the rightmost columns show the score and the list of dice for the hand that was used to fill the category. The “You rolled…” shows the current state of our hand. Since the parentheses are nonempty, this is not the first roll in this round. We must have previously chosen to “keep” the 2, 3, and 4 from the previous roll, and we just rolled a 1 and a 6. The second column in the list shows us what potential score we would get in each category for this roll as it stands (e.g. 30 points if we use it to fill the “Small Straight” category, or 16 points if we use it for the “Chance” category). One of our options might be to “keep” the 1 and reroll the 6 in the hope of getting a 5 (that would be a large straight).<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Potential scores for this roll:</span></span><br><span class="line"> <span class="number">0</span><span class="string">)</span>     <span class="number">1</span> <span class="string">Aces</span></span><br><span class="line"> <span class="number">1</span><span class="string">)</span>     <span class="number">2</span> <span class="string">Twos</span></span><br><span class="line"> <span class="number">2</span><span class="string">)</span>     <span class="number">3</span> <span class="string">Threes</span></span><br><span class="line"> <span class="number">3</span><span class="string">)</span>     <span class="number">4</span> <span class="string">Fours</span></span><br><span class="line"> <span class="number">4</span><span class="string">)</span>     <span class="number">0</span> <span class="string">Fives</span></span><br><span class="line"> <span class="number">5</span><span class="string">)</span>   <span class="string">---</span> <span class="string">Sixes</span>             <span class="number">12</span> <span class="string">(1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">6</span><span class="string">)</span></span><br><span class="line"> <span class="number">6</span><span class="string">)</span>   <span class="string">---</span> <span class="number">3</span> <span class="string">of</span> <span class="string">a</span> <span class="string">kind</span>       <span class="number">15</span> <span class="string">(2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span><span class="string">)</span></span><br><span class="line"> <span class="number">7</span><span class="string">)</span>     <span class="number">0</span> <span class="number">4</span> <span class="string">of</span> <span class="string">a</span> <span class="string">kind</span></span><br><span class="line"> <span class="number">8</span><span class="string">)</span>     <span class="number">0</span> <span class="string">Fill</span> <span class="string">House</span></span><br><span class="line"> <span class="number">9</span><span class="string">)</span>    <span class="number">30</span> <span class="string">Small</span> <span class="string">Straight</span></span><br><span class="line"><span class="number">10</span><span class="string">)</span>     <span class="number">0</span> <span class="string">Large</span> <span class="string">Straight</span></span><br><span class="line"><span class="number">11</span><span class="string">)</span>     <span class="number">0</span> <span class="string">Yahtzee</span></span><br><span class="line"><span class="number">12</span><span class="string">)</span>    <span class="number">16</span> <span class="string">Chance</span></span><br><span class="line">                          <span class="string">-----</span></span><br><span class="line">                   <span class="attr">SCORE:</span>    <span class="number">27</span></span><br><span class="line"><span class="string">You</span> <span class="string">rolled</span>  <span class="number">1</span> <span class="number">6</span> <span class="string">(2</span> <span class="number">3</span> <span class="number">4</span><span class="string">)</span></span><br><span class="line"></span><br><span class="line"><span class="string">Press</span> <span class="string">ENTER</span> <span class="string">to</span> <span class="string">roll</span> <span class="string">available</span> <span class="string">dice,</span> <span class="attr">or:</span></span><br><span class="line"><span class="string">a)</span> <span class="string">keep</span> <span class="string">all</span></span><br><span class="line"><span class="string">b)</span> <span class="string">select</span> <span class="string">dice</span> <span class="string">to</span> <span class="string">keep</span></span><br><span class="line"><span class="string">c)</span> <span class="string">select</span> <span class="string">dice</span> <span class="string">to</span> <span class="string">free</span></span><br><span class="line"><span class="attr">Your choice:</span></span><br></pre></td></tr></table></figure></p>
 <p>You can edit the UI main method to 1) choose a seed for the random number generator, in case you want the dice results to be reproducible while you are developing the code, and 2) to get a different game from the GameFactory. To try a different game from those constructed in the GameFactory, add another static method to GameFactory. (The “factory” keeps the UI from having any direct dependence on any of the specific category classes, so it will continue to work correctly even if you add new or different categories.)</p>
 <h3 id="Testing-and-the-SpecChecker"><a href="#Testing-and-the-SpecChecker" class="headerlink" title="Testing and the SpecChecker"></a>Testing and the SpecChecker</h3><p>As always, you should try to work incrementally and write tests for your code as you develop it. Please do not put your test code in the hw3 package.</p>
-<p>Do not rely on the UI code for testing! Trying to test your code using a UI is generally slow and unreliable. In particular, when we grade your work we are NOT going to run either of UIs, we are going to test that each method works according to its specification.<br>We will provide a basic SpecChecker, but it will not perform any functional tests of your code. At this point in the course, you are expected to be able to read the specfications, ask questions when things require clarification, and write your own unit tests.<br>Since the test code is not a required part of this assignment and does not need to be turned in, you are welcome to post your test code on Piazza for others to check, use and discuss.</p>
+<p>Do not rely on the UI code for testing! Trying to test your code using a UI is generally slow and unreliable. In particular, when we grade your work we are NOT going to run either of UIs, we are going to test that each method works according to its specification.<br>We will provide a basic SpecChecker, but it will not perform any functional tests of your code. At this point in the course, you are expected to be able to read the specfications, ask questions when things require clarification, and write your own unit tests.<br>Since the test code is not a required part of this request and does not need to be turned in, you are welcome to post your test code on Piazza for others to check, use and discuss.</p>
 <p>The SpecChecker will verify the class names and packages, the public method names and return types, and the types of the parameters. If your class structure conforms to the spec, you should see a message similar to this in the console output:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x <span class="keyword">out</span> of x tests <span class="keyword">pass</span>.</span><br></pre></td></tr></table></figure></p>
 <p>Note that spec conformance can only be checked for the ten required classes listed at the beginning of this document that are known to the specchecker. Remember that your instance variables should always be declared private, and if you want to add any additional “helper” methods that are not specified, they must be declared private as well.</p>
 <p>This SpecChecker will also offer to create a zip file for you. Note that it will look for the 10 required classes, and it will also zip up all other java files in your hw3 directory. Thus the archive should include any additional classes you added to your inheritance hierarchy, and should NOT include extraneous or unnecessary files such as your unit tests.</p>
@@ -415,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMS227-Yahtzee-Part1.html" rel="next" title="Java代写：COMS227-Yahtzee-Part1">
-                <i class="fa fa-chevron-left"></i> Java代写：COMS227-Yahtzee-Part1
+              <a href="/COMS227-Yahtzee-Part1.html" rel="next" title="Java辅导：COMS227-Yahtzee-Part1">
+                <i class="fa fa-chevron-left"></i> Java辅导：COMS227-Yahtzee-Part1
               </a>
             
           </div>
@@ -425,8 +425,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS1101-Hard-Manager.html" rel="prev" title="Java代写：CS1101-Hard-Manager">
-                Java代写：CS1101-Hard-Manager <i class="fa fa-chevron-right"></i>
+              <a href="/CS1101-Hard-Manager.html" rel="prev" title="Java辅导：CS1101-Hard-Manager">
+                Java辅导：CS1101-Hard-Manager <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

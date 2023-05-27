@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="用Java代写一个选择题的答题器程序，练习基本的程序设计。">
+<meta name="description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
 <meta name="keywords" content="Fundamentals,Swing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CST8284-QuizMaster">
 <meta property="og:url" content="https://tk1307993.coding.me/CST8284-QuizMaster.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="用Java代写一个选择题的答题器程序，练习基本的程序设计。">
+<meta property="og:description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-24T09:10:08.962Z">
+<meta property="og:updated_time" content="2023-05-27T13:28:55.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CST8284-QuizMaster">
-<meta name="twitter:description" content="用Java代写一个选择题的答题器程序，练习基本的程序设计。">
+<meta name="twitter:description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
 
 
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  用Java代写一个选择题的答题器程序，练习基本的程序设计。
+                  用Java辅导一个选择题的答题器程序，练习基本的程序设计。
               </div>
           
 
@@ -360,7 +360,7 @@
       
 
       
-        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The purpose of this assignment is to build an application that</p>
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The purpose of this request is to build an application that</p>
 <ol>
 <li>Locates a .quiz file on your hard drive and opens it</li>
 <li>Reads each of the objects in that file into an array (for easier handling)</li>
@@ -368,10 +368,10 @@
 <li>The code loops through the array of objects, and on each iteration displays a new Q/A combination. The program terminates when the questions are finished, and displays the number of correct responses out of the total number of questions asked.</li>
 </ol>
 <h3 id="QuizMaster"><a href="#QuizMaster" class="headerlink" title="QuizMaster"></a>QuizMaster</h3><h4 id="Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project"><a href="#Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project" class="headerlink" title="Load the code for this lab, available on Blackboard, into a new project"></a>Load the code for this lab, available on Blackboard, into a new project</h4><ul>
-<li>In Eclipse, create a new project called Assignment1</li>
-<li>Download Assignment1.zip from Blackboard and open the contents into a package</li>
+<li>In Eclipse, create a new project called request1</li>
+<li>Download request1.zip from Blackboard and open the contents into a package</li>
 </ul>
-<h4 id="Review-the-files-in-Assignment1-zip-and-make-sure-you-understand-their-purpose"><a href="#Review-the-files-in-Assignment1-zip-and-make-sure-you-understand-their-purpose" class="headerlink" title="Review the files in Assignment1.zip and make sure you understand their purpose"></a>Review the files in Assignment1.zip and make sure you understand their purpose</h4><p>There are four files included with this assignment, which you must use, and which you must submit with your finished assignment.<br>QuizMain is the main point of entry for your program. It performs three main actions: it loads a simple splash pane (given); it opens the file containing the Q/A objects and loads them into an array, and then loops through the array loading each question into a BorderPane with separate sections for the question, answers, and explanation; and finally displays the results of the quiz.</p>
+<h4 id="Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose"><a href="#Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose" class="headerlink" title="Review the files in request1.zip and make sure you understand their purpose"></a>Review the files in request1.zip and make sure you understand their purpose</h4><p>There are four files included with this request, which you must use, and which you must submit with your finished request.<br>QuizMain is the main point of entry for your program. It performs three main actions: it loads a simple splash pane (given); it opens the file containing the Q/A objects and loads them into an array, and then loops through the array loading each question into a BorderPane with separate sections for the question, answers, and explanation; and finally displays the results of the quiz.</p>
 <p>Note that each of the three sections is associated with a method that loads up a different Pane object. getSplashPane() loads a simple text message (“Welcome to QuizMaster”) for initial display in the centre of a BorderPane. getCurrentQAPane() uses the current QA object to load up a BorderPane with some of the components of the QA object. getResultsPane() displays the results of the quiz. getSplashPane() is provided for you; more information on the other two panes is provided below.</p>
 <p>FileUtils is a class containing static methods that perform basic file I/O operations, including checking to see if the file exists, returning the file name, and so on. The static method getFileHandle() calls up the FileChooser dialog box, shown below, which prompts the user to select a .quiz file (to be provided), which contains the QA objects to be loaded. Note that the other utilities in this class rely on a file having been correctly selected. If the ‘Cancel’ button on the dialog is selected, then no file handle is returned from getFileHandle(), and any further attempts to return a path name to the file return an empty string.</p>
 <p>If they do wish to continue, then prompt them with the above dialog again, otherwise execute Platform.exit() to exit the program.</p>
@@ -380,7 +380,7 @@
 <p>QA extends QuesAns and supplies concrete methods. Use the QA class when you need to load the QA objects from the .ques file returned by getFileHandle(), as indicated above in part (b), and when you need to load the currentQAPane, as indicated below</p>
 <h4 id="Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program"><a href="#Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program" class="headerlink" title="Supply the classes/methods required to allow for the correct execution of your program"></a>Supply the classes/methods required to allow for the correct execution of your program</h4><p>Note that the method FileUtils.showAndWait(FileUtils.ON) effectively pauses the program to give the user time to input a response. Without such a mechanism, the enhanced for loop that drives the program would simply loop through and load every pane in rapid succession, with no way to allow the user time to read questions and select answers.</p>
 <p>There are better ways to perform this operation, but they involve code that is beyond our reach just now. For now, showAndWait() does the job. Therefore, when the user wishes to move on to the next question, the NEXT QUESTION button must execute FileUtils.showAndWait(FileUtiles.OFF), to allow the program to load the next QA object in the loop.</p>
-<p>Also note that, for demonstration purposes, the .ques file will only contain MAX_QA_SIZE questions (initially set to 5); hence we only load MAX_QA_SIZE objects into the array, and loop through the enhanced for loop MAX_QA_SIZE times. This will change in Assignment 2 when we modify this code to accommodate files of any size.</p>
+<p>Also note that, for demonstration purposes, the .ques file will only contain MAX_QA_SIZE questions (initially set to 5); hence we only load MAX_QA_SIZE objects into the array, and loop through the enhanced for loop MAX_QA_SIZE times. This will change in request 2 when we modify this code to accommodate files of any size.</p>
 <p>Aside from the getQAArray code needed to complete the FileUtils class, along with the code needed to display the results at the end of the program, most of your time will be spent writing the code needed to display the current Question/Answers combination.</p>
 <p>The getCurrentPane() method, which reads in the currentQA object, should be included in QuizMain, along with the two other ‘getPane()’ methods needed for proper execution of the program.</p>
 <p>Your QA input pane should look something like the screenshot shown in the figure below.</p>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuizMaster"><span class="nav-number">2.</span> <span class="nav-text">QuizMaster</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project"><span class="nav-number">2.1.</span> <span class="nav-text">Load the code for this lab, available on Blackboard, into a new project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Review-the-files-in-Assignment1-zip-and-make-sure-you-understand-their-purpose"><span class="nav-number">2.2.</span> <span class="nav-text">Review the files in Assignment1.zip and make sure you understand their purpose</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program"><span class="nav-number">2.3.</span> <span class="nav-text">Supply the classes/methods required to allow for the correct execution of your program</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuizMaster"><span class="nav-number">2.</span> <span class="nav-text">QuizMaster</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project"><span class="nav-number">2.1.</span> <span class="nav-text">Load the code for this lab, available on Blackboard, into a new project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose"><span class="nav-number">2.2.</span> <span class="nav-text">Review the files in request1.zip and make sure you understand their purpose</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program"><span class="nav-number">2.3.</span> <span class="nav-text">Supply the classes/methods required to allow for the correct execution of your program</span></a></li></ol></li></ol></div>
             
 
           </div>

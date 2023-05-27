@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Data Structure,Algorithm,">
+  <meta name="keywords" content="Algorithm,Data Structure,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="使用三方库SFML作为GUI，代写Game of Life这个游戏。">
-<meta name="keywords" content="Data Structure,Algorithm">
+<meta name="description" content="使用三方库SFML作为GUI，辅导Game of Life这个游戏。">
+<meta name="keywords" content="Algorithm,Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C代写：CS162-Hashtag">
+<meta property="og:title" content="C辅导：CS162-Hashtag">
 <meta property="og:url" content="https://tk1307993.coding.me/CS162-Hashtag.html">
 <meta property="og:site_name" content="留学生CS编程辅导">
-<meta property="og:description" content="使用三方库SFML作为GUI，代写Game of Life这个游戏。">
+<meta property="og:description" content="使用三方库SFML作为GUI，辅导Game of Life这个游戏。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-10T00:11:34.200Z">
+<meta property="og:updated_time" content="2023-05-27T13:29:13.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C代写：CS162-Hashtag">
-<meta name="twitter:description" content="使用三方库SFML作为GUI，代写Game of Life这个游戏。">
+<meta name="twitter:title" content="C辅导：CS162-Hashtag">
+<meta name="twitter:description" content="使用三方库SFML作为GUI，辅导Game of Life这个游戏。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>C代写：CS162-Hashtag | 留学生CS编程辅导</title>
+  <title>C辅导：CS162-Hashtag | 留学生CS编程辅导</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C代写：CS162-Hashtag</h2>
+          <h2 class="post-title" itemprop="name headline">C辅导：CS162-Hashtag</h2>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C代写/" itemprop="url" rel="index">
-                    <span itemprop="name">C代写</span>
+                  <a href="/categories/C辅导/" itemprop="url" rel="index">
+                    <span itemprop="name">C辅导</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  使用三方库SFML作为GUI，代写Game of Life这个游戏。
+                  使用三方库SFML作为GUI，辅导Game of Life这个游戏。
               </div>
           
 
@@ -361,17 +361,17 @@
 
       
         <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In Lab 1 “Rock Climber”, you learned how to climb rocks (well, sort of). You got overly excited and couldn’t wait to tell your friends about your newly acquired skill on Twitter. Obviously, you needed an excellent hashtag for your tweet. No problem! We will find you one.</p>
-<p>In this assignment, you will be exposed to several array searching and sorting concepts and implementations, and asymptotic analyses in general. Work individually. Follow the guidelines in the syllabus for any discussions with others. You may work in pairs on extra credit contests, but then the extra credit will be divided among the two of you. Extra credit entries must be bug free to be eligible and turned in on time (no late days).</p>
-<h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><p>After downloading the assignment tarball from the course website, extract the files by running:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tar</span> <span class="selector-tag">-xvf</span> <span class="selector-tag">lab2-handout</span><span class="selector-class">.tgz</span></span><br></pre></td></tr></table></figure></p>
+<p>In this request, you will be exposed to several array searching and sorting concepts and implementations, and asymptotic analyses in general. Work individually. Follow the guidelines in the syllabus for any discussions with others. You may work in pairs on extra credit contests, but then the extra credit will be divided among the two of you. Extra credit entries must be bug free to be eligible and turned in on time (no late days).</p>
+<h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><p>After downloading the request tarball from the course website, extract the files by running:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tar</span> <span class="selector-tag">-xvf</span> <span class="selector-tag">lab2-handout</span><span class="selector-class">.tgz</span></span><br></pre></td></tr></table></figure></p>
 <p>from a terminal window. Some of the files worth looking at are listed below.<br>Files you won’t modify:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Makefile</span><br><span class="line"><span class="class"><span class="keyword">lib</span>/*.<span class="title">h</span></span></span><br><span class="line"><span class="class"><span class="keyword">lib</span>/*.<span class="title">c</span></span></span><br><span class="line"><span class="class"><span class="keyword">lib</span>/<span class="title">words</span></span></span><br></pre></td></tr></table></figure></p>
 <p>Files you may modify (and the files denoted by * will be submitted for grading):<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* <span class="selector-tag">duplicates</span><span class="selector-class">.c</span></span><br><span class="line">* <span class="selector-tag">trending</span><span class="selector-class">.c</span></span><br><span class="line">* <span class="selector-tag">validity</span><span class="selector-class">.c</span></span><br><span class="line"><span class="selector-tag">duplicates_test</span><span class="selector-class">.c</span></span><br><span class="line"><span class="selector-tag">trending_test</span><span class="selector-class">.c</span></span><br><span class="line"><span class="selector-tag">validity_test</span><span class="selector-class">.c</span></span><br></pre></td></tr></table></figure></p>
 <p>Additionally, you should create a file called:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">written</span><span class="selector-class">.pdf</span></span><br></pre></td></tr></table></figure></p>
-<p>which contains the answers to the written parts of the assignment. For your convenience, we’ve provided a LATEX template (written.tex).</p>
-<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>To submit your programming assignment, first generate a handin archive lab2-handin.tgz with the command<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">make</span> <span class="keyword">package</span></span><br></pre></td></tr></table></figure></p>
+<p>which contains the answers to the written parts of the request. For your convenience, we’ve provided a LATEX template (written.tex).</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>To submit your programming request, first generate a handin archive lab2-handin.tgz with the command<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">make</span> <span class="keyword">package</span></span><br></pre></td></tr></table></figure></p>
 <p>then submit your lab2-handin.tgz file to your Subversion repository (svn) for the class. Once you’ve completed all problems, you should also submit your written.pdf to Gradescope.</p>
 <p>Note that your code will not be graded until after the due date. It is your responsibility to test your code and proofread your writeup thoroughly before submitting.</p>
 <h3 id="Hashtag"><a href="#Hashtag" class="headerlink" title="Hashtag"></a>Hashtag</h3><p>What is a hashtag you ask? Well, it is “a word or phrase preceded by the symbol # that classifies or categorizes the accompanying text (such as a tweet)”. For the purpose of this lab, we will ignore the preceding “#” sign, because they appear in front of every hashtag. Furthermore, throughout the lab, we will assume that the hashtags are case-insensitive. For example, #OhWhatABeautifulMorning is represented as the string “ohwhatabeautifulmorning”, or more precisely, a char array in C, of course.</p>
-<h3 id="WhatHashtagsHaveIUsed"><a href="#WhatHashtagsHaveIUsed" class="headerlink" title="WhatHashtagsHaveIUsed"></a>WhatHashtagsHaveIUsed</h3><p>In this part of the assignment, given a sorted array of hashtags (i.e. an array of strings sorted in alphabetical order) that you have used since your first tweet, you will return a new sorted array of distinct hashtags. In other words, the new array should contain the same strings as the original array, but all strings are now distinct.</p>
+<h3 id="WhatHashtagsHaveIUsed"><a href="#WhatHashtagsHaveIUsed" class="headerlink" title="WhatHashtagsHaveIUsed"></a>WhatHashtagsHaveIUsed</h3><p>In this part of the request, given a sorted array of hashtags (i.e. an array of strings sorted in alphabetical order) that you have used since your first tweet, you will return a new sorted array of distinct hashtags. In other words, the new array should contain the same strings as the original array, but all strings are now distinct.</p>
 
       
     </div>
@@ -389,9 +389,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
-          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -404,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSCI1310-How-Do-You-Feel-On-Twitter.html" rel="next" title="Python代写：CSCI1310-How-Do-You-Feel-On-Twitter">
-                <i class="fa fa-chevron-left"></i> Python代写：CSCI1310-How-Do-You-Feel-On-Twitter
+              <a href="/CSCI1310-How-Do-You-Feel-On-Twitter.html" rel="next" title="Python辅导：CSCI1310-How-Do-You-Feel-On-Twitter">
+                <i class="fa fa-chevron-left"></i> Python辅导：CSCI1310-How-Do-You-Feel-On-Twitter
               </a>
             
           </div>
@@ -414,8 +414,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/CS3160-Set.html" rel="prev" title="C#代写：CS3160-Set">
-                C#代写：CS3160-Set <i class="fa fa-chevron-right"></i>
+              <a href="/CS3160-Set.html" rel="prev" title="C#辅导：CS3160-Set">
+                C#辅导：CS3160-Set <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
