@@ -1,5 +1,1 @@
-https://tk1307993.coding.me/ISE543-Predictive-Model.html
-https://tk1307993.coding.me/COMP3620-Constraint-Satisfaction-Problems.html
-https://tk1307993.coding.me/CSE536-User-Level-Thread-Management.html
-https://tk1307993.coding.me/CSCI561-First-Order-Logic-Resolution.html
-https://tk1307993.coding.me/CS714-Parallel-Design-Patterns.html
+https://tk1307993.coding.me/hello-world.html
