@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导实现一个文本编辑器，用单链表实现。">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS1921-Text-Editor">
+<meta property="og:url" content="https://tk1307993.coding.me/CS1921-Text-Editor.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导实现一个文本编辑器，用单链表实现。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:12.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS1921-Text-Editor">
+<meta name="twitter:description" content="辅导实现一个文本编辑器，用单链表实现。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS1921-Text-Editor.html">
+
+
+
+
+
+  <title>CS1921-Text-Editor | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS1921-Text-Editor.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS1921-Text-Editor</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-21T09:23:00+08:00">
+                2019-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导实现一个文本编辑器，用单链表实现。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Aims"><a href="#Aims" class="headerlink" title="Aims"></a>Aims</h3><p>This exercise aims to give you practice in dealing with dynamic data structures, specifically linked lists. The goal is to complete the implementation of a medium-sized program that can do simple text editing.</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>The request is to write a simple line-based text editor called lite (which stands for line text editor). The editor lite stores lines of text in a linked list: each line of text is stored in a node of the linked list. If there are n lines of text, they are numbered from 1 to n for the user. At every point in time the editor has a current line number (which is an index between 1 and n). When lite is started up, the current line number is 1. The line-based commands allow the user to print lines, to delete the current line, to insert and append lines before or after the current line and to go-to a particular line. There are also file-oriented commands that enable the user to save changes and quit the editor, to force an exit or to change the name of the file. Note that lite does not contain a search command or contain any way of changing text apart from deleting ‘old’ lines and appending and inserting new lines.</p>
+<p>The main objectives of this request are:</p>
+<ul>
+<li>use and manipulate dynamic data structures (like linked lists) to solve a complex problem</li>
+<li>learn how to implement a linked list data structure and functions for maintaining the data structure</li>
+<li>gain experience with implementing a more comprehensive functionality for editing text files</li>
+<li>write a properly documented C program that adheres to the course Style Guide</li>
+</ul>
+<p>NOTE: You should think carefully about the appropriate data structures and algorithms to use in your program. Before starting to write any code it is important that you fully understand the problem and determine the data structures that you will require and the algorithms to use. It is highly recommended that you start coding only after you have spent some time on these considerations. In particular, you must not make any assumptions about the number of lines in a text file; this means that you must use dynamically-allocated linked-list data structure to manage a text file.</p>
+<h3 id="What-the-editor-should-do"><a href="#What-the-editor-should-do" class="headerlink" title="What the editor should do"></a>What the editor should do</h3><p>A file name is the only optional argument to the lite command. So you execute lite either by:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt<span class="variable">$ </span>./lite</span><br></pre></td></tr></table></figure></p>
+<p>or<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt<span class="variable">$ </span>./lite filename</span><br></pre></td></tr></table></figure></p>
+<p>where filename is a file name that may or may not exist. If there are more arguments, then the usage error message from lite is:<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Usage</span>: ./lite<span class="meta"> [filename]</span></span><br></pre></td></tr></table></figure></p>
+<p>The square brackets indicate that filename is optional.</p>
+<h3 id="Examples-of-Use"><a href="#Examples-of-Use" class="headerlink" title="Examples of Use"></a>Examples of Use</h3><p>When lite is waiting for user input it uses the prompt ‘?’. When text is printed, each line is preceded by its line number. The current line number is indicated by an arrow.</p>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h4><p>The user can start up the editor without a file name, print the help command and then quit.<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">prompt$ ./lite</span><br><span class="line">? h</span><br><span class="line">Commands are (in upper <span class="built_in">or</span> lower case):</span><br><span class="line">        q:      <span class="keyword">quit</span></span><br><span class="line">        <span class="variable">s:</span>      save</span><br><span class="line">        <span class="keyword">x</span>:      force <span class="keyword">exit</span></span><br><span class="line">        <span class="keyword">f</span> <span class="symbol">&lt;filename&gt;</span>: the <span class="keyword">file</span> <span class="keyword">is</span> called <span class="symbol">&lt;filename&gt;</span></span><br><span class="line">        h:      <span class="keyword">print</span> this <span class="keyword">help</span> message</span><br><span class="line">        d:      <span class="keyword">delete</span> current <span class="built_in">line</span></span><br><span class="line">        <span class="variable">a:</span>      <span class="keyword">append</span> after current <span class="built_in">line</span>, terminated by <span class="string">'.'</span></span><br><span class="line">        i:      <span class="keyword">insert</span> before current <span class="built_in">line</span>, terminated by <span class="string">'.'</span></span><br><span class="line">        <span class="keyword">p</span>:      <span class="keyword">print</span> <span class="keyword">all</span> lines</span><br><span class="line">        .:      <span class="keyword">print</span> current <span class="built_in">line</span></span><br><span class="line">        +:      increment <span class="built_in">line</span> <span class="built_in">and</span> <span class="keyword">print</span></span><br><span class="line">        <span class="symbol">&lt;return&gt;</span>: same <span class="keyword">as</span> <span class="string">'+'</span></span><br><span class="line">        -:      decrement <span class="built_in">line</span> <span class="built_in">and</span> <span class="keyword">print</span></span><br><span class="line">        <span class="keyword">number</span>: <span class="keyword">make</span> <span class="string">'number'</span> the current <span class="built_in">line</span></span><br><span class="line">? q</span><br><span class="line">bye</span><br><span class="line">prompt$</span><br></pre></td></tr></table></figure></p>
+<h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h4><p>In the next example, if the file Mackellar.txt contains the text<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">I love a sunburnt country,</span><br><span class="line">A land of <span class="keyword">sweeping </span>plains,</span><br><span class="line">Of ragged mountain ranges,</span><br><span class="line">Of droughts <span class="keyword">and </span>flooding rains.</span><br><span class="line">I love her far horizons,</span><br><span class="line">I love her <span class="keyword">jewel-sea,</span></span><br><span class="line"><span class="keyword">Her </span><span class="keyword">beauty </span><span class="keyword">and </span>her terror -</span><br><span class="line">The wide <span class="keyword">brown </span>land for me!</span><br></pre></td></tr></table></figure></p>
+<h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h4><p>In the next example, the user steps down an existing C program to a particular line, deletes the line and inserts a new line.<br><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">prompt$ ./lite hw.c</span><br><span class="line">Existing file <span class="string">"hw.c"</span></span><br><span class="line">? p</span><br><span class="line">---&gt;   <span class="number">1</span>: <span class="meta">#<span class="meta-keyword">include</span> &lt;stdio.h&gt;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">2</span>: <span class="meta">#<span class="meta-keyword">define</span> NUMBER <span class="number">10</span></span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">3</span>: <span class="keyword">int</span> main(void) &#123;</span><br><span class="line"><span class="keyword">Line</span>   <span class="number">4</span>:    <span class="keyword">int</span> i<span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">5</span>:    <span class="keyword">for</span> (i=<span class="number">0</span><span class="comment">; i&lt;NUMBER; i++) &#123;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">6</span>:       printf(<span class="string">"hello, world!\n"</span>)<span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">7</span>:    &#125;</span><br><span class="line"><span class="keyword">Line</span>   <span class="number">8</span>:    <span class="keyword">return</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">9</span>: &#125;</span><br><span class="line">? +</span><br><span class="line">---&gt;   <span class="number">2</span>: <span class="meta">#<span class="meta-keyword">define</span> NUMBER <span class="number">10</span></span></span><br><span class="line">? +</span><br><span class="line">---&gt;   <span class="number">3</span>: <span class="keyword">int</span> main(void) &#123;</span><br><span class="line">? +</span><br><span class="line">---&gt;   <span class="number">4</span>:    <span class="keyword">int</span> i<span class="comment">;</span></span><br><span class="line">? +</span><br><span class="line">---&gt;   <span class="number">5</span>:    <span class="keyword">for</span> (i=<span class="number">0</span><span class="comment">; i&lt;NUMBER; i++) &#123;</span></span><br><span class="line">? +</span><br><span class="line">---&gt;   <span class="number">6</span>:       printf(<span class="string">"hello, world!\n"</span>)<span class="comment">;</span></span><br><span class="line">? d</span><br><span class="line">---&gt;   <span class="number">6</span>:    &#125;</span><br><span class="line">? i</span><br><span class="line">      printf(<span class="string">"goodbye, world!\n"</span>)<span class="comment">;</span></span><br><span class="line">.</span><br><span class="line">? p</span><br><span class="line"><span class="keyword">Line</span>   <span class="number">1</span>: <span class="meta">#<span class="meta-keyword">include</span> &lt;stdio.h&gt;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">2</span>: <span class="meta">#<span class="meta-keyword">define</span> NUMBER <span class="number">10</span></span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">3</span>: <span class="keyword">int</span> main(void) &#123;</span><br><span class="line"><span class="keyword">Line</span>   <span class="number">4</span>:    <span class="keyword">int</span> i<span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">5</span>:    <span class="keyword">for</span> (i=<span class="number">0</span><span class="comment">; i&lt;NUMBER; i++) &#123;</span></span><br><span class="line">---&gt;   <span class="number">6</span>:       printf(<span class="string">"goodbye, world!\n"</span>)<span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">7</span>:    &#125;</span><br><span class="line"><span class="keyword">Line</span>   <span class="number">8</span>:    <span class="keyword">return</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line"><span class="keyword">Line</span>   <span class="number">9</span>: &#125;</span><br><span class="line">? s</span><br><span class="line">Saving file <span class="string">"hw.c"</span></span><br><span class="line">? q</span><br><span class="line">bye</span><br><span class="line">prompt$</span><br></pre></td></tr></table></figure></p>
+<p>Note that it would have been faster, of course, to have typed in the line number, 6, rather than step down line by line.</p>
+<h4 id="Example-4"><a href="#Example-4" class="headerlink" title="Example 4"></a>Example 4</h4><p>In the final example, the user starts the editor up, does a print to check that there is no text, inserts a poem from Banjo Paterson, does another print, sets the file name to Banjo.txt, saves the text and quits.<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">prompt$ ./lite</span><br><span class="line">? p</span><br><span class="line">Empty <span class="built_in">file</span></span><br><span class="line">? i</span><br><span class="line">A land <span class="keyword">of</span> sombre, silent hills, <span class="keyword">where</span> mountain cattle go</span><br><span class="line">By twisted tracks, <span class="keyword">on</span> sidelings steep, <span class="keyword">where</span> giant gumtrees grow</span><br><span class="line">And <span class="keyword">the</span> wind replies, <span class="keyword">in</span> <span class="keyword">the</span> river oaks, <span class="keyword">to</span> <span class="keyword">the</span> song <span class="keyword">of</span> <span class="keyword">the</span> stream <span class="keyword">below</span>. </span><br><span class="line">.</span><br><span class="line">? p</span><br><span class="line">Line   <span class="number">1</span>: A land <span class="keyword">of</span> sombre, silent hills, <span class="keyword">where</span> mountain cattle go</span><br><span class="line">Line   <span class="number">2</span>: By twisted tracks, <span class="keyword">on</span> sidelings steep, <span class="keyword">where</span> giant gumtrees grow</span><br><span class="line"><span class="comment">---&gt;   3: And the wind replies, in the river oaks, to the song of the stream below. </span></span><br><span class="line">? f Banjo.txt</span><br><span class="line">Creating <span class="built_in">file</span> <span class="string">"Banjo.txt"</span></span><br><span class="line">? s</span><br><span class="line">Saving <span class="built_in">file</span> <span class="string">"Banjo.txt"</span></span><br><span class="line">? q</span><br><span class="line">bye</span><br><span class="line">prompt$</span><br></pre></td></tr></table></figure></p>
+<h4 id="Example-5"><a href="#Example-5" class="headerlink" title="Example 5"></a>Example 5</h4><p>Note that a quit is not possible if the user has changed the file in any way. For example:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">prompt$ ./lite</span><br><span class="line">? i</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">.</span><br><span class="line">? s</span><br><span class="line">No filename. <span class="keyword">Use</span> <span class="string">'-f &lt;name&gt;'</span> command</span><br><span class="line">? q</span><br><span class="line">Cannot quit <span class="keyword">as</span> <span class="keyword">file</span> has changed. <span class="keyword">Use</span> <span class="string">'x'</span> <span class="keyword">to</span> <span class="keyword">force</span> <span class="keyword">exit</span></span><br><span class="line">? f FRED.txt</span><br><span class="line">Creating <span class="keyword">file</span> <span class="string">"FRED.txt"</span></span><br><span class="line">? s</span><br><span class="line">Saving <span class="keyword">file</span> <span class="string">"FRED.txt"</span></span><br><span class="line">? q</span><br><span class="line">bye</span><br><span class="line"><span class="keyword">prompt</span>$</span><br></pre></td></tr></table></figure></p>
+<p>In this example, the user could have instead used an ‘x’ command to leave the editor without saving.</p>
+<h4 id="Example-6"><a href="#Example-6" class="headerlink" title="Example 6"></a>Example 6</h4><p>You cannot step beyond the last line or the first line in the buffer:<br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">prompt$ ./lite Mackellar.txt</span><br><span class="line">Existing <span class="keyword">file</span> <span class="string">"Mackellar.txt"</span></span><br><span class="line">? p</span><br><span class="line"><span class="comment">---&gt;   1: I love a sunburnt country,</span></span><br><span class="line"><span class="literal">Line</span>   <span class="number">2</span>: A land <span class="keyword">of</span> sweeping plains,</span><br><span class="line"><span class="literal">Line</span>   <span class="number">3</span>: <span class="keyword">Of</span> ragged mountain ranges,</span><br><span class="line"><span class="literal">Line</span>   <span class="number">4</span>: <span class="keyword">Of</span> droughts <span class="keyword">and</span> flooding rains.</span><br><span class="line"><span class="literal">Line</span>   <span class="number">5</span>: I love her far horizons,</span><br><span class="line"><span class="literal">Line</span>   <span class="number">6</span>: I love her jewel-sea,</span><br><span class="line"><span class="literal">Line</span>   <span class="number">7</span>: Her beauty <span class="keyword">and</span> her terror -</span><br><span class="line"><span class="literal">Line</span>   <span class="number">8</span>: The wide brown land <span class="keyword">for</span> me!</span><br><span class="line"><span class="literal">Line</span>   <span class="number">9</span>: </span><br><span class="line"><span class="literal">Line</span>  <span class="number">10</span>: <span class="string">"My Country"</span></span><br><span class="line"><span class="literal">Line</span>  <span class="number">11</span>: Poem by Dorothea Mackellar</span><br><span class="line"><span class="literal">Line</span>  <span class="number">12</span>: (<span class="number">1885</span><span class="comment">--1968)</span></span><br><span class="line">? <span class="number">123</span></span><br><span class="line"><span class="literal">Line</span> number does <span class="keyword">not</span> exist: command ignored</span><br><span class="line">? -</span><br><span class="line"><span class="comment">---&gt;   1:I love a sunburnt country,</span></span><br><span class="line">? -</span><br><span class="line"><span class="comment">---&gt;   1:I love a sunburnt country,</span></span><br><span class="line">? -</span><br><span class="line"><span class="comment">---&gt;   1:I love a sunburnt country,</span></span><br><span class="line">? <span class="number">12</span></span><br><span class="line"><span class="comment">---&gt;  12:(1885--1968)</span></span><br><span class="line">? </span><br><span class="line"><span class="comment">---&gt;  12:(1885--1968)</span></span><br><span class="line">? +</span><br><span class="line"><span class="comment">---&gt;  12:(1885--1968)</span></span><br><span class="line">? +</span><br><span class="line"><span class="comment">---&gt;  12:(1885--1968)</span></span><br><span class="line">? +</span><br><span class="line"><span class="comment">---&gt;  12:(1885--1968)</span></span><br><span class="line">? q</span><br><span class="line">bye</span><br><span class="line">prompt$</span><br></pre></td></tr></table></figure></p>
+<h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><p>Do not try to write the whole program at once. Break the development into pieces of functionality and implement the easiest first.</p>
+<h3 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h3><p>You may use fixed-length arrays to read a line of text from stdin:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define LINELENGTH  1000  // max length of a line</span></span><br><span class="line"><span class="keyword">and</span> <span class="built_in">to</span> <span class="built_in">read</span> <span class="keyword">a</span> filename <span class="keyword">or</span> <span class="keyword">an</span> editor <span class="keyword">command</span>:</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FNAMELENGTH 100   <span class="comment">// max length of a file name</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CMDLENGTH   102   <span class="comment">// max length of a command (e.g.'f' + ' ' + filename)</span></span></span><br></pre></td></tr></table></figure>
+<p>However, you should use the heap to store the lines in the linked list. The nodes in the linked list, each storing one line of text, may be quite simple:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> &#123;</span></span><br><span class="line">   <span class="keyword">char</span> *data;         <span class="comment">// a line of text</span></span><br><span class="line">   <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; Line;</span><br></pre></td></tr></table></figure>
+<p>but you may place more data in this data structure if you wish.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP225-ProcessManager-Scanner.html" rel="next" title="COMP225-ProcessManager-Scanner">
+                <i class="fa fa-chevron-left"></i> COMP225-ProcessManager-Scanner
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS218-Shark.html" rel="prev" title="CS218-Shark">
+                CS218-Shark <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Aims"><span class="nav-number">1.</span> <span class="nav-text">Aims</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">2.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-the-editor-should-do"><span class="nav-number">3.</span> <span class="nav-text">What the editor should do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-of-Use"><span class="nav-number">4.</span> <span class="nav-text">Examples of Use</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-1"><span class="nav-number">4.1.</span> <span class="nav-text">Example 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-2"><span class="nav-number">4.2.</span> <span class="nav-text">Example 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-3"><span class="nav-number">4.3.</span> <span class="nav-text">Example 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-4"><span class="nav-number">4.4.</span> <span class="nav-text">Example 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-5"><span class="nav-number">4.5.</span> <span class="nav-text">Example 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-6"><span class="nav-number">4.6.</span> <span class="nav-text">Example 6</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach"><span class="nav-number">5.</span> <span class="nav-text">Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hints"><span class="nav-number">6.</span> <span class="nav-text">Hints</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

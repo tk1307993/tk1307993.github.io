@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="用C++辅导一个console的画图板，练习基本的object-oriented programming设计。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCN2042-Console-Drawing-Board">
+<meta property="og:url" content="https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="用C++辅导一个console的画图板，练习基本的object-oriented programming设计。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:22.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CCN2042-Console-Drawing-Board">
+<meta name="twitter:description" content="用C++辅导一个console的画图板，练习基本的object-oriented programming设计。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html">
+
+
+
+
+
+  <title>CCN2042-Console-Drawing-Board | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CCN2042-Console-Drawing-Board.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CCN2042-Console-Drawing-Board</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-28T18:40:56+08:00">
+                2020-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  用C++辅导一个console的画图板，练习基本的object-oriented programming设计。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Expected-Learning-Outcomes"><a href="#Expected-Learning-Outcomes" class="headerlink" title="Expected Learning Outcomes"></a>Expected Learning Outcomes</h3><ul>
+<li>familiarise themselves with at least one high level language programming environment.</li>
+<li>develop a structured and documented computer program.</li>
+<li>understand the fundamentals of object-oriented programming and apply it in computer program development.</li>
+<li>apply the computer programming techniques to solve practical problems.</li>
+</ul>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>In this request, you are going to develop a Console Drawing Board that runs in the command line environment. User can input commands to generate different patterns in the drawing area.</p>
+<p>This is a group request. You need to form a group with 5 to 6 students, and write a Win32 Console Application program called drawing.cpp. This is a text-based drawing board with the following requirements.</p>
+<h3 id="System-Requirements"><a href="#System-Requirements" class="headerlink" title="System Requirements"></a>System Requirements</h3><p>When the program starts, the console should display a welcome message, and then the System Menu of the program. User can enter the options of the corresponding actions.<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Welcome Message designed by your group</span><br><span class="line">***<span class="built_in"> System </span>Menu ***</span><br><span class="line">[1] Start Drawing</span><br><span class="line">[2] Change Board Size</span><br><span class="line">[3] Instructions</span><br><span class="line">[4] Credits</span><br><span class="line">[5] Exit</span><br><span class="line">*******************</span><br><span class="line">Option (1 - 5):</span><br></pre></td></tr></table></figure></p>
+<h3 id="Start-Drawing"><a href="#Start-Drawing" class="headerlink" title="Start Drawing"></a>Start Drawing</h3><p>When the user inputs 1 in the System Menu, an empty drawing board is displayed with a pen in the middle. Then the user controls the pen in the drawing board by inputting commands, until a “QUIT” command is entered.</p>
+<h4 id="Drawing-Board"><a href="#Drawing-Board" class="headerlink" title="Drawing Board"></a>Drawing Board</h4><p>The drawing board consists of a square drawing area with a default size 30 x 30. The area is enclosed by a boundary with characters ‘|’ for vertical boundary, ‘-‘ for horizontal boundary, and ‘+’ for the corner.</p>
+<h4 id="Pen"><a href="#Pen" class="headerlink" title="Pen"></a>Pen</h4><p>The initial location of the pen is in the middle of the drawing area. Then based on the user control, the pen can move within the drawing area. An arrow character is displayed in the drawing area to indicate the current location of the pen.</p>
+<p>The pen is represented by different arrow characters according to the direction it is facing. There are 8 available directions, with 45 o each (default is 0, i.e. upward). The corresponding ASCII code in decimal of each arrow is given.</p>
+<h4 id="User-Control"><a href="#User-Control" class="headerlink" title="User Control"></a>User Control</h4><p>User can input one or multiple commands at a time to control the action of the pen. You may assume that user always input less than 200 characters each time.</p>
+<p>If multiple commands are input, they must be separated by at least one space. The commands are case-insensitive.</p>
+<p>The commands are executed one by one in the sequence of user input. When all commands have been executed, the drawing board is refreshed to show the most updated drawings. Then the user can input another set of commands again.</p>
+<p>Appropriate error checking on user input of commands is expected. Whenever an error occurs, an error message should be displayed. All remaining commands will be ignored. The drawing board is then refreshed to show the most updated status.</p>
+<p>For example, an erroneous input may look like:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FD <span class="number">10</span> RT <span class="number">90</span> BK LT <span class="number">45</span></span><br></pre></td></tr></table></figure></p>
+<p>Only “FD 10” and “RT 90” are executed because the argument for command “BK” is missing. The last command “LT 45” is ignored and not executed.</p>
+<h4 id="Quit"><a href="#Quit" class="headerlink" title="Quit"></a>Quit</h4><p>When the user inputs the command “QUIT”, the system prompts for user’s confirmation. If the user inputs ‘y’ or ‘Y’, the system returns back to the System Menu. If the user inputs ‘n’ or ‘N’, the system remains at the drawing board. Other input is not acceptable and the system should ask the user to confirm again.</p>
+<h3 id="Change-Board-Size"><a href="#Change-Board-Size" class="headerlink" title="Change Board Size"></a>Change Board Size</h3><p>When the user inputs 2 in the System Menu, the system displays the current size (length of a side, default is 30). Then the user is allowed to input the new size within the range of 20 to 50, inclusively. After the input, the system returns back to the System Menu.</p>
+<h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>The system displays the instructions for using the console drawing board. After displaying the instruction, the system returns back to the System Menu.</p>
+<h3 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h3><p>The system displays the personal particulars (e.g. student name, student ID, class, tutorial group, etc.) of the group members. After displaying the information, the system returns back to the System Menu.</p>
+<h3 id="Exit"><a href="#Exit" class="headerlink" title="Exit"></a>Exit</h3><p>When the user inputs this option, the system prompts for user’s confirmation. If the user inputs ‘y’ or ‘Y’, the program terminates. If the user inputs ‘n’ or ‘N’, the system returns to the System Menu. Other input is not acceptable and the system should ask the user to confirm again.</p>
+<h3 id="Other-General-Requirements"><a href="#Other-General-Requirements" class="headerlink" title="Other General Requirements"></a>Other General Requirements</h3><p>Meaningful guidelines should be printed to assist with user’s input. Whenever an option is selected, meaningful messages should be displayed.</p>
+<p>Suitable checking on user’s input is expected. Appropriate error messages should be printed whenever unexpected situation happens, e.g., invalid input, input out-of-range, etc.</p>
+<p>The use of functions (in addition to main function) and classes are expected in your program. Appropriate comments should be added in your source code file.</p>
+<p>Creativity and Critical Thinking: other features that you find useful or can enhance the user experience can also be implemented.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CST8284-QuizMaster.html" rel="next" title="CST8284-QuizMaster">
+                <i class="fa fa-chevron-left"></i> CST8284-QuizMaster
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS211-Lexical-Analysis.html" rel="prev" title="CS211-Lexical-Analysis">
+                CS211-Lexical-Analysis <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Expected-Learning-Outcomes"><span class="nav-number">1.</span> <span class="nav-text">Expected Learning Outcomes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Requirements"><span class="nav-number">3.</span> <span class="nav-text">System Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-Drawing"><span class="nav-number">4.</span> <span class="nav-text">Start Drawing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Drawing-Board"><span class="nav-number">4.1.</span> <span class="nav-text">Drawing Board</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pen"><span class="nav-number">4.2.</span> <span class="nav-text">Pen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#User-Control"><span class="nav-number">4.3.</span> <span class="nav-text">User Control</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quit"><span class="nav-number">4.4.</span> <span class="nav-text">Quit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Change-Board-Size"><span class="nav-number">5.</span> <span class="nav-text">Change Board Size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instructions"><span class="nav-number">6.</span> <span class="nav-text">Instructions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Credits"><span class="nav-number">7.</span> <span class="nav-text">Credits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exit"><span class="nav-number">8.</span> <span class="nav-text">Exit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other-General-Requirements"><span class="nav-number">9.</span> <span class="nav-text">Other General Requirements</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

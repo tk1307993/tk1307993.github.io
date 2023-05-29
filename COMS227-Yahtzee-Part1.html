@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="需求要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java辅导：COMS227-Yahtzee-Part1">
+<meta property="og:url" content="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="需求要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:16.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java辅导：COMS227-Yahtzee-Part1">
+<meta name="twitter:description" content="需求要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html">
+
+
+
+
+
+  <title>Java辅导：COMS227-Yahtzee-Part1 | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMS227-Yahtzee-Part1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java辅导：COMS227-Yahtzee-Part1</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T20:52:28+08:00">
+                2019-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  需求要求实现一个Yahtzee，即快艇骰子游戏。这个游戏需要了解游戏规则，考察的知识点是继承的运用。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>For this request you will implement a number of classes for an implementation of a dice game based on the game Yahtzee. The purposes of this request are:</p>
+<ul>
+<li>To use interfaces and inheritance in a realistic way</li>
+<li>To give you a chance to make some design decisions related to inheritance</li>
+<li>To give you more practice using arrays and ArrayLists</li>
+</ul>
+<h3 id="Summary-of-tasks"><a href="#Summary-of-tasks" class="headerlink" title="Summary of tasks"></a>Summary of tasks</h3><p>You will implement the following classes:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">YahtzeeGame</span></span><br><span class="line"><span class="attribute">Hand</span></span><br></pre></td></tr></table></figure></p>
+<p>plus, at a minimum, the following eight classes, all of which directly or indirectly implement the Category interface:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">AllButOneOfAKind</span></span><br><span class="line"><span class="attribute">AllButTwoOfAKind</span></span><br><span class="line"><span class="attribute">AllOfAKind</span></span><br><span class="line"><span class="attribute">Chance</span></span><br><span class="line"><span class="attribute">CountOccurrences</span></span><br><span class="line"><span class="attribute">FullHouse</span></span><br><span class="line"><span class="attribute">LargeStraight</span></span><br><span class="line"><span class="attribute">SmallStraight</span></span><br></pre></td></tr></table></figure></p>
+<p>All of your code goes in package hw3 . In addition to the classes listed above, you will implement whatever additional classes you decide are necessary in order to exploit inheritance to facilitate code reuse. See the discussion of scoring categories below for more information.</p>
+<p>The exact definition of each of the eight category classes listed above can be found by reading the class javadoc.</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Yahtzee is normally played with five six-sided dice and a scorecard. One round consists of rolling the dice up to three times, and then filling one of the categories on the scorecard with a score. The score depends on both the criteria for the category and the actual dice values, and the player will normally choose an unfilled category so as to maximize the resulting score.</p>
+<p>In our version of the game, the number of dice, the maximum value on the dice (i.e., the number of faces), the max number of rolls per round, and the types of categories on the scorecard, will all be configurable.</p>
+<p>If you are not at all familiar with the game, don’t worry, it is not too complicated. Take a look at the Wikipedia page for an overview, <a href="https://en.wikipedia.org/wiki/Yahtzee" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Yahtzee</a></p>
+<p>Note that our version of the game does not include several features described on Wikipedia or in the traditional versions of the game. In particular, we do not distinguish the “upper section” and “lower section” categories, there is no bonus for the “upper section”, there is no special bonus for a second Yahtzee, and there are no jokers.</p>
+<p>The two key abstractions in the design are hands and scoring categories.</p>
+<h3 id="Hands"><a href="#Hands" class="headerlink" title="Hands"></a>Hands</h3><p>A hand, represented by the Hand class that you will implement, is a basically a list of integers representing the current states of all the dice (in the traditional game there would be 5 numbers with possible values 1 through 6). However, the dice are partitioned into two lists: available dice and fixed dice. Initially, all dice are available. When the dice are “rolled”, random values in the appropriate range are generated for the available dice only; the fixed values are not modified. If the maximum number of rolls has not yet been reached, the player can choose to “keep” some of the current available dice values, which means they are moved to the fixed list so they won’t be modified by the next roll. Likewise, the player can choose to “free” any of the fixed values, so they will be re-rolled. Note that in this design, an individual die isn’t represented by a special type of object; a die value is just an integer. All methods that return arrays containing dice values must return the values in ascending order.</p>
+<p>After the maximum number of rolls is reached, all dice are automatically moved to the fixed list and the hand can no longer be modified. A new hand must be created for the next round.</p>
+<p>See the javadoc for details. Also note that the client normally obtains a new Hand using the method createNewHand in the YahtzeeGame class, not by calling the constructor directly. (You can see how this works by reading at the doOneTurn() method of the sample UI.)</p>
+<p>Hand example. Suppose we display a dice group as a string by listing first the available dice and then the fixed dice in parentheses. For example, in a game with 5 dice, after the first roll we might see the values such as this:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">6</span> ()</span><br></pre></td></tr></table></figure></p>
+<p>Depending on which scoring categories you need to fill, you might decide to keep 2, 3, and 4 (perhaps in the hope of completing a straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span><span class="number">6</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p>
+<p>On the next roll, the 6 and the other 3 are then replaced by random values, but the 2, 3, and 4 you selected remain fixed. If (for example) you now roll a 2 and a 5, you would have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">5</span> (<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span><br></pre></td></tr></table></figure></p>
+<p>At this point you could choose to keep the 5 (to make a small straight, maybe hoping the next roll will give you a large straight). Now you have<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span>(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<p>In the traditional game, you get a maximum of three rolls; in that case if you (for example) rolled a 4, you’d end up with<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<p>That is, when you reach the maximum number of rolls, all dice are automatically fixed. Once all dice are fixed, we say the hand is complete. At this point in the game, the player chooses one of the scoring categories and uses the completed hand to fill that category.</p>
+<h3 id="Scoring-categories"><a href="#Scoring-categories" class="headerlink" title="Scoring categories"></a>Scoring categories</h3><p>A scoring category represents one row of the score sheet. A category object stores the actual score for that category along with the hand that was used to fill the category. A given category object also contains the algorithms needed to a) determine whether a given hand satisfies the criteria defined for the category (e.g., is it a straight, or three-of-a-kind, or whatever), and b) determine what the potential score would be for a given hand, if it were used to fill that category.</p>
+<p>There are many different possible categories, each with its own particular algorithms. For example, the traditional game has a three-of-a-kind category: a hand satisfies the category if it contains any three numbers that are the same, and it is scored by summing the values of all the dice. The traditional game also has a “large straight” category: a hand satisfies the category if it has 5 consecutive values, and it always receives a fixed score of 40.</p>
+<p>This is where polymorphism becomes useful. The client using this code (e.g., think of the client as the text-based UI provided in the sample code) does not care about the details of what the categories are or how each category calculates its score. The client just needs to be able to invoke methods on a category to find out whether a given dice group satisfies it, what the score would be, and to inform the category when it has been selected to be filled by a given hand.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CIS340-Campus-Cafeteria.html" rel="next" title="C#辅导：CIS340-Campus-Cafeteria">
+                <i class="fa fa-chevron-left"></i> C#辅导：CIS340-Campus-Cafeteria
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/COMS227-Yahtzee-Part2.html" rel="prev" title="Java辅导：COMS227-Yahtzee-Part2">
+                Java辅导：COMS227-Yahtzee-Part2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary-of-tasks"><span class="nav-number">2.</span> <span class="nav-text">Summary of tasks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">3.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hands"><span class="nav-number">4.</span> <span class="nav-text">Hands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scoring-categories"><span class="nav-number">5.</span> <span class="nav-text">Scoring categories</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

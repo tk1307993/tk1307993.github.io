@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导一个Html标签解析器，发现错误配对的标签，考察Stack的应用。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python辅导：COMPSCI105-HTML-Tag-Checker">
+<meta property="og:url" content="https://tk1307993.coding.me/COMPSCI105-HTML-Tag-Checker.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导一个Html标签解析器，发现错误配对的标签，考察Stack的应用。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:27:51.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python辅导：COMPSCI105-HTML-Tag-Checker">
+<meta name="twitter:description" content="辅导一个Html标签解析器，发现错误配对的标签，考察Stack的应用。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMPSCI105-HTML-Tag-Checker.html">
+
+
+
+
+
+  <title>Python辅导：COMPSCI105-HTML-Tag-Checker | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMPSCI105-HTML-Tag-Checker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python辅导：COMPSCI105-HTML-Tag-Checker</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T20:52:46+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导一个Html标签解析器，发现错误配对的标签，考察Stack的应用。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>A markup language is a language that annotates text so that the computer can manipulate the text. Most markup languages are human readable because the annotations are written in a way to distinguish them from the text. The most important feature of a markup language is that the tags it uses to indicate annotations should be easy to distinguish from the document content.</p>
+<p>One of the most well-known markup languages is the one commonly used to create web pages, called HTML, or “Hypertext Markup Language”. In HTML, tags appear in “angle brackets”. When you load a Web page in your browser, you do not see the tags themselves: the browser interprets the tags as instructions on how to format the text for display.</p>
+<p>Most tags in HTML are used in pairs to indicate where an effect starts and ends. For example:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">this <span class="keyword">is</span> a <span class="built_in">paragraph</span> <span class="keyword">of</span> <span class="built_in">text</span> written <span class="keyword">in</span> HTML</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Here tag p represents the start of a paragraph, and tap p indicates where that paragraph ends.</p>
+<p>Other tags include tag b that are used to place the enclosed text in bold font, and tag i indicate that the enclosed text is italic.<br>Note that “end” tags look just like the “start” tags, except for the addition of a backslash ‘/‘ after the symbol.</p>
+<p>Sets of tags are often nested inside other sets of tags. For example, an ordered list is a list of numbered bullets.</p>
+<p>You specify the start of an ordered list with the tag ol, and the end with /ol. Within the ordered list, you identify items to be numbered with the tags li (for “list item”) and /li. For example, the following specification:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>First item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Second item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Third item<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>would result in the following:</p>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<p>Notice how you start the ordered list with the ol tag, specify three line items with matching li and /li tags, and the close the ordered list with the /ol tag.</p>
+<p>You may have noticed that the pattern of using matching tags strongly resembles the pattern of matching parentheses that we discussed in class: when you use parentheses, brackets, and braces, they have to match in reverse order, such as “{[()]}”. A pattern such as “[(])” would be incorrect since the right bracket does not match the left parenthesis. Similarly, an HTML pattern such as ol li /ol /li would be incorrect since the closing tags are in the wrong order.</p>
+<p>The aim of this question is to write an “HTML Checker” program that takes as input an HTML file, and produces a report indicating whether or not the tags are correctly matched.</p>
+<p>Just as the parenthesis checker uses a stack to store symbols waiting for a match to be found, your program should also use a stack. You should include the implementation of the Stack ADT discussed in class.</p>
+<p>Input: As input for your program, the sample test files (test1.html, test2.html, test3.html, test4.html, test5.html) can be download from the course website. You can open the test files with a text editor i.e. Notepad++. The test files are created with different scenarios both test1.html and test2.html have balanced tags, whereas the rest of the test files have unbalanced tag.</p>
+<h3 id="Processing-the-input-file"><a href="#Processing-the-input-file" class="headerlink" title="Processing the input file"></a>Processing the input file</h3><p>The first task your program must do is read in an HTML file and extract the tags. A simple strategy for doing this would be to write a function “getTags” that:</p>
+<ul>
+<li>reads one character at a time from the data file, throwing everything away until it gets to a “&lt;”. (Discard the “&lt;” as well.)</li>
+<li>reads one character at a time, appending it to a string, until it gets to a “&gt;” or whitespace. (Discard the “&gt;” as well.)<br>append the tag to a list.</li>
+<li>returns tags found.</li>
+</ul>
+<p>Make sure you account for end-of-file conditions in getTags. If you have completed everything correctly, you now have a list of tags, both start and end tags, once the getTags function is invoked.</p>
+<h3 id="HTML-Tag-Checker"><a href="#HTML-Tag-Checker" class="headerlink" title="HTML Tag Checker"></a>HTML Tag Checker</h3><p>Write a function called “checkTags” that iterates through your list of tags, looking for matches.</p>
+<ul>
+<li>If there is a mismatch of beginning and ending tags, print an error message (see output section below) and terminate.</li>
+<li>After processing the list of tags and there is no mismatch, print a confirmation message (see output section below).</li>
+<li>At the end of the list, there are remaining tags on the stack, print a confirmation message (see output section below) and the remaining tags in the stack.</li>
+</ul>
+<p>In addition, have your program build a list called “VALIDTAGS”. As you iterate through your list of tags, check to see if the tag appears in VALIDTAGS. If it doesn’t, add it to VALIDTAGS and print a confirmation message (see output section below).</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>The output of your program should include the following:</p>
+<ul>
+<li>A printout of your list of tags (the result of getTags).</li>
+<li>One line for each tag as you process it, explaining the action and showing the current contents of the stack. You may have to modify your ADT to allow for the information to be displayed properly. Some examples are:<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Tag</span> <span class="title">b</span> pushed: stack is now [html, body, b]</span><br><span class="line"><span class="keyword">Tag</span> <span class="title">/b</span> matches top of stack: stack is now [html, body]</span><br><span class="line"><span class="keyword">Tag</span> <span class="title">ul</span> pushed: stack is now [html, body, ul]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>A message every time you add a tag to VALIDTAGS. For example:</p>
+<ul>
+<li>New tag XXX found and added to list of valid tags</li>
+</ul>
+<h3 id="The-Twist"><a href="#The-Twist" class="headerlink" title="The Twist"></a>The Twist</h3><p>There are some tags that do not need matching start and end tags! One example is br. This tag is used to indicate a line break at the current location. Another is meta, which is used to provide special information (“metadata”) about a webpage, and one more (left for you to identify in your data files).</p>
+<p>If you followed the instructions above correctly, your HTML checker will notice that there are three tags that don’t have a match. Teach your program that this is okay for these three cases by maintaining a list called EXCEPTIONS which you hard-code into your main program. They will appear in your list of tags just as any other tags. However, when you begin your iteration through the list and you encounter one of these, you do not need to push it on the stack since you won’t be waiting for a close tag. Instead, just print an output line such as:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Tag</span> br does <span class="literal">not</span> need <span class="keyword">to</span> <span class="keyword">match</span>: <span class="built_in">stack</span> is still <span class="meta">[</span>html, body, b<span class="meta">]</span></span><br></pre></td></tr></table></figure></p>
+<p>and continue.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMPSCI105-A-Phone-Book-Management-Program.html" rel="next" title="Python辅导：COMPSCI105-A-Phone-Book-Management-Program">
+                <i class="fa fa-chevron-left"></i> Python辅导：COMPSCI105-A-Phone-Book-Management-Program
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS1591-Computational-Thinking.html" rel="prev" title="Python辅导：CS1591-Computational-Thinking">
+                Python辅导：CS1591-Computational-Thinking <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Processing-the-input-file"><span class="nav-number">2.</span> <span class="nav-text">Processing the input file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-Tag-Checker"><span class="nav-number">3.</span> <span class="nav-text">HTML Tag Checker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output"><span class="nav-number">4.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Twist"><span class="nav-number">5.</span> <span class="nav-text">The Twist</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

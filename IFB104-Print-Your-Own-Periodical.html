@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithm,Web,Third-party,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="这次需要辅导的需求比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
+<meta name="keywords" content="Algorithm,Web,Third-party">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IFB104-Print-Your-Own-Periodical">
+<meta property="og:url" content="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="这次需要辅导的需求比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:53.072Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IFB104-Print-Your-Own-Periodical">
+<meta name="twitter:description" content="这次需要辅导的需求比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html">
+
+
+
+
+
+  <title>IFB104-Print-Your-Own-Periodical | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/IFB104-Print-Your-Own-Periodical.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">IFB104-Print-Your-Own-Periodical</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-26T11:33:32+08:00">
+                2019-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这次需要辅导的需求比较冷门，用Python来写前端的Web页面，GUI部分需要用Tkinter库来实现。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>Hardcopy periodicals such as newspapers, magazines, newsletters, etc. are all in decline as people increasingly turn to online media. Nonetheless, there is still a need for people to access regularly-updated information in an easy-to-read format. Here you will develop a program that produces a customised periodical in HTML format, using data downloaded from the World-Wide Web. The program will have a Graphical User Interface that allows the user to control production of the periodical, which can then be viewed in a standard web browser. Most importantly, your publication will comprise up-to-date data sourced from online “feeds” that are updated on a regular basis. To complete this request you will need to: (a) download web pages in Python and use regular expressions to extract particular elements from them, (b) create an HTML file containing the extracted elements, and (c) use Tkinter to provide a simple Graphical User Interface.</p>
+<h3 id="Illustrative-Example"><a href="#Illustrative-Example" class="headerlink" title="Illustrative Example"></a>Illustrative Example</h3><p>For the purposes of this task you have a totally free choice of what kind of periodical to produce. It could be:</p>
+<ul>
+<li>a newspaper</li>
+<li>a current affairs magazine</li>
+<li>a fashion/lifestyle magazine</li>
+<li>a newsletter for online gamers</li>
+<li>a sports journal</li>
+<li>a science and technology review</li>
+<li>etc.</li>
+</ul>
+<p>However, whatever theme you choose, you must be able to find at least four different online web pages that contain regularly-updated stories or articles in different categories under the overall theme. Each such story must contain a heading, a photograph, some text and a publication date. A good source for such data is Rich Site Summary (RSS) web-feed documents. The appendix below lists some such sites, but you are encouraged to find your own of personal interest.</p>
+<p>To demonstrate the idea, we will publish our own newspaper, using data extracted from News Limited’s web site. Our demonstration program allows users to select from several categories, National News, Sports, World News, Business News, Entertainment and Technology. The program then downloads relevant data from the Web and uses it to produce an HTML document which can be read in a standard web browser.</p>
+<p>The screenshot below shows our example solution’s GUI when it first starts.</p>
+<p>The user is invited to select which categories of information they want included in their newspaper. In this case this is done by selecting check buttons, but other solutions are possible. Below the user has selected four news categories of interest.</p>
+<p>When ready the user then presses the button to start “printing” the newspaper (i.e., to create an HTML file containing its contents). The system downloads current data from the web site and generates the file. The user can follow the “printing” process’s progress in the small text window.</p>
+<p>As well as printing the latest top news items in each of the four categories, the system also generates a “masthead” which identifies the periodical.</p>
+<p>Once the file has been created the user can open it in their preferred web browser. Alternatively, pressing the “Read” button in the GUI above will open the file in the host operating system’s default browser.</p>
+<p>The generated document contains the masthead and the current top story in each of the selected categories. It is shown overleaf as viewed in the Firefox browser.</p>
+<p>Above you can see the masthead with the name of the periodical, The Daily Planet in this case, and an image indicating the nature of its contents. (Our fictional newspaper’s slogan and editor are also shown, but these features are optional.)</p>
+<p>Scrolling down in the HTML document shows the current top news item in each of the four selected categories when the program was run. Three of these are shown below, as they were when this demonstration was run. (Some of the images downloaded at this time were small “thumbnails”, hence their blurry appearance when enlarged.)</p>
+<p>Notice that each top news item displayed above contains:</p>
+<ol>
+<li>the category of story;</li>
+<li>the URL where the original data was found;</li>
+<li>the story’s title (headline);</li>
+<li>a photo illustrating the story;</li>
+<li>a short summary of the story; and</li>
+<li>the date and time the story appeared online.</li>
+</ol>
+<p>Most importantly, items 3 to 6 are all extracted “live” from the online web document indicated. This was done by downloading the HTML source and using regular expressions to find the necessary elements needed to construct our own version of the story. The first part of the HTML code generated by our Python program is shown below (as displayed in the Firefox browser).</p>
+<p>Although not intended for human consumption, the generated HTML code is nonetheless laid out neatly, and with comments indicating the purpose of each part.</p>
+<p>To compose our HTML document, Rich Site Summary (RSS) web-feed files are downloaded from the web site. RSS documents are XML files specifically intended to be machine-readable. They have a simple structure that makes it reasonably easy to extract their elements. An example of such a web document as it appears when examined in a web broswer is shown below.</p>
+<p>This was was the source of the data used to produce our National News story shown above. To compose the corresponding page for our newspaper we extracted the latest story’s headline, story text, date and the address of the associated JPEG image. This data was then integrated into our HTML code.</p>
+<p>We also discovered that sometimes the downloaded text contained unusual characters that are not handled properly in Python strings, most notably “smart” quotes, so we replaced these with plain characters before “printing” our newspaper.</p>
+<h3 id="Requirements-and-marking-guide"><a href="#Requirements-and-marking-guide" class="headerlink" title="Requirements and marking guide"></a>Requirements and marking guide</h3><p>To complete this task you are required to develop an application in Python similar to that above, using the provided publisher.py template file as your starting point. Your solution must support at least the following features.</p>
+<p>Generating a masthead<br>Your program must be able to generate an HTML file, publication.html, which begins with a ‘masthead’ identifying the nature of your periodical. When viewed in a web browser, the masthead part of the document must contain at least the following elements:</p>
+<ul>
+<li>The name of the periodical.</li>
+<li>An image evocative of the periodical’s theme.</li>
+</ul>
+<p>The image must be sourced from online (you cannot attach image files to your solution). Since it will never change, the URL for this particular image can be “hardwired” in your Python code. The HTML source generated by your Python program must be laid out neatly.</p>
+<h3 id="Generating-four-stories"><a href="#Generating-four-stories" class="headerlink" title="Generating four stories"></a>Generating four stories</h3><p>Your Python program must be capable of generating at least four distinct “stories” as part of your periodical. Each such story must be derived from a different online web page, and must represent the latest story in a particular category at the time when the program runs. When viewed in a web browser, each story must contain at least the following elements:</p>
+<ul>
+<li>the category of story,</li>
+<li>the URL where the original data was found,</li>
+<li>the story’s title (headline),</li>
+<li>an image illustrating the story,</li>
+<li>a short summary of the story, and</li>
+<li>the date and time the story appeared online.</li>
+</ul>
+<p>The last four of these items must all be extracted from the online document and must all belong together (i.e., you can’t have an image from one story and the headline from another). Each of the elements must be extracted from the original document separately. It is not acceptable to simply copy large chunks of the original document’s source code. The HTML source code generated by your Python program must be laid out neatly.</p>
+<p>The precise visual layout, colour and style of the story elements is up to you and is determined by the design of your generated HTML code. The periodical must be easy to read. No HTML markup tags or other odd characters should appear in any of the text displayed to the user.</p>
+<p>Data on the web changes frequently, so your solution must continue to work even after the web documents you use have been updated. For this reason it is unacceptable to “hardwire” your solution to the particular text and images appearing on the web on a particular day. Instead you will need to use text searching functions and regular expressions to actively find the text and images in the document, regardless of any updates that may have occurred since you wrote your program.</p>
+<h3 id="Code-quality-and-presentation"><a href="#Code-quality-and-presentation" class="headerlink" title="Code quality and presentation"></a>Code quality and presentation</h3><p>Your Python program code must be presented in a professional manner. See the coding guidelines in the IFB104 Code Presentation Guide (on Blackboard under Assessment) for suggestions on how to achieve this. In particular, each significant code segment must be clearly commented to say what it does, e.g., “Create the masthead”, “Extract the first headline from the web page’s source code”, etc.</p>
+<h3 id="Extra-feature"><a href="#Extra-feature" class="headerlink" title="Extra feature"></a>Extra feature</h3><p>Part B of this request will require you to make a ‘last-minute extension’ to your solution. The instructions for Part B will not be released until just before the final deadline for request 2.</p>
+<p>You can add other features if you wish, as long as you meet these basic requirements. For instance, in our example above we included a button in the GUI which opened the generated HTML document in the default web browser. We also supported more than four story categories.</p>
+<p>You must complete the task using only basic Python features and the modules already imported into the provided template. In particular, you may not import any local image files. All displayed images and story text must be downloaded from online sources each time your program is run.</p>
+<p>However, your solution is not required to follow precisely our example shown above. Instead you are strongly encouraged to be creative in the your choices of stories to display, the design of your Graphical User Interface, and the design of your periodical.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Third-party/" rel="tag"># Third-party</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CPSC217-Climograph.html" rel="next" title="CPSC217-Climograph">
+                <i class="fa fa-chevron-left"></i> CPSC217-Climograph
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS177-Lab-Prep-6.html" rel="prev" title="CS177-Lab-Prep-6">
+                CS177-Lab-Prep-6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Illustrative-Example"><span class="nav-number">2.</span> <span class="nav-text">Illustrative Example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements-and-marking-guide"><span class="nav-number">3.</span> <span class="nav-text">Requirements and marking guide</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generating-four-stories"><span class="nav-number">4.</span> <span class="nav-text">Generating four stories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-quality-and-presentation"><span class="nav-number">5.</span> <span class="nav-text">Code quality and presentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extra-feature"><span class="nav-number">6.</span> <span class="nav-text">Extra feature</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Machine Learning,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="完成Machine Learning中关于Classification的练习题。">
+<meta name="keywords" content="Machine Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSCC11-Classification">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCC11-Classification.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="完成Machine Learning中关于Classification的练习题。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:59.988Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSCC11-Classification">
+<meta name="twitter:description" content="完成Machine Learning中关于Classification的练习题。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCC11-Classification.html">
+
+
+
+
+
+  <title>CSCC11-Classification | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCC11-Classification.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSCC11-Classification</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-14T09:43:11+08:00">
+                2022-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  完成Machine Learning中关于Classification的练习题。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><p>Download the starter file on the course webpage. The file requires the same login and password as the video lectures. Once downloaded and unpacked, a directory called Exam will exist. Please do not change the directory structure or the headers of functions in python files. All modified python files and others you generate (e.g., plots) should be left in the Exam directory (which you’ll submit). Remember to read all instructions and comments in the python files very carefully.</p>
+<h3 id="Written-work"><a href="#Written-work" class="headerlink" title="Written work"></a>Written work</h3><p>For written answers you can either write on paper or use an editor that supports equations (eg Word or Latex). If writing on paper, please scan or photograph and save as a png file or perhaps pdf (and make sure it is easily legible). If formatting your answers in Word or latex etc, please save as pdf. All such png or pdf files should be left in the Exam directory for submission.</p>
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>You’ll use the same environment you’ve been using on requests. You will need Python3,<br>Numpy, Matplotlib, and Pickle; you may not use any other python packages. Please pre-install if working on your own computer. If you’d rather work on a UTSC machine, remote login to one of these lab machines:</p>
+<p>IC lab (ranging from 01 to 50): i406-[01-50]<br>BV lab (ranging from 01 to 40): b473-[01-40]</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Submit your exam on the Mathlab server (like requests). Do not modify the Exam directory tree or method/function headers therein.</p>
+<p>Q1. Classification with Gaussian Class Conditionals<br>In Chapter 8.4 of the online course lecture notes, we introduced the Gaussian class-conditional (GCC) model for classification. The generative model for a data point x, in the two class case. Where c is the class random variable; it takes on the value 0 for one class, and 1 for the other. The decision function for the CC model is the log posterior ratio.</p>
+<p>To learn the model, given N data points, we estimate the class priors. For GCC models the likelihoods are Gaussian, for which we estimate the means and covariances.</p>
+<p>For the problem below you are asked implement the GCC model. You will then apply your algorithm to three datasets, each having a training set and a test set. You will train this model, visualize the Gaussians, and identify the properties of the GCC model. Starter code is in directory gcc.</p>
+<p>Implementing GCC: You should implement the GCC model by completing the methods train and predict in gcc.py :</p>
+<p>train fits the GCC model. The means and covariances for the likelihoods should be stored in self.means and self.covariances. The learned priors are stored in self.priors.<br>predict takes inputs and computes the probability of each input being assigned to each class.<br>You can test your code by running debug_gcc.py. It provides simple test cases and feedback to help debug your code. Once you are confident with your implementation, run train_gcc.py on the three datasets mentioned above by modifying the dataset variable in the main block. This code trains a GCC model on the specified dataset, computes the test accuracy, and displays the Gaussian likelihoods with the training and test data.</p>
+<p>Provide a brief answer (no more than 3 or 4 sentences) for each of the following questions in Questions.txt:</p>
+<p>Does GCC perform well on generic_1? Why or why not?<br>Does GCC perform well on generic_2? Why or why not?<br>Does GCC perform well on generic_3? Why or why not?<br>If input feature vectors have length D, how many parameters do we need to learn for each Gaussian?<br>Suppose you decide to use Naive Bayes with GCC. In words, what would you have to change in your code? How many parameters would you need to learn for each Gaussian in this case?<br>Suppose certain elements of the input feature vectors are highly correlated. Why is this problematic for Naive Bayes?<br>How could you transform the data to mitigate this problem with Naive Bayes?<br>Q2. Multi-Line Regression with Expectation-Maximization<br>In request 4 we fit a Gaussian mixture model (GMM) to data using the EM Algorithm. The mixture model provides a way to assign points to clusters in a probabilistic sense. That is, we compute the posterior probability that point i should be owned by (i.e., assigned to) the jth component of the mixture. Where K is the number of components in the mixture. Given the ownership probabilities, we then computed weighted means and covariances, the parameters of the Gaussian components. This works well for density estimation and clustering, but is actually much more general. To that end, here we’re going to consider the use of EM for parametric model fitting; i.e., a mixture of regressors.</p>
+<p>Suppose you have a bunch of points in the plane, like those shown in the plot below. Normally you might not know how many lines are in any given dataset, but here it seems clear enough that you should be able to fit two lines. But to do this you need to figure out a way to determine which points belong to which line. And this is where the EM algorithm comes in, since we can use the posterior probability that a given point comes from a given line. This will allow us to simultaneously regress to multiple lines (not just two).</p>
+<p>To find the model parameters we minimize the negative log likelihood with the added constraint that mixing probabilities sum to 1. For this we add a Lagrange multiplier.</p>
+<p>We’ll treat the noise variance 2 as a hyper-parameter, and set it manually in the code.</p>
+<p>The EM algorithm alternates between inferring the posterior over the request of points to lines in the E-step, and the estimation of the model parameters in the M-step. For the E-step, as with the GMM in A4, we’ll write the posterior ownership probability.</p>
+<p>Written Part<br>The questions below ask you to derive the equations for the E-step and the M-step. Save your answers as written.pdf in the directory em_line_fitting. E.g., you could take pictures of written work on paper, or format electronically, e.g., with LateX.</p>
+<p>Programming Part<br>Implement multi-line fitting using the EM algorithm described above. The starter code is in directory em_line_fitting. The associated methods are:</p>
+<p>_fit: fits K linear models to training data. Each iteration contains the E-step and the M-step. The iteration terminates when there is negligible change in the ownership probabilities.<br>_e_step: computes the ownership probabilities for each data point.<br>_m_step: computes the mixing probabilities and the parameters of each of the linear models.<br>_visualize: visualizes training data with fitted lines and ownership probabilities for each point.<br>You will need to complete the methods _e_step and _m_step. The equations for these steps are given above. The starter code includes a way to specify initial conditions for the optimization; this includes the initial line parameters and the mixing probabilities.</p>
+<p>You can run train_em_line_fitting.py to debug your code with pre-defined test cases (test_case = [i], where [i] = 0, 1, 2, 3). This script determines whether your learned model parameters, mixing probabilities, and ownership probabilities are correct. If you set visualize = True, this method will display at each iteration the current estimates of the fitted lines, along with a plot that shows, for each model, the ownership probability for each data point. Once you’re confident in the code, we’ll analyze the results.</p>
+<p>The EM algorithm will find one of several local optima. Some are good, and some are not great. The chance of getting “stuck” in poor minima often depends on the initial guess and the value of the model standard deviation. To explore this, we’ve pre-specified several test cases, with different numbers of lines and values of . Run train_em_line_fitting.py for each test case, setting test_case to be 0 through 4. If you set test_case = False, you can play with the algorithm by manually changing the seed, stddev, num_lines.</p>
+<p>When your code works correctly, the first four test cases should produce the following plots. In these plots, each component (line) and its associated ownership probabilities (the bar graph) have a unique colour.</p>
+<p>Now, reflect on these estimates and how they change with each iteration as the model fit evolves from the initial guess to the final estimate. And provide brief answers (no more than 5 sentences) to the following questions in Questions.txt :</p>
+<p>In test case 0, the two lines fit well. The ownership probabilities are either 0 or 1 near the right and left sides of the plot, but near 0.5 closer to the middle. Explain why this occurs and why it’s useful.<br>In test case 1, the lines do not fit the data well. Explain what might be the source of the problem in this case.<br>Test cases 2 and 3 fit two and three lines, but in both cases not all lines appear to fit the data well. Select one of these two test cases and explain what might be the source of the problem, making reference to the model variance and the ownership probabilities.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSCI1200-Jagged-Arrays.html" rel="next" title="CSCI1200-Jagged-Arrays">
+                <i class="fa fa-chevron-left"></i> CSCI1200-Jagged-Arrays
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CSC108H-Working-With-arxiv-Metadata.html" rel="prev" title="CSC108H-Working-With-arxiv-Metadata">
+                CSC108H-Working-With-arxiv-Metadata <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Instructions"><span class="nav-number">1.</span> <span class="nav-text">Instructions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Written-work"><span class="nav-number">2.</span> <span class="nav-text">Written work</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">3.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">4.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

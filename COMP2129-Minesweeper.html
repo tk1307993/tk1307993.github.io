@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="需求需要用C编程实现Minesweeper，和其他的Minesweeper不同的是，这个Minesweeper的board不太一样，独树一帜。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C辅导：COMP2129-Minesweeper">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP2129-Minesweeper.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="需求需要用C编程实现Minesweeper，和其他的Minesweeper不同的是，这个Minesweeper的board不太一样，独树一帜。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:19.741Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C辅导：COMP2129-Minesweeper">
+<meta name="twitter:description" content="需求需要用C编程实现Minesweeper，和其他的Minesweeper不同的是，这个Minesweeper的board不太一样，独树一帜。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP2129-Minesweeper.html">
+
+
+
+
+
+  <title>C辅导：COMP2129-Minesweeper | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP2129-Minesweeper.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C辅导：COMP2129-Minesweeper</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T21:34:47+08:00">
+                2018-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  需求需要用C编程实现Minesweeper，和其他的Minesweeper不同的是，这个Minesweeper的board不太一样，独树一帜。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Task-description"><a href="#Task-description" class="headerlink" title="Task description"></a>Task description</h3><p>In this request you will develop a variation of the Minesweeper game in the C programming language. We recommend that you play the game to gain an overall understanding of how it works.</p>
+<p>In each game, mines are hidden in a two dimensional mine field and the object of the game is to uncover the empty cells and flag the cells containing mines. To simplify your implementation, regions without mines should not be automatically expanded and players are not allowed to unflag cells once they have been flagged. Each game will contain a total of 10 mines, regardless of the grid size.</p>
+<p>You are encouraged to ask questions on Ed using the requests category. As with any request,<br>make sure that your work is your own, and you do not share your code or solutions with other students.</p>
+<h3 id="Working-on-your-request"><a href="#Working-on-your-request" class="headerlink" title="Working on your request"></a>Working on your request</h3><p>You can work on this request on your own computer or the lab machines. It is important that you continually back up your request files onto your own machine, external drives, and in the cloud.</p>
+<p>You are encouraged to submit your request on Ed while you are in the process of completing it. By submitting you will obtain some feedback of your progress on the sample test cases provided.</p>
+<h3 id="Implementation-details"><a href="#Implementation-details" class="headerlink" title="Implementation details"></a>Implementation details</h3><p>Your program must be contained in one file called minesweeper.c and produce no errors when compiled using clang on the lab machines and Ed. Your program will be run from the command line using ./minesweeper and read input from standard input and write output to standard output.</p>
+<blockquote>
+<p>Important – your program will be marked automatically, so make sure that you follow the request specifications carefully. Your program output must match the exact output shown in the examples.</p>
+</blockquote>
+<h3 id="Program-input"><a href="#Program-input" class="headerlink" title="Program input"></a>Program input</h3><p>The program input consists of two sections. The first section defines the mine field and the second section describes the moves of the player. Each line of the input is one instruction. You are also required to check for whether any invalid input is encountered.</p>
+<ol>
+<li>The first line of the input will be of the form g [width] [height] where width and height are integers in the range [1, 100]. This defines the size of the grid to width cells wide and height cells high. The grid must have at least 10 cells, so this instruction is only valid if width x height &gt; 10</li>
+<li>The next 10 lines will be of the form b [x] [y] where x and y are integers in the range [0, width) and [0, height) respectively. 3. This places a mine at cell (x, y) in the grid.<ol>
+<li>The next lines will describe the moves of the player – either u [x] [y] or f [x] [y].</li>
+<li>A u instruction means that the player uncovers the cell (x, y)</li>
+<li>A f instruction means that the player flags the cell (x, y)</li>
+</ol>
+</li>
+</ol>
+<p>There must be exactly one player instruction for each grid cell. That is, if the grid is of size width x height then there should be exactly width x height u and f instructions in total.</p>
+<p>No two instructions should refer to the same grid cell, and no more than 10 flags can be placed.</p>
+<p>The input should be processed one line at a time. After reading a line of input your program should immediately act on the line of input as described before proceeding to the next line of input.</p>
+<h3 id="Sample-input"><a href="#Sample-input" class="headerlink" title="Sample input"></a>Sample input</h3><p>In the following test case we construct a 4 x 4 mine field and then play the game.</p>
+<p>The player successfully flags all of the mines and uncovers the remaining cells in this game.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">g <span class="number">4</span> <span class="number">4</span></span><br><span class="line">b <span class="number">0</span> <span class="number">0</span></span><br><span class="line">b <span class="number">1</span> <span class="number">0</span></span><br><span class="line">b <span class="number">3</span> <span class="number">0</span></span><br><span class="line">b <span class="number">1</span> <span class="number">1</span></span><br><span class="line">b <span class="number">1</span> <span class="number">2</span></span><br><span class="line">b <span class="number">0</span> <span class="number">2</span></span><br><span class="line">b <span class="number">3</span> <span class="number">2</span></span><br><span class="line">b <span class="number">0</span> <span class="number">3</span></span><br><span class="line">b <span class="number">1</span> <span class="number">3</span></span><br><span class="line">b <span class="number">3</span> <span class="number">3</span></span><br><span class="line">u <span class="number">2</span> <span class="number">3</span></span><br><span class="line">u <span class="number">2</span> <span class="number">0</span></span><br><span class="line">f <span class="number">0</span> <span class="number">3</span></span><br><span class="line">u <span class="number">2</span> <span class="number">1</span></span><br><span class="line">f <span class="number">3</span> <span class="number">0</span></span><br><span class="line">f <span class="number">0</span> <span class="number">2</span></span><br><span class="line">u <span class="number">0</span> <span class="number">1</span></span><br><span class="line">f <span class="number">3</span> <span class="number">2</span></span><br><span class="line">f <span class="number">3</span> <span class="number">3</span></span><br><span class="line">f <span class="number">0</span> <span class="number">0</span></span><br><span class="line">f <span class="number">1</span> <span class="number">1</span></span><br><span class="line">f <span class="number">1</span> <span class="number">0</span></span><br><span class="line">f <span class="number">1</span> <span class="number">2</span></span><br><span class="line">u <span class="number">3</span> <span class="number">1</span></span><br><span class="line">u <span class="number">2</span> <span class="number">2</span></span><br><span class="line">f <span class="number">1</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h3 id="Program-output"><a href="#Program-output" class="headerlink" title="Program output"></a>Program output</h3><ol>
+<li>After reading a g [width] [height] instruction, output the instruction that was inputted.</li>
+<li>After reading a b [x] [y] instruction, output the instruction that was inputted. In addition, after reading the tenth b [x] [y] line, the state of the grid should be displayed.</li>
+<li>After reading a correct player instruction, output the same instruction.<ol>
+<li>If the player uncovers a bomb, output the message lost and immediately exit.</li>
+<li>If every mine has been flagged and every other empty cell has been uncovered, then display the final state of the grid, output the message won and then exit.</li>
+</ol>
+</li>
+<li>Otherwise, the state of the grid after the instruction should be outputted.</li>
+<li>If an invalid, out of place, or otherwise incorrect instruction is read at any time, error should be outputted and your program should exit immediately. Make sure that you do not output the instruction or the grid following an erroneous instruction.</li>
+</ol>
+<h3 id="Displaying-the-grid"><a href="#Displaying-the-grid" class="headerlink" title="Displaying the grid"></a>Displaying the grid</h3><p>The grid is represented using 1 character per cell, with a 1 character border. A 4 x 4 grid looks like:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">+----+</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>The border consists of - or | characters, with a + character in each corner.</li>
+<li>The * character represents a covered cell.</li>
+<li>The f character represents a flagged cell.</li>
+<li>An uncovered cell is represented by a number that corresponds to the total number of bombs in the 8 adjacent cells that surround the uncovered cell.</li>
+</ul>
+<p>The top left corner of the grid should have coordinates (0, 0) and the bottom right corner of the grid should have coordinates ([width] - 1, [height] - 1). The first coordinate is the x coordinate, and the second is the y coordinate. A 4 x 4 grid where the player has flagged (3, 1) and uncovered (0, 2) with 2 mines in the adjacent cells would look like:</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">|<span class="string">***f</span>|</span><br><span class="line">|<span class="string">2***</span>|</span><br><span class="line">|<span class="string">****</span>|</span><br><span class="line">+----+</span><br></pre></td></tr></table></figure>
+<h3 id="Writing-your-own-testcases"><a href="#Writing-your-own-testcases" class="headerlink" title="Writing your own testcases"></a>Writing your own testcases</h3><p>We have provided you with some sample testcases but these do not test all the functionality described in the request. It is important that you thoroughly test your code by writing your own testcases.</p>
+<p>You should place all of your test cases in a tests/ directory. Ensure that each test case has the .in input file along with a corresponding .out output file. We recommend that the names of your test cases are descriptive so that you know what each is testing, for example: too-many-mines.in</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS1101-Gate.html" rel="next" title="Java辅导：CS1101-Gate">
+                <i class="fa fa-chevron-left"></i> Java辅导：CS1101-Gate
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CMPT115-Huffman-Tree-Part1.html" rel="prev" title="C++辅导：CMPT115-Huffman-Tree-Part1">
+                C++辅导：CMPT115-Huffman-Tree-Part1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-description"><span class="nav-number">1.</span> <span class="nav-text">Task description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-on-your-request"><span class="nav-number">2.</span> <span class="nav-text">Working on your request</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-details"><span class="nav-number">3.</span> <span class="nav-text">Implementation details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-input"><span class="nav-number">4.</span> <span class="nav-text">Program input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-input"><span class="nav-number">5.</span> <span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-output"><span class="nav-number">6.</span> <span class="nav-text">Program output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Displaying-the-grid"><span class="nav-number">7.</span> <span class="nav-text">Displaying the grid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Writing-your-own-testcases"><span class="nav-number">8.</span> <span class="nav-text">Writing your own testcases</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

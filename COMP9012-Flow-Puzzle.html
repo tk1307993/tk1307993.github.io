@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,Algorithm,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="实现程序Flow, 在规定时间内得到Puzzle的解，算法使用改进过的Dijkstra.">
+<meta name="keywords" content="Data Structure,Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COMP9012-Flow-Puzzle">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP9012-Flow-Puzzle.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="实现程序Flow, 在规定时间内得到Puzzle的解，算法使用改进过的Dijkstra.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:18.066Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="COMP9012-Flow-Puzzle">
+<meta name="twitter:description" content="实现程序Flow, 在规定时间内得到Puzzle的解，算法使用改进过的Dijkstra.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP9012-Flow-Puzzle.html">
+
+
+
+
+
+  <title>COMP9012-Flow-Puzzle | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP9012-Flow-Puzzle.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">COMP9012-Flow-Puzzle</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-08T08:27:24+08:00">
+                2023-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  实现程序Flow, 在规定时间内得到Puzzle的解，算法使用改进过的Dijkstra.
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Deliverables"><a href="#Deliverables" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>You are given a base code. You can compile the code and execute the solver by typing ./flow <puzzlename>. You are going to have to program your solver in the file search.c. Look at the file and implement the missing part in the function called game_dijkstra_search. Once you implement the search algorithm, go to the file called extensions.c and implement the function called game_check_deadends</puzzlename></p>
+<p>You are given the structure of a node in node.<em>files, and also a priority queue queues.</em> implementation. Look into the engine.<em> and utils.</em> files to know about the functions you can call to perform the search.</p>
+<p>In your final submission, you are free to change any file, but make sure the command line options remain the same.</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>In order to execute your solver use the following command:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./flow [<span class="keyword">options</span>] <span class="symbol">&lt;puzzleName1&gt;</span> ... <span class="symbol">&lt;puzzleNameN&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>for example:<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="regexp">/flow puzzles/</span>regular_5x5_01.txt</span><br></pre></td></tr></table></figure></p>
+<p>Will run the solver for the regular 5 by 5 puzzle, and report if the search was successful, the number of nodes generated and the time taken. if you use flag -q (quiet) it will report the solutions more concisely. This option can be useful if you want to run several puzzles at once and study their performance.</p>
+<p>If you append the option -A it will animate the solution found. If you append the option -d it will use the dead-end detection mechanism that you implemented. Feel free to explore the impact of the other options, specifically the ordering in which the colors are explored.</p>
+<p>By default, the color that has fewer free neighbors (most constrained), is the one that is going to be considered first.</p>
+<p>All the options can be found if you use option -h:</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$<span class="string">./flow</span> -h</span><br><span class="line">usage: flow_solver [ OPTIONS ] BOARD1.txt</span><br><span class="line">BOARD2.txt [ <span class="string">...</span> ] ]</span><br><span class="line"></span><br><span class="line">Display options:</span><br><span class="line">  -q, <span class="params">--quiet</span>             Reduce output</span><br><span class="line">  -d, <span class="params">--diagnostics</span>       Print diagnostics when search unsuccessful</span><br><span class="line">  -A, <span class="params">--animation</span>         Animate solution</span><br><span class="line">  -F, <span class="params">--fast</span>              Speed up animation 4x</span><br><span class="line">  -C, <span class="params">--color</span>             Force use of ANSI color</span><br><span class="line">  -S, <span class="params">--svg</span>               Output final state to SVG</span><br><span class="line"></span><br><span class="line">Node evaluation options:</span><br><span class="line">  -d, <span class="params">--deadends</span>          dead-end checking</span><br><span class="line"></span><br><span class="line">Color ordering options:</span><br><span class="line">  -r, <span class="params">--randomize</span>         Shuffle order of colors before solving</span><br><span class="line">  -c, <span class="params">--constrained</span>       Disable order by most constrained</span><br><span class="line"></span><br><span class="line">Search options:</span><br><span class="line">  -n, <span class="params">--max-nodes</span> N       Restrict storage to N nodes</span><br><span class="line">  -m, <span class="params">--max-storage</span> N     Restrict storage to N MB <span class="params">(default 1024)</span></span><br><span class="line"></span><br><span class="line">Help:</span><br><span class="line">  -h, <span class="params">--help</span>              See this <span class="keyword">help</span> text</span><br></pre></td></tr></table></figure>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>Your solver will print the following information if option -q is used:</p>
+<p>Puzzle Name<br>SearchFlag (see utils.c, line 65-68 to understand the flags)<br>Total Search Time, in seconds<br>Number of generated nodes<br>A final Summary<br>For example, the output of your solver ./flow -q ../puzzles/regular_* could be:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">../puzzles/regular_5x5_01.txt s <span class="number">0.000</span> <span class="number">18</span></span><br><span class="line">../puzzles/regular_6x6_01.txt s <span class="number">0.000</span> <span class="number">283</span></span><br><span class="line">../puzzles/regular_7x7_01.txt s <span class="number">0.002</span> <span class="number">3</span>,<span class="number">317</span></span><br><span class="line">../puzzles/regular_8x8_01.txt s <span class="number">0.284</span> <span class="number">409</span>,<span class="number">726</span></span><br><span class="line">../puzzles/regular_9x9_01.txt s <span class="number">0.417</span> <span class="number">587</span>,<span class="number">332</span></span><br><span class="line"><span class="number">5</span> total s <span class="number">0.704</span> <span class="number">1</span>,<span class="number">000</span>,<span class="number">676</span></span><br></pre></td></tr></table></figure></p>
+<p>These numbers depend on your implementation of the search, the ordering you use, and whether you prune dead-ends. If we use dead-end pruning ./flow -q -d ../puzzles/regular_* we get the following results<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">../puzzles/regular_5x5_01.txt s <span class="number">0.000</span> <span class="number">17</span></span><br><span class="line">../puzzles/regular_6x6_01.txt s <span class="number">0.000</span> <span class="number">254</span></span><br><span class="line">../puzzles/regular_7x7_01.txt s <span class="number">0.001</span> <span class="number">2</span>,<span class="number">198</span></span><br><span class="line">../puzzles/regular_8x8_01.txt s <span class="number">0.137</span> <span class="number">182</span>,<span class="number">136</span></span><br><span class="line">../puzzles/regular_9x9_01.txt s <span class="number">0.210</span> <span class="number">279</span>,<span class="number">287</span></span><br></pre></td></tr></table></figure></p>
+<p>5 total s 0.349 463,892<br>Remember that in order to get full marks, your solver has to solve at least the regular puzzles.</p>
+<h3 id="Deliverables-1"><a href="#Deliverables-1" class="headerlink" title="Deliverables"></a>Deliverables</h3><p>Deliverable 1 - Dijkstra Solver source code<br>You are expected to hand in the source code for your solver, written in C. Obviously, your source code is expected to compile and execute flawlessly using the following makefile command:</p>
+<p>Remember to compile using the optimization flag gcc -O3 for doing your experiments, it will run twice as quickly as compiling with the debugging flag gcc -g (see Makefile). The provided Makefile compiles with the optimization flag by default, and with the debugging flag if you type make debug=1. For the submission, please do not remove the -g option from your Makefile, as our scripts need this flag for testing. Your program must not be compiled under any flags that prevent it from working under gdb or valgrind.</p>
+<p>Your implementation should be able to solve the regular puzzles provided. To solve the extreme puzzles, you’ll need further enhancements that go beyond the time for this request, but feel free to challenge yourself if you finish early and explore how you would solve the extreme puzzles.</p>
+<h3 id="Deliverable-2-Experimentation"><a href="#Deliverable-2-Experimentation" class="headerlink" title="Deliverable 2 - Experimentation"></a>Deliverable 2 - Experimentation</h3><p>Besides handing in the solver source code, you’re required to provide a table reporting at least the execution time and number of generated nodes with and without dead-end detection. Include in the table only the puzzles that your solver finds a solution to.</p>
+<p>Plot figures, where the x-axis can be the number of free cells at the start, or the size of the grid, and the y-axis is either the number of generated states or solution time.</p>
+<p>Explain your results using your figures and tables. Which complexity growth does your data show? What’s the computational benefit of the dead-end detection, does it decrease the growth rate? Answer concisely.</p>
+<p>If you decide to implement any further optimization beyond the instructions of the request, or change the default arguments such as allowed memory or color ordering, please discuss their impact on the experimentation section as well.</p>
+<p>Please include your Username, Student ID and Full Name in your Document.</p>
+<p>My recommendation is that you generate the plots using any standard Python visualization library. See for example Seaborn or Matplotlib. Otherwise, there’s always the old-school excel/open-office/google-sheets method.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CAB403-Car-Park-Management-System-and-Simulator.html" rel="next" title="CAB403-Car-Park-Management-System-and-Simulator">
+                <i class="fa fa-chevron-left"></i> CAB403-Car-Park-Management-System-and-Simulator
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/COMP420-Fork.html" rel="prev" title="COMP420-Fork">
+                COMP420-Fork <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables"><span class="nav-number">1.</span> <span class="nav-text">Deliverables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">1.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">1.2.</span> <span class="nav-text">Output</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverables-1"><span class="nav-number">2.</span> <span class="nav-text">Deliverables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deliverable-2-Experimentation"><span class="nav-number">3.</span> <span class="nav-text">Deliverable 2 - Experimentation</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

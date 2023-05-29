@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导一款迷宫游戏，通过命令行界面进行控制即可。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS322-Maze-Game">
+<meta property="og:url" content="https://tk1307993.coding.me/CS322-Maze-Game.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导一款迷宫游戏，通过命令行界面进行控制即可。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:08.592Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS322-Maze-Game">
+<meta name="twitter:description" content="辅导一款迷宫游戏，通过命令行界面进行控制即可。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS322-Maze-Game.html">
+
+
+
+
+
+  <title>CS322-Maze-Game | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS322-Maze-Game.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS322-Maze-Game</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-05T11:23:31+08:00">
+                2021-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导一款迷宫游戏，通过命令行界面进行控制即可。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>You will complete this project in 2 parts. For the final request (#4) you will submit a design and the first increments of the program. The increments will be starting the program, opening a file and displaying it, prompting the user and opening each file in order and displaying it. The rest will be completed for the final project.</p>
+<p>You will create a program that will enable the user to move through a maze. The maze will contain locked doors that require keys to be opened. Guarding the maze are roving killer wombats. To escape the maze, the player must navigate through the maze, wombats, and doors until they reach a ladder. Each maze level contains one ladder that takes the player to the next level of the maze until the final level is reached. On the final level there is an exit instead of a ladder.</p>
+<p>An evil sorceress has captured the player. Her soulless minion didn’t lock the door correctly so the player can try to escape. She uses killer wombats as the guards. Each level starts with one wombat. She knows the player has left the cell but can only summon one new wombat at a time. For every 30 steps the player takes, a new wombat will randomly appear on the current level.</p>
+<p>There are strange marks in the dungeon (indicated by the letter ‘T’). If the player moves on to one they are randomly transported within that level of the dungeon. If they land on another ‘T’ they are transported again! J The random placement of the player is otherwise the same as for the wombats. They cannot be placed on physical objects, such as walls or doors. If the player is placed on a key he can pick it up.</p>
+<p>Your code will implement this game as follows:</p>
+<p>When your program starts it will prompt the user for the number of levels. The floor files will be named floor_# where # indicates which floor it holds. Your program will always start reading with the first floor.</p>
+<p>The maze is defined by a set of text files, each of which contains a single level. Whenever the game starts or the player reaches a new level, that data must be read from the appropriate text file. The first line of each file will have two integer values which describe the number of rows and columns for that level. You must use this to create a dynamic array of that size and then read in the data for the level. Perform input validation on all characters in the file as you read them. Do not load the file and inform the user there is a problem.</p>
+<p>The following characters or symbols describe objects in the levels:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'#'</span>- walls</span><br><span class="line"><span class="string">'D'</span>- door</span><br><span class="line"><span class="string">'L'</span>- Ladder</span><br><span class="line"><span class="string">'P'</span>- Player</span><br><span class="line"><span class="string">'W'</span>- Wombat (<span class="keyword">the</span> starting location <span class="keyword">of</span> <span class="keyword">the</span> <span class="keyword">first</span> wombat)</span><br><span class="line"><span class="string">'K'</span> Key</span><br><span class="line"><span class="string">'T'</span>- Teleport square</span><br><span class="line"><span class="string">'E'</span>- Starting location <span class="keyword">for</span> <span class="keyword">each</span> level</span><br><span class="line"><span class="string">'X'</span>- Exit(<span class="literal">one</span> way out)</span><br><span class="line"><span class="string">' '</span>- <span class="literal">empty</span> <span class="literal">space</span> (blank <span class="keyword">character</span>)</span><br></pre></td></tr></table></figure></p>
+<p>You must concatenate the file name with the new floor number. You will not use an array of filenames? HINT: This will require string streams.</p>
+<p>You must display that level to the user. Then you will accept the following commands from the user:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'w'</span> <span class="keyword">move</span> <span class="keyword">up</span></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">move</span> <span class="keyword">left</span></span><br><span class="line"><span class="string">'s'</span> <span class="keyword">move</span> down</span><br><span class="line"><span class="string">'d'</span> <span class="keyword">move</span> <span class="keyword">right</span></span><br><span class="line"><span class="string">'u'</span> use ladder</span><br><span class="line"><span class="string">'q'</span> <span class="keyword">quit</span></span><br></pre></td></tr></table></figure></p>
+<p>Each input from the user must be validated before any action takes place. After each command, you will update the array, then print the current status of the game to the screen. Each command is one “step” which you will use to coordinate movement and summoning of the wombats.</p>
+<p>You will update the position of the player and all wombats after every move entered by the player. The K (key) and A (apple) symbols will be removed from the maze after the player picks them up. The D (door) is removed once the player enters that space with a key. To move between floors, the player must get to the space with the ladder. On the final level the player must reach the X to exit the maze and make their escape.</p>
+<p>The position of each Actor (Wombat or Player) will not be stored in the array. It will be stored in the Player or Wombat object. When you read in the initial floor array the ‘W’ should be changed to a blank character. When you display the floor after each move you will print the array, adding a ‘P’ or ‘W’ as appropriate for each Actor.</p>
+<p>Movement- To move around a level the players must use the ‘w’, ‘a’. ‘s, and ‘d’ keys. Your move function should prevent them from moving through walls, or a door if they don’t have a key. If the player has a key then they can move through a door. Simply remove a key from the player and convert the D space to an empty space.</p>
+<p>When the player gets to a ladder space they climb it with a ‘U’ command. The ‘E’ character designates where the player starts on the new level. Time (i.e. the number of steps) is reset on each new level. When the player moves from the starting space, the E must remain. If a wombat catches a player, their location must be changed to the E square. After each move, the updated maze must be displayed for the user.</p>
+<p>When the player moves into a space that contains a key (‘K’) they pick up the key to add it to their inventory. When a player moves into a space with a teleport square (‘T’) they are randomly positioned. A player can hold no more than 3 keys. If they enter a space and cannot hold the key it remains in that space.</p>
+<p>Wombats (10 points): The Wombats will be similar to the Player, except they move randomly. They cannot move through walls or doors. They will ignore teleport squares. If a wombat is in a square adjacent to the player, the player will be moved back to the starting space for that level. The wombats cannot move between levels. For every 30 steps the player takes, place a new wombat at a random valid location in the current level.</p>
+<h3 id="Design-your-Program"><a href="#Design-your-Program" class="headerlink" title="Design your Program"></a>Design your Program</h3><p>As always you should sit down with pencil and paper and sketch out the design. Develop the necessary algorithms. Do a desk test, i.e. walk through your algorithms and code to look for logic errors.</p>
+<p>Nope! No keyboard yet! Now design your incremental development. Your program should be decomposed into functional units. If not, go back to the previous paragraph. Look at the pieces and decide on the order you should use to implement and test each part. Reading the floor into your program and then moving an actor are probably good places to start. Then add a level to test using the ladder. Once you have the development you are ready!</p>
+<p>Nope! No keyboard yet. Design and organize the directories for your project. You should have a working directory. Maybe you need a subdirectory to hold the your floor plans. Have you designed your floor plans? What is there to design? Maybe you can have a floor that allows you to test only one function or command at a time? Be careful with file names. The default first file always has the same name. If you overwrite one then you’ll need to create it again. Always have one directory to save a copy of your code as you get each increment to compile. If you’re paranoid (I know I am) maybe you have more than one stash and on different devices?</p>
+<p>Now, you’re ready to code!</p>
+<p>The moral is: Always plan ahead and make it as complete as you can!</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS9223-Programming-for-Big-Data.html" rel="next" title="CS9223-Programming-for-Big-Data">
+                <i class="fa fa-chevron-left"></i> CS9223-Programming-for-Big-Data
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/COMP206-Graph-Traversal-and-Dijkstras-Algorithm.html" rel="prev" title="COMP206-Graph-Traversal-and-Dijkstras-Algorithm">
+                COMP206-Graph-Traversal-and-Dijkstras-Algorithm <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Design-your-Program"><span class="nav-number">2.</span> <span class="nav-text">Design your Program</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

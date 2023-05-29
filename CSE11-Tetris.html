@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
+<meta name="keywords" content="Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java辅导：CSE11-Tetris">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE11-Tetris.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:57.670Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java辅导：CSE11-Tetris">
+<meta name="twitter:description" content="做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE11-Tetris.html">
+
+
+
+
+
+  <title>Java辅导：CSE11-Tetris | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE11-Tetris.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java辅导：CSE11-Tetris</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-17T12:51:16+08:00">
+                2018-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  做一个Tetris，也就是俄罗斯方块的游戏。游戏挺复古的，难度一般。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="The-Program-Tetris"><a href="#The-Program-Tetris" class="headerlink" title="The Program - Tetris"></a>The Program - Tetris</h2><p>This is a double programming request. It is intended to NOT be doable in a single night. It’s long with a non-optimized solution taking about 700-800 lines of code and white space (not including comments). It’s much more complex than any of your other programs but at the time of the request we have already covered the critical material. This request synthesizes nearly everything covered so far in CSE11.</p>
+<p>The goal is to create a Tetris game program that you play on your computer. To achieve this goal you will be using Arrays (or ArrayLists), rectangular arrays, Threads, graphical user interfaces with java Swing objects, for loops, while loops, Boolean expressions, and good program design.</p>
+<p>This is a much more substantial program than your previous requests and you should expect it take you much more time. Begin early. Ask questions. Be Patient and develop in stages. You have several weeks. Use them!.<br>A full lecture will be devoted to questions and hints for this project.</p>
+<p>If you do nothing on this program the first week, you will find it very difficult and frustrating. Start working the first week. Read the suggested development process. The program is quite doable, but NOT if you try to solve the entire problem at once, or in a single week.</p>
+<p>What the Final Game looks like when initialized and after being played for awhile with default the default blocksize (20 pixels)</p>
+<h2 id="Basic-rules-operation-of-the-game"><a href="#Basic-rules-operation-of-the-game" class="headerlink" title="Basic rules/operation of the game"></a>Basic rules/operation of the game</h2><p>There are seven Tetris shapes (each happens to occupy four grid squares).</p>
+<p>When a new game is begun and empty field/board that is 10 blocks wide, 20 blocks high is created. Then a Randomly-selected shape is created and begins moving downwards toward the bottom of the grid. The shape starts roughly at the center top row. A shape may be rotated clockwise or counter-clockwise by the user. A shape may be moved left or right. And the user may drop the shape into place.</p>
+<p>A shape may not be moved out of bounds. It may not be rotated if the rotation would make it run into an existing block on the board. When shape can no longer move downwards (hits the bottom, or runs into existing blocks, a new shape is automatically created.</p>
+<p>The game is over when a shape cannot fit onto the grid.</p>
+<h2 id="Movement"><a href="#Movement" class="headerlink" title="Movement"></a>Movement</h2><p>The player has five keys at his/her disposal to move the current Tetris shape</p>
+<ol>
+<li>h – moves the Tetris shape left</li>
+<li>l – moves the Tetris shape right</li>
+<li>j – rotates the Tetris shape counter clockwise</li>
+<li>k – rotates the Tetris shape clockwise</li>
+<li>spacebar – drops the shape downwards from its current position until it would stop</li>
+</ol>
+<h2 id="Scoring"><a href="#Scoring" class="headerlink" title="Scoring"></a>Scoring</h2><ol>
+<li>Every time a shape moves downwards, score should be incremented by 10.</li>
+<li>Rows completed when a single shape stops movement<br> . 1 row – 100<ol start="2">
+<li>2 rows – 400</li>
+<li>3 rows – 800</li>
+<li>4 rows – 1600</li>
+</ol>
+</li>
+</ol>
+<h2 id="Automated-Speedup"><a href="#Automated-Speedup" class="headerlink" title="Automated Speedup"></a>Automated Speedup</h2><p>blocks should begin movement at 1 row/second. maximum speed should be 20 rows/second.</p>
+<p>Block movement should speed up every 2000 points, until 40000 points are reached, and then maximum speed should be maintained<br>The Game is over when the next random piece will not fit. You may draw the final piece or not draw it (not drawn in the is diagram)</p>
+<h2 id="The-Major-Classes"><a href="#The-Major-Classes" class="headerlink" title="The Major Classes"></a>The Major Classes</h2><p>When creating a larger program, one has to figure out how to break up the problem into smaller components. Since, this is likely the first big program you’ve ever created, this request guides you through some of this process. Let’s begin by looking at the most likely classes, and then expanding</p>
+<ul>
+<li>Tetris Shapes</li>
+<li>the grid (or field) over in which shapes are being placed</li>
+<li>The graphical interface</li>
+</ul>
+<h2 id="Summary-of-Class-Interactions"><a href="#Summary-of-Class-Interactions" class="headerlink" title="Summary of Class Interactions"></a>Summary of Class Interactions</h2><ol>
+<li>A Shape is an array of logical coordinates. It knows nothing about graphics. It can be told to rotated and report information about itself.</li>
+<li>The TetrisGrid is the bounded X-Y playing field. It is the place where shapes interact with existing (placed) blocks. Hence it can enforce the rules of the game.</li>
+<li>The ShapeMover is the automated mechanism of forcing the current shape to move downwards. The ShapeMover will attempt to move/rotate the shape.</li>
+<li>Tetris is the Graphical interface that sets up the All components. It responds to some user input</li>
+<li>GraphicsGrid is the graphical representation of TetrisGrid.</li>
+<li>Coord is a “helper” class.</li>
+<li>You will need to decide exactly how information is communicated among the various classes to achieve your goals. Ask questions and think about this for a while. Understanding how your classes should interact will make your debugging much faster</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS104-WordCount.html" rel="next" title="C辅导：CS104-WordCount">
+                <i class="fa fa-chevron-left"></i> C辅导：CS104-WordCount
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Java-ImageProcessing5.html" rel="prev" title="Java辅导：ImageProcessing5">
+                Java辅导：ImageProcessing5 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Program-Tetris"><span class="nav-number">1.</span> <span class="nav-text">The Program - Tetris</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-rules-operation-of-the-game"><span class="nav-number">2.</span> <span class="nav-text">Basic rules/operation of the game</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Movement"><span class="nav-number">3.</span> <span class="nav-text">Movement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scoring"><span class="nav-number">4.</span> <span class="nav-text">Scoring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Automated-Speedup"><span class="nav-number">5.</span> <span class="nav-text">Automated Speedup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Major-Classes"><span class="nav-number">6.</span> <span class="nav-text">The Major Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary-of-Class-Interactions"><span class="nav-number">7.</span> <span class="nav-text">Summary of Class Interactions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

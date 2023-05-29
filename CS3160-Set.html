@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="练习C#的基本语法，实现关于Set的操作。">
+<meta name="keywords" content="Fundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#辅导：CS3160-Set">
+<meta property="og:url" content="https://tk1307993.coding.me/CS3160-Set.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="练习C#的基本语法，实现关于Set的操作。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:08.657Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C#辅导：CS3160-Set">
+<meta name="twitter:description" content="练习C#的基本语法，实现关于Set的操作。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS3160-Set.html">
+
+
+
+
+
+  <title>C#辅导：CS3160-Set | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS3160-Set.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C#辅导：CS3160-Set</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-16T08:06:52+08:00">
+                2020-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  练习C#的基本语法，实现关于Set的操作。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>The purpose of this request is to create a C# class representing sets of integers in the range 0 to 50 inclusive.<br>You should work in your groups (2 members). If your partner is not present in class each will need to complete the request on your own by the due date/time.</p>
+<h3 id="Always-bring-to-class"><a href="#Always-bring-to-class" class="headerlink" title="Always bring to class"></a>Always bring to class</h3><ol>
+<li>Deitel’s book.</li>
+<li>This request grade sheet for this lab already printed out.</li>
+<li>USB Flash drive(s) or other storage media.</li>
+<li>Your laptop with Microsoft Visual Studio 2015.</li>
+</ol>
+<h3 id="Mandatory-Instructions"><a href="#Mandatory-Instructions" class="headerlink" title="Mandatory Instructions"></a>Mandatory Instructions</h3><p>Begin by creating a solution folder on the ZIP disk, USB flash drive, or your laptop’s HD. The folder’s name should be one or two last names followed by Lab1 (e.g. Smith-Lab1 or Smith-Jones-Lab1) if both group members are working on the solution.</p>
+<p>You will create a file IntegerSet.cs that will be compiled into IntegerSet.dll. Begin by creating a makefile that you will use for this request. The application created by the makefile should be called Lab1.exe. Also implement the “clean” target so that you can type “make clean” for the current directory. Use the command-line compiler csc for this request. Do not use Visual Studio GUI!</p>
+<p>Define the IntegerSet class in the file IntegerSet.cs. Use the same namespace (Set) that is used for the main program. Remember to make your class public. Hint: Because the only integers allowed are those in the range 0 to 50 inclusive, you don’t really need the overhead of linked lists to implement the set. Use a bool array of length 51 to represent the set. If the value of position i is true, that means that i is in the set. (Example: If arr[5] is true, that means that 5 is in the set.) These are the public member functions of IntegerSet</p>
+<p>You might find it convenient to define one or more private functions for use in your function implementations. Make sure to document your code and to use meaningful variable names.</p>
+<p>When you have fully debugged your code, upload your compressed solution folder to Canvas (both group members should upload the solution). Your folder should contain only three files (App.cs, IntegerSet.cs, makefile) for this request.<br>Sample output for this program is provided below</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">A is:</span> <span class="string">&#123;</span> <span class="number">3</span> <span class="number">4</span> <span class="number">11</span> <span class="number">21</span> <span class="number">29</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">B is:</span> <span class="string">&#123;</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Union of A and B is:</span> <span class="string">&#123;</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">11</span> <span class="number">21</span> <span class="number">29</span> <span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Intersection of A and B is:</span> <span class="string">&#123;</span> <span class="number">3</span> <span class="number">4</span> <span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">Set</span> <span class="string">A</span> <span class="string">is</span> <span class="string">not</span> <span class="string">equal</span> <span class="string">to</span> <span class="string">set</span> <span class="string">B</span></span><br><span class="line"></span><br><span class="line"><span class="string">Copying</span> <span class="string">a</span> <span class="string">to</span> <span class="string">b...</span></span><br><span class="line"><span class="string">Set</span> <span class="string">A</span> <span class="string">is</span> <span class="string">equal</span> <span class="string">to</span> <span class="string">set</span> <span class="string">B</span></span><br><span class="line"></span><br><span class="line"><span class="string">Inserting</span> <span class="number">33</span> <span class="string">into</span> <span class="string">set</span> <span class="string">A...</span></span><br><span class="line"><span class="attr">Set A is now:</span> <span class="string">&#123;</span> <span class="number">3</span> <span class="number">4</span> <span class="number">11</span> <span class="number">21</span> <span class="number">29</span> <span class="number">33</span> <span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">Deleting</span> <span class="number">33</span> <span class="string">from</span> <span class="string">set</span> <span class="string">A...</span></span><br><span class="line"><span class="attr">Set A is now:</span> <span class="string">&#123;</span> <span class="number">3</span> <span class="number">4</span> <span class="number">11</span> <span class="number">21</span> <span class="number">29</span> <span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Enter set E:</span> </span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span> <span class="number">5</span></span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span> <span class="number">6</span></span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span> <span class="number">7</span></span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span> <span class="number">6</span></span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span> <span class="number">5</span></span><br><span class="line"><span class="string">Enter</span> <span class="string">an</span> <span class="string">element</span> <span class="string">(Enter</span> <span class="string">to</span> <span class="string">end):</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Set e is:</span> <span class="string">&#123;</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="string">&#125;</span></span><br><span class="line"><span class="string">Emptying</span> <span class="string">set</span> <span class="string">e...</span></span><br><span class="line"><span class="attr">Set e is:</span> <span class="string">&#123;</span> <span class="string">empty</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Code-Documentation"><a href="#Code-Documentation" class="headerlink" title="Code Documentation"></a>Code Documentation</h3><p>Each of your source files should contain a documentation header with description, author name, class information. Each function should have a documentation header with minimally function name, description, parameters, return value. Use proper program style at all times which means indentation, alignment, and whitespace. Utilize self-documenting code which means use mnemonic, i.e., meaningful variable/function/namespace/class names, etc.</p>
+<h3 id="What-to-turn-in"><a href="#What-to-turn-in" class="headerlink" title="What to turn in?"></a>What to turn in?</h3><p>Submit compressed (.zip) solution folder via Canvas.<br>In your solution folder make sure that all necessary files to compile/link/execute your projects are provided.<br>Here are some files that may be required</p>
+<ol>
+<li>All required C# source files (.cs)</li>
+<li>makefile (if the solution requires it)</li>
+<li>The entire Visual Studio 2015 solution folder (if the solution requires it)</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS162-Hashtag.html" rel="next" title="C辅导：CS162-Hashtag">
+                <i class="fa fa-chevron-left"></i> C辅导：CS162-Hashtag
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS350-System-Calls.html" rel="prev" title="C辅导：CS350-System-Calls">
+                C辅导：CS350-System-Calls <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purpose"><span class="nav-number">1.</span> <span class="nav-text">Purpose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Always-bring-to-class"><span class="nav-number">2.</span> <span class="nav-text">Always bring to class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mandatory-Instructions"><span class="nav-number">3.</span> <span class="nav-text">Mandatory Instructions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Documentation"><span class="nav-number">4.</span> <span class="nav-text">Code Documentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-turn-in"><span class="nav-number">5.</span> <span class="nav-text">What to turn in?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithm,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导Python基础需求，写一个程序来对质数进行查找。">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python辅导：COMP10001-Finding-Primes">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP10001-Finding-Primes.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导Python基础需求，写一个程序来对质数进行查找。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:21.022Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python辅导：COMP10001-Finding-Primes">
+<meta name="twitter:description" content="辅导Python基础需求，写一个程序来对质数进行查找。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP10001-Finding-Primes.html">
+
+
+
+
+
+  <title>Python辅导：COMP10001-Finding-Primes | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP10001-Finding-Primes.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python辅导：COMP10001-Finding-Primes</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-16T11:32:12+08:00">
+                2020-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导Python基础需求，写一个程序来对质数进行查找。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>In lectures we have discussed that the best way to learn computer programming and problem solving is to get hands on and solve problems. In the labs you have investigated creating user defined modules, data validation, and the list data structure. The following problems require you to apply the define, design, implement and test approach to problem solving.</p>
+<h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><ol>
+<li>This request is individual work. Groups and sharing are not permitted.</li>
+<li>All source code submitted as part of this request must contain a statement of authorship or a grade of 0 will be awarded for the entire problem.</li>
+<li>You will be submitting several source code files as well as an request report.</li>
+<li>Your request report must contain a title page which includes the title of the request, your name, student number, your professor’s name, the date, and a statement of authorship.</li>
+<li>Each problem requires evidence of the DDIT approach: an IPO chart, pseudocode or flow chart and testing traces. You may include pseudocode in your Python solutions as comments but you should make a copy of this in your report as well, do not use a screen shot.</li>
+<li>Each implementation must use the style rules defined in labs 1-3.</li>
+<li>For testing your code and for generating your debug traces from implementation testing you may find it convenient to use the command line technique demonstrated in Lab 01.</li>
+</ol>
+<h3 id="Problem-1-Finding-Primes"><a href="#Problem-1-Finding-Primes" class="headerlink" title="Problem 1: Finding Primes"></a>Problem 1: Finding Primes</h3><h4 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h4><p>An ancient algorithm for finding prime numbers is called the Sieve of Eratosthenes. You start with a list of numbers, pick the first and cross out all the multiples of that number in your list. If you start your list at 2 then your first step is to cross out 4, 6, 8, … Then you would pick 3 and cross out 9, 15, … Notice that 6 and 12 were already crossed out because they’re multiples of 2. You then pick 5 because 4 was already crossed out … the first number you cross out is 25! Everything else was already crossed out when you checked 2 or 3. Once you have gone over your entire list whatever numbers remain are prime numbers. After your program creates the list of prime numbers print it out.</p>
+<p>Table 1 shows the values for all primes lower than 30. First we created a list of all numbers from 1-30. Then we eliminated all the ones divisible by 2, shown in green. Next we eliminated all the ones divisible by 3 shown in orange - notice that 12, 18, and 30 were previously eliminated. Next we eliminated anything left that was divisible by 5: only 25 was still in the list. The final list is [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29].</p>
+<ol>
+<li>Ask the user to input a number larger than 2. Validate the input according to the slides definition of data validation. Call this validated number n.</li>
+<li>Create a list of consecutive integers from 2 through n: (2, 3, 4, …, n).</li>
+<li>Create a variable called current that will initially be set to 2.</li>
+<li>For each element in the list, go through the list you created one element at a time. If an element is a multiple of current remove it from the list.</li>
+<li>After you have eliminated all the multiples of current from your list update current to the value of the next highest element of the list.</li>
+<li>While current is less than n repeat steps 4 and 5.</li>
+</ol>
+<p>Note: This problem is difficult to work through if you try to work through it entirely in your head. If you use the techniques that have been presented in this course you can solve this problem. To successfully complete this task consider whether you should use 2 for loops nested inside one another. Take the basic algorithm and try writing out a trace. Simple solutions exist that are less than 20 lines long but it’s ok if yours is longer.</p>
+<p>Your solution to this problem must be accompanied by an IPO chart, a flow chart, and trace information for a value other than 10. The trace must match YOUR flow chart.</p>
+<h4 id="Grading-Scheme-and-Other-Requirements"><a href="#Grading-Scheme-and-Other-Requirements" class="headerlink" title="Grading Scheme and Other Requirements"></a>Grading Scheme and Other Requirements</h4><p>To be eligible for grading your solution must be named primes.py and must contain a statement of authorship.</p>
+<h3 id="Problem-2-Ordering-at-McThoseguys"><a href="#Problem-2-Ordering-at-McThoseguys" class="headerlink" title="Problem 2: Ordering at McThoseguys"></a>Problem 2: Ordering at McThoseguys</h3><h4 id="Problem-Statement-1"><a href="#Problem-Statement-1" class="headerlink" title="Problem Statement"></a>Problem Statement</h4><p>For this problem you should create a definition, a design, testing evidence, and implementation for each module you are asked to create. If you attempt to solve this problem without first creating a flow chart then you should expect great difficulty.<br>The local fast food restaurant, McThoseguys, has started using a computerized order input system for food order taking. You have the job of creating the system which when run asks for the person’s name, greets them and then allows them to pick from several options. Before greeting the person by name the system needs to check if the name that was entered is on the “dirty name” list. If it is on the list then instead of greeting the person ask them to re-enter their name until they enter something that is not on the “dirty name” list. The “dirty name” list is defined below.</p>
+<p>In order to build their meal the user has to make several choices. The choices should be presented as a menu in order to minimize the amount of typing the user has to do. See the sample output in section 4.2 for the formatting. First the user will pick their sandwich wrapper. Next they have a protein selection. After choosing a protein they can pick toppings. Finally they may pick a sandwich sauce. Note that they should be allowed to pick only 1 wrapper, 1 protein, [1-3] toppings which may include repeats, for example choosing cheese two times means double cheese and is allowed, and and 0 or 1 sauce.</p>
+<ul>
+<li>McThoseguys’ list of dirty names is: mud, dirt, dust, booger, diaper</li>
+<li>Sneaky users will try to use capitalization to avoid matches, check the names case insensitively</li>
+<li>Make sure that the dirty names do not appear within the given name; Muddy Mike is not allowed</li>
+<li>The available wrappers are sesame seed bun or soft tortilla shell</li>
+<li>The available protein choices are chicken, beef, or tofu</li>
+<li>The available toppings are tomato, lettuce, pickles, cheese, and onions</li>
+<li>The available sauces are ketchup, mayonaise, and McCalorie Secret Sauce</li>
+</ul>
+<p>Your solution must create a menu module which accepts a list of choices and the minimum and maximum number of choices allowed as parameters and returns a list to your main program. For example you might choose to create the module as def menuModule( choiceList, minimumChoices, maximumChoices) or in some other manner. Your module must not contain any logic or values from the rest of the problem, for example you may not code in questions that refer to toppings or sauces, the module must be completely generic and would work equally well if I started asking the user for car parts. The module should label each menu option with a single character, of your choice, and loop until the required number of acceptable choices has been input. You must validate that the choices input are correct and display an error message for any incorrect choices. After the user has completed their order you should confirm it by displaying the choices to the user along with a simple yes/no prompt, which you will test as a case insensitive string. You do NOT need to repeat the program if they choose “no”.</p>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>Name selection sample:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">What <span class="keyword">is</span> your <span class="built_in">name</span>? Joe Dirt</span><br><span class="line">I'm sorry, <span class="keyword">that</span> <span class="built_in">name</span> <span class="keyword">is</span> <span class="keyword">not</span> allowed <span class="keyword">at</span> McThoseguys.</span><br><span class="line">What <span class="keyword">is</span> your <span class="built_in">name</span>? Filthy McMuddy</span><br><span class="line">I'm sorry, <span class="keyword">that</span> <span class="built_in">name</span> <span class="keyword">is</span> <span class="keyword">not</span> allowed <span class="keyword">at</span> McThoseguys.</span><br><span class="line">What <span class="keyword">is</span> your <span class="built_in">name</span>? There are those who call <span class="keyword">me</span> ... Tim</span><br><span class="line">Hello There are those who call <span class="keyword">me</span> ... Tim, welcome <span class="keyword">to</span> McThoseguys!</span><br></pre></td></tr></table></figure></p>
+<p>Choosing a wrapper without error sample:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">What would you like <span class="keyword">as</span> your sandwich wrapper?</span><br><span class="line">[<span class="meta">1</span>]sesame seed bun</span><br><span class="line">[<span class="meta">2</span>]soft tortilla shell</span><br><span class="line"></span><br><span class="line">What <span class="keyword">is</span> your choice? <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p>Choosing a protein with error sample:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">What would you like <span class="keyword">as</span> your protein choice?</span><br><span class="line">[<span class="meta">1</span>]chicken</span><br><span class="line">[<span class="meta">2</span>]beef</span><br><span class="line">[<span class="meta">3</span>]tofu</span><br><span class="line"></span><br><span class="line">What <span class="keyword">is</span> your choice? <span class="number">4</span></span><br><span class="line">I<span class="string">'m sorry, that isn'</span>t a valid choice, please <span class="keyword">try</span> again.</span><br><span class="line">[<span class="meta">1</span>]chicken</span><br><span class="line">[<span class="meta">2</span>]beef</span><br><span class="line">[<span class="meta">3</span>]tofu</span><br><span class="line"></span><br><span class="line">What <span class="keyword">is</span> your choice? <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>Choosing double onions as toppings sample:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">What would you like as your topping choice (pick <span class="number">1</span><span class="number">-3</span> items)?</span><br><span class="line">[<span class="number">1</span>]tomato</span><br><span class="line">[<span class="number">2</span>]lettuce</span><br><span class="line">[<span class="number">3</span>]pickles</span><br><span class="line">[<span class="number">4</span>]cheese</span><br><span class="line">[<span class="number">5</span>]onions</span><br><span class="line"></span><br><span class="line">What is your choice or enter q to quit? q</span><br><span class="line">I'm sorry, you must choose at least <span class="number">1</span> option(s).</span><br><span class="line">[<span class="number">1</span>]tomato</span><br><span class="line">[<span class="number">2</span>]lettuce</span><br><span class="line">[<span class="number">3</span>]pickles</span><br><span class="line">[<span class="number">4</span>]cheese</span><br><span class="line">[<span class="number">5</span>]onions</span><br><span class="line"></span><br><span class="line">What is your choice or enter q to quit? <span class="number">5</span></span><br><span class="line">[<span class="number">1</span>]tomato</span><br><span class="line">[<span class="number">2</span>]lettuce</span><br><span class="line">[<span class="number">3</span>]pickles</span><br><span class="line">[<span class="number">4</span>]cheese</span><br><span class="line">[<span class="number">5</span>]onions</span><br><span class="line"></span><br><span class="line">What is your choice or enter q to quit? <span class="number">5</span></span><br><span class="line">[<span class="number">1</span>]tomato</span><br><span class="line">[<span class="number">2</span>]lettuce</span><br><span class="line">[<span class="number">3</span>]pickles</span><br><span class="line">[<span class="number">4</span>]cheese</span><br><span class="line">[<span class="number">5</span>]onions</span><br><span class="line"></span><br><span class="line">What is your choice or enter q to quit? q</span><br></pre></td></tr></table></figure></p>
+<p>Choosing “no sauce” sample:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">What would you like as a sauce?</span><br><span class="line">[1]ketchup</span><br><span class="line">[2]mayonaise</span><br><span class="line">[3]McCalorie<span class="built_in"> Secret </span>Sauce</span><br><span class="line"></span><br><span class="line">What is your choice <span class="keyword">or</span> enter q <span class="keyword">to</span> quit? q</span><br></pre></td></tr></table></figure></p>
+<p>Different user confirmation samples:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">There</span> <span class="string">are</span> <span class="string">those</span> <span class="string">who</span> <span class="string">call</span> <span class="string">me</span> <span class="string">...</span> <span class="string">Tim,</span> <span class="string">you</span> <span class="string">have</span> <span class="string">chosen</span> <span class="string">a</span> <span class="string">chicken</span> <span class="string">sandwich</span> <span class="string">on</span> <span class="string">a</span> <span class="string">soft</span> <span class="string">tortilla</span> <span class="string">shell,</span> <span class="string">with</span> <span class="string">onions,</span> <span class="string">onions,</span> <span class="string">and</span> <span class="literal">no</span> <span class="string">sauce.</span></span><br><span class="line"></span><br><span class="line"><span class="string">Is</span> <span class="string">this</span> <span class="string">correct,</span> <span class="literal">yes</span> <span class="string">or</span> <span class="literal">no</span><span class="string">?</span> <span class="literal">no</span></span><br><span class="line"><span class="string">Sorry,</span> <span class="string">let's</span> <span class="string">try</span> <span class="string">again</span> <span class="string">from</span> <span class="string">scratch.</span></span><br><span class="line"></span><br><span class="line"><span class="string">There</span> <span class="string">are</span> <span class="string">those</span> <span class="string">who</span> <span class="string">call</span> <span class="string">me</span> <span class="string">...</span> <span class="string">Tim,</span> <span class="string">you</span> <span class="string">have</span> <span class="string">chosen</span> <span class="string">a</span> <span class="string">chicken</span> <span class="string">sandwich</span> <span class="string">on</span> <span class="string">a</span> <span class="string">soft</span> <span class="string">tortilla</span> <span class="string">shell,</span> <span class="string">with</span> <span class="string">onions,</span> <span class="string">onions,</span> <span class="string">and</span> <span class="literal">no</span> <span class="string">sauce.</span></span><br><span class="line"></span><br><span class="line"><span class="string">Is</span> <span class="string">this</span> <span class="string">correct,</span> <span class="literal">yes</span> <span class="string">or</span> <span class="literal">no</span><span class="string">?</span> <span class="string">maybe</span></span><br><span class="line"><span class="string">Please</span> <span class="string">enter</span> <span class="literal">yes</span> <span class="string">or</span> <span class="literal">no</span>.</span><br><span class="line"></span><br><span class="line"><span class="string">There</span> <span class="string">are</span> <span class="string">those</span> <span class="string">who</span> <span class="string">call</span> <span class="string">me</span> <span class="string">...</span> <span class="string">Tim,</span> <span class="string">you</span> <span class="string">have</span> <span class="string">chosen</span> <span class="string">a</span> <span class="string">chicken</span> <span class="string">sandwich</span> <span class="string">on</span> <span class="string">a</span> <span class="string">soft</span> <span class="string">tortilla</span> <span class="string">shell,</span> <span class="string">with</span> <span class="string">onions,</span> <span class="string">onions,</span> <span class="string">and</span> <span class="literal">no</span> <span class="string">sauce.</span></span><br><span class="line"></span><br><span class="line"><span class="string">Is</span> <span class="string">this</span> <span class="string">correct,</span> <span class="literal">yes</span> <span class="string">or</span> <span class="literal">no</span><span class="string">?</span> <span class="literal">yEs</span></span><br><span class="line"><span class="string">Thank</span> <span class="string">you</span> <span class="string">for</span> <span class="string">shopping</span> <span class="string">at</span> <span class="string">McThoseguys!</span> <span class="string">Enjoy</span> <span class="string">your</span> <span class="string">food!</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Grading-Scheme-and-Other-Requirements-1"><a href="#Grading-Scheme-and-Other-Requirements-1" class="headerlink" title="Grading Scheme and Other Requirements"></a>Grading Scheme and Other Requirements</h3><p>To be eligible for grading your solution must be named mcThoseguys.py and must contain a statement of authorship.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CEGEG082-Point-in-Polygon.html" rel="next" title="Python辅导：CEGEG082-Point-in-Polygon">
+                <i class="fa fa-chevron-left"></i> Python辅导：CEGEG082-Point-in-Polygon
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS112-Analytical-Problems.html" rel="prev" title="Java辅导：CS112-Analytical-Problems">
+                Java辅导：CS112-Analytical-Problems <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instructions"><span class="nav-number">2.</span> <span class="nav-text">Instructions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-1-Finding-Primes"><span class="nav-number">3.</span> <span class="nav-text">Problem 1: Finding Primes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Statement"><span class="nav-number">3.1.</span> <span class="nav-text">Problem Statement</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Grading-Scheme-and-Other-Requirements"><span class="nav-number">3.2.</span> <span class="nav-text">Grading Scheme and Other Requirements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2-Ordering-at-McThoseguys"><span class="nav-number">4.</span> <span class="nav-text">Problem 2: Ordering at McThoseguys</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Statement-1"><span class="nav-number">4.1.</span> <span class="nav-text">Problem Statement</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading-Scheme-and-Other-Requirements-1"><span class="nav-number">6.</span> <span class="nav-text">Grading Scheme and Other Requirements</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

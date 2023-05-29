@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MapReduce,Hadoop,AWS,Pig,Spark,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导四个关于大数据的需求，涉及到Hadoop, Spark和Pig的使用，最后需要在AWS和Azure上搭建环境进行计算。">
+<meta name="keywords" content="MapReduce,Hadoop,AWS,Pig,Spark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSE6242-HadoopSparkPigandAzure">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE6242-HadoopSparkPigandAzure.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导四个关于大数据的需求，涉及到Hadoop, Spark和Pig的使用，最后需要在AWS和Azure上搭建环境进行计算。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:56.254Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSE6242-HadoopSparkPigandAzure">
+<meta name="twitter:description" content="辅导四个关于大数据的需求，涉及到Hadoop, Spark和Pig的使用，最后需要在AWS和Azure上搭建环境进行计算。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE6242-HadoopSparkPigandAzure.html">
+
+
+
+
+
+  <title>CSE6242-HadoopSparkPigandAzure | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE6242-HadoopSparkPigandAzure.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSE6242-HadoopSparkPigandAzure</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-18T08:49:00+08:00">
+                2020-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导四个关于大数据的需求，涉及到Hadoop, Spark和Pig的使用，最后需要在AWS和Azure上搭建环境进行计算。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Task-1-Analyzing-a-Graph-with-Hadoop-Java"><a href="#Task-1-Analyzing-a-Graph-with-Hadoop-Java" class="headerlink" title="Task 1: Analyzing a Graph with Hadoop/Java"></a>Task 1: Analyzing a Graph with Hadoop/Java</h3><h4 id="Writing-your-first-simple-Hadoop-program"><a href="#Writing-your-first-simple-Hadoop-program" class="headerlink" title="Writing your first simple Hadoop program"></a>Writing your first simple Hadoop program</h4><p>Imagine that your boss gives you a large dataset which contains an entire email communication network from a popular social network site. The network is organized as a directed graph where each node represents an email address and the edge between two nodes (e.g., Address A and Address B) has a weight stating how many times A wrote to B. The boss is very interested in finding out the people most frequently contacted by others. Your task is to write a MapReduce program in Java to report the largest weight among all the weighted inbound edges for each node in the graph.</p>
+<p>First, go over the Hadoop word count tutorial to get familiar with Hadoop and some Java basics. You will be able to complete this task with only some knowledge about Java. You should have already loaded two graph files into HDFS and loaded into your HDFS file system in your vm. Each file stores a list of edges as tab-separated-values. Each line represents a single edge consisting of three columns: (source node ID, target node ID, edge weight), each of which is separated by a tab (\t). Node IDs are positive integers, and weights are also positive integers. Edges are ordered randomly.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">src  tgt  weight</span><br><span class="line"><span class="number">117</span>  <span class="number">51</span>   <span class="number">1</span></span><br><span class="line"><span class="number">194</span>  <span class="number">51</span>   <span class="number">1</span></span><br><span class="line"><span class="number">299</span>  <span class="number">51</span>   <span class="number">3</span></span><br><span class="line"><span class="number">230</span>  <span class="number">151</span>  <span class="number">51</span></span><br><span class="line"><span class="number">194</span>  <span class="number">151</span>  <span class="number">79</span></span><br><span class="line"><span class="number">51</span>   <span class="number">130</span>  <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p>Your code should accept two arguments upon running. The first argument (​args[0]) will be a path for the input graph file on HDFS (e.g., /user/cse6242/graph1.tsv), and the second argument (​args[1]) will be a path for output directory on HDFS (e.g., /user/cse6242/task1output1). The default output mechanism of Hadoop will create multiple files on the output directory such as part-00000, part-00001, which will be merged and downloaded to a local directory by the supplied run script. Please use the run scripts for your convenience.</p>
+<p>The format of the output should be such that each line represents a node ID and the largest weight among all its inbound edges. The ID and the largest weight must be separated by a tab (\t). Lines do not need be sorted. The following example result is computed based on the toy graph above. Please exclude nodes that do not have incoming edges (e.g., those email addresses that never get contacted by anybody).</p>
+<p>For the toy graph above, the output is as follows.<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">51 </span>  <span class="number">3</span></span><br><span class="line"><span class="symbol">151 </span> <span class="number">79</span></span><br><span class="line"><span class="symbol">130 </span> <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<p>Test your program on graph1.tsv and graph2.tsv. To demonstrate how your MapReduce procedure works, ​use the inline example above, trace the input and output of your map and reduce functions. That is, given the above graph as the input, describe the input and output of your map and reduce function(s) and how the functions transform/process the data (provide examples whenever appropriate). Write down your answers in ​description.pdf​. You are welcome to explain your answers using a combination of text and images.</p>
+<h4 id="Designing-a-MapReduce-algorithm-and-thinking-in-MapReduce"><a href="#Designing-a-MapReduce-algorithm-and-thinking-in-MapReduce" class="headerlink" title="Designing a MapReduce algorithm (and thinking in MapReduce)"></a>Designing a MapReduce algorithm (and thinking in MapReduce)</h4><p>Design a MapReduce algorithm that accomplishes the following task: for each node i in a directed graph G, find that node’s in neighbors’ in neighbors​. Node u is considered to be an in neighbor of node v if there is a directed edge pointing from node u to node v. In other words, your task is find every “2-hop” neighbor of every node i in the graph G, where such a neighbor is connected by at least one directed path of length 2 that reaches node i.</p>
+<blockquote>
+<p>NOTE: You only need to submit pseudo code, a brief explanation of your algorithm, and trace of input and output of your map and reduce functions for the graph given below. No coding is required​.</p>
+</blockquote>
+<h3 id="Task-2-Analyzing-a-Large-Graph-with-Spark-Scala"><a href="#Task-2-Analyzing-a-Large-Graph-with-Spark-Scala" class="headerlink" title="Task 2: Analyzing a Large Graph with Spark/Scala"></a>Task 2: Analyzing a Large Graph with Spark/Scala</h3><p>Please go over this ​Spark word count tutorial​ to get more background about Spark/Scala.</p>
+<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Your task is to calculate the gross accumulated node weights for each node in graph1.tsv and graph2.tsv from edge weights using Spark and Scala. Assume the graph to be a representation of a network flow where each edge represents the number of items flowing from source to target. The gross accumulated node weight for a node is now defined as the number of items produced/consumed by the node.</p>
+<p>When loading the edges, parse the edge weights using the ​toInt method and filter out (ignore) all edges whose edge weights equal 1 i.e., only consider edges whose edge weights do not equal 1.</p>
+<p>Your Scala program should handle the same two arguments as in Task 1 for input and output from the console, and should generate the same formatted output file on the supplied output directory (tab-separated-file). Please note that the default Spark saveastextfile method uses a saving format that is different from Hadoop’s, so you need to format the result before saving to file (Tip: use map and mkString). The result doesn’t need to be sorted.</p>
+<h3 id="Task-3-Analyzing-Large-Amount-of-Data-with-Pig-on-AWS"><a href="#Task-3-Analyzing-Large-Amount-of-Data-with-Pig-on-AWS" class="headerlink" title="Task 3: Analyzing Large Amount of Data with Pig on AWS"></a>Task 3: Analyzing Large Amount of Data with Pig on AWS</h3><p>You will try out PIG (​<a href="http://pig.apache.org​" target="_blank" rel="noopener">http://pig.apache.org​</a>) for processing n-gram data on Amazon Web Services (AWS). This is a fairly simple task, and in practice you may be able to tackle this using commodity computers (e.g., consumer-grade laptops or desktops). However, we would like you to use this exercise to learn and solve it using distributed computing on Amazon EC2, and gain experience (very helpful for your future career in research or industry), so you are prepared to tackle more complex problems.</p>
+<p>The services you will primarily be using are Amazon S3 storage, Amazon Elastic Cloud Computing (EC2) virtual servers in the cloud, and Amazon Elastic MapReduce (EMR) managed Hadoop framework.</p>
+<p>This task will ideally​ use up​ only a very small fraction of your $100 credit​. AWS allows you to use up to 20 instances in total (that means 1 master instance and up to 19 core instances) without filling out a “limit request form”. For this request, you should not exceed this quota of 20 instances​. You can learn about these instance types, their specs, and pricing at Instance Types​.</p>
+<p>Please read the AWS Setup Guidelines provided to set up your AWS account. In this task, you will use subsets of the Google books n-grams dataset (full dataset for reference), on which you will perform some analysis. An ‘n -gram’ is a phrase with n words; the full n-gram dataset lists n-grams present in the books on books.google.com along with some statistics.</p>
+<p>You will perform your analysis on two custom datasets, extracted from the Google books bigrams (2-grams), that we have prepared for you: a small one and a large one. To help you evaluate the correctness of your output, we have uploaded the output for the small dataset on T-Square (the link is here​ ).</p>
+<blockquote>
+<p>VERY IMPORTANT​ : Both these datasets are in the US-Standard (US-East) region. Using machines in other regions for computation would incur data transfer charges. Hence, set your region to US East (N. Virginia) in the beginning (not Oregon which is the default). This is extremely important otherwise your code may not work and you may be charged extra.</p>
+</blockquote>
+<h4 id="Goal-1"><a href="#Goal-1" class="headerlink" title="Goal"></a>Goal</h4><p>For each unique bigram, compute its average number of appearances per book, with at least 50 occurrences for each recorded year. For the above example, the results will be:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I am       (<span class="number">342</span> + <span class="number">211</span>) / (<span class="number">90</span> + <span class="number">10</span>) = <span class="number">5.53</span></span><br><span class="line">very cool  (<span class="number">500</span> + <span class="number">3210</span> + <span class="number">9994</span>) / (<span class="number">10</span> + <span class="number">1000</span> + <span class="number">3020</span>) = <span class="number">3.40049628</span></span><br></pre></td></tr></table></figure></p>
+<p>Output the 10 bigrams having the highest average number of appearances per book along with their corresponding averages, in tab-separated format​, sorted in descending order, with at least 50 occurrences for each recorded year. If multiple bigrams have the same average, order them alphabetically. For the example above, the output will be:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">I</span> <span class="selector-tag">am</span>       5<span class="selector-class">.53</span></span><br><span class="line"><span class="selector-tag">very</span> <span class="selector-tag">cool</span>  3<span class="selector-class">.40049628</span></span><br></pre></td></tr></table></figure></p>
+<p>You will solve this problem by writing a PIG script on Amazon EC2 and save the output.</p>
+<p>You can use the interactive PIG shell provided by EMR to perform this task from the command line (grunt). In this case, you can copy the commands you used for this task into a single file to have the PIG script and the output from the command line into a separate file. Please see this for how to use PIG shell. Also, you can upload the script and create a task on your cluster.</p>
+<h3 id="Task-4-Analyzing-a-Large-Graph-using-Hadoop-service-onMicrosoft-Azure"><a href="#Task-4-Analyzing-a-Large-Graph-using-Hadoop-service-onMicrosoft-Azure" class="headerlink" title="Task 4: Analyzing a Large Graph using Hadoop service onMicrosoft Azure"></a>Task 4: Analyzing a Large Graph using Hadoop service onMicrosoft Azure</h3><h4 id="Goal-2"><a href="#Goal-2" class="headerlink" title="Goal"></a>Goal</h4><p>Your task is to write a MapReduce program to calculate the degree distribution of a graph. Note that this task shares some similarities with Task 1 (e.g., both are analyzing graphs). Task 1 can be completed using your own computer. This task is to be completed using Azure. We recommend that you first complete Task 1.</p>
+<p>You will use data files small.tsv(~75MB) and large.tsv(~3GB), for this question. Each file stores a list of edges as tab-separated-values. Each line represents a single edge consisting of two columns: (Node A, Node B), each of which is separated by a tab. Node IDs are positive integers and the rows are already sorted by Node A.<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">src  tgt</span><br><span class="line"><span class="number">51</span>   <span class="number">130</span></span><br><span class="line"><span class="number">51</span>   <span class="number">194</span></span><br><span class="line"><span class="number">51</span>   <span class="number">299</span></span><br><span class="line"><span class="number">130</span>  <span class="number">200</span></span><br><span class="line"><span class="number">151</span>  <span class="number">230</span></span><br><span class="line"><span class="number">151</span>  <span class="number">194</span></span><br></pre></td></tr></table></figure></p>
+<p>Your code should accept two arguments upon running. The first argument (args[0]) will be a path for the input graph file, and the second argument (args[1]) will be a path for output directory. The default output mechanism of Hadoop will create multiple files on the output directory such as part-00000, part-00001, which will have to be merged and downloaded to a local directory.</p>
+<p>The format of the output should be as follows. Each line represents the degree and its frequency. The degree and the frequency of the degree must be separated by a tab(\t), and lines don’t have to be sorted. The following example result is computed based on the toy graph above.</p>
+<blockquote>
+<p>Hint​: One way of doing it is using mapreduce procedure twice. First for finding the degree of each node and second for calculating the frequency of each degree. You will have to make appropriate changes in the skeleton code for this.</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MapReduce/" rel="tag"># MapReduce</a>
+          
+            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
+          
+            <a href="/tags/AWS/" rel="tag"># AWS</a>
+          
+            <a href="/tags/Pig/" rel="tag"># Pig</a>
+          
+            <a href="/tags/Spark/" rel="tag"># Spark</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS104-Rational-Problem.html" rel="next" title="CS104-Rational-Problem">
+                <i class="fa fa-chevron-left"></i> CS104-Rational-Problem
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS368-Shopping-Website.html" rel="prev" title="CS368-Shopping-Website">
+                CS368-Shopping-Website <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-1-Analyzing-a-Graph-with-Hadoop-Java"><span class="nav-number">1.</span> <span class="nav-text">Task 1: Analyzing a Graph with Hadoop/Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Writing-your-first-simple-Hadoop-program"><span class="nav-number">1.1.</span> <span class="nav-text">Writing your first simple Hadoop program</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Designing-a-MapReduce-algorithm-and-thinking-in-MapReduce"><span class="nav-number">1.2.</span> <span class="nav-text">Designing a MapReduce algorithm (and thinking in MapReduce)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-2-Analyzing-a-Large-Graph-with-Spark-Scala"><span class="nav-number">2.</span> <span class="nav-text">Task 2: Analyzing a Large Graph with Spark/Scala</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Goal"><span class="nav-number">2.1.</span> <span class="nav-text">Goal</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-3-Analyzing-Large-Amount-of-Data-with-Pig-on-AWS"><span class="nav-number">3.</span> <span class="nav-text">Task 3: Analyzing Large Amount of Data with Pig on AWS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Goal-1"><span class="nav-number">3.1.</span> <span class="nav-text">Goal</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-4-Analyzing-a-Large-Graph-using-Hadoop-service-onMicrosoft-Azure"><span class="nav-number">4.</span> <span class="nav-text">Task 4: Analyzing a Large Graph using Hadoop service onMicrosoft Azure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Goal-2"><span class="nav-number">4.1.</span> <span class="nav-text">Goal</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

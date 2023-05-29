@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Activity Diagram,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="针对客户ERP需求，画活动图等UML图。">
+<meta name="keywords" content="Activity Diagram">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML辅导：INF20015 Requirements Analysis and Modelling">
+<meta property="og:url" content="https://tk1307993.coding.me/INF20015-Requirements-Analysis-Modelling.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="针对客户ERP需求，画活动图等UML图。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:52.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UML辅导：INF20015 Requirements Analysis and Modelling">
+<meta name="twitter:description" content="针对客户ERP需求，画活动图等UML图。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/INF20015-Requirements-Analysis-Modelling.html">
+
+
+
+
+
+  <title>UML辅导：INF20015 Requirements Analysis and Modelling | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/INF20015-Requirements-Analysis-Modelling.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">UML辅导：INF20015 Requirements Analysis and Modelling</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-15T09:34:49+08:00">
+                2018-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UML/" itemprop="url" rel="index">
+                    <span itemprop="name">UML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  针对客户ERP需求，画活动图等UML图。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><h3 id="The-Company"><a href="#The-Company" class="headerlink" title="The Company"></a>The Company</h3><p>Ceylon Textile Suppliers (CTS), an Australian owned organization based in Melbourne which supplies clothing related products to Australian and New Zealand retail outlets on a sale or return basis. It has an annual turnover of around $ 60M and plans to expand this. The current business processes for operations have limited and ad-hoc IT systems to support them. Business processes are mainly manual and the inter-departmental communication of information is largely paper-based. There are a number of issues with operations recognised by the staff running these processes, which interfere with smooth running of their departments.</p>
+<h3 id="Ceylon-Textile-Suppliers-new-IT-based-strategy"><a href="#Ceylon-Textile-Suppliers-new-IT-based-strategy" class="headerlink" title="Ceylon Textile Suppliers: new IT-based strategy"></a>Ceylon Textile Suppliers: new IT-based strategy</h3><p>CTS’s Board of Directors has declared a strategy to expand the business’s operations to embrace the latest developments in information technologies, specifically web-based technologies and the opportunities it presents. This is likely to include a web interface and web presence beyond purely brochure-style one in place. The strategy requires sales and stock operations should be automated, integrated support to achieve efficiency gains and the ability to inter-operate with any internet technologies and opportunities it present to CTS’s new strategy. The Board of Directors wants a phased implementation to realise benefits quickly and to minimise the risk of interruption to its core operations.</p>
+<h3 id="Swinburne-consultants"><a href="#Swinburne-consultants" class="headerlink" title="Swinburne consultants"></a>Swinburne consultants</h3><p>CTC’s Board of Directors have contacted Department of Information Systems Logistics and Entrepreneurship at Swinburne University of Technology to help them to achieve their new strategic directions and requested a proposal to conduct a comprehensive review of its processes to identify areas for improvement and to implement their IT-based strategy. They also requested Swinburne to propose a suitable internet-based automated solution to facilitate its new strategic initiative as second stage of the project.</p>
+<h3 id="Project-requirement"><a href="#Project-requirement" class="headerlink" title="Project requirement"></a>Project requirement</h3><p>As a first step of the proposal, the Swinburne consultants have prepared an initial review report that includes current processes related to of sales orders, stock control, and advertising campaign. Your task is to provide requirement specification models and suggest a preliminary IT solution (preferably an ERP solution) as indicated in marking guide.</p>
+<p>This request contributes 70% to your final mark.</p>
+<p>Due dates: See Canvas for individual component due dates</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This consultant report provides initial findings of:</p>
+<ul>
+<li>A high level view of the current processes (as-is)</li>
+<li>A high level view of the important data used in current manual system</li>
+</ul>
+<p>These findings will use to improve the efficiency of operational processes and provide the organisation with an IT support needed (preferably an ERP system). At the end of this initial study, it is expected that a full study will be carried out to streamline the existing processes and recommend a final IT solution.</p>
+<h3 id="Stakeholders"><a href="#Stakeholders" class="headerlink" title="Stakeholders"></a>Stakeholders</h3><p>The following stakeholders have been identified as direct or related interest of the proposed project. We believe that these stakeholders can strongly influence and make decision about business requirements.</p>
+<ul>
+<li>The Chief Financial Officer (CFO): Barak Obama</li>
+<li>The Sales and Marketing Director: George Bush (keen to see improvement in the efficiency of the sales operation but he is also interested in how the work might inform aspects of what the new website (out of scope) may and must cater. George also act as a Project Sponsor</li>
+<li>Human Resource Manager: John Howard</li>
+<li>Operations Staff Representative: Andrew Barr</li>
+<li>The Stock Manager: Julia Gillard, will be Ambassador User Representative (primary representative for helping with the analysis or arranging access to operational staff)</li>
+</ul>
+<h3 id="Organization-Chart"><a href="#Organization-Chart" class="headerlink" title="Organization Chart"></a>Organization Chart</h3><p>![image][tmp]</p>
+<h3 id="Scopre-of-the-project"><a href="#Scopre-of-the-project" class="headerlink" title="Scopre of the project"></a>Scopre of the project</h3><h4 id="In-scope"><a href="#In-scope" class="headerlink" title="In scope"></a>In scope</h4><p> Purchasing</p>
+<p> Stock Control</p>
+<p> Sales</p>
+<p> Dispatch</p>
+<p> Goods In</p>
+<p> Customer sales data for marketing campaigns</p>
+<h4 id="Out-of-scope"><a href="#Out-of-scope" class="headerlink" title="Out of scope"></a>Out of scope</h4><p> Accounts processes</p>
+<p> Marketing department (except as above)</p>
+<p> Human resource department (COS10020 project focus on this process)</p>
+<p> Travelling salesforce</p>
+<h3 id="Process-descriptions"><a href="#Process-descriptions" class="headerlink" title="Process descriptions"></a>Process descriptions</h3><h4 id="Sales-orders"><a href="#Sales-orders" class="headerlink" title="Sales orders"></a>Sales orders</h4><p>The sales team raises sales orders as a result of receiving customers’ purchase orders (by post twice per day), orders passed in by the travelling sales team and sales calls received or made throughout the day. As and when they are received they are recorded on the sales team’s master sales spreadsheet (MSSP), which is used to print out the multi-part sales order.</p>
+<h4 id="Dispatching-of-goods"><a href="#Dispatching-of-goods" class="headerlink" title="Dispatching of goods"></a>Dispatching of goods</h4><p>The two-part dispatch and delivery note forms that are received from the Sales Team drive the dispatch process. A Goods Out member of staff collects stock from the shelves for a customers parcel and ticks off the items on the dispatch note as s/he goes.</p>
+<p>When the parcel is complete, the delivery note is attached. Completed parcels are put in the goods out area for collection by the courier, who calls to collect four times a day.</p>
+<p>The dispatch note is used to update the stock master file with the new stock levels; the number filled on each order line is subtracted from the present stock level to give the new. The dispatch note is then put on a stick pin. Once or twice a day they are handed over to stock control.</p>
+<h4 id="Stock-controls"><a href="#Stock-controls" class="headerlink" title="Stock controls"></a>Stock controls</h4><p>This area is responsible for maintaining stock at their pre-determined levels. It must take into account targets for marketing campaigns, including any new and discontinued products (notified by the marketing department).</p>
+<p>The stock manager is the one who primarily does this, although some cover is provided by other members of the stock team (i.e. Goods In and Out staff).</p>
+<p>The stock manager examines stock levels on the stock master file for those that are below or nearing their minimum stock holding level. For those that are, she raises a purchase order, perhaps phoning the preferred supplier first on important orders, to confirm the order can be met. If not, he will raise the order with one of the alternatives.</p>
+<p>She updates the stock master file record with the purchase order number to show that it is on order. If a supplier subsequently puts an ordered product on back order, then the expected delivery date is filled in.</p>
+<p>During the day the stock manager uses this information of, Goods In pass over delivery notes from suppliers and returns notes from customers-to update stock holding levels on the stock master file. For each filled order line, the purchase order number against the product on the master file is cleared.</p>
+<p>The stock manager is given every dispatch note once the order has been filled. If any stock level anomalies arise, these can be checked. Otherwise, they are filed in the customer master file. The only exception to this is if an order line couldn’t be filled. These dispatch notes are passed back to sales operations so the customer can be notified.</p>
+<p>At the start of the day, old returns notes are passed back to sales operations, together with a report showing items dangerously low on stock.</p>
+<h4 id="Goods-receipts"><a href="#Goods-receipts" class="headerlink" title="Goods receipts"></a>Goods receipts</h4><p>Returns from customers and purchases from suppliers are received first thing in the morning and then, intermittently, throughout the day.</p>
+<p>Goods In checks the items into stock and updates the stock levels on the stock master file. The returns and the delivery notes are passed to the stock control manager two or three times a day. If returned items are not fit for stock this is marked on the returns note.</p>
+<h4 id="Marketing-and-advertising-campaign"><a href="#Marketing-and-advertising-campaign" class="headerlink" title="Marketing and advertising campaign"></a>Marketing and advertising campaign</h4><p>The marketing department carry out marketing campaigns on monthly, seasonal or ad-hoc basis. Campaigns are to:</p>
+<ol>
+<li>Introduce and push new product ranges</li>
+<li>Shift product about to be withdrawn</li>
+<li>Target specific customers with offers and discounts</li>
+<li>Move poorly performing product</li>
+</ol>
+<p>They use the sales reports provided by sales operations to target the customers for 2 and 3, above. 1 and 4 tend to go to the whole customer base.</p>
+<p>Marketing keep a mailing list database in Excel of all customers and manually select those that are to be included in a mail campaign (they use MS Word for this).</p>
+<p>Mails by marketing presently are all paper-based as some or all of brochures, vouchers and product catalogues accompany the mails.</p>
+<p>From time to time they trawl through the entire customer master file to bring their MSSP up to date.</p>
+<p>When a campaign is planned and during its execution marketing keep the stock manager updated with targets and expected sales volumes (so that demand can be met from stock).</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Activity-Diagram/" rel="tag"># Activity Diagram</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSCI3130-Refactoring-and-Patterns.html" rel="next" title="Java辅导：CSCI3130 Refactoring and Patterns">
+                <i class="fa fa-chevron-left"></i> Java辅导：CSCI3130 Refactoring and Patterns
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS177-Lab-Summer2018-Prep1.html" rel="prev" title="Python辅导：CS177 Lab Prep1 Summer2018">
+                Python辅导：CS177 Lab Prep1 Summer2018 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Company"><span class="nav-number">1.1.</span> <span class="nav-text">The Company</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ceylon-Textile-Suppliers-new-IT-based-strategy"><span class="nav-number">1.2.</span> <span class="nav-text">Ceylon Textile Suppliers: new IT-based strategy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swinburne-consultants"><span class="nav-number">1.3.</span> <span class="nav-text">Swinburne consultants</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-requirement"><span class="nav-number">1.4.</span> <span class="nav-text">Project requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">1.5.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stakeholders"><span class="nav-number">1.6.</span> <span class="nav-text">Stakeholders</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-Chart"><span class="nav-number">1.7.</span> <span class="nav-text">Organization Chart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scopre-of-the-project"><span class="nav-number">1.8.</span> <span class="nav-text">Scopre of the project</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#In-scope"><span class="nav-number">1.8.1.</span> <span class="nav-text">In scope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Out-of-scope"><span class="nav-number">1.8.2.</span> <span class="nav-text">Out of scope</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-descriptions"><span class="nav-number">1.9.</span> <span class="nav-text">Process descriptions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sales-orders"><span class="nav-number">1.9.1.</span> <span class="nav-text">Sales orders</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dispatching-of-goods"><span class="nav-number">1.9.2.</span> <span class="nav-text">Dispatching of goods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stock-controls"><span class="nav-number">1.9.3.</span> <span class="nav-text">Stock controls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Goods-receipts"><span class="nav-number">1.9.4.</span> <span class="nav-text">Goods receipts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Marketing-and-advertising-campaign"><span class="nav-number">1.9.5.</span> <span class="nav-text">Marketing and advertising campaign</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

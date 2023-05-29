@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithm,Game,Artificial Intelligence,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="给游戏Pente写AI，编程语言C++/Java/Python任选，使用至少Alpha-beta算法。">
+<meta name="keywords" content="Algorithm,Game,Artificial Intelligence">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSCI561-Pente">
+<meta property="og:url" content="https://tk1307993.coding.me/CSCI561-Pente.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="给游戏Pente写AI，编程语言C++/Java/Python任选，使用至少Alpha-beta算法。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:30:02.176Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSCI561-Pente">
+<meta name="twitter:description" content="给游戏Pente写AI，编程语言C++/Java/Python任选，使用至少Alpha-beta算法。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSCI561-Pente.html">
+
+
+
+
+
+  <title>CSCI561-Pente | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSCI561-Pente.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSCI561-Pente</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-04-21T09:46:00+08:00">
+                2023-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  给游戏Pente写AI，编程语言C++/Java/Python任选，使用至少Alpha-beta算法。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Guidelines"><a href="#Guidelines" class="headerlink" title="Guidelines"></a>Guidelines</h3><p>This is a programming request. You will be provided sample inputs and outputs (see below). Please understand that the goal of the samples is only to check that you can correctly parse the problem definitions and generate a correctly formatted output that contains a valid, but not necessarily good (or the only possible) move. In most situations, several moves will be possible, so your move may differ from our example and still be perfectly valid. You should not assume that if your program works on the samples, it is a correctly implemented game-playing agent. It is your task to make sure that your program will work correctly on any valid input. You are encouraged to try your own test cases or have your program play against itself to check how your program would behave in some complex situations. Since each request submission is checked by a set of programs, your output should match the specified format exactly. Failure to do so will most certainly cost some points. The output format is simple and examples are provided. You should upload and test your code on vocareum.com, and you will submit it there. You may use any of the programming languages and versions thereof provided by vocareum.com.</p>
+<h3 id="Grading"><a href="#Grading" class="headerlink" title="Grading"></a>Grading</h3><p>Your code will be tested as follows: Your program should not require any command-line argument. It should read a text file called “input.txt” in the current directory that contains the current state of the game. It should write a file “output.txt” with your chosen move to the same current directory. Format for input.txt and output.txt is specified below. End-of-line character is LF (since vocareum is a Unix system and follows the Unix convention).</p>
+<p>Note that if your code does not compile, or somehow fails to load and parse input.txt, or writes an incorrectly formatted output.txt, or no output.txt at all, or OuTpUt.TxT, you will get zero points. Anything you write to stdout or stderr will be ignored and is ok to leave in the code you submit (but it will likely slow you down). Please test your program with the provided sample files to avoid any problem.</p>
+<h3 id="Project-description"><a href="#Project-description" class="headerlink" title="Project description"></a>Project description</h3><p>In this project, we will implement agent that plays the game of Pente, the two-player version of the abstract strategy board game. It is in the m,n,k-game family from which tic-tac-toe (3,3,3) and Connect Four also come from, where the players are trying to connect k pieces on the board before the other player does. Pente stands out from these games because it includes a piece capture mechanic, where the player can sandwich a pair of their opponent’s pieces and capture them. It is played on a 19x19 board, where pieces are placed on the intersection of the lines (like the game Go). White always opens the game (like in Chess). The players take turns putting pieces on the board until:<br>1) A player connects 5 of their pieces in a horizontal, vertical or a diagonal line, OR<br>2) A player makes 5 total captures (equals to 10 pieces of their opponent’s since pieces can only be captured in pairs).</p>
+<p>The custodial capture mechanic, where a player flanks the opponent’s pieces with their own to capture them, only applies to pairs of the opponent’s pieces. Therefore, if the current board formation is XOO_ and player X plays their piece as XOOX, the O pieces are captured and the board becomes X_ <em>X. Note again that this only works for pairs of pieces, therefore X cannot capture their opponent’s pieces from a board like XOOO</em> or XO_.</p>
+<p>Captures only happen when a capturing piece is placed. Therefore, if the board is XO_X and O places a piece in the free intersection, the board formation becomes XOOX and no capture happens by X.</p>
+<p>More details on the game can be found at <a href="https://en.wikipedia.org/wiki/Pente" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pente</a> and we will also go over the gameplay for you below (be careful, Wikipedia images show a 13x13 board). If you would like to try the game of Pente to understand the general gameplay, you can utilize the “Play the AI” option without having to log in at <a href="https://pente.org/join.jsp" target="_blank" rel="noopener">https://pente.org/join.jsp</a>. Note that these resources are just for you to familiarize yourself with the game, you should strictly follow the rules we outline below while coding your game-playing agent (there are several variants of the game).</p>
+<p>The original Pente game is known to favor the first player. This is called the First Player<br>Advantage (FPA) and there has been many suggestions to level the playing field for the second player. A discussion about this can be found in: <a href="https://en.wikipedia.org/wiki/Pente#First_Player_Advantage" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pente#First_Player_Advantage</a></p>
+<p>We will be employing certain rules that have been used in the past in Pente tournaments to make this game fairer for the second player. More details of these can be found below. These will also help us determine how winners are determined in student competitions.</p>
+<h4 id="Setup-of-the-game"><a href="#Setup-of-the-game" class="headerlink" title="Setup of the game"></a>Setup of the game</h4><p>The setup of the game is as follows:</p>
+<p>Each player plays as white or black.<br>The board consists of an 19x19 grid of squares.<br>Before the game starts, the board is empty.<br>White always opens the game.<br>First piece (White) must be placed in the middle of the board.<br>The second move of White (first player) cannot be more than 3 intersections away from their first piece (center). This is one of the rules that alleviates the first player advantage (FPA).<br>Pieces can be placed in any empty intersection (apart from the first player restrictions explained above).<br>Placed pieces cannot be removed from the board unless they are captured.<br>Here’s the visualization of an empty board and an example start, just after White has placed their second piece following the anti-FPA restriction.</p>
+<p>As can be seen in the right image above, White has placed their 2nd piece 3 intersections away which is the maximum possible amount for their second move. In following turns, pieces can be placed in any empty intersection, but your agent should be able to figure out which is best.</p>
+<h4 id="Play-sequence"><a href="#Play-sequence" class="headerlink" title="Play sequence"></a>Play sequence</h4><p>We first describe the typical play for humans. We will then describe some minor modifications for how we will play this game with artificial agents.</p>
+<p>Create the initial board setup according to the above description.<br>Players randomly determine who will play White/Black. White will play first.<br>During their turn, each player places a single piece of one’s own color on the board:<br>Once placed, the pieces cannot be removed from their intersection unless they are captured by the opponent.<br>A simple move:<br>Can be played on any empty intersection (including border intersections).<br>If playing White, player must place their 1st piece in the center of the board and their 2nd piece no more than 3 intersections away from the 1st piece.<br>A capture move:<br>Is played next to a pair of the opponent’s pieces such that they are flanked (sandwiched) by one of the player’s pieces. The opponent’s pieces are captured by the player when this happens. A sample capture can be seen below:<br>The capture can be made for pieces that are horizontally, vertically, or diagonally oriented.<br>When capture happens, the pair of pieces belonging to the opponent are removed from the board and added to the player’s capture pile.<br>One capture move can be used to capture one or more pairs of pieces from the opponent. Sample of this can be seen below:<br>Note that captures only happen when both of the opponent’s pieces are on the board when a capturing move is made. Therefore, if the board state is XO_X and O moves to make it XOOX, the pair of O pieces are not captured by X. An example for this is below.<br>If the current play results in a board where the active player has 5+ connected pieces on the board OR has 5 pairs (or 10 pieces) total captured from their opponent, the game ends. Otherwise, play proceeds to the other player.<br>If above conditions are not met, and there is no more room left on the board to play a piece, the game ends in a draw.</p>
+<h3 id="Playing-with-agents"><a href="#Playing-with-agents" class="headerlink" title="Playing with agents"></a>Playing with agents</h3><p>In this request, your agent will play against another agent, either implemented by the TAs, or by another student in the class.</p>
+<p>For grading, your agent will play against two different agents implemented by the TAs. 10 full games will be against a random agent (this should be easy for your agent to beat), and another 10 full games will be against a simple minimax agent with no alpha-beta pruning. There will be a limited total amount of play time available to your agent for the whole game (e.g., 100 seconds), so you should think about how to best use it throughout the game. This total amount of time will vary from game to game. Your agent must play correctly (no illegal moves, etc.) and beat the reference agents to receive 5 points per game. Your agent will be given the first move on 12 of the 20 games. In case of a draw, the agent with more remaining play time wins. Note that, while playing games, you should think about how to divide your remaining play time across possibly many moves throughout the game.</p>
+<p>In addition to grading, we will run a competition where your agent plays against agents created by the other students in the class. This will not affect your grade, but it would look very good on your Resume if you finish in the top 10, or are the grand winner!</p>
+<h3 id="Agent-vs-agent-games"><a href="#Agent-vs-agent-games" class="headerlink" title="Agent vs agent games"></a>Agent vs agent games</h3><p>Playing against another agent will be organized as follows (both when your agent plays against the reference minimax agent, or against another student’s agent):</p>
+<p>A master game playing engine will be implemented by the grading team. This engine will:</p>
+<p>Create the initial board setup according to the above description.<br>Assign a player color (Black or White) to your agent. The player who gets assigned White will have the first move.<br>Then, in sequence, until the game is over:<br>The master game playing engine will create an input.txt file which contains the current board configuration, which color your agent should play, and how much total play time your agent has left. This file will also contain number of pieces captured by each agent until that point in the game. More details on the exact format of input.txt are given below.<br>We will then run your agent. Your agent should read input.txt in the current directory, decide on a move, and create an output.txt file that describes the move (details below). Your time will be measured (total CPU time). If your agent does not return before your time is over, it will be killed and it loses the game.<br>Your remaining playing time will be updated by subtracting the time taken by your agent on this move. If time left reaches zero or negative, your agent loses the game.<br>The validity of your move will be checked. If the format of output.txt is incorrect or your move is invalid according to the rules of the game, your agent loses the game. (Reminder: Any empty spot on the board is a valid move, except for the rules for the first two moves of the white player.)<br>Your move will be executed by the master game playing engine. This will update the game board to a new configuration.<br>The master game playing engine will check for a game-over condition. If one occurs, the winning agent or a draw will be declared accordingly.<br>The master game playing engine will then present the updated board to the opposing agent and let that agent make one move (with the same rules as just described for your agent; the only difference is that the opponent plays the other color and has its own time counter).<br>Game continues until an end condition is reached.<br>Input and output file formats<br>Input: The file input.txt in the current directory of your program will be formatted as follows:<br>First line: A string BLACK or WHITE indicating which color you play. White will always start the game.<br>Second line: A strictly positive floating point number indicating the amount of play time remaining for your agent (in seconds).<br>Third line: Two non-negative 32-bit integers separated by a comma indicating the number of pieces captured by White and Black players consecutively. Caution, it will always be ordered as first captured by White, then by Black, irrespective of what color is given in the first line.<br>Next 19 lines: Description of the game board, with 19 lines of 19 symbols each:</p>
+<p>w for a cell occupied by a white piece<br>b for a cell occupied by a black piece<br>. (a dot) for an empty intersection<br>For example:</p>
+<p>BLACK<br>100.0<br>0,0<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>………w………<br>……….b……..<br>………w.bw……<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>In this input.txt example, your agent should play a move as the Black agent and has 100.0 seconds. The board configuration is 5 turns into the game. There’s a capture condition for White, so your agent could likely choose to block that by putting their piece in the red highlighted position on the board.</p>
+<p>Output: The format we will use for describing the square positions is borrowed from the notations from Pente.org, where every column is described by a letter and every row is described by a number. The position for a given square is given as the concatenation of these. Here’s a useful visualization on how we identify each intersection for the 19x19 Pente board:</p>
+<p>Using the above image as reference, in the input.txt sample given above, White has pieces on 10K, 10N and 12K, while Black has pieces on 11L and 10M. Using this type of notation for the cells on our gameboard, the file output.txt which your program creates in the current directory should be formatted as follows:</p>
+<p>1 line: PIECE_POS which describes your move with an integer (1-19) and an uppercase letter (A-T) concatenated.</p>
+<p>For example, for the red highlighted move in the input sample, output.txt may contain:<br>9N</p>
+<p>The resulting board would look like this, given the above input.txt (the master game playing engine will compute this and it is not part of output.txt):</p>
+<p>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>………w………<br>……….b……..<br>………w.bw……<br>…………b……<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>……………….<br>Notes and hints<br>Please name your program “request.xxx” where ‘xxx’ is the extension for the programming language you choose (“py” for python, “cpp” for C++11, and “java” for Java).<br>The board you will be given as input will always be valid and will have w and b letters, as well as . (standing for empty cells).<br>Likely (but not guaranteed), total play time will be 5 minutes (300.0 seconds) when playing against another agent.<br>Play time used on each move is the total combined CPU time as measured by the Unix time command. This command measures pure computation time used by your agent, and discards time taken by the operating system, disk I/O, program loading, etc. Beware that it cumulates time spent in any threads spawned by your agent (so if you run 4 threads and use 400% CPU for 10 seconds, this will count as using 40 seconds of allocated time).<br>If your agent runs for more than its given play time (in input.txt), it will be killed and will lose the game.<br>You need to think and strategize how to best use your allocated time. In particular, you need to decide on how deep to carry your search, on each move. In some cases, your agent might be given only a very short amount of time (e.g., 5.2 seconds, or even 0.01 seconds), for example towards the end of a game. Your agent should be prepared for that and return a quick decision to avoid losing by running over time. The amount of play time that will be given in input.txt will always be ]0, but it could be very small if you are close to running out of time.<br>To help you with figuring out the speed of the computer that your agent runs on, you are allowed to also provide a second program called calibrate.xxx (same extension conventions as for request.xxx). This is optional. If one is present, we will run your calibrate program once (and only once) before we run your agent for grading or against another agent. You can use calibrate to, e.g., measure how long it takes to expand some fixed number of search nodes, or to benchmark the CPU speed in any other way you like.<br>You can then save this into a single file called calibration.txt in the current directory. When your agent runs during grading or during a game, it could then read calibration.txt in addition to reading input.txt, and use the data from calibration.txt to strategize about search depth or other factors. Please aim for no more than 5 minutes to run your calibrate program. A few seconds (e.g., expand 10,000 nodes) is usually enough to get a good estimate of the CPU speed.<br>You need to think hard about how to design your eval function (which gives a value to a board when it is not game over yet).<br>You are allowed to maintain persistent data across moves during a game, by writing such data to a single file called playdata.txt in the current directory. Before a new game starts, the master game playing engine will delete any playdata.txt file. So, on your first move, this file will not exist, and you should be prepared for that. Then, you can write some data to that file at the end of a move and read that file back at the beginning of the next move.<br>As mentioned, there is some first player advantage in this game for two agents with perfect play (even with our rules for the first two White moves). Therefore, when playing against a reference agent, we will give your agent the first move for 6 of the 10 games. In the competition, we will play two agents against each other for an even number of games giving each the first player for half of the games, and advance both agents to the next round of the competition if they both win or draw on half of the games. If an agent loses more than half of the games, it will be eliminated and only the other agent will move to the next round of the competition. We may end up with several equivalent winners of the competition.<br>The random agent created by the TAs will likely not be uniformly random over the whole board, but may choose randomly between several candidate locations, for example all locations adjacent to pieces already on the board. The minimax TA agent will not use alpha-beta and will likely be capped at a low lookahead depth; but it will do adaptive depth choice on every move to avoid running out of time (e.g., use depth 3 when ]50s remains, depth 1 when [ 3s, otherwise depth 2).</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSC108H-Bobs-Compatibility-Calculator.html" rel="next" title="CSC108H-Bobs-Compatibility-Calculator">
+                <i class="fa fa-chevron-left"></i> CSC108H-Bobs-Compatibility-Calculator
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS714-Parallel-Design-Patterns.html" rel="prev" title="CS714-Parallel-Design-Patterns">
+                CS714-Parallel-Design-Patterns <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Guidelines"><span class="nav-number">1.</span> <span class="nav-text">Guidelines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grading"><span class="nav-number">2.</span> <span class="nav-text">Grading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-description"><span class="nav-number">3.</span> <span class="nav-text">Project description</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Setup-of-the-game"><span class="nav-number">3.1.</span> <span class="nav-text">Setup of the game</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Play-sequence"><span class="nav-number">3.2.</span> <span class="nav-text">Play sequence</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Playing-with-agents"><span class="nav-number">4.</span> <span class="nav-text">Playing with agents</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Agent-vs-agent-games"><span class="nav-number">5.</span> <span class="nav-text">Agent vs agent games</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

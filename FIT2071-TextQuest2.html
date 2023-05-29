@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,Game,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Text Quest游戏的第二次需求，按照要求完成对应的类即可。">
+<meta name="keywords" content="Fundamentals,Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++辅导：FIT2071-TextQuest2">
+<meta property="og:url" content="https://tk1307993.coding.me/FIT2071-TextQuest2.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="Text Quest游戏的第二次需求，按照要求完成对应的类即可。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:53.433Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++辅导：FIT2071-TextQuest2">
+<meta name="twitter:description" content="Text Quest游戏的第二次需求，按照要求完成对应的类即可。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/FIT2071-TextQuest2.html">
+
+
+
+
+
+  <title>C++辅导：FIT2071-TextQuest2 | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/FIT2071-TextQuest2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C++辅导：FIT2071-TextQuest2</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T20:49:37+08:00">
+                2019-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Text Quest游戏的第二次需求，按照要求完成对应的类即可。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Task-Details"><a href="#Task-Details" class="headerlink" title="Task Details"></a>Task Details</h3><p>The Weeks 4 to 7 laboratory exercises contain a designated “Main Portfolio Exercise”. These are a series of exercises that add to each other to form a main portfolio program: ClassyTextQuest. Note that these build upon the Weeks 2-3 portfolio exercises for request 1. If you did not satisfactorily complete request 1, you may optionally use the sample code for request 1 available on Moodle. You are to submit a final, completed version of the game, along with a document detailing your program design (diagrammatically explaining the class structure and textually explaining the operation) and detailing any changes to the specification, including all extra functionality and advanced concepts.</p>
+<p>Successful completion of the exercises as described in the laboratory exercises may obtain you up to a maximum of 80% of the total request marks. In order to obtain a higher mark you should seek to include some advanced functionality (as described in the Bonus sections of the portfolio description). The additional functionality should demonstrate advanced or more complex application of principles covered to date. It need not be large amounts of work but should demonstrate a willingness to explore new and advanced concepts. You must detail what you have done in the accompanying document.</p>
+<p>Explicit assessment criteria are provided over the page, however please note you will be assessed on the following broad criteria:</p>
+<ul>
+<li>Meeting functional requirements as described in the exercise description</li>
+<li>Demonstrating a solid understanding of the C++ concepts taught up to and including week 7, including good practice</li>
+<li>Following the unit Programming Style Guide</li>
+<li>Creating solutions that are as efficient and extensible as possible</li>
+</ul>
+<p>NOTE! Your submitted program MUST compile and run. Any submission that do not compile will be awarded zero marks. This means you<br>should continually compile and test your code as you do it, ensuring it compiles at every step of the way.</p>
+<p>If you have any questions or concerns, please contact Tim as soon as possible.</p>
+<h3 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h3><h4 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h4><p>This week we are going to reconsider the design for request 1.</p>
+<p>Start thinking about how you can use object oriented design to achieve a more structured program.</p>
+<p>What could be the different classes in the TextQuest game? What data members and member functions (methods) do these classes need to provide?</p>
+<p>Create a diagram (any drawing software or just pen and paper is fine). You will eventually need to submit your design together with your working code as part of your documentation.</p>
+<p>Remember we have a character, vocations, events and maybe more depending on what extra functionality you have considered: e.g. enemies, items, etc.</p>
+<h4 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h4><p>Now we are going to consider how some of the new C++ features we have learned can help us better structure our code and add extra features.</p>
+<p>Functions:</p>
+<p>How can you reorganise your code from request 1 into clearly defined functions that keep the different “concerns” of the program well separated? For now, create some functions in the global scope of your main C++ file from request 1. In coming weeks we will learn how to separate these across different files and achieve better “encapsulation”.</p>
+<p>Arrays:<br>You may have found the gameplay from request 1 became tedious after a while since the events always occurred in precisely the same order. Let’s start to make it more interesting. Change your program to load the events into two arrays (an array of descriptions and another for the health modifiers).</p>
+<p>Last week we had a lab exercise to generate random numbers from 0 to 100. Now you can do the same thing, to generate a random number between 0 and the number of events, in order to randomly select which event comes next.</p>
+<h4 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h4><p>This week we will continue our rewrite of TextQuest with classes. Now that you can write your own custom classes, it is time for you to write three of the classes you will need for your game. These should be based upon your Class Diagrams from last week.</p>
+<h4 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h4><p>This week we are going to create two new classes: Player and Enemy that both inherit from Character.</p>
+<p>Character will have a virtual function called attack. The attack function’s parameter is a list (such as a vector) of potential target characters.</p>
+<p>The Player class’ implementation of the attack function should prompt the user to choose one of the targets. It will then apply damage (a health deduction) to the target based on the relative magic and strength of that target (up to you precisely what formula to use – choose something that seems fair and fun).</p>
+<p>The Enemy’s attack function will also choose a target but do so automatically (i.e. without prompting the user. There are different strategies enemies might use: e.g. always choose the player, do it randomly or based on any logic you like: it could even damage multiple targets!).</p>
+<p>Now, in the main game loop, in addition to the events that are currently being applied, you should add a random chance of a fight occurring (make fight a separate function).</p>
+<p>When a fight occurs, you should populate a vector of Character containing the Player and also one or more randomly generated Enemy. Now a sub-loop should start iterating over the vector giving each Character a chance to attack. That is, you will call the Character’s implementation of the attack member function, passing in the contents of the Character vector. After the attack is complete, remove any dead characters (whose health is &lt;= 0) from the vector. If the Player is dead, the fight and the game ends. If the Player is the only one left, then they win the fight and you can return to the main game loop.</p>
+<p>Bonus: how you generate the enemies is up to you. A simple way would be just to have random stats and a random name (from a list of possibilities). Alternately, you could design sub-classes of Enemy, each with their own interesting variation on the attack function - and randomly choose which ones to construct in each fight.</p>
+<h4 id="Week-7"><a href="#Week-7" class="headerlink" title="Week 7"></a>Week 7</h4><p>This week we will finalise our Classy TextQuest RPG. To this point you have the basic skeleton of the game as well as classes for the major components (e.g. Character, Player, Enemy, Event, Vocation, etc). Now that you know all about pointers and class inheritance you can finish off the classes and the final game play. Also, we talked this week about overloading the operator. Have a think about where you might use this in your code. You also know how to plug memory leaks now, so make sure any objects you create with new are also deleted at the appropriate time.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+            <a href="/tags/Game/" rel="tag"># Game</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP20005-Path-Planning.html" rel="next" title="C辅导：COMP20005-Path-Planning">
+                <i class="fa fa-chevron-left"></i> C辅导：COMP20005-Path-Planning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS1926-Simple-Application.html" rel="prev" title="C++辅导：CS1926-Simple-Application">
+                C++辅导：CS1926-Simple-Application <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-Details"><span class="nav-number">1.</span> <span class="nav-text">Task Details</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-4"><span class="nav-number">2.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Design"><span class="nav-number">2.1.</span> <span class="nav-text">Design</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding"><span class="nav-number">2.2.</span> <span class="nav-text">Coding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Week-5"><span class="nav-number">2.3.</span> <span class="nav-text">Week 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Week-6"><span class="nav-number">2.4.</span> <span class="nav-text">Week 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Week-7"><span class="nav-number">2.5.</span> <span class="nav-text">Week 7</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

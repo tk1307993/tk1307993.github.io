@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithm,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="分析在不同数据量情况下，各种排序算法的性能优劣，并且根据题目要求算出所需要的数据。">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS316-Large-Data-Sorting">
+<meta property="og:url" content="https://tk1307993.coding.me/CS316-Large-Data-Sorting.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="分析在不同数据量情况下，各种排序算法的性能优劣，并且根据题目要求算出所需要的数据。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:09.081Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS316-Large-Data-Sorting">
+<meta name="twitter:description" content="分析在不同数据量情况下，各种排序算法的性能优劣，并且根据题目要求算出所需要的数据。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS316-Large-Data-Sorting.html">
+
+
+
+
+
+  <title>CS316-Large-Data-Sorting | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS316-Large-Data-Sorting.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS316-Large-Data-Sorting</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-13T21:41:26+08:00">
+                2019-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  分析在不同数据量情况下，各种排序算法的性能优劣，并且根据题目要求算出所需要的数据。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this request, you will be performing some important data-processing operations, specifically sorting a large database file. Sorting data is a very important operation in computing for many reasons. One of those reasons is that it makes the data more accessible to humans once it is printed (imagine trying to use a telephone directory in which the names do not appear in any particular order). Another reason is that it makes the data more quickly searchable by the computer.</p>
+<p>There are many large data files to use for this request, but you will only need the first one until you get on to the advanced parts. They are all available on blackboard, and are named people1.txt, people2.txt, people3.txt, people5.txt, people10.txt, people20.txt, people30.txt, people50.txt, and people100.txt. You must represent a person as an object of class PersonType, throughout the request.</p>
+<p>Look at the file “people1.txt” with a text editor. You will see that it contains data about a number of people. Each line contains exactly five items: a person’s social security number, their first name, their last name, their date of birth, and state of residence. The five items are separated by spaces, but no item will ever contain a space. Here is a sample from the middle of the file:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">320990814 </span>Arthur Farmer <span class="number">19560424</span> NV</span><br><span class="line"><span class="symbol">322230050 </span>Eros Crandon <span class="number">19250819</span> TX</span><br><span class="line"><span class="symbol">324640114 </span>Lusitania Lissom <span class="number">19440104</span> IN</span><br><span class="line"><span class="symbol">325400784 </span>Rose Terwilliger <span class="number">19260122</span> WI</span><br><span class="line"><span class="symbol">327640597 </span>Jeffrey Stone <span class="number">19760801</span> DE</span><br><span class="line"><span class="symbol">327950765 </span>Mary Emmett <span class="number">19290224</span> CO</span><br><span class="line"><span class="symbol">328610085 </span>Heironymous Inchworm <span class="number">19661102</span> CA</span><br><span class="line"><span class="symbol">329310410 </span>William McCormick <span class="number">19550819</span> WV</span><br><span class="line"><span class="symbol">329320248 </span>Nicola Birchmore <span class="number">19230107</span> IA</span><br><span class="line"><span class="symbol">330270343 </span>Pauline McTaggart <span class="number">19290402</span> MN</span><br><span class="line"><span class="symbol">331130693 </span>Jim Trombone <span class="number">19411222</span> NE</span><br><span class="line"><span class="symbol">331960453 </span>Abraham Larch <span class="number">19750901</span> WY</span><br><span class="line"><span class="symbol">332040687 </span>Trixie Underwood <span class="number">19200516</span> UT</span><br></pre></td></tr></table></figure></p>
+<p>As you may have noticed, the date of birth is provided as a single integer, in the format yyyymmdd; Arthur Farmer was born on the 24th of April 1956. The 1 in the filename people1.txt indicates that it contains exactly one thousand lines.</p>
+<h3 id="Read-the-Data"><a href="#Read-the-Data" class="headerlink" title="Read the Data"></a>Read the Data</h3><p>Write a program that creates a list of type PersonType to read all the data from the file into that list. Of course, it will have to be a list of type Person that you will also need to define. Make your program close the file, then print out the first 10 items of data from the list, so that you can make sure everything was read correctly. You can use intermediate lists of lines while you are constructing the persons list if you would like.</p>
+<h3 id="Basic-Search"><a href="#Basic-Search" class="headerlink" title="Basic Search"></a>Basic Search</h3><p>Make your program ask the user to enter a name. It should then search through the data in the list (don’t read the file again), finding any entry with a matching name. Correct matches with either first or last name should be accepted. For every matching entry that is found, print out all four data items: the social security number, first and last names, and date of birth of each matching person.</p>
+<p>Remember that if you use the == operator to compare strings, the test is case-sensitive. The user (i.e. you) will have to type the name exactly correctly, with capital letters in the right places.</p>
+<blockquote>
+<p>Important: Good clean design will make this lab much easier. Write a separate function that searches the list, do not put all the work in main.</p>
+</blockquote>
+<h3 id="Find-the-Oldest"><a href="#Find-the-Oldest" class="headerlink" title="Find the Oldest"></a>Find the Oldest</h3><p>Modify your program so that after closing the file, instead of printing the first ten items of data, it searches through all of them to find the oldest person represented. It should print the social security number, first and last names, date of birth, and state of the oldest person found.</p>
+<blockquote>
+<p>Important: As for part two, good clean design will make this lab much easier. Write a separate function that searches the list to find the oldest person, do not put all the work in main.</p>
+</blockquote>
+<h3 id="Promote-the-Oldest"><a href="#Promote-the-Oldest" class="headerlink" title="Promote the Oldest"></a>Promote the Oldest</h3><p>For some unfathomable reason, the management wants the oldest person to occupy the first position in the list. Modify your program so that after finding the oldest person, it swaps his or her data with the data already occupying the first position in the list. Remember that the first position in a list is numbered zero, not one.</p>
+<h3 id="Now-Promote-the-Second-Oldest"><a href="#Now-Promote-the-Second-Oldest" class="headerlink" title="Now Promote the Second Oldest."></a>Now Promote the Second Oldest.</h3><p>The management has now decided not only that the oldest person must occupy the first position in the list, but also that the second-oldest person must occupy the second position in the list. So, after searching for the oldest and moving their data to the front of the list, now search the remainder of the list (all except the first element), and move the oldest person you find (which must be the second oldest of all) into the second position of the list. Make sure you swap data, so that whoever was originally in the second position is not lost.</p>
+<h3 id="More-of-the-Same"><a href="#More-of-the-Same" class="headerlink" title="More of the Same."></a>More of the Same.</h3><p>The management are going to keep on adding requirements like this, next putting the third-oldest in the third position, then the fourth, then the fifth. There is no knowing when they will grow out of this petty obsession, so make things easier for yourself. Modify your search function so that it can be told how much of the list to search. That is, give it two int parameters (let’s call them a and b); its job is now to search only the portion of the list between position a and position b, to find the oldest person therein. This makes it very easy to search the remainder of the list to find the second and third oldest.</p>
+<h3 id="The-Ultimate-Demand"><a href="#The-Ultimate-Demand" class="headerlink" title="The Ultimate Demand."></a>The Ultimate Demand.</h3><p>Now the management make their final demand. You are to repeat the process of moving the nth-oldest person into the nth position 1000 times. (please remember, 1000 is the number of data records in the whole file).</p>
+<p>This will result in the list being completely sorted. Do it, and check that it worked. Make your program print the contents of the list after it has finished. Look at the output to make sure that everyone is printed in order of their age.</p>
+<p>Try to implement your own selection sort function – instead of using the Python sort.</p>
+<p>(Research item/Optional – extra credit) Try again with bubble sort, insertion sort, quick sort, and compare the results in terms of the execution time of the sorting of records.</p>
+<h3 id="Sorting-the-File"><a href="#Sorting-the-File" class="headerlink" title="Sorting the File."></a>Sorting the File.</h3><p>Once you have sorted the contents of the list, it might be a good idea to save the sorted data in a file. Make your program create a new file, and write all the contents of the list into that file in a sensible format. Use a text editor to look at the file and verify that it has the same format as the original file, and all the data is properly sorted.</p>
+<h3 id="How-Fast-Is-It"><a href="#How-Fast-Is-It" class="headerlink" title="How Fast Is It?"></a>How Fast Is It?</h3><p>It is important to know how long computer operations are going to take when they have to work on a large amount of data.</p>
+<p>Use a function (twice) to time how long it takes the computer to sort the list of 1000 data items. Do not include the time it takes to read the file or the time it takes to write the new file, just the pure sorting time. Note the time that you observe.</p>
+<p>Now you know how long it takes to sort a database of 1000 items. How long do you think it would take to sort a database of 2000 names? 3000 names? 10,000 names?</p>
+<p>Think about those questions, and work out what you believe the answer is. Then find out what the real answer is. The other files have exactly the same format as people1.txt, but are longer. PeopleN.txt contains N thousand data records. If your program was nicely written, it will be a few seconds’ work to change the list size and make it read a different file.</p>
+<p>See how long it takes to sort these larger files, and compare the results to your predictions. If your predictions weren’t substantially correct, make sure you understand why. You have just demonstrated a very important phenomenon of computing.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS112-Grade-Distribution.html" rel="next" title="CS112-Grade-Distribution">
+                <i class="fa fa-chevron-left"></i> CS112-Grade-Distribution
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/COMP9021-Solve-Logical-Puzzles.html" rel="prev" title="COMP9021-Solve-Logical-Puzzles">
+                COMP9021-Solve-Logical-Puzzles <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-the-Data"><span class="nav-number">2.</span> <span class="nav-text">Read the Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Search"><span class="nav-number">3.</span> <span class="nav-text">Basic Search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Find-the-Oldest"><span class="nav-number">4.</span> <span class="nav-text">Find the Oldest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promote-the-Oldest"><span class="nav-number">5.</span> <span class="nav-text">Promote the Oldest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Now-Promote-the-Second-Oldest"><span class="nav-number">6.</span> <span class="nav-text">Now Promote the Second Oldest.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#More-of-the-Same"><span class="nav-number">7.</span> <span class="nav-text">More of the Same.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Ultimate-Demand"><span class="nav-number">8.</span> <span class="nav-text">The Ultimate Demand.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-the-File"><span class="nav-number">9.</span> <span class="nav-text">Sorting the File.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-Fast-Is-It"><span class="nav-number">10.</span> <span class="nav-text">How Fast Is It?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

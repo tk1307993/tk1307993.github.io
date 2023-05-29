@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导资产录入软件，能够对学校Classroom的资产进行管理。">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSE214-Classroom">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE214-Classroom.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导资产录入软件，能够对学校Classroom的资产进行管理。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:30:02.060Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSE214-Classroom">
+<meta name="twitter:description" content="辅导资产录入软件，能够对学校Classroom的资产进行管理。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE214-Classroom.html">
+
+
+
+
+
+  <title>CSE214-Classroom | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE214-Classroom.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSE214-Classroom</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-27T15:12:26+08:00">
+                2020-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导资产录入软件，能够对学校Classroom的资产进行管理。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>After many years of dealing with incomplete and inaccurate information about the classrooms on campus, the faculty of Stony Brook have decided to band together to create a system that will allow them to quickly reference the facilities present in each room, and search for rooms that fulfil certain criteria. In order to have fast access to their large database of rooms and buildings, they have decided to hire you to build a room information system that is based on hash maps. You will be modelling the hash maps on the physical structure of campus, with one hash map relating each building’s name to its content hashmap. The content hashmap will relate the room number to a classroom object containing all the relevant features of the room. You must be able to add and remove buildings from the campus, as well as add and remove classrooms from each building, and edit classrooms to reflect changes.</p>
+<p>Additionally, you must implement a search function that will either search a building or the whole campus for classes fulfilling certain criteria. For this request, you may use sequential search (however, if the search involves only one building you definitely shouldn’t search the whole campus).</p>
+<p>Finally, as the monkeys in the basement sometimes take a break from using the treadmill power turbine generators, the power occasionally goes out and system must be shut down and then restarted without losing data. You must use Java Serialization to achieve this.</p>
+<p>NOTE: All exceptions explicitly thrown in Required Classes except for IllegalArgumentException are custom exceptions that need to be made by you.</p>
+<h3 id="Required-Classes"><a href="#Required-Classes" class="headerlink" title="Required Classes"></a>Required Classes</h3><h4 id="Classroom"><a href="#Classroom" class="headerlink" title="Classroom"></a>Classroom</h4><p>Write a fully documented class named Classroom that contains four private data fields: boolean hasWhiteboard, boolean hasChalkboard, int numSeats, and String[] AVEquipmentList. This class will be used to represent a classroom within Stony Brook.</p>
+<p>This class must implement the Serializable interface.</p>
+<p>private boolean hasWhiteboard<br>This field is true if the classroom has a whiteboard, false otherwise.<br>private boolean hasChalkboard<br>This field is true if the classroom has a chalkboard, false otherwise.<br>private int numSeats<br>This field holds the number of seats the classroom has.<br>private String[] AVEquipmentList<br>This field holds the names of the AV Equipment that are supported in the room.<br>OPTIONAL: You can use List as the data type, whichever is easier.<br>Getter and Setter methods for the above four member variables.</p>
+<h4 id="Building-or-Building-HashMap"><a href="#Building-or-Building-HashMap" class="headerlink" title="Building or Building HashMap"></a>Building or Building HashMap</h4><p>The database of Classrooms will be stored in a HashMap. Use the room number of the classrooms as the key for the HashMap. In this request, you must use the HashMap/HashTable implementation provided by the Java API. You may use inheritance if you wish.</p>
+<p>This class should also implement the Serializable. interface.</p>
+<p>public void addClassroom(int roomNumber, Classroom classroom)<br>This method adds a Classroom into the Building using the specified room number as the key.<br>Throws an IllegalArgumentException if the given roomNumber = null or if the room number is already in the Building.<br>public Classroom getClassroom(int roomNumber)<br>Retrieves the Classroom from the table having the indicated room number. If the requested room number does not exist in the Building, return null.<br>public void removeClassroom(int roomNumber)<br>This method removes a classroom from the Building.<br>Throws an IllegalArgumentException if the given roomNumber = null or if it doesn’t exist in the building.</p>
+<h4 id="Campus-or-Campus-HashMap"><a href="#Campus-or-Campus-HashMap" class="headerlink" title="Campus or Campus HashMap"></a>Campus or Campus HashMap</h4><p>Write a fully-documented class named Campus. The database of Buildings will be stored in a HashMap. Use the name of the Building objects as the key for hashing. In this request, like the Building class, you may provide your own implementation for the School class, or you may use the HashTable (or HashMap) implementation provided by the Java API.</p>
+<p>Just as the above classes, this class should implement the Serializable interface.</p>
+<p>public void addBuilding(String buildingName, Building building)<br>This method adds a Building into the Campus using the specified building name as the key.<br>Throws an IllegalArgumentException if the given buildingName = null or if the building name is already in the Campus.<br>public Building getBuilding(String buildingName)<br>Retrieves the Building from the table having the indicated building name. If the requested building name does not exist in the Campus, return null.<br>public void removeBuilding(String buildingName)<br>This method removes a Building from the Campus.<br>Throws an IllegalArgumentException if the given buildingName = null or if the building name is not in the Campus.</p>
+<h4 id="RoomLookup"><a href="#RoomLookup" class="headerlink" title="RoomLookup"></a>RoomLookup</h4><p>This is the driver class that shows the user the menu detailed in UI Required Functions. It must have a public static main(String[] args), but you can add extra methods to help you organize each part of the menu.</p>
+<h4 id="General-Recommendations"><a href="#General-Recommendations" class="headerlink" title="General Recommendations"></a>General Recommendations</h4><p>You might want to implement a toString() method for classes to make debugging and printing easier. You do not have to do this, but it will help you.<br>You can feel free to add any extra methods and variables as you see fit (public and private).</p>
+<h4 id="Serializable-Interface"><a href="#Serializable-Interface" class="headerlink" title="Serializable Interface"></a>Serializable Interface</h4><p>You will also work with the idea of persistence. This means that our program should save all data from session to session. When we terminate a program, normally the data will be lost. We will preserve this data by using Serializable Java API and binary object files. All your classes should simply implement the java.io.Serializable interface.</p>
+<p>Example: (note - class names here intentionally are different than the request description above)</p>
+<p>Example: A StorageTable class contains information for all Storage objects saved in the electronic database. You would want to preserve this data, so you can load this data the next time you run your program. You would do the following:</p>
+<p>Modify the StorageTable so that it implements the Serializable interface. Also, the Storage class should also make this implementation. No other changes are necessary.<br>In your application that contains the StorageTable, you can include code that will save that class’s data into a file so it can be read in again later. To do this, you need to create an ObjectOutputStream to send the data to, and then use the writeObject method to send the data to the stream, which is stored in the specified file.</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">StorageTable storage = <span class="keyword">new</span> <span class="type">StorageTable</span>(<span class="comment">/*Constructor Parameters*/</span>);</span><br><span class="line"><span class="comment">// missing code here adds Storage objects to the table.</span></span><br><span class="line"></span><br><span class="line">FileOutputStream file = <span class="keyword">new</span> <span class="type">FileOutputStream</span>(<span class="string">"storage.obj"</span>);</span><br><span class="line">ObjectOutputStream outStream = <span class="keyword">new</span> <span class="type">ObjectOutputStream</span>(file);</span><br><span class="line"><span class="comment">// the following line will save the object in the file</span></span><br><span class="line">outStream.writeObject(storage);</span><br><span class="line">outStream.close();</span><br></pre></td></tr></table></figure>
+<p>When the same application (or another application) runs again, you can initialize the member using the serialized data saved from step 2 so you don’t have to recreate the object from scratch. To do this, you need to create an ObjectInputStream to read the data from, and then use the readObject method to read the hash from the stream.<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FileInputStream file = new FileInputStream(<span class="string">"storage.obj"</span>)<span class="comment">;</span></span><br><span class="line">ObjectInputStream inStream = new ObjectInputStream(file)<span class="comment">;</span></span><br><span class="line">StorageTable storage<span class="comment">;</span></span><br><span class="line"><span class="attribute">storage</span> = (StorageTable) inStream.readObject()<span class="comment">;</span></span><br><span class="line">inStream.close()<span class="comment">;</span></span><br><span class="line">// missing code here can use StorageTable constructed previously</span><br></pre></td></tr></table></figure></p>
+<p>Note: If you change any data fields or structure of the serialized class, old saved objects will become incompatible.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy.html" rel="next" title="CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy">
+                <i class="fa fa-chevron-left"></i> CIT591-Philadelphia-Bike-Share-Data-and-Jeopardy
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS112-Yet-Another-Calculator.html" rel="prev" title="CS112-Yet-Another-Calculator">
+                CS112-Yet-Another-Calculator <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Required-Classes"><span class="nav-number">2.</span> <span class="nav-text">Required Classes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Classroom"><span class="nav-number">2.1.</span> <span class="nav-text">Classroom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Building-or-Building-HashMap"><span class="nav-number">2.2.</span> <span class="nav-text">Building or Building HashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Campus-or-Campus-HashMap"><span class="nav-number">2.3.</span> <span class="nav-text">Campus or Campus HashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RoomLookup"><span class="nav-number">2.4.</span> <span class="nav-text">RoomLookup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#General-Recommendations"><span class="nav-number">2.5.</span> <span class="nav-text">General Recommendations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Serializable-Interface"><span class="nav-number">2.6.</span> <span class="nav-text">Serializable Interface</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OS,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导操作系统需求，实现一个虚拟内存仿真器，包括LRU和FIFO.">
+<meta name="keywords" content="OS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COMP1521-Virtual-Memory-Simulator">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP1521-Virtual-Memory-Simulator.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导操作系统需求，实现一个虚拟内存仿真器，包括LRU和FIFO.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:19.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="COMP1521-Virtual-Memory-Simulator">
+<meta name="twitter:description" content="辅导操作系统需求，实现一个虚拟内存仿真器，包括LRU和FIFO.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP1521-Virtual-Memory-Simulator.html">
+
+
+
+
+
+  <title>COMP1521-Virtual-Memory-Simulator | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP1521-Virtual-Memory-Simulator.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">COMP1521-Virtual-Memory-Simulator</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-07-11T09:28:35+08:00">
+                2022-07-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导操作系统需求，实现一个虚拟内存仿真器，包括LRU和FIFO.
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h3><ul>
+<li>to give you more practice writing C</li>
+<li>to give you experience with a simulation</li>
+<li>to learn more about virtual memory systems</li>
+</ul>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>Virtual memory is a powerful technique that allows the main memory of a computer system to be shared amongst a large number of processes. It also allows indivudual processes to have a process address space that is potentially larger than main memory.</p>
+<p>The implementation of virtual memory requires the system to maintain, for each process, a mapping table (page table) that tells where each page is loaded in memory, or that it is not loaded. Whenever the process references an address in its address space, we use the page table to map this virtual address to a real location in the machine’s memory. If a referenced page is not currently loaded, then we need to place it in a memory frame. If there is a free frame, we can use that; if all frames are in use, then we need to make space, by replacing the contents of one of the existing frames.</p>
+<p>For more details on page replacement strategies, see the lecture notes. For this exercise, we focus on:</p>
+<ul>
+<li>LRU … replace the page that hasn’t been accessed for longest time</li>
+<li>FIFO … replace the page that was loaded earliest</li>
+</ul>
+<p>The following diagram shows a page table that maps the pages of a process with 8 pages into the 4 frames in main memory:</p>
+<p>The aim of this request is to build a simple simulation of a system like the above, where we can measure how the system behaves if we change the number of pages, number of frames, and the page replacement policy.</p>
+<p>We do not fully represent pages or frames in our system, nor do we “execute” programs. We provide data structures for the page table and a minimal representation of memory pages. This gives enough to read a sequence of page references and measure how the page table might behave in a real implementation.</p>
+<h3 id="Setting-Up"><a href="#Setting-Up" class="headerlink" title="Setting Up"></a>Setting Up</h3><p>Create a new directory for working on the request, change into that directory, and then run the command:</p>
+<p>$ unzip /home/cs1521/web/17s2/assigns/ass2/ass2.zip<br>This will add the following files into the directory:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Makefile        <span class="keyword">to</span> control compilation</span><br><span class="line">Stats.[ch]        implementation <span class="keyword">and</span><span class="built_in"> interface </span><span class="keyword">to</span> the summary statistics collection <span class="keyword">and</span> display</span><br><span class="line">Memory.[ch]        implementation <span class="keyword">and</span><span class="built_in"> interface </span><span class="keyword">to</span> the representation of physical memory frames</span><br><span class="line">PageTable.[ch]    implementation <span class="keyword">and</span><span class="built_in"> interface </span>of the<span class="built_in"> page </span>table (what you need <span class="keyword">to</span> modify) </span><br><span class="line">vmsim.c            the main program <span class="keyword">for</span> the virtual memory simulator</span><br><span class="line">mktrace.c        a program <span class="keyword">to</span> generate memory reference traces</span><br></pre></td></tr></table></figure></p>
+<p>The page table is represented by an array of PTE structures which is dynamically created at the start of the simulation. Each PTE contains the following information:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> status;    <span class="comment">// NOT_USED, IN_MEMORY, ON_DISK</span></span><br><span class="line"><span class="keyword">char</span> modified;  <span class="comment">// boolean: has the page changed since loaded?</span></span><br><span class="line"><span class="keyword">int</span> frame;      <span class="comment">// memory frame holding this page</span></span><br><span class="line"><span class="keyword">int</span> accessTime; <span class="comment">// clock tick for last time the page was accessed</span></span><br><span class="line"><span class="keyword">int</span> loadTime;   <span class="comment">// clock tick for last time the page was loaded</span></span><br><span class="line"><span class="keyword">int</span> nPeeks;     <span class="comment">// total number times this page referenced for reading</span></span><br><span class="line"><span class="keyword">int</span> nPokes;     <span class="comment">// total number times this page referenced for writing</span></span><br></pre></td></tr></table></figure>
+<p>You can find more details on the supplied code, and how to use it in the request 2 Video.</p>
+<h3 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h3><p>The aim of this exercise is to implement two page replacement strategies (LRU and FIFO) and collect statistics on the page table’s behaviour. Implementing the page replacement strategies requires you to complete the findVictim() function. Collecting he statiscs requires you to place calls to the statistics functions in the appropriate places. You can find out more details on what statistics need to be collected in the Stats.c file.</p>
+<p>A simple, and extremely inefficient, implementation of LRU replacement would work as follows:<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">oldest</span> = now</span><br><span class="line"><span class="attr">victim</span> = NONE</span><br><span class="line">for (<span class="attr">i</span> = <span class="number">0</span>; i &lt; <span class="comment">#Pages; i++) &#123;</span></span><br><span class="line">  <span class="attr">P</span> = PageTable[i]</span><br><span class="line">  <span class="keyword">if</span> (P's accessTime &lt; oldest)</span><br><span class="line">    <span class="attr">oldest</span> = P's accessTime</span><br><span class="line">    <span class="attr">victim</span> = P's page</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>A better strategy would be maintain a list of pages, ordered by access time from oldest (first in list) to most recent (last in list). The above code would then simply remove the first page from the list and use that as the page to be replaced. Of course, the list needs to be updated each time a page is accessed.</p>
+<p>The list should not be implemented as a separate data structure, but could be done by incorporating a “link” to the next page in the list in each PTE. You would also need to maintain a global variable to hold the page number of the first page in the list.</p>
+<p>Similarly, a simple and inefficient implementation of FIFO replacement would work as follows:<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">oldest</span> = now</span><br><span class="line"><span class="attr">victim</span> = NONE</span><br><span class="line">for (<span class="attr">i</span> = <span class="number">0</span>; i &lt; <span class="comment">#Pages; i++) &#123;</span></span><br><span class="line">  <span class="attr">P</span> = PageTable[i]</span><br><span class="line">  <span class="keyword">if</span> (P's loadTime &lt; oldest)</span><br><span class="line">    <span class="attr">oldest</span> = P's loadTime</span><br><span class="line">    <span class="attr">victim</span> = P's page</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>As above, a better strategy would be to maintain a list of pages, ordered by load time from oldest (first in list) to most recently loaded (last in list). The implementation would be similar to that for the LRU list.</p>
+<p>What you are required to do (and you only need to change the PageTable.c file for this request) is specified in comments in the PageTable.c file.</p>
+<h3 id="Sample-Outputs"><a href="#Sample-Outputs" class="headerlink" title="Sample Outputs"></a>Sample Outputs</h3><p>To get you started with debugging, sample outputs are available for the following test cases:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./vmsim lru <span class="number">5</span> <span class="number">4</span> &lt; trace1 &gt; out-lru<span class="number">-5</span><span class="number">-4</span>-trace1.txt</span><br><span class="line">./vmsim fifo <span class="number">5</span> <span class="number">4</span> &lt; trace1 &gt; out-fifo<span class="number">-5</span><span class="number">-4</span>-trace1.txt</span><br><span class="line">./vmsim lru <span class="number">8</span> <span class="number">4</span> &lt; trace2 &gt; out-lru<span class="number">-8</span><span class="number">-4</span>-trace2.txt</span><br><span class="line">./vmsim fifo <span class="number">8</span> <span class="number">4</span> &lt; trace2 &gt; out-fifo<span class="number">-8</span><span class="number">-4</span>-trace2.txt</span><br></pre></td></tr></table></figure></p>
+<h3 id="Additional-Requirements"><a href="#Additional-Requirements" class="headerlink" title="Additional Requirements"></a>Additional Requirements</h3><p>You must not implement the process of finding a victim so that it requires a scan of PageTable entries. Similarly it must not require a scan of any list structure that you might define. Also, the process of updating the LRU or FIFO list must not be an O(n) process. A program that produces output that passes the auto-marking, but is scan-based, is worth only 1/4 marks for the auto-marking, and half marks for each of the list-related assessment criteria.</p>
+<p>Do not add extra debugging output using #ifdef DBUG. If you want to add your own debugging output, enclose it in #ifdef MY_DBUG…#endif and add -DMY_DBUG to the line defining CFLAGS in the Makefile.</p>
+<p>Do not change the “standard” behaviour of showPageTableStatus(). If you want to add extra output on the PageTable, enclose it in #ifdef MY_DBUG…#endif. We assume that showPageTableStatus() has the same behaviour as the supplied version for the purposes of auto-marking.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OS/" rel="tag"># OS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CPSC231-Chasing-Alice.html" rel="next" title="CPSC231-Chasing-Alice">
+                <i class="fa fa-chevron-left"></i> CPSC231-Chasing-Alice
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CSCI2110-Huffman-Coding.html" rel="prev" title="CSCI2110-Huffman-Coding">
+                CSCI2110-Huffman-Coding <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objectives"><span class="nav-number">1.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">2.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Setting-Up"><span class="nav-number">3.</span> <span class="nav-text">Setting Up</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise"><span class="nav-number">4.</span> <span class="nav-text">Exercise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Outputs"><span class="nav-number">5.</span> <span class="nav-text">Sample Outputs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Additional-Requirements"><span class="nav-number">6.</span> <span class="nav-text">Additional Requirements</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

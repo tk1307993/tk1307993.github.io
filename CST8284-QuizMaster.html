@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Fundamentals,Swing,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
+<meta name="keywords" content="Fundamentals,Swing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CST8284-QuizMaster">
+<meta property="og:url" content="https://tk1307993.coding.me/CST8284-QuizMaster.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:28:55.063Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CST8284-QuizMaster">
+<meta name="twitter:description" content="用Java辅导一个选择题的答题器程序，练习基本的程序设计。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CST8284-QuizMaster.html">
+
+
+
+
+
+  <title>CST8284-QuizMaster | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CST8284-QuizMaster.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CST8284-QuizMaster</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-24T09:17:13+08:00">
+                2020-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  用Java辅导一个选择题的答题器程序，练习基本的程序设计。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The purpose of this request is to build an application that</p>
+<ol>
+<li>Locates a .quiz file on your hard drive and opens it</li>
+<li>Reads each of the objects in that file into an array (for easier handling)</li>
+<li>Each object contains a question and an array of possible answers, along with the correct answer, the difficulty level, the number of points awarded, etc. Therefore, each pane will need to display this information into the pane</li>
+<li>The code loops through the array of objects, and on each iteration displays a new Q/A combination. The program terminates when the questions are finished, and displays the number of correct responses out of the total number of questions asked.</li>
+</ol>
+<h3 id="QuizMaster"><a href="#QuizMaster" class="headerlink" title="QuizMaster"></a>QuizMaster</h3><h4 id="Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project"><a href="#Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project" class="headerlink" title="Load the code for this lab, available on Blackboard, into a new project"></a>Load the code for this lab, available on Blackboard, into a new project</h4><ul>
+<li>In Eclipse, create a new project called request1</li>
+<li>Download request1.zip from Blackboard and open the contents into a package</li>
+</ul>
+<h4 id="Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose"><a href="#Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose" class="headerlink" title="Review the files in request1.zip and make sure you understand their purpose"></a>Review the files in request1.zip and make sure you understand their purpose</h4><p>There are four files included with this request, which you must use, and which you must submit with your finished request.<br>QuizMain is the main point of entry for your program. It performs three main actions: it loads a simple splash pane (given); it opens the file containing the Q/A objects and loads them into an array, and then loops through the array loading each question into a BorderPane with separate sections for the question, answers, and explanation; and finally displays the results of the quiz.</p>
+<p>Note that each of the three sections is associated with a method that loads up a different Pane object. getSplashPane() loads a simple text message (“Welcome to QuizMaster”) for initial display in the centre of a BorderPane. getCurrentQAPane() uses the current QA object to load up a BorderPane with some of the components of the QA object. getResultsPane() displays the results of the quiz. getSplashPane() is provided for you; more information on the other two panes is provided below.</p>
+<p>FileUtils is a class containing static methods that perform basic file I/O operations, including checking to see if the file exists, returning the file name, and so on. The static method getFileHandle() calls up the FileChooser dialog box, shown below, which prompts the user to select a .quiz file (to be provided), which contains the QA objects to be loaded. Note that the other utilities in this class rely on a file having been correctly selected. If the ‘Cancel’ button on the dialog is selected, then no file handle is returned from getFileHandle(), and any further attempts to return a path name to the file return an empty string.</p>
+<p>If they do wish to continue, then prompt them with the above dialog again, otherwise execute Platform.exit() to exit the program.</p>
+<p>The code in FileUtils is mostly complete, with the exception of the getQAArray() method, which you’ll need to supply. This method reads in the absolute path of the file returned from getFileHandle() - you can use getFileName() to return this string, assuming it was correctly supplied by the user—and loads each object into an array of QA objects, which gets returned to the user.</p>
+<p>QuesAns is an abstract class that lists the abstract methods required elsewhere in your program.</p>
+<p>QA extends QuesAns and supplies concrete methods. Use the QA class when you need to load the QA objects from the .ques file returned by getFileHandle(), as indicated above in part (b), and when you need to load the currentQAPane, as indicated below</p>
+<h4 id="Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program"><a href="#Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program" class="headerlink" title="Supply the classes/methods required to allow for the correct execution of your program"></a>Supply the classes/methods required to allow for the correct execution of your program</h4><p>Note that the method FileUtils.showAndWait(FileUtils.ON) effectively pauses the program to give the user time to input a response. Without such a mechanism, the enhanced for loop that drives the program would simply loop through and load every pane in rapid succession, with no way to allow the user time to read questions and select answers.</p>
+<p>There are better ways to perform this operation, but they involve code that is beyond our reach just now. For now, showAndWait() does the job. Therefore, when the user wishes to move on to the next question, the NEXT QUESTION button must execute FileUtils.showAndWait(FileUtiles.OFF), to allow the program to load the next QA object in the loop.</p>
+<p>Also note that, for demonstration purposes, the .ques file will only contain MAX_QA_SIZE questions (initially set to 5); hence we only load MAX_QA_SIZE objects into the array, and loop through the enhanced for loop MAX_QA_SIZE times. This will change in request 2 when we modify this code to accommodate files of any size.</p>
+<p>Aside from the getQAArray code needed to complete the FileUtils class, along with the code needed to display the results at the end of the program, most of your time will be spent writing the code needed to display the current Question/Answers combination.</p>
+<p>The getCurrentPane() method, which reads in the currentQA object, should be included in QuizMain, along with the two other ‘getPane()’ methods needed for proper execution of the program.</p>
+<p>Your QA input pane should look something like the screenshot shown in the figure below.</p>
+<p>Note however that you have considerably flexibility in how you choose to present this information, including which type of pane(s) you use, which fonts, etc. There are some things which you must do however:</p>
+<ul>
+<li>The output should be positioned in the middle of the window</li>
+<li>The text output should maintain its general features when resized (e.g. to full screen)</li>
+<li>When the Check Answer button is selected, it should indicate in the space below the answers (a) which answer is correct, displaying the currentQA.explanation() String into the bottom of the screen to explain why the answer was correct or incorrect (not shown above).</li>
+<li>In the Next Question event handler, set FileUtils.waitAndShow(OFF). This should allow your program to move on to the next QA object, thereby loading the next question into the pane.</li>
+<li>You must use Radio Buttons for the Answers section of the pane, and this will require that you construct a new class, called AnswerPane, described next.<br>The AnswerPane class stores all the information needed to load and display the answers, as well as record which one of the radio buttons was selected. The UML diagram for AnswerPane is shown below.</li>
+</ul>
+<p>The getButtonSelected() method should loop through the array of radio buttons and use the radio button’s isSelected() property to determine which button was chosen by the user.</p>
+<p>The Check Answer button is not part of the AnswerPane, however it relies on an instance of the AnswerPane object to (1) get the answer selected by the user using getButtonSeleted() (2) compare this with the correct answer, as provided by the QA object (3) store the result in the QA object using the setResult() method, true if the answer was correct and false otherwise (4) Load the response string beneath the answers so the user can check the results.</p>
+<p>The resultsPane() loops through each QA object reports constructs a text string for display in the pane returned by this method. The text should indicate (1) the question number (2) whether the answer with CORRECT or WRONG, and (3) at the very end, the total score, based on the total number of correct answers divided by the total number of questions.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+          
+            <a href="/tags/Swing/" rel="tag"># Swing</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS148-Car-Configuration-Application.html" rel="next" title="CS148-Car-Configuration-Application">
+                <i class="fa fa-chevron-left"></i> CS148-Car-Configuration-Application
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CCN2042-Console-Drawing-Board.html" rel="prev" title="CCN2042-Console-Drawing-Board">
+                CCN2042-Console-Drawing-Board <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuizMaster"><span class="nav-number">2.</span> <span class="nav-text">QuizMaster</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Load-the-code-for-this-lab-available-on-Blackboard-into-a-new-project"><span class="nav-number">2.1.</span> <span class="nav-text">Load the code for this lab, available on Blackboard, into a new project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Review-the-files-in-request1-zip-and-make-sure-you-understand-their-purpose"><span class="nav-number">2.2.</span> <span class="nav-text">Review the files in request1.zip and make sure you understand their purpose</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Supply-the-classes-methods-required-to-allow-for-the-correct-execution-of-your-program"><span class="nav-number">2.3.</span> <span class="nav-text">Supply the classes/methods required to allow for the correct execution of your program</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

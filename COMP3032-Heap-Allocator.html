@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OS,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="编写Heap allocator, 实现malloc和free函数">
+<meta name="keywords" content="OS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COMP3032-Heap-Allocator">
+<meta property="og:url" content="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="编写Heap allocator, 实现malloc和free函数">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:18.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="COMP3032-Heap-Allocator">
+<meta name="twitter:description" content="编写Heap allocator, 实现malloc和free函数">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
+
+
+
+
+
+  <title>COMP3032-Heap-Allocator | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/COMP3032-Heap-Allocator.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">COMP3032-Heap-Allocator</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-16T12:18:30+08:00">
+                2023-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  编写Heap allocator, 实现malloc和free函数
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this request, you will write a heap allocator - implement a version of malloc and free. This request is standalone and does not require you to work with any of the SOS code. However, you must work in the XUbuntu virtual machine for some of the provided code to run.</p>
+<p>Download the mymalloc.c file to get started. It has some helper functions and placeholders for the two functions you will implement in this request. You can (and should) write other helper functions as necessary.</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The my_malloc function will be used to request memory from the heap. It is a user level function (not part of the kernel). The function returns a logical (virtual) address. The my_free function is used to return a block of memory to the allocator. The function takes as argument an address (one returned by my_malloc). To understand how each function is required to behave, keep reading.</p>
+<p>Note that this program runs in your virtual machine’s Linux environment, which is a 64-bit operating system. As such, addresses in this request are 64-bit. In the images below, only the lower 32 bits of an address are shown.</p>
+<h3 id="Buddy-allocator"><a href="#Buddy-allocator" class="headerlink" title="Buddy allocator"></a>Buddy allocator</h3><p>The memory allocator you will implement is based on the Buddy algorithm. In this algorithm, the allocator keeps track of memory blocks of size 2^0, 2^1, 2^2, , 2^MAX_ORDER bytes inside the heap (the part of memory area in the logical address space of a process right after the program code and data). It does this using MAX_ORDER+1 different linked lists. A memory block of size 2n bytes is called an order n block, and the corresponding linked list is called the order n free list. The free_list_start pointers array holds the address of the first memory block of various sizes.</p>
+<p>For example, consider the free_list_start[3] pointer. This pointer will point to an address where a memory block of 23 bytes (8 bytes) is available. The first four bytes of that memory block will have information on whether another order 3 block is present. If yes, then the start address of that block will be stored here; otherwise NULL (the C macro) will be stored. This process will repeat as long as there are order 3 blocks present, thereby resulting in a linked list. The blocks must always be arranged in ascending order of their start addresses. See picture below for an illustration.</p>
+<p>When a program begins, all free_list_start pointers are set to NULL, since the heap begins at size zero. During memory allocation, my_malloc can use the grow_heap function to request the operating system to allocate some space (4096 bytes for each call) in the heap. More details on when this should be done is given later.</p>
+<p>Another rule that the Buddy allocator enforces: the start address of an order k block of memory will always have to be a multiple of 2k. For example, in the picture, the order 3 memory blocks starting at 0x82541008 and the one at 0x82541010 together form a contiguous memory area of 16 bytes; however, they together do not form an order 4 memory block since 0x82541008 is not a multiple of 24.</p>
+<h3 id="Implementing-my-malloc"><a href="#Implementing-my-malloc" class="headerlink" title="Implementing my_malloc"></a>Implementing my_malloc</h3><p>The first step in my_malloc is to increase the amount of needed memory by 4 bytes (reason coming up). Therefore, the amount of memory bytes allocated to serve a request is always at least (size+4). The Buddy allocator always allocates memory in size of powers of 2. Therefore, we need to determine the smallest n such that an order n block can serve the request. This can be calculated as<br>The allocation algorithm for the Buddy allocator then proceeds as follows.</p>
+<p>If free_list_start[n] is not NULL, delete the first order n memory block from the list.<br>Store n in the first 4 bytes of that block, and return (4 + start address of the block).<br>Otherwise, move to the free list of the next higher order and check if it is NULL. Keep doing this until you find one that is not NULL. In case you reach the maximum order (MAX_ORDER) and the free list there is still empty, then you can call grow_heap to receive a 4KB (212 bytes, order 12) memory block. Add this block to the order 12 free list and continue.<br>Lets say free_list_start[p] is not NULL. Of course, p&gt;n.<br>a. delete the first order p memory block from the list; say the start address of that block is s.<br>b. add two order (p-1) memory blocks to the order (p-1) free list. The first of the two blocks will begin at address s and the second one will begin at address (s + 2^p-1). Remember, the list must be kept in ascending order of the start addresses.<br>Essentially, you have split a larger chunk of memory into two smaller ones of equal sizes.</p>
+<p>Repeat from step 1.<br>As an example, the following figures show the before and after versions of few of the free lists (order 3, 4, 5) when my_malloc(4) is called. Note that the way the implementation is sought here implies that each my_malloc call should not be for more than 4092 bytes. There are ways to handle this, but is not needed in this request.</p>
+<h3 id="Implementing-my-free"><a href="#Implementing-my-free" class="headerlink" title="Implementing my_free"></a>Implementing my_free</h3><p>The first step in my_free is to determine how much memory is to be freed. The function takes as input a memory address returned by my_malloc in an earlier call. Since my_malloc stores the order of the memory block allocated, we can use it to determine how much memory is being returned. If p is the start address of the returned area of memory, then the 4 bytes beginning at f=(p-4) has the order (say n). Therefore, we need to insert back an order n memory block beginning at address f into the order n free list. The deallocation algorithm is as follows.</p>
+<p>Add the order n block starting at f to the order n free list. Remember, the list must be kept in ascending order of the start addresses.<br>If n &lt; MAX_ORDER, check whether<br>a. the added block and the next (or previous) block in the list together represent a contiguous memory region, and<br>b. the smaller of the two start addresses of the two blocks is a multiple of 2n+1.<br>If any of the above two conditions is not true, return; otherwise, continue.<br>The two blocks can be merged and entered into a higher order list.<br>a. let f = the smaller of the start addresses of the two blocks.<br>b. remove the two blocks from the order n free list.<br>c. let n = n + 1.<br>d. Repeat from step 1 with the updated n and f values.<br>Therefore, the my_free function returns memory blocks to the free lists, and coalesces contiguous blocks to higher order blocks whenever possible. Note that my_free does not return memory back to the operating system (decrement the heap top). As a program calls my_malloc and my_free, the same heap region gets allocated in different sizes over the life of the program. Since the two functions are running in user space, this reduces the number of system calls that user programs will have to make to request heap memory. The following figure shows an example of my_free.</p>
+<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>Download the mymalloc.c file from the request page. The file has the grow_heap function and some helper functions to print the free lists and return values. Your objective is to complete the implementation of the my_malloc and my_free functions as per the specifications. The main function is for testing purposes only; what you write in this function will be discarded before grading. The output generated by the provided main function is given in the last page. Some interesting cases that you should test:</p>
+<p>malloc such that no splitting is necessary<br>malloc such that splitting will be necessary; check the case when splitting initiates multiple levels down<br>free such that merging happens with the next block in the list<br>free such that merging happens with the previous block in the list<br>malloc and free such that merging does not happen<br>malloc and free such that merging propagates down more than one level<br>other interesting pointer related errors!!</p>
+<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Submit in Canvas the modified mymalloc.c file, and a README file containing any information you feel the GTA should know before grading your program. Comment your program well (include your name).</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OS/" rel="tag"># OS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP20003-Python-Libraries.html" rel="next" title="COMP20003-Python-Libraries">
+                <i class="fa fa-chevron-left"></i> COMP20003-Python-Libraries
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CMPSC311-LFU-Cache.html" rel="prev" title="CMPSC311-LFU-Cache">
+                CMPSC311-LFU-Cache <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Buddy-allocator"><span class="nav-number">3.</span> <span class="nav-text">Buddy allocator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-my-malloc"><span class="nav-number">4.</span> <span class="nav-text">Implementing my_malloc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-my-free"><span class="nav-number">5.</span> <span class="nav-text">Implementing my_free</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective"><span class="nav-number">6.</span> <span class="nav-text">Objective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">7.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

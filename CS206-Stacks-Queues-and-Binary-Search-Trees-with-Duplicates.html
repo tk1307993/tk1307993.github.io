@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="辅导数据结构，包括Stacks，Queues，以及Binary Search Trees.">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates">
+<meta property="og:url" content="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="辅导数据结构，包括Stacks，Queues，以及Binary Search Trees.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:29:11.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates">
+<meta name="twitter:description" content="辅导数据结构，包括Stacks，Queues，以及Binary Search Trees.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html">
+
+
+
+
+
+  <title>CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS206-Stacks-Queues-and-Binary-Search-Trees-with-Duplicates</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-08-20T09:17:15+08:00">
+                2021-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  辅导数据结构，包括Stacks，Queues，以及Binary Search Trees.
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>In this request you will implement data structures that provide an implementation for four abstract data types: A double-ended singly linked list, a stack, a queue, and a binary search tree that allows duplicates. Along the way you will get more experience with implementing Java interfaces, writing JUnit test cases, and using the Adapter design pattern.</p>
+<h3 id="Part-1-Double-Ended-Singly-Linked-List"><a href="#Part-1-Double-Ended-Singly-Linked-List" class="headerlink" title="Part 1 - Double Ended Singly Linked List"></a>Part 1 - Double Ended Singly Linked List</h3><h4 id="DoubleEndedLLTester"><a href="#DoubleEndedLLTester" class="headerlink" title="DoubleEndedLLTester"></a>DoubleEndedLLTester</h4><p>Create DoubleEndedLLTester.java to test all public methods in DoubleEndedLL.java class, which implements DoubleEndedLLInterface. You must have at least one test for every method, but for some methods it is better to create multiple tests for separate conditions. For example, removing from an empty list should have a separate test from removing from a non-empty one.</p>
+<p>You do not need to completely write your DoubleEndedLLTester before starting to define DoubleEndedLL. In fact, it is recommended that you use an iterative test-driven development process: write some tests in DoubleEndedLLTester, implement the functionality in DoubleEndedLL, test your implementation with DoubleEndedLLTester, write more tests, etc.</p>
+<h4 id="DoubleEndedLL"><a href="#DoubleEndedLL" class="headerlink" title="DoubleEndedLL"></a>DoubleEndedLL</h4><p>Read the documentation in the source code file for the DoubleEndedLLInterface. You will be creating DoubleEndedLL.java class to implement this interface. Think of the “implements” as a contract - it is your responsibility to ensure all of the methods in the interface are present and functional in your class. For method headers, you may simply copy over the appropriate comments from the interface file. However, you must still comment the constructor and any other methods not present in the interface.</p>
+<p>DoubleEndedLL must be a Generic class that implements a singly-linked list with a head and tail reference, using an inner class Node. You may find it helpful to copy over your Node class from PA1 and modify it for this request. The only public methods you may have are the no-arg constructor and the interface methods.</p>
+<p>Files to Submit</p>
+<ol>
+<li>DoubleEndedLLTester.java</li>
+<li>DoubleEndedLL.java</li>
+</ol>
+<h4 id="Part-2-Implementing-Stacks-and-Queues"><a href="#Part-2-Implementing-Stacks-and-Queues" class="headerlink" title="Part 2 - Implementing Stacks and Queues"></a>Part 2 - Implementing Stacks and Queues</h4><p>Now that DoubleEndedLL is fully built and tested, use it to implement a Stack and a Queue. Both MyStack and MyQueue are generic classes that implement Stack_QueueInterface, however their functionality will differ.</p>
+<p>In order to get full credit for this section, you must use the Adaptive Design Pattern to implement these classes. To do that, create an instance variable of type DoubleEndedLLInterface (instantiated to a DoubleEndedLL) and use it to perform all of the necessary class methods. If these classes are complicated, you are overthinking the problem.</p>
+<p>As is often the case when the Adapter pattern is used, if the adapted class (DoubleEndedLL in this case) is thoroughly tested and debugged, the adapting class shouldn’t need much testing because almost all of the work is being handled by delegation to the adapted class’s methods. We provide you with a few simple tests (MyStackTester.java and MyQueueTester.java) which should be sufficient but you are welcome to write your own tests as well.</p>
+<h4 id="MyStack"><a href="#MyStack" class="headerlink" title="MyStack"></a>MyStack</h4><p>Stacks are first-in last-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyStack class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyStack class.</p>
+<p>MyQueue<br>Queues are first-in first-out data structures, which you will implement using your internal DoubleEndedLL object by mapping the appropriate methods to your MyQueue class methods. One choice of mappings is better than another. You must choose the most efficient mapping. In HW3.txt, indicate what methods were chosen to perform stack operations efficiently and why. You must mention every method in the MyQueue class.</p>
+<p>Files to Submit</p>
+<ol>
+<li>MyStack.java</li>
+<li>MyQueue.java</li>
+<li>HW3.txt</li>
+</ol>
+<h4 id="Part-3-Duplicate-Key-BST"><a href="#Part-3-Duplicate-Key-BST" class="headerlink" title="Part 3 - Duplicate Key BST"></a>Part 3 - Duplicate Key BST</h4><p>Most often it is assumed that a binary search tree does not contain duplicate keys. However, sometimes we need to deal with problems that contain duplicates. For example, a database of car services might contain one record for each service for every car; so if a car got serviced twice, there will be two records with the same key (car’s VIN) and different dates (service dates). To accomplish this, we might use a data structure called a “BST with duplicates”, or BSTDup.</p>
+<p>Your node class might look something like this:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> class BSTDupNode &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">key</span>;</span><br><span class="line">  <span class="keyword">private</span> ArrayList&lt;T&gt; elements;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode left;</span><br><span class="line">  <span class="keyword">private</span> BSTDupNode right;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Constructor</span></span><br><span class="line">  <span class="keyword">public</span> BSTDupNode(<span class="built_in">int</span> <span class="built_in">key</span>, T elem, BSTDupNode left, BSTDupNode right) &#123;</span><br><span class="line">    <span class="keyword">this</span>.<span class="built_in">key</span> = <span class="built_in">key</span>;</span><br><span class="line">    elements = <span class="keyword">new</span> ArrayList&lt;T&gt;();</span><br><span class="line">    elements.<span class="built_in">add</span>(elem);</span><br><span class="line">    <span class="keyword">this</span>.left = left;</span><br><span class="line">    <span class="keyword">this</span>.right = right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Think about what other methods you might need...</span></span><br><span class="line"><span class="comment">   * accessors (data, key, left, right)</span></span><br><span class="line"><span class="comment">   * mutators (add/remove data, updates children)</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>The image on the left is an example of just the tree structure, and each node displays only the key. The image on the right is an example of how your BST would actually be used, in this case to store the names of sweets. For your implementation, nodes will contain an ArrayList of elements, rather than a single one. That allows the BST structure to be preserved, while still allowing duplicate keys.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSCI112-Connect4.html" rel="next" title="Java辅导CSCI112-Connect4">
+                <i class="fa fa-chevron-left"></i> Java辅导CSCI112-Connect4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS313-Zombiquarium.html" rel="prev" title="CS313-Zombiquarium">
+                CS313-Zombiquarium <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-Double-Ended-Singly-Linked-List"><span class="nav-number">2.</span> <span class="nav-text">Part 1 - Double Ended Singly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DoubleEndedLLTester"><span class="nav-number">2.1.</span> <span class="nav-text">DoubleEndedLLTester</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DoubleEndedLL"><span class="nav-number">2.2.</span> <span class="nav-text">DoubleEndedLL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-2-Implementing-Stacks-and-Queues"><span class="nav-number">2.3.</span> <span class="nav-text">Part 2 - Implementing Stacks and Queues</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyStack"><span class="nav-number">2.4.</span> <span class="nav-text">MyStack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part-3-Duplicate-Key-BST"><span class="nav-number">2.5.</span> <span class="nav-text">Part 3 - Duplicate Key BST</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

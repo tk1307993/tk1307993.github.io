@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Data Structure,Algorithm,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="分析比较不同算法之间的性能。">
+<meta name="keywords" content="Data Structure,Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS345-Algorithms">
+<meta property="og:url" content="https://tk1307993.coding.me/CS345-Algorithms.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="分析比较不同算法之间的性能。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-10-10T17:50:34.801Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CS345-Algorithms">
+<meta name="twitter:description" content="分析比较不同算法之间的性能。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CS345-Algorithms.html">
+
+
+
+
+
+  <title>CS345-Algorithms | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CS345-Algorithms.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CS345-Algorithms</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-11T08:28:30+08:00">
+                2022-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  分析比较不同算法之间的性能。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Exercise-01"><a href="#Exercise-01" class="headerlink" title="Exercise 01"></a>Exercise 01</h3><h4 id="About"><a href="#About" class="headerlink" title="About"></a>About</h4><p>The PerformanceTest program in the empirical package, contains three methods that implement the algorithms(solutions) for computing the range of numbers in an array.</p>
+<p>For this exercise, we will look at algorithm performance by observing which of the three algorithm runs the fastest. We will compare each algorithm using data sets that increase in size. This performance is determined by running the algorithm and measuring how long it takes to complete each data set in milliseconds (ms).</p>
+<h4 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h4><p>The range is the difference between the highest and lowest numbers in the array.</p>
+<h4 id="Algorithm-1-Range-1"><a href="#Algorithm-1-Range-1" class="headerlink" title="Algorithm 1 : Range$1"></a>Algorithm 1 : Range$1</h4><p>Description: This algorithm uses nested loops to examine every pair of elements in the array, computing their difference and remembering the largest difference found.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">maxDiff = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (each index <span class="built_in">i</span>)</span><br><span class="line">  <span class="keyword">for</span> (each index <span class="built_in">j</span>)</span><br><span class="line">    update maxDiff, <span class="keyword">if</span> elements <span class="built_in">i</span> and <span class="built_in">j</span> differ more than <span class="built_in">max</span>.</span><br></pre></td></tr></table></figure>
+<h4 id="Algorithm-2-Range-2"><a href="#Algorithm-2-Range-2" class="headerlink" title="Algorithm 2 : Range$2"></a>Algorithm 2 : Range$2</h4><p>Description: This algorithm reduces the amount of computations performed by disregarding one of the (i, j) and (j, i) pairs, that give identical comparisons. It still uses nested loops to examine every pair of elements in the array but now only once, computes their difference and remembering the largest difference found.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">maxDiff = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (each index <span class="built_in">i</span>)</span><br><span class="line">  <span class="keyword">for</span> (each index <span class="built_in">j</span> = <span class="built_in">i</span> + <span class="number">1</span>)</span><br><span class="line">    update maxDiff, <span class="keyword">if</span> elements <span class="built_in">i</span> and <span class="built_in">j</span> differ more than <span class="built_in">max</span>.</span><br></pre></td></tr></table></figure>
+<h3 id="Algorithm-3-Range-3"><a href="#Algorithm-3-Range-3" class="headerlink" title="Algorithm 3 : Range$3"></a>Algorithm 3 : Range$3</h3><p>Description: This algorithm uses a loop to find the largest value and smallest value in the array, compute their difference and return this difference.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">max</span> = element[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">min</span> = <span class="built_in">max</span></span><br><span class="line"><span class="keyword">for</span> (each index <span class="built_in">i</span>)</span><br><span class="line">  <span class="built_in">find</span> <span class="built_in">max</span>.</span><br><span class="line">  <span class="built_in">find</span> <span class="built_in">min</span>.</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">max</span> - <span class="built_in">min</span></span><br></pre></td></tr></table></figure>
+<h4 id="Analysis-Questions"><a href="#Analysis-Questions" class="headerlink" title="Analysis/Questions"></a>Analysis/Questions</h4><p>Instructions: Answer the questions on in a document/spreadsheet and submit to your github repository.<br>Download and examine the L2_Range_RunTimes EXCEL file, which contains the location to populate the run time data of the three (3) algorithms listed above. There are three (3) different spreadsheets, one for each algorithm. Note the fourth (4th) spreadsheet combines the data for all three algorithms on one graph, however, algorithm 3 uses the secondary scale at top and right of graph.</p>
+<p>Run the PerformanceTest program and input the out of the show run time for the data sets listed for each of the range algorithms in L2_Range_RunTimes EXCEL file.<br>If you are experiencing an OutOfMemoryError : Java heap space for your PerformanceTest program. This is possibly due to your Java Virtual Machine (JVM) needing more memory to run this application. A quick fix for this might be to do the following: Go to Run &gt; Run Configurations &gt; select PerformanceTest from left window &gt; select (x) = Arguments<br>Type in the box below in the VM arguments window: -Xmx3200m.<br>This sets a 3.2GB allocation, which should be enough, but if you need more you can just replace 3200 with a larger number like 3800 etc…<br>What do observe for each of the algorithms shown with their corresponding data set? Can you tell which algorithm was the most efficient?<br>For algorithms 1 and 2, did reducing the amount of computations by half improve the runtime significantly? Explain your reasoning, if you felt it had a small or large change.<br>For algorithms 2 and 3, did reducing the number of loops improve the runtime significantly? Explain your reasoning, if you felt it had a small or large change.</p>
+<h3 id="Exercise-02"><a href="#Exercise-02" class="headerlink" title="Exercise 02"></a>Exercise 02</h3><h4 id="About-1"><a href="#About-1" class="headerlink" title="About"></a>About</h4><p>The Fibonacci sequence/series is a mathematical model that is often used in numeric optimization. It is based on a sequence of numbers in which the first two numbers in the series are 0 and 1, and each subsequent number is the sum of the previous two numbers.<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">n</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span><span class="string">...</span></span><br><span class="line"></span><br><span class="line"><span class="attr">value:</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">8</span> <span class="number">13</span> <span class="number">21</span> <span class="number">34</span><span class="string">...</span></span><br></pre></td></tr></table></figure></p>
+<p>Update the recursive method fib to compute the Fibonacci value of n, in FibonacciTest of<br>L2_AlgorithmsLab. This should be the Fibonacci sequence solution in its most basic form.<br>Modify the program FibonacciTest so that it finds the number of times the fib method is called. Use a static variable to keep track of the calls and increment it every time the method is called.<br>Create a performance test, similar to that shown for the ranges in Activity 1 for the method in Question 1 for fib(50). Plot 5-6 (five to six) data points in your L2_Range_RunTimes EXCEL file , what do you observe? Are the results as expected? How does this fit with the theoretical model of the series?<br>The code in Question 1 was inefficient, because it takes too many recursive calls. It ends up re- computing each Fibonacci number many times. This code runs very slow for even relatively small values of n. It can take minutes or hours to compute even the 40 th or 50 th Fibonacci number on certain computers. Write a new version of the Fibonacci method _fib that is still recursive but is more efficient than the one in Question 1. Do this by creating a helper method that accepts an additional parameter, the storage for the previous Fibonacci numbers, that you can carry through and modify during each recursive call.<br>Write a new version of the Fibonacci method fbn that uses iteration to generate the result for the nth value in the Fibonacci sequence.<br>Update the program FibonacciTest to run a similar empirical tests for the three Fibonacci sequence algorithms in this activity (Q1, Q4, Q5) and update your L2_Range_RunTimes EXCEL file to show the results.</p>
+<h3 id="Exercise-03"><a href="#Exercise-03" class="headerlink" title="Exercise 03"></a>Exercise 03</h3><p>About<br>A fractal is a geometric figure that is recursively constructed i.e. it can be divided into parts, each of which is a reduced-size copy of the whole. In fact, when one observes a fractal shape, one observes that the shape contains smaller versions of itself, so that it looks similar at all magnifications.</p>
+<p>In this activity, we will describe a recursive method for drawing various levels of a Sierpinski triangle. A Sierpinski triangle (named after a famous Polish mathematician), is a fractal that is composed of infinitely many sub-triangles. We cannot draw the actual fractal, because it is composed of infinitely many sub-triangles, but we can write a method that produces a number of levels that approximates the actual fractal.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ENSC251-CPU-Simulator.html" rel="next" title="ENSC251-CPU-Simulator">
+                <i class="fa fa-chevron-left"></i> ENSC251-CPU-Simulator
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS345-Blockchain.html" rel="prev" title="CS345-Blockchain">
+                CS345-Blockchain <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-01"><span class="nav-number">1.</span> <span class="nav-text">Exercise 01</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#About"><span class="nav-number">1.1.</span> <span class="nav-text">About</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Range"><span class="nav-number">1.2.</span> <span class="nav-text">Range</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Algorithm-1-Range-1"><span class="nav-number">1.3.</span> <span class="nav-text">Algorithm 1 : Range$1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Algorithm-2-Range-2"><span class="nav-number">1.4.</span> <span class="nav-text">Algorithm 2 : Range$2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm-3-Range-3"><span class="nav-number">2.</span> <span class="nav-text">Algorithm 3 : Range$3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-Questions"><span class="nav-number">2.1.</span> <span class="nav-text">Analysis/Questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-02"><span class="nav-number">3.</span> <span class="nav-text">Exercise 02</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#About-1"><span class="nav-number">3.1.</span> <span class="nav-text">About</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercise-03"><span class="nav-number">4.</span> <span class="nav-text">Exercise 03</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>

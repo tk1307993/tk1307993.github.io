@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Network Programming,SQLite,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="专业Computer Science编程辅导" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="这是接之前需求的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
+<meta name="keywords" content="Network Programming,SQLite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C辅导：CSE320-Wolfie-Chat-Part4">
+<meta property="og:url" content="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html">
+<meta property="og:site_name" content="专业Computer Science编程辅导">
+<meta property="og:description" content="这是接之前需求的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-05-27T13:27:33.380Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C辅导：CSE320-Wolfie-Chat-Part4">
+<meta name="twitter:description" content="这是接之前需求的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html">
+
+
+
+
+
+  <title>C辅导：CSE320-Wolfie-Chat-Part4 | 专业Computer Science编程辅导</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">专业Computer Science编程辅导</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tk1307993.coding.me/CSE320-Wolfie-Chat-Part4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="专业Computer Science编程辅导">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C辅导：CSE320-Wolfie-Chat-Part4</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T21:38:23+08:00">
+                2019-01-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这是接之前需求的第四部分，这部分主要用xterm来实现用户和用户之间的聊天协议，涉及到的知识点有domain socket, fork, exec, pipe, socketpair。此外，还需要处理network programming中常见的网络异常情况，如client crash, error termination等。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="User-to-User-Chats"><a href="#User-to-User-Chats" class="headerlink" title="User to User Chats"></a>User to User Chats</h3><p>In this part you will be enhancing your client to allow for communication between other clients. In order to separate individual user to user chats, you will need to implement a chat executable program which your client will execute as child processes. Using the xterm program in tandem with this chat executable you’ll be able to create a client that spawns new windows as needed to display chats. The behavior will emulate what you may be familiar with on facebook or google hangouts functionality in terms of automatically spawning new small windows dedicated for chatting as opposed to monopolizing the user’s entire view of the screen.</p>
+<p>When a client wants to begin a chat session with another user, they type into the client window on stdin the client command /chat. This will trigger the client to send to the server a new verb, MSG. The MSG verb will be used for communication of ALL chat messages between the server and client. Let’s consider an example:</p>
+<ol>
+<li>Paul initiates chat using the /chat command, the message is formatted into the MSG\r\n\r\n protocol and sent to the server.<br>When the server receives the MSG verb, it sends the same message back to both the To and FROM user.</li>
+<li>When Paul’s and Neal’s client receive the MSG\r\n\r\n back from the server, the client program will create a UNIX Domain Socket to share with the child process (for the pop-up chat window) to communicate over, then fork and execv an xterm terminal which will run your ./chat program.</li>
+<li>The chat program is a simple program which takes input from stdin and sends to the Client program, prints on stdout messages from the client program, and handles the command /close which terminates the child process (same as closing the terminal window).</li>
+</ol>
+<p>This is the initial creation of all user to user chats. Once both users have an xterm chat window open for communication, the users can freely type messages to each other. Incoming messages should be proceeded by the &gt; symbol and outgoing messages by &lt; in the chat window. With each message entered in the xterm on stdin, the chat program should relay the information to the client through their Unix Domain socket. The client then converts the message into the Wolfie Protocol MSG verb and sends to the server. The below figure illustrates the steps.</p>
+<p>A user can close a chat window at anytime using either the close button on the xterm window or by using the command /close. When the window is closed on one client it has no impact on the client who was chatting with the user. In the figure below Paul closed the chat window but Neal still has it open. When Neal types a message to Paul it is sent to the server (Step 1). The sewer will forward the message back to Paul &amp; Neal (Step 2). Since Paul has no existing window, his client creates a new window and displays the message. Neal’s client will just display the message since the xterm is already open.</p>
+<p>Paul closed the chat window and then wants to send Neal a new message. To initiate the chat again, he would need to type /chat command in his client. This will send the MSG verb to the sewer (Step 1 in figure below). Upon the server’s response, Paul’s client would spawn a new chat window. Neal and Paul’s chat windows will then both display the</p>
+<p>Overall, the protocol MSG verb is generic. The server has no knowledge of the chat windows open or closed. It is the client program’s responsibility to open, close, and manage the chat windows. In this way, it doesn’t matter if the xterm window is closed because every time MSG is received the client will check to see if a window already exists for communicating with theuser and if not it will fork and exec a new xterm process to become the window needed for communication. If the window does exist then the message is passed through the Unix domain socket and displayed appropriately on the chat window.</p>
+<p>If one of the user’s disconnects from the server or does not exist, but a message is sent to this user, the server will respond with an ERR message.</p>
+<h3 id="Added-Client-command"><a href="#Added-Client-command" class="headerlink" title="Added Client command"></a>Added Client command</h3><h4 id="chat"><a href="#chat" class="headerlink" title="/chat"></a>/chat</h4><p>The /chat command requires the name of the user to send the message to and the message to be sent. The client program will send to the server the MSG verb to communicate the message to the other user.</p>
+<h4 id="logout"><a href="#logout" class="headerlink" title="/logout"></a>/logout</h4><p>Update the functionality of the command to now additionally close all the chat windows and all file descriptors prior to exiting the client program.</p>
+<h3 id="Chat-Program"><a href="#Chat-Program" class="headerlink" title="Chat Program"></a>Chat Program</h3><p>Usage:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./chat UNIX_SOCKET_FD</span><br><span class="line">UNIX_SOCKET_FD          The Unix Domain <span class="keyword">File</span> Descriptor <span class="keyword">number</span>.</span><br></pre></td></tr></table></figure></p>
+<p>When the server sends MSG verb to your client it should fork and exec xterm, which in turn will exec your chat program in a basic terminal. This will act as the interface to communicate with another user much like chats on Facebook or hangouts work. These will act as the small popups to chat in while the client remains the manager for the connection with the server. The chat program will use Unix domain sockets to communicate with the parent client process. Using socketpair() you can declare two anonymous sockets and pass the file descriptor to the chat program as an argument. You can also declare the sockets as you would normally using socket(). In either case you must use AF_UNIX as the domain.</p>
+<p>xterm is a powerful terminal emulator as it allows for a lot of customization using command line arguments. You should study the man page for xterm to see what arguments will help make your program as easy to use as possible. To get you started, the format to fork and exec the ./chatprogram in xterm is as follows:</p>
+<blockquote>
+<p>Example execution string: “xterm -geometry 45x35+%d -T %s -e ./chat. %d”</p>
+</blockquote>
+<p>Each of the arguments have the following meaning.</p>
+<ul>
+<li><p>-geometry geometry: This argument allows you to set the size and location of the xterm window opened. Geometry format is described here under “geometry specifications”. However, all you really need to know is that is takes the format WIDTHxHEIGHT+XOFF+YOFF where width and height are in characters and XOFF and YOFF is in pixels. In the suggested execution string above you can see that you can omit the YOFF value and you can use sprintf to set the XOFF so the windows spawned are not stacked on one another.</p>
+</li>
+<li><p>-T string: With this flag you can set the title of the string to the username being communicated with so the user has a quick reference of which window is chatting with whom. Use %s format specifier to insert the username for the chat.</p>
+</li>
+<li><p>-e program [arguments … ]: finally there is the most important flag. -e specifies the executable to be run when the terminal opens. The arguments to the program follow immediately after as you would type them in the terminal. The execution string shows how you would pass the unix domain socket file descriptor. Use %s format specifier for the file descriptor of the Unix domain socket.</p>
+</li>
+</ul>
+<p>The chat program should prompt the user for input, anything the user types in followed by pressing the enter-key should be considered a message with the exception of the /close command. The /close command simply closes the window and the Unix domain socket in the parent. There is no protocol messages that need to be exchanged with the server when this command is used. The Client forwards each MSG received to the corresponding chat window via each open chat’s Unix domain socket.</p>
+<p>The protocol has new verbs that must be implemented to support these user features. As we have seen in the figures, the MSG verb will deliver the information of who the message is to, whom it is from, and the message being sent. Additionally, add a new verb, UOFF, which will be used to notify ALL clients connected to the server of a user logging out or disconnecting from the server.</p>
+<h3 id="Client-crash-or-error-termlnatlon"><a href="#Client-crash-or-error-termlnatlon" class="headerlink" title="Client crash or error termlnatlon"></a>Client crash or error termlnatlon</h3><p>Crashes happen so the UOFF verb should handle both the case of a client disconnecting and of a client logging off. If someone’s chatting partner disconnects and the chat window is still open for that user, when the UOFF verb is received, the chat window should print a message that informs the user of the disconnection. The xterm window should then close on any key press. This is to prevent the user from attempting to send anything to a disconnected user. Think about how the server can handle errors when trying to pass along user messages, and accordingly turn that error into a UOFF broadcast verb to notify all clients of the user’s disconnection.</p>
+<h3 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h3><p>On the server side the communication threads must handle receiving and sending messages to the proper clients using the MSGprotocol defined in the prior figures. The server also must handle forwarding the UOFF verb to all still connected clients when a user disconnects or logs off the server.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+          
+            <a href="/tags/SQLite/" rel="tag"># SQLite</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE320-Wolfie-Chat-Part3.html" rel="next" title="C辅导：CSE320-Wolfie-Chat-Part3">
+                <i class="fa fa-chevron-left"></i> C辅导：CSE320-Wolfie-Chat-Part3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CSE320-Wolfie-Chat-Part5.html" rel="prev" title="C辅导：CSE320-Wolfie-Chat-Part5">
+                C辅导：CSE320-Wolfie-Chat-Part5 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#User-to-User-Chats"><span class="nav-number">1.</span> <span class="nav-text">User to User Chats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Added-Client-command"><span class="nav-number">2.</span> <span class="nav-text">Added Client command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#chat"><span class="nav-number">2.1.</span> <span class="nav-text">/chat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logout"><span class="nav-number">2.2.</span> <span class="nav-text">/logout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chat-Program"><span class="nav-number">3.</span> <span class="nav-text">Chat Program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client-crash-or-error-termlnatlon"><span class="nav-number">4.</span> <span class="nav-text">Client crash or error termlnatlon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Server"><span class="nav-number">5.</span> <span class="nav-text">Server</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
