@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="cplusplusdaixie.com/"/>
-  <updated>2023-05-31T14:43:02.723Z</updated>
+  <updated>2023-05-31T14:01:04.875Z</updated>
   <id>cplusplusdaixie.com/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>COMP285-Computer-Aided-Software-Development</title>
-    <link href="cplusplusdaixie.com/COMP285-Computer-Aided-Software-Development.html"/>
-    <id>cplusplusdaixie.com/COMP285-Computer-Aided-Software-Development.html</id>
-    <published>2023-05-31T14:43:02.000Z</published>
-    <updated>2023-05-31T14:43:02.723Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>留学生计算机编程数学统计作业代写</title>
@@ -299,9 +285,9 @@
       <category term="Python" scheme="cplusplusdaixie.com/categories/Python/"/>
     
     
-      <category term="Algorithm" scheme="cplusplusdaixie.com/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="cplusplusdaixie.com/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="cplusplusdaixie.com/tags/Algorithm/"/>
     
   </entry>
   
@@ -462,6 +448,28 @@
       <category term="Operating System" scheme="cplusplusdaixie.com/tags/Operating-System/"/>
     
       <category term="File System" scheme="cplusplusdaixie.com/tags/File-System/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>COMP3032-Heap-Allocator</title>
+    <link href="cplusplusdaixie.com/COMP3032-Heap-Allocator.html"/>
+    <id>cplusplusdaixie.com/COMP3032-Heap-Allocator.html</id>
+    <published>2023-01-16T04:18:30.000Z</published>
+    <updated>2023-05-27T13:29:18.524Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this request, you will write a heap allocator - implement a version of malloc and free. This request is standalone and does not require you to work with any of the SOS code. However, you must work in the XUbuntu virtual machine for some of the provided code to run.</p><p>Download the mymalloc.c file to get started. It has some helper functions and placeholders for the two functions you will implement in this request. You can (and should) write other helper functions as necessary.</p><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>The my_malloc function will be used to request memory from the heap. It is a user level function (not part of the kernel). The function returns a logical (virtual) address. The my_free function is used to return a block of memory to the allocator. The function takes as argument an address (one returned by my_malloc). To understand how each function is required to behave, keep reading.</p><p>Note that this program runs in your virtual machine’s Linux environment, which is a 64-bit operating system. As such, addresses in this request are 64-bit. In the images below, only the lower 32 bits of an address are shown.</p><h3 id="Buddy-allocator"><a href="#Buddy-allocator" class="headerlink" title="Buddy allocator"></a>Buddy allocator</h3><p>The memory allocator you will implement is based on the Buddy algorithm. In this algorithm, the allocator keeps track of memory blocks of size 2^0, 2^1, 2^2, , 2^MAX_ORDER bytes inside the heap (the part of memory area in the logical address space of a process right after the program code and data). It does this using MAX_ORDER+1 different linked lists. A memory block of size 2n bytes is called an order n block, and the corresponding linked list is called the order n free list. The free_list_start pointers array holds the address of the first memory block of various sizes.</p><p>For example, consider the free_list_start[3] pointer. This pointer will point to an address where a memory block of 23 bytes (8 bytes) is available. The first four bytes of that memory block will have information on whether another order 3 block is present. If yes, then the start address of that block will be stored here; otherwise NULL (the C macro) will be stored. This process will repeat as long as there are order 3 blocks present, thereby resulting in a linked list. The blocks must always be arranged in ascending order of their start addresses. See picture below for an illustration.</p><p>When a program begins, all free_list_start pointers are set to NULL, since the heap begins at size zero. During memory allocation, my_malloc can use the grow_heap function to request the operating system to allocate some space (4096 bytes for each call) in the heap. More details on when this should be done is given later.</p><p>Another rule that the Buddy allocator enforces: the start address of an order k block of memory will always have to be a multiple of 2k. For example, in the picture, the order 3 memory blocks starting at 0x82541008 and the one at 0x82541010 together form a contiguous memory area of 16 bytes; however, they together do not form an order 4 memory block since 0x82541008 is not a multiple of 24.</p><h3 id="Implementing-my-malloc"><a href="#Implementing-my-malloc" class="headerlink" title="Implementing my_malloc"></a>Implementing my_malloc</h3><p>The first step in my_malloc is to increase the amount of needed memory by 4 bytes (reason coming up). Therefore, the amount of memory bytes allocated to serve a request is always at least (size+4). The Buddy allocator always allocates memory in size of powers of 2. Therefore, we need to determine the smallest n such that an order n block can serve the request. This can be calculated as<br>The allocation algorithm for the Buddy allocator then proceeds as follows.</p><p>If free_list_start[n] is not NULL, delete the first order n memory block from the list.<br>Store n in the first 4 bytes of that block, and return (4 + start address of the block).<br>Otherwise, move to the free list of the next higher order and check if it is NULL. Keep doing this until you find one that is not NULL. In case you reach the maximum order (MAX_ORDER) and the free list there is still empty, then you can call grow_heap to receive a 4KB (212 bytes, order 12) memory block. Add this block to the order 12 free list and continue.<br>Lets say free_list_start[p] is not NULL. Of course, p&gt;n.<br>a. delete the first order p memory block from the list; say the start address of that block is s.<br>b. add two order (p-1) memory blocks to the order (p-1) free list. The first of the two blocks will begin at address s and the second one will begin at address (s + 2^p-1). Remember, the list must be kept in ascending order of the start addresses.<br>Essentially, you have split a larger chunk of memory into two smaller ones of equal sizes.</p><p>Repeat from step 1.<br>As an example, the following figures show the before and after versions of few of the free lists (order 3, 4, 5) when my_malloc(4) is called. Note that the way the implementation is sought here implies that each my_malloc call should not be for more than 4092 bytes. There are ways to handle this, but is not needed in this request.</p><h3 id="Implementing-my-free"><a href="#Implementing-my-free" class="headerlink" title="Implementing my_free"></a>Implementing my_free</h3><p>The first step in my_free is to determine how much memory is to be freed. The function takes as input a memory address returned by my_malloc in an earlier call. Since my_malloc stores the order of the memory block allocated, we can use it to determine how much memory is being returned. If p is the start address of the returned area of memory, then the 4 bytes beginning at f=(p-4) has the order (say n). Therefore, we need to insert back an order n memory block beginning at address f into the order n free list. The deallocation algorithm is as follows.</p><p>Add the order n block starting at f to the order n free list. Remember, the list must be kept in ascending order of the start addresses.<br>If n &lt; MAX_ORDER, check whether<br>a. the added block and the next (or previous) block in the list together represent a contiguous memory region, and<br>b. the smaller of the two start addresses of the two blocks is a multiple of 2n+1.<br>If any of the above two conditions is not true, return; otherwise, continue.<br>The two blocks can be merged and entered into a higher order list.<br>a. let f = the smaller of the start addresses of the two blocks.<br>b. remove the two blocks from the order n free list.<br>c. let n = n + 1.<br>d. Repeat from step 1 with the updated n and f values.<br>Therefore, the my_free function returns memory blocks to the free lists, and coalesces contiguous blocks to higher order blocks whenever possible. Note that my_free does not return memory back to the operating system (decrement the heap top). As a program calls my_malloc and my_free, the same heap region gets allocated in different sizes over the life of the program. Since the two functions are running in user space, this reduces the number of system calls that user programs will have to make to request heap memory. The following figure shows an example of my_free.</p><h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>Download the mymalloc.c file from the request page. The file has the grow_heap function and some helper functions to print the free lists and return values. Your objective is to complete the implementation of the my_malloc and my_free functions as per the specifications. The main function is for testing purposes only; what you write in this function will be discarded before grading. The output generated by the provided main function is given in the last page. Some interesting cases that you should test:</p><p>malloc such that no splitting is necessary<br>malloc such that splitting will be necessary; check the case when splitting initiates multiple levels down<br>free such that merging happens with the next block in the list<br>free such that merging happens with the previous block in the list<br>malloc and free such that merging does not happen<br>malloc and free such that merging propagates down more than one level<br>other interesting pointer related errors!!</p><h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><p>Submit in Canvas the modified mymalloc.c file, and a README file containing any information you feel the GTA should know before grading your program. Comment your program well (include your name).</p>]]></content>
+    
+    <summary type="html">
+    
+      编写Heap allocator, 实现malloc和free函数
+    
+    </summary>
+    
+      <category term="C" scheme="cplusplusdaixie.com/categories/C/"/>
+    
+    
+      <category term="OS" scheme="cplusplusdaixie.com/tags/OS/"/>
     
   </entry>
   
