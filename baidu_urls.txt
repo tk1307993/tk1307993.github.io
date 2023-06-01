@@ -1,5 +1,5 @@
-cplusplusdaixie.com/COMP285-Computer-Aided-Software-Development-Assignment2.html
 cplusplusdaixie.com/hello-world.html
 cplusplusdaixie.com/ISE543-Predictive-Model.html
 cplusplusdaixie.com/COMP3620-Constraint-Satisfaction-Problems.html
 cplusplusdaixie.com/CSE536-User-Level-Thread-Management.html
+cplusplusdaixie.com/CSCI561-First-Order-Logic-Resolution.html
