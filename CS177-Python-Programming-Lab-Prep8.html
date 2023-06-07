@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Network Programming,Swing,">
+  <meta name="keywords" content="Fundamentals,Python,">
 
 
 
@@ -83,18 +83,20 @@
 
 
 
-<meta name="description" content="用Java代写一个Authentification Server，包含GUI与交互。">
-<meta name="keywords" content="Network Programming,Swing">
+<meta name="description" content="继续代写Python基础练习题，练习Python的基础使用方法，属于比较基础的Python作业。">
+<meta name="keywords" content="Fundamentals,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CIT325-Authentification-Server">
-<meta property="og:url" content="cplusplusdaixie.com/CIT325-Authentification-Server.html">
+<meta property="og:title" content="Python代写：CS177-Python-Programming-Lab-Prep8">
+<meta property="og:url" content="cplusplusdaixie.com/CS177-Python-Programming-Lab-Prep8.html">
 <meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
-<meta property="og:description" content="用Java代写一个Authentification Server，包含GUI与交互。">
+<meta property="og:description" content="继续代写Python基础练习题，练习Python的基础使用方法，属于比较基础的Python作业。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-06-05T03:41:13.397Z">
+<meta property="og:image" content="https://www.python.org/static/img/python-logo@2x.png">
+<meta property="og:updated_time" content="2023-06-07T21:58:02.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CIT325-Authentification-Server">
-<meta name="twitter:description" content="用Java代写一个Authentification Server，包含GUI与交互。">
+<meta name="twitter:title" content="Python代写：CS177-Python-Programming-Lab-Prep8">
+<meta name="twitter:description" content="继续代写Python基础练习题，练习Python的基础使用方法，属于比较基础的Python作业。">
+<meta name="twitter:image" content="https://www.python.org/static/img/python-logo@2x.png">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="cplusplusdaixie.com/CIT325-Authentification-Server.html">
+  <link rel="canonical" href="cplusplusdaixie.com/CS177-Python-Programming-Lab-Prep8.html">
 
 
 
 
 
-  <title>CIT325-Authentification-Server | 留学生计算机编程数学统计作业代写</title>
+  <title>Python代写：CS177-Python-Programming-Lab-Prep8 | 留学生计算机编程数学统计作业代写</title>
   
 
 
@@ -267,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CIT325-Authentification-Server.html">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CS177-Python-Programming-Lab-Prep8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +286,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CIT325-Authentification-Server</h2>
+          <h2 class="post-title" itemprop="name headline">Python代写：CS177-Python-Programming-Lab-Prep8</h2>
         
 
         <div class="post-meta">
@@ -296,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-11T08:51:12+08:00">
-                2020-06-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-06-08T05:55:50+08:00">
+                2023-06-08
               </time>
             
 
@@ -319,8 +321,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -343,7 +345,7 @@
 
           
               <div class="post-description">
-                  用Java代写一个Authentification Server，包含GUI与交互。
+                  继续代写Python基础练习题，练习Python的基础使用方法，属于比较基础的Python作业。
               </div>
           
 
@@ -360,17 +362,34 @@
       
 
       
-        <h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><p>The goal of this lab is to develop a deeper understanding of how objects can be moved around the Internet by developing a useful, but small, system to store data on multiple computers. You will develop a graphical client that will allow you create, edit and delete student data. The data will be stored on a Student Server and login data will be stored on the Authentication Server.</p>
-<h3 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h3><p>You will begin with the GUI and code used to complete the previous lab. You will add a JButton to the toolbar and a menu item under the File menu called Login. When selected or pressed:</p>
-<ol>
-<li>Show a dialog with userid and password fields</li>
-<li>When the fields are populated and the dialog OK button is clicked, connects to the Authentification Server.</li>
-<li>If the userid/password combination is valid user is allowed to login to the Student Server.</li>
-<li>if the userid/password combination is invalid, another dialog is shown, informing the user the userid/password is invalid.<br>Once connected, the user will be able to do all functions they could do with the previous lab. Now, the system will connect to the Student Server to get the data instead of storing it locally.</li>
-</ol>
-<h3 id="Authentification-Server"><a href="#Authentification-Server" class="headerlink" title="Authentification Server"></a>Authentification Server</h3><p>The Authentification Server will receive a request which has a userid/password combination. It will compare these 2 fields to its own data to see if this is a valid user login. If it is valid, it will send a login OK message to the Student Server, allowing the user to begin adding, editing and changing student data.<br>The data is kept in a text file, that will need to be loaded when the server is started. The data can be read in and stored in any structure that the designer deems worthy.<br>This server is located at:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCP<span class="built_in">/IP </span>Address: 127.0.0.1</span><br><span class="line">Port: 8189</span><br></pre></td></tr></table></figure></p>
-<h3 id="Student-Server"><a href="#Student-Server" class="headerlink" title="Student Server"></a>Student Server</h3><p>The Student Server is similar as to what was used in Lab 7 to store student data. It is basically an ArrayList of objects wrapped in a server. The 4 classes are: Student, Undergrad, Graduate, NonDegree and are the same design as they were in Lab 7.<br>In Lab 7, the arraylist was part of the GUI object. Now, the arraylist is wrapped in a server and the object must be passed back and forth each time the user, via the GUI, wants to compete a transaction.<br>This server is located at:<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCP<span class="built_in">/IP </span>Address: 127.0.0.1</span><br><span class="line">Port: 8190</span><br></pre></td></tr></table></figure></p>
-
+        <p>继续代写<a href="https://www.w3schools.com/python/" target="_blank" rel="noopener">Python</a>基础练习题，练习Python的基础使用方法，属于比较基础的Python作业。<br><img src="https://www.python.org/static/img/python-logo@2x.png" alt="Python"></p>
+<h3 id="Lab-Prep-8"><a href="#Lab-Prep-8" class="headerlink" title="Lab Prep 8"></a>Lab Prep 8</h3><h2 id="Due-Date"><a href="#Due-Date" class="headerlink" title="Due Date"></a>Due Date</h2><p>This is an <strong><em>individual</em></strong> assignment is due by 11:59 pm on the night before your lab. You must complete this assignment on your own.</p>
+<h2 id="Using-an-Entry-box"><a href="#Using-an-Entry-box" class="headerlink" title="Using an Entry box"></a>Using an Entry box</h2><p>In the past when we wanted to prompt the user for a values, we have used the input() function. This works well in text-based programs, but the challenge is to do this within a Python <em>Graphics</em> window.</p>
+<p>The Python Graphics module offers the <em>Entry</em> object type as a way to allow the user to type in Strings allowing them to interact with the program. The <em>Entry</em> object has two parameters: a center Point and a<br>length. For example, if you wanted to define an <em>Entry</em> box centered at coordinates (100, 20) with a width of 10 characters:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myEntry = Entry(<span class="name">Point</span>(<span class="number">100</span>, <span class="number">20</span>), <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>As with all <em>Graphics</em> objects, the <em>Entry</em> box will need to be drawn after it’s defined. We can use the .getText() function to retrieve the <em>String</em> that has been typed in the <em>Entry</em> box.</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">myString</span> = myEntry.getText()</span><br></pre></td></tr></table></figure>
+<h2 id="The-Assignment"><a href="#The-Assignment" class="headerlink" title="The Assignment"></a>The Assignment</h2><p>Write a program named labprep8.py that creates a <em>Graphics</em> window matching the example shown here and meet the following parameters:</p>
+<ul>
+<li>All Python commands (except for import)<br>  should be within functions</li>
+<li>Include a complete header, including the<br>  program name, your name and a description of<br>  the program’s function</li>
+<li>The program should be fully commented with pseudocode throughout</li>
+<li>The <em>Graphics</em> window should be square - with the title What Color, equal x,y dimensions and<br>  a light grey background fill</li>
+<li>The Color for next Circle <em>Text</em> label and associated <em>Entry</em> object</li>
+<li>The DRAW control represented by a light green <em>Rectangle</em></li>
+<li>The QUIT control represented by a red <em>Rectangle</em></li>
+<li>When a click is detected within the DRAW control:<br>  o If the <em>String</em> obtained from the <em>Entry</em> box is one of the following colors: red, blue, green, yellow, black, purple or pink<pre><code>§ A _Circle_ with a random radius between 10 - 25 is drawn at a random x,y coordinate within the _Graphics_ window.
+§ The _Circle’s_ fill color should be the _String_ obtained from the _Entry_ box
+</code></pre>  o Nothing should happen if the <em>String</em> obtained from the <em>Entry</em> box is not one of those colors</li>
+<li>When a click is detected within the QUIT control, the <em>Graphics</em> window should close and the program should end without any errors.</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">An functional example <span class="keyword">of</span> this program <span class="keyword">is</span> provided <span class="keyword">with</span> <span class="keyword">the</span> Lab Prep <span class="number">8</span> assignment <span class="keyword">on</span> Blackboard</span><br></pre></td></tr></table></figure>
+<h2 id="Submit-your-completed-Lab-Prep-8"><a href="#Submit-your-completed-Lab-Prep-8" class="headerlink" title="Submit your completed Lab Prep 8"></a>Submit your completed Lab Prep 8</h2><ul>
+<li>Submit your labprep8.py file to Lab Prep 8 on Blackboard</li>
+<li>This assignment is due by 11:59 pm on the night before your lab meeting</li>
+<li>This is an individual assignment – you may not work together</li>
+</ul>
+<h2 id="Lab-Prep-8-Grading-Rubric-Points"><a href="#Lab-Prep-8-Grading-Rubric-Points" class="headerlink" title="Lab Prep 8 Grading Rubric Points"></a>Lab Prep 8 Grading Rubric Points</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Program has correct filename labprep8.py, and a complete header as specified 1</span><br><span class="line">Program is fully documented using pseudocode comments 2</span><br><span class="line">Graphics window is created <span class="keyword">with</span> <span class="keyword">all</span> objects <span class="keyword">as</span> specified <span class="number">3</span></span><br><span class="line">A click <span class="keyword">on</span> the DRAW control results <span class="keyword">in</span> random Circle <span class="keyword">with</span> valid color specified <span class="keyword">in</span> Entry box <span class="keyword">object</span> <span class="number">3</span></span><br><span class="line"><span class="keyword">No</span> Circles <span class="keyword">are</span> drawn <span class="keyword">if</span> invalid color <span class="keyword">is</span> <span class="keyword">in</span> the Entry box <span class="number">2</span></span><br><span class="line">A click <span class="keyword">on</span> the QUIT control closes the Graphics <span class="keyword">window</span> <span class="keyword">and</span> ends the program (<span class="keyword">no</span> <span class="keyword">errors</span>) <span class="number">2</span></span><br><span class="line"><span class="keyword">Style</span> / <span class="keyword">Format</span>: Program <span class="keyword">is</span> formatted well <span class="keyword">and</span> easy <span class="keyword">to</span> understand <span class="number">2</span></span><br><span class="line">Total Points <span class="number">15</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -387,9 +406,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Network-Programming/" rel="tag"># Network Programming</a>
+            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
           
-            <a href="/tags/Swing/" rel="tag"># Swing</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -402,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ECE244-Binary-Search-Trees.html" rel="next" title="ECE244-Binary-Search-Trees">
-                <i class="fa fa-chevron-left"></i> ECE244-Binary-Search-Trees
+              <a href="/CS177-Python-Programming-Lab-Prep7.html" rel="next" title="Python代写：CS177-Python-Programming-Lab-Prep7">
+                <i class="fa fa-chevron-left"></i> Python代写：CS177-Python-Programming-Lab-Prep7
               </a>
             
           </div>
@@ -411,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSCI1200-Word-Frequency-Maps.html" rel="prev" title="C++代写：CSCI1200-Word-Frequency-Maps">
-                C++代写：CSCI1200-Word-Frequency-Maps <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Goals"><span class="nav-number">1.</span> <span class="nav-text">Goals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GUI"><span class="nav-number">2.</span> <span class="nav-text">GUI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Authentification-Server"><span class="nav-number">3.</span> <span class="nav-text">Authentification Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Student-Server"><span class="nav-number">4.</span> <span class="nav-text">Student Server</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lab-Prep-8"><span class="nav-number">1.</span> <span class="nav-text">Lab Prep 8</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Due-Date"><span class="nav-number"></span> <span class="nav-text">Due Date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-an-Entry-box"><span class="nav-number"></span> <span class="nav-text">Using an Entry box</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Assignment"><span class="nav-number"></span> <span class="nav-text">The Assignment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Submit-your-completed-Lab-Prep-8"><span class="nav-number"></span> <span class="nav-text">Submit your completed Lab Prep 8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-Prep-8-Grading-Rubric-Points"><span class="nav-number"></span> <span class="nav-text">Lab Prep 8 Grading Rubric Points</span></a></li></div>
             
 
           </div>
