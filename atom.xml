@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="cplusplusdaixie.com/"/>
-  <updated>2023-06-11T00:49:56.744Z</updated>
+  <updated>2023-06-12T03:39:43.258Z</updated>
   <id>cplusplusdaixie.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数字信号处理代写：EECS152A-Digital-Signal-Processing-Final-Exam</title>
+    <link href="cplusplusdaixie.com/EECS152A-Digital-Signal-Processing-Final-Exam.html"/>
+    <id>cplusplusdaixie.com/EECS152A-Digital-Signal-Processing-Final-Exam.html</id>
+    <published>2023-06-12T03:38:54.000Z</published>
+    <updated>2023-06-12T03:39:43.258Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Final-Exam-Fall-2020"><a href="#Final-Exam-Fall-2020" class="headerlink" title="Final Exam Fall 2020"></a>Final Exam Fall 2020</h3><h1 id="EECS-152A-Digital-Signal-Processing"><a href="#EECS-152A-Digital-Signal-Processing" class="headerlink" title="EECS 152A: Digital Signal Processing"></a>EECS 152A: Digital Signal Processing</h1><h1 id="110-Minutes"><a href="#110-Minutes" class="headerlink" title="110 Minutes"></a>110 Minutes</h1><ol><li>Consider a digital filter with the following difference equation:<br> 3y(n) = y(n-2) – 2 y(n-3) + 4x(n-1) – 5 x(n-3)<br>a) Determine the system function _H_ ( _z_ )<br>b) Draw the signal flow graph for the direct form I realization.</li><li>a) What is the criteria for system function Ha(s) of an analog filter, for it to be stable?<br> b) Assume that you would like to implement a 10th order digital filter and the quantizer that you are using, uses only 4 bits. If you have a choice between a direct form implementation and a cascade form implementation, which one will you pick? Why?</li><li>Consider a system with the following input-output relationship<br> 𝑦𝑦(𝑛𝑛)= −0.5𝑦𝑦(𝑛𝑛− 1 )+𝑥𝑥(𝑛𝑛)<br> Assume that we implement the system using 4 bits (one sign bit and three binary bits to represent the magnitude) and rounding up.<br> a) Draw the output of the quantizer vs. the input of the quantizer. (You can skip middle parts of the graph if you can show the trend)<br> b) Find the response of the system, y(n), for all values of n, to the input x(n) = ¾<pre><code>δ(n).</code></pre> c) What value does 1010 represent?<br> d) What is limit cycle?</li><li>a) Draw the impulse response of a type III linear phase filter which has a group delay of 3. You can choose any value for the coefficients that you want.<br> b) What is the phase of this filter?<br> c) Can we design a lowpass filter that is type III linear phase filter? Explain</li><li>We would like to use impulse invariance mapping of an analog 1st order Butterworth<br> filter to design a digital lowpass filter with at least 40 dB attenuation at 0.4π ≤ |ω| ≤ π.<br> Assume T = 2.<br> a) What is the main problem with impulse invariance mapping? How can it be avoided or minimized.<br> b) What is the Ha(s) of the analog filter?<br> c) What is the H(z) of the digital filter?</li></ol><ol start="6"><li>We would like to design a 5 tap causal linear-phase FIR filter, approximating an ideal<br> high pass filter with cutoff frequency of 𝜋𝜋 3 | using a Hanning window.<br> Hanning Window: w(n) =^12 (1 – cos 𝑀𝑀−12𝜋𝜋𝜋𝜋 ) 0 ≤ n ≤ M-<br> a) What is the group delay of this filter?<br> b) What is H(z) of this filter?<br> c) If we wanted to suppress the ripple in the stopband of H(z) further, what would you change in the design of the FIR filter?<br> d) Draw the best implementation. Why is this the best implementation?</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      帮忙做数字信号处理的往届真题，用于复习。
+    
+    </summary>
+    
+      <category term="数字信号处理" scheme="cplusplusdaixie.com/categories/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="数字信号处理" scheme="cplusplusdaixie.com/tags/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Python代写：CSE-IT-107L-Final-Project-Contacts</title>
@@ -35,28 +57,6 @@
     
     
       <category term="Python" scheme="cplusplusdaixie.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数字信号处理代写：EECS152A-Digital-Signal-Processing-Final-Exam</title>
-    <link href="cplusplusdaixie.com/EECS152A-Digital-Signal-Processing-Final-Exam.html"/>
-    <id>cplusplusdaixie.com/EECS152A-Digital-Signal-Processing-Final-Exam.html</id>
-    <published>2023-06-11T00:45:54.000Z</published>
-    <updated>2023-06-12T03:37:43.162Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Final-Exam-Fall-2020"><a href="#Final-Exam-Fall-2020" class="headerlink" title="Final Exam Fall 2020"></a>Final Exam Fall 2020</h3><h1 id="EECS-152A-Digital-Signal-Processing"><a href="#EECS-152A-Digital-Signal-Processing" class="headerlink" title="EECS 152A: Digital Signal Processing"></a>EECS 152A: Digital Signal Processing</h1><h1 id="110-Minutes"><a href="#110-Minutes" class="headerlink" title="110 Minutes"></a>110 Minutes</h1><ol><li>Consider a digital filter with the following difference equation:<br> 3y(n) = y(n-2) – 2 y(n-3) + 4x(n-1) – 5 x(n-3)<br>a) Determine the system function _H_ ( _z_ )<br>b) Draw the signal flow graph for the direct form I realization.</li><li>a) What is the criteria for system function Ha(s) of an analog filter, for it to be stable?<br> b) Assume that you would like to implement a 10th order digital filter and the quantizer that you are using, uses only 4 bits. If you have a choice between a direct form implementation and a cascade form implementation, which one will you pick? Why?</li><li>Consider a system with the following input-output relationship<br> 𝑦𝑦(𝑛𝑛)= −0.5𝑦𝑦(𝑛𝑛− 1 )+𝑥𝑥(𝑛𝑛)<br> Assume that we implement the system using 4 bits (one sign bit and three binary bits to represent the magnitude) and rounding up.<br> a) Draw the output of the quantizer vs. the input of the quantizer. (You can skip middle parts of the graph if you can show the trend)<br> b) Find the response of the system, y(n), for all values of n, to the input x(n) = ¾<pre><code>δ(n).</code></pre> c) What value does 1010 represent?<br> d) What is limit cycle?</li><li>a) Draw the impulse response of a type III linear phase filter which has a group delay of 3. You can choose any value for the coefficients that you want.<br> b) What is the phase of this filter?<br> c) Can we design a lowpass filter that is type III linear phase filter? Explain</li><li>We would like to use impulse invariance mapping of an analog 1st order Butterworth<br> filter to design a digital lowpass filter with at least 40 dB attenuation at 0.4π ≤ |ω| ≤ π.<br> Assume T = 2.<br> a) What is the main problem with impulse invariance mapping? How can it be avoided or minimized.<br> b) What is the Ha(s) of the analog filter?<br> c) What is the H(z) of the digital filter?</li></ol><ol start="6"><li>We would like to design a 5 tap causal linear-phase FIR filter, approximating an ideal<br> high pass filter with cutoff frequency of 𝜋𝜋 3 | using a Hanning window.<br> Hanning Window: w(n) =^12 (1 – cos 𝑀𝑀−12𝜋𝜋𝜋𝜋 ) 0 ≤ n ≤ M-<br> a) What is the group delay of this filter?<br> b) What is H(z) of this filter?<br> c) If we wanted to suppress the ripple in the stopband of H(z) further, what would you change in the design of the FIR filter?<br> d) Draw the best implementation. Why is this the best implementation?</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      帮忙做数字信号处理的往届真题，用于复习。
-    
-    </summary>
-    
-      <category term="数字信号处理" scheme="cplusplusdaixie.com/categories/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="数字信号处理" scheme="cplusplusdaixie.com/tags/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
