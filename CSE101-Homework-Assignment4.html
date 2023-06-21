@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Python完成">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：CSE101-Homework-Assignment4">
+<meta property="og:url" content="cplusplusdaixie.com/CSE101-Homework-Assignment4.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Python完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-06-21T02:36:41.244Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：CSE101-Homework-Assignment4">
+<meta name="twitter:description" content="使用Python完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE101-Homework-Assignment4.html">
+
+
+
+
+
+  <title>Python代写：CSE101-Homework-Assignment4 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE101-Homework-Assignment4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：CSE101-Homework-Assignment4</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-06-21T10:34:37+08:00">
+                2023-06-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Python完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-101-Computer-Science-Principles"><a href="#CSE-101-Computer-Science-Principles" class="headerlink" title="CSE 101: Computer Science Principles"></a>CSE 101: Computer Science Principles</h3><h1 id="Stony-Brook-University"><a href="#Stony-Brook-University" class="headerlink" title="Stony Brook University"></a>Stony Brook University</h1><h1 id="Homework-Assignment"><a href="#Homework-Assignment" class="headerlink" title="Homework Assignment"></a>Homework Assignment</h1><h1 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h1><p>After completion of this homework assignment, you should be able to:</p>
+<ul>
+<li>Design and implement an algorithm that uses one or more dictionaries to solve a problem.</li>
+<li>Design and implement an algorithm that requires string processing.</li>
+<li>Design and implement an algorithm that involves recursion.</li>
+</ul>
+<h1 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h1><p>From Blackboard download the fileshomework4.py andhomework4tester.pyonto your computer.<br>Copy the files into your PyCharm project folder. The two files should automatically be found by PyCharm when you start the program. At the top ofhomework4.pyfill in the following information:</p>
+<ol>
+<li>your first and last name as they appear in Blackboard</li>
+<li>your Net ID (e.g., jsmith)</li>
+<li>your Stony Brook ID # (e.g., 111999999)</li>
+</ol>
+<p>Do not, under any circumstances, change the names of the functions or their argument lists. The automated grading software will be looking for exactly those functions provided inhomework4.py.</p>
+<p>To test your work, run the providedhomework4tester.pyfile. Note that different test cases will be used during grading.</p>
+<p>Submit your finalhomework4.pyfile to Blackboard by the due date and time. Late work will not be graded.<br>Code that crashes and cannot be graded will earn no credit.</p>
+<h1 id="About-This-Assignment"><a href="#About-This-Assignment" class="headerlink" title="About This Assignment"></a>About This Assignment</h1><p>Since we are all hunkered down while we wait for COVID-19 to run its course, why not work on an assignment about the topic?</p>
+<p>You will be working with CSV files based on COVID-19 infection data taken from github.com/CSSEGISandData/COVID-19. A CSV file organizes each “data point” from a data-set on a single line, with the individual variables of the data point ascomma-separated valueson that line. For example here is a line of data from03-25-2020.csvabout COVID-19 deaths and recoveries in Dutchess County, NY:</p>
+<p>Dutchess,New York,153,1,0,</p>
+<p>These values represent, respectively:</p>
+<ol>
+<li>a region from a state</li>
+<li>the state in question</li>
+<li>number of total confirmed cases of COVID-19 in the region</li>
+<li>number of deaths from COVID-19 in the region</li>
+<li>number of recoveries from COVID-19 in the region</li>
+<li>number of active cases of COVID-19 in the region</li>
+</ol>
+<h1 id="Part-I-Build-a-Dictionary-of-State-Regions-20-points"><a href="#Part-I-Build-a-Dictionary-of-State-Regions-20-points" class="headerlink" title="Part I: Build a Dictionary of State Regions (20 points)"></a>Part I: Build a Dictionary of State Regions (20 points)</h1><p>Complete the functionbuild_dict_regions_by_state(), which takes one argument:</p>
+<ul>
+<li>filename: the name of a CSV file of COVID-19 data</li>
+</ul>
+<p>The file is formatted as follows:</p>
+<p>Region,State,Cases,Deaths,Recovered,Active<br>Hampshire,West Virginia,0,0,0,<br>Walton,Georgia,1,0,0,<br>Anderson,Kentucky,2,1,0,<br>… etc. …</p>
+<p>The first line of our CSV files always contains the meaning of each value per line. The number of lines can vary from one CSV file to the next. Note that the values are always separated by commas. Using data from the file, the function builds and returns a dictionary that maps each state’s name to a list of regions in that state.</p>
+<p>After opening a file with theopen()function, getting its contents line-by-line is as simple as writing a for-loop:</p>
+<p>for line in …:</p>
+<h1 id="do-something-with-“line”-such-as-line-split-’-’"><a href="#do-something-with-“line”-such-as-line-split-’-’" class="headerlink" title="do something with “line”, such as line.split(’,’)"></a>do something with “line”, such as line.split(’,’)</h1><p>where the…is the variable that points to the file opened viaopen().</p>
+<p>For the file03-25-2020.csv, a portion of the resulting dictionary is shown below. Note that the order of keys (state names, for us) in a dictionary is irrelevant.</p>
+<p>{<br>’West Virginia’: [’Hampshire’, ’Ohio’, ’Jefferson’, ’Monongalia’, …],<br>’Georgia’: [’Walton’, ’Jefferson’, ’Fulton’, ’Grady’, …],<br>’Kentucky’: [’Anderson’, ’Todd’, ’Hickman’, ’Clay’, …],<br>’Colorado’: [’Ouray’, ’Archuleta’, ’Clear Creek’, ’Costilla’, …],<br>…<br>}</p>
+<h1 id="Part-II-Build-a-Dictionary-that-Maps-a-State’s-Name-to-Infection-Data-20-points"><a href="#Part-II-Build-a-Dictionary-that-Maps-a-State’s-Name-to-Infection-Data-20-points" class="headerlink" title="Part II: Build a Dictionary that Maps a State’s Name to Infection Data (20 points)"></a>Part II: Build a Dictionary that Maps a State’s Name to Infection Data (20 points)</h1><p>Complete the functionbuild_dict_stats_by_state(), which takes two arguments:</p>
+<ul>
+<li>filename: the name of a CSV file of COVID-19 data</li>
+<li>stat: the data value we want to associate with each state. Valid values are “cases”, “deaths”, “recovered”<br>  and “active”, which may appear in any case. For example, “Cases”, “CASES”, “caSES”, etc. would all be<br>  valid.</li>
+</ul>
+<p>The function opens the CSV file and processes it to build a dictionary that maps each state’s name to its total of all statvalues in that state’s regions. For example,build_dict_stats_by_state(’03-22-2020.csv’,<br>’Cases’)would build a dictionary that maps each state’s name to the total of the’cases’column for that state.</p>
+<p>For example, for the file’03-22-2020.csv’andstats = ’cases’, the returned dictionary is given below:</p>
+<p>{’New York’: 15800, ’Washington’: 1997, ’New Jersey’: 1914, ’California’: 1646,<br>’Illinois’: 1049, ’Michigan’: 1035, ’Florida’: 1004, ’Louisiana’: 837,<br>’Massachusetts’: 646, ’Texas’: 643, ’Georgia’: 621, ’Colorado’: 591,<br>’Pennsylvania’: 509, ’Tennessee’: 505, ’Wisconsin’: 381, ’Ohio’: 356,<br>’Connecticut’: 327, ’North Carolina’: 305, ’Maryland’: 244, ’Virginia’: 220,<br>… etc … }</p>
+<h1 id="Part-III-Find-the-Region-in-a-State-with-the-Most-Deaths-20-points"><a href="#Part-III-Find-the-Region-in-a-State-with-the-Most-Deaths-20-points" class="headerlink" title="Part III: Find the Region in a State with the Most Deaths (20 points)"></a>Part III: Find the Region in a State with the Most Deaths (20 points)</h1><p>Complete the functionget_region_max_deaths(), which takes two arguments:</p>
+<ul>
+<li>filename: the name of a CSV file of COVID-19 data</li>
+<li>state: the name of a state from the CSV file</li>
+</ul>
+<p>The file processes the CSV file and returns the name of the region in the state namedstatethat reported the most deaths. Note that creating a dictionary is not necessary to solve this problem, but feel free to do so if it makes it easier for use to write the code.</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Function</span> <span class="title">Arguments</span> <span class="keyword">Return</span> <span class="type">Value</span></span><br><span class="line"><span class="string">"03-22-2020.csv"</span>, <span class="string">"Washington"</span> <span class="string">"King"</span></span><br><span class="line"><span class="string">"03-23-2020.csv"</span>, <span class="string">"New York"</span> <span class="string">"New York City"</span></span><br><span class="line"><span class="string">"03-24-2020.csv"</span>, <span class="string">"California"</span> <span class="string">"Santa Clara"</span></span><br><span class="line"><span class="string">"03-25-2020.csv"</span>, <span class="string">"Louisiana"</span> <span class="string">"Orleans"</span></span><br><span class="line"><span class="string">"03-25-2020.csv"</span>, <span class="string">"Connecticut"</span> <span class="string">"Fairfield"</span></span><br></pre></td></tr></table></figure>
+<h1 id="Part-IV-Find-the-State-with-the-Highest-Death-Rate-20-points"><a href="#Part-IV-Find-the-State-with-the-Highest-Death-Rate-20-points" class="headerlink" title="Part IV: Find the State with the Highest Death Rate (20 points)"></a>Part IV: Find the State with the Highest Death Rate (20 points)</h1><p>Complete the functionhighest_death_rate_by_state(), which takes one argument:</p>
+<ul>
+<li>filename: the name of a CSV file of COVID-19 data</li>
+</ul>
+<p>First, the function callsbuild_dict_stats_by_state()twice with appropriate arguments to generate two dictionaries:</p>
+<ul>
+<li>a dictionary that maps each state’s name to its number ofcases</li>
+<li>a dictionary that maps each state’s name to its number ofdeaths</li>
+</ul>
+<p>The death rate for a given state can then be computed as:</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span> ×deaths per <span class="keyword">state</span></span><br><span class="line">cases per <span class="keyword">state</span></span><br></pre></td></tr></table></figure>
+<p>The function returns atuplecontaining the name of the state, followed by its death rate. For example, suppose you stored the name of that state inmax_stateand its death rate inmax_death_rate. Then, your function’s<br>return statement would be:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> max_state, max_death_rate</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Function</span> <span class="title">Arguments</span> <span class="keyword">Return</span> <span class="type">Value</span></span><br><span class="line"><span class="string">"03-22-2020.csv"</span> (’Washington’, <span class="number">4.85728592889334</span>)</span><br><span class="line"><span class="string">"03-23-2020.csv"</span> (’Vermont’, <span class="number">6.666666666666667</span>)</span><br><span class="line"><span class="string">"03-24-2020.csv"</span> (’Vermont’, <span class="number">7.368421052631579</span>)</span><br><span class="line"><span class="string">"03-25-2020.csv"</span> (’Vermont’, <span class="number">6.4</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Part-V-And-Now-For-Something-Different-John’s-Workout-10-points"><a href="#Part-V-And-Now-For-Something-Different-John’s-Workout-10-points" class="headerlink" title="Part V: And Now For Something Different: John’s Workout (10 points)"></a>Part V: And Now For Something Different: John’s Workout (10 points)</h1><p>John wants to start a rigorous workout regimen to strengthen his arms and core. To do that, he decides to start doing push-ups everyday. He comes up with the following plan to increase his push-up count over time:</p>
+<ol>
+<li>For day 1, the push-up count is was it was yesterday. This value is given as the first argument to the function.</li>
+<li>Starting from day 2 until day 5, he doubles the push-up count each day.</li>
+<li>From day 6 until day 10, he increases the push-up count by 10 each day.</li>
+<li>From day 11 until day 20, he increases the push-up count by 8 each day.</li>
+<li>After 20 days, he just increases his push-up count by 5</li>
+</ol>
+<p>Using loops (and not recursion), complete the functioniterative_num_of_pushups(), which takes two<br>arguments:</p>
+<ul>
+<li>cur_push_ups: the current number of push-ups that John has been doing (before day 2)</li>
+<li>days: the number of days John will exercise</li>
+</ul>
+<p>For example, for the function calliterative_num_of_pushups(3,13), the returned value would be 122 because ((((3×2)×2)×2)×2) + 10 + 10 + 10 + 10 + 10 + 8 + 8 + 8 = 122</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Function Arguments Return Value</span><br><span class="line"><span class="number">1</span>, <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">2</span>, <span class="number">15</span> <span class="number">122</span></span><br><span class="line"><span class="number">3</span>, <span class="number">25</span> <span class="number">203</span></span><br><span class="line"><span class="number">13</span>, <span class="number">40</span> <span class="number">438</span></span><br><span class="line"><span class="number">20</span>, <span class="number">24</span> <span class="number">470</span></span><br></pre></td></tr></table></figure>
+<h1 id="Part-VI-John’s-Workout-Revisited-10-points"><a href="#Part-VI-John’s-Workout-Revisited-10-points" class="headerlink" title="Part VI: John’s Workout Revisited (10 points)"></a>Part VI: John’s Workout Revisited (10 points)</h1><p>Re-implement your function from Part V of the assignment, this time using only recursion and no loops. The recursive function is to be calledrecursive_num_of_pushups(). The function takes the same arguments<br>(cur_push_upsanddays) and increases the number of push-ups each day according to the same scheme.</p>
+<p>The general structure of the function will be a multi-way if-statement with function calls to recursive_num_of_pushups(). Naturally, with each recursive call, the argumentdaymust be decremented (decreased by 1). The base case that terminates the recursion is reached whendaysequals 1.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Function Arguments Return Value</span><br><span class="line"><span class="number">1</span>, <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">2</span>, <span class="number">15</span> <span class="number">122</span></span><br><span class="line"><span class="number">3</span>, <span class="number">25</span> <span class="number">203</span></span><br><span class="line"><span class="number">13</span>, <span class="number">40</span> <span class="number">438</span></span><br><span class="line"><span class="number">20</span>, <span class="number">24</span> <span class="number">470</span></span><br></pre></td></tr></table></figure>
+<h1 id="How-to-Submit-Your-Work-for-Grading"><a href="#How-to-Submit-Your-Work-for-Grading" class="headerlink" title="How to Submit Your Work for Grading"></a>How to Submit Your Work for Grading</h1><p>To submit yourhomework4.pyfile for grading:</p>
+<ol>
+<li>Login to Blackboard and locate the section named “Assignments”.</li>
+<li>Click on the link for this assignment.</li>
+<li>Click the “Browse My Computer” button and locate thehomework4.pyfile. Submit only that one.py file.</li>
+<li>Click the “Submit” button to submit your work for grading.</li>
+</ol>
+<h1 id="Oops-I-messed-up-and-I-need-to-resubmit-a-file"><a href="#Oops-I-messed-up-and-I-need-to-resubmit-a-file" class="headerlink" title="Oops, I messed up and I need to resubmit a file!"></a>Oops, I messed up and I need to resubmit a file!</h1><p>No worries! Just follow the above directions again. We will grade only your last submission.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS10-Python-Programming-Homework5.html" rel="next" title="Python代写：CS10-Python-Programming-Homework5">
+                <i class="fa fa-chevron-left"></i> Python代写：CS10-Python-Programming-Homework5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">327</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-101-Computer-Science-Principles"><span class="nav-number">1.</span> <span class="nav-text">CSE 101: Computer Science Principles</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Stony-Brook-University"><span class="nav-number"></span> <span class="nav-text">Stony Brook University</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homework-Assignment"><span class="nav-number"></span> <span class="nav-text">Homework Assignment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Learning-Outcomes"><span class="nav-number"></span> <span class="nav-text">Learning Outcomes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Getting-Started"><span class="nav-number"></span> <span class="nav-text">Getting Started</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#About-This-Assignment"><span class="nav-number"></span> <span class="nav-text">About This Assignment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-I-Build-a-Dictionary-of-State-Regions-20-points"><span class="nav-number"></span> <span class="nav-text">Part I: Build a Dictionary of State Regions (20 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#do-something-with-“line”-such-as-line-split-’-’"><span class="nav-number"></span> <span class="nav-text">do something with “line”, such as line.split(’,’)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-II-Build-a-Dictionary-that-Maps-a-State’s-Name-to-Infection-Data-20-points"><span class="nav-number"></span> <span class="nav-text">Part II: Build a Dictionary that Maps a State’s Name to Infection Data (20 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-III-Find-the-Region-in-a-State-with-the-Most-Deaths-20-points"><span class="nav-number"></span> <span class="nav-text">Part III: Find the Region in a State with the Most Deaths (20 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-IV-Find-the-State-with-the-Highest-Death-Rate-20-points"><span class="nav-number"></span> <span class="nav-text">Part IV: Find the State with the Highest Death Rate (20 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-V-And-Now-For-Something-Different-John’s-Workout-10-points"><span class="nav-number"></span> <span class="nav-text">Part V: And Now For Something Different: John’s Workout (10 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-VI-John’s-Workout-Revisited-10-points"><span class="nav-number"></span> <span class="nav-text">Part VI: John’s Workout Revisited (10 points)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-Submit-Your-Work-for-Grading"><span class="nav-number"></span> <span class="nav-text">How to Submit Your Work for Grading</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oops-I-messed-up-and-I-need-to-resubmit-a-file"><span class="nav-number"></span> <span class="nav-text">Oops, I messed up and I need to resubmit a file!</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
