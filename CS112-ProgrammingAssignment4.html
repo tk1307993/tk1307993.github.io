@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Python完成">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：CS112-ProgrammingAssignment4">
+<meta property="og:url" content="cplusplusdaixie.com/CS112-ProgrammingAssignment4.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Python完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-06-28T01:28:58.505Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：CS112-ProgrammingAssignment4">
+<meta name="twitter:description" content="使用Python完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CS112-ProgrammingAssignment4.html">
+
+
+
+
+
+  <title>Python代写：CS112-ProgrammingAssignment4 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CS112-ProgrammingAssignment4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：CS112-ProgrammingAssignment4</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-06-28T09:02:50+08:00">
+                2023-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Python完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CS-112-Programming-Assignment-5"><a href="#CS-112-Programming-Assignment-5" class="headerlink" title="CS 112 Programming Assignment 5"></a>CS 112 Programming Assignment 5</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Loops <span class="meta">&amp; Lists</span></span><br></pre></td></tr></table></figure>
+<h3 id="The-purpose-of-this-assignment-is-to-practice-using-loops-and-basic-lists-effectively"><a href="#The-purpose-of-this-assignment-is-to-practice-using-loops-and-basic-lists-effectively" class="headerlink" title="The purpose of this assignment is to practice using loops and basic lists effectively."></a>The purpose of this assignment is to practice using loops and basic lists effectively.</h3><h3 id="See-the-“assignment-basics”-file-for-more-detailed-information-about-getting-assistance-running-the"><a href="#See-the-“assignment-basics”-file-for-more-detailed-information-about-getting-assistance-running-the" class="headerlink" title="See the “assignment basics” file for more detailed information about getting assistance, running the"></a>See the “assignment basics” file for more detailed information about getting assistance, running the</h3><h3 id="test-file-grading-commenting-and-many-other-extremely-important-things-Each-assignment-is"><a href="#test-file-grading-commenting-and-many-other-extremely-important-things-Each-assignment-is" class="headerlink" title="test file, grading, commenting, and many other extremely important things. Each assignment is"></a>test file, grading, commenting, and many other extremely important things. Each assignment is</h3><h3 id="governed-by-the-rules-in-that-document"><a href="#governed-by-the-rules-in-that-document" class="headerlink" title="governed by the rules in that document:"></a>governed by the rules in that document:</h3><h3 id="https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k5x3ennufm34cg"><a href="#https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k5x3ennufm34cg" class="headerlink" title="https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k5x3ennufm34cg"></a><a href="https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k5x3ennufm34cg" target="_blank" rel="noopener">https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k5x3ennufm34cg</a></h3><h3 id="Needed-file-the-tester-for-this-assignment"><a href="#Needed-file-the-tester-for-this-assignment" class="headerlink" title="Needed file, the tester for this assignment:"></a>Needed file, the tester for this assignment:</h3><h3 id="https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k75awsh1vap1yh"><a href="#https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k75awsh1vap1yh" class="headerlink" title="https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k75awsh1vap1yh"></a><a href="https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k75awsh1vap1yh" target="_blank" rel="noopener">https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k75awsh1vap1yh</a></h3><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><h3 id="Loop-statements-allow-us-to-run-the-same-block-of-code-repeatedly-with-the-chance-to-use-different"><a href="#Loop-statements-allow-us-to-run-the-same-block-of-code-repeatedly-with-the-chance-to-use-different" class="headerlink" title="Loop statements allow us to run the same block of code repeatedly, with the chance to use different"></a>Loop statements allow us to run the same block of code repeatedly, with the chance to use different</h3><h3 id="values-for-variables-each-time-as-the-accumulated-effects-pile-up-Lists-are-sequences-that-can-be"><a href="#values-for-variables-each-time-as-the-accumulated-effects-pile-up-Lists-are-sequences-that-can-be" class="headerlink" title="values for variables each time as the accumulated effects pile up. Lists are sequences that can be"></a>values for variables each time as the accumulated effects pile up. Lists are sequences that can be</h3><h3 id="inspected-value-by-value-and-modified-at-will-In-this-assignment-we-will-use-loops-to-perform"><a href="#inspected-value-by-value-and-modified-at-will-In-this-assignment-we-will-use-loops-to-perform" class="headerlink" title="inspected value-by-value and modified at will. In this assignment we will use loops to perform"></a>inspected value-by-value and modified at will. In this assignment we will use loops to perform</h3><h3 id="calculations-over-one-dimensional-lists-in-future-assignments-we-will-work-with-multi-dimensional"><a href="#calculations-over-one-dimensional-lists-in-future-assignments-we-will-work-with-multi-dimensional" class="headerlink" title="calculations over one-dimensional lists (in future assignments we will work with multi-dimensional"></a>calculations over one-dimensional lists (in future assignments we will work with multi-dimensional</h3><h3 id="lists-too-However-working-with-one-dimensional-lists-doesn’t-necessarily-mean-that-a-single"><a href="#lists-too-However-working-with-one-dimensional-lists-doesn’t-necessarily-mean-that-a-single" class="headerlink" title="lists too). However, working with one-dimensional lists doesn’t necessarily mean that a single"></a>lists too). However, working with one-dimensional lists doesn’t necessarily mean that a single</h3><h3 id="while-for-loop-is-always-enough-sometimes-a-repeated-iteration-over-a-list-might-require-a-double"><a href="#while-for-loop-is-always-enough-sometimes-a-repeated-iteration-over-a-list-might-require-a-double" class="headerlink" title="while/for loop is always enough, sometimes a repeated iteration over a list might require a (double"></a>while/for loop is always enough, sometimes a repeated iteration over a list might require a (double</h3><h3 id="or-even-triple-nested-loop"><a href="#or-even-triple-nested-loop" class="headerlink" title="or even triple) nested loop."></a>or even triple) nested loop.</h3><h2 id="Guidelines"><a href="#Guidelines" class="headerlink" title="Guidelines"></a>Guidelines</h2><h3 id="-You-are-not-allowed-to-import-anything"><a href="#-You-are-not-allowed-to-import-anything" class="headerlink" title=" You are not allowed to import anything."></a> You are not allowed to import anything.</h3><h3 id="-You-are-not-allowed-to-use-sets-dictionaries"><a href="#-You-are-not-allowed-to-use-sets-dictionaries" class="headerlink" title=" You are not allowed to use sets, dictionaries"></a> You are not allowed to use sets, dictionaries</h3><h3 id="-You-are-not-allowed-to-use-anything-that-hasn’t-been-covered-in-class-including-the-list"><a href="#-You-are-not-allowed-to-use-anything-that-hasn’t-been-covered-in-class-including-the-list" class="headerlink" title=" You are not allowed to use anything that hasn’t been covered in class, including the list"></a> You are not allowed to use anything that hasn’t been covered in class, including the list</h3><h3 id="comprehension-construct-if-you-don’t-know-it-don’t-worry-it’s-impossible-to-use-it-by-accident"><a href="#comprehension-construct-if-you-don’t-know-it-don’t-worry-it’s-impossible-to-use-it-by-accident" class="headerlink" title="comprehension construct (if you don’t know it, don’t worry, it’s impossible to use it by accident!)"></a>comprehension construct (if you don’t know it, don’t worry, it’s impossible to use it by accident!)</h3><h3 id="-From-built-in-functions-you-are-allowed-to-call-only-range-len-abs-int-str"><a href="#-From-built-in-functions-you-are-allowed-to-call-only-range-len-abs-int-str" class="headerlink" title=" From built-in functions, you are allowed to call only range() , len() , abs() , int() , str()"></a> From built-in functions, you are allowed to call only range() , len() , abs() , int() , str()</h3><h3 id="-From-list-methods-you-are-allowed-to-use-only-append-Please-do-not-ask-on-piazza"><a href="#-From-list-methods-you-are-allowed-to-use-only-append-Please-do-not-ask-on-piazza" class="headerlink" title=" From list methods, you are allowed to use only .append(). Please do not ask on piazza"></a> From list methods, you are allowed to use only .append(). Please do not ask on piazza</h3><h3 id="whether-you-can-use-sort-index-count-etc"><a href="#whether-you-can-use-sort-index-count-etc" class="headerlink" title="whether you can use .sort(), .index(), .count() etc."></a>whether you can use .sort(), .index(), .count() etc.</h3><h3 id="-You-are-not-allowed-to-hard-code-exhaustive-if-elif-elif-statements-to-handle-all-possible"><a href="#-You-are-not-allowed-to-hard-code-exhaustive-if-elif-elif-statements-to-handle-all-possible" class="headerlink" title=" You are not allowed to hard-code exhaustive if-elif-elif statements to handle all possible"></a> You are not allowed to hard-code exhaustive if-elif-elif statements to handle all possible</h3><h3 id="list-lengths-Your-code-should-work-with-any-length-of-list-even-if-it-were-larger-than-13"><a href="#list-lengths-Your-code-should-work-with-any-length-of-list-even-if-it-were-larger-than-13" class="headerlink" title="list lengths. Your code should work with any length of list even if it were larger than 13."></a>list lengths. Your code should work with any length of list even if it were larger than 13.</h3><h3 id="-You-can-only-use-slicing-if-it-doesn’t-bypass-a-restriction-For-example-you-can’t-use-slicing-to"><a href="#-You-can-only-use-slicing-if-it-doesn’t-bypass-a-restriction-For-example-you-can’t-use-slicing-to" class="headerlink" title=" You can only use slicing if it doesn’t bypass a restriction. For example, you can’t use slicing to"></a> You can only use slicing if it doesn’t bypass a restriction. For example, you can’t use slicing to</h3><h3 id="reverse-a-list-since-reverse-is-not-allowed-either"><a href="#reverse-a-list-since-reverse-is-not-allowed-either" class="headerlink" title="reverse a list since .reverse() is not allowed either."></a>reverse a list since .reverse() is not allowed either.</h3><h3 id="-When-a-specific-test-case-isn’t-working-plug-your-code-into-the-visualizer-to-watch-what"><a href="#-When-a-specific-test-case-isn’t-working-plug-your-code-into-the-visualizer-to-watch-what" class="headerlink" title=" When a specific test case isn’t working, plug your code into the visualizer to watch what"></a> When a specific test case isn’t working, plug your code into the visualizer to watch what</h3><h3 id="the-code-does-which-lines-run-which-branches-are-taken"><a href="#the-code-does-which-lines-run-which-branches-are-taken" class="headerlink" title="the code does, which lines run, which branches are taken."></a>the code does, which lines run, which branches are taken.</h3><h3 id="-Insert-comments-in-the-lines-you-deem-necessary"><a href="#-Insert-comments-in-the-lines-you-deem-necessary" class="headerlink" title=" Insert comments in the lines you deem necessary"></a> Insert comments in the lines you deem necessary</h3><h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><h3 id="In-this-assignment-testing-will-be-done-a-bit-different-than-before"><a href="#In-this-assignment-testing-will-be-done-a-bit-different-than-before" class="headerlink" title="In this assignment testing will be done a bit different than before:"></a>In this assignment testing will be done a bit different than before:</h3><ul>
+<li>You will start working on the assignment without a tester, and you will do your own testing based on</li>
+</ul>
+<h3 id="the-examples-we-provide-in-this-document-as-well-as-other-examples-you-can-come-up-with-Later-in"><a href="#the-examples-we-provide-in-this-document-as-well-as-other-examples-you-can-come-up-with-Later-in" class="headerlink" title="the examples we provide in this document as well as other examples you can come up with. Later in"></a>the examples we provide in this document as well as other examples you can come up with. Later in</h3><h3 id="the-week-we-will-provide-an-actual-tester-but-don’t-wait-for-it-in-order-to-start-working-on-the"><a href="#the-week-we-will-provide-an-actual-tester-but-don’t-wait-for-it-in-order-to-start-working-on-the" class="headerlink" title="the week we will provide an actual tester but don’t wait for it in order to start working on the"></a>the week we will provide an actual tester but don’t wait for it in order to start working on the</h3><h3 id="assignment-as-there-won’t-be-enough-time-to-complete-it-before-the-deadline-The-purpose-of-the"><a href="#assignment-as-there-won’t-be-enough-time-to-complete-it-before-the-deadline-The-purpose-of-the" class="headerlink" title="assignment as there won’t be enough time to complete it before the deadline. The purpose of the"></a>assignment as there won’t be enough time to complete it before the deadline. The purpose of the</h3><h3 id="delayed-release-of-the-tester-is-for-you-to-put-more-emphasis-effort-on-writing-logically-correct"><a href="#delayed-release-of-the-tester-is-for-you-to-put-more-emphasis-effort-on-writing-logically-correct" class="headerlink" title="delayed release of the tester is for you to put more emphasis/effort on writing logically correct"></a>delayed release of the tester is for you to put more emphasis/effort on writing logically correct</h3><h3 id="programs-instead-of-trying-to-pass-certain-tests-only"><a href="#programs-instead-of-trying-to-pass-certain-tests-only" class="headerlink" title="programs instead of trying to pass certain tests only."></a>programs instead of trying to pass certain tests only.</h3><ul>
+<li>When we post the tester, we’re going to omit some of the test cases that will be used for grading.</li>
+</ul>
+<h3 id="This-means-that-there-might-be-errors-in-your-code-even-if-the-tester-is-giving-you-no-errors-You-must"><a href="#This-means-that-there-might-be-errors-in-your-code-even-if-the-tester-is-giving-you-no-errors-You-must" class="headerlink" title="This means that there might be errors in your code even if the tester is giving you no errors. You must"></a>This means that there might be errors in your code even if the tester is giving you no errors. You must</h3><h3 id="do-your-own-checks-to-make-sure-that-you-haven’t-missed-anything-and-your-code-is-correct-You-do"><a href="#do-your-own-checks-to-make-sure-that-you-haven’t-missed-anything-and-your-code-is-correct-You-do" class="headerlink" title="do your own checks to make sure that you haven’t missed anything and your code is correct. You do"></a>do your own checks to make sure that you haven’t missed anything and your code is correct. You do</h3><h3 id="not-need-to-modify-the-tester-just-test-on-your-own-any-way-you-like-Again-the-goal-is-to-help-you-put"><a href="#not-need-to-modify-the-tester-just-test-on-your-own-any-way-you-like-Again-the-goal-is-to-help-you-put" class="headerlink" title="not need to modify the tester, just test on your own any way you like. Again, the goal is to help you put"></a>not need to modify the tester, just test on your own any way you like. Again, the goal is to help you put</h3><h3 id="more-focus-on-writing-logically-correct-programs-instead-of-trying-to-pass-certain-tests-only"><a href="#more-focus-on-writing-logically-correct-programs-instead-of-trying-to-pass-certain-tests-only" class="headerlink" title="more focus on writing logically correct programs instead of trying to pass certain tests only."></a>more focus on writing logically correct programs instead of trying to pass certain tests only.</h3><h2 id="Grading-Rubric"><a href="#Grading-Rubric" class="headerlink" title="Grading Rubric"></a>Grading Rubric</h2><h3 id="Submitted-correctly"><a href="#Submitted-correctly" class="headerlink" title="Submitted correctly:"></a>Submitted correctly:</h3><h3 id="Code-is-well-commented"><a href="#Code-is-well-commented" class="headerlink" title="Code is well commented:"></a>Code is well commented:</h3><h3 id="Tester-calculations-correct"><a href="#Tester-calculations-correct" class="headerlink" title="Tester calculations correct:"></a>Tester calculations correct:</h3><h3 id="Unknown-test-cases"><a href="#Unknown-test-cases" class="headerlink" title="Unknown test cases"></a>Unknown test cases</h3><h3 id="TOTAL"><a href="#TOTAL" class="headerlink" title="TOTAL:"></a>TOTAL:</h3><h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><h3 id="8"><a href="#8" class="headerlink" title="8"></a>8</h3><h3 id="70"><a href="#70" class="headerlink" title="70"></a>70</h3><h3 id="20"><a href="#20" class="headerlink" title="20"></a>20</h3><h3 id="100"><a href="#100" class="headerlink" title="100"></a>100</h3><h3 id="see-assignment-basics-file-for-file-requirements"><a href="#see-assignment-basics-file-for-file-requirements" class="headerlink" title="# see assignment basics file for file requirements!"></a># see assignment basics file for file requirements!</h3><h3 id="see-assignment-basics-file-for-how-to-comment"><a href="#see-assignment-basics-file-for-how-to-comment" class="headerlink" title="# see assignment basics file for how to comment!"></a># see assignment basics file for how to comment!</h3><h3 id="see-assignment-basics-file-for-how-to-test"><a href="#see-assignment-basics-file-for-how-to-test" class="headerlink" title="# see assignment basics file for how to test!"></a># see assignment basics file for how to test!</h3><h3 id="test-cases-that-are-omitted-from-the-tester"><a href="#test-cases-that-are-omitted-from-the-tester" class="headerlink" title="# test cases that are omitted from the tester"></a># test cases that are omitted from the tester</h3><h3 id="Note-If-your-code-does-not-run-and-crashes-due-to-errors-it-will-receive-zero-points-Turning-in"><a href="#Note-If-your-code-does-not-run-and-crashes-due-to-errors-it-will-receive-zero-points-Turning-in" class="headerlink" title="Note : If your code does not run and crashes due to errors, it will receive zero points. Turning in"></a>Note : If your code does not run and crashes due to errors, it will receive zero points. Turning in</h3><h3 id="running-code-is-essential"><a href="#running-code-is-essential" class="headerlink" title="running code is essential."></a>running code is essential.</h3><h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><h3 id="You’re-working-for-the-same-software-company-that-you-did-in-PA3-and-your-manager-asks-you-to"><a href="#You’re-working-for-the-same-software-company-that-you-did-in-PA3-and-your-manager-asks-you-to" class="headerlink" title="You’re working for the same software company that you did in PA3 and your manager asks you to"></a>You’re working for the same software company that you did in PA3 and your manager asks you to</h3><h3 id="write-a-new-version-of-the-poker-application-only-this-time-it’s-going-to-be-more-powerful-and"><a href="#write-a-new-version-of-the-poker-application-only-this-time-it’s-going-to-be-more-powerful-and" class="headerlink" title="write a new version of the poker application, only this time it’s going to be more powerful and"></a>write a new version of the poker application, only this time it’s going to be more powerful and</h3><h3 id="customizable-for-more-variants-of-the-poker-game-More-specifically-it-should-work-with-any-number"><a href="#customizable-for-more-variants-of-the-poker-game-More-specifically-it-should-work-with-any-number" class="headerlink" title="customizable for more variants of the poker game. More specifically, it should work with any number"></a>customizable for more variants of the poker game. More specifically, it should work with any number</h3><h3 id="of-cards-not-just-3-as-before-but-with-larger-numbers-too-e-g-4-5-7-etc-For-the-purposes-of-this"><a href="#of-cards-not-just-3-as-before-but-with-larger-numbers-too-e-g-4-5-7-etc-For-the-purposes-of-this" class="headerlink" title="of cards, not just 3 as before but with larger numbers too (e.g. 4 , 5 , 7 , etc.). For the purposes of this"></a>of cards, not just 3 as before but with larger numbers too (e.g. 4 , 5 , 7 , etc.). For the purposes of this</h3><h3 id="assignment-we-will-assume-that-the-hand-can-have-any-length-from-3-up-to-13-included-We-will-also"><a href="#assignment-we-will-assume-that-the-hand-can-have-any-length-from-3-up-to-13-included-We-will-also" class="headerlink" title="assignment we will assume that the hand can have any length from 3 up to 13 included. We will also"></a>assignment we will assume that the hand can have any length from 3 up to 13 included. We will also</h3><h3 id="assume-that-the-following-hands-and-ranks-apply-to-all-variants"><a href="#assume-that-the-following-hands-and-ranks-apply-to-all-variants" class="headerlink" title="assume that the following hands and ranks apply to all variants."></a>assume that the following hands and ranks apply to all variants.</h3><h3 id="Rank-Description"><a href="#Rank-Description" class="headerlink" title="Rank Description"></a>Rank Description</h3><h3 id="Straight-flush-ALL-suited-cards-in-sequence"><a href="#Straight-flush-ALL-suited-cards-in-sequence" class="headerlink" title="Straight flush ALL suited cards in sequence"></a>Straight flush ALL suited cards in sequence</h3><h3 id="N-of-a-kind-N-cards-of-same-rank-N-will-be-either-3-or-4"><a href="#N-of-a-kind-N-cards-of-same-rank-N-will-be-either-3-or-4" class="headerlink" title="N of a kind N cards of same rank ( N will be either 3 or 4)"></a>N of a kind N cards of same rank ( N will be either 3 or 4)</h3><h3 id="Straight-ALL-cards-in-sequence"><a href="#Straight-ALL-cards-in-sequence" class="headerlink" title="Straight ALL cards in sequence"></a>Straight ALL cards in sequence</h3><h3 id="Flush-ALL-suited-cards"><a href="#Flush-ALL-suited-cards" class="headerlink" title="Flush ALL suited cards"></a>Flush ALL suited cards</h3><h3 id="N-pairs-N-different-pairs-of-two-cards-of-same-rank-N-will-be-either-1-or-2"><a href="#N-pairs-N-different-pairs-of-two-cards-of-same-rank-N-will-be-either-1-or-2" class="headerlink" title="N pairs N different pairs of two cards of same rank ( N will be either 1 or 2)"></a>N pairs N different pairs of two cards of same rank ( N will be either 1 or 2)</h3><h3 id="Table-1"><a href="#Table-1" class="headerlink" title="Table 1"></a>Table 1</h3><h3 id="For-each-of-these-hands-you-will-implement-a-function-that-takes-a-list-of-numbers-that-represent-the"><a href="#For-each-of-these-hands-you-will-implement-a-function-that-takes-a-list-of-numbers-that-represent-the" class="headerlink" title="For each of these hands you will implement a function that takes a list of numbers that represent the"></a>For each of these hands you will implement a function that takes a list of numbers that represent the</h3><h3 id="cards-and-for-some-functions-a-second-parameter-too-and-returns-some-value-according-to-the"><a href="#cards-and-for-some-functions-a-second-parameter-too-and-returns-some-value-according-to-the" class="headerlink" title="cards (and for some functions a second parameter too) and returns some value according to the"></a>cards (and for some functions a second parameter too) and returns some value according to the</h3><h3 id="specification-We-will-use-the-Table-2-mapping-to-represent-the-standard-52-card-deck-with-integers"><a href="#specification-We-will-use-the-Table-2-mapping-to-represent-the-standard-52-card-deck-with-integers" class="headerlink" title="specification. We will use the Table 2 mapping to represent the standard 52-card deck with integers."></a>specification. We will use the Table 2 mapping to represent the standard 52-card deck with integers.</h3><h3 id="Ace-will-always-rank-low-i-e-be-the-lowest-card-when-considering-a-sequence-for-straight"><a href="#Ace-will-always-rank-low-i-e-be-the-lowest-card-when-considering-a-sequence-for-straight" class="headerlink" title="Ace will always rank low (i.e. be the lowest card when considering a sequence for straight)."></a>Ace will always rank low (i.e. be the lowest card when considering a sequence for straight).</h3><h3 id="1-2-3-4-5-6-7-8-9-10-11-12-13"><a href="#1-2-3-4-5-6-7-8-9-10-11-12-13" class="headerlink" title="1 2 3 4 5 6 7 8 9 10 11 12 13"></a>1 2 3 4 5 6 7 8 9 10 11 12 13</h3><h3 id="Clubs"><a href="#Clubs" class="headerlink" title="Clubs"></a>Clubs</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span></span><br></pre></td></tr></table></figure>
+<h3 id="Diamonds"><a href="#Diamonds" class="headerlink" title="Diamonds"></a>Diamonds</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span> <span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span> <span class="number">22</span> <span class="number">23</span> <span class="number">24</span> <span class="number">25</span> <span class="number">26</span></span><br></pre></td></tr></table></figure>
+<h3 id="Hearts"><a href="#Hearts" class="headerlink" title="Hearts"></a>Hearts</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">27</span> <span class="number">28</span> <span class="number">29</span> <span class="number">30</span> <span class="number">31</span> <span class="number">32</span> <span class="number">33</span> <span class="number">34</span> <span class="number">35</span> <span class="number">36</span> <span class="number">37</span> <span class="number">38</span> <span class="number">39</span></span><br></pre></td></tr></table></figure>
+<h3 id="Spades"><a href="#Spades" class="headerlink" title="Spades"></a>Spades</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">40</span> <span class="number">41</span> <span class="number">42</span> <span class="number">43</span> <span class="number">44</span> <span class="number">45</span> <span class="number">46</span> <span class="number">47</span> <span class="number">48</span> <span class="number">49</span> <span class="number">50</span> <span class="number">51</span> <span class="number">52</span></span><br></pre></td></tr></table></figure>
+<h3 id="Table-2"><a href="#Table-2" class="headerlink" title="Table 2"></a>Table 2</h3><h2 id="Assumptions"><a href="#Assumptions" class="headerlink" title="Assumptions"></a>Assumptions</h2><h3 id="You-may-assume-that"><a href="#You-may-assume-that" class="headerlink" title="You may assume that:"></a>You may assume that:</h3><ul>
+<li>The types of the values that are sent to the functions are the proper ones (card_list is a list</li>
+</ul>
+<h3 id="of-integers-not-floats-etc-you-don’t-have-to-validate-them"><a href="#of-integers-not-floats-etc-you-don’t-have-to-validate-them" class="headerlink" title="of integers not floats, etc.), you don’t have to validate them."></a>of integers not floats, etc.), you don’t have to validate them.</h3><ul>
+<li>The functions are going to be called with usable values (e.g. card_list doesn’t contain</li>
+</ul>
+<h3 id="negative-numbers-etc-you-don’t-have-to-validate-them"><a href="#negative-numbers-etc-you-don’t-have-to-validate-them" class="headerlink" title="negative numbers, etc.), you don’t have to validate them."></a>negative numbers, etc.), you don’t have to validate them.</h3><ul>
+<li>All card numbers that are passed into a function are guaranteed to be unique, you don’t have to</li>
+</ul>
+<h3 id="validate-that-either"><a href="#validate-that-either" class="headerlink" title="validate that either."></a>validate that either.</h3><h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="The-signature-of-each-function-is-provided-below-do-not-make-any-changes-to-them-otherwise-the"><a href="#The-signature-of-each-function-is-provided-below-do-not-make-any-changes-to-them-otherwise-the" class="headerlink" title="The signature of each function is provided below, do not make any changes to them otherwise the"></a>The signature of each function is provided below, do not make any changes to them otherwise the</h3><h3 id="tester-will-not-work-properly-The-following-are-the-functions-you-must-implement"><a href="#tester-will-not-work-properly-The-following-are-the-functions-you-must-implement" class="headerlink" title="tester will not work properly. The following are the functions you must implement:"></a>tester will not work properly. The following are the functions you must implement:</h3><p><strong>straight_flush(card_list)</strong><br>Description: The function checks whether a complete list of cards makes up a straight flush hand, and<br>only that. ( <strong>Hint</strong> : check the helper functions)</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Parameters: card_list (list <span class="keyword">of</span> int) <span class="keyword">contains</span> <span class="keyword">a</span> list <span class="keyword">of</span> cards represented <span class="keyword">with</span> <span class="keyword">the</span> mapping provided</span><br><span class="line"><span class="keyword">in</span> Table <span class="number">2.</span> Cards are <span class="keyword">not</span> ordered <span class="keyword">and</span> <span class="keyword">the</span> size <span class="keyword">of</span> <span class="keyword">the</span> list can vary.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Return <span class="built_in">value</span>: If <span class="keyword">the</span> hand is <span class="keyword">not</span> <span class="keyword">a</span> straight flush <span class="literal">return</span> False , otherwise <span class="literal">return</span> <span class="keyword">the</span> face <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">the</span></span><br><span class="line">highest card <span class="keyword">as</span> int</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Examples:</span></span><br><span class="line"><span class="string">straight_flush([2,</span> <span class="number">1</span><span class="string">,</span> <span class="number">3</span><span class="string">,</span> <span class="number">5</span><span class="string">,</span> <span class="number">4</span><span class="string">])</span> <span class="string">→</span> <span class="number">5</span></span><br><span class="line"><span class="string">straight_flush([15,</span> <span class="number">1</span><span class="string">,</span> <span class="number">3</span><span class="string">,</span> <span class="number">5</span><span class="string">,</span> <span class="number">4</span><span class="string">])</span> <span class="string">→</span> <span class="literal">False</span> <span class="comment"># straight</span></span><br></pre></td></tr></table></figure>
+<p><strong>n_of_a_kind(card_list, cardinality)</strong></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Description: Based <span class="keyword">on</span> <span class="title">its</span> <span class="title">second</span> <span class="title">parameter</span>, <span class="title">cardinality</span> , <span class="title">the</span> <span class="title">function</span> <span class="title">checks</span> <span class="title">whether</span> <span class="title">the</span> <span class="title">cards</span></span><br><span class="line">make up <span class="keyword">a</span> hand <span class="keyword">of</span> <span class="literal">three</span> <span class="keyword">of</span> <span class="keyword">a</span> kind <span class="keyword">or</span> <span class="keyword">a</span> hand <span class="keyword">of</span> <span class="literal">four</span> <span class="keyword">of</span> <span class="keyword">a</span> kind.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Parameters: card_list (list <span class="keyword">of</span> int) <span class="keyword">contains</span> <span class="keyword">a</span> list <span class="keyword">of</span> cards represented <span class="keyword">with</span> <span class="keyword">the</span> mapping provided</span><br><span class="line"><span class="keyword">in</span> Table <span class="number">2.</span> Cards are <span class="keyword">not</span> ordered <span class="keyword">and</span> <span class="keyword">the</span> size <span class="keyword">of</span> <span class="keyword">the</span> list can vary. cardinality (int) can be either <span class="number">3</span></span><br><span class="line"><span class="keyword">or</span> <span class="number">4</span> depending <span class="keyword">on</span> <span class="title">whether</span> <span class="title">we</span>’<span class="title">re</span> <span class="title">looking</span> <span class="title">for</span> <span class="title">a</span> <span class="title">hand</span> <span class="title">of</span> <span class="title">three</span> <span class="title">of</span> <span class="title">a</span> <span class="title">kind</span> <span class="title">or</span> <span class="title">four</span> <span class="title">of</span> <span class="title">a</span> <span class="title">kind</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Return <span class="built_in">value</span>: If <span class="keyword">the</span> hand is <span class="keyword">not</span> <span class="keyword">an</span> n <span class="keyword">of</span> <span class="keyword">a</span> kind <span class="literal">return</span> False , otherwise <span class="literal">return</span> <span class="keyword">the</span> face <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">the</span> card</span><br><span class="line">that forms <span class="keyword">the</span> n <span class="keyword">of</span> <span class="keyword">a</span> kind <span class="keyword">as</span> int (<span class="built_in">do</span> <span class="keyword">not</span> consider <span class="keyword">the</span> <span class="keyword">case</span> <span class="keyword">of</span> multiple n <span class="keyword">of</span> <span class="keyword">a</span> kind <span class="keyword">in</span> <span class="keyword">the</span> same hand)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Examples:</span></span><br><span class="line"><span class="string">n_of_a_kind([14,</span> <span class="number">27</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">3</span><span class="string">],</span> <span class="number">3</span><span class="string">)</span> <span class="string">→</span> <span class="number">1</span></span><br><span class="line"><span class="string">n_of_a_kind([14,</span> <span class="number">27</span><span class="string">,</span> <span class="number">1</span><span class="string">,</span> <span class="number">2</span><span class="string">,</span> <span class="number">3</span><span class="string">],</span> <span class="number">4</span><span class="string">)</span> <span class="string">→</span> <span class="literal">False</span> <span class="comment"># 3 of a kind</span></span><br></pre></td></tr></table></figure>
+<p><strong>straight(card_list)</strong></p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Description</span>: The <span class="meta">function</span> checks whether the cards make up a <span class="keyword">straight </span>hand, <span class="keyword">and </span>only that.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Parameters: card_list (list <span class="keyword">of</span> int) <span class="keyword">contains</span> <span class="keyword">a</span> list <span class="keyword">of</span> cards represented <span class="keyword">with</span> <span class="keyword">the</span> mapping provided</span><br><span class="line"><span class="keyword">in</span> Table <span class="number">2.</span> Cards are <span class="keyword">not</span> ordered <span class="keyword">and</span> <span class="keyword">the</span> size <span class="keyword">of</span> <span class="keyword">the</span> list can vary.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Return <span class="built_in">value</span>: If <span class="keyword">the</span> hand is <span class="keyword">not</span> <span class="keyword">a</span> straight <span class="literal">return</span> False , otherwise <span class="literal">return</span> <span class="keyword">the</span> face <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">the</span> highest</span><br><span class="line">card <span class="keyword">as</span> int</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Examples:</span></span><br><span class="line"><span class="string">straight([34,</span> <span class="number">33</span><span class="string">,</span> <span class="number">35</span><span class="string">,</span> <span class="number">32</span><span class="string">,</span> <span class="number">31</span><span class="string">])</span> <span class="string">→</span> <span class="literal">False</span> <span class="comment"># straight flush</span></span><br><span class="line"><span class="string">straight([21,</span> <span class="number">7</span><span class="string">,</span> <span class="number">35</span><span class="string">,</span> <span class="number">32</span><span class="string">,</span> <span class="number">31</span><span class="string">])</span> <span class="string">→</span> <span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p><strong>flush(card_list)</strong></p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Description: The <span class="function"><span class="keyword">function</span></span> checks whether the cards make up a <span class="keyword">flush</span> hand, and <span class="keyword">only</span> that.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Parameters: card_list (list <span class="keyword">of</span> int) <span class="keyword">contains</span> <span class="keyword">a</span> list <span class="keyword">of</span> cards represented <span class="keyword">with</span> <span class="keyword">the</span> mapping provided</span><br><span class="line"><span class="keyword">in</span> Table <span class="number">2.</span> Cards are <span class="keyword">not</span> ordered <span class="keyword">and</span> <span class="keyword">the</span> size <span class="keyword">of</span> <span class="keyword">the</span> list can vary.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Return <span class="built_in">value</span>: If <span class="keyword">the</span> hand is <span class="keyword">not</span> <span class="keyword">a</span> flush <span class="literal">return</span> False , otherwise <span class="literal">return</span> <span class="keyword">the</span> face <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">the</span> highest card</span><br><span class="line"><span class="keyword">as</span> int</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Examples:</span></span><br><span class="line"><span class="string">flush([41,</span> <span class="number">40</span><span class="string">,</span> <span class="number">42</span><span class="string">])</span> <span class="string">→</span> <span class="literal">False</span> <span class="comment"># straight flush</span></span><br><span class="line"><span class="string">flush([44,</span> <span class="number">40</span><span class="string">,</span> <span class="number">42</span><span class="string">])</span> <span class="string">→</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p><strong>pair(card_list, num_of_pairs)</strong><br>Description: Based on its second parameter, <strong>num_of_pairs</strong> , the function checks whether the cards<br>make up a hand of <em>one pair</em> or a hand of <em>two pairs</em>.</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Parameters: card_list (list <span class="keyword">of</span> int) <span class="keyword">contains</span> <span class="keyword">a</span> list <span class="keyword">of</span> cards represented <span class="keyword">with</span> <span class="keyword">the</span> mapping provided</span><br><span class="line"><span class="keyword">in</span> Table <span class="number">2.</span> Cards are <span class="keyword">not</span> ordered <span class="keyword">and</span> <span class="keyword">the</span> size <span class="keyword">of</span> <span class="keyword">the</span> list can vary. num_of_pairs (int) can be either <span class="number">1</span></span><br><span class="line"><span class="keyword">or</span> <span class="number">2</span> depending <span class="keyword">on</span> <span class="title">whether</span> <span class="title">we</span>’<span class="title">re</span> <span class="title">looking</span> <span class="title">for</span> <span class="title">a</span> <span class="title">hand</span> <span class="title">of</span> <span class="title">one</span> <span class="title">pair</span> <span class="title">or</span> <span class="title">two</span> <span class="title">pairs</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Return <span class="built_in">value</span>: If <span class="keyword">the</span> hand is <span class="keyword">not</span> <span class="keyword">a</span> <span class="literal">one</span>/<span class="literal">two</span> pair <span class="literal">return</span> False , otherwise <span class="literal">return</span> <span class="keyword">the</span> face <span class="built_in">value</span> <span class="keyword">of</span> <span class="keyword">the</span> card</span><br><span class="line"><span class="keyword">in</span> <span class="keyword">the</span> pair; <span class="keyword">in</span> <span class="keyword">the</span> <span class="keyword">case</span> <span class="keyword">of</span> <span class="literal">one</span> pair <span class="keyword">an</span> int, <span class="keyword">and</span> <span class="keyword">in</span> <span class="keyword">the</span> <span class="keyword">case</span> <span class="keyword">of</span> <span class="literal">two</span> pairs <span class="keyword">a</span> tuple <span class="keyword">of</span> int (order doesn’t</span><br><span class="line">matter <span class="keyword">in</span> tuple)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Examples:</span></span><br><span class="line"><span class="string">pair([33,</span> <span class="number">46</span><span class="string">,</span> <span class="number">20</span><span class="string">],</span> <span class="number">1</span><span class="string">)</span> <span class="string">→</span> <span class="literal">False</span> <span class="comment"># three of a kind</span></span><br><span class="line"><span class="string">pair([2,4,7,15,16],</span> <span class="number">1</span><span class="string">)</span> <span class="string">→</span> <span class="number">2</span></span><br><span class="line"><span class="string">pair([2,4,7,15,17],</span> <span class="number">2</span><span class="string">)</span> <span class="string">→</span> <span class="string">(2,4)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Helper-functions-–-OPTIONAL-BUT-HIGHLY-ENCOURAGED"><a href="#Helper-functions-–-OPTIONAL-BUT-HIGHLY-ENCOURAGED" class="headerlink" title="Helper functions – OPTIONAL BUT HIGHLY ENCOURAGED"></a>Helper functions – OPTIONAL BUT HIGHLY ENCOURAGED</h2><h3 id="If-you-want-to-avoid-repeating-some-computations-again-and-again-you-should-create-your-own"><a href="#If-you-want-to-avoid-repeating-some-computations-again-and-again-you-should-create-your-own" class="headerlink" title="If you want to avoid repeating some computations again and again, you should create your own"></a>If you want to avoid repeating some computations again and again, you should create your own</h3><h3 id="helper-functions-It’s-optional-but-is-highly-encouraged-to-make-your-life-easier-and-your-code-much"><a href="#helper-functions-It’s-optional-but-is-highly-encouraged-to-make-your-life-easier-and-your-code-much" class="headerlink" title="helper functions. It’s optional but is highly encouraged to make your life easier and your code much"></a>helper functions. It’s optional but is highly encouraged to make your life easier and your code much</h3><h3 id="simpler-Some-functions-that-you-might-find-extremely-useful-to-implement-are-the-following"><a href="#simpler-Some-functions-that-you-might-find-extremely-useful-to-implement-are-the-following" class="headerlink" title="simpler. Some functions that you might find extremely useful to implement are the following:"></a>simpler. Some functions that you might find extremely useful to implement are the following:</h3><p><strong>suit(card)</strong><br>Description: Given a card number it returns the suit of the card as a string</p>
+<p><strong>value(card)</strong><br>Description: Given a card number it returns the face value of the card as an int</p>
+<p><strong>sequence(card_list)</strong><br>Description: Given a list of card numbers it checks whether the cards form a sequence or not. <strong>Hint</strong> : One<br>approach is to sort the whole list but it’s not easy to implement and it’s not optimal either. An<br>easier/better way is to exploit the fact that, for any given list, you can easily come up with the sequence<br>you’re looking for, and then just search for it.</p>
+<p><strong>same_suit(card_list)</strong><br>Description: Given a list of card numbers it checks whether the cards have the same suit or not.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS112-ProgrammingAssignment3.html" rel="next" title="Python代写：CS112-ProgrammingAssignment3">
+                <i class="fa fa-chevron-left"></i> Python代写：CS112-ProgrammingAssignment3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">329</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CS-112-Programming-Assignment-5"><span class="nav-number">1.</span> <span class="nav-text">CS 112 Programming Assignment 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-purpose-of-this-assignment-is-to-practice-using-loops-and-basic-lists-effectively"><span class="nav-number">2.</span> <span class="nav-text">The purpose of this assignment is to practice using loops and basic lists effectively.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#See-the-“assignment-basics”-file-for-more-detailed-information-about-getting-assistance-running-the"><span class="nav-number">3.</span> <span class="nav-text">See the “assignment basics” file for more detailed information about getting assistance, running the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-file-grading-commenting-and-many-other-extremely-important-things-Each-assignment-is"><span class="nav-number">4.</span> <span class="nav-text">test file, grading, commenting, and many other extremely important things. Each assignment is</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#governed-by-the-rules-in-that-document"><span class="nav-number">5.</span> <span class="nav-text">governed by the rules in that document:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k5x3ennufm34cg"><span class="nav-number">6.</span> <span class="nav-text">https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k5x3ennufm34cg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Needed-file-the-tester-for-this-assignment"><span class="nav-number">7.</span> <span class="nav-text">Needed file, the tester for this assignment:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#https-piazza-com-class-profile-get-resource-k4wblafqtoj2cx-k75awsh1vap1yh"><span class="nav-number">8.</span> <span class="nav-text">https://piazza.com/class_profile/get_resource/k4wblafqtoj2cx/k75awsh1vap1yh</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number"></span> <span class="nav-text">Background</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Loop-statements-allow-us-to-run-the-same-block-of-code-repeatedly-with-the-chance-to-use-different"><span class="nav-number">1.</span> <span class="nav-text">Loop statements allow us to run the same block of code repeatedly, with the chance to use different</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#values-for-variables-each-time-as-the-accumulated-effects-pile-up-Lists-are-sequences-that-can-be"><span class="nav-number">2.</span> <span class="nav-text">values for variables each time as the accumulated effects pile up. Lists are sequences that can be</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inspected-value-by-value-and-modified-at-will-In-this-assignment-we-will-use-loops-to-perform"><span class="nav-number">3.</span> <span class="nav-text">inspected value-by-value and modified at will. In this assignment we will use loops to perform</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calculations-over-one-dimensional-lists-in-future-assignments-we-will-work-with-multi-dimensional"><span class="nav-number">4.</span> <span class="nav-text">calculations over one-dimensional lists (in future assignments we will work with multi-dimensional</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lists-too-However-working-with-one-dimensional-lists-doesn’t-necessarily-mean-that-a-single"><span class="nav-number">5.</span> <span class="nav-text">lists too). However, working with one-dimensional lists doesn’t necessarily mean that a single</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while-for-loop-is-always-enough-sometimes-a-repeated-iteration-over-a-list-might-require-a-double"><span class="nav-number">6.</span> <span class="nav-text">while/for loop is always enough, sometimes a repeated iteration over a list might require a (double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#or-even-triple-nested-loop"><span class="nav-number">7.</span> <span class="nav-text">or even triple) nested loop.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Guidelines"><span class="nav-number"></span> <span class="nav-text">Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-You-are-not-allowed-to-import-anything"><span class="nav-number">1.</span> <span class="nav-text"> You are not allowed to import anything.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-You-are-not-allowed-to-use-sets-dictionaries"><span class="nav-number">2.</span> <span class="nav-text"> You are not allowed to use sets, dictionaries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-You-are-not-allowed-to-use-anything-that-hasn’t-been-covered-in-class-including-the-list"><span class="nav-number">3.</span> <span class="nav-text"> You are not allowed to use anything that hasn’t been covered in class, including the list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comprehension-construct-if-you-don’t-know-it-don’t-worry-it’s-impossible-to-use-it-by-accident"><span class="nav-number">4.</span> <span class="nav-text">comprehension construct (if you don’t know it, don’t worry, it’s impossible to use it by accident!)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-From-built-in-functions-you-are-allowed-to-call-only-range-len-abs-int-str"><span class="nav-number">5.</span> <span class="nav-text"> From built-in functions, you are allowed to call only range() , len() , abs() , int() , str()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-From-list-methods-you-are-allowed-to-use-only-append-Please-do-not-ask-on-piazza"><span class="nav-number">6.</span> <span class="nav-text"> From list methods, you are allowed to use only .append(). Please do not ask on piazza</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whether-you-can-use-sort-index-count-etc"><span class="nav-number">7.</span> <span class="nav-text">whether you can use .sort(), .index(), .count() etc.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-You-are-not-allowed-to-hard-code-exhaustive-if-elif-elif-statements-to-handle-all-possible"><span class="nav-number">8.</span> <span class="nav-text"> You are not allowed to hard-code exhaustive if-elif-elif statements to handle all possible</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-lengths-Your-code-should-work-with-any-length-of-list-even-if-it-were-larger-than-13"><span class="nav-number">9.</span> <span class="nav-text">list lengths. Your code should work with any length of list even if it were larger than 13.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-You-can-only-use-slicing-if-it-doesn’t-bypass-a-restriction-For-example-you-can’t-use-slicing-to"><span class="nav-number">10.</span> <span class="nav-text"> You can only use slicing if it doesn’t bypass a restriction. For example, you can’t use slicing to</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse-a-list-since-reverse-is-not-allowed-either"><span class="nav-number">11.</span> <span class="nav-text">reverse a list since .reverse() is not allowed either.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-When-a-specific-test-case-isn’t-working-plug-your-code-into-the-visualizer-to-watch-what"><span class="nav-number">12.</span> <span class="nav-text"> When a specific test case isn’t working, plug your code into the visualizer to watch what</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-code-does-which-lines-run-which-branches-are-taken"><span class="nav-number">13.</span> <span class="nav-text">the code does, which lines run, which branches are taken.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-Insert-comments-in-the-lines-you-deem-necessary"><span class="nav-number">14.</span> <span class="nav-text"> Insert comments in the lines you deem necessary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing"><span class="nav-number"></span> <span class="nav-text">Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#In-this-assignment-testing-will-be-done-a-bit-different-than-before"><span class="nav-number">1.</span> <span class="nav-text">In this assignment testing will be done a bit different than before:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-examples-we-provide-in-this-document-as-well-as-other-examples-you-can-come-up-with-Later-in"><span class="nav-number">2.</span> <span class="nav-text">the examples we provide in this document as well as other examples you can come up with. Later in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-week-we-will-provide-an-actual-tester-but-don’t-wait-for-it-in-order-to-start-working-on-the"><span class="nav-number">3.</span> <span class="nav-text">the week we will provide an actual tester but don’t wait for it in order to start working on the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-as-there-won’t-be-enough-time-to-complete-it-before-the-deadline-The-purpose-of-the"><span class="nav-number">4.</span> <span class="nav-text">assignment as there won’t be enough time to complete it before the deadline. The purpose of the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delayed-release-of-the-tester-is-for-you-to-put-more-emphasis-effort-on-writing-logically-correct"><span class="nav-number">5.</span> <span class="nav-text">delayed release of the tester is for you to put more emphasis/effort on writing logically correct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#programs-instead-of-trying-to-pass-certain-tests-only"><span class="nav-number">6.</span> <span class="nav-text">programs instead of trying to pass certain tests only.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#This-means-that-there-might-be-errors-in-your-code-even-if-the-tester-is-giving-you-no-errors-You-must"><span class="nav-number">7.</span> <span class="nav-text">This means that there might be errors in your code even if the tester is giving you no errors. You must</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#do-your-own-checks-to-make-sure-that-you-haven’t-missed-anything-and-your-code-is-correct-You-do"><span class="nav-number">8.</span> <span class="nav-text">do your own checks to make sure that you haven’t missed anything and your code is correct. You do</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#not-need-to-modify-the-tester-just-test-on-your-own-any-way-you-like-Again-the-goal-is-to-help-you-put"><span class="nav-number">9.</span> <span class="nav-text">not need to modify the tester, just test on your own any way you like. Again, the goal is to help you put</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#more-focus-on-writing-logically-correct-programs-instead-of-trying-to-pass-certain-tests-only"><span class="nav-number">10.</span> <span class="nav-text">more focus on writing logically correct programs instead of trying to pass certain tests only.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grading-Rubric"><span class="nav-number"></span> <span class="nav-text">Grading Rubric</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Submitted-correctly"><span class="nav-number">1.</span> <span class="nav-text">Submitted correctly:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-is-well-commented"><span class="nav-number">2.</span> <span class="nav-text">Code is well commented:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tester-calculations-correct"><span class="nav-number">3.</span> <span class="nav-text">Tester calculations correct:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unknown-test-cases"><span class="nav-number">4.</span> <span class="nav-text">Unknown test cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TOTAL"><span class="nav-number">5.</span> <span class="nav-text">TOTAL:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2"><span class="nav-number">6.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8"><span class="nav-number">7.</span> <span class="nav-text">8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#70"><span class="nav-number">8.</span> <span class="nav-text">70</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20"><span class="nav-number">9.</span> <span class="nav-text">20</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#100"><span class="nav-number">10.</span> <span class="nav-text">100</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#see-assignment-basics-file-for-file-requirements"><span class="nav-number">11.</span> <span class="nav-text"># see assignment basics file for file requirements!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#see-assignment-basics-file-for-how-to-comment"><span class="nav-number">12.</span> <span class="nav-text"># see assignment basics file for how to comment!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#see-assignment-basics-file-for-how-to-test"><span class="nav-number">13.</span> <span class="nav-text"># see assignment basics file for how to test!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-cases-that-are-omitted-from-the-tester"><span class="nav-number">14.</span> <span class="nav-text"># test cases that are omitted from the tester</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note-If-your-code-does-not-run-and-crashes-due-to-errors-it-will-receive-zero-points-Turning-in"><span class="nav-number">15.</span> <span class="nav-text">Note : If your code does not run and crashes due to errors, it will receive zero points. Turning in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#running-code-is-essential"><span class="nav-number">16.</span> <span class="nav-text">running code is essential.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scenario"><span class="nav-number"></span> <span class="nav-text">Scenario</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#You’re-working-for-the-same-software-company-that-you-did-in-PA3-and-your-manager-asks-you-to"><span class="nav-number">1.</span> <span class="nav-text">You’re working for the same software company that you did in PA3 and your manager asks you to</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#write-a-new-version-of-the-poker-application-only-this-time-it’s-going-to-be-more-powerful-and"><span class="nav-number">2.</span> <span class="nav-text">write a new version of the poker application, only this time it’s going to be more powerful and</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#customizable-for-more-variants-of-the-poker-game-More-specifically-it-should-work-with-any-number"><span class="nav-number">3.</span> <span class="nav-text">customizable for more variants of the poker game. More specifically, it should work with any number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#of-cards-not-just-3-as-before-but-with-larger-numbers-too-e-g-4-5-7-etc-For-the-purposes-of-this"><span class="nav-number">4.</span> <span class="nav-text">of cards, not just 3 as before but with larger numbers too (e.g. 4 , 5 , 7 , etc.). For the purposes of this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assignment-we-will-assume-that-the-hand-can-have-any-length-from-3-up-to-13-included-We-will-also"><span class="nav-number">5.</span> <span class="nav-text">assignment we will assume that the hand can have any length from 3 up to 13 included. We will also</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assume-that-the-following-hands-and-ranks-apply-to-all-variants"><span class="nav-number">6.</span> <span class="nav-text">assume that the following hands and ranks apply to all variants.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rank-Description"><span class="nav-number">7.</span> <span class="nav-text">Rank Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Straight-flush-ALL-suited-cards-in-sequence"><span class="nav-number">8.</span> <span class="nav-text">Straight flush ALL suited cards in sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#N-of-a-kind-N-cards-of-same-rank-N-will-be-either-3-or-4"><span class="nav-number">9.</span> <span class="nav-text">N of a kind N cards of same rank ( N will be either 3 or 4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Straight-ALL-cards-in-sequence"><span class="nav-number">10.</span> <span class="nav-text">Straight ALL cards in sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flush-ALL-suited-cards"><span class="nav-number">11.</span> <span class="nav-text">Flush ALL suited cards</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#N-pairs-N-different-pairs-of-two-cards-of-same-rank-N-will-be-either-1-or-2"><span class="nav-number">12.</span> <span class="nav-text">N pairs N different pairs of two cards of same rank ( N will be either 1 or 2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Table-1"><span class="nav-number">13.</span> <span class="nav-text">Table 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For-each-of-these-hands-you-will-implement-a-function-that-takes-a-list-of-numbers-that-represent-the"><span class="nav-number">14.</span> <span class="nav-text">For each of these hands you will implement a function that takes a list of numbers that represent the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cards-and-for-some-functions-a-second-parameter-too-and-returns-some-value-according-to-the"><span class="nav-number">15.</span> <span class="nav-text">cards (and for some functions a second parameter too) and returns some value according to the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#specification-We-will-use-the-Table-2-mapping-to-represent-the-standard-52-card-deck-with-integers"><span class="nav-number">16.</span> <span class="nav-text">specification. We will use the Table 2 mapping to represent the standard 52-card deck with integers.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ace-will-always-rank-low-i-e-be-the-lowest-card-when-considering-a-sequence-for-straight"><span class="nav-number">17.</span> <span class="nav-text">Ace will always rank low (i.e. be the lowest card when considering a sequence for straight).</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-4-5-6-7-8-9-10-11-12-13"><span class="nav-number">18.</span> <span class="nav-text">1 2 3 4 5 6 7 8 9 10 11 12 13</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Clubs"><span class="nav-number">19.</span> <span class="nav-text">Clubs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diamonds"><span class="nav-number">20.</span> <span class="nav-text">Diamonds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hearts"><span class="nav-number">21.</span> <span class="nav-text">Hearts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spades"><span class="nav-number">22.</span> <span class="nav-text">Spades</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Table-2"><span class="nav-number">23.</span> <span class="nav-text">Table 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Assumptions"><span class="nav-number"></span> <span class="nav-text">Assumptions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#You-may-assume-that"><span class="nav-number">1.</span> <span class="nav-text">You may assume that:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#of-integers-not-floats-etc-you-don’t-have-to-validate-them"><span class="nav-number">2.</span> <span class="nav-text">of integers not floats, etc.), you don’t have to validate them.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#negative-numbers-etc-you-don’t-have-to-validate-them"><span class="nav-number">3.</span> <span class="nav-text">negative numbers, etc.), you don’t have to validate them.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#validate-that-either"><span class="nav-number">4.</span> <span class="nav-text">validate that either.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functions"><span class="nav-number"></span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-signature-of-each-function-is-provided-below-do-not-make-any-changes-to-them-otherwise-the"><span class="nav-number">1.</span> <span class="nav-text">The signature of each function is provided below, do not make any changes to them otherwise the</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tester-will-not-work-properly-The-following-are-the-functions-you-must-implement"><span class="nav-number">2.</span> <span class="nav-text">tester will not work properly. The following are the functions you must implement:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Helper-functions-–-OPTIONAL-BUT-HIGHLY-ENCOURAGED"><span class="nav-number"></span> <span class="nav-text">Helper functions – OPTIONAL BUT HIGHLY ENCOURAGED</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#If-you-want-to-avoid-repeating-some-computations-again-and-again-you-should-create-your-own"><span class="nav-number">1.</span> <span class="nav-text">If you want to avoid repeating some computations again and again, you should create your own</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#helper-functions-It’s-optional-but-is-highly-encouraged-to-make-your-life-easier-and-your-code-much"><span class="nav-number">2.</span> <span class="nav-text">helper functions. It’s optional but is highly encouraged to make your life easier and your code much</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simpler-Some-functions-that-you-might-find-extremely-useful-to-implement-are-the-following"><span class="nav-number">3.</span> <span class="nav-text">simpler. Some functions that you might find extremely useful to implement are the following:</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
