@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE143-Assessment1-Letter-Inventory">
+<meta property="og:url" content="cplusplusdaixie.com/CSE143-Assessment1-Letter-Inventory.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-07-04T02:39:58.437Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE143-Assessment1-Letter-Inventory">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE143-Assessment1-Letter-Inventory.html">
+
+
+
+
+
+  <title>Java代写：CSE143-Assessment1-Letter-Inventory | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE143-Assessment1-Letter-Inventory.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE143-Assessment1-Letter-Inventory</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-03T09:01:12+08:00">
+                2023-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-143-Computer-Programming-II-Winter-2021"><a href="#CSE-143-Computer-Programming-II-Winter-2021" class="headerlink" title="CSE 143: Computer Programming II Winter 2021"></a>CSE 143: Computer Programming II Winter 2021</h3><h1 id="Take-home-Assessment-1-Letter-Inventory-due-January-14-2021-11-59pm"><a href="#Take-home-Assessment-1-Letter-Inventory-due-January-14-2021-11-59pm" class="headerlink" title="Take-home Assessment 1: Letter Inventory due January 14, 2021 11:59pm"></a>Take-home Assessment 1: Letter Inventory due January 14, 2021 11:59pm</h1><p>This assignment will assess your mastery of the following objectives:</p>
+<ul>
+<li>Implement a well-designed Java class to meet a given specification.</li>
+<li>Maintain proper abstraction between the client and implementation of a class.</li>
+<li>Follow prescribed conventions for code quality, documentation, and readability.</li>
+</ul>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>In this assessment, you will implement a class calledLetterInventorythat can be used to keep track<br>of an inventory of letters of the English alphabet. The constructor for the class will take aStringas<br>a parameter and compute how many of each letter are in thatString(i.e. how many a’s, how many<br>b’s, etc.). LetterInventoryignores any character that is not an English letter (such as punctuation or<br>digits) and treats upper- and lowercase letters as the same.</p>
+<h2 id="YourLetterInventoryclass-should-include-the-following-constructor"><a href="#YourLetterInventoryclass-should-include-the-following-constructor" class="headerlink" title="YourLetterInventoryclass should include the following constructor:"></a>YourLetterInventoryclass should include the following constructor:</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public LetterInventory (String data)</span><br><span class="line">Constructs <span class="keyword">an</span> inventory (<span class="keyword">a</span> count) <span class="keyword">of</span> <span class="keyword">the</span> alphabetic letters <span class="keyword">in</span> <span class="keyword">the</span> given <span class="keyword">string</span>, ignoring <span class="keyword">the</span> <span class="keyword">case</span> <span class="keyword">of</span></span><br><span class="line">letters <span class="keyword">and</span> ignoring <span class="keyword">any</span> non-alphabetic <span class="keyword">characters</span>.</span><br></pre></td></tr></table></figure>
+<h2 id="Your-class-should-also-include-the-following-public-methods-"><a href="#Your-class-should-also-include-the-following-public-methods-" class="headerlink" title="Your class should also include the following public methods: "></a>Your class should also include the following public methods: </h2><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">You must <span class="keyword">in</span>-</span><br><span class="line">clude exactly</span><br><span class="line">these <span class="function"><span class="keyword">method</span></span></span><br><span class="line"><span class="function"><span class="title">headers</span>—<span class="title">do</span></span></span><br><span class="line"><span class="function"><span class="title">not</span> <span class="title">add</span> <span class="title">or</span></span></span><br><span class="line"><span class="function"><span class="title">remove</span> <span class="title">parame</span>-</span></span><br><span class="line"><span class="function"><span class="title">ters</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> int get (char letter)</span><br><span class="line">Returns a count <span class="keyword">of</span> how many <span class="keyword">of</span> this letter (<span class="keyword">case</span>-insensitive) are <span class="keyword">in</span> the inventory. <span class="keyword">If</span> a nonalphabetic</span><br><span class="line">character <span class="keyword">is</span> passed, your <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">throw</span> <span class="title">anIllegalArgumentException</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> void <span class="keyword">set</span> (char letter, int value)</span><br><span class="line">Sets the count <span class="keyword">for</span> the given letter (<span class="keyword">case</span>-insensitive) <span class="keyword">to</span> the given value. <span class="keyword">If</span> a nonalphabetic character</span><br><span class="line"><span class="keyword">is</span> passed <span class="keyword">or</span> ifvalueis negative, your <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">throw</span> <span class="title">anIllegalArgumentException</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public int size ()</span><br><span class="line">Returns <span class="keyword">the</span> <span class="built_in">sum</span> <span class="keyword">of</span> all <span class="keyword">of</span> <span class="keyword">the</span> counts <span class="keyword">in</span> this inventory. This operation should be <span class="string">"fast"</span> <span class="keyword">in</span> that <span class="keyword">it</span></span><br><span class="line">should store <span class="keyword">the</span> size rather than having <span class="built_in">to</span> compute <span class="keyword">it</span> <span class="keyword">each</span> <span class="built_in">time</span> this method is called.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public boolean isEmpty ()</span><br><span class="line">Returnstrueif <span class="keyword">this</span> inventory <span class="keyword">is</span> empty (i.e. all counts are <span class="number">0</span>). This operation should be <span class="string">"fast"</span> <span class="keyword">in</span></span><br><span class="line"><span class="literal">that</span> <span class="literal">it</span> should <span class="keyword">not</span> need <span class="keyword">to</span> examine each <span class="keyword">of</span> the <span class="number">26</span> counts <span class="keyword">when</span> <span class="literal">it</span> <span class="keyword">is</span> called.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public String toString ()</span><br><span class="line">Returns <span class="keyword">a</span> <span class="keyword">string</span> representation <span class="keyword">of</span> <span class="keyword">the</span> inventory <span class="keyword">with</span> <span class="keyword">the</span> letters all <span class="keyword">in</span> lowercase <span class="keyword">and</span> <span class="keyword">in</span> sorted order</span><br><span class="line"><span class="keyword">and</span> surrounded <span class="keyword">by</span> square brackets. The <span class="built_in">number</span> <span class="keyword">of</span> occurrences <span class="keyword">of</span> <span class="keyword">each</span> letter should match its</span><br><span class="line">count <span class="keyword">in</span> <span class="keyword">the</span> inventory. For example, <span class="keyword">an</span> inventory <span class="keyword">of</span> <span class="number">4</span> <span class="keyword">as</span>, <span class="number">1</span> b, <span class="number">1</span> l <span class="keyword">and</span> <span class="number">1</span> m would be represented <span class="keyword">as</span></span><br><span class="line"><span class="string">"[aaaablm]"</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> LetterInventory <span class="keyword">add</span> (LetterInventory other)</span><br><span class="line">Constructs <span class="keyword">and</span> returns a <span class="keyword">new</span> LetterInventory object that represents the sum <span class="keyword">of</span> this</span><br><span class="line">LetterInventoryand the other givenLetterInventory. The counts <span class="keyword">for</span> <span class="keyword">each</span> letter should be</span><br><span class="line">added together. The twoLetterInventoryobjects being added together (thisandother) should</span><br><span class="line"><span class="keyword">not</span> be changed <span class="keyword">by</span> this <span class="function"><span class="keyword">method</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> LetterInventory subtract (LetterInventory other)</span><br><span class="line">Constructs <span class="keyword">and</span> returns a newLetterInventoryobject that represents the <span class="keyword">result</span> <span class="keyword">of</span> subtracting</span><br><span class="line">the other inventory <span class="keyword">from</span> this inventory (i.e. subtracting the counts <span class="keyword">in</span> the other inventory <span class="keyword">from</span> this</span><br><span class="line">objects counts). <span class="keyword">If</span> any resulting count would be negative, this <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">returnnull</span>. <span class="title">The</span></span></span><br><span class="line"><span class="function"><span class="title">twoLetterInventoryobjects</span> <span class="title">being</span> <span class="title">subtracted</span> <span class="params">(thisandother)</span> <span class="title">should</span> <span class="title">not</span> <span class="title">be</span> <span class="title">changed</span> <span class="title">by</span> <span class="title">this</span></span></span><br><span class="line"><span class="function"><span class="title">method</span>.</span></span><br></pre></td></tr></table></figure>
+<p>You may also include any additional private helper methods you think will be helpful.</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Make sure any</span><br><span class="line"><span class="keyword">helper</span> methods</span><br><span class="line">are declared</span><br><span class="line"><span class="keyword">private</span>.</span><br></pre></td></tr></table></figure>
+<p>As an example, the add method could be called as follows:</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LetterInventory inventory1 = <span class="keyword">new</span> <span class="type">LetterInventory</span>(<span class="string">"Sherlock Holmes"</span>);</span><br><span class="line">LetterInventory inventory2 = <span class="keyword">new</span> <span class="type">LetterInventory</span>(<span class="string">"Dr. John Watson"</span>);</span><br><span class="line">LetterInventory sum = inventory1.add(inventory2);</span><br></pre></td></tr></table></figure>
+<p>Here, inventory1would contain[ceehhkllmoorss],inventory2would contain[adhjnnoorstw],<br>andsumwould contain[acdeehhhjkllmnnoooorrssstw].</p>
+<h1 id="Implementation-Guidelines"><a href="#Implementation-Guidelines" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h1><p>You should implement this class with an array of 26 counters (one for each letter) along with any other<br>data fields you find that you need. Remember, though, that we want to minimize the number of data<br>fields when possible.</p>
+<p>Your class should avoid unnecessary inefficiencies. For example, you might be tempted to implement the<br>addmethod by calling thetoStringmethod or otherwise building aStringto pass to theLetterInventory<br>constructor. But this approach would be inefficient for inventories with large character counts.</p>
+<p>You should introduce a class constant for the value 26 to improve readability.</p>
+<h2 id="Character-operations"><a href="#Character-operations" class="headerlink" title="Character operations"></a>Character operations</h2><p>It will be helpful to understand certain deatils of thechardatatype for this assessment. Many of these<br>details are explained in section 4.3 of the textbook.</p>
+<p>Values of typecharhave corresponding integer values. There is a character with value 0, a character<br>with value 1, a character with value 2 and so on. You can compare different values of typecharusing<br>less-than and greater-than tests, as in:</p>
+<p>if (ch &gt;= ‘a’) …</p>
+<p>All of the lowercase letters appear grouped together in typechar(i.e.’a’is followed by’b’followed by<br>’c’, and so on). All of the uppercase letters appear grouped together similarly. Because of this, you can<br>compute a letter’s “displacement” (or distance) from the letter’a’with an expression like the following<br>(this expression assumes the variableletteris of typecharand stores a lowercase letter):</p>
+<p>letter -‘a’</p>
+<p>Going in the other direction, if you know a characters integer equivalent, you can cast the result tochar<br>to get the character. For example, suppose that you want to get the letter that is 8 away from’a’. You<br>could do this as follows:</p>
+<p>char result = (char) (‘a’+ 8);</p>
+<p>This would assign the variableresultthe value’i’. As in these examples, you should write your code<br>in terms of displacement from a fixed letter like’a’rather than finding and including the specific integer<br>value (e.g. 97) of a character like’a’.</p>
+<h1 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h1><p>Thought it may not seem like it, theArrayIntListexample from lecture provides a good model to use for<br>implementingLetterInventory. Pay particular attention to the use of fields, avoiding reimplementation<br>of common functionality, throwing exceptions in error conditions, and documentation/comments.</p>
+<h2 id="String-and-Character"><a href="#String-and-Character" class="headerlink" title="String and Character"></a>String and Character</h2><p>You will likely want to look at the JavaStringandCharacterclasses for useful methods. (For example,<br>there is atoLowerCasemethod in each.) You will have to pay attention to whether each method is static<br>or not. TheStringmethods are mostly instance methods because strings are objects. TheCharacter<br>methods are all static becausecharis a primitive type. For example, if you have a variable calledsthat<br>is aString, you can turn it to all lowercase as follows:</p>
+<p>s = s.toLowerCase();</p>
+<p>This is a call to an instance method on an object, so you put the name of the object variable before the<br>dot. Butcharvalues are <em>not</em> objects and thetoLowerCasemethod in theCharacterclass is a static<br>method. So if you have a variable calledchthat is of typechar, you would turn it to all lowercase as<br>follows:</p>
+<p>ch = Character.toLowerCase(ch);</p>
+<h1 id="Development-Strategy"><a href="#Development-Strategy" class="headerlink" title="Development Strategy"></a>Development Strategy</h1><p>One of the most important techniques for programmers is to develop code in stages rather than trying to<br>write it all at once. (The technical term for this is “iterative enhancement” or “stepwise refinement.”) It<br>is also important to be able to test the correctness of your solution at each different stage.</p>
+<p>We suggest that you work on your assessment in three stages:<br>(a) First, work on constructing aLetterInventoryand examining its contents. We will implement the<br>constructor, thesizemethod, theisEmptymethod, thegetmethod, and thetoStringmethod.<br>Even within this stage, you should develop the methods slowly. First work on the constructor and<br>sizemethods. Then add theisEmptymethod, then thegetmethod, then thetoStringmethod.</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(b) Next, <span class="builtin-name">add</span> thesetmethod <span class="keyword">to</span> the class that allows the<span class="built_in"> client </span><span class="keyword">to</span> change the number of occurrences</span><br><span class="line">of an individual letter.</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(c) Finally, include theaddandsubtractmethods. We recommend writing theaddmethod <span class="keyword">first</span> <span class="keyword">and</span></span><br><span class="line">making sure <span class="keyword">it</span> works, <span class="keyword">then</span> moving <span class="keyword">on</span> <span class="keyword">to</span> thesubtractmethod.</span><br></pre></td></tr></table></figure>
+<h1 id="Code-Quality-Guidelines"><a href="#Code-Quality-Guidelines" class="headerlink" title="Code Quality Guidelines"></a>Code Quality Guidelines</h1><p>In addition to producing the desired behavior, your code should be well-written and meet all expectations<br>described in thegrading guidelines, Code Quality Guide, andCommenting Guide. For this assessment,<br>pay particular attention to the following elements:</p>
+<h2 id="Data-Fields"><a href="#Data-Fields" class="headerlink" title="Data Fields"></a>Data Fields</h2><p>Properly encapsulate your objects by making data your fieldsprivate. Avoid unnecessary fields; use<br>fields to store important data of your objects but not to store temporary values only used in one place.<br>Fields should always be initialized inside a constructor or method, never at declaration.</p>
+<h2 id="Exceptions"><a href="#Exceptions" class="headerlink" title="Exceptions"></a>Exceptions</h2><p>The specified exceptions must be thrown correctly in the specified cases. Exceptions should be thrown<br>as soon as possible, and no unnecessary work should be done when an exception is thrown. Exceptions<br>should be documented in comments, including the type of exception thrown and under what conditions.</p>
+<h2 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h2><p>Each method should have a header comment including all necessary information as described in the<br>Commenting Guide. Comments should be written in your own words (i.e. not copied and pasted from<br>this spec) and should not include implemenation details.</p>
+<h1 id="Running-and-Submitting"><a href="#Running-and-Submitting" class="headerlink" title="Running and Submitting"></a>Running and Submitting</h1><p>If you believe your behavior is correct, you can submit your work by clicking the “Mark” button in the Ed<br>assessment. You will see the results of some automated tests along with tentative grades. <strong>These grades<br>are not final until you have received feedback from your TA.</strong></p>
+<p>You may submit your work as often as you like until the deadline; we will always grade your most recent<br>submission. Note the due date and time carefully— <strong>work submitted after the due time will not be<br>accepted</strong>.</p>
+<h1 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h1><p>If you find you are struggling with this assessment, make use of all the course resources that are available<br>to you, such as:</p>
+<ul>
+<li>Reviewing relevant examples fromclass</li>
+<li>Reading the textbook</li>
+<li>Visitingoffice hours</li>
+<li>Posting a question on themessage board</li>
+</ul>
+<h1 id="Collaboration-Policy"><a href="#Collaboration-Policy" class="headerlink" title="Collaboration Policy"></a>Collaboration Policy</h1><p>Remember that, while you are encouraged to use all resources at your disposal, including your classmates,<br><strong>all work you submit must be entirely your own</strong>. In particular, you should <strong>NEVER</strong> look at a solution<br>to this assessment from another source (a classmate, a former student, an online repository, etc.). Please<br>review thefull policyin the syllabus for more details and ask the course staff if you are unclear on whether<br>or not a resource is OK to use.</p>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>In addition to your code, you must submit answers to short reflection questions. These questions will<br>help you think about what you learned, what you struggled with, and how you can improve next time.<br>The questions are given in the fileLetterInventoryReflection.txtin the Ed assessment; type your<br>responses directly into that file.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CS112-ProgrammingAssignment7.html" rel="next" title="Python代写：CS112-ProgrammingAssignment7">
+                <i class="fa fa-chevron-left"></i> Python代写：CS112-ProgrammingAssignment7
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CS112-ProgrammingAssignment11.html" rel="prev" title="Python代写：CS112-ProgrammingAssignment11">
+                Python代写：CS112-ProgrammingAssignment11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">333</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-143-Computer-Programming-II-Winter-2021"><span class="nav-number">1.</span> <span class="nav-text">CSE 143: Computer Programming II Winter 2021</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Take-home-Assessment-1-Letter-Inventory-due-January-14-2021-11-59pm"><span class="nav-number"></span> <span class="nav-text">Take-home Assessment 1: Letter Inventory due January 14, 2021 11:59pm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number"></span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YourLetterInventoryclass-should-include-the-following-constructor"><span class="nav-number"></span> <span class="nav-text">YourLetterInventoryclass should include the following constructor:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Your-class-should-also-include-the-following-public-methods-"><span class="nav-number"></span> <span class="nav-text">Your class should also include the following public methods: </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implementation-Guidelines"><span class="nav-number"></span> <span class="nav-text">Implementation Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Character-operations"><span class="nav-number"></span> <span class="nav-text">Character operations</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hints"><span class="nav-number"></span> <span class="nav-text">Hints</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-and-Character"><span class="nav-number"></span> <span class="nav-text">String and Character</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Development-Strategy"><span class="nav-number"></span> <span class="nav-text">Development Strategy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Quality-Guidelines"><span class="nav-number"></span> <span class="nav-text">Code Quality Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Fields"><span class="nav-number"></span> <span class="nav-text">Data Fields</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exceptions"><span class="nav-number"></span> <span class="nav-text">Exceptions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commenting"><span class="nav-number"></span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Running-and-Submitting"><span class="nav-number"></span> <span class="nav-text">Running and Submitting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Getting-Help"><span class="nav-number"></span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collaboration-Policy"><span class="nav-number"></span> <span class="nav-text">Collaboration Policy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reflection"><span class="nav-number"></span> <span class="nav-text">Reflection</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
