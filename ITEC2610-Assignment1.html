@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Fundamentals,">
+  <meta name="keywords" content="Java,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="完成任意进制数字Base转换器。">
-<meta name="keywords" content="Fundamentals">
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="COMP1201-Base-Convertor">
-<meta property="og:url" content="cplusplusdaixie.com/COMP1201-Base-Convertor.html">
+<meta property="og:title" content="Java代写：ITEC2610-Assignment1">
+<meta property="og:url" content="cplusplusdaixie.com/ITEC2610-Assignment1.html">
 <meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
-<meta property="og:description" content="完成任意进制数字Base转换器。">
+<meta property="og:description" content="使用Java完成">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-05-27T13:29:19.995Z">
+<meta property="og:updated_time" content="2023-07-07T01:21:58.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="COMP1201-Base-Convertor">
-<meta name="twitter:description" content="完成任意进制数字Base转换器。">
+<meta name="twitter:title" content="Java代写：ITEC2610-Assignment1">
+<meta name="twitter:description" content="使用Java完成">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="cplusplusdaixie.com/COMP1201-Base-Convertor.html">
+  <link rel="canonical" href="cplusplusdaixie.com/ITEC2610-Assignment1.html">
 
 
 
 
 
-  <title>COMP1201-Base-Convertor | 留学生计算机编程数学统计作业代写</title>
+  <title>Java代写：ITEC2610-Assignment1 | 留学生计算机编程数学统计作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/COMP1201-Base-Convertor.html">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/ITEC2610-Assignment1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">COMP1201-Base-Convertor</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：ITEC2610-Assignment1</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-21T11:30:33+08:00">
-                2022-09-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-07T09:20:48+08:00">
+                2023-07-07
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  完成任意进制数字Base转换器。
+                  使用Java完成
               </div>
           
 
@@ -360,28 +360,53 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>A grade school teacher wants to develop a program to generate values to a series of numbers in different base systems. The teacher is limiting the bases to be between 2 and 9, inclusive. Each line of input will have a base value and a sequence of characters representing a nonnegative number in that base. However, each number (sequence of characters) has been placed “backwards”. That is the rightmost digit is first in the sequence, the second digit from the right is encountered next, and so on.</p>
-<p>The program reads the digits one a time. As each digit is read, the program should translate that digit into its corresponding decimal value, and then multiply it by the appropriate power of the base. There is an arbitrary number of blanks between the base and the first digit in the sequence.</p>
-<p>Suppose that the teacher wants the students to convert the binary number 1011.</p>
-<p>The first number, 2, represents the base. Base 2 is designated as binary. The 1101 represents a character sequence of binary digits of the number to convert. IT IS BACKWARDS! This means that the first 1 is in the one’s position or 2 to the 0 power. The second 1 is in the two’s position or 2 to the 1 power. The 0 is in the four’s position or 2 to the second power. And lastly, the rightmost 1 is in the eight’s position or 2 to the third power. Remember the number that was to be converted was 1011.</p>
-<p>The value of this number is 1 1 + 1 2 + 0 4 + 1 8 which equals 11. Please see the sample output on how values are to be displayed.</p>
-<p>Ask your instructor to give another example in a different base.</p>
-<p>However, the teacher’s grade school students have entered the data values. This data CANNOT be trusted as being valid data.</p>
-<p>Your program needs to check for valid bases and if the base is invalid write out a message that says,</p>
-<p>Invalid base given, throwing away the rest of the line.<br>To throw away a line of input use cin.ignore( ). Your instructor will talk about this in class. In addition, your program needs to check for valid digits in the given base. For example, if the base is 2, any digit equal to 2 or higher is NOT legitimate. Your error message should say (i.e. input line is : 2 234510)</p>
-<p>For the given base 2, the number is NOT valid!<br>You will need to throw away the rest of the line here as well.</p>
-<p>Lastly, your program is supposed to add up the values of all valid numbers given and print this value as the final part of the output. If there are NO valid inputted numbers given, then the sum is zero (0).</p>
-<p>Again, please see the sample output on how values are to be displayed.</p>
-<p>The following additional requirements must be followed:</p>
-<h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>Your main function should adhere to the following pseudocode:</p>
-<h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>The above pseudocode suggests some functions. Keep these functions single-minded, performing a focused task that can be well-named. You should design pseudocode for each of these functions. All function bodies, including the body of main, should be NO more than 30 lines long, including braces, blank lines and comments.</p>
-<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><p>You must NOT use arrays. You will lose ALL points if you do.</p>
-<h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><p>You must follow the programming standards.</p>
-<h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><p>You must follow the formatting of the sample I/O below.</p>
-<h3 id="F"><a href="#F" class="headerlink" title="F"></a>F</h3><p>You must thoroughly test your program.</p>
-<h3 id="G"><a href="#G" class="headerlink" title="G"></a>G</h3><p>You must use the following functions and you MUST add the documentation for the parameters for functions that have parameters.</p>
-<h3 id="H"><a href="#H" class="headerlink" title="H"></a>H</h3><p>To get credit for the request, your solution must minimally work on Test Case # 1 below.</p>
-<p>Sample I/O<br>Below are two sample runs.<br>They do NOT cover all cases.</p>
+        <h3 id="Assignment-1"><a href="#Assignment-1" class="headerlink" title="Assignment 1"></a>Assignment 1</h3><p><strong>Question 1</strong> : Write a <strong>student</strong> class to represent students. Each student has a name, a unique ID, and a<br>phone number. Students can choose to add courses or drop courses. No student has access to the research<br>lab, but a student has access to the library if he/she is taking at least one course.</p>
+<p>The <strong>Student</strong> class should have the following public interface:</p>
+<ol>
+<li><strong>public Student(String name, String phoneNumber)</strong> : A constructor to set up student’s name and<br> the phone number. Hint: Consider using a static variable to help assign a unique ID to each student<br> object.</li>
+<li><strong>public String getStudentName()</strong> : An accessor to return the student’s name.</li>
+<li><strong>public String getStudentPhone()</strong> : An accessor to return the student’s phone number.</li>
+<li><strong>public int getStudentId()</strong> : An accessor to return the student’s ID.</li>
+<li><strong>public boolean addCourse(String courseName)</strong> : A method to add courses. The max course load<br> of each student is five courses. Any attempt to add more than five courses will fail and this method<br> will return false. Return true when the course is added successfully.</li>
+<li><strong>public boolean dropCourse(String courseName)</strong> : A method to drop a course. This method will<br> remove the course from the student’s course load. If there is no such course in the student’s course<br> load or the student has not enrolled in any course, the method will return false.</li>
+<li><strong>public int getCourseCount()</strong> : A method to return the number of courses that student has enrolled.</li>
+<li><strong>public boolean hasAccessToLibrary()</strong> : A method that indicates whether the student has access to<br> the library. If the number of courses enrolled is greater than zero, the student will have the access<br> to library.</li>
+<li><strong>public boolean hasAccessToResearchLab()</strong> : A method that indicates whether the student has<br> access to the research lab. Return false.</li>
+</ol>
+<p>Write a tester program <strong>Task1Tester</strong> to test the class you have written. Follow the examples given in<br>class (e.g., BankAccountTester), and create objects from the class <strong>Student</strong> above. Test the public<br>interface of your class thoroughly (each public method must be tested at least once). For accessor<br>methods, print out the expected return value and the return value of your method (see the<br>BankAccountTester example) to compare. This tester class is <strong>not</strong> to be submitted for marking, but it is<br>beneficial for you to make sure your Student class works as intended.</p>
+<p><strong>Question 2</strong> : Now we would like to have an additional class <strong>Instructor</strong> to represent instructors. All<br>instructors have access to the library. Assume that each instructor is assigned to teach one course and<br>this assignment will not change. Each instructor may also have a research project, and only instructors<br>having a research project can access the research lab.</p>
+<p>Since now we have two types of people (and imagine down the road we might have more), you should<br>implement a hierarchy of classes to represent the different types of people. So the first step of this<br>question is to write, at the top of the class hierarchy, an abstract class called <strong>Person</strong> with methods<br>common to different types of people. <strong>Person</strong> has the following public interface:</p>
+<ol>
+<li><strong>public Person(String name, String phoneNumber, String type)</strong> : A constructor to initialize the<br> person’s name and phone number. Consider using a static variable to assign a unique Id to each<br> person object.</li>
+<li><strong>public String getName()</strong> : An accessor to return the person’s name.</li>
+<li><strong>public String getPhoneNumber()</strong> : An accessor to return the person’s phone number.</li>
+<li><strong>public int getId()</strong> : An accessor to return the person’s id.</li>
+<li><strong>public String getType()</strong> : An accessor to return a string that represents the type of person.</li>
+<li><strong>public abstract boolean hasAccessToLibrary()</strong> : A method that indicates whether the person has<br> access to the library. This should be override by the subclass.</li>
+<li><strong>public abstract boolean hasAccessToResearchLab()</strong> : A method that indicates whether the person<br> has access to the research lab. This should be overridden by the subclass.</li>
+</ol>
+<p>Once <strong>Person</strong> is defined, you must then rewrite the <strong>Student</strong> class (with a new class name <strong>Student 2</strong> )<br>and define a new class <strong>Instructor</strong> , both of which inherit from <strong>Person</strong> :</p>
+<ul>
+<li><strong>Student 2</strong> should be implemented to keep the properties and behaviors specified in <strong>Question 1</strong> (of<br>  course, the constructor for this class should be named <strong>Student2</strong> instead of <strong>Student</strong> ).</li>
+<li>The class <strong>Instructor</strong> should have the following public interface:<ol>
+<li><strong>public Instructor(String name, String phoneNumber, String courseId)</strong> : A constructor to<br>set up the instructor name, phone number and course.</li>
+<li><strong>public boolean setReserachTopic(String topic)</strong> : A method to set the research topic for the<br>instructor. If the instructor has already had a topic, the old topic will be replaced by the given<br>topic.</li>
+<li><strong>public String getTopic()</strong> : return the research topic of the instructor.</li>
+<li><strong>public boolean hasAccessToLibrary()</strong> : A method that indicates whether the instructor has<br>access to the library. Always return true.</li>
+<li><strong>public boolean hasAccessToResearchLab()</strong> : A method that indicates whether the instructor<br>has access to the research lab. Return true if the research topic is set.</li>
+</ol>
+</li>
+</ul>
+<p>Write a tester program <strong>Task2Tester</strong> to test the classes you have written in Question 2. Create objects<br>from the classes <strong>Student 2</strong> and <strong>Instructor</strong> above. This tester class is <strong>no</strong> t to be submitted.</p>
+<p><strong>What to submit:</strong><br>Please complete the Questions 1 and 2 according to the requirements, documenting them properly using<br>JavaDoc. Please define the classes and methods using the exact names and signatures given here.</p>
+<p>Compile and test your code under the command line environment (e.g., by executing Terminal under<br>macos or cmd under Windows).</p>
+<ul>
+<li>Submit all 4 source files: <strong>Student.java</strong> , <strong>Person</strong>. <strong>java, Student 2 .java, and Instructor.java</strong>.<br>  Nothing else (including the tester programs) should be submitted.</li>
+<li><strong>DO NOT submit .class files! Submit .java files ONLY</strong>.</li>
+</ul>
+<p><strong>Important to Remember:</strong></p>
+<p><strong>1.</strong> Your assignment will be given a zero mark if only the compiled files (.class files) are submitted,<br>    as we have no way to look at your code. Please make sure to submit the source files (.java files).<br>    <strong>No regrading requests will be entertained if this rule is not followed. No exceptions.<br>2.</strong> Please make sure your code compiles under the command line (i.e., without any IDE, such as<br>    Eclipse, IntelliJ IDEA, and BlueJ). Do not put any package statement at the beginning of your<br>    source file. If you are using an IDE, this is especially important because some IDEs put your code<br>    under a particular package for your project. Any code that does not compile under the command<br>    line can only receive 20/100<strong>. Regrading requests like “…but the code works on my</strong><br>    <strong>computer/in my IDE” will not be entertained. No exceptions.</strong></p>
+<p><strong>Marking Scheme:</strong><br>Style (variable naming, indentation, &amp; layout) <strong>_</strong>/<br>JavaDoc Comments <strong>_</strong>/<br>Code Compiles? <strong>_</strong>(yes/no)<br>Successful Execution of Test Cases <strong>_</strong>/<br>Total <strong>_</strong>/<br>According to this marking scheme the maximum mark you can get for code that does not compile is<br>20/100.</p>
 
       
     </div>
@@ -399,7 +424,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fundamentals/" rel="tag"># Fundamentals</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -412,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CS122-Searching.html" rel="next" title="CS122-Searching">
-                <i class="fa fa-chevron-left"></i> CS122-Searching
+              <a href="/CSE143-Assessment1-Letter-Inventory.html" rel="next" title="Java代写：CSE143-Assessment1-Letter-Inventory">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143-Assessment1-Letter-Inventory
               </a>
             
           </div>
@@ -421,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSCI1200-Crossword-Checker.html" rel="prev" title="CSCI1200-Crossword-Checker">
-                CSCI1200-Crossword-Checker <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,7 +596,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A"><span class="nav-number">2.</span> <span class="nav-text">A</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B"><span class="nav-number">3.</span> <span class="nav-text">B</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C"><span class="nav-number">4.</span> <span class="nav-text">C</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D"><span class="nav-number">5.</span> <span class="nav-text">D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E"><span class="nav-number">6.</span> <span class="nav-text">E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F"><span class="nav-number">7.</span> <span class="nav-text">F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G"><span class="nav-number">8.</span> <span class="nav-text">G</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H"><span class="nav-number">9.</span> <span class="nav-text">H</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-1"><span class="nav-number">1.</span> <span class="nav-text">Assignment 1</span></a></li></ol></div>
             
 
           </div>
