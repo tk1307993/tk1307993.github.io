@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,Artificial Intelligence,">
+  <meta name="keywords" content="Java,">
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的需求，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
-<meta name="keywords" content="Algorithm,Artificial Intelligence">
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java代写：CS4750-Minimax-Tic-Tac-Toe">
-<meta property="og:url" content="cplusplusdaixie.com/CS4750-Minimax-Tic-Tac-Toe.html">
+<meta property="og:title" content="Java代写：COMPSCI320-Assignment1-StableMatchingProblem">
+<meta property="og:url" content="cplusplusdaixie.com/COMPSCI320-Assignment1-StableMatchingProblem.html">
 <meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
-<meta property="og:description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的需求，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
+<meta property="og:description" content="使用Java完成">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-06-05T03:40:53.408Z">
+<meta property="og:updated_time" content="2023-07-09T01:20:42.512Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java代写：CS4750-Minimax-Tic-Tac-Toe">
-<meta name="twitter:description" content="在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的需求，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。">
+<meta name="twitter:title" content="Java代写：COMPSCI320-Assignment1-StableMatchingProblem">
+<meta name="twitter:description" content="使用Java完成">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="cplusplusdaixie.com/CS4750-Minimax-Tic-Tac-Toe.html">
+  <link rel="canonical" href="cplusplusdaixie.com/COMPSCI320-Assignment1-StableMatchingProblem.html">
 
 
 
 
 
-  <title>Java代写：CS4750-Minimax-Tic-Tac-Toe | 留学生计算机编程数学统计作业代写</title>
+  <title>Java代写：COMPSCI320-Assignment1-StableMatchingProblem | 留学生计算机编程数学统计作业代写</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CS4750-Minimax-Tic-Tac-Toe.html">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/COMPSCI320-Assignment1-StableMatchingProblem.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CPlusPlus小砖家">
@@ -284,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java代写：CS4750-Minimax-Tic-Tac-Toe</h2>
+          <h2 class="post-title" itemprop="name headline">Java代写：COMPSCI320-Assignment1-StableMatchingProblem</h2>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T20:25:06+08:00">
-                2019-09-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-09T09:18:31+08:00">
+                2023-07-09
               </time>
             
 
@@ -343,7 +343,7 @@
 
           
               <div class="post-description">
-                  在对弈类游戏中，Minimax算的上是经典算法。这次需要代写的需求，需要用Minimax算法编写Tic-Tac-Toe的AI部分。根据Minimax树层数的不同，游戏分为三个不同难度。
+                  使用Java完成
               </div>
           
 
@@ -360,29 +360,18 @@
       
 
       
-        <h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>In this programming request, you are asked to implement programs to play a two-player game similar to tic-tac-toe: two players, X and O, take turns marking the spaces in a 4×4 grid. The player who succeeds in placing 3 of their marks consecutively in a horizontal, vertical, or diagonal row wins the game.<br>You may form a team of up to three people. The team can be different from that for the HW#2. One solution is submitted by each team electronically in Blackboard. You may use any programming language in your implementation.</p>
-<h3 id="Part-I-Beginner"><a href="#Part-I-Beginner" class="headerlink" title="Part I. Beginner"></a>Part I. Beginner</h3><p>Implement a simple player, called Beginner, who places marks sequentially in a blank square in increasing order of row number and then column number, i.e., (1,1), (1,2), (1,3), (1,4), (2,1), (2,2), …, unless it or the opponent wins the game immediately. Its algorithm is as follows:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Beginner-Decision</span> (<span class="title">state</span>) <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> player has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">the</span> position <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">a</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row<span class="comment"> // "Win"</span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">the</span> opponent has <span class="keyword">an</span> <span class="built_in">open</span> <span class="number">2</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row</span><br><span class="line">    <span class="literal">return</span> marking <span class="keyword">a</span> position next <span class="built_in">to</span> <span class="keyword">the</span> <span class="number">3</span>-<span class="keyword">in</span>-<span class="keyword">a</span>-row <span class="built_in">to</span> block <span class="keyword">the</span> opponent</span><br><span class="line">  <span class="literal">return</span> marking sequentially <span class="keyword">a</span> blank square <span class="keyword">in</span> increasing order <span class="keyword">of</span> row <span class="built_in">number</span> <span class="keyword">and</span> <span class="keyword">then</span> column <span class="built_in">number</span>.</span><br></pre></td></tr></table></figure></p>
-<p>“open 2-in-a-row” means that there is a blank space at one end of the 2-in-a-row, making it possible to become a 3-in-a-row.</p>
-<h3 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h3><ul>
-<li>a) A brief description of your implementation.</li>
-<li>b) Step-by-step of one game played between you (human) and the player Beginner. Beginner plays first.</li>
-<li>c) Your code with appropriate comments.</li>
-</ul>
-<h3 id="Part-II-Advanced"><a href="#Part-II-Advanced" class="headerlink" title="Part II. Advanced"></a>Part II. Advanced</h3><p>Implement a minimax player, called Advanced, who runs the minimax algorithm on a 2-ply game tree, i.e., looking ahead 2 moves (one move by the player and one move by the opponent). The heuristic evaluation function for cutoff nodes is<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h(n) = [<span class="comment"># of open 2-in-a-row for me] - [# of open 2-in-a-row for opponent].</span></span><br></pre></td></tr></table></figure></p>
-<p>For example, for player ‘x’, the value of the following state is<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h = (<span class="number">2</span><span class="number">-1</span>) = <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>When h values are the same, the search breaks tie randomly.</p>
-<h3 id="Submission-1"><a href="#Submission-1" class="headerlink" title="Submission"></a>Submission</h3><ul>
-<li>a) A brief description of your algorithm and implementation.</li>
-<li>b) Step-by-step of one game played between Beginner and Advanced. Beginner plays first. For every step played by Advanced, print the # of expanded nodes and the CPU execution time in milliseconds.</li>
-<li>c) Same as (b) except Advanced plays first.</li>
-</ul>
-<h3 id="Part-III-Master"><a href="#Part-III-Master" class="headerlink" title="Part III. Master"></a>Part III. Master</h3><p>Implement a player, called Master, who runs the minimax algorithm on a 4-ply game tree, i.e., looking ahead 4 moves (2 moves by the player and 2 moves by the opponent). The heuristic evaluation function for cutoff nodes is the same as in part II.</p>
-<h3 id="Submission-2"><a href="#Submission-2" class="headerlink" title="Submission"></a>Submission</h3><ul>
-<li>a) Step-by-step of one game played between Advanced and Master. Advanced plays first. For every step played by Advanced and Master, show the # of expanded nodes and the CPU execution time in milliseconds.</li>
-<li>b) Same as (b) except Master plays first.</li>
-<li>c) Your code with appropriate comments.</li>
-</ul>
-<p>Your submission should be a single pdf file with file name containing your name and request number. For example, firstnameInitial_lastname_hw4.pdf for HW4.</p>
+        <h3 id="Computer-Science-320"><a href="#Computer-Science-320" class="headerlink" title="Computer Science 320"></a>Computer Science 320</h3><h2 id="Programming-Assignment-1"><a href="#Programming-Assignment-1" class="headerlink" title="Programming Assignment 1"></a>Programming Assignment 1</h2><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>This first assignment lets you get familiar with stable maching problem. We would like you to implement the Gale-Shapley algorithm for finding the man-optimal stable maching. An O(n^2 ) solution is preferred since we have set the running time limit on the automated marker. Some tricks to speed up the process of proposing are highly recommended.</p>
+<p>There are 3 test cases whose sizes are different. The first one contains 50 pairs, while the last largest one comprises of 1000 pairs. It is worth 5% of your total course marks. The first and second test cases have 2 marks each and the last has 1 mark.</p>
+<p>In order to boost your performance, we have created an additional small test case, namedR5, which does not contribute to the mark. It would help you to be familiar with reading input and printing output on the automated marker.</p>
+<p>There will be a penalty if you exceed the submission limit of 8. Therefore, pleasetest your implementation with your own generated inputs before submitting to the automated marker.</p>
+<h2 id="Test-case-description"><a href="#Test-case-description" class="headerlink" title="Test case description"></a>Test case description</h2><p>We use # for the comment and we have e.g. n= 5 to indicate the valuenof our stable matching problem. We use all odd integers ranging from 1 to 2n−1 as the man ID, and all even integers ranging from 2 to 2nas the woman ID. There is a whitespace after #,n, =, : to make the parsing process easily.</p>
+<p>The preference for each person ID comes after the colon : (no whitespace between person ID and the colon). There is a whitespace between each integer on the preference list. For example,1: 2 6 8 4 10 means that the man ID 1 has the preference list{ 2 , 6 , 8 , 4 , 10 }where his best choice is 2 and worst<br>choice is 10.</p>
+<p>You should output the matching pair, starting from the man ID 1 to the man ID 2n−1. The matching format ism wwheremis the man ID andwis the woman ID. Note that there is one whitespace betweenmandwin the output format.</p>
+<p>Sample Input:</p>
+<h1 id="Random-instance-for-Gale-Shapley-n-5"><a href="#Random-instance-for-Gale-Shapley-n-5" class="headerlink" title="Random instance for Gale-Shapley, n = 5"></a>Random instance for Gale-Shapley, n = 5</h1><p>#<br>n = 5<br>#<br>1: 2 6 8 4 10<br>2: 5 9 3 1 7<br>3: 6 8 10 4 2<br>4: 3 9 7 5 1<br>5: 2 6 8 10 4<br>6: 7 3 9 5 1<br>7: 10 8 4 6 2</p>
+<h3 id="8-5-7-1-3-9"><a href="#8-5-7-1-3-9" class="headerlink" title="8: 5 7 1 3 9"></a>8: 5 7 1 3 9</h3><h3 id="9-2-4-6-10-8"><a href="#9-2-4-6-10-8" class="headerlink" title="9: 2 4 6 10 8"></a>9: 2 4 6 10 8</h3><h3 id="10-5-9-7-3-1"><a href="#10-5-9-7-3-1" class="headerlink" title="10: 5 9 7 3 1"></a>10: 5 9 7 3 1</h3><p>Sample Output:</p>
+<p>1 8<br>3 6<br>5 2<br>7 10<br>9 4</p>
+<h2 id="Submission-Procedure"><a href="#Submission-Procedure" class="headerlink" title="Submission Procedure"></a>Submission Procedure</h2><p>Submit your program solutions to<a href="https://www.automarker.cs.auckland.ac.nz" target="_blank" rel="noopener">https://www.automarker.cs.auckland.ac.nz</a>. There will be a penalty of 20% (per test case) if you exceed the submission limit of 8 for each test case (applied if you<br>eventually solve them).</p>
 
       
     </div>
@@ -400,9 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Artificial-Intelligence/" rel="tag"># Artificial Intelligence</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -415,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/COMPSCI340-TinyDOS.html" rel="next" title="Python代写：COMPSCI340-TinyDOS">
-                <i class="fa fa-chevron-left"></i> Python代写：COMPSCI340-TinyDOS
+              <a href="/ITEC2610-Assignment1.html" rel="next" title="Java代写：ITEC2610-Assignment1">
+                <i class="fa fa-chevron-left"></i> Java代写：ITEC2610-Assignment1
               </a>
             
           </div>
@@ -424,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CSCE310-Analytical-Problems.html" rel="prev" title="C++代写：CSCE310-Analytical-Problems">
-                C++代写：CSCE310-Analytical-Problems <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-I-Beginner"><span class="nav-number">2.</span> <span class="nav-text">Part I. Beginner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission"><span class="nav-number">3.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-II-Advanced"><span class="nav-number">4.</span> <span class="nav-text">Part II. Advanced</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-1"><span class="nav-number">5.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-III-Master"><span class="nav-number">6.</span> <span class="nav-text">Part III. Master</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submission-2"><span class="nav-number">7.</span> <span class="nav-text">Submission</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-Science-320"><span class="nav-number">1.</span> <span class="nav-text">Computer Science 320</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Programming-Assignment-1"><span class="nav-number"></span> <span class="nav-text">Programming Assignment 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirements"><span class="nav-number"></span> <span class="nav-text">Requirements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-case-description"><span class="nav-number"></span> <span class="nav-text">Test case description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Random-instance-for-Gale-Shapley-n-5"><span class="nav-number"></span> <span class="nav-text">Random instance for Gale-Shapley, n = 5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-7-1-3-9"><span class="nav-number">1.</span> <span class="nav-text">8: 5 7 1 3 9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-4-6-10-8"><span class="nav-number">2.</span> <span class="nav-text">9: 2 4 6 10 8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-9-7-3-1"><span class="nav-number">3.</span> <span class="nav-text">10: 5 9 7 3 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Submission-Procedure"><span class="nav-number"></span> <span class="nav-text">Submission Procedure</span></a></li></div>
             
 
           </div>
