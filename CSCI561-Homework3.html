@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSCI561-Homework3">
+<meta property="og:url" content="cplusplusdaixie.com/CSCI561-Homework3.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-07-17T01:24:57.433Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSCI561-Homework3">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSCI561-Homework3.html">
+
+
+
+
+
+  <title>Java代写：CSCI561-Homework3 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSCI561-Homework3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSCI561-Homework3</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-17T09:23:34+08:00">
+                2023-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSCI-561-Foundations-of-Artificial-Intelligence"><a href="#CSCI-561-Foundations-of-Artificial-Intelligence" class="headerlink" title="CSCI- 561  - Foundations of Artificial Intelligence"></a>CSCI- 561  - Foundations of Artificial Intelligence</h3><p>Homework 3</p>
+<p>Image from imdb.com<br><strong>Guidelines</strong></p>
+<p>This is a programming assignment. You will be provided with sample inputs and outputs (see<br>below). Please understand that the goal of the samples is to check that you can correctly parse<br>the problem definition and generate a correctly formatted output. The samples are very simple<br>and you should not assume that if your program works on the samples it will work on all test<br>cases. There will be more complex test cases and it is your task to make sure that your program<br>will work correctly on any valid input. You are encouraged to try your own test cases to check<br>how your program would behave in some complex special case that you might think of. Since<br><strong>each homework is checked via an automated A.I. script</strong> , your output should match the example<br>format <strong><em>exactly</em></strong>. Failure to do so will most certainly cost some points. The output format is simple<br>and examples are provided. You should upload and test your code on vocareum.com, and you<br>will submit it there. You may use any of the programming languages and versions thereof<br>provided by vocareum.com.</p>
+<p><strong>Grading</strong></p>
+<p>Your code will be tested as follows: Your program should take no command-line arguments. It<br>should read a text file called “input.txt” in the current directory that contains a problem<br>definition. It should write a file “output.txt” with your solution. Format for files input.txt and<br>output.txt is specified below. End-of-line convention is Unix (since vocareum is a Unix system).</p>
+<p>The grading A.I. script will, 50 times:</p>
+<ul>
+<li>Create an input.txt file, delete any old output.txt file.</li>
+<li>Run your code.</li>
+<li>Compare output.txt created by your program with the correct one.</li>
+<li>If your outputs for all 50 test cases are correct, you get 100 points.</li>
+<li>If one or more test case fails, you <strong>lose 2 points for each failed test case</strong>. (note that one<br>  test case involves several answers in this HW; if any answer on a given test case is wrong,<br>  then the whole case is counted as wrong).</li>
+</ul>
+<p>Note that if your code does not compile, or somehow fails to load and parse input.txt, or writes<br>an incorrectly formatted output.txt, or no output.txt at all, or OuTpUt.TxT, <strong>you will get zero<br>points</strong>. Please test your program with the provided sample files to avoid this. You can submit<br>code as many times as you wish on vocareum, and the last submitted version will be used for<br>grading.</p>
+<p><strong>Academic Honesty and Integrity</strong></p>
+<p>All homework material is checked vigorously for dishonesty using several methods. All detected<br>violations of academic honesty are forwarded to the Office of Student Judicial Affairs. To be safe<br>you are urged to err on the side of caution. Do not copy work from another student or off the<br>web. Sanctions for dishonesty are reflected in <em>your permanent record</em> and can negatively impact<br>your future success. As a general guide:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> copy code <span class="keyword">or</span> written material <span class="keyword">from</span> another student. Even single <span class="keyword">lines</span> <span class="keyword">of</span> code</span><br><span class="line">should <span class="keyword">not</span> be copied.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> collaborate <span class="keyword">on</span> this assignment. The assignment <span class="keyword">is</span> <span class="keyword">to</span> be solved individually.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> copy code <span class="keyword">off</span> the web. This <span class="keyword">is</span> easier <span class="keyword">to</span> detect <span class="keyword">than</span> you may think.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> <span class="keyword">share</span> <span class="keyword">any</span> custom <span class="keyword">test</span> cases you may <span class="keyword">create</span> <span class="keyword">to</span> <span class="keyword">check</span> your program’s behavior <span class="keyword">in</span></span><br><span class="line">more complex scenarios <span class="keyword">than</span> the simplistic ones considered below.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> copy code <span class="keyword">from</span> past students. We <span class="keyword">keep</span> copies <span class="keyword">of</span> past <span class="keyword">work</span> <span class="keyword">to</span> <span class="keyword">check</span> <span class="keyword">for</span> this. Even</span><br><span class="line">though this problem differs <span class="keyword">from</span> those <span class="keyword">of</span> previous <span class="keyword">years</span>, <span class="keyword">do</span> <span class="keyword">not</span> try <span class="keyword">to</span> copy <span class="keyword">from</span></span><br><span class="line">homework submissions <span class="keyword">of</span> previous years.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> ask <span class="keyword">on</span> piazza how <span class="keyword">to</span> implement <span class="keyword">some</span> <span class="keyword">function</span> <span class="keyword">for</span> this homework, <span class="keyword">or</span> how <span class="keyword">to</span></span><br><span class="line">calculate something needed <span class="keyword">for</span> this homework.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> post code <span class="keyword">on</span> piazza asking whether <span class="keyword">or</span> <span class="keyword">not</span> it <span class="keyword">is</span> correct. This <span class="keyword">is</span> a violation <span class="keyword">of</span></span><br><span class="line">academic integrity because it biases other students who may <span class="keyword">read</span> your post.</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> post <span class="keyword">test</span> cases <span class="keyword">on</span> piazza asking <span class="keyword">for</span> what the correct solution should be.</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Do</span> ask the professor <span class="keyword">or</span> TAs <span class="keyword">if</span> you <span class="keyword">are</span> unsure about whether certain actions constitute</span><br><span class="line">dishonesty. It <span class="keyword">is</span> better <span class="keyword">to</span> be <span class="keyword">safe</span> <span class="keyword">than</span> sorry.</span><br></pre></td></tr></table></figure>
+<p><strong>Project Description</strong></p>
+<p>You have finally found your dream job running an academy for puppies. You are so passionate<br>about it, you worked long hours and your business is <em>booming</em>. There is only one problem: You<br>have enlisted so many pups into your academy that you are starting to lose track of everything.<br>Letting a puppy start the academy depends on their vaccination and health status. Even once<br>they’re in, what they can train for and which other puppies they interact with depends on their<br>history in the academy. Thankfully, you have a background in AI, so you decide to develop an<br>automated system that can evaluate all of the information you have and alert you and your<br>employees whether an action is possible. The system can also provide an instant guideline to<br>keep owners informed and minimize the risks to these adorable puppies.</p>
+<p>You sit down to develop a beta version of the system using <strong><em>first-order logic resolution</em></strong>. Puppy<br>status and history data will be encoded as first order logic clauses in the knowledge base. The<br>knowledge bases contain sentences with the following defined operators:</p>
+<p>NOT X ~X<br>X OR Y X | Y<br>X AND Y X &amp; Y<br>X IMPLIES Y X =&gt; Y</p>
+<p>The program takes a query of n actions and provides a logical conclusion to whether each can be<br>performed or not.</p>
+<p><strong>Format for input.txt:</strong></p>
+<p><n = number of queries></n></p>
+<p><query 1><br>…</query></p>
+<p><query n></query></p>
+<p><k = number of given sentences in the knowledge base></k></p>
+<p><sentence 1><br>…</sentence></p>
+<sentence k>
+
+<p>The first line contains an integer _N_ specifying the number of queries. The following _N_ lines contain<br>one query per line. The line after the last query contains an integer _K_ specifying the number of<br>sentences in the knowledge base. The remaining _K_ lines contain the sentences in the knowledge<br>base, one sentence per line.</p>
+<p><strong><em>Query format:</em></strong> Each query will be a single literal of the form Predicate(Constant_Arguments) or<br>~Predicate(Constant_Arguments) and will not contain any variables. Each predicate will have<br>between 1 and 25 constant arguments. Two or more arguments will be separated by commas.</p>
+<p><strong><em>KB format:</em></strong> Each sentence in the knowledge base is written in one of the following forms:</p>
+<h1 id="1-An-implication-of-the-form-p-1-∧-p-2-∧-…-∧-pm-⇒-q-where-its-premise-is-a-conjunction-of"><a href="#1-An-implication-of-the-form-p-1-∧-p-2-∧-…-∧-pm-⇒-q-where-its-premise-is-a-conjunction-of" class="headerlink" title="1) An implication of the form p 1 ∧ p 2 ∧ … ∧ pm ⇒ q, where its premise is a conjunction of"></a>1) An implication of the form p 1 ∧ p 2 ∧ … ∧ pm ⇒ q, where its premise is a conjunction of</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">literals <span class="keyword">and</span> its conclusion is <span class="keyword">a</span> single literal. Remember that <span class="keyword">a</span> literal is <span class="keyword">an</span> atomic <span class="keyword">sentence</span></span><br><span class="line"><span class="keyword">or</span> <span class="keyword">a</span> negated atomic <span class="keyword">sentence</span>.</span><br><span class="line"><span class="number">2</span>) A single literal: q <span class="keyword">or</span> ~ q</span><br></pre></td></tr></table></figure>
+<p>Notes:</p>
+<ol>
+<li>&amp; denotes the <em>conjunction</em> operator.</li>
+<li>| denotes the <em>disjunction</em> operator. It will not appear in the queries nor in the KB given as<br> input. But you will likely need it to create your proofs.</li>
+<li>=&gt; denotes the <em>implication</em> operator.</li>
+<li>~ denotes the <em>negation</em> operator.</li>
+<li>No other operators besides &amp;, =&gt;, and ~ are used in the knowledge base.</li>
+<li>There will be no parentheses in the KB except as used to denote arguments of predicates.</li>
+<li>Variables are denoted by a single lowercase letter.</li>
+<li>All predicates (such as Vaccinated) and constants (such as Hayley) are case sensitive<br> alphabetical strings that begin with uppercase letters.</li>
+<li>Each predicate takes at least one argument. Predicates will take at most 25 arguments. A<br> given predicate name will not appear with different number of arguments.</li>
+<li>There will be at most 10 queries and 100 sentences in the knowledge base.</li>
+<li>See the sample input below for spacing patterns.</li>
+<li>You can assume that the input format is exactly as it is described.</li>
+<li>There will be no syntax errors in the given input.</li>
+<li>The KB will be true (i.e., will not contain contradictions).</li>
+</ol>
+<p><strong>Format for output.txt:</strong></p>
+<p>For each query, determine if that query can be inferred from the knowledge base or not, one<br>query per line:</p>
+<p><answer 1><br>…</answer></p>
+<answer n>
+
+<p>Each answer should be either TRUE if you can prove that the corresponding query sentence is<br>true given the knowledge base, or FALSE if you cannot.</p>
+<p><strong>Notes and hints:</strong></p>
+<ul>
+<li>Please name your program “ <strong>homework.xxx</strong> ” where ‘xxx’ is the extension for the<br>  programming language you choose. (“ <strong>py</strong> ” for python 3 , “ <strong>cpp</strong> ” for C++, and “ <strong>java</strong> ” for Java).<br>  If you are using C++11, then the name of your file should be “homework11.cpp” and if<br>  you are still using python2 even though it’s not supported anymore, then the name of<br>  your file should be “homework 2 .py”.</li>
+<li>If you decide that the given statement can be inferred from the knowledge base, every<br>  variable in each sentence used in the proving process should be unified with a Constant<br>  (i.e., unify variables to constants before you trigger a step of resolution).</li>
+<li>All variables are assumed to be universally quantified. There is no existential quantifier<br>  in this homework. There is no need for Skolem functions or Skolem constants.</li>
+<li>Operator priorities apply (negation has higher priority than conjunction). There will be<br>  no parentheses in the sentences, other than around arguments of predicates.</li>
+<li>The knowledge base is consistent.</li>
+<li>If you run into a loop and there is no alternative path you can try, report FALSE. An<br>  example for this would be having two rules <strong><em>(1)</em></strong> A(x) =&gt; B(x) and <strong><em>(2)</em></strong> B(x) =&gt; A(x) and<br>  wanting to prove A(Teddy). In this case your program should report FALSE.</li>
+<li>Note that the KB is not in Horn form because we allow more than one positive literal. So<br>  you indeed must use resolution and cannot use generalized Modus Ponens.</li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<p>For this input.txt:</p>
+<p>1<br>Play(Hayley,Teddy)<br>6<br>Vaccinated(x) =&gt; Start(x)<br>Start(x) &amp; Healthy(x) =&gt; Ready(x)<br>Ready(x) &amp; Ready(y) =&gt; Play(x,y)<br>Vaccinated(Hayley)<br>Healthy(Hayley)<br>Healthy(Teddy)</p>
+<p>your output.txt should be:</p>
+<p>FALSE</p>
+<p><strong>Example 2:</strong></p>
+<p>For this input.txt:</p>
+<p>2<br>Learn(Sit,Ares)<br>Graduate(Hayley)<br>8<br>Ready(x) =&gt; Train(Come,x)<br>Healthy(x) &amp; Train(y,x) =&gt; Learn(y,x)<br>Learn(Come,x) =&gt; Train(Sit,x)<br>Learn(Come,x) &amp; Learn(Sit,x) =&gt; Train(Down,x)<br>Learn(Down,x) =&gt; Graduate(x)<br>Ready(Hayley)<br>Ready(Ares)<br>Healthy(Ares)</p>
+<p>your output.txt should be:</p>
+<p>TRUE<br>FALSE</p>
+<p><strong>Example 3:</strong></p>
+<p>For this input.txt:</p>
+<p>3<br>Play(Ares,Teddy)<br>Train(Down,Hayley)<br>Play(Ares,Hayley)<br>10<br>Healthy(x) =&gt; Ready(x)<br>Ready(x) =&gt; Train(Come,x)<br>Healthy(x) &amp; Train(y,x) =&gt; Learn(y,x)<br>Learn(Come,x) =&gt; Train(Sit,x)<br>Learn(Come,x) &amp; Learn(Sit,x) =&gt; Train(Down,x)<br>Learn(Down,x) =&gt; Graduate(x)<br>Ready(x) &amp; Ready(y) =&gt; Play(x,y)<br>Healthy(Ares)<br>Healthy(Hayley)<br>Learn(Come,Hayley)</p>
+<p>your output.txt should be:</p>
+<p>FALSE<br>TRUE<br>TRUE</p>
+<p><strong>Example 4: (note: a previous typo has been corrected)</strong></p>
+<p>For this input.txt:</p>
+<p>5<br>Greet(Hayley,TrainerJosh)<br>PlayFetch(Luna,TrainerBibek)<br>ShowOff(Ares,TrainerChristina)<br>Graduate(Hayley)<br>Play(Leia,Teddy)<br>50<br>Vaccinated(x) =&gt; Start(x)<br>Start(x) &amp; Healthy(x) =&gt; Ready(x)<br>RespondToName(x) =&gt; Train(Come,x)<br>Ready(x) &amp; Train(y,x) =&gt; Learn(y,x)<br>Learn(Come,x) =&gt; Train(Sit,x)<br>Learn(Come,x) &amp; Learn(Sit,x) =&gt; Train(Down,x)<br>Learn(Sit,x) =&gt; Train(Paw,x)<br>Learn(Paw,x) &amp; Working(y) =&gt; Greet(x,y)<br>Scared(x,y) =&gt; ~Socialize(x,y)<br>Ready(x) &amp; Ready(y) &amp; Socialize(x,y) &amp; Socialize(y,x) =&gt; Play(x,y)<br>Learn(Get,x) =&gt; Train(Drop,x)<br>Learn(Come,x) &amp; HoldToy(x) =&gt; Train(Get,x)<br>RespondToName(x) &amp; HoldToy(x) =&gt; Train(Drop,x)<br>Learn(Come,x) &amp; Learn(Get,x) &amp; Learn(Drop,x) =&gt; Train(Fetch,x)<br>Learn(Fetch,x) &amp; Working(y) =&gt; PlayFetch(x,y)<br>Learn(Down,x) =&gt; Train(Roll,x)<br>Learn(Roll,x) &amp; Working(y) =&gt; ShowOff(x,y)<br>RespondToName(x) &amp; Desensitized(Leash,x) =&gt; Train(WalkIndoors,x)<br>Learn(WalkIndoors,x) &amp; Desensitized(Cars,x) =&gt; Train(WalkOutdoors,x)<br>Learn(WalkOutdoors,x) &amp; Learn(Down,x) =&gt; Graduate(x)<br>~Sensitive(y,x) =&gt; Desensitized(y,x)<br>Sensitive(y,x) =&gt; TrainDesensitized (y,x)<br>Sensitive(y,x) &amp; TrainDesensitized(y,x) =&gt; Desensitized(y,x)<br>Vaccinated(Hayley)<br>Vaccinated(Ares)<br>~Vaccinated(Leia)<br>Vaccinated(Luna)<br>Vaccinated(Teddy)<br>~Healthy(Ares)<br>Healthy(Hayley)<br>Healthy(Luna)<br>Healthy(Leia)<br>Healthy(Teddy)<br>~Scared(Leia,Teddy)<br>Scared(Teddy,Leia)<br>~Sensitive(Leash,Hayley)<br>~Sensitive(Cars,Teddy)<br>Sensitive(Cars,Luna)<br>~Sensitive(Cars,Hayley)<br>Working(TrainerChristina)<br>~Working(TrainerJosh)<br>Working(TrainerBibek)<br>RespondToName(Hayley)<br>RespondToName(Luna)<br>RespondToName(Ares)<br>HoldToy(Luna)<br>~HoldToy(Leia)<br>~RespondToName(Leia)<br>Sensitive(Cars,Leia)</p>
+<p>your output.txt should be:</p>
+<p>FALSE<br>TRUE<br>FALSE<br>TRUE<br>FALSE</p>
+</answer></sentence>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSC335-Project1-Mastermind.html" rel="next" title="Java代写：CSC335-Project1-Mastermind">
+                <i class="fa fa-chevron-left"></i> Java代写：CSC335-Project1-Mastermind
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">339</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSCI-561-Foundations-of-Artificial-Intelligence"><span class="nav-number">1.</span> <span class="nav-text">CSCI- 561  - Foundations of Artificial Intelligence</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#1-An-implication-of-the-form-p-1-∧-p-2-∧-…-∧-pm-⇒-q-where-its-premise-is-a-conjunction-of"><span class="nav-number"></span> <span class="nav-text">1) An implication of the form p 1 ∧ p 2 ∧ … ∧ pm ⇒ q, where its premise is a conjunction of</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
