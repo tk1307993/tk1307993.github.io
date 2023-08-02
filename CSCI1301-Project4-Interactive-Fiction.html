@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSCI1301_Project4_Interactive_Fiction">
+<meta property="og:url" content="cplusplusdaixie.com/CSCI1301-Project4-Interactive-Fiction.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-02T02:12:39.610Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSCI1301_Project4_Interactive_Fiction">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSCI1301-Project4-Interactive-Fiction.html">
+
+
+
+
+
+  <title>Java代写：CSCI1301_Project4_Interactive_Fiction | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSCI1301-Project4-Interactive-Fiction.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSCI1301_Project4_Interactive_Fiction</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-02T10:11:30+08:00">
+                2023-08-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSCI-1301-Introduction-to-Computing-and-Programming"><a href="#CSCI-1301-Introduction-to-Computing-and-Programming" class="headerlink" title="CSCI 1301: Introduction to Computing and Programming"></a><strong>CSCI 1301: Introduction to Computing and Programming</strong></h3><p><strong>Project 4: Interactive Fiction</strong></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Once upon a time, before the dawn of the Internet as we know it, there lived a forgotten type of<br>computer game called interactive fiction. First written in the late ‘70s, these games were sort of a<br>choose-your-own adventure book, but for geeks. These games contain no graphics, just a 2nd<br>person (everybody remembers English class, right?) description of your character, and a box for<br>entering commands. With the birth of the kindle and other Internet enabled e-readers, these<br>games are experiencing something of a rebirth, as their screens are a perfect match for these<br>games.</p>
+<p>Photo from: <a href="http://www.indieretronews.com/2018/01/the-pawn-classic-text-adventure-by.html" target="_blank" rel="noopener">http://www.indieretronews.com/2018/01/the-pawn-classic-text-adventure-by.html</a></p>
+<p>To play one for yourself, go to <a href="https://eblong.com/zarf/zweb/dreamhold/" target="_blank" rel="noopener">https://eblong.com/zarf/zweb/dreamhold/</a></p>
+<p>Your project is to create an interactive fiction. In this game, you will navigate a map (moving<br>east, west, north, south when possible). In each “room” of the map, the game will print a<br>description of the room to the screen. As you navigate through the map, you will be looking for<br>a light to light up the dark rooms, a key to open a treasure chest, and a chest (that contains the</p>
+<p>treasure!). Once you have found the key, you can open the chest. While going through the map,<br>you must watch out for the deadly grue! To help you get started on the game, a couple of classes<br>have been written for you. You only need to make the guts of the game, called the engine. You<br>will find Map.java, Room.java, Lamp.java, Key.java, and Chest.java on the course website.<br>Some of these classes are completely finished and others are just skeletons (containing<br>comments and method signatures).</p>
+<p>Begin by taking a quick a look at the Map class, which is completely implemented for you ( <strong>do<br>not modify the Map class, just know how to use it</strong> ). In this game, a map is a square of size<br>NxN where each cell contains a room. Each room contains a description of the room and<br>possibly a few other items. You call the getRoom(X,Y) to retrieve the Room object for a given<br>square. The first number (X) gives the row and the second (Y) gives the column. The starting<br>room is at (0,0).</p>
+<p>To the right is a picture of a general map.<br>Note that the map can be of any size. To<br>clarify the X and Y positions, we have<br>marked the map at position (2,1) with an<br>O. In this cell, we would say that the X<br>value is 2 and the Y value is 1.</p>
+<p>While debugging your code, you can run the program in “simple map” mode where the map<br>contains only a single room (see below). This is useful in debugging because no one wants to<br>walk through a huge map only to find that the final command doesn’t work. When you have<br>tested your code and want to play the entire game, set the simpleMap variable to false for a<br>larger map. The larger map we have provided is of size 4x4.</p>
+<p>Illustration of Map when simpleMap = true</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="symbol">0 </span>X</span><br></pre></td></tr></table></figure>
+<p>Now take a look at the Room class. This class is implemented for you as well. It contains a large<br>number of methods for you to use during the game. As you can see, there are no setters, only<br>getters. This means that for the most part you cannot modify any Room objects you receive. The<br>exceptions are the clearKey() and clearLamp() methods that modify two of the room’s sub<br>objects. Note: these methods allow you to modify a Room object. <strong>You should never modify the<br>Room.java code</strong>. You’ll see down below when you need to call these methods. If a room does<br>not have a specific sub-object (key, lamp), its variable will be set to null. You will need to test<br>for this condition to see if a room has a sub-object or not. <em>The description of the interface for this<br>class is given at the end of this pdf.</em></p>
+<p>Now, take a look at the Key class, it is written for you. <strong>You do NOT need to update anything<br>in the Key.java file.</strong> The Key class only has one method: public void use(Chest onChest).<br>Calling this method simply calls the unlock method on the given chest. <em>The description of the</em></p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> ... n</span><br><span class="line"><span class="number">0</span> X</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span> O</span><br><span class="line">...</span><br><span class="line">n</span><br></pre></td></tr></table></figure>
+<p><em>interface for this class is given at the end of this pdf.</em></p>
+<h1 id="Program-Requirements-–-General-Algorithm"><a href="#Program-Requirements-–-General-Algorithm" class="headerlink" title="Program Requirements – General Algorithm"></a>Program Requirements – General Algorithm</h1><p>You should <strong>NOT modify</strong> <strong><em>Room.java</em></strong> <strong>or</strong> <strong><em>Map.java or Key.java</em></strong> to get your game working. Your<br>project will be tested with our own versions of these two files, so any modifications you make<br>could result in your project not compiling or not working correctly.<br>Also – <strong>you should never create new Key or new Chest objects. This is done already in the<br>preexisting code. So, if you add the words “new Key()” or “new Chest()”, you will have<br>logical errors in your code.</strong></p>
+<ol>
+<li>You should start your work by implementing the Chest class (a skeleton is provided for<br> you). It needs to store whether it is locked or not, a String describing the contents, and<br> which key it was locked with. The method stubs for this class are provided with<br> comments, be sure to implement them the way they are described. You should not add<br> any more methods to this class.</li>
+<li>Next, implement the Lamp class (the class definition is provided for you), it only needs to<br> store whether it is lit or not. Follow the rules of encapsulation/information hiding, and<br> prevent any other class from accessing or modifying your instance variables directly.</li>
+<li>Then, create a player class in a file called <strong>Player.java</strong>. No skeleton is provided for you,<br> you must create it from scratch. You’re responsible for adding instance methods and<br> variables. A player object will represent the user playing the game, and thus needs to<br> store which map square they are currently on (integer x and y coordinates), the lamp and<br> key. You should create instance class type variables for the lamp and key, and if they<br> happen to be null, the player does NOT currently have them (same is true for the Room<br> objects as well). Be sure to follow encapsulation rules here too. You do not need to<br> initialize the lamp and key instance variables, as they will default to null. When the<br> player collects the lamp and the key, you will call setLamp and setKey to set these<br> variables.</li>
+<li>Once these are done, create a class called <strong>Adventure</strong> and write the <strong>main method</strong> of your<br> program in it (remember that the class that contains the main method is the one that you<br> run). The first thing to do in main is to create a Player object and set its starting<br> coordinates to (0,0). Also, you will need to create a new Map object. The idea in the<br> Adventure class is that you loop repeatedly until the player dies (attacked by grue – see<br> below) or finds the treasure (opens chest – see below). Every time the player moves,<br> update the player’s position and get the appropriate Room object from the map. Using this<br> object, display the appropriate text to the user based on what command they type in. A<br> list of commands is given below. Ignore case on the user input.<pre><code>- GET LAMP – If the lamp is present in the current room ( there is a method in the
+   Room cl ass (i.e. getLamp()) that allows you to check this. Note the method’s
+   return type and assign the return value accordingly), this transfers the lamp from
+</code></pre></li>
+</ol>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">the</span> room <span class="built_in">to</span> <span class="keyword">the</span> player. Be sure <span class="built_in">to</span> <span class="built_in">clear</span> <span class="keyword">the</span> lamp <span class="built_in">from</span> <span class="keyword">the</span> room afterwards. Print</span><br><span class="line">“OK” <span class="keyword">if</span> successful, <span class="keyword">or</span> “No lamp present” <span class="keyword">if</span> <span class="keyword">not</span>. Note: that you can find <span class="keyword">the</span> lamp</span><br><span class="line"><span class="keyword">in</span> <span class="keyword">a</span> dark room.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>LIGHT LAMP – If the player has the lamp, this sets it to lit. Print “OK” if<br>  successful, or “You don’t have the lamp to light” if the player doesn’t have the<br>  lamp.</li>
+<li>NORTH, SOUTH, EAST, WEST – If the current room (prior to the move)<br>  isDark(), AND the player doesn’t have the lamp OR they have the lamp but the<br>  lamp is not lit, the player is eaten by a grue and the game is over. (see below for<br>  an example). Otherwise, move the user North one square (-1 x), South one square<br>  (+1 x), East one square (+1 y), or West one square (-1 y). See table below to<br>  understand x and y in the context of the map. Once you move into a new room,<br>  you should print out its description, so the user doesn’t have to type LOOK every<br>  time. Be sure to check the current room object to see if the given direction is<br>  valid. If not, print (“Can’t go that way”). If the room (after the move) isDark()<br>  AND the player does not have the lamp OR the lamp is not lit, then instead of<br>  printing the description, tell them: “It is pitch black, you can’t see anything. You<br>  may be eaten by a grue!”. (see below for an example)</li>
+<li>LOOK –If the room isDark() and the player does not have the lamp or the lamp is<br>  not lit, then instead of printing the description, tell them: “It is pitch black, you<br>  can’t see anything. You may be eaten by a grue!”. (see below for an example).<br>  Otherwise, this prints the description of the current room object, as well as any<br>  objects that are in the room. You should also print which exits from the room are<br>  valid.</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i. If <span class="keyword">the</span> lamp <span class="keyword">is</span> present <span class="keyword">in</span> <span class="keyword">the</span> room, print “There <span class="keyword">is</span> an old oil lamp <span class="keyword">that</span> was</span><br><span class="line">made long ago here.” <span class="keyword">after</span> you have printed out <span class="keyword">the</span> room description.</span><br><span class="line">ii. If <span class="keyword">the</span> key <span class="keyword">is</span> present <span class="keyword">in</span> <span class="keyword">the</span> room, print “You see <span class="keyword">the</span> outline <span class="keyword">of</span> a key <span class="keyword">on</span> a</span><br><span class="line">dusty shelf <span class="keyword">that</span>'s covered <span class="keyword">in</span> dust.” <span class="keyword">after</span> you have printed out <span class="keyword">the</span> room</span><br><span class="line">description.</span><br><span class="line">iii. If <span class="keyword">the</span> chest <span class="keyword">is</span> present <span class="keyword">in</span> <span class="keyword">the</span> room, print “There <span class="keyword">is</span> a large, wooden,</span><br><span class="line">massive, oaken chest here <span class="keyword">with</span> <span class="keyword">the</span> <span class="built_in">word</span> “CHEST” carved <span class="keyword">into</span> <span class="keyword">it</span>” <span class="keyword">after</span></span><br><span class="line">you have printed out <span class="keyword">the</span> room description.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>GET KEY – If the key is present in the room, this transfers the key to the user’s<br>  inventory. Be sure to clear the key from the room afterwards. Print “OK” if<br>  successful, “No key present” if not.</li>
+<li>OPEN CHEST – If the chest is present in the room and is unlocked, then this<br>  should print out the chest’s contents and end the game. If the chest is locked, print<br>  “The chest is locked”. If the chest is not present in the room, print “No chest<br>  present”.</li>
+</ul>
+<ul>
+<li>UNLOCK CHEST – If the user has the key, call the use() method with the chest<br>  object to unlock it, then print “OK”. If the user doesn’t have the key, print “Need a<br>  key to do any unlocking!”. If the chest is not present, print “No chest to unlock”.</li>
+<li>(anything else) – Just print “I’m sorry I don’t know how to do that.”, and re-<br>  prompt the user to allow the user to enter another command. The user should be<br>  able to continue playing after an invalid command is inputted, and the game<br>  should continue normally after an invalid command. The program should not<br>  crash or end abruptly if the user inputs an invalid command.</li>
+</ul>
+<ol start="5">
+<li>When your program starts, print out the following text:<br>Welcome to UGA Adventures: Episode I<br>The Adventure of the Cave of Redundancy Adventure<br>By: (Your name)</li>
+</ol>
+<h2 id="Additional-Requirements"><a href="#Additional-Requirements" class="headerlink" title="Additional Requirements"></a>Additional Requirements</h2><p>These are things that make the graders lives easier, and ultimately, you will see in the real world<br>as well. Remember the teaching staff does not want to touch your code after they gave you<br>requirements; they want to see the perfect results they asked for! Here is a checklist of things you<br>can <strong>lose points</strong> for:</p>
+<ul>
+<li>(-10 points) If the source file(s)/class(es) are named incorrectly (case matters!)</li>
+<li>(-10 points) If your source file(s) have a package declaration at the top</li>
+<li>(-10 points) If any source file you submit is missing your Statement of Academic<br>  Honesty at the top of the source file. All submitted source code files must contain your<br>  Statement of Academic Honesty at the top of each file.</li>
+<li>(-10 points) If you have more than one instance of Scanner in your program. Your<br>  program should only have one instance of Scanner.</li>
+<li>(-15 points) Inconsistent I/O (input/output) that does not match our instructions or<br>  examples exactly (unless otherwise stated in an assignment’s instructions). Your<br>  program’s I/O (order, wording, formatting, etc.) must match our examples and<br>  instructions.</li>
+<li>(-100 points) If the source file(s) are not submitted before the specified deadline or if they<br>  do not compile. Late submissions will not be accepted for this project since it is the last<br>  project of the semester, per the course syllabus.</li>
+<li>If your (-10 points) comments or (-10 points) variables are “lacking”<br>  o Here, “lacking” means that you or a TA can find <strong>any</strong> lines of code or variables<pre><code>that take more than 10 seconds to understand, and there is no comment, or the
+variable name does not make sense (variable names like **b** , **bb** , **bbb** , etc. **will**
+**almost never be acceptable)**
+</code></pre></li>
+<li>(-10 points) Indentation is not consistent throughout your source code<br>  o Refresh your memory of indentation patterns in chapter 2 in the course textbook<br>  o Be careful of a combination of tabs and spaces in your files (use one or the other)!</li>
+</ul>
+<p>If any of the above do not make sense to you, talk to a TA or ask your lab instructor.</p>
+<h2 id="Project-Submission"><a href="#Project-Submission" class="headerlink" title="Project Submission"></a>Project Submission</h2><p>Submit the files <strong>Adventure.java</strong> , <strong>Chest.java</strong> , <strong>Lamp.java</strong> and <strong>Player.java</strong> in eLC. [Note that<br>you are not uploading Map.java, Room.java or Key.java because you should <strong>not</strong> have updated<br>these]</p>
+<h2 id="Example-Executions"><a href="#Example-Executions" class="headerlink" title="Example Executions"></a>Example Executions</h2><p>Your program should work correctly and follow the examples below. Each example is a separate<br>run of a correctly working program.</p>
+<h3 id="This-example-is-from-simpleMap-simpleMap-variable-set-to-true-in-the-Map-class"><a href="#This-example-is-from-simpleMap-simpleMap-variable-set-to-true-in-the-Map-class" class="headerlink" title="This example is from simpleMap (simpleMap variable set to true in the Map class)"></a>This example is from simpleMap (simpleMap variable set to true in the Map class)</h3><p>Welcome to UGA Adventures: Episode 1<br>The adventure of the Cave of Redundancy Adventure<br>By: Brad and Karen</p>
+<p>This is the one room map. Everything you need is here!!<br>get key<br>OK<br>open chest<br>The chest is locked<br>unlock chest<br>OK<br>open chest<br>all the gold <strong>(Here, we are printing the contents of the chest)</strong></p>
+<h3 id="Note-The-next-2-examples-follow-the-full-map-simpleMap-variable-set-to-false"><a href="#Note-The-next-2-examples-follow-the-full-map-simpleMap-variable-set-to-false" class="headerlink" title="Note: The next 2 examples follow the full map (simpleMap variable set to false)"></a>Note: The next 2 examples follow the full map (simpleMap variable set to false)</h3><p>Welcome to UGA Adventures: Episode 1<br>The adventure of the Cave of Redundancy Adventure<br>By: Brad and Karen</p>
+<p>FOREST TRAIL:<br>You are standing on a dirt trail that leads to the east. Surrounding you is the famously thick underbrush<br>of Oconee Forest Park, the fall leaves falling off the trees have just started to poke holes in the canopy.<br>Off in the distance you hear the cool sounds of Lake Herrick drifting through the trees.<br>look<br>FOREST TRAIL:<br>You are standing on a dirt trail that leads to the east. Surrounding you is the famously thick underbrush<br>of Oconee Forest Park, the fall leaves falling off the trees have just started to poke holes in the canopy.<br>Off in the distance you hear the cool sounds of Lake Herrick drifting through the trees.<br>Exits are: east<br>east<br>WOODEN WALKWAY:<br>The wooden walkway makes a :clump: as you stride along it.</p>
+<p>Frogs give a terrified SKRIP! and jump to safety as your adventurous frame comes into view.<br>A mountain biker, ignoring the many “Fragile Habitat” signs, speeds along a narrow dirt path to your<br>right.<br>As you reach the end of the walkway, you notice a hole in the ground in a newly fallen tree’s footprint,<br>just<br>large enough for you to fit through.<br>look<br>WOODEN WALKWAY:<br>The wooden walkway makes a :clump: as you stride along it.<br>Frogs give a terrified SKRIP! and jump to safety as your adventurous frame comes into view.<br>A mountain biker, ignoring the many “Fragile Habitat” signs, speeds along a narrow dirt path to your<br>right.<br>As you reach the end of the walkway, you notice a hole in the ground in a newly fallen tree’s footprint,<br>just<br>large enough for you to fit through.<br>There is an old oil lamp that was made long ago here.<br>Exits are: east<br>west<br>get lamp<br>OK<br>east<br>It is pitch black, you can’t see anything. You may be eaten by a grue!<br>light lamp<br>OK<br>look<br>CAVE ENTRANCE:<br>The damp earthen crawlspace gives you claustrophobic thoughts as you crawl through its damp earth.<br>Fortunately, the passageway soon grows large enough for you to stand, though slightly bent over.<br>The air smells of rotting wood, and a rotting wood smell hangs thick in the air.<br>Exits are: east<br>West</p>
+<h3 id="…The-rest-of-the-example-removed-in-the-sake-of-space…"><a href="#…The-rest-of-the-example-removed-in-the-sake-of-space…" class="headerlink" title="[[…The rest of the example removed in the sake of space…]]"></a>[[…The rest of the example removed in the sake of space…]]</h3><h3 id="In-this-example-the-user-is-eaten-by-the-grue"><a href="#In-this-example-the-user-is-eaten-by-the-grue" class="headerlink" title="In this example, the user is eaten by the grue:"></a>In this example, the user is eaten by the grue:</h3><p>Welcome to UGA Adventures: Episode 1<br>The adventure of the Cave of Redundancy Adventure<br>By: Brad and Karen</p>
+<p>FOREST TRAIL:<br>You are standing on a dirt trail that leads to the east. Surrounding you is the famously thick underbrush<br>of Oconee Forest Park, the fall leaves falling off the trees have just started to poke holes in the canopy.<br>Off in the distance you hear the cool sounds of Lake Herrick drifting through the trees.<br>east<br>WOODEN WALKWAY:<br>The wooden walkway makes a :clump: as you stride along it.<br>Frogs give a terrified SKRIP! and jump to safety as your adventurous frame comes into view.</p>
+<p>A mountain biker, ignoring the many “Fragile Habitat” signs, speeds along a narrow dirt path to your<br>right.<br>As you reach the end of the walkway, you notice a hole in the ground in a newly fallen tree’s footprint,<br>just<br>large enough for you to fit through.<br>east<br>It is pitch black, you can’t see anything. You may be eaten by a grue!<br>west<br>You have stumbled into a passing grue, and have been eaten</p>
+<h2 id="Map-Class-Interface"><a href="#Map-Class-Interface" class="headerlink" title="Map Class Interface"></a>Map Class Interface</h2><p>class Map:<br>private boolean simpleMap : This is set to true by default and allows you to test your code with a<br>1-dimension room<br>public Room getRoom(int x, int y) : Call this method with two int’s to get the appropriate room.<br>The valid range for both x and y is 0 to 3.</p>
+<h2 id="Room-Class-Interface"><a href="#Room-Class-Interface" class="headerlink" title="Room Class Interface"></a>Room Class Interface</h2><p>class Room:<br>public String getDescription() : Returns the text description of this room.<br>public boolean canGoNorth() : Returns true if the player can go north from this room.<br>public boolean canGoSouth() : Returns true if the player can go south from this room.<br>public boolean canGoEast() : Returns true if the player can go east from this room.<br>public boolean canGoWest() : Returns true if the player can go west from this room.<br>public Lamp getLamp() : Returns the lamp object in this room. If no lamp is present, returns null.<br>public void clearLamp() : Sets the lamp variable in this room to null.<br>public Key getKey() : Returns the key object in this room. If no key is present, returns null.<br>public void clearKey() : Sets the key variable in this room to null.<br>public Chest getChest() : Returns the chest object in this room. If no chest is present, returns null.<br>public boolean isDark() : Returns true if there is no light in this room, veeeeeeery dangerous!</p>
+<h2 id="Key-Class-Interface"><a href="#Key-Class-Interface" class="headerlink" title="Key Class Interface"></a>Key Class Interface</h2><p>class Key:<br>public void use(Chest onChest): Calls the unlock method on the given chest.</p>
+<p>Copyright © Bradley J. Barnes and the University of Georgia. This work is licensed<br>under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International<br>License to students and the public. The content and opinions expressed on this Web<br>page do not necessarily reflect the views of nor are they endorsed by the University of<br>Georgia or the University System of Georgia.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSCI1110-A4.html" rel="next" title="Java代写：CSCI1110_A4">
+                <i class="fa fa-chevron-left"></i> Java代写：CSCI1110_A4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">344</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSCI-1301-Introduction-to-Computing-and-Programming"><span class="nav-number">1.</span> <span class="nav-text">CSCI 1301: Introduction to Computing and Programming</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number"></span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Program-Requirements-–-General-Algorithm"><span class="nav-number"></span> <span class="nav-text">Program Requirements – General Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Additional-Requirements"><span class="nav-number"></span> <span class="nav-text">Additional Requirements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project-Submission"><span class="nav-number"></span> <span class="nav-text">Project Submission</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Executions"><span class="nav-number"></span> <span class="nav-text">Example Executions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#This-example-is-from-simpleMap-simpleMap-variable-set-to-true-in-the-Map-class"><span class="nav-number">1.</span> <span class="nav-text">This example is from simpleMap (simpleMap variable set to true in the Map class)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note-The-next-2-examples-follow-the-full-map-simpleMap-variable-set-to-false"><span class="nav-number">2.</span> <span class="nav-text">Note: The next 2 examples follow the full map (simpleMap variable set to false)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#…The-rest-of-the-example-removed-in-the-sake-of-space…"><span class="nav-number">3.</span> <span class="nav-text">[[…The rest of the example removed in the sake of space…]]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#In-this-example-the-user-is-eaten-by-the-grue"><span class="nav-number">4.</span> <span class="nav-text">In this example, the user is eaten by the grue:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map-Class-Interface"><span class="nav-number"></span> <span class="nav-text">Map Class Interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Room-Class-Interface"><span class="nav-number"></span> <span class="nav-text">Room Class Interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-Class-Interface"><span class="nav-number"></span> <span class="nav-text">Key Class Interface</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
