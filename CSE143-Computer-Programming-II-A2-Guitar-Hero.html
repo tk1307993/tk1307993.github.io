@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero">
+<meta property="og:url" content="cplusplusdaixie.com/CSE143-Computer-Programming-II-A2-Guitar-Hero.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-05T01:24:09.519Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A2-Guitar-Hero.html">
+
+
+
+
+
+  <title>Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A2-Guitar-Hero.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-05T09:23:22+08:00">
+                2023-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-143-Computer-Programming-II"><a href="#CSE-143-Computer-Programming-II" class="headerlink" title="CSE 143: Computer Programming II"></a>CSE 143: Computer Programming II</h3><h2 id="Take-home-Assessment-2-Guitar-Hero"><a href="#Take-home-Assessment-2-Guitar-Hero" class="headerlink" title="Take-home Assessment 2: Guitar Hero"></a>Take-home Assessment 2: Guitar Hero</h2><p><em>many thanks to Kevin Wayne for this nifty assignment</em><br>This assignment will assess your mastery of the following objectives:</p>
+<ul>
+<li>Implement a well-designed Java class to meet a given specification.</li>
+<li>Use a queue (via theQueue<e>interface to implement a provided algorithm.</e></li>
+<li>Write a class that implements an existing interface.</li>
+<li>Follow prescribed conventions for code quality, documentation, and readability.</li>
+</ul>
+<p>There are many support files for this assignment that can be found on the course website. We will be<br>using two utility classes known as StdAudio and StdDraw that are used in the Princeton intro CS course.<br>You don’t have to understand the details of these utility classes, but you can read about themhereif<br>you’re interested.</p>
+<h2 id="Background-Guitars-and-Sound"><a href="#Background-Guitars-and-Sound" class="headerlink" title="Background: Guitars and Sound"></a>Background: Guitars and Sound</h2><p><em>This section describes how guitar strings make sound and how we will represent that in our code to<br>simulate sound. This section will be confusing and you do not need to fully understand the technical<br>details of why this works in order to do the assignment. Later sections have details of how to implement<br>this.</em></p>
+<p>When a guitar string is plucked, the string vibrates and creates sound. The length of the string determines<br>its fundamental frequency of vibration. We model a guitar string by sampling its displacement (a real<br>number between -1/2 and +1/2) at N equally spaced points in time, where N equals the sampling rate<br>(44,100) divided by the fundamental frequency of the string (rounded to the nearest integer). We store<br>these displacement values in a structure that we will refer to as a <strong>ring buffer</strong>.</p>
+<p>Plucking a string moves it and gives it energy. The excitation of the string can contain energy at any<br>frequency. We simulate the excitation by filling the ring buffer with white noise. In other words, we set<br>each of the N sample displacements to a random real number between -1/2 and +1/2.</p>
+<h3 id="Simulating-Sound"><a href="#Simulating-Sound" class="headerlink" title="Simulating Sound"></a>Simulating Sound</h3><p>After the string is plucked, the string vibrates. The pluck causes a displacement which spreads wave-like<br>over time. The <em>Karplus-Strong algorithm</em> simulates this vibration by maintaining a ring buffer of the N<br>samples: for each step the algorithm deletes the first sample from the ring buffer and adds to the end<br>of the ring buffer the average of the first two samples, scaled by an energy decay factor of 0.996. More<br>details on why this simulates sound are at the end of the spec.</p>
+<h2 id="Summer-2021"><a href="#Summer-2021" class="headerlink" title="Summer 2021"></a>Summer 2021</h2><h1 id="due-Ju-l-y-8-2021-11-59-pm"><a href="#due-Ju-l-y-8-2021-11-59-pm" class="headerlink" title="due Ju l y 8 , 2021 11: 59 pm"></a>due Ju l y 8 , 2021 11: 59 pm</h1><h2 id="Part-1-GuitarStringclass"><a href="#Part-1-GuitarStringclass" class="headerlink" title="Part 1: GuitarStringclass"></a>Part 1: GuitarStringclass</h2><p>In the first part of the assignment, you will implement a class calledGuitarStringthat models a vibrating<br>guitar string of a given frequency. TheGuitarStringobject will need to keep track of a ring buffer.<br>You are to implement the ring buffer as a queue using theQueue<e>interface and theLinkedList<e><br>implementation. For this assignment, you are limited to theQueue<e>methods in thesection materials<br>and slide 16 of the stack/queueslides(add, remove,isEmpty,size, andpeek). You are not allowed<br>to use other data structures or otherQueue<e>methods to solve this problem.</e></e></e></e></p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">You must</span><br><span class="line">not <span class="keyword">use</span> <span class="built_in">any</span></span><br><span class="line">Queue&lt;E&gt;meth-</span><br><span class="line">ods not listed</span><br><span class="line">here.</span><br></pre></td></tr></table></figure>
+<h3 id="YourGuitarStringclass-should-include-the-following-constructors"><a href="#YourGuitarStringclass-should-include-the-following-constructors" class="headerlink" title="YourGuitarStringclass should include the following constructors:"></a>YourGuitarStringclass should include the following constructors:</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public GuitarString (double frequency)</span><br><span class="line">Constructs aGuitarStringof <span class="keyword">the</span> given frequency. It creates <span class="keyword">a</span> ring buffer <span class="keyword">of</span> <span class="keyword">the</span> desired capacity</span><br><span class="line">N (sampling rate divided <span class="keyword">by</span> frequency, rounded <span class="built_in">to</span> <span class="keyword">the</span> nearest <span class="keyword">integer</span>), <span class="keyword">and</span> initializes <span class="keyword">it</span> <span class="built_in">to</span> represent</span><br><span class="line"><span class="keyword">a</span> guitar <span class="keyword">string</span> <span class="keyword">at</span> rest <span class="keyword">by</span> enqueueing N zeros. The sampling rate is specified <span class="keyword">by</span> <span class="keyword">the</span> <span class="built_in">constant</span></span><br><span class="line">StdAudio.SAMPLE_RATE. If <span class="keyword">the</span> frequency is less than <span class="keyword">or</span> equal <span class="built_in">to</span> <span class="number">0</span> <span class="keyword">or</span> <span class="keyword">if</span> <span class="keyword">the</span> resulting size <span class="keyword">of</span> <span class="keyword">the</span></span><br><span class="line">ring buffer would be less than <span class="number">2</span>, your method should throw anIllegalArgumentException</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> GuitarString (double[] init)</span><br><span class="line">Constructs a GuitarString <span class="keyword">and</span> initializes the contents <span class="keyword">of</span> the ring buffer <span class="keyword">to</span> the values <span class="keyword">in</span></span><br><span class="line">the <span class="keyword">array</span>. <span class="keyword">If</span> the <span class="keyword">array</span> <span class="keyword">has</span> fewer than two elements, your <span class="function"><span class="keyword">constructor</span> <span class="title">should</span> <span class="title">throw</span> <span class="title">an</span></span></span><br><span class="line"><span class="function"><span class="title">IllegalArgumentException</span>. <span class="title">This</span> <span class="title">constructor</span> <span class="title">is</span> <span class="title">used</span> <span class="title">only</span> <span class="title">for</span> <span class="title">testing</span> <span class="title">purposes</span>.</span></span><br></pre></td></tr></table></figure>
+<h3 id="YourGuitarStringclass-should-also-implement-the-following-public-methods"><a href="#YourGuitarStringclass-should-also-implement-the-following-public-methods" class="headerlink" title="YourGuitarStringclass should also implement the following public methods:"></a>YourGuitarStringclass should also implement the following public methods:</h3><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> void pluck ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">replace</span> <span class="title">the</span> <span class="title">N</span> <span class="title">elements</span> <span class="title">in</span> <span class="title">the</span> <span class="title">ring</span> <span class="title">buffer</span> <span class="title">with</span> <span class="title">N</span> <span class="title">random</span> <span class="title">values</span> <span class="title">between</span> -0.</span></span><br><span class="line"><span class="function"><span class="title">inclusive</span> <span class="title">and</span> +0.5 <span class="title">exclusive</span> <span class="params">(i.e.− 0. 5 ≤value&lt; 0. 5 )</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public void tic ()</span><br><span class="line">This method should apply <span class="keyword">the</span> Karplus-Strong update once (performing <span class="literal">one</span> step). It should <span class="built_in">delete</span></span><br><span class="line"><span class="keyword">the</span> sample <span class="keyword">at</span> <span class="keyword">the</span> front <span class="keyword">of</span> <span class="keyword">the</span> ring buffer <span class="keyword">and</span> <span class="built_in">add</span> <span class="built_in">to</span> <span class="keyword">the</span> <span class="function"><span class="keyword">end</span> <span class="title">of</span> <span class="title">the</span> <span class="title">ring</span> <span class="title">buffer</span> <span class="title">the</span> <span class="title">average</span> <span class="title">of</span> <span class="title">the</span></span></span><br><span class="line"><span class="keyword">first</span> <span class="literal">two</span> samples, multiplied <span class="keyword">by</span> <span class="keyword">the</span> energy decay factor (<span class="number">0.996</span>).</span><br><span class="line">Your class should <span class="built_in">include</span> <span class="keyword">a</span> public <span class="built_in">constant</span> <span class="keyword">for</span> <span class="keyword">the</span> energy decay factor.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> double sample ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">return</span> <span class="title">the</span> <span class="title">current</span> <span class="title">sample</span> <span class="params">(the value at the front <span class="keyword">of</span> the ring buffer)</span>.</span></span><br></pre></td></tr></table></figure>
+<h3 id="Implementation-Guidelines"><a href="#Implementation-Guidelines" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h3><ul>
+<li>You will need to use theMath.roundmethod and cast the result to anintto find the size of<br>  the buffer in the constructor that takes a singledoubleparameter. You can use the following<br>  expression:</li>
+</ul>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">int</span></span>)(<span class="name">Math.round</span>(<span class="name">StdAudio.SAMPLE_RATE</span> / frequency))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>It is difficult in commenting theGuitarStringclass to know what constitutes an implementation<br>  detail and what is okay to discuss in client comments. Assume that a client of theGuitarString<br>  class is familiar with the concept of a ring buffer. The fact that we are implementing it as a queue<br>  is an implementation detail. So don’t mention how you implement the ring buffer. But you can</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">discuss <span class="keyword">the</span> ring buffer itself <span class="keyword">and</span> <span class="keyword">the</span> changes that your methods make <span class="built_in">to</span> <span class="keyword">the</span> state <span class="keyword">of</span> <span class="keyword">the</span> ring buffer</span><br><span class="line">(e.g., moving values <span class="built_in">from</span> <span class="keyword">the</span> front <span class="built_in">to</span> <span class="keyword">the</span> back <span class="keyword">of</span> <span class="keyword">the</span> ring buffer). You may also assume that <span class="keyword">the</span></span><br><span class="line">client is familiar <span class="keyword">with</span> <span class="keyword">the</span> Karplus-Strong algorithm.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>At this point, you can also runGuitarHerousingGuitarLiteand you should hear sound on your<br>  computer! (You will not be able to play sound in Ed, but you can download the files and run them<br>  in jGRASP.) The guitars are explained in the next section.</li>
+</ul>
+<h2 id="Interlude-Guitar-andGuitarHero"><a href="#Interlude-Guitar-andGuitarHero" class="headerlink" title="Interlude: Guitar andGuitarHero"></a>Interlude: Guitar andGuitarHero</h2><p><em>This part of the assignment does not involve writing any code! This part describes the important<br>supporting files and how to run the program.</em></p>
+<p>In the next part of the assignment, you are going to build on theGuitarStringclass to write a class that<br>keeps track of a musical instrument with multiple strings. There could be many possible guitar objects<br>with different kinds of strings. As a result, we introduce an interface known asGuitarthat each guitar<br>object implements.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Guitar <span class="class"><span class="keyword">interface</span></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">interface</span> <span class="title">Guitar</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">playNote</span><span class="params">(<span class="keyword">int</span> pitch)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasString</span><span class="params">(<span class="keyword">char</span> key)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pluck</span><span class="params">(<span class="keyword">char</span> key)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">sample</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tic</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">time</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">The<span class="built_in"> interface </span>allows a<span class="built_in"> client </span><span class="keyword">to</span> specify what <span class="keyword">to</span> play <span class="keyword">in</span></span><br><span class="line">one of two ways. A<span class="built_in"> client </span>can specify exactly which</span><br><span class="line">note <span class="keyword">to</span> play by calling theplayNotemethod passing it</span><br><span class="line">a pitch. Pitch is specified as an integer where the value</span><br><span class="line">0 represents concert-A <span class="keyword">and</span> all other notes are specified</span><br><span class="line">relative <span class="keyword">to</span> concert-A using what is known as a chromatic</span><br><span class="line">scale. <span class="keyword">Not</span> every value of pitch can be played by any</span><br><span class="line">given guitar. <span class="keyword">If</span> it can’t be played, it is ignored.</span><br></pre></td></tr></table></figure>
+<p>Additionally, a client can also specify a character that indicates which note to play by calling thepluck<br>method. Different guitar objects will have different mappings from characters to notes. The interface<br>includes a method calledhasStringthat is paired with pluck that lets a client verify that a particular<br>character has a corresponding string for this guitar. Thepluckmethod has a precondition that the key<br>is legal for this guitar.</p>
+<p>TheGuitarinterface also has methods for getting the current sound sample (the sum of all samples<br>from the strings of the guitar), to advance the time forward one “tic”, and determining the current time<br>(the number of timestichas been called).</p>
+<p>We provide a sample class calledGuitarLitethat implements theGuitarinterface. Once you have veri-<br>fied that yourGuitarStringclass passes the testing program, you can play theGuitarLiteinstrument.<br>It has only two strings: “a” and “c”.</p>
+<p>To test your guitar, we provide a separate client class calledGuitarHerothat has amainmethod (the<br>initial version constructs aGuitarLiteobject).GuitarLitedoes not have a main method.</p>
+<h2 id="Part-2-The-Guitar37-class"><a href="#Part-2-The-Guitar37-class" class="headerlink" title="Part 2: The Guitar37 class"></a>Part 2: The Guitar37 class</h2><p>In this second part of the assignment, your task is to write a different implementation of theGuitar<br>interface known asGuitar37. It will model a guitar with 37 different strings. UnlikeGuitarLitewhich<br>has a separate field for each of its strings, you will want to use a data structure, specifically an array, to<br>keep track of the strings inGuitar37.</p>
+<h3 id="Keys"><a href="#Keys" class="headerlink" title="Keys"></a>Keys</h3><p>TheGuitar37class has a total of 37 notes on the chromatic scale from 110Hz to 880Hz. We will use<br>the following string to map keys typed by the user to positions in your array of strings. The i-th character<br>of this string should correspond to the i-th character of your array:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"q2we4r5ty7u8i9op-[=zxdcfvgbnjmk,.;/'"</span></span><br></pre></td></tr></table></figure>
+<p>This use of keyboard characters imitates a piano keyboard, making playing songs a little easier for people<br>used to a piano keyboard. The white keys are on the qwerty and zxcv rows and the black keys on the<br>12345 and asdf rows of the keyboard, as in the drawing below.</p>
+<p>You are being provided a skeleton version of theGuitar37class that includes this string defined as a<br>constant calledKEYBOARD. The i-th character of the string corresponds to a frequency of 440 × 2 (i−24)/^12 ,<br>so that the character “q” is 110Hz, “i” is 220Hz, “v” is 440Hz, and “ ” (space) is 880Hz.</p>
+<p>As noted above, a pitch of 0 is supposed to correspond to concert-A, which will be at index 24 for the<br>Guitar37object (corresponding to the character “v”). Thus, you can convert from a pitch value to<br>an index in your string by adding 24 to the pitch value. The table below shows some examples of this<br>conversion.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Key Pitch</span><br><span class="line">“q” -</span><br><span class="line">“<span class="number">2</span>” -</span><br><span class="line">“w” -</span><br><span class="line">“e” -</span><br><span class="line">... ...</span><br><span class="line">“v” <span class="number">0</span></span><br><span class="line">... ...</span><br><span class="line">“/” <span class="number">10</span></span><br><span class="line">“’” <span class="number">11</span></span><br><span class="line">“ ” <span class="number">12</span></span><br></pre></td></tr></table></figure>
+<h3 id="Implementation-Guidelines-1"><a href="#Implementation-Guidelines-1" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h3><ul>
+<li>In working on this second part of the assignment, you are generalizing the code that you will find<br>  inGuitarLite. Because that instrument has just two strings, it uses two separate fields. Your<br>  instrument has 37 strings, so it uses an array of strings. Each of the operations defined in the<br>  interface needs to be generalized from using two specific strings to using an array of strings. For<br>  example, the sample method returns the sum of the current samples. GuitarLitedoes this by<br>  adding together two numbers. Your version will have to use a loop to find the sum of all 37 samples.</li>
+<li>TheGuitarLiteclass is not well documented, it does not handle illegal keys, and it does not<br>  correctly implement thetimemethod. YourGuitar37class should include complete comments.</li>
+<li>Thepluckmethod should throw anIllegalArgumentExceptionif the key is not one of the 37<br>  keys it is designed to play (as noted above, this differs from theplayNotemethod that simply<br>  ignores notes it cant play).</li>
+</ul>
+<h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Recall that</span><br><span class="line">Strings have</span><br><span class="line">anindexOf</span><br><span class="line"><span class="function"><span class="keyword">method</span> <span class="title">that</span></span></span><br><span class="line"><span class="function"><span class="title">you</span> <span class="title">might</span> <span class="title">find</span></span></span><br><span class="line"><span class="function"><span class="title">helpful</span>!</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>You will be given a testing program forGuitar37as well calledTest37. <strong>This testing code should</strong><br>  <strong>be stored in a separate directory from your solution because it includes a custom version</strong><br>  <strong>of theGuitarStringclass and you don’t want to accidentally overwrite your version of the</strong><br>  <strong>class.</strong> You should copy yourGuitar37class to this folder, run it, and then compare against the<br>  sample output produced using the output comparison tool.</li>
+<li>Once you are done, you can changeGuitarHeroto useGuitar37instead ofGuitarLiteso you<br>  can play the full instrument on your computer! (Ed cannot produce sound, so you’ll need to run<br>  your code in jGRASP to try this.)</li>
+</ul>
+<h2 id="Code-Quality-Guidelines"><a href="#Code-Quality-Guidelines" class="headerlink" title="Code Quality Guidelines"></a>Code Quality Guidelines</h2><p>In addition to producing the behavior described above, your code should be well-written and meet all<br>expectations described in thegrading guidelines, Code Quality Guide, andCommenting Guide. For this<br>assessment, pay particular attention to the following elements:</p>
+<h3 id="Generic-Structures-and-Interfaces"><a href="#Generic-Structures-and-Interfaces" class="headerlink" title="Generic Structures and Interfaces"></a>Generic Structures and Interfaces</h3><p>You should always use generic structures. If you make a mistake in specifying type parameters, the Java<br>compiler may warn you that you have “unchecked or unsafe operations” in your program. You should<br>also declare fields and variables using the appropriate interfaces when possible. When usingQueue’s in<br>143, you should only use the methods described in class.</p>
+<h3 id="Data-Fields"><a href="#Data-Fields" class="headerlink" title="Data Fields"></a>Data Fields</h3><p>Properly encapsulate your objects by making data your fieldsprivate. Avoid unnecessary fields; use<br>fields to store important data of your objects but not to store temporary values only used in one place.<br>Fields should always be initialized inside a constructor or method, never at declaration.</p>
+<h3 id="Exceptions"><a href="#Exceptions" class="headerlink" title="Exceptions"></a>Exceptions</h3><p>The specified exceptions must be thrown correctly in the specified cases. Exceptions should be thrown<br>as soon as possible, and no unnecessary work should be done when an exception is thrown. Exceptions<br>should be documented in comments, including the type of exception thrown and under what conditions.</p>
+<h3 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h3><p>Each method should have a header comment including all necessary information as described in the<br>Commenting Guide. Comments should be written in your own words (i.e. not copied and pasted from<br>this spec) and should not include implemenation details.</p>
+<h2 id="Running-and-Submitting"><a href="#Running-and-Submitting" class="headerlink" title="Running and Submitting"></a>Running and Submitting</h2><p>If you believe your behavior is correct, you can submit your work by clicking the “Mark” button in the Ed<br>assessment. You will see the results of some automated tests along with tentative grades. <strong>These grades<br>are not final until you have received feedback from your TA.</strong></p>
+<p>You may submit your work as often as you like until the deadline; we will always grade your most recent<br>submission. Note the due date and time carefully— <strong>work submitted after the due time will not be<br>accepted</strong>.</p>
+<h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>If you find you are struggling with this assessment, make use of all the course resources that are available<br>to you, such as:</p>
+<ul>
+<li>Reviewing relevant examples fromclass</li>
+<li>Reading the textbook</li>
+<li>Visitingoffice hours</li>
+<li>Posting a question on themessage board</li>
+</ul>
+<h2 id="Collaboration-Policy"><a href="#Collaboration-Policy" class="headerlink" title="Collaboration Policy"></a>Collaboration Policy</h2><p>Remember that, while you are encouraged to use all resources at your disposal, including your classmates,<br><strong>all work you submit must be entirely your own</strong>. In particular, you should <strong>NEVER</strong> look at a solution<br>to this assessment from another source (a classmate, a former student, an online repository, etc.). Please<br>review thefull policyin the syllabus for more details and ask the course staff if you are unclear on whether<br>or not a resource is OK to use.</p>
+<h2 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h2><p>In addition to your code, you must submit answers to short reflection questions. These questions will help<br>you think about what you learned, what you struggled with, and how you can improve next time. The<br>questions are given in the fileGuitarHeroReflection.txtin the Ed assessment; type your responses<br>directly into that file.</p>
+<h2 id="Optional-Why-This-Assignment-Works"><a href="#Optional-Why-This-Assignment-Works" class="headerlink" title="(Optional) Why This Assignment Works"></a>(Optional) Why This Assignment Works</h2><p>The two primary components that make the Karplus-Strong algorithm work are the ring buffer feedback<br>mechanism and the averaging operation.</p>
+<ul>
+<li>The ring buffer feedback mechanism: The ring buffer models the medium (a string tied down at<br>  both ends) in which the energy travels back and forth. The length of the ring buffer determines the<br>  fundamental frequency of the resulting sound. Sonically, the feedback mechanism reinforces only<br>  the fundamental frequency and its harmonics (frequencies at integer multiples of the fundamental).<br>  The energy decay factor (.996 in this case) models the slight dissipation in energy as the wave<br>  makes a round trip through the string.</li>
+<li>The averaging operation: The averaging operation serves as a gentle low pass filter (which removes<br>  higher frequencies while allowing lower frequencies to pass, hence the name). Because it is in the<br>  path of the feedback, this has the effect of gradually attenuating the higher harmonics while keeping<br>  the lower ones, which corresponds closely with how actually plucked strings sound.</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE143-Computer-Programming-II-A1-Lettter-Inventory.html" rel="next" title="Java代写：CSE143_Computer_Programming_II_A1_Lettter_Inventory">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143_Computer_Programming_II_A1_Lettter_Inventory
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">346</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-143-Computer-Programming-II"><span class="nav-number">1.</span> <span class="nav-text">CSE 143: Computer Programming II</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Take-home-Assessment-2-Guitar-Hero"><span class="nav-number"></span> <span class="nav-text">Take-home Assessment 2: Guitar Hero</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Background-Guitars-and-Sound"><span class="nav-number"></span> <span class="nav-text">Background: Guitars and Sound</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simulating-Sound"><span class="nav-number">1.</span> <span class="nav-text">Simulating Sound</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summer-2021"><span class="nav-number"></span> <span class="nav-text">Summer 2021</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#due-Ju-l-y-8-2021-11-59-pm"><span class="nav-number"></span> <span class="nav-text">due Ju l y 8 , 2021 11: 59 pm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-1-GuitarStringclass"><span class="nav-number"></span> <span class="nav-text">Part 1: GuitarStringclass</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">0.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YourGuitarStringclass-should-include-the-following-constructors"><span class="nav-number">1.</span> <span class="nav-text">YourGuitarStringclass should include the following constructors:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YourGuitarStringclass-should-also-implement-the-following-public-methods"><span class="nav-number">2.</span> <span class="nav-text">YourGuitarStringclass should also implement the following public methods:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Guidelines"><span class="nav-number">3.</span> <span class="nav-text">Implementation Guidelines</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interlude-Guitar-andGuitarHero"><span class="nav-number"></span> <span class="nav-text">Interlude: Guitar andGuitarHero</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2-The-Guitar37-class"><span class="nav-number"></span> <span class="nav-text">Part 2: The Guitar37 class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Keys"><span class="nav-number">1.</span> <span class="nav-text">Keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Guidelines-1"><span class="nav-number">2.</span> <span class="nav-text">Implementation Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#-1"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Quality-Guidelines"><span class="nav-number"></span> <span class="nav-text">Code Quality Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generic-Structures-and-Interfaces"><span class="nav-number">1.</span> <span class="nav-text">Generic Structures and Interfaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Fields"><span class="nav-number">2.</span> <span class="nav-text">Data Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exceptions"><span class="nav-number">3.</span> <span class="nav-text">Exceptions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Commenting"><span class="nav-number">4.</span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-and-Submitting"><span class="nav-number"></span> <span class="nav-text">Running and Submitting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Help"><span class="nav-number"></span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collaboration-Policy"><span class="nav-number"></span> <span class="nav-text">Collaboration Policy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflection"><span class="nav-number"></span> <span class="nav-text">Reflection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-Why-This-Assignment-Works"><span class="nav-number"></span> <span class="nav-text">(Optional) Why This Assignment Works</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
