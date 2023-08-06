@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager">
+<meta property="og:url" content="cplusplusdaixie.com/CSE143-Computer-Programming-II-A3-Assassin-Manager.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-06T01:01:18.486Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A3-Assassin-Manager.html">
+
+
+
+
+
+  <title>Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A3-Assassin-Manager.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-06T09:00:22+08:00">
+                2023-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-143-Computer-Programming-II"><a href="#CSE-143-Computer-Programming-II" class="headerlink" title="CSE 143: Computer Programming II"></a>CSE 143: Computer Programming II</h3><p>This assignment will assess your mastery of the following objectives:</p>
+<ul>
+<li>Implement a well-designed Java class to meet a given specification.</li>
+<li>Create and manipulate a linked list.</li>
+<li>Manipulate linked list nodes in an efficient manner.</li>
+<li>Follow prescribed conventions for code quality, documentation, and readability.</li>
+</ul>
+<h1 id="Overview-The-Assassin-Game"><a href="#Overview-The-Assassin-Game" class="headerlink" title="Overview: The Assassin Game"></a>Overview: The Assassin Game</h1><p>“Assassin” is a game often played on college campuses. Each person playing has a particular target that<br>he/she is trying to “assassinate.” Generally “assassinating” a person means finding them on campus in<br>public and acting on them in some way (e.g. saying “You’re dead,” squirting them with a water gun, or<br>tagging them). One of the things that makes the game more interesting to play in real life is that initially<br>each person knows only who they are assassinating; they don’t know who is trying to assassinate them,<br>nor do they know whom the other people are trying to assassinate.</p>
+<h2 id="Assassin-Rules"><a href="#Assassin-Rules" class="headerlink" title="Assassin Rules"></a>Assassin Rules</h2><ul>
+<li>You start out with a group of people who want to play the game</li>
+<li>A circular chain of assassination targets (called the “kill ring” in this program) is established.</li>
+<li>When someone is assassinated, the links need to be changed to “skip” that person. That is, the<br>  person who was assassinated passes their target on to the person who assassinated them.</li>
+</ul>
+<h2 id="Example-Game-of-Assassin"><a href="#Example-Game-of-Assassin" class="headerlink" title="Example Game of Assassin"></a>Example Game of Assassin</h2><p>Let’s walk through an example with five people playing: Carol, Chris, Jim, Joe, Sally. We might start<br>with Joe stalking Sally, Sally stalking Jim, Jim stalking Carol, Carol stalking Chris, and Chris stalking<br>Joe. In the actual linked list that implements this kill ring, Chris’s next reference would benull. But,<br>conceptually we can think of it as though the next person after Chris is Joe, the front person in the list.</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Note <span class="keyword">the</span> <span class="keyword">last</span></span><br><span class="line">person <span class="keyword">in</span> <span class="keyword">the</span></span><br><span class="line">list will <span class="keyword">not</span></span><br><span class="line">have <span class="keyword">an</span> ex-</span><br><span class="line">plicit target.</span><br><span class="line">See below <span class="keyword">for</span></span><br><span class="line">information <span class="keyword">and</span></span><br><span class="line">warnings about</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">a</span> circular</span><br><span class="line">list.</span><br></pre></td></tr></table></figure>
+<p>Here is a picture of this “kill ring”:</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Joe </span>Sally <span class="keyword">Jim </span>Carol Chris</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">front</span></span><br></pre></td></tr></table></figure>
+<p>Then, suppose Sally assassinates Jim. Sally needs a new target, so we give her Jim’s target: Carol. The<br>kill ring becomes:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Joe Sally Carol Chris</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">front</span></span><br></pre></td></tr></table></figure>
+<p>If the first person in the kill ring is assassinated, the front of the list must adjust. If Chris kills Joe, the<br>list becomes:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Sally Carol Chris</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">front</span></span><br></pre></td></tr></table></figure>
+<h1 id="Summer-2021"><a href="#Summer-2021" class="headerlink" title="Summer 2021"></a>Summer 2021</h1><h1 id="Take-home-Assessment-3-AssassinManager-due-J-uly-1-5-2021-11-59-pm"><a href="#Take-home-Assessment-3-AssassinManager-due-J-uly-1-5-2021-11-59-pm" class="headerlink" title="Take-home Assessment 3: AssassinManager due J uly 1 5, 2021 11: 59 pm"></a>Take-home Assessment 3: AssassinManager due J uly 1 5, 2021 11: 59 pm</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sample execution <span class="built_in">log</span></span><br><span class="line">Welcome <span class="built_in">to</span> <span class="keyword">the</span> CSE143 Assassin Manager</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What name file <span class="keyword">do</span> you want <span class="keyword">to</span> <span class="keyword">use</span> this <span class="built_in">time</span>? names3.txt</span><br><span class="line"><span class="keyword">Do</span> you want the <span class="keyword">names</span> shuffled? (y/n)? n</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Current <span class="keyword">kill</span> ring:</span><br><span class="line">Athos <span class="keyword">is</span> stalking Porthos</span><br><span class="line">Porthos <span class="keyword">is</span> stalking Aramis</span><br><span class="line">Aramis <span class="keyword">is</span> stalking Athos</span><br><span class="line"><span class="keyword">Current</span> graveyard:</span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">next</span> victim? Aramis</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Current <span class="keyword">kill</span> ring:</span><br><span class="line">Athos <span class="keyword">is</span> stalking Porthos</span><br><span class="line">Porthos <span class="keyword">is</span> stalking Athos</span><br><span class="line"><span class="keyword">Current</span> graveyard:</span><br><span class="line">Aramis was killed <span class="keyword">by</span> Porthos</span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">next</span> victim? Athos</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Game was won <span class="keyword">by</span> Porthos</span><br><span class="line"><span class="keyword">Final</span> graveyard <span class="keyword">is</span> <span class="keyword">as</span> follows:</span><br><span class="line">Athos was killed <span class="keyword">by</span> Porthos</span><br><span class="line">Aramis was killed <span class="keyword">by</span> Porthos</span><br></pre></td></tr></table></figure>
+<h1 id="Program-Behavior"><a href="#Program-Behavior" class="headerlink" title="Program Behavior"></a>Program Behavior</h1><p>In this assessment, you will write a<br>class AssassinManagerthat keeps<br>track of who is stalking whom and<br>the history of who killed whom in<br>games of Assassin. You will main-<br>tain two linked lists:</p>
+<ul>
+<li>a list of people currently alive<br>  (the “kill ring”) and</li>
+<li>a list of those who have<br>  been assassinated (the “grave-<br>  yard”).</li>
+</ul>
+<p>As people are assassinated, you will<br>move them from the kill ring to the<br>graveyard by rearranging links be-<br>tween nodes. The game ends when<br>only one node remains in the kill ring,<br>representing the winner.</p>
+<p>A client program calledAssassinMain<br>has been written for you. It reads a<br>file of names, shuffles the names, and<br>constructs an object of your classAssassinManager. This main program then asks the user for the names<br>of each victim to assassinate until there is just one player left alive (at which point the game is over and<br>the last remaining player wins). AssassinMaincalls methods of theAssassinManagerclass to carry<br>out the tasks involved in administering the game.</p>
+<h1 id="AssassinManager"><a href="#AssassinManager" class="headerlink" title="AssassinManager"></a>AssassinManager</h1><p>To implement your lists, you must use ourAssassinNodeclass provided in Ed without modification. The<br>class is summarized here:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AssassinNode <span class="class"><span class="keyword">class</span></span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AssassinNode</span> </span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> String name; <span class="comment">// this person's name</span></span><br><span class="line"><span class="keyword">public</span> String killer; <span class="comment">// name of who killed this person (null if alive)</span></span><br><span class="line"><span class="keyword">public</span> AssassinNode next; <span class="comment">// next node in the list</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AssassinNode</span><span class="params">(<span class="keyword">String</span> name)</span> </span>&#123; ... &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AssassinNode</span><span class="params">(<span class="keyword">String</span> name, AssassinNode next)</span> </span>&#123; ... &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">You cannot</span><br><span class="line"><span class="keyword">change</span> <span class="keyword">final</span></span><br><span class="line"><span class="keyword">variables</span> <span class="keyword">and</span></span><br><span class="line"><span class="keyword">fields</span>!</span><br></pre></td></tr></table></figure>
+<p>In class section we have been looking at nodes of typeListNode(orIntListNode) that have just two<br>fields: a field calleddataof typeintand a field callednextthat points to the next value in the list. The<br>AssassinNodeclass has three fields. The first two are fields for storing data callednameandkiller<br>(they are used to store the name of a player and the name of the person who assassinated that player).<br>The third field is callednextand it serves the same purpose as the next field in theListNodeclass.</p>
+<h2 id="YourAssassinManagerclass-must-have-exactly-the-following-fields"><a href="#YourAssassinManagerclass-must-have-exactly-the-following-fields" class="headerlink" title="YourAssassinManagerclass must have exactly the following fields:"></a>YourAssassinManagerclass must have exactly the following fields:</h2><ul>
+<li>a reference to the front node of the kill ring</li>
+<li>a reference to the front node of the graveyard (nullif empty)</li>
+</ul>
+<p>Note that a requirement of this assessment is that you have <em>exactly</em> these two fields and <em>no others</em>.</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Do</span> <span class="keyword">NOT</span> <span class="keyword">add</span> a</span><br><span class="line"><span class="keyword">size</span> <span class="keyword">field</span>!</span><br></pre></td></tr></table></figure>
+<h2 id="YourAssassinManagerclass-should-have-the-following-constructor"><a href="#YourAssassinManagerclass-should-have-the-following-constructor" class="headerlink" title="YourAssassinManagerclass should have the following constructor:"></a>YourAssassinManagerclass should have the following constructor:</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public AssassinManager (List&lt;String&gt; names)</span><br><span class="line">This constructor should initialize a new assassin manager <span class="keyword">over</span> <span class="keyword">the</span> <span class="keyword">given</span> <span class="built_in">list</span> <span class="keyword">of</span> people. Note <span class="keyword">that</span></span><br><span class="line">you should <span class="keyword">not</span> save <span class="keyword">the</span> <span class="built_in">list</span> parameter itself <span class="keyword">as</span> a field, nor modify <span class="keyword">the</span> <span class="built_in">list</span>. Instead, you should build</span><br><span class="line">your own kill ring <span class="keyword">of</span> <span class="built_in">list</span> nodes <span class="keyword">that</span> <span class="keyword">contains</span> these names <span class="keyword">in</span> <span class="keyword">the</span> same order.</span><br><span class="line">If <span class="keyword">the</span> <span class="built_in">list</span> <span class="keyword">is</span> empty, you should throw anIllegalArgumentException.</span><br></pre></td></tr></table></figure>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> <span class="keyword">change</span></span><br><span class="line">the <span class="keyword">list</span> that <span class="keyword">is</span></span><br><span class="line">passed in.</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For example, <span class="keyword">if</span> <span class="keyword">the</span> <span class="keyword">given</span> <span class="built_in">list</span> <span class="keyword">contains</span>[<span class="string">"John"</span>, <span class="string">"Sally"</span>, <span class="string">"Fred"</span>], your initial kill ring should</span><br><span class="line">represent <span class="keyword">that</span> John <span class="keyword">is</span> stalking Sally who <span class="keyword">is</span> stalking Fred who <span class="keyword">is</span> stalking John (<span class="keyword">in</span> <span class="keyword">that</span> order). You</span><br><span class="line">may assume <span class="keyword">that</span> <span class="keyword">the</span> names are non-empty, non-null strings <span class="keyword">and</span> <span class="keyword">that</span> there are no duplicates.</span><br></pre></td></tr></table></figure>
+<h2 id="YourAssassinManagerclass-should-also-implement-the-following-methods"><a href="#YourAssassinManagerclass-should-also-implement-the-following-methods" class="headerlink" title="YourAssassinManagerclass should also implement the following methods:"></a>YourAssassinManagerclass should also implement the following methods:</h2><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> void printKillRing ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">print</span> <span class="title">the</span> <span class="title">names</span> <span class="title">of</span> <span class="title">the</span> <span class="title">people</span> <span class="title">in</span> <span class="title">the</span> <span class="title">kill</span> <span class="title">ring</span>, <span class="title">one</span> <span class="title">per</span> <span class="title">line</span>, <span class="title">indented</span> <span class="title">by</span> <span class="title">four</span></span></span><br><span class="line"><span class="function"><span class="title">spaces</span>, <span class="title">as</span> “<span class="title">Xis</span> <span class="title">stalkingY</span>”. <span class="title">If</span> <span class="title">the</span> <span class="title">game</span> <span class="title">is</span> <span class="title">over</span>, <span class="title">then</span> <span class="title">instead</span> <span class="title">print</span> “<span class="title">Xis</span> <span class="title">stalkingX</span>”.</span></span><br></pre></td></tr></table></figure>
+<h3 id="-3"><a href="#-3" class="headerlink" title=""></a></h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">XandYare</span></span><br><span class="line"><span class="attribute">names of the</span></span><br><span class="line"><span class="attribute">players</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">For example, using the <span class="keyword">kill</span> ring <span class="keyword">from</span> the example game <span class="keyword">on</span> the <span class="keyword">first</span> page <span class="keyword">of</span> this spec, the <span class="keyword">output</span> <span class="keyword">is</span>:</span><br><span class="line">Joe <span class="keyword">is</span> stalking Sally</span><br><span class="line">Sally <span class="keyword">is</span> stalking Jim</span><br><span class="line">Jim <span class="keyword">is</span> stalking Carol</span><br><span class="line">Carol <span class="keyword">is</span> stalking Chris</span><br><span class="line">Chris <span class="keyword">is</span> stalking Joe</span><br><span class="line"><span class="keyword">If</span> the game <span class="keyword">is</span> <span class="keyword">over</span> <span class="keyword">and</span> Chris <span class="keyword">is</span> the winner, so Chris <span class="keyword">is</span> the <span class="keyword">only</span> <span class="keyword">name</span> <span class="keyword">in</span> the <span class="keyword">kill</span> ring, the <span class="keyword">output</span> <span class="keyword">is</span>:</span><br><span class="line">Chris <span class="keyword">is</span> stalking Chris</span><br></pre></td></tr></table></figure>
+<h3 id="-4"><a href="#-4" class="headerlink" title=""></a></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Indent <span class="keyword">the</span></span><br><span class="line">output <span class="keyword">using</span></span><br><span class="line"><span class="literal">four</span> spaces, <span class="keyword">not</span></span><br><span class="line">tabs!</span><br><span class="line">public void printGraveyard ()</span><br><span class="line">This method should print <span class="keyword">the</span> names <span class="keyword">of</span> <span class="keyword">the</span> people <span class="keyword">in</span> <span class="keyword">the</span> graveyard, <span class="literal">one</span> per <span class="built_in">line</span>, <span class="keyword">with</span> <span class="keyword">each</span> <span class="built_in">line</span></span><br><span class="line">indented <span class="keyword">by</span> <span class="literal">four</span> spaces, <span class="keyword">with</span> output <span class="keyword">of</span> <span class="keyword">the</span> form “Xwas killed byY”. It should print <span class="keyword">the</span> names</span><br><span class="line"><span class="keyword">in</span> <span class="keyword">the</span> opposite <span class="keyword">of</span> <span class="keyword">the</span> order <span class="keyword">in</span> which they were assassinated (most recently assassinated <span class="keyword">first</span>, <span class="keyword">then</span></span><br><span class="line">next most recently assassinated, <span class="keyword">and</span> so <span class="keyword">on</span>). <span class="title">It</span> <span class="title">should</span> <span class="title">produce</span> <span class="title">no</span> <span class="title">output</span> <span class="title">if</span> <span class="title">the</span> <span class="title">graveyard</span> <span class="title">is</span> <span class="title">empty</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">For example, <span class="keyword">using</span> <span class="keyword">the</span> <span class="built_in">kill</span> ring <span class="built_in">from</span> above, <span class="keyword">if</span> Jim is killed, <span class="keyword">then</span> Chris, <span class="keyword">then</span> Carol, <span class="keyword">the</span> output is:</span><br><span class="line">Carol was killed <span class="keyword">by</span> Sally</span><br><span class="line">Chris was killed <span class="keyword">by</span> Carol</span><br><span class="line">Jim was killed <span class="keyword">by</span> Sally</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> boolean killRingContains (String name)</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">returntrueif</span> <span class="title">the</span> <span class="title">given</span> <span class="title">name</span> <span class="title">is</span> <span class="title">in</span> <span class="title">the</span> <span class="title">current</span> <span class="title">kill</span> <span class="title">ring</span> <span class="title">andfalseotherwise</span>.</span></span><br><span class="line"><span class="function"><span class="title">It</span> <span class="title">should</span> <span class="title">ignore</span> <span class="title">case</span> <span class="title">in</span> <span class="title">comparing</span> <span class="title">names</span>;</span> so, “salLY” should match a node <span class="keyword">with</span> a name <span class="keyword">of</span> “Sally”.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> boolean graveyardContains (String name)</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">returntrueif</span> <span class="title">the</span> <span class="title">given</span> <span class="title">name</span> <span class="title">is</span> <span class="title">in</span> <span class="title">the</span> <span class="title">current</span> <span class="title">graveyard</span> <span class="title">andfalseotherwise</span>.</span></span><br><span class="line"><span class="function"><span class="title">It</span> <span class="title">should</span> <span class="title">ignore</span> <span class="title">case</span> <span class="title">in</span> <span class="title">comparing</span> <span class="title">names</span>;</span> so, “CaRoL” should match a node <span class="keyword">with</span> a name <span class="keyword">of</span> “Carol”.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> boolean gameOver ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">returntrueif</span> <span class="title">the</span> <span class="title">game</span> <span class="title">is</span> <span class="title">over</span> <span class="params">(i.e. the kill ring contains exactly one person)</span></span></span><br><span class="line"><span class="function"><span class="title">andfalseotherwise</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String winner ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">return</span> <span class="title">the</span> <span class="title">name</span> <span class="title">of</span> <span class="title">the</span> <span class="title">winner</span> <span class="title">of</span> <span class="title">the</span> <span class="title">game</span>, <span class="title">ornullif</span> <span class="title">the</span> <span class="title">game</span> <span class="title">is</span> <span class="title">not</span> <span class="title">over</span> <span class="title">yet</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">kill</span> <span class="params">(<span class="keyword">String</span> name)</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="-5"><a href="#-5" class="headerlink" title=""></a></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Exceptions</span><br><span class="line">should be</span><br><span class="line">thrown <span class="keyword">as</span> soon</span><br><span class="line">This method should record <span class="keyword">the</span> assassination <span class="keyword">of</span> <span class="keyword">the</span> person <span class="keyword">with</span> <span class="keyword">the</span> given name, transferring <span class="keyword">the</span> <span class="keyword">as</span> possible!</span><br><span class="line">person <span class="built_in">from</span> <span class="keyword">the</span> <span class="built_in">kill</span> ring <span class="built_in">to</span> <span class="keyword">the</span> front <span class="keyword">of</span> <span class="keyword">the</span> graveyard. This operation should <span class="keyword">not</span> change <span class="keyword">the</span> <span class="built_in">relative</span></span><br><span class="line">order <span class="keyword">of</span> <span class="keyword">the</span> <span class="built_in">kill</span> ring (i.e. <span class="keyword">the</span> links <span class="keyword">of</span> who is stalking whom should stay <span class="keyword">the</span> same other than <span class="keyword">the</span></span><br><span class="line">person who is being killed). This method should ignore <span class="keyword">case</span> <span class="keyword">in</span> comparing names.</span><br><span class="line">A node remembers who killed <span class="keyword">the</span> person <span class="keyword">in</span> its killer field, <span class="keyword">and</span> you must <span class="built_in">set</span> <span class="keyword">the</span> <span class="built_in">value</span> <span class="keyword">of</span> this field.</span><br></pre></td></tr></table></figure>
+<h3 id="-6"><a href="#-6" class="headerlink" title=""></a></h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Try <span class="keyword">to</span> write</span><br><span class="line">simple code,</span><br><span class="line"><span class="keyword">and</span> use inline</span><br><span class="line">comments <span class="keyword">to</span></span><br><span class="line">clarify anything</span><br><span class="line">complex.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Your <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">throw</span> <span class="title">an</span> <span class="title">IllegalStateException</span> <span class="title">if</span> <span class="title">the</span> <span class="title">game</span> <span class="title">is</span> <span class="title">over</span>, <span class="title">or</span> <span class="title">throw</span> <span class="title">an</span></span></span><br><span class="line"><span class="function"><span class="title">IllegalArgumentExceptionif</span> <span class="title">the</span> <span class="title">given</span> <span class="title">name</span> <span class="title">is</span> <span class="title">not</span> <span class="title">part</span> <span class="title">of</span> <span class="title">the</span> <span class="title">kill</span> <span class="title">ring</span>. <span class="title">If</span> <span class="title">both</span> <span class="title">of</span> <span class="title">these</span> <span class="title">conditions</span></span></span><br><span class="line"><span class="function"><span class="title">are</span> <span class="title">true</span>, <span class="title">theIllegalStateExceptiontakes</span> <span class="title">precedence</span>.</span></span><br></pre></td></tr></table></figure>
+<p>Thekillmethod is the hardest to complete, so we strongly suggest you write it last. Use the jGRASP<br>debugger andprintlnstatements liberally to debug problems in your code. You will likely have a lot of<br>NullPointerExceptionerrors, infinite loops, etc. and will have a very hard time tracking them down<br>unless you are comfortable with debugging techniques.</p>
+<h3 id="-7"><a href="#-7" class="headerlink" title=""></a></h3><figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Be sure to</span><br><span class="line">remove or com-</span><br><span class="line">ment out any</span><br><span class="line">debugging</span><br><span class="line">printl<span class="keyword">ncalls</span></span><br><span class="line">before you sub-</span><br><span class="line">mit.</span><br></pre></td></tr></table></figure>
+<h1 id="Implementation-Guidelines"><a href="#Implementation-Guidelines" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h1><p>The learning objectives for this assessment are explicitly related to manipulating linked lists. To that end,<br>you are limited in how you may implement the operations required forAssassinManager. Specifically,<br>you must adhere to the following rules:</p>
+<ul>
+<li>You may not construct any arrays,ArrayLists,LinkedLists,Stacks,Queues, or other data<br>  structures; you must use instances ofAssassinNodeand manipulate them yourself.</li>
+<li>If there arennames in the list ofStrings passed to your constructor, you must create exactlyn<br>  newAssassinNodeobjects in your constructor. You may not create any additional node objects,<br>  and you may not create node objects in any other methods. In addition, you may not modify the<br>  namefield of nodes after they have been created. As people are assassinated, you will move the<br>  existing node from the kill ring to the graveyard by changing references. You must not create any<br>  new node objects or change thenamefield of the nodes.</li>
+<li>You may declare as many <em>references</em> toAssassinNodeobjects (i.e. local variables of typeAssassinNode<br>  as you like.AssassinNoderefernces are not node objects and therefore do not count against the<br>  limit ofnnodes described above.</li>
+<li>Your constructor should be “efficient” in the sense that it should not use any nested loops to<br>  construct the initial kill ring. (We will learn in class that this is calledO(n)time, wherenis the<br>  number of names in the list.)</li>
+</ul>
+<h1 id="Circular-Lists"><a href="#Circular-Lists" class="headerlink" title="Circular Lists"></a>Circular Lists</h1><p>Some students try to store the kill ring using a “circular” linked list (where the list’s final element stores a<br>next reference back to the front ). It is significantly more difficult to write bug-free code using a circular<br>list. There is no need to use a circular list for this assessment, because you can always get back to the front<br>via the fields of yourAssassinManager. If you feel strongly that you want to use a circular list, you may,<br>but we believe it will make the program significantly more difficult to write, and we strongly discourage<br>it. <em>We will not provide assistance in office hours to help you implement the circular list solution.</em></p>
+<h1 id="jGRASP-Debugger"><a href="#jGRASP-Debugger" class="headerlink" title="jGRASP Debugger"></a>jGRASP Debugger</h1><p>We recommend that you use the jGRASP debugger for this assessment, even if you are primarily working<br>in another IDE or in Ed. The jGRASP debugger has a structure viewer to see what your list looks like by<br>dragging one of your fields from the debug window outside the window. By default the viewer won’t show<br>you the name in each node (it will show a “?” instead). Fix this by clicking the wrench icon, then in<br>the “Value Expressions” box, type:<em>node</em>.name, Click OK, and you should see the names in the nodes.<br>You can also drag the width scrollbar to see the names better.</p>
+<h1 id="Code-Quality-Guidelines"><a href="#Code-Quality-Guidelines" class="headerlink" title="Code Quality Guidelines"></a>Code Quality Guidelines</h1><p>In addition to producing the behavior described above, your code should be well-written and meet all<br>expectations described in thegrading guidelines, Code Quality Guide, andCommenting Guide. For this<br>assessment, pay particular attention to the following elements:</p>
+<h2 id="Avoid-Redundancy"><a href="#Avoid-Redundancy" class="headerlink" title="Avoid Redundancy"></a>Avoid Redundancy</h2><h3 id="-8"><a href="#-8" class="headerlink" title=""></a></h3><p>Factor out any<br>redundancy in<br>If you find that multiple methods in your class do similar things, you should create helper method(s) to your methods.<br>capture the common code. All helper methods should be declared asprivate.</p>
+<h2 id="Data-Fields"><a href="#Data-Fields" class="headerlink" title="Data Fields"></a>Data Fields</h2><p>Properly encapsulate your objects by making data your fieldsprivate. Avoid unnecessary fields; use<br>fields to store important data of your objects but not to store temporary values only used in one place.<br>Fields should always be initialized inside a constructor or method, never at declaration.</p>
+<h2 id="Exceptions"><a href="#Exceptions" class="headerlink" title="Exceptions"></a>Exceptions</h2><p>The specified exceptions must be thrown correctly in the specified cases. Exceptions should be thrown<br>as soon as possible, and no unnecessary work should be done when an exception is thrown. Exceptions<br>should be documented in comments, including the type of exception thrown and under what conditions.</p>
+<h2 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h2><p>Each method should have a header comment including all necessary information as described in the<br>Commenting Guide. Comments should be written in your own words (i.e. not copied and pasted from</p>
+<p>this spec) and should not include implementation details.</p>
+<h1 id="Running-and-Submitting"><a href="#Running-and-Submitting" class="headerlink" title="Running and Submitting"></a>Running and Submitting</h1><p>If you believe your behavior is correct, you can submit your work by clicking the “Mark” button in the Ed<br>assessment. You will see the results of some automated tests along with tentative grades. <strong>These grades<br>are not final until you have received feedback from your TA.</strong></p>
+<p>You may submit your work as often as you like until the deadline; we will always grade your most recent<br>submission. Note the due date and time carefully— <strong>work submitted after the due time will not be<br>accepted</strong>.</p>
+<h1 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h1><p>If you find you are struggling with this assessment, make use of all the course resources that are available<br>to you, such as:</p>
+<ul>
+<li>Reviewing relevant examples fromclass</li>
+<li>Reading the textbook</li>
+<li>Visitingoffice hours</li>
+<li>Posting a question on themessage board</li>
+</ul>
+<h1 id="Collaboration-Policy"><a href="#Collaboration-Policy" class="headerlink" title="Collaboration Policy"></a>Collaboration Policy</h1><p>Remember that, while you are encouraged to use all resources at your disposal, including your classmates,<br><strong>all work you submit must be entirely your own</strong>. In particular, you should <strong>NEVER</strong> look at a solution<br>to this assessment from another source (a classmate, a former student, an online repository, etc.). Please<br>review thefull policyin the syllabus for more details and ask the course staff if you are unclear on whether<br>or not a resource is OK to use.</p>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>In addition to your code, you must submit answers to short reflection questions. These questions will<br>help you think about what you learned, what you struggled with, and how you can improve next time.<br>The questions are given in the fileAssassinManagerReflection.txtin the Ed assessment; type your<br>responses directly into that file.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE143-Computer-Programming-II-A2-Guitar-Hero.html" rel="next" title="Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143_Computer_Programming_II_A2_Guitar_Hero
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">347</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-143-Computer-Programming-II"><span class="nav-number">1.</span> <span class="nav-text">CSE 143: Computer Programming II</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview-The-Assassin-Game"><span class="nav-number"></span> <span class="nav-text">Overview: The Assassin Game</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Assassin-Rules"><span class="nav-number"></span> <span class="nav-text">Assassin Rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Game-of-Assassin"><span class="nav-number"></span> <span class="nav-text">Example Game of Assassin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summer-2021"><span class="nav-number"></span> <span class="nav-text">Summer 2021</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Take-home-Assessment-3-AssassinManager-due-J-uly-1-5-2021-11-59-pm"><span class="nav-number"></span> <span class="nav-text">Take-home Assessment 3: AssassinManager due J uly 1 5, 2021 11: 59 pm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Program-Behavior"><span class="nav-number"></span> <span class="nav-text">Program Behavior</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AssassinManager"><span class="nav-number"></span> <span class="nav-text">AssassinManager</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YourAssassinManagerclass-must-have-exactly-the-following-fields"><span class="nav-number"></span> <span class="nav-text">YourAssassinManagerclass must have exactly the following fields:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YourAssassinManagerclass-should-have-the-following-constructor"><span class="nav-number"></span> <span class="nav-text">YourAssassinManagerclass should have the following constructor:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-2"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YourAssassinManagerclass-should-also-implement-the-following-methods"><span class="nav-number"></span> <span class="nav-text">YourAssassinManagerclass should also implement the following methods:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-3"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-4"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-5"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-6"><span class="nav-number">4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-7"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implementation-Guidelines"><span class="nav-number"></span> <span class="nav-text">Implementation Guidelines</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Circular-Lists"><span class="nav-number"></span> <span class="nav-text">Circular Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jGRASP-Debugger"><span class="nav-number"></span> <span class="nav-text">jGRASP Debugger</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Quality-Guidelines"><span class="nav-number"></span> <span class="nav-text">Code Quality Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Avoid-Redundancy"><span class="nav-number"></span> <span class="nav-text">Avoid Redundancy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-8"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Fields"><span class="nav-number"></span> <span class="nav-text">Data Fields</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exceptions"><span class="nav-number"></span> <span class="nav-text">Exceptions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commenting"><span class="nav-number"></span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Running-and-Submitting"><span class="nav-number"></span> <span class="nav-text">Running and Submitting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Getting-Help"><span class="nav-number"></span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collaboration-Policy"><span class="nav-number"></span> <span class="nav-text">Collaboration Policy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reflection"><span class="nav-number"></span> <span class="nav-text">Reflection</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
