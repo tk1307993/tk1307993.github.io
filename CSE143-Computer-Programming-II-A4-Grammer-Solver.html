@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE143_Computer_Programming_II_A4_Grammer_Solver">
+<meta property="og:url" content="cplusplusdaixie.com/CSE143-Computer-Programming-II-A4-Grammer-Solver.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-08T00:50:54.621Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE143_Computer_Programming_II_A4_Grammer_Solver">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A4-Grammer-Solver.html">
+
+
+
+
+
+  <title>Java代写：CSE143_Computer_Programming_II_A4_Grammer_Solver | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A4-Grammer-Solver.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE143_Computer_Programming_II_A4_Grammer_Solver</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-08T08:50:11+08:00">
+                2023-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-143-Computer-Programming-II"><a href="#CSE-143-Computer-Programming-II" class="headerlink" title="CSE 143: Computer Programming II"></a>CSE 143: Computer Programming II</h3><p>This assignment will assess your mastery of the following objectives:</p>
+<ul>
+<li>Implement a well-designed Java class to meet a given specification.</li>
+<li>Implement recursive methods to solve a naturally-recursive problem.</li>
+<li>Implement a public-private recursive pair.</li>
+<li>Choose an appropriate data structure to represent specified data.</li>
+<li>Follow prescribed conventions for code quality, documentation, and readability.</li>
+</ul>
+<h1 id="Overview-Languages-Grammars-and-BNF"><a href="#Overview-Languages-Grammars-and-BNF" class="headerlink" title="Overview: Languages, Grammars, and BNF"></a>Overview: Languages, Grammars, and BNF</h1><p>In this assessment, you will write a classGrammarSolverthat will be able to generate random sentences<br>(or other output) from a set of specially-formatted rules. These rules are called a <em>grammar</em> and are used<br>to define a <em>language</em>. Our grammars will be written in <em>Backus-Naur Form (BNF)</em>.</p>
+<h2 id="Formal-Languages"><a href="#Formal-Languages" class="headerlink" title="Formal Languages"></a>Formal Languages</h2><p>A <em>formal language</em> is a set of words and symbols along with a set of rules defining how those symbols may<br>be used together. These rules dictate what are considered valid constructions in the defined language.<br>For example, in English, “A boy threw the ball.” is a valid sentence, but “A threw boy ball the” is not,<br>despite consisting of the same words, because the words are put together in an invalid way.</p>
+<h2 id="Grammars"><a href="#Grammars" class="headerlink" title="Grammars"></a>Grammars</h2><p>A <em>grammar</em> is a way of describing the syntax and symbols of a formal language. Grammars have two types<br>of “symbols” (e.g., words, phrases, sentences): <em>terminals</em> and <em>non-terminals</em>. A <em>terminal</em> is a fundamental<br>word or symbol in the language. For example, in English, any single word would be considered a terminal.<br>A <em>non-terminal</em> is a symbol that is used to define specific groups of symbols that may be used in the<br>language. In a grammar for English, we might have non-terminals such as “adjective,” “noun phrase,”<br>and “sentence” to name a few.</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sentence</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">verb</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">runs</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">object</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">dog</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">article</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">the</span></span><br></pre></td></tr></table></figure>
+<p>For example, consider the following simple language:</p>
+<ul>
+<li><em>Terminals:</em> the, a, cat, dog, runs, walks</li>
+<li><em>Non-terminals:</em><br>  <strong>- sentence</strong> : “article <strong>and</strong> object <strong>and</strong> verb”<br>  <strong>- article</strong> : “the <strong>or</strong> a”.<br>  <strong>- object</strong> : “cat <strong>or</strong> dog”.<br>  <strong>- verb</strong> : “runs <strong>or</strong> walks”.</li>
+</ul>
+<p>This language allows the following sentences:</p>
+<p>“the cat runs” “the cat walks” “a cat runs” “a cat walks”<br>“the dog runs” “the dog walks” “a dog runs” “a dog walks”</p>
+<h1 id="Summer-2021"><a href="#Summer-2021" class="headerlink" title="Summer 2021"></a>Summer 2021</h1><h1 id="Take-home-Assessment-5-Grammar-Solver-due-J-uly-2-9-2021-11-5-9-pm"><a href="#Take-home-Assessment-5-Grammar-Solver-due-J-uly-2-9-2021-11-5-9-pm" class="headerlink" title="Take-home Assessment 5: Grammar Solver due J uly 2 9 , 2021 11:5 9 pm"></a>Take-home Assessment 5: Grammar Solver due J uly 2 9 , 2021 11:5 9 pm</h1><h2 id="Backus-Naur-Form-BNF"><a href="#Backus-Naur-Form-BNF" class="headerlink" title="Backus-Naur Form (BNF)"></a>Backus-Naur Form (BNF)</h2><p><em>Backus-Naur Form (BNF)</em> is a specific format for specifying grammars. Each line of BNF looks like the<br>following:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nonterminal::=<span class="keyword">rule</span>|<span class="keyword">rule</span>|...|<span class="keyword">rule</span></span><br></pre></td></tr></table></figure>
+<p>Each “rule” is some sequence of terminals or non-terminals separated by whitespace. The‘|’character<br>separates different possible rules for the same non-terminal. For example, the grammar specified above<br>written in BNF would look like:</p>
+<figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sentence::=article object verb</span><br><span class="line">article::=the|a</span><br><span class="line">object::=cat|dog</span><br><span class="line">verb::=runs|walks</span><br></pre></td></tr></table></figure>
+<p>Notice that the non-terminalsentencehas a single option consisting of multiple non-terminals, whereas<br>the others non-terminals each consist of multiple options.</p>
+<p>Rules may be duplicated for the same non-terminal to make a particular expansion more likely than others.<br>For example, suppose the above grammar were modified as follows:</p>
+<figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sentence::=article object verb</span><br><span class="line">article::=the|a</span><br><span class="line">object::=cat|cat|dog</span><br><span class="line">verb::=runs|walks</span><br></pre></td></tr></table></figure>
+<p>This grammar would produce the same sentences as the original grammar, but sentences containing “cat”<br>would be twice as likely to occur as sentences containing “dog.”</p>
+<p>In addition, for this assessment, you may assume the following about all BNF rules:</p>
+<ul>
+<li>Each line will contain <em>exactly one occurrence</em> of::=which will be the separator between the name<br>  of a non-terminal and its options.</li>
+<li>A pipe (|) will separate each option for a non-terminal. If there is only one option for a particular<br>  non-terminal (like withsentenceabove), there will be no pipe on that line.</li>
+<li>Whitespace separates tokens but doesn’t haven any special meaning. There will be at least one<br>  whitespace character between each part of a single rule. Extra whitespace should be ignored.</li>
+<li>Symbols are case-sensistive. (For example,<s>would not be considered the same symbol as<s>.)</s></s></li>
+<li>A <em>terminal</em> is any symbol that does not appear on the left-hand side of a rule.</li>
+<li>The text before the “::=” is not empty, does not contain a pipe (|) character, and does not contain<br>  any whitespace.</li>
+<li>The text after the “::=” will be nonempty.</li>
+</ul>
+<h1 id="Program-Behavior"><a href="#Program-Behavior" class="headerlink" title="Program Behavior"></a>Program Behavior</h1><p>In this assessment you will write a class that accepts a list of rules for a grammar in Backus-Naur Form<br>and allows the client to randomly generate elements of the grammar. You will use <strong>recursion</strong> to implement<br>the core of your algorithm.</p>
+<p>We have provided you with a client program,GrammarMain.java, that handles the file processing and<br>user interaction. This program reads a BNF grammar input text file and passes its entire contents to you<br>as aListofStrings. You will write a classGrammarSolverthat generates random results based on<br>the rules provided.</p>
+<h1 id="GrammarSolver"><a href="#GrammarSolver" class="headerlink" title="GrammarSolver"></a>GrammarSolver</h1><h2 id="YourGrammarSolverclass-should-have-the-following-constructor"><a href="#YourGrammarSolverclass-should-have-the-following-constructor" class="headerlink" title="YourGrammarSolverclass should have the following constructor:"></a>YourGrammarSolverclass should have the following constructor:</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public GrammarSolver (List&lt;String&gt; rules)</span><br><span class="line">This constructor should initialize <span class="keyword">a</span> <span class="built_in">new</span> grammar over <span class="keyword">the</span> given BNF grammar rules where <span class="keyword">each</span> rule</span><br><span class="line">corresponds <span class="built_in">to</span> <span class="literal">one</span> <span class="built_in">line</span> <span class="keyword">of</span> <span class="keyword">text</span>. You should use regular expressions (see below) <span class="built_in">to</span> break apart <span class="keyword">the</span></span><br><span class="line">rules <span class="keyword">and</span> store them <span class="keyword">into</span> aMapso that you can look up parts <span class="keyword">of</span> <span class="keyword">the</span> grammar efficiently later.</span><br><span class="line">You should <span class="keyword">not</span> modify <span class="keyword">the</span> list passed <span class="keyword">in</span>. You should throw anIllegalArgumentExceptionif <span class="keyword">the</span></span><br><span class="line">list is <span class="literal">empty</span> <span class="keyword">or</span> <span class="keyword">if</span> there are <span class="literal">two</span> <span class="keyword">or</span> more entries <span class="keyword">in</span> <span class="keyword">the</span> grammar <span class="keyword">for</span> <span class="keyword">the</span> same non-terminal.</span><br></pre></td></tr></table></figure>
+<h2 id="YourGrammarSolvershould-also-implement-the-following-public-methods"><a href="#YourGrammarSolvershould-also-implement-the-following-public-methods" class="headerlink" title="YourGrammarSolvershould also implement the following public methods:"></a>YourGrammarSolvershould also implement the following public methods:</h2><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> boolean grammarContains (String symbol)</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">returntrueif</span> <span class="title">the</span> <span class="title">given</span> <span class="title">symbol</span> <span class="title">is</span> <span class="title">a</span> <span class="title">non</span>-<span class="title">terminal</span> <span class="title">in</span> <span class="title">the</span> <span class="title">grammar</span> <span class="title">andfalse</span></span></span><br><span class="line"><span class="function"><span class="title">otherwise</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For example, <span class="keyword">for</span> the grammar above, grammarContains(<span class="string">"sentence"</span>)would returntrueand</span><br><span class="line"><span class="function"><span class="title">grammarContains</span><span class="params">(<span class="string">"foo"</span>)</span><span class="title">orgrammarContains</span><span class="params">(<span class="string">"boy"</span>)</span><span class="params">(“boy” is a terminal in the language)</span></span></span><br><span class="line">would returnfalse.</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String getSymbols ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">return</span> <span class="title">a</span> <span class="title">string</span> <span class="title">representation</span> <span class="title">of</span> <span class="title">the</span> <span class="title">various</span> <span class="title">nonterminal</span> <span class="title">symbols</span> <span class="title">from</span> <span class="title">the</span></span></span><br><span class="line"><span class="function"><span class="title">grammar</span> <span class="title">as</span> <span class="title">a</span> <span class="title">sorted</span>, <span class="title">comma</span>-<span class="title">separated</span> <span class="title">list</span> <span class="title">enclosed</span> <span class="title">in</span> <span class="title">square</span> <span class="title">brackets</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">For</span> <span class="selector-tag">example</span>, <span class="selector-tag">callinggetSymbols</span>()<span class="selector-tag">for</span> <span class="selector-tag">the</span> <span class="selector-tag">previous</span> <span class="selector-tag">grammar</span> <span class="selector-tag">would</span> <span class="selector-tag">give</span>: “<span class="selector-attr">[article, object,</span></span><br><span class="line"><span class="selector-attr">sentence, verb]</span>”.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public String[] generate (String symbol, int times)</span><br><span class="line">This method should generate times <span class="built_in">random</span> occurrences <span class="keyword">of</span> <span class="keyword">the</span> given symbol <span class="keyword">and</span> <span class="literal">return</span> them <span class="keyword">as</span></span><br><span class="line">aString[]. Each <span class="keyword">string</span> generated should be compact <span class="keyword">in</span> <span class="keyword">the</span> sense that there should be</span><br><span class="line">exactly <span class="literal">one</span> <span class="literal">space</span> between <span class="keyword">each</span> terminal <span class="keyword">and</span> there should be no leading <span class="keyword">or</span> trailing spaces.</span><br><span class="line">If times is negative, you should throw anIllegalArgumentException. If theStringargument</span><br><span class="line">passed is <span class="keyword">not</span> <span class="keyword">a</span> non-terminal <span class="keyword">in</span> your grammar you should throw anIllegalArgumentException.</span><br><span class="line">When generating <span class="keyword">a</span> non-terminal symbol <span class="keyword">in</span> your grammar, <span class="keyword">each</span> <span class="keyword">of</span> <span class="keyword">the</span> rules <span class="keyword">on</span> <span class="title">the</span> <span class="title">right-hand</span> <span class="title">side</span></span><br><span class="line"><span class="keyword">of</span> <span class="keyword">the</span> grammar should be applied <span class="keyword">with</span> equal probability.</span><br></pre></td></tr></table></figure>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Each written</span><br><span class="line">rule should</span><br><span class="line">equally likely,</span><br><span class="line">but <span class="keyword">a</span> rule may</span><br><span class="line">occur more <span class="keyword">of</span>-</span><br><span class="line"><span class="literal">ten</span> <span class="keyword">if</span> <span class="keyword">it</span> appears</span><br><span class="line"><span class="keyword">as</span> <span class="keyword">an</span> option</span><br><span class="line">more than once.</span><br></pre></td></tr></table></figure>
+<h1 id="Sample-Grammar-and-Executions"><a href="#Sample-Grammar-and-Executions" class="headerlink" title="Sample Grammar and Executions"></a>Sample Grammar and Executions</h1><h2 id="Complex-BNF-sentence-txt"><a href="#Complex-BNF-sentence-txt" class="headerlink" title="Complex BNF (sentence.txt)"></a>Complex BNF (sentence.txt)</h2><p><sentence>::=<nounp> <verbp></verbp></nounp></sentence></p>
+<p><nounp>::=<det> <adjs> <noun>|<propnoun></propnoun></noun></adjs></det></nounp></p>
+<p><propnoun>::=Hadi|Jazmin|Ali|Spot|Fred|Elmo</propnoun></p>
+<p><adjs>::=<adj>|<adj> <adjs></adjs></adj></adj></adjs></p>
+<p><adj>::=big|green|wonderful|faulty|subliminal|pretentious</adj></p>
+<p><det>::=the|a</det></p>
+<p><noun>::=dog|cat|man|university|father|mother|child|television</noun></p>
+<p><verbp>::=<transverb> <nounp>|<intransverb></intransverb></nounp></transverb></verbp></p>
+<p><transverb>::=taught|honored|waved to|helped</transverb></p>
+<p><intransverb>::=died|collapsed|laughed|wept</intransverb></p>
+<h2 id="Example-Random-Sentence-Diagram"><a href="#Example-Random-Sentence-Diagram" class="headerlink" title="Example Random Sentence Diagram"></a>Example Random Sentence Diagram</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;sentence&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;verbp&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;nounp&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;noun&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">child</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;adjs&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;adjs&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;adj&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">wonderful</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;adj&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">green</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;det&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">the</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;transverb&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">honored</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;nounp&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;propnoun&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Fred</span></span><br></pre></td></tr></table></figure>
+<h2 id="Partial-Example-Execution-user-input-underlined"><a href="#Partial-Example-Execution-user-input-underlined" class="headerlink" title="Partial Example Execution (user input underlined)"></a>Partial Example Execution (user input underlined)</h2><p>Welcome to the cse143 random sentence generator.</p>
+<p>What is the name of the grammar file? sentence.txt</p>
+<p>Available symbols are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)? <sentence><br>How many do you want me to generate? 5<br>Hadi found Jazmin<br>Spot helped the big cat<br>Elmo died<br>the green mother wept<br>the subliminal green man laughed</sentence></verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<p>Available symbols are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)?</verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<p>More example program executions are found at the end of the spec.</p>
+<h1 id="Implementation-Guidelines"><a href="#Implementation-Guidelines" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h1><h2 id="GrammarSolver-Constructor"><a href="#GrammarSolver-Constructor" class="headerlink" title="GrammarSolver Constructor"></a>GrammarSolver Constructor</h2><p>For this assessment, you <strong>MUST</strong> represent your grammar using aMap, where the <em>keys</em> of the map are<br>the <em>non-terminals</em> of the grammar, and the <em>values</em> are the options for expansion the corresponding non-<br>terminal. You should choose an appropriate data structure for the values in your Mapto effectively<br>represent the grammar rules and make the operations required by the class convenient and efficient.</p>
+<h2 id="generateAlgorithm"><a href="#generateAlgorithm" class="headerlink" title="generateAlgorithm"></a>generateAlgorithm</h2><p>Thegeneratemethod will generate a random occurrence of a given non-terminalNT. You <strong>MUST</strong> use<br>the following recursive algorithm in your implementation of this method:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Choose <span class="keyword">a</span> <span class="built_in">random</span> expansion ruleRfor <span class="keyword">the</span> non-terminalNT. For <span class="keyword">each</span> <span class="keyword">of</span> <span class="keyword">the</span> symbols <span class="keyword">in</span> <span class="keyword">the</span></span><br><span class="line">ruleR, generate <span class="keyword">a</span> <span class="built_in">random</span> occurrence <span class="keyword">of</span> that symbol. If <span class="keyword">the</span> symbol is <span class="keyword">a</span> terminal, <span class="keyword">the</span> expansion</span><br><span class="line">is simply <span class="keyword">the</span> symbol itself. If <span class="keyword">the</span> symbol is <span class="keyword">a</span> non-terminal, you should generate <span class="keyword">an</span> expansion</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">a</span> recursive call.</span><br></pre></td></tr></table></figure>
+<p>Remember that it is acceptable to have a loop inside your recursion. (In fact, you will likely want one as<br>part of this algorithm!) The directory crawler program from class will serve as a good guide for how to<br>write this program. In that example, we iterated over the different files in a directory and used recursion<br>to list the files in each subdirectory. For yourGrammarSolver, you will iterate over the different symbols<br>in the chosen role and use recursion to generate an expansion for each symbol. You may also find that<br>you will want to use a public/private pair for this recursive task.</p>
+<h2 id="Testing-Your-Solution"><a href="#Testing-Your-Solution" class="headerlink" title="Testing Your Solution"></a>Testing Your Solution</h2><p>We are providing another tool that is linked on the section for this assignment to check the output of<br>yourgeneratemethod to make sure it is producing valid output.</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Remember <span class="keyword">to</span></span><br><span class="line"><span class="builtin-name">remove</span> any</span><br><span class="line">debugging</span><br><span class="line">code when you</span><br><span class="line">submit.</span><br></pre></td></tr></table></figure>
+<p>You can test that the correct whitespace is produced fromgenerateby using some non-whitespace<br>character (e.g. ~) instead of spaces and inspecting the output visually.</p>
+<h2 id="Splitting-Strings"><a href="#Splitting-Strings" class="headerlink" title="Splitting Strings"></a>Splitting Strings</h2><p>In this assignment, it will be useful to know how to <em>split</em> strings apart in Java. In particular, you will need<br>to split the various options for rules on the|character, and then, you will need to split the pieces of a<br>rule apart by spaces.</p>
+<p>To do this, you should use the <strong>splitmethod of the Stringclass</strong> , which takes aStringdelimiter<br>(e.g. “what to split by”) as a parameter and returns your original largeStringas an array of smaller<br>Strings.</p>
+<p>The delimiterStringpassed tosplitis called a <em>regular expression</em> , which are strings that use a particular<br>syntax to indicate patterns of text. A regular expression is aStringthat “matches” certain sequences.<br>For instance, “abc” is a regular expression that matches “a followed by b followed by c”.</p>
+<p>You do not need to have a deep understanding of regular expressions to complete this assessment. Here<br>are some specific regular expressions that will help you with particular splitting steps for your class:</p>
+<ul>
+<li><strong>Splitting Non-Terminals from Rules.</strong> Given aString, line, to splitlinebased on where<br>  ::=occurs, you could use the regular expression “::=” (since you are looking for these <em>literal</em><br>  characters). For example:</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> <span class="built_in">line</span> = <span class="string">"example::=foo bar |baz"</span>;</span><br><span class="line"><span class="keyword">String</span>[] pieces = <span class="built_in">line</span>.<span class="built_in">split</span>(<span class="string">"::="</span>); <span class="comment">// ["example", "foo bar |baz"]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Splitting Different Rules.</strong> Given aString,rules, to splitrulesbased on where the|character<br>  is, it looks similar to the above, <em>except</em> , in regular expressions,|is a special character. So, we must<br>  escape it (just like\nor\t). So, the regular expression is “\|”. (Note that we need two slashes<br>  because slashes themselves must be escaped inStrings.) For example:</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> rules = <span class="string">"foo bar|baz |quux mumble"</span>;</span><br><span class="line"><span class="keyword">String</span>[] pieces = rules.split(<span class="string">"\\|"</span>); // [<span class="string">"foo bar"</span>, <span class="string">"baz "</span>, <span class="string">"quux mumble"</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Splitting Apart a Single Rule.</strong> Given aString,rule, to splitrulebased on whitespace, we<br>  must look for “at least one whitespace”. We can use\sto indicate “a single whitespace of any<br>  kind:\t, space, etc. And by adding+afterwards, the regular expression is interpreted as “one or<br>  more of whitespace”. For example:</li>
+</ul>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> <span class="keyword">rule</span> = <span class="string">"the quick brown fox"</span>;</span><br><span class="line"><span class="keyword">String</span>[] pieces = <span class="keyword">rule</span>.split(<span class="string">"\\s+"</span>); // [<span class="string">"the"</span>, <span class="string">"quick"</span>, <span class="string">"brown"</span>, <span class="string">"fox"</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Removing-Whitespace-from-the-Beginning-and-the-End-of-a-String"><a href="#Removing-Whitespace-from-the-Beginning-and-the-End-of-a-String" class="headerlink" title="Removing Whitespace from the Beginning and the End of a String"></a>Removing Whitespace from the Beginning and the End of a String</h2><p>One minor issue that comes up with splitting on whitespace as above is that if theStringyou are splitting<br>begins with a whitespace character, you will get an emptyStringat the front of the resulting array.<br>Given aString,str, we can create a newStringthat omits all leading and trailing whitespace removed:</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> <span class="built_in">str</span> = <span class="string">" lots of spaces \t"</span>;</span><br><span class="line"><span class="keyword">String</span> trimmedString = <span class="built_in">str</span>.<span class="built_in">trim</span>(); <span class="comment">// "lots of spaces"</span></span><br></pre></td></tr></table></figure>
+<h1 id="Development-Strategy-and-Hints"><a href="#Development-Strategy-and-Hints" class="headerlink" title="Development Strategy and Hints"></a>Development Strategy and Hints</h1><p>Thegeneratemethod is the most difficult, so we strongly suggest you write it last. Remember that it<br>is helpful to tackle difficult methods using “iterative development” where you solve simple versions of the<br>problem first.</p>
+<p>Random programs can be difficult to validate correctness, and thegeneratemethod you will implement<br>uses randomness to decide which rule for a given non-terminal to use. To help you debug and validate<br>your output, we have provided a grammar verifier tool on the course website that verifies your output<br>follows the grammar rules (but ignores whitespace).</p>
+<p>If your recursive method has a bug, try putting <strong>a debugprintln</strong> that prints your parameter values to<br>see the calls being made.</p>
+<h1 id="Code-Quality-Guidelines"><a href="#Code-Quality-Guidelines" class="headerlink" title="Code Quality Guidelines"></a>Code Quality Guidelines</h1><p>In addition to producing the behavior described above, your code should be well-written and meet all<br>expectations described in thegrading guidelines, Code Quality Guide, andCommenting Guide. For this<br>assessment, pay particular attention to the following elements:</p>
+<h2 id="SortedMap"><a href="#SortedMap" class="headerlink" title="SortedMap"></a>SortedMap</h2><p>Because we want you to guarantee the keys of your map are sorted, we will ask you to use the<br>SortedMap&lt;K, V&gt;interface for this assignment instead of theMap&lt;K, V&gt;interface. TheSortedMap<br>interface is essentially the same as theMapinterface, except it requires the keys be sorted. This means<br>TreeMapis a validSortedMapimplementation, butHashMapis not. You can use all the same methods<br>on aSortedMapas you could on aMap.</p>
+<h2 id="Generic-Structures"><a href="#Generic-Structures" class="headerlink" title="Generic Structures"></a>Generic Structures</h2><p>You should always use generic structures. If you make a mistake in specifying type parameters, the<br>Java compiler may warn you that you have “unchecked or unsafe operations” in your program. If you<br>use jGRASP, you may want to change your settings to see which line the warning refers to. Go to<br>Settings/Compiler Settings/Workspace/Flags/Argsand then uncheck the box next to “Compile”<br>and type in:-Xlint:unchecked</p>
+<h2 id="Data-Fields"><a href="#Data-Fields" class="headerlink" title="Data Fields"></a>Data Fields</h2><p>Properly encapsulate your objects by making data your fieldsprivate. Avoid unnecessary fields; use<br>fields to store important data of your objects but not to store temporary values only used in one place.<br>Fields should always be initialized inside a constructor or method, never at declaration.</p>
+<h2 id="Exceptions"><a href="#Exceptions" class="headerlink" title="Exceptions"></a>Exceptions</h2><p>The specified exceptions must be thrown correctly in the specified cases. Exceptions should be thrown<br>as soon as possible, and no unnecessary work should be done when an exception is thrown. Exceptions<br>should be documented in comments, including the type of exception thrown and under what conditions.</p>
+<h2 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h2><p>Each method should have a header comment including all necessary information as described in the<br>Commenting Guide. Comments should be written in your own words (i.e. not copied and pasted from<br>this spec) and should not include implemenation details.</p>
+<h1 id="Running-and-Submitting"><a href="#Running-and-Submitting" class="headerlink" title="Running and Submitting"></a>Running and Submitting</h1><p>If you believe your behavior is correct, you can submit your work by clicking the “Mark” button in the Ed<br>assessment. You will see the results of some automated tests along with tentative grades. <strong>These grades<br>are not final until you have received feedback from your TA.</strong></p>
+<p>You may submit your work as often as you like until the deadline; we will always grade your most recent<br>submission. Note the due date and time carefully— <strong>work submitted after the due time will not be<br>accepted</strong>.</p>
+<h1 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h1><p>If you find you are struggling with this assessment, make use of all the course resources that are available<br>to you, such as:</p>
+<ul>
+<li>Reviewing relevant examples fromclass</li>
+<li>Reading the textbook</li>
+<li>Visitingoffice hours</li>
+<li>Posting a question on themessage board</li>
+</ul>
+<h1 id="Collaboration-Policy"><a href="#Collaboration-Policy" class="headerlink" title="Collaboration Policy"></a>Collaboration Policy</h1><p>Remember that, while you are encouraged to use all resources at your disposal, including your classmates,<br><strong>all work you submit must be entirely your own</strong>. In particular, you should <strong>NEVER</strong> look at a solution<br>to this assessment from another source (a classmate, a former student, an online repository, etc.). Please<br>review thefull policyin the syllabus for more details and ask the course staff if you are unclear on whether<br>or not a resource is OK to use.</p>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><p>In addition to your code, you must submit answers to short reflection questions. These questions will<br>help you think about what you learned, what you struggled with, and how you can improve next time.<br>The questions are given in the fileGrammarSolverReflection.txtin the Ed assessment; type your<br>responses directly into that file.</p>
+<h1 id="Sample-Execution-1-user-input-underlined"><a href="#Sample-Execution-1-user-input-underlined" class="headerlink" title="Sample Execution #1 (user input underlined)"></a>Sample Execution #1 (user input underlined)</h1><p>Welcome to the cse143 random sentence generator.</p>
+<p>What is the name of the grammar file? sentence.txt</p>
+<p>Available symbols to generate are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)? <det><br>How many do you want me to generate? 5<br>a<br>the<br>the<br>a<br>the</det></verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<p>Available symbols to generate are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)? <nounp><br>How many do you want me to generate? 5<br>Elmo<br>a green big pretentious green pretentious subliminal university<br>the pretentious cat<br>Jazmin<br>the pretentious subliminal mother</nounp></verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<p>Available symbols to generate are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)? <sentence><br>How many do you want me to generate? 20<br>a faulty dog laughed<br>Ali helped a wonderful dog<br>Spot collapsed<br>the green father wept<br>Spot laughed<br>Elmo taught Ali<br>the subliminal green man honored Fred<br>a wonderful faulty big father laughed<br>the faulty faulty university taught the faulty dog<br>Elmo helped the green university<br>Hadi helped the pretentious man<br>the pretentious man died<br>Ali laughed<br>the pretentious subliminal child found Hadi<br>Elmo wept<br>a wonderful wonderful faulty child collapsed<br>Spot found the subliminal subliminal pretentious university<br>the green father helped the wonderful cat<br>a faulty television wept<br>the faulty mother laughed</sentence></verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<p>Available symbols to generate are:<br>[<adj>, <adjs>, <det>, <intransverb>, <noun>, <nounp>, <propnoun>, <sentence>, <transverb>, <verbp>]<br>What do you want generated (return to quit)?</verbp></transverb></sentence></propnoun></nounp></noun></intransverb></det></adjs></adj></p>
+<h1 id="Sample-Execution-2-user-input-underlined"><a href="#Sample-Execution-2-user-input-underlined" class="headerlink" title="Sample Execution #2 (user input underlined)"></a>Sample Execution #2 (user input underlined)</h1><p>Welcome to the cse143 random sentence generator.</p>
+<p>What is the name of the grammar file? sentence2.txt</p>
+<p>Available symbols to generate are:<br>[E, F1, F2, OP, T]<br>What do you want generated (return to quit)? T<br>How many do you want me to generate? 5<br>42</p>
+<ul>
+<li>y<br>x<br>x<br>( ( 1 ) )</li>
+</ul>
+<p>Available symbols to generate are:<br>[E, F1, F2, OP, T]<br>What do you want generated (return to quit)? E<br>How many do you want me to generate? 10<br>x - 1<br>0<br>sin ( 1 + 92 + - 1 / 42 )<br>max ( y , 92 )<br>42 % 1</p>
+<ul>
+<li>42<br>92<br>1<br>92<br>42 - sin ( 1 )</li>
+</ul>
+<p>Available symbols to generate are:<br>[E, F1, F2, OP, T]<br>What do you want generated (return to quit)?</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE143-Computer-Programming-II-A3-Assassin-Manager.html" rel="next" title="Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143_Computer_Programming_II_A3_Assassin_Manager
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">348</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-143-Computer-Programming-II"><span class="nav-number">1.</span> <span class="nav-text">CSE 143: Computer Programming II</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview-Languages-Grammars-and-BNF"><span class="nav-number"></span> <span class="nav-text">Overview: Languages, Grammars, and BNF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Formal-Languages"><span class="nav-number"></span> <span class="nav-text">Formal Languages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grammars"><span class="nav-number"></span> <span class="nav-text">Grammars</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summer-2021"><span class="nav-number"></span> <span class="nav-text">Summer 2021</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Take-home-Assessment-5-Grammar-Solver-due-J-uly-2-9-2021-11-5-9-pm"><span class="nav-number"></span> <span class="nav-text">Take-home Assessment 5: Grammar Solver due J uly 2 9 , 2021 11:5 9 pm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Backus-Naur-Form-BNF"><span class="nav-number"></span> <span class="nav-text">Backus-Naur Form (BNF)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Program-Behavior"><span class="nav-number"></span> <span class="nav-text">Program Behavior</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GrammarSolver"><span class="nav-number"></span> <span class="nav-text">GrammarSolver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YourGrammarSolverclass-should-have-the-following-constructor"><span class="nav-number"></span> <span class="nav-text">YourGrammarSolverclass should have the following constructor:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YourGrammarSolvershould-also-implement-the-following-public-methods"><span class="nav-number"></span> <span class="nav-text">YourGrammarSolvershould also implement the following public methods:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-Grammar-and-Executions"><span class="nav-number"></span> <span class="nav-text">Sample Grammar and Executions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Complex-BNF-sentence-txt"><span class="nav-number"></span> <span class="nav-text">Complex BNF (sentence.txt)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Random-Sentence-Diagram"><span class="nav-number"></span> <span class="nav-text">Example Random Sentence Diagram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Partial-Example-Execution-user-input-underlined"><span class="nav-number"></span> <span class="nav-text">Partial Example Execution (user input underlined)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implementation-Guidelines"><span class="nav-number"></span> <span class="nav-text">Implementation Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GrammarSolver-Constructor"><span class="nav-number"></span> <span class="nav-text">GrammarSolver Constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generateAlgorithm"><span class="nav-number"></span> <span class="nav-text">generateAlgorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Your-Solution"><span class="nav-number"></span> <span class="nav-text">Testing Your Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Splitting-Strings"><span class="nav-number"></span> <span class="nav-text">Splitting Strings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Removing-Whitespace-from-the-Beginning-and-the-End-of-a-String"><span class="nav-number"></span> <span class="nav-text">Removing Whitespace from the Beginning and the End of a String</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Development-Strategy-and-Hints"><span class="nav-number"></span> <span class="nav-text">Development Strategy and Hints</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Quality-Guidelines"><span class="nav-number"></span> <span class="nav-text">Code Quality Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SortedMap"><span class="nav-number"></span> <span class="nav-text">SortedMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic-Structures"><span class="nav-number"></span> <span class="nav-text">Generic Structures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Fields"><span class="nav-number"></span> <span class="nav-text">Data Fields</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exceptions"><span class="nav-number"></span> <span class="nav-text">Exceptions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commenting"><span class="nav-number"></span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Running-and-Submitting"><span class="nav-number"></span> <span class="nav-text">Running and Submitting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Getting-Help"><span class="nav-number"></span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collaboration-Policy"><span class="nav-number"></span> <span class="nav-text">Collaboration Policy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reflection"><span class="nav-number"></span> <span class="nav-text">Reflection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-Execution-1-user-input-underlined"><span class="nav-number"></span> <span class="nav-text">Sample Execution #1 (user input underlined)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-Execution-2-user-input-underlined"><span class="nav-number"></span> <span class="nav-text">Sample Execution #2 (user input underlined)</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
