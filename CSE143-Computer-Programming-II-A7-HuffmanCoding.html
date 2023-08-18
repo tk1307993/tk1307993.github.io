@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding">
+<meta property="og:url" content="cplusplusdaixie.com/CSE143-Computer-Programming-II-A7-HuffmanCoding.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-18T01:57:44.324Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A7-HuffmanCoding.html">
+
+
+
+
+
+  <title>Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE143-Computer-Programming-II-A7-HuffmanCoding.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-18T09:56:55+08:00">
+                2023-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-143-Computer-Programming-II"><a href="#CSE-143-Computer-Programming-II" class="headerlink" title="CSE 143: Computer Programming II"></a>CSE 143: Computer Programming II</h3><p>This assignment will assess your mastery of the following objectives:</p>
+<ul>
+<li>Implement a well-designed Java class to meet a given specification.</li>
+<li>Implement, manipulate, and traverse a binary tree.</li>
+<li>Implement theComparableinterface</li>
+<li>Follow prescribed conventions for code quality, documentation, and readability.</li>
+</ul>
+<h2 id="Background-ASCII-and-Binary-Representation"><a href="#Background-ASCII-and-Binary-Representation" class="headerlink" title="Background: ASCII and Binary Representation"></a>Background: ASCII and Binary Representation</h2><p><em>(You do not need to fully understand this section to complete the assessment.)</em><br>We discovered on an earlier assignment that everycharhas an equivalentintvalue between 0 and 255.<br>(Recall,(int)’a’ = 97,(int)’z’= 122, etc.) In this assignment, we go a step further: computers<br>actually see integers as <em>binary</em> (1’s and 0’s). Binary is a lot like the normal numbers we use, except it’s<br>based around 2 instead of 10. For example, “ 1204 ” is written that way, because</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1204 </span>= <span class="number">1</span> · <span class="number">103</span> + <span class="number">2</span> · <span class="number">102</span> + <span class="number">0</span> · <span class="number">101</span> + <span class="number">4</span> · <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>Similarly, because</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">97</span> = <span class="number">0</span> · <span class="number">27</span> + <span class="number">1</span> · <span class="number">26</span> + <span class="number">1</span> · <span class="number">25</span> + <span class="number">0</span> · <span class="number">24</span> + <span class="number">0</span> · <span class="number">23</span> + <span class="number">0</span> · <span class="number">22</span> + <span class="number">0</span> · <span class="number">21</span> + <span class="number">1</span> · <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<p>97 is “ 01100001 ” in binary! In fact, all <em>char</em> ’s can be written using exactly 8 binary digits (bits). This<br>encoding, which is used pretty universally by computers, is called ASCII.</p>
+<h2 id="Background-Huffman-Encoding"><a href="#Background-Huffman-Encoding" class="headerlink" title="Background: Huffman Encoding"></a>Background: Huffman Encoding</h2><p><em>Huffman encoding</em> is an algorithm devised by David A. Huffman of MIT in 1952 for <em>compressing</em> data to<br>make a file occupy a smaller amount of space. Unbelievably, this algorithm is still used today in a variety<br>of very important areas. For example, mp3s and jpgs both use Huffman Coding. The general idea behind<br>Huffman Coding is the following:<br><strong>What if we used fewer than 8 bits for characters that are more common?</strong></p>
+<p>Consider the following (simple) example. Imagine we have the following data:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></span><br><span class="line"><span class="keyword">cccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></span><br><span class="line"><span class="keyword">ddaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></span><br></pre></td></tr></table></figure>
+<p><strong>How many bits to store with ASCII Coding?</strong><br>First, we find the ASCII code for each letter:</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a → <span class="number">01100001</span> , b → <span class="number">01100010</span> ,</span><br><span class="line">c → <span class="number">01100011</span> , d → <span class="number">01100100</span></span><br></pre></td></tr></table></figure>
+<p>Since each line has 80 letters, and each letter<br>code is 8 bits, the number of bits required is:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">80 </span>· <span class="number">8</span> ·<span class="number">4</span> = <span class="number">2560</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">How many bits <span class="built_in">to</span> store <span class="keyword">with</span> Huffman Coding?</span><br><span class="line">Sinceais most frequent, we use <span class="keyword">a</span> <span class="keyword">short</span> code <span class="keyword">for</span></span><br><span class="line"><span class="keyword">it</span>, <span class="keyword">then</span> we use <span class="keyword">the</span> next longest code forb, etc:</span><br><span class="line"><span class="keyword">a</span> → <span class="number">1</span> , b → <span class="number">00</span> ,</span><br><span class="line">c → <span class="number">011</span> , d → <span class="number">010</span></span><br><span class="line">This data has <span class="number">229</span><span class="keyword">a</span>’s, <span class="number">4</span>b’s, <span class="number">3</span>c’s, <span class="keyword">and</span> <span class="number">2</span>d’s.</span><br><span class="line">Since we need <span class="literal">one</span> bit fora, <span class="literal">two</span> forb, <span class="keyword">and</span> <span class="literal">three</span></span><br><span class="line">forcandd, <span class="keyword">the</span> total count <span class="keyword">of</span> bits is:</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">229 </span>·<span class="number">1</span> + <span class="number">4</span>·<span class="number">2</span> + <span class="number">3</span>·<span class="number">3</span> + <span class="number">2</span>·<span class="number">3</span> = <span class="number">255</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Woah! By changing <span class="keyword">the</span> coding, we compressed <span class="keyword">the</span> data <span class="keyword">by</span> <span class="keyword">a</span> factor <span class="keyword">of</span> <span class="number">10</span>!!</span><br></pre></td></tr></table></figure>
+<h2 id="Summer-2021"><a href="#Summer-2021" class="headerlink" title="Summer 2021"></a>Summer 2021</h2><h1 id="Take-home-Assessment-7-Huffman-Coding-due-August-19-2021-11-59pm"><a href="#Take-home-Assessment-7-Huffman-Coding-due-August-19-2021-11-59pm" class="headerlink" title="Take-home Assessment 7 : Huffman Coding due August 19, 2021 11:59pm"></a>Take-home Assessment 7 : Huffman Coding due August 19, 2021 11:59pm</h1><p>In this assignment, you will create classesHuffmanCodeandHuffmanNodeto be used in compression of<br>data You are provided with a clientHuffmanCompressor.javathat handles user interaction and calls<br>your huffman code methods to compress and decompress a given file.</p>
+<h2 id="Program-Behavior-Building-a-Huffman-Code"><a href="#Program-Behavior-Building-a-Huffman-Code" class="headerlink" title="Program Behavior: Building a Huffman Code"></a>Program Behavior: Building a Huffman Code</h2><p>In the previous example, we magically arrived at the special binary sequences to be used as codes. In this<br>section, we explain the algorithm to create these special binary sequences.</p>
+<p>Throughout this section, we will use the following example:<br>simple-spec-example.txt<br>aba ab cabbb</p>
+<h3 id="Step-1-Count-the-Frequencies-of-the-Characters"><a href="#Step-1-Count-the-Frequencies-of-the-Characters" class="headerlink" title="Step 1: Count the Frequencies of the Characters"></a>Step 1: Count the Frequencies of the Characters</h3><p>The file simple-spec-example.txthas the characters’a’,’b’,’c’, and ‘’. Counting up the<br>frequencies, we get the following:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Character Count</span><br><span class="line">‘ ’ <span class="number">2</span></span><br><span class="line">‘a’ <span class="number">4</span></span><br><span class="line">‘b’ <span class="number">5</span></span><br><span class="line">‘c’ <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="Step-2-Create-a-Priority-Queue-Ordered-By-Frequency"><a href="#Step-2-Create-a-Priority-Queue-Ordered-By-Frequency" class="headerlink" title="Step 2: Create a Priority Queue Ordered By Frequency"></a>Step 2: Create a Priority Queue Ordered By Frequency</h3><p>Since our ultimate goal is to create a code based on frequencies, we need to use a data structure that<br>helps us keep track of the order of the letters based on frequencies. We will use a <em>priority queue</em> for this.<br>A <em>priority queue</em> is a queue that is ordered by <em>priorities</em> (in this case frequencies) instead of FIFO order.<br>In other words, we can ask the priority queue to insert a new element (add(element)) and we can ask<br>it to remove the highest priority element (remove()). We will use thePriorityQueue<e>class in Java<br>for the implementation of priority queues, but we will still use theQueue<e>interface for variables.</e></e></p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">In <span class="keyword">Java, </span>if you</span><br><span class="line">print out a pri-</span><br><span class="line"><span class="keyword">ority </span>queue,</span><br><span class="line">the elements</span><br><span class="line">will not ap-</span><br><span class="line">pear in priority</span><br><span class="line"><span class="keyword">order. </span>This is</span><br><span class="line">EXPECTED</span><br><span class="line"><span class="keyword">behavior, </span><span class="keyword">and</span></span><br><span class="line"><span class="keyword">can’t </span><span class="keyword">be </span>easily</span><br><span class="line">changed.</span><br></pre></td></tr></table></figure>
+<p>For our huffman code, we want to remove the node with <em>lowest</em> frequency first. (Intuitively, the reason<br>is that the things we remove first will end up having the longest codes).</p>
+<p>We begin by creating a node for each letter in our text:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pq←−</span> <span class="attr">freq:</span> <span class="string">‘c’</span> <span class="attr">1 freq:</span> <span class="string">‘</span> <span class="string">’</span> <span class="attr">2 freq:</span> <span class="string">‘a’</span> <span class="attr">4 freq:</span> <span class="string">‘b’</span> <span class="number">5</span> <span class="string">←−</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Continued <span class="keyword">on</span> next page...</span><br></pre></td></tr></table></figure>
+<h3 id="Step-3-Combine-the-Nodes-Until-Only-One-is-Left"><a href="#Step-3-Combine-the-Nodes-Until-Only-One-is-Left" class="headerlink" title="Step 3: Combine the Nodes Until Only One is Left"></a>Step 3: Combine the Nodes Until Only One is Left</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Now that we have a priority<span class="built_in"> queue </span>of the nodes, we want <span class="keyword">to</span> put them together into a tree. <span class="keyword">To</span> <span class="keyword">do</span> this,</span><br><span class="line">we repeatedly <span class="builtin-name">remove</span> the smallest two (the ones at the front of the priority queue) <span class="keyword">and</span> create a new</span><br><span class="line">node with them as children. (The new node does <span class="keyword">not</span> have a character associated with it.)<span class="built_in"> Note </span>that the</span><br><span class="line">priority<span class="built_in"> queue </span>is arbitrary <span class="keyword">in</span> how it breaks ties; you should just take nodes <span class="keyword">in</span> the order the priority queue</span><br><span class="line">provides them.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">3</span><span class="keyword">a</span>) Remove Two Smallest</span><br><span class="line">First, remove <span class="keyword">the</span> smallest <span class="literal">two</span></span><br><span class="line">nodes <span class="built_in">from</span> <span class="keyword">the</span> priority queue:</span><br><span class="line">‘c’</span><br><span class="line">freq: <span class="number">1</span> <span class="keyword">and</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">‘</span> <span class="string">’</span></span><br><span class="line"><span class="attr">freq:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pq←−</span> <span class="attr">freq:</span> <span class="string">‘a’</span> <span class="attr">4 freq:</span> <span class="string">‘b’</span> <span class="number">5</span> <span class="string">←−</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">3</span>b) Combine Them Together</span><br><span class="line">Then, <span class="built_in">create</span> <span class="keyword">a</span> <span class="built_in">new</span> node. The fre-</span><br><span class="line">quency is <span class="keyword">the</span> <span class="built_in">sum</span> <span class="keyword">of</span> <span class="literal">two</span> nodes:</span><br><span class="line">freq: <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">‘c’</span></span><br><span class="line"><span class="attr">freq:</span> <span class="number">1</span></span><br><span class="line"><span class="string">‘</span> <span class="string">’</span></span><br><span class="line"><span class="attr">freq:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pq←−</span> <span class="attr">freq:</span> <span class="string">‘a’</span> <span class="attr">4 freq:</span> <span class="string">‘b’</span> <span class="number">5</span> <span class="string">←−</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(3c) <span class="builtin-name">Add</span> Back <span class="keyword">To</span> Priority Queue</span><br><span class="line">Now that we have a “new node”,</span><br><span class="line"><span class="builtin-name">add</span> it back <span class="keyword">to</span> the priority queue:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pq←−</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘c’</span> <span class="attr">1 freq:</span> <span class="string">‘</span> <span class="string">’</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘a’</span> <span class="attr">4 freq:</span> <span class="string">‘b’</span> <span class="number">5</span> <span class="string">←−</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">We <span class="keyword">repeat</span> this <span class="built_in">process</span> <span class="keyword">until</span> there is only <span class="literal">one</span> node left <span class="keyword">in</span> <span class="keyword">the</span> priority queue.</span><br><span class="line">Here are <span class="keyword">the</span> remaining steps (<span class="keyword">each</span> <span class="built_in">time</span>, we remove <span class="keyword">the</span> <span class="literal">two</span> smallest frequencies, <span class="built_in">combine</span> them, <span class="keyword">and</span> <span class="built_in">put</span></span><br><span class="line"><span class="keyword">the</span> <span class="built_in">result</span> back):</span><br></pre></td></tr></table></figure>
+<p>pq←−</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘c’</span> <span class="attr">1 freq:</span> <span class="string">‘</span> <span class="string">’</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘a’</span> <span class="attr">4 freq:</span> <span class="string">‘b’</span> <span class="number">5</span> <span class="string">←−then,</span> <span class="string">pq←−</span> <span class="attr">freq:</span> <span class="string">‘b’</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">7</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘c’</span> <span class="attr">1 freq:</span> <span class="string">‘</span> <span class="string">’</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘a’</span> <span class="number">4</span> <span class="string">←−</span> <span class="string">then,</span> <span class="string">pq←−</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">12</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">freq:</span> ‘b’ <span class="number">5</span> <span class="string">freq:</span>^<span class="number">7</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘c’</span> <span class="attr">1 freq:</span> <span class="string">‘</span> <span class="string">’</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">freq:</span> <span class="string">‘a’</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">←−</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Now that we only have <span class="literal">one</span> node left, we can use <span class="keyword">the</span> tree we constructed <span class="built_in">to</span> <span class="built_in">create</span> <span class="keyword">the</span> huffman codes!</span><br></pre></td></tr></table></figure>
+<h3 id="Step-4-Read-Off-The-Huffman-Codes"><a href="#Step-4-Read-Off-The-Huffman-Codes" class="headerlink" title="Step 4: Read Off The Huffman Codes"></a>Step 4: Read Off The Huffman Codes</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">At this point, <span class="keyword">the</span> frequencies <span class="keyword">of</span> <span class="keyword">the</span> letters have already been taken <span class="keyword">into</span> account; so, we no longer even</span><br><span class="line">look <span class="keyword">at</span> them. Thus, <span class="keyword">the</span> tree we’ve constructed looks like <span class="keyword">the</span> following:</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">‘b’</span><br></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">‘<span class="keyword">c</span>’ ‘ ’</span><br></pre></td></tr></table></figure>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">‘a’</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">simple-spec-example.code</span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">99</span></span><br><span class="line"><span class="number">100</span></span><br><span class="line"><span class="number">32</span></span><br><span class="line"><span class="number">101</span></span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">11</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">To figure out <span class="keyword">the</span> huffman code <span class="keyword">for</span> <span class="keyword">a</span> letter, we traverse <span class="keyword">the</span> tree <span class="built_in">from</span> <span class="keyword">the</span> root <span class="built_in">to</span> <span class="keyword">the</span> node <span class="keyword">with</span> <span class="keyword">the</span> letter</span><br><span class="line"><span class="keyword">in</span> <span class="keyword">it</span>. When we go left, we print <span class="keyword">a</span> <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">if</span> we go <span class="literal">right</span>, we print <span class="keyword">a</span> <span class="number">1.</span> For example, ‘c’ would be <span class="number">100</span> ,</span><br><span class="line">because we go <span class="literal">right</span>, <span class="keyword">then</span> left, <span class="keyword">then</span> left <span class="built_in">to</span> reach <span class="keyword">it</span>.</span><br><span class="line">Just like <span class="keyword">in</span> <span class="number">20</span> questions, we will output <span class="keyword">the</span> tree <span class="keyword">in</span> “standard <span class="built_in">format</span>”. Notice that <span class="keyword">the</span> only actual</span><br></pre></td></tr></table></figure>
+<p>information is in the leaves of the tree. So, thecodefile, which you can get by asking the main to “make<br>a code”, will consist of line pairs: the first line will be the ASCII value of the character in the leaf and<br>the second line will be the huffman code for that character. For example, the output of the tree we just<br>constructed would look like the above. The leaves should appear in the order of a <strong>pre-order</strong> traversal.</p>
+<h2 id="Program-Behavior-Huffman-Compression-and-Decompression"><a href="#Program-Behavior-Huffman-Compression-and-Decompression" class="headerlink" title="Program Behavior: Huffman Compression and Decompression"></a>Program Behavior: Huffman Compression and Decompression</h2><p>Now that we know how to construct a huffman code, we are ready to understand the huffman compression<br>and decompression algorithms. Here is an overview of how they work:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You <span class="keyword">do</span> <span class="keyword">this</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HuffmanCompressor</span><br><span class="line">handles <span class="keyword">this</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You <span class="keyword">do</span> <span class="keyword">this</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Input</span> <span class="keyword">File</span></span><br><span class="line">(<span class="keyword">file</span>.txt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Huffman</span> <span class="meta">Code</span></span><br><span class="line">(file<span class="meta">.code</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Compressed <span class="keyword">File</span></span><br><span class="line">(<span class="keyword">file</span>.<span class="keyword">short</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Decompressed</span><br><span class="line"><span class="keyword">File</span> (<span class="keyword">file</span>.<span class="keyword">new</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Compression Algorithm</span><br><span class="line">(<span class="number">1</span>)HuffmanCompressorgenerates <span class="keyword">the</span> frequencies <span class="keyword">in</span> <span class="keyword">a</span> given <span class="built_in">file</span>.</span><br><span class="line">(<span class="number">2</span>)HuffmanCodecreates <span class="keyword">the</span> huffman code <span class="built_in">from</span> <span class="keyword">the</span> frequencies.</span><br><span class="line">(<span class="number">3</span>)HuffmanCodewrites out <span class="keyword">the</span> huffman codes <span class="built_in">to</span> <span class="keyword">a</span>.codefile.</span><br><span class="line">(<span class="number">4</span>)HuffmanCompressorwrites <span class="keyword">a</span>.shortfile.</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Decompression Algorithm</span><br><span class="line">(<span class="number">1</span>)HuffmanCodereads <span class="keyword">in</span> <span class="selector-tag">a</span><span class="selector-class">.codefile</span> <span class="keyword">in</span> standard format.</span><br><span class="line">(<span class="number">2</span>)HuffmanCodewrites out <span class="selector-tag">a</span><span class="selector-class">.newfile</span>.</span><br></pre></td></tr></table></figure>
+<p>HuffmanCompressor is a client program that we will provide to you. In addition to handling user<br>interactions, it implements some of the steps of the compression and decompression algorithms that we<br>are not asking you to deal with. Specifically,HuffmanCompressorhandles:</p>
+<ul>
+<li>computing character frequencies for a given input file (these frequencies are passed to the first<br>  HuffmanCodeconstructor below)</li>
+<li>compressing a text file using a given Huffman tree</li>
+<li>producing aBitInputStreamfrom a given compressed input file (this stream is passed to the<br>  translatemethod)</li>
+</ul>
+<p>You do not need to implement any of the above behavior. You <strong>only</strong> need to implement the behavior and<br>methods described below.</p>
+<h2 id="HuffmanNode"><a href="#HuffmanNode" class="headerlink" title="HuffmanNode"></a>HuffmanNode</h2><p>The contents of theHuffmanNodeclass are up to you. Though we have studied trees ofints, you <em>should</em><br>create nodes specific to solving this problem. YourHuffmanNodeshould must be a separate public class<br>and should have at least one constructor used by your tree. The fields in yourHuffmanNode <em>must</em> be<br>public. HuffmanNodeshould not contain <em>any actual huffman coding logic</em>. It should only represent a<br>single node of the tree.</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Continued <span class="keyword">on</span> next page...</span><br></pre></td></tr></table></figure>
+<h2 id="HuffmanCode"><a href="#HuffmanCode" class="headerlink" title="HuffmanCode"></a>HuffmanCode</h2><p>This class represents a huffman code for a particular message. It keeps track of a binary tree constructed<br>using the huffman algorithm.</p>
+<h3 id="YourHuffmanCodeclass-should-have-the-following-constructors"><a href="#YourHuffmanCodeclass-should-have-the-following-constructors" class="headerlink" title="YourHuffmanCodeclass should have the following constructors:"></a>YourHuffmanCodeclass should have the following constructors:</h3><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public HuffmanCode (int[] frequencies)</span><br><span class="line">This<span class="keyword"> constructor</span> should initialize a newHuffmanCodeobject using the algorithm described for making</span><br><span class="line">a code from an<span class="built_in"> array </span>of frequencies.frequenciesis an<span class="built_in"> array </span>of frequencies wherefrequences[i]</span><br><span class="line">is the count of the character with ASCII valuei. Make sure to use aPriorityQueueto build the</span><br><span class="line">huffman code.</span><br></pre></td></tr></table></figure>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> HuffmanCode (Scanner input)</span><br><span class="line">This <span class="function"><span class="keyword">constructor</span> <span class="title">should</span> <span class="title">initialize</span> <span class="title">a</span> <span class="title">newHuffmanCodeobject</span> <span class="title">by</span> <span class="title">reading</span> <span class="title">in</span> <span class="title">a</span> <span class="title">previously</span> <span class="title">constructed</span></span></span><br><span class="line"><span class="function"><span class="title">code</span> <span class="title">from</span> <span class="title">a</span>.<span class="title">codefile</span>. <span class="title">You</span> <span class="title">may</span> <span class="title">assume</span> <span class="title">theScanneris</span> <span class="title">notnulland</span> <span class="title">is</span> <span class="title">always</span> <span class="title">contains</span> <span class="title">data</span></span></span><br><span class="line"><span class="function"><span class="title">encoded</span> <span class="title">in</span> <span class="title">legal</span>, <span class="title">valid</span> <span class="title">standard</span> <span class="title">format</span>.</span></span><br></pre></td></tr></table></figure>
+<h3 id="YourHuffmanCodeclass-should-also-implement-the-following-public-methods"><a href="#YourHuffmanCodeclass-should-also-implement-the-following-public-methods" class="headerlink" title="YourHuffmanCodeclass should also implement the following public methods:"></a>YourHuffmanCodeclass should also implement the following public methods:</h3><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> void save (PrintStream output)</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">should</span> <span class="title">store</span> <span class="title">the</span> <span class="title">current</span> <span class="title">huffman</span> <span class="title">codes</span> <span class="title">to</span> <span class="title">the</span> <span class="title">given</span> <span class="title">output</span> <span class="title">stream</span> <span class="title">in</span> <span class="title">the</span> <span class="title">standard</span></span></span><br><span class="line"><span class="function"><span class="title">format</span> <span class="title">described</span> <span class="title">above</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public void translate (BitInputStream input, PrintStream output)</span><br><span class="line">This method should <span class="built_in">read</span> individual bits <span class="built_in">from</span> <span class="keyword">the</span> input stream <span class="keyword">and</span> <span class="built_in">write</span> <span class="keyword">the</span> corresponding <span class="keyword">characters</span></span><br><span class="line"><span class="built_in">to</span> <span class="keyword">the</span> output. It should <span class="built_in">stop</span> reading when theBitInputStreamis <span class="literal">empty</span>. You may assume that</span><br><span class="line"><span class="keyword">the</span> input stream <span class="keyword">contains</span> <span class="keyword">a</span> legal encoding <span class="keyword">of</span> <span class="keyword">characters</span> <span class="keyword">for</span> this tree’s huffman code. See below</span><br><span class="line"><span class="keyword">for</span> <span class="keyword">the</span> methods that aBitInputStreamhas.</span><br></pre></td></tr></table></figure>
+<h2 id="BitInputStream"><a href="#BitInputStream" class="headerlink" title="BitInputStream"></a>BitInputStream</h2><p>The providedBitInputStreamclass reads data bit by bit. This will be useful for thetranslatemethod<br>inHuffmanCode.BitInputStreamhas the following methods:</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> int nextBit ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">returns</span> <span class="title">the</span> <span class="title">next</span> <span class="title">bit</span> <span class="title">in</span> <span class="title">the</span> <span class="title">input</span> <span class="title">stream</span>. <span class="title">If</span> <span class="title">there</span> <span class="title">is</span> <span class="title">no</span> <span class="title">such</span> <span class="title">bit</span>, <span class="title">then</span> <span class="title">it</span> <span class="title">throws</span> <span class="title">a</span></span></span><br><span class="line"><span class="function"><span class="title">NoSuchElementException</span>.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> boolean hasNextBit ()</span><br><span class="line">This <span class="function"><span class="keyword">method</span> <span class="title">returns</span> <span class="title">true</span> <span class="title">if</span> <span class="title">the</span> <span class="title">input</span> <span class="title">stream</span> <span class="title">has</span> <span class="title">at</span> <span class="title">least</span> <span class="title">one</span> <span class="title">more</span> <span class="title">bit</span> <span class="title">and</span> <span class="title">false</span> <span class="title">otherwise</span>.</span></span><br></pre></td></tr></table></figure>
+<p>The interface forBitInputStreamlooks very much like aScanner, and it should be used similiarly.</p>
+<h2 id="Implementation-Guidelines"><a href="#Implementation-Guidelines" class="headerlink" title="Implementation Guidelines"></a>Implementation Guidelines</h2><p>Your program should exactly reproduce the format and general behavior demonstrated in the Ed tests.<br>Note that this assignment has two mostly separate parts: creating a huffman code and decompressing a<br>message using your huffman code. Of the four methods to implement, two are relevant to each part.</p>
+<h3 id="Creating-A-Huffman-Code"><a href="#Creating-A-Huffman-Code" class="headerlink" title="Creating A Huffman Code"></a>Creating A Huffman Code</h3><p>You will write methods to (1) create a huffman code from an array of frequencies and (2) write out the<br>code you’ve created in standard format.</p>
+<p><strong>Frequency Array Constructor</strong><br>You should use the algorithm described in the “Making a Huffman Code” section to implement this<br>constructor. You will need to usePriorityQueue<e>in thejava.utilpackage.</e></p>
+<p>The only difference between a priority queue and a standard queue is that it uses the natural ordering of<br>the objects to decide which object to dequeue first, with objects considered “less” returned first. You will<br>be putting subtrees into your priority queue, which means you’ll be adding values of typeHuffmanNode.</p>
+<p>This means that yourHuffmanNodeclass will have to implement theComparable<e>interface. It should<br>use the frequency of the subtree to determine its ordering relative to other subtrees, with lower frequencies<br>considered “less” than higher frequencies. If two frequencies are equal, the nodes are too.</e></p>
+<p>Remember that, in order to make our code more flexible we should be declaring variables with their<br>interface types when possible. This means you should define yourPriorityQueuevariables with the<br>Queueinterface.</p>
+<p>The Huffman solution is not unique. You can obtain any one of several different equivalent trees depending<br>upon how certain decisions are made. If you implement it as we have specified, then you should get exactly<br>the same tree for any particular implementation ofPriorityQueue. Make sure that you use the built-in<br>PriorityQueueclass and that when you are combining pairs of values taken from the priority queue, you<br>make the first value removed from the queue the left subtree and you make the second value removed<br>the right subtree.</p>
+<h3 id="Decompressing-A-Message"><a href="#Decompressing-A-Message" class="headerlink" title="Decompressing A Message"></a>Decompressing A Message</h3><p>You will write methods to (1) read in a.codefile created withsave()and (2) translate a compressed<br>file back into a decompressed file.</p>
+<p>Scanner <strong>Constructor</strong><br>This constructor will be given aScannerthat contains data produced bysave(). In other words, the<br>input for this constructor is the output you produced into a.codefile. The goal of this constructor is<br>to re-create the huffman tree from your output. Note that the frequencies are irrelevant for this part,<br>because the tree has already been constructed; so, you should set all the frequencies to some standard<br>value (such as 0 or -1) when creatingHuffmanNodes in this constructor.</p>
+<h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><p>See lecture<br>slides for ex-<br>ample of this<br>Remember that the standard code file format is a series of pairs of lines where the first line has an integer algorithm<br>representing the character’s ASCII value and the second line has the code to use for that character. You<br>might be tempted to callnextInt()to read the integer andnextLine()to read the code, but remember<br>that mixing token-based reading and line-based reading is not simple. Here is an alternative that uses a<br>method calledparseIntin theIntegerclass that allows you to use two successive calls onnextLine():</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> asciiValue = Integer.<span class="built_in">parseInt</span>(input.nextLine());</span><br><span class="line"><span class="keyword">String</span> code = input.nextLine();</span><br></pre></td></tr></table></figure>
+<p>translate<br>This method takes in aBitInputStreamrepresenting a previously compressed message and outputs the<br>original decompressed message. BitInputStreamcan be used in a very similar way to aScanner; see<br>the description of its methods on page 4.</p>
+<p>This method reads sequences of bits that represent encoded characters to figure out what the original<br>characters must have been. The algorithm works as follows:</p>
+<ul>
+<li>Begin at the top of the tree</li>
+<li>For each bit read in from theBitInputStream, if it’s a 0, go left, and if it’s a 1, go right.</li>
+<li>Eventually, we will hit a leaf node. Once we do, write out the integer code for that character to<br>  the output using the followingPrintStreammethod:</li>
+</ul>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">write</span>(<span class="keyword">int</span> b)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Then, go back to the top of the tree, and do the process over again.</li>
+</ul>
+<h4 id="-2"><a href="#-2" class="headerlink" title=""></a></h4><p>Be sure to use<br>writeinstead<br>ofprint!<br>You will have to be careful if you use recursion in your decode method. Java has a limit on the stack<br>depth you can use. For a large message, there are hundreds of thousands of characters to decode. It<br>would not be appropriate to write code that requires a stack that is hundreds of thousands of levels deep.<br>You might be forced to write some or all of this using loops to make sure that you don’t exceed the stack<br>depth.</p>
+<h2 id="Translate-Example"><a href="#Translate-Example" class="headerlink" title="Translate Example"></a>Translate Example</h2><p>Suppose we have the following.codeand.shortfiles:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">‘b’</span><br></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">‘<span class="keyword">c</span>’ ‘ ’</span><br></pre></td></tr></table></figure>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">‘a’</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">simple-spec-example.<span class="keyword">short</span></span><br><span class="line"><span class="number">1101110111010110011000</span></span><br></pre></td></tr></table></figure>
+<p>Read 1 , go right. Read 1 , go right. ‘a’ is a leaf. Output ‘a’. (Input: 110101110101100 )<br>Read 0 , go left. ‘b’ is a leaf. Output ‘b’. (Input: 110101110101100 )<br>Read 1 , go right. Read 0 , go left. Read 1 , go right. ‘ ’ is a leaf. Output ‘ ’. (Input: 110101110101100 )<br>Read 1 , go right. Read 1 , go right. ‘a’ is a leaf. Output ‘a’. (Input: 110101110101100 )<br>Read 0 , go left. ‘b’ is a leaf. Output ‘b’. (Input: 110101110101100 )<br>Read 1 , go right. Read 0 , go left. Read 1 , go right. ‘ ’ is a leaf. Output ‘ ’. (Input: 110101110101100 )<br>Read 1 , go right. Read 0 , go left. Read 0 , go right. ‘c’ is a leaf. Output ‘c’. (Input: 110101110101100 )</p>
+<p>So, the decompressed text is “ab ab c”.</p>
+<h2 id="Creative-Aspect-secretmessage-shortandsecretmessage-code"><a href="#Creative-Aspect-secretmessage-shortandsecretmessage-code" class="headerlink" title="Creative Aspect (secretmessage.shortandsecretmessage.code)"></a>Creative Aspect (secretmessage.shortandsecretmessage.code)</h2><p>Along with your program you should turn in files namedsecretmessage.shortandsecretmessage.code<br>that represent a “secret” compressed message from you to your TA and its code file. The message can<br>be anything you want, as long as it is not offensive. Your TA will decompress your message with your<br>tree and read it while grading.</p>
+<p>You will need to <em>upload</em> yoursecretmessage.shortandsecretmessage.codefiles to Ed by either<br>dragging and dropping them into the window or using the “Upload” button. Copying/pasting the file into<br>the Ed editor will <strong>NOT</strong> correctly copy the compressed text.</p>
+<h2 id="Code-Quality-Guidelines"><a href="#Code-Quality-Guidelines" class="headerlink" title="Code Quality Guidelines"></a>Code Quality Guidelines</h2><p>In addition to producing the behavior described above, your code should be well-written and meet all<br>expectations described in thegrading guidelines, Code Quality Guide, andCommenting Guide. For this<br>assessment, pay particular attention to the following elements:</p>
+<h3 id="x-change-x"><a href="#x-change-x" class="headerlink" title="x = change(x)"></a>x = change(x)</h3><p>An important concept introduced in lecture was calledx = change(x). This idea is related to proper<br>design of recursive methods that manipulate the structure of a binary tree. You should follow this pattern<br>where necessary when modifying your trees.</p>
+<h3 id="Avoid-Redundancy"><a href="#Avoid-Redundancy" class="headerlink" title="Avoid Redundancy"></a>Avoid Redundancy</h3><p>Create “helper” method(s) to capture repeated code. As long as all extra methods you create areprivate<br>(so outside code cannot call them), you can have additional methods in your class beyond those specified<br>here. If you find that multiple methods in your class do similar things, you should create helper method(s)<br>to capture the common code.</p>
+<h3 id="Generic-Structures"><a href="#Generic-Structures" class="headerlink" title="Generic Structures"></a>Generic Structures</h3><p>You should always use generic structures. If you make a mistake in specifying type parameters, the<br>Java compiler may warn you that you have “unchecked or unsafe operations” in your program. If you<br>use jGRASP, you may want to change your settings to see which line the warning refers to. Go to<br>Settings/Compiler Settings/Workspace/Flags/Argsand then uncheck the box next to “Compile”<br>and type in:-Xlint:unchecked</p>
+<h3 id="Data-Fields"><a href="#Data-Fields" class="headerlink" title="Data Fields"></a>Data Fields</h3><p>Properly encapsulate your objects by making data fields in yourHuffmanCodeclassprivate. (Fields in<br>yourHuffmanNodeclass should bepublicfollowing the pattern from class.) Avoid unnecessary fields;<br>use fields to store important data of your objects but not to store temporary values only used in one place.<br>Fields should always be initialized inside a constructor or method, never at declaration.</p>
+<h3 id="Commenting"><a href="#Commenting" class="headerlink" title="Commenting"></a>Commenting</h3><p>Each method should have a header comment including all necessary information as described in the<br>Commenting Guide. Comments should be written in your own words (i.e. not copied and pasted from<br>this spec) and should not include implemenation details.</p>
+<h2 id="Running-and-Submitting"><a href="#Running-and-Submitting" class="headerlink" title="Running and Submitting"></a>Running and Submitting</h2><p>If you believe your behavior is correct, you can submit your work by clicking the “Mark” button in the Ed<br>assessment. You will see the results of some automated tests along with tentative grades. <strong>These grades<br>are not final until you have received feedback from your TA.</strong></p>
+<p>You may submit your work as often as you like until the deadline; we will always grade your most recent<br>submission. Note the due date and time carefully— <strong>work submitted after the due time will not be<br>accepted</strong>.</p>
+<h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>If you find you are struggling with this assessment, make use of all the course resources that are available<br>to you, such as:</p>
+<ul>
+<li>Reviewing relevant examples fromclass</li>
+<li>Reading the textbook</li>
+<li>Visitingoffice hours</li>
+<li>Posting a question on themessage board</li>
+</ul>
+<h2 id="Collaboration-Policy"><a href="#Collaboration-Policy" class="headerlink" title="Collaboration Policy"></a>Collaboration Policy</h2><p>Remember that, while you are encouraged to use all resources at your disposal, including your classmates,<br><strong>all work you submit must be entirely your own</strong>. In particular, you should <strong>NEVER</strong> look at a solution<br>to this assessment from another source (a classmate, a former student, an online repository, etc.). Please<br>review thefull policyin the syllabus for more details and ask the course staff if you are unclear on whether<br>or not a resource is OK to use.</p>
+<h2 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h2><p>In addition to your code, you must submit answers to short reflection questions. These questions will<br>help you think about what you learned, what you struggled with, and how you can improve next time.<br>The questions are given in the fileHuffmanReflection.txtin the Ed assessment; type your responses<br>directly into that file.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE143-Computer-Programming-II-A6-20Questions.html" rel="next" title="Java代写：CSE143_Computer_Programming_II_A6_20Questions">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143_Computer_Programming_II_A6_20Questions
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">351</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-143-Computer-Programming-II"><span class="nav-number">1.</span> <span class="nav-text">CSE 143: Computer Programming II</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Background-ASCII-and-Binary-Representation"><span class="nav-number"></span> <span class="nav-text">Background: ASCII and Binary Representation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Background-Huffman-Encoding"><span class="nav-number"></span> <span class="nav-text">Background: Huffman Encoding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summer-2021"><span class="nav-number"></span> <span class="nav-text">Summer 2021</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Take-home-Assessment-7-Huffman-Coding-due-August-19-2021-11-59pm"><span class="nav-number"></span> <span class="nav-text">Take-home Assessment 7 : Huffman Coding due August 19, 2021 11:59pm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Program-Behavior-Building-a-Huffman-Code"><span class="nav-number"></span> <span class="nav-text">Program Behavior: Building a Huffman Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-Count-the-Frequencies-of-the-Characters"><span class="nav-number">1.</span> <span class="nav-text">Step 1: Count the Frequencies of the Characters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-Create-a-Priority-Queue-Ordered-By-Frequency"><span class="nav-number">2.</span> <span class="nav-text">Step 2: Create a Priority Queue Ordered By Frequency</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3-Combine-the-Nodes-Until-Only-One-is-Left"><span class="nav-number">3.</span> <span class="nav-text">Step 3: Combine the Nodes Until Only One is Left</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-4-Read-Off-The-Huffman-Codes"><span class="nav-number">4.</span> <span class="nav-text">Step 4: Read Off The Huffman Codes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program-Behavior-Huffman-Compression-and-Decompression"><span class="nav-number"></span> <span class="nav-text">Program Behavior: Huffman Compression and Decompression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HuffmanNode"><span class="nav-number"></span> <span class="nav-text">HuffmanNode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HuffmanCode"><span class="nav-number"></span> <span class="nav-text">HuffmanCode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#YourHuffmanCodeclass-should-have-the-following-constructors"><span class="nav-number">1.</span> <span class="nav-text">YourHuffmanCodeclass should have the following constructors:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YourHuffmanCodeclass-should-also-implement-the-following-public-methods"><span class="nav-number">2.</span> <span class="nav-text">YourHuffmanCodeclass should also implement the following public methods:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BitInputStream"><span class="nav-number"></span> <span class="nav-text">BitInputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementation-Guidelines"><span class="nav-number"></span> <span class="nav-text">Implementation Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-A-Huffman-Code"><span class="nav-number">1.</span> <span class="nav-text">Creating A Huffman Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Decompressing-A-Message"><span class="nav-number">2.</span> <span class="nav-text">Decompressing A Message</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#-1"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-2"><span class="nav-number">2.2.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Translate-Example"><span class="nav-number"></span> <span class="nav-text">Translate Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creative-Aspect-secretmessage-shortandsecretmessage-code"><span class="nav-number"></span> <span class="nav-text">Creative Aspect (secretmessage.shortandsecretmessage.code)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Quality-Guidelines"><span class="nav-number"></span> <span class="nav-text">Code Quality Guidelines</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#x-change-x"><span class="nav-number">1.</span> <span class="nav-text">x = change(x)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Avoid-Redundancy"><span class="nav-number">2.</span> <span class="nav-text">Avoid Redundancy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generic-Structures"><span class="nav-number">3.</span> <span class="nav-text">Generic Structures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Fields"><span class="nav-number">4.</span> <span class="nav-text">Data Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Commenting"><span class="nav-number">5.</span> <span class="nav-text">Commenting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-and-Submitting"><span class="nav-number"></span> <span class="nav-text">Running and Submitting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Help"><span class="nav-number"></span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collaboration-Policy"><span class="nav-number"></span> <span class="nav-text">Collaboration Policy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflection"><span class="nav-number"></span> <span class="nav-text">Reflection</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
