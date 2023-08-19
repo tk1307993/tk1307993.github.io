@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE174_Assignment4">
+<meta property="og:url" content="cplusplusdaixie.com/CSE174-Assignment4.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-19T19:30:13.755Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE174_Assignment4">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE174-Assignment4.html">
+
+
+
+
+
+  <title>Java代写：CSE174_Assignment4 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE174-Assignment4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE174_Assignment4</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-20T03:29:27+08:00">
+                2023-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-174-Assignment-4"><a href="#CSE-174-Assignment-4" class="headerlink" title="CSE 174 - Assignment 4"></a>CSE 174 - Assignment 4</h3><h1 id="Deadline-Monday-Dec-6th-at-11-59-PM"><a href="#Deadline-Monday-Dec-6th-at-11-59-PM" class="headerlink" title="Deadline: Monday, Dec 6th at 11:59 PM"></a>Deadline: Monday, Dec 6th at 11:59 PM</h1><p>You are to write a program that reads data from a file, and creates and works with an ArrayList<br>of Customer objects.<br>● Create a new class/file called <strong>Assignment4.</strong><br>● Download theAPI Documentation for Customer Class.<br>● Download theCustomer.java(DO NOT CHANGE ANYTHINGINSIDE THIS FILE),list.txt, and<br>customers.txtfiles and put them in the same folderas your Assignment4.java file.</p>
+<p>For this assignment you are allowed to use everything you have learned so far to generate the expected output.<br>There are only 2 limitations that you must follow:</p>
+<ol>
+<li>The length of methods (including the main method) should be <strong>less than 35 lines.</strong></li>
+<li>Your class must have 2 public sort methods called <strong>sort1</strong> and <strong>sort2</strong> which are explained later.<br>Other than that, you can use anything that you have learned in this course.<br>The quality of your code will be evaluated by the assessor and points will be taken off if you don’t follow<br>the proper programming practices. So, avoid using things that we have never used in the course.</li>
+</ol>
+<h1 id="Part1-Run-the-program"><a href="#Part1-Run-the-program" class="headerlink" title="Part1: Run the program"></a>Part1: Run the program</h1><p>When your program is run, the following menu needs to be displayed:</p>
+<p>At this point nothing has been read from the file, so if the user chooses menu options from 2-5,<br>nothing should happen and the user should be prompted with a proper message as the following:</p>
+<h1 id="Part2-Reading-from-a-file-amp-creating-an-ArrayList-of-Customer-objects"><a href="#Part2-Reading-from-a-file-amp-creating-an-ArrayList-of-Customer-objects" class="headerlink" title="Part2: Reading from a file &amp; creating an ArrayList of Customer objects"></a>Part2: Reading from a file &amp; creating an ArrayList of Customer objects</h1><p>When the user enters 1, it asks the user to enter a filename and starts reading data from the given<br>file and creates an ArrayList of Customers. The following is the result:</p>
+<p>When option 1 is done:<br>● The user can enter 2 to display the list.<br>● Choosing number 2 only displays 10 elements at a time. If the user enters character ’s’, it will<br>stop showing the rest of the list. If the user enters anything else, it will show the next 10 elements<br>of the list and so on.<br>● At this level if the user enters number 5, nothing should be printed because the list hasn’t been<br>sorted yet.</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The results are <span class="keyword">as</span> <span class="string">follows:</span></span><br></pre></td></tr></table></figure>
+<h1 id="Part3-Sorting"><a href="#Part3-Sorting" class="headerlink" title="Part3: Sorting"></a>Part3: Sorting</h1><p>Your class must have 2 sort methods called <strong>sort1</strong> and <strong>sort2</strong>. These two methods both <strong>accept an<br>ArrayList of Customer objects</strong> and <strong>return nothing</strong> .From the sorting algorithms that you have learned so<br>far (bubble sort, selection sort, and insertion sort) you can pick any one you like for sort1 and sort<br>methods. For instance, you can use bubble sort for sort1 and insertion sort for sort2, or you can use the<br>same sort algorithm for both sort1 and sort2 methods.</p>
+<p>The <strong>sort1</strong> method should sort the list based on <strong>nicknames</strong> ,and the <strong>sort2</strong> method should sort the list based<br>on the <strong>id numbers</strong>.<br>● When the user enters 3, the list should be sorted by nicknames.<br>● When the user enters 4, the list should be sorted by id numbers.<br>● The <strong>last</strong> sorted list can be displayed by entering5.<br>● If the user enters 2, the <strong>original, unsorted</strong> liststill needs to be displayed as before.<br>The results are as follows:</p>
+<h1 id="Part4-Loading-another-file"><a href="#Part4-Loading-another-file" class="headerlink" title="Part4: Loading another file"></a>Part4: Loading another file</h1><p>If the user enters 1 again to load another file, everything will be repeated from part2. Please go back<br>and read part2 of this assignment again.</p>
+<h1 id="Part5-Test-your-code-with-more-sample-runs"><a href="#Part5-Test-your-code-with-more-sample-runs" class="headerlink" title="Part5: Test your code with more sample runs"></a>Part5: Test your code with more sample runs</h1><p>Just follow the following sample runs to test your code and make sure that your code is generating the<br>same results..</p>
+<h1 id="Part6-Submit-on-Canvas"><a href="#Part6-Submit-on-Canvas" class="headerlink" title="Part6: Submit on Canvas"></a>Part6: Submit on Canvas</h1><p>If your program worked as shown above, now it’s time to submit your work on Canvas. The Code<br>Plugin will test the result of your code, along with sort1 and sort2 methods.</p>
+<p><strong>Rubric</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Criteria</span> <span class="string">Full</span> <span class="string">Credit</span> <span class="string">Partial</span> <span class="string">Credit</span> <span class="literal">No</span> <span class="string">Credit</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Successful</span><br><span class="line">submission via Code</span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A fully successful</span><br><span class="line">submission <span class="keyword">to</span> CODE</span><br><span class="line">that passes <span class="literal">all</span> tests will</span><br><span class="line">earn <span class="literal">full</span> credit.</span><br><span class="line"><span class="number">60</span> Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Complete <span class="number">each</span></span><br><span class="line"><span class="keyword">test</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">12 </span>Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">If your submission <span class="keyword">is</span></span><br><span class="line"><span class="keyword">not</span> accepted <span class="keyword">by</span></span><br><span class="line">code, you will</span><br><span class="line">receive <span class="literal">no</span> credit.</span><br><span class="line"><span class="number">0</span> Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Correct Style Zero <span class="built_in">style</span> <span class="built_in">errors</span>,</span><br><span class="line">will earn full credit.</span><br><span class="line"><span class="number">10</span> Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Any</span> <span class="string">style</span> <span class="string">errors</span> <span class="string">present,</span></span><br><span class="line"><span class="string">you</span> <span class="string">will</span> <span class="string">receive</span> <span class="literal">no</span> <span class="string">credit.</span></span><br><span class="line"><span class="number">0</span> <span class="string">Points</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Proper programming</span></span><br><span class="line"><span class="attribute">practices</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">If</span> your code follows <span class="literal">all</span></span><br><span class="line">acceptable practices,</span><br><span class="line">you will earn <span class="literal">full</span> credit</span><br><span class="line"><span class="number">30</span> Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Unacceptable</span><br><span class="line"><span class="keyword">code</span> gets partial</span><br><span class="line">credit.</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Significant</span> <span class="string">issues</span> <span class="string">related</span></span><br><span class="line"><span class="string">to</span> <span class="string">programming</span> <span class="string">practices</span></span><br><span class="line"><span class="string">will</span> <span class="string">earn</span> <span class="literal">no</span> <span class="string">credit.</span></span><br><span class="line"><span class="number">0</span> <span class="string">Points</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE143-Computer-Programming-II-A7-HuffmanCoding.html" rel="next" title="Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE143_Computer_Programming_II_A7_HuffmanCoding
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">352</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-174-Assignment-4"><span class="nav-number">1.</span> <span class="nav-text">CSE 174 - Assignment 4</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Deadline-Monday-Dec-6th-at-11-59-PM"><span class="nav-number"></span> <span class="nav-text">Deadline: Monday, Dec 6th at 11:59 PM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part1-Run-the-program"><span class="nav-number"></span> <span class="nav-text">Part1: Run the program</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part2-Reading-from-a-file-amp-creating-an-ArrayList-of-Customer-objects"><span class="nav-number"></span> <span class="nav-text">Part2: Reading from a file &amp; creating an ArrayList of Customer objects</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part3-Sorting"><span class="nav-number"></span> <span class="nav-text">Part3: Sorting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part4-Loading-another-file"><span class="nav-number"></span> <span class="nav-text">Part4: Loading another file</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part5-Test-your-code-with-more-sample-runs"><span class="nav-number"></span> <span class="nav-text">Part5: Test your code with more sample runs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part6-Submit-on-Canvas"><span class="nav-number"></span> <span class="nav-text">Part6: Submit on Canvas</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
