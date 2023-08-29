@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：CSE174_Lab13_Learning_A_New_Class">
+<meta property="og:url" content="cplusplusdaixie.com/CSE174-Lab13-Learning-A-New-Class.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-08-29T01:29:11.625Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：CSE174_Lab13_Learning_A_New_Class">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/CSE174-Lab13-Learning-A-New-Class.html">
+
+
+
+
+
+  <title>Java代写：CSE174_Lab13_Learning_A_New_Class | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/CSE174-Lab13-Learning-A-New-Class.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：CSE174_Lab13_Learning_A_New_Class</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-29T09:28:31+08:00">
+                2023-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CSE-174-Lab-13"><a href="#CSE-174-Lab-13" class="headerlink" title="CSE 174 - Lab 13"></a>CSE 174 - Lab 13</h3><h1 id="Part-1-8-points-Learning-a-new-class"><a href="#Part-1-8-points-Learning-a-new-class" class="headerlink" title="Part 1 (8 points): Learning a new class."></a>Part 1 (8 points): Learning a new class.</h1><p><strong>1. Study the Customer class:</strong><br>    ● For this lab you are to use the Customer class and in order to finish this lab<br>       successfully you need to study this class very carefully, and you will be tested for<br>       that.<br>    ● Download theAPI Documentation for Customer Class.<br>    ● Start studying the class description first.<br>    ● Scroll down and study the constructors.<br>    ● After learning about constructors, scroll down again and study the methods. You<br>       can click on each method name to see more details.</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">★ You should not go any further <span class="keyword">if</span> there <span class="keyword">is</span> somethingin <span class="keyword">this</span> <span class="class"><span class="keyword">class</span> <span class="title">that</span> <span class="title">you</span> <span class="title">don</span>’<span class="title">t</span></span></span><br><span class="line">understand.Youcangobackandstudythematerial,talktoyourfriends,oryoucanask</span><br><span class="line">your instructor <span class="keyword">in</span> case you need help with understanding <span class="keyword">this</span> <span class="class"><span class="keyword">class</span>.</span></span><br></pre></td></tr></table></figure>
+<p><strong>2. Using the Customer class:</strong><br>    ● In jGRASP create a java file called <strong>Lab13.</strong><br>    ● DownloadtheCustomer.javafile(DONOTCHANGEANYTHINGINSIDETHIS<br>       FILE) and put it in the same folder as your Lab13.javafile.<br>    ● Insidethemainmethod,createafewCustomerobjects,calldifferentmethods<br>       and printthe results. Forinstance: createtwoCustomerobjects,calldifferent<br>       methodsoneachobjectandprinttheresults.Comparetwoobjects,seeifthe<br>       resultisacceptableforyou.Printtheobjectstoseehowtheoutputlookslike.<br>       Now, try to print the object in a different format.</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">★ Again, <span class="keyword">if</span> you have <span class="keyword">any</span> questions please ask your instructor. You should <span class="keyword">not</span> go <span class="built_in">to</span> <span class="keyword">the</span></span><br><span class="line">next part <span class="keyword">of</span> <span class="keyword">the</span> lab <span class="keyword">without</span> understanding all details <span class="keyword">of</span> this class.</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>Take the quiz 13.1:</strong><br> ● Nowit’stimetoevaluateyourunderstandingofthisclass.Pleasegoaheadand<pre><code>take the quiz 13.
+</code></pre></li>
+</ol>
+<h1 id="Part-2-12-points-Array-of-Objects-amp-Search-algorithms"><a href="#Part-2-12-points-Array-of-Objects-amp-Search-algorithms" class="headerlink" title="Part 2 (12 points): Array of Objects &amp; Search algorithms"></a>Part 2 (12 points): Array of Objects &amp; Search algorithms</h1><h1 id="InthisPartofthelabyouaretocreateanarrayofCustomerobjects-andinitializeeach"><a href="#InthisPartofthelabyouaretocreateanarrayofCustomerobjects-andinitializeeach" class="headerlink" title="InthisPartofthelabyouaretocreateanarrayofCustomerobjects,andinitializeeach"></a>InthisPartofthelabyouaretocreateanarrayofCustomerobjects,andinitializeeach</h1><h1 id="objectwiththedatafromafile-Thenyouaretowrite-2-methods-oneforlinearsearchand"><a href="#objectwiththedatafromafile-Thenyouaretowrite-2-methods-oneforlinearsearchand" class="headerlink" title="objectwiththedatafromafile.Thenyouaretowrite 2 methods,oneforlinearsearchand"></a>objectwiththedatafromafile.Thenyouaretowrite 2 methods,oneforlinearsearchand</h1><h1 id="oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe"><a href="#oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe" class="headerlink" title="oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe"></a>oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe</h1><h1 id="keys-faster"><a href="#keys-faster" class="headerlink" title="keys faster."></a>keys faster.</h1><p><strong>1. Reading data from a file:</strong><br>    ● Download the filecustomer_list.txtand put it inthe same folder as your<br>       Lab13.java file.<br>    ● Try <strong>not</strong> toopenthefile,sincethistextfilecontainsmorethanamillionlinesand<br>       could causeyourjGRASPtocrash.Asyoucanseeinthefollowingimage,in<br>       each line there is a nickname and idnumber separated byspace which is<br>       necessary for creating one Customer object:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">● Nowlet’swritesomecode.Insidethemainmethod(ifyoulikeyoucanwritea</span><br><span class="line">separatemethodforthat,<span class="keyword">it</span>’suptoyou),writesomecodetoopenthefileand</span><br><span class="line">counthowmanylinesthistextfilehasandprinttheresultsimilartothefollowing</span><br><span class="line"><span class="built_in">line</span>:</span><br></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(you should not hardcode that number, your code shouldcalculate the number)</span></span><br></pre></td></tr></table></figure>
+<p><strong>2. Creating an array of Customer objects:</strong><br>    ● Nowthatyouknowhowmanylinesthetextfilehas,thatmeansyouknowthe<br>       lengthofyourarray.So,goaheadanddefineanarrayofCustomersusingthat<br>       number as the length of your array.<br>    ● Youcannotdefineanarraywithoutknowingthelength.Inaddition,afterdefining<br>       one,youcannotchangethelengthofthearraydirectly.Therefore,havingafixed<br>       size list/array is one of the weaknesses of using arrays.<br>    ● Afterdefiningthearray,javawillinitializeeachelementofthearraywitha <strong>null</strong><br>       value, which means each element inside the array (eachelement is like a<br>       Customervariable)is pointingto nothingand it isreadytopointtoanactual<br>       Customer object.<br>    ● Theonly differencebetweenarraysofprimitivetypesandobjectsisthatafter<br>       defininganarrayofobjectsyoushouldassignanobjecttoeachelement.So,it’s<br>       timetoreadfromthefilelinebylineagain,butthistimeforcreatingaCustomer<br>       object from each line and assigning it to each element of the array.<br>    ● Reopen your text file again. The file needs to be reopened because inthe<br>       previouspartwealreadywentthroughthefileoncetocounthowmanylinesthe<br>       file has.<br>       <strong>Hint: for reopening the file you can create a new Scanner object and</strong><br>       <strong>re-assign it into your previous Scanner variable.</strong><br>    ● Usingaloop,startreadingfromthefileaslongasthereissomethinginsidethe<br>       file. <strong>UsehasNext()</strong> methodoverhasNextLine().Keepthatinmindduringeach<br>       iteration you need to read <strong>one String</strong> and <strong>one long</strong> value.<br>    ● During eachiterationafter readingtwoelementsfroma line(oneString,one<br>       long),usethemtocreateaCustomerobject(youpracticedthatinthePart1of<br>       Lab13),andusethatCustomerobjecttoinitializethecurrentelementofthearray<br>       with.So,thefollowingisthesummaryofwhatyouneedtodoafterdefiningan<br>       array of Customers:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">loop (as long as there is something inside the file) &#123;</span><br><span class="line">Read one string <span class="keyword">and</span> one long value</span><br><span class="line">Create a new<span class="built_in"> Customer </span>object</span><br><span class="line">arr[i] = The<span class="built_in"> Customer </span>object created <span class="keyword">in</span> the previous line</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">● Nowlet’s testyour arraytosee ifyouwereabletoreadfromthefile,create</span><br><span class="line"><span class="symbol">Customerobjects</span>,<span class="keyword">andsavetheminsidethearraycorrectly.Printtheelementsat</span></span><br><span class="line"><span class="keyword">the </span>indexof <span class="number">0</span>,<span class="number">10</span>, <span class="number">1000</span>,<span class="number">1000000</span>,<span class="keyword">andthe </span>lastelement ofthe array.<span class="keyword">Before</span></span><br><span class="line"><span class="keyword">printingeachobject,printtheindexaswell.So,yourresultsofarshouldlooklike</span></span><br><span class="line"><span class="keyword">the </span>following:</span><br></pre></td></tr></table></figure>
+<p><strong>3. Writing a linear search method:</strong><br>    ● So far,youwereable toreadfrom afileand createalist/arrayofCustomer<br>       objects.<br>    ● NowthequestionishowwillyoufindaspecificCustomerobjectbetweenmillions<br>       of elements inside the array?<br>    ● Asasolution,let’swriteamethodcalled <strong>linearSearch</strong> thatacceptsanarrayof<br>       Customerobjects,andoneCustomerobjectasthekeythatneedstobefound<br>       insidethe array.Andif yourecall, thelinearsearch methodshouldreturnan<br>       index.<br>    ● Theonlydifferencebetweenthismethodandtheoneinthevideosisthathere<br>       youaredealingwithCustomerobjects.So,everytimeyouneedtocheckeach<br>       elementofthearraywiththegivenkeytoseewhethertheyareequalornot(you<br>       practiced comparing two Customer objects in the Part1 of this lab).<br>    ● When you are done with the method, let’s test it to see if it works. Inside the main<br>       method create a Customer object called key using the nickname: “gwstikg” and<br>       id: 100005949<br>    ● Call the linearSearch method and give it your array and the key you just created,<br>       and print the result. Add some messages to have your output as following:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">● Now, inside the linearSearch method <span class="builtin-name">add</span> a counterto count every time it</span><br><span class="line">compares the<span class="built_in"> Customer </span>objects. Then, before returning the index, <span class="builtin-name">print</span> the</span><br><span class="line">number of times that comparison has happened. The goal is <span class="keyword">to</span> see how many</span><br><span class="line">times elements are compared inside this method. So, you need <span class="keyword">to</span> count <span class="keyword">and</span> print</span><br><span class="line">that inside this method. So, change your code <span class="keyword">to</span> generate an output as below:</span><br></pre></td></tr></table></figure>
+<p><strong>4. Writing a binary search method:</strong><br>    <strong>●</strong> Repeat the whole process from the last section this time to write the<br>       <strong>binarySearch</strong> method. Write a binarySearch method thatgets an array of<br>       Customers and a key, and returns an index. Count how many comparisons<br>       happen inside this method and print it inside this method right before returning<br>       any values.<br>    <strong>●</strong> The question that you need to ask here is whether the array is sorted since the<br>       binary search algorithm only works with sorted lists. The good news here is that<br>       the array is sorted based on id numbers, therefore inside the binarySearch<br>       methodwhere you need to compare the key with thevalue of the middle element<br>       to see if it’s greater or smaller, you only need to compare the idNumbers.<br>    <strong>●</strong> Comment out some of the previous prints and make sure your output matches<br>       the following output:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">● Repeat <span class="keyword">the</span> <span class="built_in">process</span> <span class="keyword">for</span> finding <span class="keyword">the</span> following Customers (<span class="keyword">the</span> numbers are <span class="keyword">long</span></span><br><span class="line">type):</span><br><span class="line">○ [“mqzhfygjuk”, <span class="number">6001073675</span>]</span><br><span class="line">○ [“gnv”, <span class="number">7412760286</span>]</span><br><span class="line">○ [“CSE174”, <span class="number">1111111111</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">● After printing <span class="keyword">the</span> results your output should look like <span class="keyword">the</span> following:</span><br></pre></td></tr></table></figure>
+<p><strong>5. Analyzing the results:</strong></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">● Looking <span class="keyword">at</span> <span class="keyword">the</span> <span class="keyword">first</span> test, you can see <span class="keyword">the</span> linear search only did <span class="literal">one</span> comparison</span><br><span class="line">compared <span class="built_in">to</span> binary search that did <span class="number">19</span> comparisons,meaning <span class="keyword">if</span> you are looking</span><br><span class="line"><span class="keyword">for</span> something <span class="keyword">at</span> <span class="keyword">the</span> very beginning <span class="keyword">of</span> <span class="keyword">the</span> array, <span class="keyword">using</span> <span class="keyword">the</span> linear search could be</span><br><span class="line"><span class="keyword">a</span> better option over <span class="keyword">the</span> binary search.</span><br><span class="line">● For <span class="keyword">the</span> <span class="keyword">second</span> test, you can see <span class="keyword">the</span> fast <span class="built_in">result</span> <span class="keyword">of</span> binary search <span class="keyword">by</span> doing only <span class="number">17</span></span><br><span class="line">comparisons compared <span class="built_in">to</span> <span class="keyword">the</span> linear search which did <span class="number">598734</span> comparisons.</span><br><span class="line">● In <span class="keyword">the</span> <span class="keyword">third</span> test, you can see <span class="keyword">each</span> method returns <span class="keyword">a</span> different index, <span class="keyword">and</span> that is</span><br><span class="line">because there are duplicate <span class="built_in">keys</span> inside <span class="keyword">the</span> <span class="built_in">file</span>. Since <span class="keyword">each</span> algorithm searches</span><br><span class="line">through <span class="keyword">the</span> array differently, <span class="keyword">each</span> algorithm finds <span class="keyword">the</span> key <span class="keyword">at</span> <span class="keyword">a</span> different index.</span><br><span class="line">● The <span class="keyword">last</span> test shows <span class="keyword">the</span> worst <span class="keyword">case</span> scenario where <span class="keyword">the</span> key is <span class="keyword">not</span> <span class="keyword">in</span> <span class="keyword">the</span> list. The</span><br><span class="line">linear search has <span class="built_in">to</span> check all n <span class="keyword">or</span> <span class="number">1004718</span> elementsto realize that <span class="keyword">the</span> key is <span class="keyword">not</span></span><br><span class="line"><span class="keyword">in</span> <span class="keyword">the</span> list, <span class="keyword">while</span> <span class="keyword">the</span> binary search did only <span class="built_in">log2</span>(n) <span class="keyword">or</span> <span class="number">20</span>comparisons <span class="built_in">to</span> <span class="built_in">get</span> <span class="keyword">the</span></span><br><span class="line">same <span class="built_in">result</span>.</span><br></pre></td></tr></table></figure>
+<p><strong>6. Submit your Code on canvas:</strong></p>
+<p>● If your code generated the last results as shown above, you are ready to submit<br>your work on canvas.<br>● There are two tests: one that tests your linear search, and one for testing your<br>binary search.<br><strong>Rubric</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Criteria</span> <span class="string">Full</span> <span class="string">Credit</span> <span class="string">Partial</span> <span class="string">Credit</span> <span class="literal">No</span> <span class="string">Credit</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Successful</span><br><span class="line">submission via Code</span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A fully successful</span><br><span class="line">submission <span class="keyword">to</span> CODE</span><br><span class="line">that passes <span class="literal">all</span> of the</span><br><span class="line">required tests will</span><br><span class="line">earn <span class="literal">full</span> credit.</span><br><span class="line"><span class="number">8</span> Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Complete <span class="number">each</span></span><br><span class="line"><span class="keyword">test</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">4 </span>Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> your submission <span class="keyword">is</span></span><br><span class="line"><span class="keyword">not</span> accepted <span class="keyword">by</span></span><br><span class="line">code, you will</span><br><span class="line">receive <span class="literal">no</span> credit.</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span>Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Writing</span> comments for</span><br><span class="line"><span class="symbol">the</span> class <span class="keyword">and </span>linear</span><br><span class="line"><span class="keyword">and </span><span class="keyword">binary </span>search</span><br><span class="line"><span class="symbol">methods</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Writing comments <span class="keyword">for</span> the</span><br><span class="line">class <span class="keyword">and</span> the linear <span class="keyword">and</span></span><br><span class="line">binary search methods.</span><br><span class="line">explaining the purpose,</span><br><span class="line">parameters, <span class="keyword">and</span> the return</span><br><span class="line">type will earn full credit.</span><br><span class="line">1.5 Point</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Complete</span><br><span class="line">comments <span class="keyword">for</span></span><br><span class="line"><span class="keyword">each</span> part.</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.5</span> <span class="keyword">Point</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Not writing</span><br><span class="line">comments or</span><br><span class="line">incomplete</span><br><span class="line">comments <span class="keyword">receive</span></span><br><span class="line">no credit.</span><br></pre></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span>Points</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Correct Style If your submission</span><br><span class="line">has <span class="number">0</span> style errors you</span><br><span class="line">will earn full credit.</span><br><span class="line"><span class="number">2.5</span> Point</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">If</span> <span class="string">there</span> <span class="string">are</span> <span class="string">any</span> <span class="string">style</span></span><br><span class="line"><span class="string">errors</span> <span class="string">present,</span> <span class="string">you</span></span><br><span class="line"><span class="string">will</span> <span class="string">receive</span> <span class="literal">no</span> <span class="string">credit.</span></span><br><span class="line"><span class="number">0</span> <span class="string">Points</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSE174-Lab12-2DArrays.html" rel="next" title="Java代写：CSE174_Lab12_2DArrays">
+                <i class="fa fa-chevron-left"></i> Java代写：CSE174_Lab12_2DArrays
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">354</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSE-174-Lab-13"><span class="nav-number">1.</span> <span class="nav-text">CSE 174 - Lab 13</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-1-8-points-Learning-a-new-class"><span class="nav-number"></span> <span class="nav-text">Part 1 (8 points): Learning a new class.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-2-12-points-Array-of-Objects-amp-Search-algorithms"><span class="nav-number"></span> <span class="nav-text">Part 2 (12 points): Array of Objects &amp; Search algorithms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#InthisPartofthelabyouaretocreateanarrayofCustomerobjects-andinitializeeach"><span class="nav-number"></span> <span class="nav-text">InthisPartofthelabyouaretocreateanarrayofCustomerobjects,andinitializeeach</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#objectwiththedatafromafile-Thenyouaretowrite-2-methods-oneforlinearsearchand"><span class="nav-number"></span> <span class="nav-text">objectwiththedatafromafile.Thenyouaretowrite 2 methods,oneforlinearsearchand</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe"><span class="nav-number"></span> <span class="nav-text">oneforbinarysearchandlookfordifferentkeystoseewhichsearchmethodcanfindthe</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#keys-faster"><span class="nav-number"></span> <span class="nav-text">keys faster.</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
