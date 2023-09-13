@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：KIT101_A9_DivideAndConquer">
+<meta property="og:url" content="cplusplusdaixie.com/KIT101-A9-DivideAndConquer.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-09-13T01:10:36.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：KIT101_A9_DivideAndConquer">
+<meta name="twitter:description" content="使用Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/KIT101-A9-DivideAndConquer.html">
+
+
+
+
+
+  <title>Java代写：KIT101_A9_DivideAndConquer | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/KIT101-A9-DivideAndConquer.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：KIT101_A9_DivideAndConquer</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-09-13T09:09:40+08:00">
+                2023-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="9-1PP-Divide-and-Conquer"><a href="#9-1PP-Divide-and-Conquer" class="headerlink" title="9.1PP Divide and Conquer"></a>9.1PP Divide and Conquer</h3><h2 id="KIT101-Programming-Fundamentals"><a href="#KIT101-Programming-Fundamentals" class="headerlink" title="KIT101 Programming Fundamentals"></a>KIT101 Programming Fundamentals</h2><h2 id="PP-Task-9-1-Divide-and-Conquer"><a href="#PP-Task-9-1-Divide-and-Conquer" class="headerlink" title="PP Task 9.1 Divide and Conquer"></a>PP Task 9.1 Divide and Conquer</h2><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Purpose: Apply your functional decomposition skills <span class="built_in">to</span> <span class="keyword">a</span> <span class="built_in">new</span> task <span class="keyword">with</span> familiar elements.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Task: Implement <span class="keyword">a</span> <span class="keyword">sentence</span> manipulation program consisting <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">number</span> <span class="keyword">of</span> relatively small methods.</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Learning Outcomes:</span> <span class="number">2</span> <span class="string"></span> <span class="number">3</span> <span class="string"></span> <span class="number">4</span> <span class="string"></span> <span class="number">5</span> <span class="string"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Time:</span> Aim to complete this task before the start of Week 10.</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Resources: Introductory Programming Notes:</span></span><br><span class="line"><span class="number">07</span> <span class="string">Methods</span> <span class="string">in</span> <span class="string">Self-contained</span> <span class="string">Programs</span></span><br><span class="line"><span class="number">08</span> <span class="string">Making</span> <span class="string">Decisions</span></span><br><span class="line"><span class="number">09</span> <span class="string">Repeating</span> <span class="string">Actions</span> <span class="string">with</span> <span class="string">Loops</span></span><br><span class="line"><span class="number">10</span> <span class="string">Managing</span> <span class="string">Collections</span> <span class="string">with</span> <span class="string">Arrays</span></span><br><span class="line"><span class="number">13</span> <span class="string">Functional</span> <span class="string">Decomposition</span></span><br><span class="line"><span class="attr">Online Mini-lectures:</span></span><br><span class="line"><span class="attr">Making your own methods:</span> <span class="string">...in</span> <span class="string">self-contained</span> <span class="string">programs</span></span><br><span class="line"><span class="attr">Arrays:</span> <span class="string">Writing</span> <span class="string">methods</span> <span class="string">to</span> <span class="string">work</span> <span class="string">with</span> <span class="string">arrays</span></span><br></pre></td></tr></table></figure>
+<h2 id="-Submission-Details"><a href="#-Submission-Details" class="headerlink" title=" Submission Details"></a> Submission Details</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Upload the following to the MyLO submission folder for this task:</span><br><span class="line"> The source code for your <span class="function"><span class="keyword">program</span></span></span><br><span class="line"> A screenshot of the <span class="function"><span class="keyword">program</span></span> during execution</span><br><span class="line"> An image (photo or <span class="built_in">scan</span>) of the structure chart describing your <span class="function"><span class="keyword">program</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="-Assessment-Criteria"><a href="#-Assessment-Criteria" class="headerlink" title=" Assessment Criteria"></a> Assessment Criteria</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A 🏁 Completed submission will:</span><br><span class="line">Implement all required functionality, including the <span class="keyword">use</span> <span class="keyword">of</span> an <span class="built_in">array</span> <span class="keyword">of</span> Strings <span class="keyword">for</span> the <span class="keyword">data</span></span><br><span class="line"><span class="keyword">Import</span> <span class="keyword">only</span> those additional classes that it actually uses</span><br><span class="line">Have <span class="keyword">little</span> code <span class="keyword">in</span> <span class="keyword">main</span>() (likely <span class="keyword">less</span> <span class="keyword">than</span> <span class="number">10</span> <span class="keyword">lines</span> <span class="keyword">of</span> code, but also more <span class="keyword">than</span> just one)</span><br><span class="line">Exhibit good <span class="keyword">use</span> <span class="keyword">of</span> functional decomposition, <span class="keyword">with</span> a <span class="built_in">number</span> <span class="keyword">of</span> small methods <span class="keyword">to</span> solve different parts <span class="keyword">of</span> the</span><br><span class="line">task</span><br><span class="line"><span class="keyword">Show</span> the connections <span class="keyword">between</span> methods <span class="keyword">in</span> your program <span class="keyword">in</span> the structure chart</span><br><span class="line">Make <span class="keyword">use</span> <span class="keyword">of</span> <span class="keyword">String</span> methods wherever suitable</span><br><span class="line">Followtheunit’scodingstyleforlayout variablenames(useofcase) andcommenting(includingyournameat</span><br></pre></td></tr></table></figure>
+<h5 id="KIT101-Programming-Fundamentals-CL"><a href="#KIT101-Programming-Fundamentals-CL" class="headerlink" title="KIT101 Programming Fundamentals CL"></a>KIT101 Programming Fundamentals CL</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Follow <span class="keyword">the</span> units coding style <span class="keyword">for</span> layout, <span class="built_in">variable</span> names (use <span class="keyword">of</span> <span class="keyword">case</span>), <span class="keyword">and</span> commenting (including your name <span class="keyword">at</span></span><br><span class="line"><span class="keyword">the</span> top)</span><br><span class="line">Compile <span class="keyword">and</span> run, <span class="keyword">with</span> <span class="keyword">the</span> screenshot showing that <span class="keyword">it</span> works</span><br></pre></td></tr></table></figure>
+<h2 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h2><p>In this task you will implement a single-source le program called <strong>Sentence Editor</strong> , which will manipulate the<br>arrangement of words in a sentence entered by the user (details are given later). In this task it is left to you to decide<br>how the program should be broken down into methods (as a rough guide, a 🏁 Completed solution will have<br>between 5 and 7 relatively small methods, including main). As your program will work with the user-entered<br>sentence as an array of words, it will also make use of methods from the String class to save implementation effort.<br>We will accept a broad range of solutions, not merely the sample solution we created when designing the task.</p>
+<p>A description of the program and its functionality is given next, followed by a number of suggestions for how to<br>implement some of the trickier functionality.</p>
+<h3 id="Sentence-Editor"><a href="#Sentence-Editor" class="headerlink" title="Sentence Editor"></a>Sentence Editor</h3><p>The program should implement the following high-level algorithm:</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">Program</span></span>: Sentence Editor</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Steps:</span><br><span class="line"><span class="number">1</span> Display <span class="keyword">the</span> program's <span class="built_in">name</span></span><br><span class="line"><span class="number">2</span> Prompt <span class="keyword">the</span> user <span class="keyword">to</span> enter a sentence (which may include punctuation)</span><br><span class="line"><span class="number">3</span> Convert <span class="keyword">that</span> String <span class="keyword">into</span> an array <span class="keyword">of</span> <span class="keyword">the</span> individual <span class="built_in">words</span> <span class="keyword">it</span> <span class="keyword">contains</span>,</span><br><span class="line">removing common punctuation (e.g., .,?!) <span class="keyword">in</span> <span class="keyword">the</span> process</span><br><span class="line"><span class="number">4</span> Do</span><br><span class="line"><span class="number">4</span><span class="number">-1</span> | Display <span class="keyword">the</span> array's <span class="built_in">contents</span> <span class="keyword">as</span> a sentence (<span class="keyword">that</span> <span class="keyword">is</span>, <span class="keyword">as</span> <span class="built_in">words</span> separated</span><br><span class="line">| <span class="keyword">by</span> spaces, ending <span class="keyword">with</span> a full stop), prefixed <span class="keyword">by</span> <span class="string">"Text: "</span></span><br><span class="line"><span class="number">4</span><span class="number">-2</span> | Display a menu <span class="keyword">of</span> operations <span class="keyword">for</span> editing <span class="keyword">the</span> sentence</span><br><span class="line"><span class="number">5</span> <span class="keyword">until</span> <span class="keyword">the</span> user selects quit</span><br></pre></td></tr></table></figure>
+<p>After step 3, the original sentence is no longer used, only the array of the words extracted from it. Assuming that the<br>user originally entered the sentence ‘An example sentence, for an edited line.’ this would be displayed as:</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Text: An example <span class="keyword">sentence</span> <span class="keyword">for</span> <span class="keyword">an</span> edited <span class="built_in">line</span>.</span><br></pre></td></tr></table></figure>
+<p>The available operations are:<br><strong>Display the sentence as a question</strong> (that is, ending with? instead of. and without showing the ‘Text:’ prex)<br><strong>Display the sentence as an exclamation</strong> (like the previous option but using! instead of .)<br><strong>Find-replace</strong> , which will prompt the user to enter a word to nd and a replacement word. The program will<br>then replace all occurrences of the _nd_ word in the array (doing case-insensitive matches) <em>and</em> display the<br>number of replacements made.<br>For example, starting with the sentence above, if the user entered ‘an’ and ‘the’ then the displayed sentence<br>would become ‘the example sentence for the edited line’ and the program would display that there were 2<br>replacements. (The program does not have to restore sentence capitalisation.)<br><strong>Swap</strong> , which will prompt the user to enter two positions within the text and then swap the words at those<br>positions. The prompt should indicate the valid range of positions, which must be 1 to the length of the text (so<br>remember to subtract 1 from what the user enters), but it can assume that the user will enter valid values.<br>For example, starting with the sentence given above, if the user entered the positions 2 and 6 then the new<br>displayedsentencewouldbe‘Aneditedsentenceforanexampleline’(Mostswapswillmakeasentence</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">displayed <span class="keyword">sentence</span> would be An edited <span class="keyword">sentence</span> <span class="keyword">for</span> <span class="keyword">an</span> example <span class="built_in">line</span>. (Most swaps will make <span class="keyword">a</span> <span class="keyword">sentence</span></span><br><span class="line">grammatically incorrect, but that’s <span class="keyword">the</span> user’s problem, <span class="keyword">not</span> yours.)</span><br><span class="line">Shufe , which will swap <span class="built_in">random</span> pairs <span class="keyword">of</span> positions <span class="keyword">in</span> <span class="keyword">the</span> <span class="keyword">text</span> <span class="built_in">length</span>-<span class="keyword">of</span>-<span class="keyword">sentence</span> / <span class="number">2</span> times (this <span class="built_in">number</span> is</span><br><span class="line">arbitrary, but should be enough <span class="built_in">to</span> make <span class="keyword">the</span> <span class="built_in">new</span> arrangement quite different <span class="built_in">from</span> <span class="keyword">the</span> original).</span><br><span class="line">For example, <span class="keyword">the</span> program would perform <span class="literal">three</span> swaps <span class="keyword">on</span> <span class="title">the</span> <span class="title">sentence</span> <span class="title">above</span> <span class="title">as</span> <span class="title">7</span>/<span class="title">2</span> <span class="title">is</span> <span class="title">3</span> <span class="title">when</span> <span class="title">performing</span></span><br><span class="line"><span class="keyword">integer</span> division.</span><br></pre></td></tr></table></figure>
+<p>The last three operations modify the state of the array, which is why the program displays the sentence it represents<br>after each user action.</p>
+<h3 id="Implementation-advice"><a href="#Implementation-advice" class="headerlink" title="Implementation advice"></a>Implementation advice</h3><h5 id="Converting-the-sentence-into-an-array-of-words"><a href="#Converting-the-sentence-into-an-array-of-words" class="headerlink" title="Converting the sentence into an array of words"></a>Converting the sentence into an array of words</h5><p>Converting the sentence into an array of Strings is easier than it may at rst appear. You <em>should not</em> write a loop to<br>split the sentence.</p>
+<p>Strings have a split() method, which will break the String into an array of substrings separated by characters you<br>specify. To split a String at each space character you can do the following:</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> original = <span class="string">"This is a sentence."</span></span><br><span class="line"><span class="type">String</span>[] <span class="literal">result</span> = original.split(<span class="string">" "</span>);</span><br><span class="line">//<span class="literal">result</span> <span class="keyword">is</span> now the <span class="built_in">array</span> [<span class="string">"This"</span>, <span class="string">"is"</span>, <span class="string">"a"</span>, <span class="string">"sentence."</span>]</span><br></pre></td></tr></table></figure>
+<p>The argument to split() is actually a <em>regular expression</em> , which is a pattern that can match a variety of String values.<br>The pattern “ “ matches a single space character. In order to prevent any commas, full stops and some other<br>punctuation characters from being left attached to the words in the sentence you can specify these as a set by<br>placing them inside square brackets [ ], followed by a + to say ‘match 1 <em>or more</em> of these characters’. For example,</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> original = <span class="string">"What, he said, an over-punctuated sentence!"</span></span><br><span class="line"><span class="built_in">String</span><span class="meta">[</span><span class="meta">]</span> result = original.split("<span class="meta">[</span> ,.!?\<span class="string">"]+"</span>); <span class="comment">//matches one or more of the</span></span><br><span class="line">charcters inside <span class="meta">[</span><span class="meta">]</span></span><br><span class="line">//result is now the array <span class="meta">[</span><span class="string">"What"</span>, <span class="string">"he"</span>, <span class="string">"said"</span>, <span class="string">"an"</span>, <span class="string">"over-punctuated"</span>,</span><br><span class="line"><span class="string">"sentence"</span><span class="meta">]</span></span><br></pre></td></tr></table></figure>
+<p>In that example it matches any of space, comma, full stop, exclamation mark, question mark, or double quote (which<br>must be given as \”), appearing one or more times in sequence. You can adjust the set of punctuation characters<br>however you think appropriate.</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> Note: Because split() returns a<span class="built_in"> new </span>array of the correct size for the data you do<span class="built_in"> not </span>need to allocate</span><br><span class="line">space for the<span class="built_in"> array </span>using<span class="built_in"> new </span>String[].</span><br></pre></td></tr></table></figure>
+<h5 id="Reconstrucing-the-sentence-for-display"><a href="#Reconstrucing-the-sentence-for-display" class="headerlink" title="Reconstrucing the sentence for display"></a>Reconstrucing the sentence for display</h5><p>Although you’ve written code to do something similar before, we strongly suggest you use the class method<br>String.join() to convert the array of words to a displayable String, with individual words separated by a single<br>space. (The rst parameter is the separator to use between array elements, while the second CharSequence…<br>parameter actually matches a String[] variable.)</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Download <span class="keyword">Print</span></span><br></pre></td></tr></table></figure>
+<h4 id="Task-View-this-topic"><a href="#Task-View-this-topic" class="headerlink" title="Task: View this topic"></a>Task: View this topic</h4><h6 id="Last-Visited-28-May-2021-04"><a href="#Last-Visited-28-May-2021-04" class="headerlink" title="Last Visited 28 May, 2021 04:"></a>Last Visited 28 May, 2021 04:</h6><h6 id="Activity-Details"><a href="#Activity-Details" class="headerlink" title="Activity Details"></a>Activity Details</h6>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/INFO1113-A2.html" rel="next" title="Java代写：INFO1113_A2">
+                <i class="fa fa-chevron-left"></i> Java代写：INFO1113_A2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">356</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1PP-Divide-and-Conquer"><span class="nav-number">1.</span> <span class="nav-text">9.1PP Divide and Conquer</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#KIT101-Programming-Fundamentals"><span class="nav-number"></span> <span class="nav-text">KIT101 Programming Fundamentals</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PP-Task-9-1-Divide-and-Conquer"><span class="nav-number"></span> <span class="nav-text">PP Task 9.1 Divide and Conquer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number"></span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-Submission-Details"><span class="nav-number"></span> <span class="nav-text"> Submission Details</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-Assessment-Criteria"><span class="nav-number"></span> <span class="nav-text"> Assessment Criteria</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#KIT101-Programming-Fundamentals-CL"><span class="nav-number">0.0.1.</span> <span class="nav-text">KIT101 Programming Fundamentals CL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instructions"><span class="nav-number"></span> <span class="nav-text">Instructions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sentence-Editor"><span class="nav-number">1.</span> <span class="nav-text">Sentence Editor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-advice"><span class="nav-number">2.</span> <span class="nav-text">Implementation advice</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Converting-the-sentence-into-an-array-of-words"><span class="nav-number">2.0.1.</span> <span class="nav-text">Converting the sentence into an array of words</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Reconstrucing-the-sentence-for-display"><span class="nav-number">2.0.2.</span> <span class="nav-text">Reconstrucing the sentence for display</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-View-this-topic"><span class="nav-number">2.1.</span> <span class="nav-text">Task: View this topic</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Last-Visited-28-May-2021-04"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">Last Visited 28 May, 2021 04:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Activity-Details"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">Activity Details</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
