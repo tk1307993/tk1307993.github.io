@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,Deep Learning,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Python完成">
+<meta name="keywords" content="Python,Deep Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python代写：COMP5329_DeepLearning_A2">
+<meta property="og:url" content="cplusplusdaixie.com/COMP5329-DeepLearning-A2.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Python完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-09-18T00:24:26.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python代写：COMP5329_DeepLearning_A2">
+<meta name="twitter:description" content="使用Python完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/COMP5329-DeepLearning-A2.html">
+
+
+
+
+
+  <title>Python代写：COMP5329_DeepLearning_A2 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/COMP5329-DeepLearning-A2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python代写：COMP5329_DeepLearning_A2</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-09-13T09:09:40+08:00">
+                2023-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Python完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="COMP5329-Deep-Learning"><a href="#COMP5329-Deep-Learning" class="headerlink" title="COMP5329 - Deep Learning"></a>COMP5329 - Deep Learning</h3><p>Assignment- 2</p>
+<p>Assignment-2 has two tracks: <strong>competition track</strong> and <strong>reseach track</strong>.</p>
+<p>Students should attend one of the two tracks. 2 or 3 students are suggested to form a group to attend one of these<br>two tracks.</p>
+<p><strong>1. Competition track description [ 100 Marks]:</strong></p>
+<p>In this assignment, you are to solve the multi-label classification task. Each sample in this dataset includes:</p>
+<ul>
+<li>an image,</li>
+<li>one or more labels,</li>
+<li>a short caption that summarizes the image.</li>
+</ul>
+<p>Your goal is to implement an image classifier that predicts the labels of image data sample. You<br>may optionally include the caption in the input of your classifier – it’s up to you!</p>
+<p>Please submit your submission file via Kaggle</p>
+<p><a href="https://www.kaggle.com/competitions/multi-label-classification-competition-" target="_blank" rel="noopener">https://www.kaggle.com/competitions/multi-label-classification-competition-</a> 2023</p>
+<p>Remember: the ranking contributes to <strong>20% of your assignment mark</strong>.</p>
+<p>Please make sure you name your team in the following format.<br>{unikey1}<em>{unikey2}</em>{unikey3}</p>
+<p>The evaluation metric for this assignment is Mean F1-Score. The F1 score, commonly used in information<br>retrieval, measures accuracy using the statistics precision p and recall r. Precision is the ratio of true positives (tp)<br>to all predicted positives (tp + fp). Recall is the ratio of true positives to all actual positives (tp + fn). The F1 score<br>is given by:</p>
+<p>The F1 metric weights recall and precision equally, and a good retrieval algorithm will maximize both precision<br>and recall simultaneously. Thus, moderately good performance on both will be favored over extremely good<br>performance on one and poor performance on the other.</p>
+<p><strong>Submission Format</strong></p>
+<p>For every image in the dataset, submission files should contain two columns: image id and labels. Labels should<br>be a space-delimited list.</p>
+<p>For example</p>
+<p>ImageID,Labels<br>1.jpg, 1<br>8.jpg, 8</p>
+<p>9.jpg, 9 10<br>10.jpg, 10 9<br>etc.</p>
+<p><strong>You can use any methods in deep learning to accomplish the classification task.</strong> You must guarantee that the<br>submitted codes are self-complete, and can be successfully run in common python3 and <strong>PyTorch</strong> environment.</p>
+<p>Instructions to hand in the assignment</p>
+<ul>
+<li>Go to Canvas and upload the report. The report should include each member’s details (student ID and name).</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">If</span> you work as a group, only one student needs <span class="keyword">to</span> submit the report which must be named as student ID numbers</span><br><span class="line">of all<span class="built_in"> group </span>members separated by underscores. E.g. “xxxxxxxx_xxxxxxxx_xxxxxxxx. pdf ”</span><br></pre></td></tr></table></figure>
+<ul>
+<li>The report must include <strong>a link of your code, model and data</strong> (e.g., a shared Google cloud folder, so we can<br>  easily run it on Colab). Clearly provide instructions on how to run your code in the appendix of the report or<br>  include a readme.txt in your shared folder.</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In your shared <span class="built_in">folder</span>, please <span class="built_in">include</span> <span class="keyword">a</span> <span class="built_in">file</span> “Predicted_labels.txt”, which <span class="keyword">contains</span> <span class="keyword">the</span> predicted labels <span class="keyword">of</span> test</span><br><span class="line">exampels. You may want <span class="built_in">to</span> submit <span class="keyword">the</span> prediction that achieves <span class="keyword">the</span> best performance <span class="keyword">on</span> <span class="title">kaggle</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Don’t update <span class="keyword">the</span> code/data <span class="keyword">any</span> more <span class="keyword">after</span> <span class="keyword">the</span> submission. If <span class="keyword">the</span> latest modified <span class="built_in">time</span> <span class="keyword">of</span> <span class="keyword">the</span> shared <span class="built_in">folder</span> is</span><br><span class="line">signiftanly late <span class="keyword">after</span> <span class="keyword">the</span> submisison deadline, <span class="keyword">the</span> <span class="keyword">whole</span> submission will be taken <span class="keyword">as</span> <span class="keyword">a</span> late submission.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>The report must clearly show (i) details of your modules, (ii) the predicted results from your classifier on test<br>  examples, (iii) run-time, and (iv) hardware and software specifications of the computer that you used for<br>  performance evaluations.</li>
+<li>There is no special format to follow for the report but please make it as clear as possible and similar to a<br>  research paper.</li>
+<li>The use of ChatGPT or other AI tools is prohibited in the assignments. A plagiarism checker will be used.</li>
+</ul>
+<p><strong>Late submission:</strong></p>
+<p>Suppose you hand in work after the deadline:</p>
+<p>If you have not been granted special consideration or arrangements</p>
+<ul>
+<li>A penalty of 5% of the maximum marks will be taken per day (or part) late. After ten days, you will be<br>awarded a mark of zero.</li>
+<li>e.g. If an assignment is worth 40% of the final mark and you are one hour late submitting, then the maximum<br>marks possible would be 38%.</li>
+<li>e.g. If an assignment is worth 40% of the final mark and you are 28 hours late submitting, then the maximum<br>marks possible marks would be 36%.</li>
+<li>Warning: submission sites get very slow near deadlines.</li>
+</ul>
+<ul>
+<li>Submit early; you can resubmit if there is time before the deadline.</li>
+</ul>
+<p>Marking scheme</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Category Criterion</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Report</span><span class="meta"> [70]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Introduction</span><span class="meta"> [10]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>What’s the aim of the study?</li>
+<li>Why is the study important?</li>
+<li>The general introduction of your used method in the assignment and your<br>motivation for such a solution.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Related</span> works<span class="meta"> [10]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Existing related methods in the literature.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Techniques</span><span class="meta"> [20]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>The principle of your method used in this assignment.</li>
+<li>Justify the reasonability of the method.</li>
+<li>Any advantage or novelty of the proposed method.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Experiments</span> and results<span class="meta"> [20]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Accuracy/efficiency (Figures or Tables)</li>
+<li>Extensive analysis (ablation studies, comparison methods, hyper parameter<br>analysis)</li>
+</ul>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Conclusions <span class="keyword">and </span><span class="keyword">Discussion </span>[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Meaningful conclusion and discussion.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Other</span><span class="meta"> [5]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>At the discretion of the marker: for impressing the marker, excelling expectation,<br>etc. Examples include fast code, using LATEX, etc.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Code</span><span class="meta"> [10]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Code runs <span class="keyword">within</span> <span class="keyword">a</span> feasible <span class="built_in">time</span> [<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Size of resulting deep models for the prediction &lt; <span class="number">100</span>MB [<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Classification</span></span><br><span class="line"><span class="attribute">performance</span><span class="meta"> [20]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Groups in top <span class="number">10</span>% [<span class="number">20</span>]</span><br><span class="line">Groups in top <span class="number">10</span>%<span class="number">-30</span>% [<span class="number">15</span>]</span><br><span class="line">Groups in top <span class="number">30</span>%<span class="number">-50</span>% [<span class="number">10</span>]</span><br><span class="line">Groups in top <span class="number">50</span>%<span class="number">-80</span>% [<span class="number">5</span>]</span><br><span class="line">Other valid submissons [<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<p>Penalties [-]</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Badly </span>written <span class="meta">code</span>: [-<span class="number">20</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not including instructions <span class="keyword">on</span> how <span class="keyword">to</span> <span class="built_in">run</span> your code: [<span class="number">-30</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Late submission</span></span><br></pre></td></tr></table></figure>
+<p><strong>2. Research track description [100 Marks]:</strong></p>
+<p>This research track calls for brave new ideas on deep learning. In this track, you are encouraged to propose and<br>investigate new algorithms or problems in deep learning.</p>
+<p>You <strong>must not</strong> use the project (e.g. your honours, capstone or SSP project) that you have aleady done or are<br>currently doing in other units to participate in this track. You are encouraged to contact our teaching team, if you<br>want to have some discussion on your proposed research problems.</p>
+<p>Submit the <strong>report</strong> (including a link to your <strong>source codes, models and data)</strong> on Canvas before the due date<strong>. TA</strong><br>will further contact you for the preseantion slides by Week 13.</p>
+<p>Marking scheme</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Category Criterion</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Report</span><span class="meta"> [90]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Introduction</span><span class="meta"> [10]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>What’s the aim of the study?</li>
+<li>Why is the study important?</li>
+<li>The general introduction of your used method in the assignment and your<br>motivation for such a solution.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Related</span> works<span class="meta"> [10]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Existing related methods in the literature.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Techniques</span><span class="meta"> [30]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>The principle of your method used in this assignment.</li>
+<li>Justify the reasonability of the method.</li>
+<li>Any advantage or novelty of the proposed method.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Experiments</span> and results<span class="meta"> [30]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Accuracy/efficiency (Figures or Tables)</li>
+<li>Extensive analysis (ablation studies, comparison methods, hyper parameter<br>analysis)</li>
+</ul>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Conclusions <span class="keyword">and </span><span class="keyword">Discussion </span>[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Meaningful conclusion and discussion.</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Other</span><span class="meta"> [5]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>At the discretion of the marker: for impressing the marker, excelling<br>expectation, etc. Examples include fast code, using LATEX, etc.</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Presentation [<span class="number">10</span>] Presentation in week <span class="number">13</span>^</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Penalties</span> <span class="selector-attr">[-]</span> <span class="selector-tag">Late</span> <span class="selector-tag">submission</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/KIT101-A9-DivideAndConquer.html" rel="next" title="Java代写：KIT101_A9_DivideAndConquer">
+                <i class="fa fa-chevron-left"></i> Java代写：KIT101_A9_DivideAndConquer
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">357</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#COMP5329-Deep-Learning"><span class="nav-number">1.</span> <span class="nav-text">COMP5329 - Deep Learning</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
