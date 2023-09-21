@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Web,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用HTML+CSS+JS, Java完成">
+<meta name="keywords" content="Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS代写：EECS4413_Lab01">
+<meta property="og:url" content="cplusplusdaixie.com/EECS4413-Lab01.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用HTML+CSS+JS, Java完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-09-21T08:47:27.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS代写：EECS4413_Lab01">
+<meta name="twitter:description" content="使用HTML+CSS+JS, Java完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/EECS4413-Lab01.html">
+
+
+
+
+
+  <title>JS代写：EECS4413_Lab01 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/EECS4413-Lab01.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">JS代写：EECS4413_Lab01</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-09-21T16:46:16+08:00">
+                2023-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用HTML+CSS+JS, Java完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="EECS-4413-LAB-0-1-HTML-CSS-JS-Java"><a href="#EECS-4413-LAB-0-1-HTML-CSS-JS-Java" class="headerlink" title="EECS 4413. LAB 0 1 : HTML+CSS+JS, Java"></a>EECS 4413. LAB 0 1 : HTML+CSS+JS, Java</h3><h5 id="A-IMPORTANT-REMINDERS"><a href="#A-IMPORTANT-REMINDERS" class="headerlink" title="A. IMPORTANT REMINDERS"></a>A. IMPORTANT REMINDERS</h5><ul>
+<li>Lab 1 is due on <strong>Thursday (May 25 ) at 9 pm</strong>. No late submission will be accepted.</li>
+<li>For this lab, you are welcome to attend the lab sessions on this and next Wednesday (May 17,24).<br>  TAs or instructor will be available t. help you. The location is LAS1002. Attendance is optional.</li>
+<li>Feel free to signal a TA for help if you stuck on any of the steps below. Yet, note that TAs would<br>  need to help other students too.</li>
+<li>You can submit your lab work any time before the specified deadline.</li>
+</ul>
+<h5 id="B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB"><a href="#B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB" class="headerlink" title="B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB"></a>B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB</h5><ul>
+<li>Download this lab description and the associated files and read it completely. Unzip the<br>  compressed file. If uncompressing is successful, you should get a folder <strong>4413 Lab0 1</strong> , which<br>  contains html files, CSS files, JavaScript files, and an image folder with several images. Also<br>  contained is java folder “java” with several Java files,</li>
+<li>Download the JS and Java program from eClass (week 2 ), review the code and play with it. This is the program<br>  demonstrated in class. You should fully understand the code of the program before you start the lab.</li>
+<li>You should have a good understanding of<ul>
+<li>Html basic tags, div, span, form control (textbox, dropdown list, submit button etc)</li>
+<li>Basic css</li>
+<li>Events (such as onclick, ondblclick, onchange)</li>
+<li>document.getElementById().innerHTML</li>
+<li>document.getElementById().src</li>
+<li>document.getElementById().ischecked</li>
+<li>document.getElementById().style.xxx (xxx corresponds to all CSS styles, see css slides)</li>
+</ul>
+</li>
+</ul>
+<h5 id="C-GOALS-OUTCOMES-FOR-LAB"><a href="#C-GOALS-OUTCOMES-FOR-LAB" class="headerlink" title="C. GOALS/OUTCOMES FOR LAB"></a>C. GOALS/OUTCOMES FOR LAB</h5><ul>
+<li>To learn/recap the basic html tags, html form controls</li>
+<li>To learn/recap the basic CSS styles</li>
+<li>To learn how to change the <em>behaviour</em> of an HTML document using JavaScript, how to use JavaScript to validate<br>  form inputs (before sending to the server)</li>
+<li>Experience dynamic web page with a remote server (running php file), including database access</li>
+<li>Experience Java multi-thread programming and Object serialization.</li>
+</ul>
+<h5 id="D-TASKS"><a href="#D-TASKS" class="headerlink" title="D. TASKS"></a>D. TASKS</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Part1:<span class="built_in"> simple </span>JavaScript <span class="keyword">to</span> change image source <span class="keyword">and</span> displaying text.</span><br><span class="line">Part 2 : html forms <span class="keyword">to</span> connect <span class="keyword">to</span> a remote server. Using JavaScript <span class="keyword">to</span> <span class="keyword">do</span> form validation.</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part3:<span class="built_in"> Simple </span>Java Threads <span class="keyword">and</span> Object serialization.</span><br></pre></td></tr></table></figure>
+<h5 id="E-SUBMISSIONS"><a href="#E-SUBMISSIONS" class="headerlink" title="E. SUBMISSIONS"></a>E. SUBMISSIONS</h5><ul>
+<li>eClass submission. More information can be found at the end of this document.</li>
+</ul>
+<h3 id="Part-I-Simple-JS-to-change-presentation"><a href="#Part-I-Simple-JS-to-change-presentation" class="headerlink" title="Part I. Simple JS to change presentation."></a>Part I. Simple JS to change presentation.</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">In</span> this exercise you practice using<span class="built_in"> simple </span>JavaScript <span class="keyword">to</span> change the display of message <span class="keyword">and</span> image source.</span><br></pre></td></tr></table></figure>
+<h5 id="This-task-involves-nine-files-light-html-light-css-light-js-and-six-images-light-0-5-jpg-in-images-folder-The"><a href="#This-task-involves-nine-files-light-html-light-css-light-js-and-six-images-light-0-5-jpg-in-images-folder-The" class="headerlink" title="This task involves nine files: light.html , light. css , light. js , and six images: light_0-5.jpg in images folder. The"></a>This task involves nine files: light.html , light. css , light. js , and six images: light_0-5.jpg in images folder. The</h5><h5 id="image-light-0-jpg-shows-5-light-bulbs-all-turned-off-The-images-light-1-jpg-through-light-5-jpg-corresponds-to"><a href="#image-light-0-jpg-shows-5-light-bulbs-all-turned-off-The-images-light-1-jpg-through-light-5-jpg-corresponds-to" class="headerlink" title="image light_0.jpg shows 5 light bulbs all turned off. The images light_1.jpg through light_5.jpg corresponds to"></a>image light_0.jpg shows 5 light bulbs all turned off. The images light_1.jpg through light_5.jpg corresponds to</h5><h5 id="a-light-being-turned-on-e-g-light-2-jpg-is-an-image-of-the-2nd-light-turned-on"><a href="#a-light-being-turned-on-e-g-light-2-jpg-is-an-image-of-the-2nd-light-turned-on" class="headerlink" title="a light being turned on (e.g. light_2.jpg is an image of the 2nd light turned on)."></a>a light being turned on (e.g. light_2.jpg is an image of the 2nd light turned on).</h5><h5 id="Your-task-it-to-modify-light-html-to-include-5-buttons-as-shown-below-Each-time-a-button-is-selected-a-JS"><a href="#Your-task-it-to-modify-light-html-to-include-5-buttons-as-shown-below-Each-time-a-button-is-selected-a-JS" class="headerlink" title="Your task it to modify light.html to include 5 buttons as shown below. Each time a button is selected, a JS"></a>Your task it to modify light.html to include 5 buttons as shown below. Each time a button is selected, a JS</h5><h5 id="function-should-be-called-which-changes-the-displayed-image-to-be-the-corresponding-one-that-shows-the-light"><a href="#function-should-be-called-which-changes-the-displayed-image-to-be-the-corresponding-one-that-shows-the-light" class="headerlink" title="function should be called, which changes the displayed image to be the corresponding one that shows the light"></a>function should be called, which changes the displayed image to be the corresponding one that shows the light</h5><h5 id="above-the-button-is-“turned-on”-The-displayed-message-is-also-changed-to-“-light-X-is-on-”"><a href="#above-the-button-is-“turned-on”-The-displayed-message-is-also-changed-to-“-light-X-is-on-”" class="headerlink" title="above the button is “turned on”. The displayed message is also changed to “ light #X is on ”."></a>above the button is “turned on”. The displayed message is also changed to “ light #X is on ”.</h5><ul>
+<li>Modify your HTML code to allow your JavaScript code to change the image and message.</li>
+<li>Add in the five buttons using the <button> </button> tags.</li>
+<li>There is a CSS defined for these buttons, but you’ll need to modify the width of the five buttons so to fit in one<br>  row and below each of the five bulbs. Make it as close as possible. The images width is 300 pixels.<pre><code>o also in CSS, add a rule to align the text to the center of the image.
+o also in CSS, give the whole page a solid border of thickness 5px, and color of r 106, g 255 and b 194
+</code></pre></li>
+<li>Following the steps such that when a button is clicked, the corresponding light is on, and</li>
+</ul>
+<h5 id="corresponding-message-is-displayed"><a href="#corresponding-message-is-displayed" class="headerlink" title="corresponding message is displayed."></a>corresponding message is displayed.</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">o Add an onclick event <span class="keyword">handler</span> <span class="keyword">for</span> the <span class="keyword">left</span> most button so that <span class="keyword">when</span> this button <span class="keyword">is</span> clicked, a JS</span><br><span class="line"><span class="keyword">function</span> called lightOn() <span class="keyword">is</span> invoked <span class="keyword">and</span> executed (you can give other <span class="keyword">function</span> <span class="keyword">name</span> <span class="keyword">if</span> you</span><br><span class="line"><span class="keyword">like</span>, <span class="keyword">as</span> <span class="keyword">long</span> <span class="keyword">as</span> the <span class="keyword">function</span> <span class="keyword">with</span> such <span class="keyword">name</span> <span class="keyword">is</span> defined <span class="keyword">in</span> JavaScript).</span><br><span class="line">o <span class="keyword">Now</span> implement the function. <span class="keyword">Open</span> light.js <span class="keyword">where</span> you <span class="keyword">are</span> already provided <span class="keyword">with</span> the skeleton</span><br><span class="line"><span class="keyword">of</span> <span class="keyword">function</span> lightOn()&#123;...&#125; .The <span class="keyword">body</span> <span class="keyword">of</span> the <span class="keyword">function</span> <span class="keyword">is</span> what we write <span class="keyword">in</span> the pair <span class="keyword">of</span> curly</span><br></pre></td></tr></table></figure>
+<h5 id="braces-We-want-to-change-the-displayed-image-by-updating-the-content-of-the"><a href="#braces-We-want-to-change-the-displayed-image-by-updating-the-content-of-the" class="headerlink" title="braces. We want to change the displayed image, by updating the content of the "></a>braces. We want to change the displayed image, by updating the content of the <img></h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">element</span>, who has <span class="keyword">an</span> id “img“. Specifically, you want <span class="built_in">to</span> <span class="built_in">set</span> <span class="keyword">the</span> src attribute <span class="keyword">of</span> <span class="keyword">the</span> DOM</span><br><span class="line">object <span class="built_in">to</span> <span class="keyword">a</span> proper image.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Once this left-most button works as expected, consider how to add event to other buttons, including the off<br>  button.<br>  o One approach is to define a separate functions for each button and then implement the functions by<pre><code>setting the image src with proper images and updating the displayed message with proper texts. E.g.,
+button-1 is attached with function lightOn_1(), button-2 is attached with function lightOn_2() etc. A
+better approach, **which you should do here** , is to define a single JS function, attach it to all the buttons,
+and pass a parameter. That is, clicking any button will call the same function, but with different input (as
+parameter to the function). Then the function changes the images according to the input (using bunch of
+if else statement, or switch case statements).
+</code></pre></li>
+</ul>
+<h3 id="Part-II-HTML-forms-form-validation-using-JS-Client-Server-communication-database"><a href="#Part-II-HTML-forms-form-validation-using-JS-Client-Server-communication-database" class="headerlink" title="Part II. HTML forms, form validation using JS, Client Server communication, database."></a>Part II. HTML forms, form validation using JS, Client Server communication, database.</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">In <span class="keyword">this</span> exercise you are going to implement a simple HTML form using various form controls mentioned <span class="keyword">in</span> <span class="class"><span class="keyword">class</span>,<span class="type"></span></span></span><br><span class="line">including textbox, radio button, checkbox, dropdown list, text areas, buttons. You also practice using <span class="keyword">external</span> CSS</span><br><span class="line">to define the styles, and, using <span class="keyword">external</span> JS to validate forms <span class="keyword">as</span> well <span class="keyword">as</span> change presentations.</span><br></pre></td></tr></table></figure>
+<h5 id="Basic-form-controls"><a href="#Basic-form-controls" class="headerlink" title="Basic form controls"></a>Basic form controls</h5><ul>
+<li>Open the file FormsInput.html with an editor such as VS Code, and complete it following the comment<br>  instructions in it. Note that Program, Year and Hobbies have default selections.<br>  An important tag for form element is <input type="”??”"> where ?? can be “text”, “radio”, “checkbox”,<br>  “password”, “reset”, “submit”, … Other tags used for form element include <textarea> <selection><br>  <options>.<br>  After adding the components, open the file using your browser. Your form should look like</options></selection></textarea></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Figure</span> <span class="number">1</span> <span class="string">Form</span> <span class="string">with</span> <span class="literal">no</span> <span class="string">CSS</span> <span class="string">styles</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Now, link the file to the provided CSS file by removing the comment in head part of the html and<br>  complete the link. Study how the CSS is defined. Save the html file and refresh your browser. You<br>  should get the following (depending on your browser/version, the rendering may be slightly different).<br>  Here we use Firefox, which is the recommended browser for this course.</li>
+</ul>
+<h5 id="Figure-2-Form-with-provided-CSS-styles"><a href="#Figure-2-Form-with-provided-CSS-styles" class="headerlink" title="Figure 2 Form with provided CSS styles"></a>Figure 2 Form with provided CSS styles</h5><ul>
+<li>Next, add a rule to the css file, so that the textbox for the Program field (beside the dropdown list) is<br>  hidden initially (set <em>display</em> style of the element to “ <em>none</em> ” or, <em>visibility</em> to “ <em>hidden”</em> ). This textbox will be<br>  visible when the “OTHERE” in the program dropdown list is selected (elaborated below).</li>
+<li>Next, add an onclick event to the Toggle logo button, so that when it is clicked, a JS function is called,<br>  which change the logo file from “York.png” to “LAS.png” or vice visa. These two images are in the<br>  Images folder. Next, implement this function in the JS code so that it switches between the two images<br>  “York.png” “LAS.png”.</li>
+<li>Next, add an onclick event to the “Change background” button, so that when clicked, it will change to a<br>  lightblue background. Next, implement this function in the JS code so that it works correctly.</li>
+</ul>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure <span class="number">3</span> Change logo <span class="built_in">image</span> Figure <span class="number">4</span> Change <span class="built_in">background</span> <span class="built_in">color</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Next, implement the functionality that when “OTHER” in the Program dropdown list is selected, a<br>  textbox beside it is displayed, allowing user to enter the other program. In this case the mouse cursor<br>  should be set inside the textbox. Then if other program is selected, the textbox should disappear.<br>  Hint: add an <em>onchange</em> event to the dropdown list and pass the selected value to the function.<br>  Implement that function in JS, setting the <em>display</em> to “inline” or “none” according to the selected value<br>  (or <em>visibility</em> to “visible” or “hidden”, depending on your css style for this). For putting the mouse cursor<br>  in the textbox, consider focus() on the element.</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Figure</span> <span class="number">5</span> <span class="keyword">Selecting </span>OTHER make a textbox displayed</span><br></pre></td></tr></table></figure>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure <span class="number">6</span> Selecting a <span class="function"><span class="keyword">program</span></span> makes the textbox disappear</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Now enter some data, and test if the Clear button clears all the entered data, resuming the default<br>  selections.</li>
+<li>Next, enter some data again and click ‘Submit’ button. If implemented correctly, you should get the<br>  feedback from a file on the EECS server. An example is shown in Figure 7. The URL of this file is specified<br>  in the <form> part of your html. This gives you some idea of client-server model – the form page is a<br>  client and your browser sends a http request to the server file. The server file receives the data and then<br>  based on the data, displays something for you. Also, if a course code is entered, the server side will<br>  search the course code in the database and display the course details. In this example, the entered<br>  course code EECS4413 generated some data from the database on the server side.<br>o Note that in this example, some data fields are left blank deliberately. The email is not a valid email<br>address. Currently the form is still sent to the server. Preferably, we need to give some messages if the<br>required data (annotated with *, all except Comment and Search course code) is missing. We can let<br>the server validate and give feedback, but this will generate extra burden on the network and server,<br>and will be slower. A better approach, as mentioned in class, is to use client-side JavaScript code to do<br>validations (before the data is sent to the server). We will do this next.</form></li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure 7 some input data <span class="keyword">and</span><span class="built_in"> server </span>feedback</span><br></pre></td></tr></table></figure>
+<h5 id="Form-Validation-using-client-side-JS"><a href="#Form-Validation-using-client-side-JS" class="headerlink" title="Form Validation using client-side JS."></a>Form Validation using client-side JS.</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">First, on the form, attach a JS validation function (where <span class="keyword">and</span> how?), so that when the<span class="built_in"> user </span>trying <span class="keyword">to</span></span><br><span class="line">submit the form, the validation function is invoked. Then <span class="keyword">in</span> JS, implement this function as follows.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>First, check if the First Name data is missing, if it is, generate a pop-up a window saying “First name<br>  should be filled \out”, and, after the user clicks OK, the cursor should be in the First Name text box.</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure <span class="number">8</span> Validate First <span class="built_in">name</span> field</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Next, check if the Last Name data is missing, if it is, generate a pop-up window with message “Last<br>  name should be filled out”, and after the users click OK, the cursor should be in the Last Name text<br>  box.</li>
+<li>Next, check if the Password field is missing, if it is, generate a pop-up window with message<br>  “Password should be filled out”, and after the users click OK, the cursor should be in the Password<br>  text box.</li>
+<li>Next, check if the Email field is missing, if it is, generate a pop-up window with message “Email<br>  should be filled out”, and after the users click OK, the cursor should be in the Email text box.</li>
+<li>If email filed is entered, further check if the email is a valid email format, such as <a href="mailto:abc@domain.com" target="_blank" rel="noopener">abc@domain.com</a> or</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abc@domain.us That is, <span class="keyword">start</span> <span class="keyword">with</span> <span class="keyword">some</span> <span class="keyword">characters</span> <span class="keyword">for</span> personal part, followed <span class="keyword">by</span> @, <span class="keyword">and</span> <span class="keyword">then</span> <span class="keyword">domain</span> info,</span><br></pre></td></tr></table></figure>
+<h5 id="then-ends-with-2-or-3-characters-e-g-com-ca-edu-More-specifically-personal-part-contains"><a href="#then-ends-with-2-or-3-characters-e-g-com-ca-edu-More-specifically-personal-part-contains" class="headerlink" title="then ends with 2 or 3 characters (e.g. com, ca, edu). More specifically, personal part contains"></a>then ends with 2 or 3 characters (e.g. com, ca, edu). More specifically, personal part contains</h5><ul>
+<li>Uppercase (A-Z )and the lowercase (a-z) letter.</li>
+<li>All the (0-9) Numeric characters.</li>
+</ul>
+<ul>
+<li>Special characters like;! - / =? # $ % &amp; ‘ * + ^ _ ` { | } ~,</li>
+<li>Period, dot, or full stop (.)</li>
+</ul>
+<h5 id="The-domain-part-contains"><a href="#The-domain-part-contains" class="headerlink" title="The domain part contains"></a>The domain part contains</h5><ul>
+<li>letters</li>
+<li>digits</li>
+<li>hyphens</li>
+<li>dots<br>Hint, this is a bit complicated part, a common approach is to use regular expression to match. If you are<br>not very familiar with regular expressions, you may want to search on the web for some solutions (not all<br>work correctly).<br>If email data is not valid, generate a pop-up window with message “Email format invalid”, after the users<br>click OK, the cursor should be in the Email textbox. Some examples of invalid emails are shown below.</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure <span class="number">9</span> Some invalid <span class="section">email</span> formats</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Next, check if at least one hobby is selected. If not, generate a pop-up window with message “at least<br>  one hobby should be selected”, as shown below.</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure 10 <span class="keyword">Check</span> <span class="keyword">if</span> <span class="keyword">at</span> <span class="keyword">least</span> one hobby <span class="keyword">is</span> selected</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Next, check if the search course code is entered. This is an optional field, so if no code is entered, it is<br>  okay, but if a course code is entered, check if the format is EECSxxxx where xxxx are digits. If not,<br>  generate a pop-up window as shown below. Examples of invalid course code are EECS412, eecs4413,<br>  4413, COSC3213.</li>
+</ul>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Figure <span class="number">11</span> Checking course <span class="built_in">code</span> <span class="keyword">format</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>If validation process passes (i.e., validation function does not return a false), the form data will be sent<br>  to the server. Some examples are shown below. Note that, 10 courses are in the database, they are:<br>  EECS1012, EECS1022, EECS2011, EECS2030, EECS2031, EECS3101, EECS3310, EECS3421, EECS4101 and<br>  EECS4413.</li>
+</ul>
+<h3 id="Part-III-Simple-Java-Threads-and-Object-serialization"><a href="#Part-III-Simple-Java-Threads-and-Object-serialization" class="headerlink" title="Part III: Simple Java Threads and Object serialization."></a>Part III: Simple Java Threads and Object serialization.</h3><p>In this part, you get exposure to simple multi-thread programming in Java, and the concept of Object<br>serialization.<br>Given an array of integers, we want to calculate the sum and maximum value in the array, and then write the<br>result into a disk file for future retrieval by another program.</p>
+<ul>
+<li>In the first step, we could use the traditional way where one (main) process scans the array from beginning to<br>  the end. But when the array size is very large, e.g., 100000 elements, it could take a lot of time. In such cases, it<br>  would be beneficial to divide the array into multiple parts and then find the sum and max of each part<br>  simultaneously, i.e., operate on different parts of the array in parallel. This can be done by using <strong>multi-</strong><br>  <strong>threading</strong> where several threads operate on the array in parallel. Specifically, we create two classes, one for<br>  calculating sum in a given range of array, and one for calculating the maximum value in a given range of array.<br>  These classes receive a portion of the array and calculate the sum and max in the portion of the array,<br>  respectively. To make the objects/instances of the classes run as threads, the two classes can either extend<br>  <em>Thread</em> class, or implement <em>Runnable</em> interface, and then override/implement the <em>run()</em> method. Call these two<br>  classes <em>SumThread</em> and <em>MaxThread</em>. The main thread creates two instances of the <em>SumThread</em> class, giving them<br>  half of the array each. It also creates two instances of the <em>MaxThread</em> class and gives them half of the array<br>  each. It then fires the four threads so they all work in parallel. That is, sum is calculated on two portions of the<br>  array simultaneously, the max is calculated on two portions of array simultaneously. Also, sum and max<br>  calculations are conducted in parallel.<br>  The main thread waits for all the four threads to finish, and then retrieves the results from the threads.</li>
+<li>In the second step, we want to persist the results, i.e., when the main program finishes, the data still exists<br>  somewhere. One approach is to write the result into a disk file, so that other programs can retrieve the data<br>  from the disk file later. Instead of writing each result into a disk file separately, and later reading out piece by<br>  piece, an easier approach is to write the results as an whole object and later retrieve the data as a whole object.<br>  To do this, we create a <em>SumMaxResult</em> class which encapsulates the max and sum values, as well as the time<br>  info. The main program stores the results into an instance/object of the <em>SumMaxResult</em> class, and then writes<br>  the object to a disk file, using <em>ObjectOutputStream</em>. To do this, as mentioned in class, the <em>SumMaxResult</em> class<br>  should be serializable (how?).</li>
+<li>Later, another program <em>Depersist</em> can read the disk file and retrieve the whole object, using <em>ObjectInputStream</em>.</li>
+</ul>
+<h5 id="You-are-given-starter-code-for-the-relevant-classes-Complete-the-classes-You-can-develop-in-plain-editor-and"><a href="#You-are-given-starter-code-for-the-relevant-classes-Complete-the-classes-You-can-develop-in-plain-editor-and" class="headerlink" title="You are given starter code for the relevant classes. Complete the classes. You can develop in plain editor and"></a>You are given starter code for the relevant classes. Complete the classes. You can develop in plain editor and</h5><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile/<span class="keyword">run</span><span class="bash"> <span class="keyword">in</span> <span class="built_in">command</span> line, or, develop <span class="keyword">in</span> Eclipse IDE.</span></span><br></pre></td></tr></table></figure>
+<h5 id="In-either-case-If-implemented-correctly-run-the-tester-class-SumMultithreadedTest-will-generate-output-similar-to-the"><a href="#In-either-case-If-implemented-correctly-run-the-tester-class-SumMultithreadedTest-will-generate-output-similar-to-the" class="headerlink" title="In either case, If implemented correctly, run the tester class SumMultithreadedTest will generate output similar to the"></a>In either case, If implemented correctly, run the tester class SumMultithreadedTest will generate output similar to the</h5><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">following:</span><br><span class="line"><span class="keyword">sum</span> <span class="keyword">thread</span> B finish</span><br><span class="line"><span class="keyword">max</span> <span class="keyword">thread</span> X finish</span><br><span class="line"><span class="keyword">max</span> <span class="keyword">thread</span> Y finish</span><br><span class="line"><span class="keyword">sum</span> <span class="keyword">thread</span> A finish</span><br><span class="line"><span class="keyword">sum</span>:<span class="number">66</span> <span class="keyword">max</span>:</span><br><span class="line">Tue May <span class="number">16</span> <span class="number">12</span>:<span class="number">09</span>:<span class="number">35</span> EDT <span class="number">2023</span></span><br><span class="line">Writing success</span><br></pre></td></tr></table></figure>
+<p>Different runs of the tester will generate different sequence od the first four lines, and different time. That is, the blue<br>text above will change for each run.</p>
+<h5 id="Then-run-the-Depersist-program-should-generate"><a href="#Then-run-the-Depersist-program-should-generate" class="headerlink" title="Then, run the Depersist program, should generate"></a>Then, run the Depersist program, should generate</h5><h6 id="7-3-5-6-8-15-9-3-10"><a href="#7-3-5-6-8-15-9-3-10" class="headerlink" title="[7, 3, 5, 6, 8, 15, 9, 3, 10]"></a>[7, 3, 5, 6, 8, 15, 9, 3, 10]</h6><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sum:</span> <span class="number">66</span></span><br><span class="line"><span class="attr">max:</span> <span class="number">15</span></span><br><span class="line"><span class="string">Tue</span> <span class="string">May</span> <span class="number">16</span> <span class="number">12</span><span class="string">:09:35</span> <span class="string">EDT</span> <span class="number">2023</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please feel free to discuss any of these questions in the course forum<span class="built_in"> or </span>see the TAs<span class="built_in"> and/or </span>Instructors for help.</span><br></pre></td></tr></table></figure>
+<h5 id="Submissions"><a href="#Submissions" class="headerlink" title="Submissions."></a>Submissions.</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You should already have <span class="keyword">a</span> <span class="number">4413</span> Lab0 <span class="number">1</span> <span class="built_in">folder</span> that <span class="keyword">contains</span> <span class="keyword">the</span> following <span class="built_in">files</span> <span class="keyword">and</span> <span class="built_in">folder</span>.</span><br></pre></td></tr></table></figure>
+<h5 id="light-html-light-css-light-js-FormsInput-html-FormsInput-css-form-js"><a href="#light-html-light-css-light-js-FormsInput-html-FormsInput-css-form-js" class="headerlink" title="light.html light.css light.js FormsInput.html FormsInput.css form.js"></a>light.html light.css light.js FormsInput.html FormsInput.css form.js</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">images <span class="built_in">folder</span></span><br><span class="line">java <span class="built_in">folder</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">If you develop <span class="keyword">the</span> Java part <span class="keyword">using</span> plain editor <span class="keyword">and</span> <span class="keyword">command</span> <span class="title">line</span>, <span class="title">put</span> <span class="title">the</span> <span class="title">java</span> <span class="title">files</span> <span class="title">inside</span> <span class="title">the</span> <span class="title">java</span> <span class="title">folder</span>.</span><br><span class="line">If you develop <span class="keyword">using</span> Eclipse, export project <span class="keyword">as</span> Archive File (zip <span class="built_in">file</span>), <span class="keyword">and</span> <span class="built_in">put</span> <span class="keyword">the</span> zip <span class="built_in">file</span> <span class="keyword">in</span> <span class="keyword">the</span> java <span class="built_in">folder</span> (please</span><br><span class="line">remove <span class="keyword">the</span> provided Java starter <span class="built_in">files</span> there).</span><br></pre></td></tr></table></figure>
+<h5 id="Finally-compress-the-4413-Lab-01-folder-zip-or-tar-or-gz-and-then-submit-the-single-compressed"><a href="#Finally-compress-the-4413-Lab-01-folder-zip-or-tar-or-gz-and-then-submit-the-single-compressed" class="headerlink" title="Finally, compress the 4413 Lab 01 folder ( .zip or .tar or .gz ), and then submit the (single) compressed"></a>Finally, compress the 4413 Lab 01 folder ( .zip or .tar or .gz ), and then submit the (single) compressed</h5><h4 id="file-on-eClass"><a href="#file-on-eClass" class="headerlink" title="file on eClass."></a>file on eClass.</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Late <span class="keyword">submissions </span><span class="keyword">or </span><span class="keyword">submissions </span><span class="keyword">by </span>email will NOT <span class="keyword">be </span>accepted. Plan ahead <span class="keyword">and </span><span class="keyword">submit </span>early.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/COMP5329-DeepLearning-A2.html" rel="next" title="Python代写：COMP5329_DeepLearning_A2">
+                <i class="fa fa-chevron-left"></i> Python代写：COMP5329_DeepLearning_A2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">358</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#EECS-4413-LAB-0-1-HTML-CSS-JS-Java"><span class="nav-number">1.</span> <span class="nav-text">EECS 4413. LAB 0 1 : HTML+CSS+JS, Java</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#A-IMPORTANT-REMINDERS"><span class="nav-number">1.0.1.</span> <span class="nav-text">A. IMPORTANT REMINDERS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB"><span class="nav-number">1.0.2.</span> <span class="nav-text">B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#C-GOALS-OUTCOMES-FOR-LAB"><span class="nav-number">1.0.3.</span> <span class="nav-text">C. GOALS/OUTCOMES FOR LAB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#D-TASKS"><span class="nav-number">1.0.4.</span> <span class="nav-text">D. TASKS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#E-SUBMISSIONS"><span class="nav-number">1.0.5.</span> <span class="nav-text">E. SUBMISSIONS</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-I-Simple-JS-to-change-presentation"><span class="nav-number">2.</span> <span class="nav-text">Part I. Simple JS to change presentation.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#This-task-involves-nine-files-light-html-light-css-light-js-and-six-images-light-0-5-jpg-in-images-folder-The"><span class="nav-number">2.0.1.</span> <span class="nav-text">This task involves nine files: light.html , light. css , light. js , and six images: light_0-5.jpg in images folder. The</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#image-light-0-jpg-shows-5-light-bulbs-all-turned-off-The-images-light-1-jpg-through-light-5-jpg-corresponds-to"><span class="nav-number">2.0.2.</span> <span class="nav-text">image light_0.jpg shows 5 light bulbs all turned off. The images light_1.jpg through light_5.jpg corresponds to</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a-light-being-turned-on-e-g-light-2-jpg-is-an-image-of-the-2nd-light-turned-on"><span class="nav-number">2.0.3.</span> <span class="nav-text">a light being turned on (e.g. light_2.jpg is an image of the 2nd light turned on).</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Your-task-it-to-modify-light-html-to-include-5-buttons-as-shown-below-Each-time-a-button-is-selected-a-JS"><span class="nav-number">2.0.4.</span> <span class="nav-text">Your task it to modify light.html to include 5 buttons as shown below. Each time a button is selected, a JS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#function-should-be-called-which-changes-the-displayed-image-to-be-the-corresponding-one-that-shows-the-light"><span class="nav-number">2.0.5.</span> <span class="nav-text">function should be called, which changes the displayed image to be the corresponding one that shows the light</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#above-the-button-is-“turned-on”-The-displayed-message-is-also-changed-to-“-light-X-is-on-”"><span class="nav-number">2.0.6.</span> <span class="nav-text">above the button is “turned on”. The displayed message is also changed to “ light #X is on ”.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#corresponding-message-is-displayed"><span class="nav-number">2.0.7.</span> <span class="nav-text">corresponding message is displayed.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#braces-We-want-to-change-the-displayed-image-by-updating-the-content-of-the"><span class="nav-number">2.0.8.</span> <span class="nav-text">braces. We want to change the displayed image, by updating the content of the </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-II-HTML-forms-form-validation-using-JS-Client-Server-communication-database"><span class="nav-number">3.</span> <span class="nav-text">Part II. HTML forms, form validation using JS, Client Server communication, database.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic-form-controls"><span class="nav-number">3.0.1.</span> <span class="nav-text">Basic form controls</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Figure-2-Form-with-provided-CSS-styles"><span class="nav-number">3.0.2.</span> <span class="nav-text">Figure 2 Form with provided CSS styles</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Form-Validation-using-client-side-JS"><span class="nav-number">3.0.3.</span> <span class="nav-text">Form Validation using client-side JS.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#then-ends-with-2-or-3-characters-e-g-com-ca-edu-More-specifically-personal-part-contains"><span class="nav-number">3.0.4.</span> <span class="nav-text">then ends with 2 or 3 characters (e.g. com, ca, edu). More specifically, personal part contains</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#The-domain-part-contains"><span class="nav-number">3.0.5.</span> <span class="nav-text">The domain part contains</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-III-Simple-Java-Threads-and-Object-serialization"><span class="nav-number">4.</span> <span class="nav-text">Part III: Simple Java Threads and Object serialization.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#You-are-given-starter-code-for-the-relevant-classes-Complete-the-classes-You-can-develop-in-plain-editor-and"><span class="nav-number">4.0.1.</span> <span class="nav-text">You are given starter code for the relevant classes. Complete the classes. You can develop in plain editor and</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#In-either-case-If-implemented-correctly-run-the-tester-class-SumMultithreadedTest-will-generate-output-similar-to-the"><span class="nav-number">4.0.2.</span> <span class="nav-text">In either case, If implemented correctly, run the tester class SumMultithreadedTest will generate output similar to the</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Then-run-the-Depersist-program-should-generate"><span class="nav-number">4.0.3.</span> <span class="nav-text">Then, run the Depersist program, should generate</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#7-3-5-6-8-15-9-3-10"><span class="nav-number">4.0.3.1.</span> <span class="nav-text">[7, 3, 5, 6, 8, 15, 9, 3, 10]</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Submissions"><span class="nav-number">4.0.4.</span> <span class="nav-text">Submissions.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#light-html-light-css-light-js-FormsInput-html-FormsInput-css-form-js"><span class="nav-number">4.0.5.</span> <span class="nav-text">light.html light.css light.js FormsInput.html FormsInput.css form.js</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Finally-compress-the-4413-Lab-01-folder-zip-or-tar-or-gz-and-then-submit-the-single-compressed"><span class="nav-number">4.0.6.</span> <span class="nav-text">Finally, compress the 4413 Lab 01 folder ( .zip or .tar or .gz ), and then submit the (single) compressed</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#file-on-eClass"><span class="nav-number">4.1.</span> <span class="nav-text">file on eClass.</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
