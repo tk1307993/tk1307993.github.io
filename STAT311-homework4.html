@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="R,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用R语言完成">
+<meta name="keywords" content="R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R代写：STAT311_homework4">
+<meta property="og:url" content="cplusplusdaixie.com/STAT311-homework4.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用R语言完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-10-07T02:01:28.454Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R代写：STAT311_homework4">
+<meta name="twitter:description" content="使用R语言完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/STAT311-homework4.html">
+
+
+
+
+
+  <title>R代写：STAT311_homework4 | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/STAT311-homework4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">R代写：STAT311_homework4</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-10-07T10:00:07+08:00">
+                2023-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R/" itemprop="url" rel="index">
+                    <span itemprop="name">R</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用R语言完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This assignment does not use any data sets but will include a few parts of problems where you will<br>copy/paste R code with answers. Parts of a few problems are modified from McClave and Sincich,<br><em>Statistics</em> , Ninth Edition and from Mendenhall, Beaver and Beaver, <em>Introduction to Probability and<br>Statistics</em> , 13th Edition.</p>
+<ul>
+<li>You may handwrite or type up this assignment and submit as a pdf file. Do not use rmarkdown for<br>  this assignment.</li>
+<li>If you handwrite your assignment, you can write down your R code with the answers in the few places<br>  where you are to show your R code.</li>
+<li>Be sure to show work as needed. If you simply put down a numeric answer it will be marked wrong,<br>  even if the number is correct.</li>
+<li>All requested interpretations should be in complete sentences.</li>
+<li>Round all probabilities to four decimal points if reporting as a decimal value. Okay to report fractions.</li>
+</ul>
+<ol>
+<li>A fair six-sided die is tossed, and the up face is noted. If the number is ≤ 2 the die is tossed again; if<br> the number is &gt; 2 , an unfair coin with 𝑃𝑃(𝐻𝐻)= 0 .3 is tossed. Define the events:<br> 𝐴𝐴: {A tail appears on the coin} and 𝐵𝐵: {The die is tossed only one time}<br> a) List the sample points in the sample space [Hint: there are 20 sample points].<br> b) Give the probability for each of the sample points.<br> c) Find _P_ ( _A_ ) and _P_ ( _B_ ).<br> d) Identify the sample points in _Ac_ , _Bc_ , 𝐴𝐴 ∩𝐵𝐵, and 𝐴𝐴 ∪𝐵𝐵.<br> e) Find _P_ ( _Ac_ ), _P_ ( _Bc_ ), 𝑃𝑃(𝐴𝐴∩𝐵𝐵), 𝑃𝑃(𝐴𝐴∪𝐵𝐵), _P_ ( _A_ | _B_ ), and _P_ ( _B_ | _A_ ).<br> f) Are _A_ and _B_ mutually exclusive events? Why?<br> g) Are the events _A_ and _B_ independent? Justify your answer using an equation.</li>
+<li>A balanced six-sided die is thrown once. If a 2, 3, or 4 appears, a ball is drawn from urn 1; otherwise,<br> a ball is drawn from urn 2. Urn 1 contains 18 red and 10 white balls. Urn 2 contains 15 red, 4 white,<br> and 6 black balls.<br> a) Find the probability that a white ball is drawn.<br> b) Find the probability that urn 1 was used given that a white ball was drawn.</li>
+<li>Eighty-three percent of all women who submit to pregnancy tests are pregnant. A new pregnancy test<br> gives a false positive result with probability 0.03 and a correct positive result with probability 0.98.<br> Define the events: _P_ : {a woman is pregnant} and _+_ : {the pregnancy test is positive}.<br> a) What is the sensitivity of this test? Explain in layperson terms what this means.<br> b) What is the specificity of this test? Explain in layperson terms what this means.<br> c) What is the false negative rate (FNR) for this test? Explain in layperson terms what this means.</li>
+</ol>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d) What <span class="keyword">is</span> the unconditional probability that <span class="keyword">this</span> test produces a positive result? Explain <span class="keyword">in</span> layperson</span><br><span class="line">terms what <span class="keyword">this</span> means.</span><br><span class="line">e) For a randomly chosen woman who receives a positive result using <span class="keyword">this</span> test, what <span class="keyword">is</span> the probability</span><br><span class="line">that she <span class="keyword">is</span> not pregnant? Interpret <span class="keyword">this</span> result.</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>Bicycle accidents in Seattle are on the rise. City officials estimate that a busy right hand turn from a<br> bike lane onto a busy arterial in the Roosevelt neighborhood has 0.7 bicycle accidents per week. Let<br> 𝑋𝑋 be the number of bicycle accidents that occur at this intersection over the next eight weeks.<br> a) What probability distribution can you use to model 𝑋𝑋?<br> b) Calculate the probability that are between two and four bicycle accidents, inclusive, occur at this<pre><code>intersection in the next eight weeks. Write out the equation you need with numbers substituted but
+solve using R. Copy/paste or write your R code here, with the answer.
+</code></pre></li>
+<li>During a tight job market, recruiters have noticed that graduating seniors with an intermediate<br> proficiency in a second language have a higher probability of getting a first interview following a<br> screening call when seeking their first job out of college. For students with one language, the<br> probability of getting a first interview following a screening call is 0.3, whereas for graduating seniors<br> with a second language the probability is 0.45. Let 𝑋𝑋 be the number of screening calls a graduating<br> senior with an intermediate proficiency in a second language must take up to and including getting<br> their first interview.<br> a) Name a probability distribution that you could use to find probabilities of _X_. Do not forget to<pre><code>include values of any parameters.
+</code></pre> b) On average, how many screening calls must a graduating senior with an intermediate proficiency<pre><code>in a second language go through before getting their first interview?
+</code></pre> c) What is the exact probability that a graduating senior with an intermediate proficiency in a second<pre><code>language must have at least five screening calls up to get their first interview? Write down the
+formula you would use with numbers substituted but use R to calculate the answer. Copy and paste
+your R code here with the answer from R.
+</code></pre></li>
+<li>A psychiatrist believes that 55% of all people who visit doctors have problems that are of a<br> psychosomatic nature. She selects 25 patients at random to test her theory. Let _X_ be the number of<br> patients with psychosomatic problems out of the 25 patients.<br> a) What is the sample space for 𝑋𝑋?<br> b) What probability distribution can you use to model 𝑋𝑋? Make sure to name the distribution and<pre><code>the values of any parameters.
+</code></pre> c) Assuming the psychiatrist’s theory is true, what is the expected value of _X_ , the number of the 25<pre><code>patients who have psychosomatic problems?
+</code></pre> d) What is the standard deviation of _X_ , assuming the theory is true?<br> e) What is the exact probability that 𝑋𝑋 ≤ 4 in any given case? Write down the formula you would<pre><code>use with numbers substituted but use R to calculate the answer. Copy and paste your R code here
+with the answer.
+</code></pre></li>
+</ol>
+<ol start="7">
+<li>A growing number of students seeking a teaching credential are choosing paid internships over<br> traditional student teaching assignments. A group of 12 candidates for four local teaching positions<br> consisted of seven candidates who had enrolled in paid internships and five who had enrolled in<br> traditional student teaching positions. We will assume that all 12 candidates are equally qualified for<br> the four open positions. Let 𝑋𝑋 be the number of internship-trained candidates that get hired for these<br> four open positions.<br> a) Name a probability distribution that you could use to find probabilities of _X_. Do not forget to<pre><code>include values of any parameters.
+</code></pre> b) What is the probability that three internship trained candidates are hired for the four positions.<pre><code>Write out the equation you need with numbers substituted but solve using R. Copy/paste your R
+code here, with the answer from R.
+</code></pre> c) What is the probability at least two of the internship-trained candidates are hired for the four<pre><code>positions. Write out the equation you need with numbers substituted but solve using R. Copy/paste
+your R code here, with the answer from R.
+</code></pre></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/INFO1113-COMP9003-Project.html" rel="next" title="Java代写：INFO1113_COMP9003_Project">
+                <i class="fa fa-chevron-left"></i> Java代写：INFO1113_COMP9003_Project
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">361</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
