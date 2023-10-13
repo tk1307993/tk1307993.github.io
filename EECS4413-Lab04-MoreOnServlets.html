@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="YFxkzhwIVx">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="留学生计算机编程数学统计作业代写" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用Java语言完成">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代写：EECS4413_Lab04_MoreOnServlets">
+<meta property="og:url" content="cplusplusdaixie.com/EECS4413-Lab04-MoreOnServlets.html">
+<meta property="og:site_name" content="留学生计算机编程数学统计作业代写">
+<meta property="og:description" content="使用Java语言完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-10-13T04:16:19.317Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代写：EECS4413_Lab04_MoreOnServlets">
+<meta name="twitter:description" content="使用Java语言完成">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="cplusplusdaixie.com/EECS4413-Lab04-MoreOnServlets.html">
+
+
+
+
+
+  <title>Java代写：EECS4413_Lab04_MoreOnServlets | 留学生计算机编程数学统计作业代写</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">留学生计算机编程数学统计作业代写</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">专业 高效 原创 QQ：1926742804 微信：349583866</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cplusplusdaixie.com/EECS4413-Lab04-MoreOnServlets.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CPlusPlus小砖家">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="留学生计算机编程数学统计作业代写">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Java代写：EECS4413_Lab04_MoreOnServlets</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-10-13T12:00:07+08:00">
+                2023-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  使用Java语言完成
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="EECS-4413-LAB-0-4-More-on-Servlets-–-more-forms-servlet-context-session"><a href="#EECS-4413-LAB-0-4-More-on-Servlets-–-more-forms-servlet-context-session" class="headerlink" title="EECS 4413. LAB 0 4 : More on Servlets – more forms, servlet context, session"></a>EECS 4413. LAB 0 4 : More on Servlets – more forms, servlet context, session</h2><h2 id="tracking"><a href="#tracking" class="headerlink" title="tracking"></a>tracking</h2><h5 id="A-IMPORTANT-REMINDERS"><a href="#A-IMPORTANT-REMINDERS" class="headerlink" title="A. IMPORTANT REMINDERS"></a>A. IMPORTANT REMINDERS</h5><ul>
+<li>Lab 4 is due on <strong>Tuesday (July 1 1 ) at 11 pm</strong>. No late submission will be accepted.</li>
+<li>For this lab, you are welcome to attend the lab sessions on this and next Wednesday (July 5). TAs or<br>  instructor will be available to help you. The location is LAS1002. Attendance is optional. You can<br>  also ask questions on Monday (July 10 after class)</li>
+<li>Feel free to signal a TA for help if you stuck on any of the steps below. Yet, note that TAs would<br>  need to help other students too.</li>
+<li>You can submit your lab work any time before the specified deadline.</li>
+</ul>
+<h5 id="B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB"><a href="#B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB" class="headerlink" title="B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB"></a>B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB</h5><ul>
+<li>Download this lab description and the associated files and read it completely.</li>
+<li>Download this lab description and the associated files and read it completely.<br>ip the compressed file. If uncompressing is successful, you should get a folder <strong>4413 Lab0 4</strong> , which<br>contains html and css files for the last question.</li>
+<li>Download the Java program from eClass (week 4 or 5), review the code and play with it. Those are the program<br>  demonstrated in class. Understand the basic socket communication, multiple clients. You are expected to fully<br>  understand the code of the program before you start the lab.</li>
+</ul>
+<h5 id="C-GOALS-OUTCOMES-FOR-LAB"><a href="#C-GOALS-OUTCOMES-FOR-LAB" class="headerlink" title="C. GOALS/OUTCOMES FOR LAB"></a>C. GOALS/OUTCOMES FOR LAB</h5><ul>
+<li>More on generating forms in Servlet.</li>
+<li>To learn/recap the fundamental servlet features, including context level initial values, dispatchers, attributes,<br>  session tracking.</li>
+</ul>
+<h5 id="D-TASKS"><a href="#D-TASKS" class="headerlink" title="D. TASKS"></a>D. TASKS</h5><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part 1 : <span class="keyword">More</span> <span class="keyword">on</span> Java Servlet <span class="keyword">program</span> – processing and generating forms.</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part 2:<span class="built_in"> Simple </span>session<span class="built_in"> tracking </span>with hidden fields.</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part <span class="number">3</span>: Servlet <span class="built_in">context</span>, Request <span class="keyword">dispatcher, </span>Session tracking</span><br></pre></td></tr></table></figure>
+<h5 id="E-SUBMISSIONS"><a href="#E-SUBMISSIONS" class="headerlink" title="E. SUBMISSIONS"></a>E. SUBMISSIONS</h5><ul>
+<li>eClass submission. More information can be found at the end of this document.</li>
+</ul>
+<p><strong>Part I Simple Java Servlet (generating HTML forms as well as processing HTML forms)</strong><br>In lab3 Part VI, you created dynamic html forms from Java Servlets.<br>The html file provides a table of author names to search. Users can select one or more authors and then submit the<br>form. The form data goes to the first servlet, call it <strong>QueryServlet</strong>. This Servlet processes the form data, searching the<br>books and then generates a dynamic html page showing the result of search. This page contains a form, inside it lists<br>the books by the authors, in a HTML table format. There is also a checkbox for each book record, which allows users<br>to select the book for ordering but it was not used in lab3. When user clicks Order button, it sends the form data to<br>the 2nd servlet, called <strong>OrderServlet</strong> , which reads the form data and displays some information.</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">In</span> this lab, you extend the work, so that after the<span class="built_in"> user </span><span class="keyword">to</span> select the books, the OrderServlet will give a list of books</span><br><span class="line">that the<span class="built_in"> user </span>selected. Also, we want <span class="keyword">to</span> <span class="builtin-name">add</span> a quality field <span class="keyword">in</span> the<span class="built_in"> page </span>where the<span class="built_in"> user </span>can update the quality.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Import your <strong>lab3servletQ4.war</strong> file that you submitted, as new project, name it <strong><em>lab 4 servletQ1.</em></strong></li>
+<li>First, to make the checkbox selection info passed to the <strong>Orderservlet</strong> , we need to give the checkboxes a name,<br>  and value of each checkbox is the id of the item it checked.</li>
+<li>Then, modify the <strong>OrderServlet</strong> to list all the books selected. To do this, get the checkbox parameter and retrieve<br>  the id values. Then for each id, get the book info by searching the book by the id. And output the id, author and<br>  price information. List the record in table format.</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Dynamic page</span><br><span class="line">generated by</span><br><span class="line">2<span class="built_in"> nd </span>servlet</span><br><span class="line">OrderServlet</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Dynamic page</span><br><span class="line">generated by</span><br><span class="line">1st servlet</span><br><span class="line">QueryServlet</span><br></pre></td></tr></table></figure>
+<ul>
+<li>So far, the program is better than lab3 version. But it still lacks quality and price information, which we will add<br>  next.</li>
+<li>In the <strong>QueryServlet</strong> table, add a quality textbox, which has initial value 1 for each book. For the textbox to pass<br>  to the order servlet, one approach is to use the <strong><em>“qty”+id</em></strong> as the name. For example, for book of id 2, the quality<br>  textbox’s name should be “qty2”. For book of id 5, the quality textbox’s name should be “qty5”. Something like<br>  <em>out.println(</em> “ <em>&lt;input …… name=</em> ‘ <em>qty</em> “ <em>+ id +</em> “ ‘ _/&gt;_ “ _)_. You may also want to use <em>size</em> attribute of the input tag to<br>  control the width of the textbox.<br>  This allows the other servlet to retrieve this quality information for a particular book by its id – from parameter<br>  information.</li>
+<li>Then in the <strong>OrderServlet</strong> , for each record, also retrieve the quality information by the parameter of “qty”+id. List<br>  this in the table.</li>
+<li>Lastly, improve on the program by calculating and showing the total price of the order. When listing the orders,<br>  add up the price and display as the last row of the table (hint: you can use <em><td colspan="’5’"></td></em> to make the last row<br>  merged).</li>
+</ul>
+<p>See more output from the video.</p>
+<ul>
+<li>Once the program works, export it as ‘WAR’ file with the default name ‘lab4servletQ1.war’. Check the ‘Export<br>  source files’ before you click Finish.</li>
+<li>This program is closer to real shopping than lab3. But it does not support ‘shopping cart’ experience: after one<br>  order, when user goes back to select again, the previous order information is lost. In real e-commerce<br>  application, we need to keep the selection in shopping cart and then user go back to select more, the items is<br>  added the shopping cart. We need session tracking to do this. In exercise 3 of this lab, you did a simple tracking.<br>  In later labs we continue with this example to add shopping cart functionality.</li>
+</ul>
+<p><strong>Part II:</strong> use hidden fields to pass user information (this is a very simple and short exercise)</p>
+<ul>
+<li>There is a index.html that asks user for some information. Then the form data is sent to a servlet. This servlet<br>  displays some information and then provides a button that leads to the second servlet. The second servlet will<br>  display the information that the user entered.</li>
+<li>How can the 2nd servlet get the user entered information? You can use cookie, session, but here we experience a<br>  simple approach: hidden fields. The first servlet, in addition to generating some information, also generate a<br>  form with hidden field of the user information. The servlet adds ‘XXX’ to the end of the entered password, and<br>  process the checkbox input so it can be put as a hidden field.</li>
+<li>When the button is clicked, the hidden data in the form is sent to the 2nd servlet. The second servlet will just<br>  retrieve them as the regular form data.</li>
+<li>Note that both the html form and the generated form should use POST method, so password and other</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">information will <span class="keyword">not</span> be shown <span class="keyword">in</span> <span class="keyword">the</span> <span class="built_in">URL</span> bar.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Note that as mentioned in class, hidden fields approach has some limitations. One of them is that it needs a</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form <span class="keyword">with</span> buttons. If we want <span class="built_in">to</span> provide hyperlink <span class="built_in">to</span> <span class="keyword">the</span> <span class="number">2</span>nd servlet, instead <span class="keyword">of</span> <span class="keyword">a</span> button, <span class="keyword">then</span> <span class="keyword">it</span> will <span class="keyword">not</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">send</span> <span class="built_in">to</span> <span class="keyword">the</span> hidden field information. In that <span class="keyword">case</span>, cookie <span class="keyword">and</span> <span class="keyword">http</span> session are better choices.</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Entered yu</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>To do:<br>  o Create a dynamic project, name it lab4servletQ2. Create a <strong>index</strong> .html file, and save in the webapp folder.<pre><code>Create the two servlets to fulfill the above tasks.
+</code></pre>  o Once the program works, export it as ‘WAR’ file with the default name ‘ <strong>lab 4 servletQ 2 .war’</strong>. Check the<pre><code>‘Export source files’ before you click Finish.
+</code></pre></li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Part III: Servlet context, Request dispatcher, Session tracking</span><br><span class="line"><span class="keyword">In</span> this exercise you implement a<span class="built_in"> simple </span>OSAP calculator, using the advanced Servlet features that is covered</span><br><span class="line">recently.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>You are given a UI.html and a CSS file. The UI allows users to enter <em>Principal</em> , <em>Interest</em> rate and <em>Period</em> and<br>  submit to a servlet to calculate the monthly payment for the loan.</li>
+<li>When a user enter the <em>Principal</em> , <em>Interest</em> rate and <em>Period</em> , and submit the form, the data is sent to a <strong>OSAP</strong><br>  servlet, which extracts the three values, and calculates the monthly payment of this loan. Note that if a value is<br>  not entered, the servlet retrieves the default value set in a context parameter in the Deployment descriptor file<br>  <em>web.xml</em>. The default values are: Principal: 1000, Interest 10, Period 12. This way, the application developer ne<br>  can change the defaults without recompiling the servlet. Compute the monthly payment using the formular:<pre><code>𝑟
+</code></pre>12 ∗ 100 ∗^ 𝐴^<br>  1 −( 1 + 12 ∗𝑟 100 )−𝑛</li>
+</ul>
+<h3 id="where-r-is-the-annual-interest-rate-A-is-the-principal-and-n-is-the-period-measured-in"><a href="#where-r-is-the-annual-interest-rate-A-is-the-principal-and-n-is-the-period-measured-in" class="headerlink" title="where r is the annual interest rate, A is the principal, and n is the period measured in"></a>where r is the annual interest rate, A is the principal, and n is the period measured in</h3><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">months.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>After calculating the result, the <strong>OSAP</strong> servlet sends the information to another servlet <strong>ResultView</strong> to display<br>  the result. The <strong>OSAP</strong> servlet uses RequestDispacher to forward the request and response to the <strong>ResultView</strong><br>  servlet. The servlet need to pass 4 pieces of information: principal and interest and period used for calculation,<br>  as well as the result. Note that to pass these 4 pieces of information, the servlet needs to set the attributes for<br>  each. Note that these attributes can be set in <em>application</em> , <em>request</em> or <em>session</em> scope. For the above these 4<br>  values, <em>request</em> scope is sufficient, as the 2nd servlet will retrieve it from the forwarded request. This OSAP<br>  servlet is also responsible for checking if the connection is the first time by this client or a revisit, using http<br>  sessions. If this is the first-time visit, it creates a new http session and sets a <em>count</em> attribute to store the visit<br>  count information. If this is not the first-time visit, it should retrieve the count attribute information from the<br>  session and update with incremented visit count. Note that this should be a <em>session</em> scope attribute, as it is the<br>  connection between this client and the sever. Another client connected to this application should have a<br>  separate visit count information.<br>  Note that this OSAP servlet does not output anything to the client. It calculates the loan payment and forwards<br>  the relevant information to the 2nd servlet <strong>ResultView</strong> , who is responsible for displaying the result to the client.</li>
+<li>The <strong>ResultView</strong> servlet will first display some header information of the client request. Note that such<br>  information can be retrieved directly from the forwarded request object. It also displays the user entered<br>  <em>principle</em> , <em>interest</em> and <em>period</em> information. Note that this information may not necessarily be the same as the<br>  used principal, interest and period information – if the user did not enter an information, the default context<br>  parameter value was used instead. This information can also be retrieved directly from the forwarded request<br>  (how?).<br>  Next, the servlet retrieves sessional attributes about the visit count. If this is the first-time visit, display<br>  “Welcome …” otherwise display “Welcome back. Calculation count: X”.<br>  Next, the servlet displays the OSAP result, as well as the <em>principal</em> , <em>interest</em> and <em>period</em> information that were<br>  actually used in the calculation. Recall that this information has been set by the OSAP servlet as request cope<br>  attributes.<br>  Note that in generating the dynamic HTML, it should also link to the provided CSS file so it uses the CSS styles.<br>  This servlet also generates a “recalculate” button which will lead the user to the original UT html. When the<br>  client recalculates within a certain period of time (like within 30 minutes), it will be recognized as the re-visitor<br>  and its visiting count will be updated (in the <strong>OSAP</strong> servlet) and displayed (in the <strong>ReviewResult</strong> servlet).</li>
+</ul>
+<p>During the connection, if another client connects, it should be recognized as the new client. You can simulate another<br>client by using another computer to connect. You can also use another browser in the working computer to connect,<br>and it will be treated as another client/session. If you connect with the same browser but after a while (&gt;30 minutes)<br>the previous session expires, and following connection will also be treated as a new client/session.</p>
+<ul>
+<li>To do:<br>  o Create a dynamic project, name it <strong>lab4servletQ3</strong>. Put the provided html and CSS file into the project. Add<pre><code>the context level initial values to the deploy descriptor **web.xml**.
+</code></pre>  o Create the two servlets to fulfill the above tasks.<br>  o For the generated form from OrderServlet, link to CSS and give the following styles:</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">o</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">o Once the program works, <span class="builtin-name">export</span> it as ‘WAR’ file with the<span class="built_in"> default </span>name ‘ lab4servletQ 3 .war’. Check the</span><br><span class="line">‘<span class="builtin-name">Export</span> source files’ before you click Finish.</span><br></pre></td></tr></table></figure>
+<h5 id="Submissions"><a href="#Submissions" class="headerlink" title="Submissions."></a>Submissions.</h5><h5 id="You-should-have-exported-lab-4-servletQ1-war-lab-4-servletQ-2-war-and-lab-4-servletQ-3-war-Make-sure-you"><a href="#You-should-have-exported-lab-4-servletQ1-war-lab-4-servletQ-2-war-and-lab-4-servletQ-3-war-Make-sure-you" class="headerlink" title="You should have exported lab 4 servletQ1.war lab 4 servletQ 2 .war and lab 4 servletQ 3 .war. Make sure you"></a>You should have exported lab 4 servletQ1.war lab 4 servletQ 2 .war and lab 4 servletQ 3 .war. Make sure you</h5><h5 id="have-checked-“Export-source-files”-when-exporting-Pu"><a href="#have-checked-“Export-source-files”-when-exporting-Pu" class="headerlink" title="have checked “Export source files” when exporting. Pu"></a>have checked “Export source files” when exporting. Pu</h5><h5 id="Submit-the-3-war-files-separately-on-eClass"><a href="#Submit-the-3-war-files-separately-on-eClass" class="headerlink" title="Submit the 3 war files separately on eClass."></a>Submit the 3 war files separately on eClass.</h5><h4 id="Please-don’t-include-the-videos-in-your-submission-package"><a href="#Please-don’t-include-the-videos-in-your-submission-package" class="headerlink" title="Please don’t include the videos in your submission package."></a>Please don’t include the videos in your submission package.</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Late <span class="keyword">submissions </span><span class="keyword">or </span><span class="keyword">submissions </span><span class="keyword">by </span>email will NOT <span class="keyword">be </span>accepted. Plan ahead <span class="keyword">and </span><span class="keyword">submit </span>early.</span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">header</span>&gt; <span class="params">...</span>. &lt;<span class="keyword">header</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">’subtitle’</span>&gt;</span> .... <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2 <span class="built_in">..</span><span class="built_in">..</span> &gt; &lt;form <span class="built_in">..</span><span class="built_in">..</span> <span class="attribute">class</span>=’resultForm’ &gt;^</span><br></pre></td></tr></table></figure>
+<ul><br><li>principal …<br></li><li> interest …<br></li><li> period …<br></li></ul>
+
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/STAT311-homework4.html" rel="next" title="R代写：STAT311_homework4">
+                <i class="fa fa-chevron-left"></i> R代写：STAT311_homework4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="CPlusPlus小砖家">
+            
+              <p class="site-author-name" itemprop="name">CPlusPlus小砖家</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">362</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1926742804@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EECS-4413-LAB-0-4-More-on-Servlets-–-more-forms-servlet-context-session"><span class="nav-number">1.</span> <span class="nav-text">EECS 4413. LAB 0 4 : More on Servlets – more forms, servlet context, session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tracking"><span class="nav-number">2.</span> <span class="nav-text">tracking</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#A-IMPORTANT-REMINDERS"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">A. IMPORTANT REMINDERS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#B-IMPORTANT-PRE-LAB-WORKS-YOU-NEED-TO-DO-BEFORE-GOING-TO-THE-LAB"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">B. IMPORTANT PRE-LAB WORKS YOU NEED TO DO BEFORE GOING TO THE LAB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#C-GOALS-OUTCOMES-FOR-LAB"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">C. GOALS/OUTCOMES FOR LAB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#D-TASKS"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">D. TASKS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#E-SUBMISSIONS"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">E. SUBMISSIONS</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#where-r-is-the-annual-interest-rate-A-is-the-principal-and-n-is-the-period-measured-in"><span class="nav-number">2.1.</span> <span class="nav-text">where r is the annual interest rate, A is the principal, and n is the period measured in</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Submissions"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">Submissions.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#You-should-have-exported-lab-4-servletQ1-war-lab-4-servletQ-2-war-and-lab-4-servletQ-3-war-Make-sure-you"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">You should have exported lab 4 servletQ1.war lab 4 servletQ 2 .war and lab 4 servletQ 3 .war. Make sure you</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#have-checked-“Export-source-files”-when-exporting-Pu"><span class="nav-number">2.1.0.3.</span> <span class="nav-text">have checked “Export source files” when exporting. Pu</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Submit-the-3-war-files-separately-on-eClass"><span class="nav-number">2.1.0.4.</span> <span class="nav-text">Submit the 3 war files separately on eClass.</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Please-don’t-include-the-videos-in-your-submission-package"><span class="nav-number">2.1.1.</span> <span class="nav-text">Please don’t include the videos in your submission package.</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CPlusPlus小砖家</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+  
+</body>
+</html>
